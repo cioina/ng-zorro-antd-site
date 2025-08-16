@@ -1,0 +1,126 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-affix-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-affix-demo-on-change" nzTitle="Callback"></nz-link><nz-link nzHref="#components-affix-demo-target" nzTitle="Container to scroll."></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Affix<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/affix/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="affix" description="Make an element stick to viewport." language="en"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When user browses a long web page, some content need to stick to the viewport. This is common for menus and actions.</p>
+<p>Please note that Affix should not cover other content on the page, especially when the size of the viewport is small.</p>
+
+	</section>
+	
+	<h2>
+		<span>Examples</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  [nzId]="'components-affix-demo-basic'"
+  nzSelector="nz-demo-affix-basic"
+  [nzLink]="'components-affix-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:affix-basic <name>"
+  nzComponentName="NzDemoAffixBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/affix/demo/basic.md'">
+	<nz-demo-affix-basic demo></nz-demo-affix-basic>
+	<div intro ngNonBindable>
+		<p>The simplest usage.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Container to scroll."
+  [nzId]="'components-affix-demo-target'"
+  nzSelector="nz-demo-affix-target"
+  [nzLink]="'components-affix-demo-target'"
+  nzGenerateCommand="ng g ng-zorro-antd:affix-target <name>"
+  nzComponentName="NzDemoAffixTargetComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/affix/demo/target.md'">
+	<nz-demo-affix-target demo></nz-demo-affix-target>
+	<div intro ngNonBindable>
+		<p>Set a <code>nzTarget</code> for &#39;nz-affix&#39;, which is listen to scroll event of target element (default is <code>window</code>).</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Callback"
+  [nzId]="'components-affix-demo-on-change'"
+  nzSelector="nz-demo-affix-on-change"
+  [nzLink]="'components-affix-demo-on-change'"
+  nzGenerateCommand="ng g ng-zorro-antd:affix-on-change <name>"
+  nzComponentName="NzDemoAffixOnChangeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/affix/demo/on-change.md'">
+	<nz-demo-affix-on-change demo></nz-demo-affix-on-change>
+	<div intro ngNonBindable>
+		<p>Callback with affixed state.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-affix"><span>nz-affix</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-affix'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzOffsetBottom]</code></td>
+<td>Pixels to offset from bottom when calculating position of scroll</td>
+<td><code>number</code></td>
+<td>-</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzOffsetTop]</code></td>
+<td>Pixels to offset from top when calculating position of scroll</td>
+<td><code>number</code></td>
+<td><code>0</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzTarget]</code></td>
+<td>specifies the scrollable area dom node</td>
+<td><code>string | HTMLElement</code></td>
+<td><code>window</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzChange)</code></td>
+<td>Callback for when affix state is changed</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Note:</strong> Children of <code>nz-affix</code> can not be <code>position: absolute</code>, but you can set <code>nz-affix</code> as <code>position: absolute</code>:</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-affix</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">,</span> <span class="token property">left</span><span class="token punctuation">:</span> 10px</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-affix</span><span class="token punctuation">></span></span>
+</code></pre></section></article>

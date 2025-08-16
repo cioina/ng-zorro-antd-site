@@ -1,0 +1,386 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-popconfirm-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-popconfirm-demo-locale" nzTitle="国际化"></nz-link><nz-link nzHref="#components-popconfirm-demo-placement" nzTitle="位置"></nz-link><nz-link nzHref="#components-popconfirm-demo-dynamic-trigger" nzTitle="条件触发"></nz-link><nz-link nzHref="#components-popconfirm-demo-custom-icon" nzTitle="自定义 icon 图标"></nz-link><nz-link nzHref="#components-popconfirm-demo-hide-arrow" nzTitle="隐藏箭头"></nz-link><nz-link nzHref="#components-popconfirm-demo-async" nzTitle="异步关闭"></nz-link><nz-link nzHref="#components-popconfirm-demo-promise" nzTitle="基于 Promise 的异步关闭"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Popconfirm<span class="subtitle">气泡确认框</span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="popconfirm" description="点击元素，弹出气泡式的确认框。" language="zh"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>目标元素的操作需要用户进一步的确认时，在目标元素附近弹出浮层提示，询问用户。</p>
+<p>和 <code>confirm</code> 弹出的全屏居中模态对话框相比，交互形式更轻量。</p>
+
+	</section>
+	
+	<h2>
+		<span>代码演示</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  [nzId]="'components-popconfirm-demo-basic'"
+  nzSelector="nz-demo-popconfirm-basic"
+  [nzLink]="'components-popconfirm-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-basic <name>"
+  nzComponentName="NzDemoPopconfirmBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/basic.md'">
+	<nz-demo-popconfirm-basic demo></nz-demo-popconfirm-basic>
+	<div intro ngNonBindable>
+		<p>最简单的用法。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="位置"
+  [nzId]="'components-popconfirm-demo-placement'"
+  nzSelector="nz-demo-popconfirm-placement"
+  [nzLink]="'components-popconfirm-demo-placement'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-placement <name>"
+  nzComponentName="NzDemoPopconfirmPlacementComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/placement.md'">
+	<nz-demo-popconfirm-placement demo></nz-demo-popconfirm-placement>
+	<div intro ngNonBindable>
+		<p>位置有十二个方向。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义 icon 图标"
+  [nzId]="'components-popconfirm-demo-custom-icon'"
+  nzSelector="nz-demo-popconfirm-custom-icon"
+  [nzLink]="'components-popconfirm-demo-custom-icon'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-custom-icon <name>"
+  nzComponentName="NzDemoPopconfirmCustomIconComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/custom-icon.md'">
+	<nz-demo-popconfirm-custom-icon demo></nz-demo-popconfirm-custom-icon>
+	<div intro ngNonBindable>
+		<p>使用 <code>nzIcon</code> 自定义提示图标。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="异步关闭"
+  [nzId]="'components-popconfirm-demo-async'"
+  nzSelector="nz-demo-popconfirm-async"
+  [nzLink]="'components-popconfirm-demo-async'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-async <name>"
+  nzComponentName="NzDemoPopconfirmAsyncComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/async.md'">
+	<nz-demo-popconfirm-async demo></nz-demo-popconfirm-async>
+	<div intro ngNonBindable>
+		<p>点击确定后异步关闭 Popconfirm，例如提交表单。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="国际化"
+  [nzId]="'components-popconfirm-demo-locale'"
+  nzSelector="nz-demo-popconfirm-locale"
+  [nzLink]="'components-popconfirm-demo-locale'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-locale <name>"
+  nzComponentName="NzDemoPopconfirmLocaleComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/locale.md'">
+	<nz-demo-popconfirm-locale demo></nz-demo-popconfirm-locale>
+	<div intro ngNonBindable>
+		<p>使用 <code>okText</code> 和 <code>cancelText</code> 自定义按钮文字。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="条件触发"
+  [nzId]="'components-popconfirm-demo-dynamic-trigger'"
+  nzSelector="nz-demo-popconfirm-dynamic-trigger"
+  [nzLink]="'components-popconfirm-demo-dynamic-trigger'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-dynamic-trigger <name>"
+  nzComponentName="NzDemoPopconfirmDynamicTriggerComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/dynamic-trigger.md'">
+	<nz-demo-popconfirm-dynamic-trigger demo></nz-demo-popconfirm-dynamic-trigger>
+	<div intro ngNonBindable>
+		<p>可以判断是否需要弹出。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="隐藏箭头"
+  [nzId]="'components-popconfirm-demo-hide-arrow'"
+  nzSelector="nz-demo-popconfirm-hide-arrow"
+  [nzLink]="'components-popconfirm-demo-hide-arrow'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-hide-arrow <name>"
+  nzComponentName="NzDemoPopconfirmHideArrowComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/hide-arrow.md'">
+	<nz-demo-popconfirm-hide-arrow demo></nz-demo-popconfirm-hide-arrow>
+	<div intro ngNonBindable>
+		<p>设置 <code>[nzPopconfirmShowArrow]=&quot;false&quot;</code> 隐藏箭头。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="基于 Promise 的异步关闭"
+  [nzId]="'components-popconfirm-demo-promise'"
+  nzSelector="nz-demo-popconfirm-promise"
+  [nzLink]="'components-popconfirm-demo-promise'"
+  nzGenerateCommand="ng g ng-zorro-antd:popconfirm-promise <name>"
+  nzComponentName="NzDemoPopconfirmPromiseComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/popconfirm/demo/promise.md'">
+	<nz-demo-popconfirm-promise demo></nz-demo-popconfirm-promise>
+	<div intro ngNonBindable>
+		<p>点击确定后异步关闭 Popconfirm，例如提交表单。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-popconfirm"><span>[nz-popconfirm]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-popconfirm'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzPopconfirmArrowPointAtCenter]</code></td>
+<td>箭头指向锚点的中心</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmTitle]</code></td>
+<td>确认框的描述</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmTitleContext]</code></td>
+<td>确认框描述的上下文</td>
+<td><code>object</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmTrigger]</code></td>
+<td>触发行为，为 <code>null</code> 时不响应光标事件</td>
+<td><code>&#39;click&#39; | &#39;focus&#39; | &#39;hover&#39; | null</code></td>
+<td><code>&#39;click&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmPlacement]</code></td>
+<td>气泡框位置</td>
+<td><code>&#39;top&#39; | &#39;left&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;topLeft&#39; | &#39;topRight&#39; | &#39;bottomLeft&#39; | &#39;bottomRight&#39; | &#39;leftTop&#39; | &#39;leftBottom&#39; | &#39;rightTop&#39; | &#39;rightBottom&#39; | Array&lt;string&gt;</code></td>
+<td><code>&#39;top&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmOrigin]</code></td>
+<td>气泡框定位元素</td>
+<td><code>ElementRef</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmVisible]</code></td>
+<td>显示隐藏气泡框</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmShowArrow]</code></td>
+<td>气泡框是否包含箭头</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmPlacement]</code></td>
+<td>确认框位置</td>
+<td><code>&#39;top&#39; | &#39;left&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;topLeft&#39; | &#39;topRight&#39; | &#39;bottomLeft&#39; | &#39;bottomRight&#39; | &#39;leftTop&#39; | &#39;leftBottom&#39; | &#39;rightTop&#39; | &#39;rightBottom&#39;</code></td>
+<td><code>&#39;top&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmOrigin]</code></td>
+<td>确认框定位元素</td>
+<td><code>ElementRef</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmVisible]</code></td>
+<td>显示隐藏确认框</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzPopconfirmVisibleChange)</code></td>
+<td>显示隐藏的事件</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmMouseEnterDelay]</code></td>
+<td>鼠标移入后延时多少才显示确认框，单位：秒</td>
+<td><code>number</code></td>
+<td><code>0.15</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmMouseLeaveDelay]</code></td>
+<td>鼠标移出后延时多少才隐藏确认框，单位：秒</td>
+<td><code>number</code></td>
+<td><code>0.1</code></td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmOverlayClassName]</code></td>
+<td>卡片类名</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmOverlayStyle]</code></td>
+<td>卡片样式</td>
+<td><code>object</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPopconfirmBackdrop]</code></td>
+<td>浮层是否应带有背景板</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzCancelText]</code></td>
+<td>取消按钮文字 （已弃用，请使用 nzCancelButtonProps 代替)</td>
+<td><code>string</code></td>
+<td><code>&#39;取消&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOkText]</code></td>
+<td>确认按钮文字 （已弃用，请使用 nzOkButtonProps 代替)</td>
+<td><code>string</code></td>
+<td><code>&#39;确定&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOkType]</code></td>
+<td>确认按钮类型 （已弃用，请使用 nzOkButtonProps 代替)</td>
+<td><code>&#39;primary&#39; | &#39;ghost&#39; | &#39;dashed&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;primary&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOkDanger]</code></td>
+<td>确认按钮是否为危险按钮。<i>与 <code>nz-button</code> 的 <code>nzDanger</code> 值保持一致</i>（已弃用，请使用 nzOkButtonProps 代替)</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOkDisabled]</code></td>
+<td>禁止与确认按钮交互。<i>与 <code>nz-button</code> 的 <code>disabled</code> 值保持一致</i>（已弃用，请使用 nzOkButtonProps 代替)</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOkButtonProps]</code></td>
+<td>确定按钮的配置对象</td>
+<td><code>NzPopConfirmButtonProps</code></td>
+<td><code>null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzCancelButtonProps]</code></td>
+<td>取消按钮的配置对象</td>
+<td><code>NzPopConfirmButtonProps</code></td>
+<td><code>null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzCondition]</code></td>
+<td>是否直接触发 <code>nzOnConfirm</code> 而不弹出框</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzIcon]</code></td>
+<td>自定义弹出框的 icon</td>
+<td><code>string | TemplateRef&lt;void&gt; | null</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzAutoFocus]</code></td>
+<td>按钮的自动聚焦</td>
+<td><code>null | &#39;ok&#39; | &#39;cancel&#39;</code></td>
+<td><code>null</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzBeforeConfirm]</code></td>
+<td>确认操作之前的钩子，决定是否继续响应 <code>nzOnConfirm</code> 回调，支持异步验证。</td>
+<td><code>(() =&gt; Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean) | null</code></td>
+<td><code>null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnCancel)</code></td>
+<td>点击取消的回调</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnConfirm)</code></td>
+<td>点击确认的回调</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>更多属性请参考 <a href="/components/tooltip/zh#api">Tooltip</a>。</p>
+<h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><p>请确保 <code>[nz-popconfirm]</code> 元素能接受 <code>onMouseEnter</code>、<code>onMouseLeave</code>、<code>onFocus</code>、<code>onClick</code> 事件。</p>
+</section></article>

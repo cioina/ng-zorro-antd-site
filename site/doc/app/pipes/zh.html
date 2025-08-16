@@ -1,0 +1,241 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-pipes-demo-bytes" nzTitle="nzBytes"></nz-link><nz-link nzHref="#components-pipes-demo-css-unit" nzTitle="nzToCssUnit"></nz-link><nz-link nzHref="#components-pipes-demo-ellipsis" nzTitle="nzEllipsis"></nz-link><nz-link nzHref="#components-pipes-demo-aggregate" nzTitle="nzAggregate"></nz-link><nz-link nzHref="#components-pipes-demo-sanitizer" nzTitle="nzSanitizer"></nz-link><nz-link nzHref="#components-pipes-demo-trim" nzTitle="nzTrim"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Pipes<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="pipes" description="常用 Pipes 集合。" language="zh"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
+<p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
+</blockquote>
+	<section class="markdown" ngNonBindable>
+		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>引入 Pipe 后，像 angular 的默认 Pipe 一样使用</p>
+
+	</section>
+	
+	<h2>
+		<span>代码演示</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="nzBytes"
+  [nzId]="'components-pipes-demo-bytes'"
+  nzSelector="nz-demo-pipes-bytes"
+  [nzLink]="'components-pipes-demo-bytes'"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-bytes <name>"
+  nzComponentName="NzDemoPipesBytesComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/bytes.md'">
+	<nz-demo-pipes-bytes demo></nz-demo-pipes-bytes>
+	<div intro ngNonBindable>
+		<p>存储单位的换算，增加可读性</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzToCssUnit"
+  [nzId]="'components-pipes-demo-css-unit'"
+  nzSelector="nz-demo-pipes-css-unit"
+  [nzLink]="'components-pipes-demo-css-unit'"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-css-unit <name>"
+  nzComponentName="NzDemoPipesCssUnitComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/css-unit.md'">
+	<nz-demo-pipes-css-unit demo></nz-demo-pipes-css-unit>
+	<div intro ngNonBindable>
+		<p>Css 单位</p>
+<p>提示：如果条件允许，我们更推荐使用 Angular 内置语法，例如：</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style.border-radius.px]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>px<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style.border-radius.%]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style.border-radius.rem]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>rem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzEllipsis"
+  [nzId]="'components-pipes-demo-ellipsis'"
+  nzSelector="nz-demo-pipes-ellipsis"
+  [nzLink]="'components-pipes-demo-ellipsis'"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-ellipsis <name>"
+  nzComponentName="NzDemoPipesEllipsisComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/ellipsis.md'">
+	<nz-demo-pipes-ellipsis demo></nz-demo-pipes-ellipsis>
+	<div intro ngNonBindable>
+		<p>截断字符串，用指定的字符串结尾</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzAggregate"
+  [nzId]="'components-pipes-demo-aggregate'"
+  nzSelector="nz-demo-pipes-aggregate"
+  [nzLink]="'components-pipes-demo-aggregate'"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-aggregate <name>"
+  nzComponentName="NzDemoPipesAggregateComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/aggregate.md'">
+	<nz-demo-pipes-aggregate demo></nz-demo-pipes-aggregate>
+	<div intro ngNonBindable>
+		<p>数组的Sum、Min、Max、Average等聚合操作</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzSanitizer"
+  [nzId]="'components-pipes-demo-sanitizer'"
+  nzSelector="nz-demo-pipes-sanitizer"
+  [nzLink]="'components-pipes-demo-sanitizer'"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-sanitizer <name>"
+  nzComponentName="NzDemoPipesSanitizerComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/sanitizer.md'">
+	<nz-demo-pipes-sanitizer demo></nz-demo-pipes-sanitizer>
+	<div intro ngNonBindable>
+		<p>DomSanitizer 的 Pipe 实现</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[innerHTML]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>html | nzSanitizer: 'html'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style | nzSanitizer: 'style'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">[src]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url | nzSanitizer: 'url'<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">[src]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>resourceUrl | nzSanitizer: 'resourceUrl'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span>
+</code></pre>
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzTrim"
+  [nzId]="'components-pipes-demo-trim'"
+  nzSelector="nz-demo-pipes-trim"
+  [nzLink]="'components-pipes-demo-trim'"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-trim <name>"
+  nzComponentName="NzDemoPipesTrimComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/trim.md'">
+	<nz-demo-pipes-trim demo></nz-demo-pipes-trim>
+	<div intro ngNonBindable>
+		<p>去除字符串左右空字符串</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzbytes"><span>nzBytes</span><a onclick="window.location.hash = 'nzbytes'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>decimal</code></td>
+<td>保留小数位</td>
+<td><code>number</code></td>
+<td>&#39;0&#39;</td>
+</tr>
+<tr>
+<td><code>from</code></td>
+<td>当前值的单位</td>
+<td><code>string</code></td>
+<td>&#39;B&#39;</td>
+</tr>
+<tr>
+<td><code>to</code></td>
+<td>转换到目标值的单位</td>
+<td><code>string</code></td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nztocssunit"><span>nzToCssUnit</span><a onclick="window.location.hash = 'nztocssunit'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>defaultUnit</code></td>
+<td>默认单位</td>
+<td><code>string</code></td>
+<td>&#39;px&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nzellipsis"><span>nzEllipsis</span><a onclick="window.location.hash = 'nzellipsis'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>length</code></td>
+<td>截取长度</td>
+<td><code>number</code></td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>替换字符</td>
+<td><code>string</code></td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nzaggregate"><span>nzAggregate</span><a onclick="window.location.hash = 'nzaggregate'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>method</code></td>
+<td>聚合方式</td>
+<td><code>&#39;sum&#39; | &#39;max&#39; | &#39;min&#39; | &#39;avg&#39;</code></td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nzsanitizer"><span>nzSanitizer</span><a onclick="window.location.hash = 'nzsanitizer'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>type</code></td>
+<td>sanitizer 类型</td>
+<td><code>string</code></td>
+<td>&#39;html&#39;</td>
+</tr>
+</tbody></table>
+</section></article>

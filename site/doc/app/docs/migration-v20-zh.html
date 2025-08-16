@@ -1,0 +1,31 @@
+<article class="markdown">
+  <h1>v20 升级指南<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/docs/migration-v20.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#开始之前" nzTitle="开始之前"></nz-link><nz-link nzHref="#升级步骤" nzTitle="升级步骤"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>本文档将帮助你从 <code>ng-zorro-antd</code> 19.x 版本升级到 20.x 版本。</p>
+<h2 id="开始之前"><span>开始之前</span><a onclick="window.location.hash = '开始之前'" class="anchor">#</a></h2><ol>
+<li>确保 <code>Node.js</code> &gt;= <code>20.19.0</code> 或 &gt;= <code>22.12.0</code> 或 &gt;= <code>24.0.0</code></li>
+<li>创建新的分支，或者使用其他方式备份当前项目</li>
+<li>删除项目下 package-lock.json 文件</li>
+</ol>
+<h2 id="升级步骤"><span>升级步骤</span><a onclick="window.location.hash = '升级步骤'" class="anchor">#</a></h2><h3 id="1_升级相关依赖"><span>1. 升级相关依赖</span><a onclick="window.location.hash = '1_升级相关依赖'" class="anchor">#</a></h3><ul>
+<li>参考<a href="https://angular.dev/update-guide" target="_blank" rel="noopener">升级指南</a>将项目升级到 Angular 20</li>
+<li>如果有单独使用 <code>&#64;angular/cdk</code> 请执行 <code>ng update &#64;angular/cdk</code></li>
+</ul>
+<h3 id="2_升级_ng-zorro"><span>2. 升级 NG-ZORRO</span><a onclick="window.location.hash = '2_升级_ng-zorro'" class="anchor">#</a></h3><ul>
+<li>运行 <code>ng update ng-zorro-antd</code></li>
+<li>如果控制台出现警告消息请按提示修改对应代码</li>
+</ul>
+<h3 id="3_移除废弃_api"><span>3. 移除废弃 API</span><a onclick="window.location.hash = '3_移除废弃_api'" class="anchor">#</a></h3><ul>
+<li>请参考 <a href="/docs/changelog/zh#2000">v20 changelog</a> 移除废弃 API</li>
+</ul>
+</section>
+</article>

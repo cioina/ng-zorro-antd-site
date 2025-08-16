@@ -1,0 +1,30 @@
+<article class="markdown">
+  <h1>Schematics<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/docs/schematics.en-US.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#initialize-a-project" nzTitle="Initialize A Project"></nz-link><nz-link nzHref="#component-generation" nzTitle="Component Generation"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>Using a CLI helps initialize projects, generate template codes and reduce development time.</p>
+<blockquote>
+<p>The<code>ng-zorro-antd</code> scaffolding is essentially based on <a href="https://blog.angular.dev/schematics-an-introduction-dc1dfbc2a2b2" target="_blank" rel="noopener">schematics</a>.</p>
+</blockquote>
+<h2 id="initialize_a_project"><span>Initialize A Project</span><a onclick="window.location.hash = 'initialize_a_project'" class="anchor">#</a></h2><p>Initialize a project with <code>ng-zorro-antd</code>.</p>
+<p>Run the command <code>ng add ng-zorro-antd</code> under your project directory, and follow the options to configure settings including whether you want to import i18n files and stylesheets, and load initial modules.</p>
+<img alt="NG-ZORRO CLI" style="display: block; border-radius: 4px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);" src="https://img.alicdn.com/tfs/TB19fFHdkxz61VjSZFtXXaDSVXa-680-243.svg">
+
+<p>In the meantime, you can choose an existing project template while creating your project, and then develop the project on the basis of it.</p>
+<img alt aria-hidden="true" style="display: block; border-radius: 4px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2); max-width: 680px;" src="https://img.alicdn.com/tfs/TB1IC0TeEWF3KVjSZPhXXXclXXa-2000-1078.png">
+
+<h3 id="command"><span>Command</span><a onclick="window.location.hash = 'command'" class="anchor">#</a></h3><pre><code class="language-bash"><span class="token function">ng</span> add <span class="token function">ng-zorro-antd</span> <span class="token punctuation">[</span>options<span class="token punctuation">]</span>
+</code></pre><h2 id="component_generation"><span>Component Generation</span><a onclick="window.location.hash = 'component_generation'" class="anchor">#</a></h2><p>There are template source codes under every component API show case, you may obtain these codes by expanding <code>Show Code</code>.</p>
+<h3 id="command"><span>Command</span><a onclick="window.location.hash = 'command'" class="anchor">#</a></h3><pre><code class="language-bash"><span class="token function">ng</span> g ng-zorro-antd:<span class="token punctuation">[</span>schematic<span class="token punctuation">]</span> <span class="token operator">&lt;</span>name<span class="token operator">></span> <span class="token punctuation">[</span>options<span class="token punctuation">]</span>
+</code></pre><p>For example, you can generate a login form with the follow command.</p>
+<pre><code class="language-bash"><span class="token function">ng</span> g ng-zorro-antd:form-normal-login login
+</code></pre></section>
+</article>

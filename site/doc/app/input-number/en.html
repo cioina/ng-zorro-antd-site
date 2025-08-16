@@ -1,0 +1,398 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-input-number-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-input-number-demo-size" nzTitle="Sizes"></nz-link><nz-link nzHref="#components-input-number-demo-addon" nzTitle="Pre / Post tab"></nz-link><nz-link nzHref="#components-input-number-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-input-number-demo-digit" nzTitle="Decimals"></nz-link><nz-link nzHref="#components-input-number-demo-formatter" nzTitle="Formatter"></nz-link><nz-link nzHref="#components-input-number-demo-keyboard" nzTitle="Keyboard behavior"></nz-link><nz-link nzHref="#components-input-number-demo-variant" nzTitle="Variants"></nz-link><nz-link nzHref="#components-input-number-demo-out-of-range" nzTitle="Out of range"></nz-link><nz-link nzHref="#components-input-number-demo-prefix" nzTitle="Prefix"></nz-link><nz-link nzHref="#components-input-number-demo-status" nzTitle="Status"></nz-link><nz-link nzHref="#components-input-number-demo-handler-icon" nzTitle="Custom handler icon"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>InputNumber<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="input-number" description="Enter a number within certain range with the mouse or keyboard." language="en"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When a numeric value needs to be provided.</p>
+
+	</section>
+	
+	<h2>
+		<span>Examples</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  [nzId]="'components-input-number-demo-basic'"
+  nzSelector="nz-demo-input-number-basic"
+  [nzLink]="'components-input-number-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-basic <name>"
+  nzComponentName="NzDemoInputNumberBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/basic.md'">
+	<nz-demo-input-number-basic demo></nz-demo-input-number-basic>
+	<div intro ngNonBindable>
+		<p>Numeric-only input box.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Pre / Post tab"
+  [nzId]="'components-input-number-demo-addon'"
+  nzSelector="nz-demo-input-number-addon"
+  [nzLink]="'components-input-number-demo-addon'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-addon <name>"
+  nzComponentName="NzDemoInputNumberAddonComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/addon.md'">
+	<nz-demo-input-number-addon demo></nz-demo-input-number-addon>
+	<div intro ngNonBindable>
+		<p>Using pre &amp; post tabs example.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Decimals"
+  [nzId]="'components-input-number-demo-digit'"
+  nzSelector="nz-demo-input-number-digit"
+  [nzLink]="'components-input-number-demo-digit'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-digit <name>"
+  nzComponentName="NzDemoInputNumberDigitComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/digit.md'">
+	<nz-demo-input-number-digit demo></nz-demo-input-number-digit>
+	<div intro ngNonBindable>
+		<p>A numeric-only input box whose values can be increased or decreased using a decimal step. The number of decimals (also known as precision) is determined by the <code>nzStep</code> prop.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Keyboard behavior"
+  [nzId]="'components-input-number-demo-keyboard'"
+  nzSelector="nz-demo-input-number-keyboard"
+  [nzLink]="'components-input-number-demo-keyboard'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-keyboard <name>"
+  nzComponentName="NzDemoInputNumberKeyboardComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/keyboard.md'">
+	<nz-demo-input-number-keyboard demo></nz-demo-input-number-keyboard>
+	<div intro ngNonBindable>
+		<p>Use the <code>nzKeyboard</code> property to control keyboard behavior.
+`</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Out of range"
+  [nzId]="'components-input-number-demo-out-of-range'"
+  nzSelector="nz-demo-input-number-out-of-range"
+  [nzLink]="'components-input-number-demo-out-of-range'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-out-of-range <name>"
+  nzComponentName="NzDemoInputNumberOutOfRangeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/out-of-range.md'">
+	<nz-demo-input-number-out-of-range demo></nz-demo-input-number-out-of-range>
+	<div intro ngNonBindable>
+		<p>When the <code>value</code> is out of range in controlled mode, a warning style is provided.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Status"
+  [nzId]="'components-input-number-demo-status'"
+  nzSelector="nz-demo-input-number-status"
+  [nzLink]="'components-input-number-demo-status'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-status <name>"
+  nzComponentName="NzDemoInputNumberStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/status.md'">
+	<nz-demo-input-number-status demo></nz-demo-input-number-status>
+	<div intro ngNonBindable>
+		<p>Add status to InputNumber with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Sizes"
+  [nzId]="'components-input-number-demo-size'"
+  nzSelector="nz-demo-input-number-size"
+  [nzLink]="'components-input-number-demo-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-size <name>"
+  nzComponentName="NzDemoInputNumberSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/size.md'">
+	<nz-demo-input-number-size demo></nz-demo-input-number-size>
+	<div intro ngNonBindable>
+		<p>There are three sizes available to a numeric input box. By default, the <code>nzSize</code> is <code>32px</code>. The two additional sizes are <code>large</code> and <code>small</code> which means <code>40px</code> and <code>24px</code>, respectively.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Disabled"
+  [nzId]="'components-input-number-demo-disabled'"
+  nzSelector="nz-demo-input-number-disabled"
+  [nzLink]="'components-input-number-demo-disabled'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-disabled <name>"
+  nzComponentName="NzDemoInputNumberDisabledComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/disabled.md'">
+	<nz-demo-input-number-disabled demo></nz-demo-input-number-disabled>
+	<div intro ngNonBindable>
+		<p>Click the button to toggle between available and disabled states.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Formatter"
+  [nzId]="'components-input-number-demo-formatter'"
+  nzSelector="nz-demo-input-number-formatter"
+  [nzLink]="'components-input-number-demo-formatter'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-formatter <name>"
+  nzComponentName="NzDemoInputNumberFormatterComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/formatter.md'">
+	<nz-demo-input-number-formatter demo></nz-demo-input-number-formatter>
+	<div intro ngNonBindable>
+		<p>Display value within it&#39;s situation with <code>nzFormatter</code>, and we usually use <code>nzParser</code> at the same time.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Variants"
+  [nzId]="'components-input-number-demo-variant'"
+  nzSelector="nz-demo-input-number-variant"
+  [nzLink]="'components-input-number-demo-variant'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-variant <name>"
+  nzComponentName="NzDemoInputNumberVariantComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/variant.md'">
+	<nz-demo-input-number-variant demo></nz-demo-input-number-variant>
+	<div intro ngNonBindable>
+		<p>Variants of InputNumber, there are four variants: <code>outlined</code> <code>filled</code> <code>borderless</code> and <code>underlined</code>.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Prefix"
+  [nzId]="'components-input-number-demo-prefix'"
+  nzSelector="nz-demo-input-number-prefix"
+  [nzLink]="'components-input-number-demo-prefix'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-prefix <name>"
+  nzComponentName="NzDemoInputNumberPrefixComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/prefix.md'">
+	<nz-demo-input-number-prefix demo></nz-demo-input-number-prefix>
+	<div intro ngNonBindable>
+		<p>Add a prefix inside input.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom handler icon"
+  [nzId]="'components-input-number-demo-handler-icon'"
+  nzSelector="nz-demo-input-number-handler-icon"
+  [nzLink]="'components-input-number-demo-handler-icon'"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-handler-icon <name>"
+  nzComponentName="NzDemoInputNumberHandlerIconComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/handler-icon.md'">
+	<nz-demo-input-number-handler-icon demo></nz-demo-input-number-handler-icon>
+	<div intro ngNonBindable>
+		<p>Custom arrow icon.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-input-number"><span>nz-input-number</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-number'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[ngModel]</code></td>
+<td>current value, two way binding</td>
+<td><code>number</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzId]</code></td>
+<td>ID of the input box</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPlaceHolder]</code></td>
+<td>placeholder</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzAutoFocus]</code></td>
+<td>auto focus</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><del><code>[nzBordered]</code></del></td>
+<td><del>whether to have border</del></td>
+<td><del><code>boolean</code></del></td>
+<td><del><code>true</code></del></td>
+</tr>
+<tr>
+<td><code>[nzVariant]</code></td>
+<td>Variants of InputNumber</td>
+<td><code>&#39;outlined&#39; | &#39;borderless&#39; | &#39;filled&#39; | &#39;underlined&#39;</code></td>
+<td><code>&#39;outlined&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzControls]</code></td>
+<td>whether to show up and down buttons</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>whether to disable</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzFormatter]</code></td>
+<td>specify the format of the displayed value</td>
+<td><code>(value: number) =&gt; string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzKeyboard]</code></td>
+<td>Whether to enable keyboard shortcuts</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[nzMax]</code></td>
+<td>maximum value</td>
+<td><code>number</code></td>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER" target="_blank" rel="noopener">Number.MAX_SAFE_INTEGER</a></td>
+</tr>
+<tr>
+<td><code>[nzMin]</code></td>
+<td>minimum value</td>
+<td><code>number</code></td>
+<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER" target="_blank" rel="noopener">Number.MIN_SAFE_INTEGER</a></td>
+</tr>
+<tr>
+<td><code>[nzParser]</code></td>
+<td>specify how to convert back to a number from <code>formatter</code>, used with <code>formatter</code></td>
+<td><code>(value: string) =&gt; number</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPrecision]</code></td>
+<td>numerical precision, the <code>formatter</code> configuration takes precedence</td>
+<td><code>number</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzReadOnly]</code></td>
+<td>whether to read only</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzStatus]</code></td>
+<td>status, optional <code>error</code> <code>warning</code></td>
+<td><code>&#39;error&#39; | &#39;warning&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>input box size, optional <code>large</code> <code>default</code> <code>small</code></td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzStep]</code></td>
+<td>step of each change, can be a decimal</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>(nzOnStep)</code></td>
+<td>callback when clicking the up and down arrows</td>
+<td><code>EventEmitter&lt;&#123; value: number, offset: number, type: &#39;up&#39; | &#39;down&#39; &#125;&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzFocus)</code></td>
+<td>callback when focus</td>
+<td><code>OutputRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzBlur)</code></td>
+<td>callback when blur</td>
+<td><code>OutputRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(ngModelChange)</code></td>
+<td>callback function when the value changes</td>
+<td><code>EventEmitter&lt;number&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h4 id="methods"><span>Methods</span><a onclick="window.location.hash = 'methods'" class="anchor">#</a></h4><p>You can get instance by <code>ViewChild</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>focus()</td>
+<td>get focus</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>remove focus</td>
+</tr>
+</tbody></table>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="why_can_the_lesscodegreatervalueless/codegreater_exceed_the_lesscodegreaterminless/codegreater_and_lesscodegreatermaxless/codegreater_range_in_controlled_mode?"><span>Why can the <code>value</code> exceed the <code>min</code> and <code>max</code> range in controlled mode?</span><a onclick="window.location.hash = 'why_can_the_lesscodegreatervalueless/codegreater_exceed_the_lesscodegreaterminless/codegreater_and_lesscodegreatermaxless/codegreater_range_in_controlled_mode?'" class="anchor">#</a></h3><p>In controlled mode, developers may store related data by themselves. If the component constrains the data back to the range, it will cause the displayed data to be inconsistent with the actual stored data. This leads to potential data problems in some scenarios such as form fields.</p>
+</section></article>

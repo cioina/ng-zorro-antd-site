@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+import { ShareModule } from '../share/share.module';
+
+@Component({
+  selector     : 'nz-doc-introduce-zh',
+  standalone   : true,
+  imports      : [ShareModule],
+  templateUrl  : './introduce-zh.html'
+})
+export class NzDocIntroduceZhComponent {
+  goLink(link: string) {
+    if (window) {
+      window.location.hash = link;
+    }
+  }
+}

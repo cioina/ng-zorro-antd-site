@@ -1,0 +1,600 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-tabs-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-tabs-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-tabs-demo-centered" nzTitle="Centered"></nz-link><nz-link nzHref="#components-tabs-demo-icon" nzTitle="Icon"></nz-link><nz-link nzHref="#components-tabs-demo-slide" nzTitle="Slide"></nz-link><nz-link nzHref="#components-tabs-demo-extra" nzTitle="Extra content"></nz-link><nz-link nzHref="#components-tabs-demo-size" nzTitle="Size"></nz-link><nz-link nzHref="#components-tabs-demo-position" nzTitle="Position"></nz-link><nz-link nzHref="#components-tabs-demo-card" nzTitle="Card type tab"></nz-link><nz-link nzHref="#components-tabs-demo-editable-card" nzTitle="Add & close tab"></nz-link><nz-link nzHref="#components-tabs-demo-card-top" nzTitle="Container of card type Tab"></nz-link><nz-link nzHref="#components-tabs-demo-custom-add-trigger" nzTitle="Customized trigger of new tab"></nz-link><nz-link nzHref="#components-tabs-demo-lazy" nzTitle="LazyLoad"></nz-link><nz-link nzHref="#components-tabs-demo-link-router" nzTitle="With Router"></nz-link><nz-link nzHref="#components-tabs-demo-guard" nzTitle="Tab guard"></nz-link><nz-link nzHref="#components-tabs-demo-draggable" nzTitle="Draggable Tabs"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Tabs<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="tabs" description="Tabs make it easy to switch between different views." language="en"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Ant Design has 3 types of Tabs for different situations.</p>
+<ul>
+<li>Card Tabs: for managing too many closeable views.</li>
+<li>Normal Tabs: for functional aspects of a page.</li>
+<li><a href="/components/radio/en/#components-radio-demo-radiobutton">RadioButton</a>: for secondary tabs.</li>
+</ul>
+
+	</section>
+	
+	<h2>
+		<span>Examples</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  [nzId]="'components-tabs-demo-basic'"
+  nzSelector="nz-demo-tabs-basic"
+  [nzLink]="'components-tabs-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-basic <name>"
+  nzComponentName="NzDemoTabsBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/basic.md'">
+	<nz-demo-tabs-basic demo></nz-demo-tabs-basic>
+	<div intro ngNonBindable>
+		<p>Default activate first tab.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Disabled"
+  [nzId]="'components-tabs-demo-disabled'"
+  nzSelector="nz-demo-tabs-disabled"
+  [nzLink]="'components-tabs-demo-disabled'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-disabled <name>"
+  nzComponentName="NzDemoTabsDisabledComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/disabled.md'">
+	<nz-demo-tabs-disabled demo></nz-demo-tabs-disabled>
+	<div intro ngNonBindable>
+		<p>Disabled a tab.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Centered"
+  [nzId]="'components-tabs-demo-centered'"
+  nzSelector="nz-demo-tabs-centered"
+  [nzLink]="'components-tabs-demo-centered'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-centered <name>"
+  nzComponentName="NzDemoTabsCenteredComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/centered.md'">
+	<nz-demo-tabs-centered demo></nz-demo-tabs-centered>
+	<div intro ngNonBindable>
+		<p>Centered tabs.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Icon"
+  [nzId]="'components-tabs-demo-icon'"
+  nzSelector="nz-demo-tabs-icon"
+  [nzLink]="'components-tabs-demo-icon'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-icon <name>"
+  nzComponentName="NzDemoTabsIconComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/icon.md'">
+	<nz-demo-tabs-icon demo></nz-demo-tabs-icon>
+	<div intro ngNonBindable>
+		<p>The Tab with Icon.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Slide"
+  [nzId]="'components-tabs-demo-slide'"
+  nzSelector="nz-demo-tabs-slide"
+  [nzLink]="'components-tabs-demo-slide'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-slide <name>"
+  nzComponentName="NzDemoTabsSlideComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/slide.md'">
+	<nz-demo-tabs-slide demo></nz-demo-tabs-slide>
+	<div intro ngNonBindable>
+		<p>Tab can be slide to left or right(up or down), which is used for a lot of tabs.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Extra content"
+  [nzId]="'components-tabs-demo-extra'"
+  nzSelector="nz-demo-tabs-extra"
+  [nzLink]="'components-tabs-demo-extra'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-extra <name>"
+  nzComponentName="NzDemoTabsExtraComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/extra.md'">
+	<nz-demo-tabs-extra demo></nz-demo-tabs-extra>
+	<div intro ngNonBindable>
+		<p>You can add extra actions to the start or end or even both sides of Tabs.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Size"
+  [nzId]="'components-tabs-demo-size'"
+  nzSelector="nz-demo-tabs-size"
+  [nzLink]="'components-tabs-demo-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-size <name>"
+  nzComponentName="NzDemoTabsSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/size.md'">
+	<nz-demo-tabs-size demo></nz-demo-tabs-size>
+	<div intro ngNonBindable>
+		<p>Large size tabs are usually used in page header, and small size could be used in Modal.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Position"
+  [nzId]="'components-tabs-demo-position'"
+  nzSelector="nz-demo-tabs-position"
+  [nzLink]="'components-tabs-demo-position'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-position <name>"
+  nzComponentName="NzDemoTabsPositionComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/position.md'">
+	<nz-demo-tabs-position demo></nz-demo-tabs-position>
+	<div intro ngNonBindable>
+		<p>Tab&#39;s position: left, right, top or bottom.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Card type tab"
+  [nzId]="'components-tabs-demo-card'"
+  nzSelector="nz-demo-tabs-card"
+  [nzLink]="'components-tabs-demo-card'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-card <name>"
+  nzComponentName="NzDemoTabsCardComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/card.md'">
+	<nz-demo-tabs-card demo></nz-demo-tabs-card>
+	<div intro ngNonBindable>
+		<p>Another type Tabs, which doesn&#39;t support vertical mode.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Add & close tab"
+  [nzId]="'components-tabs-demo-editable-card'"
+  nzSelector="nz-demo-tabs-editable-card"
+  [nzLink]="'components-tabs-demo-editable-card'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-editable-card <name>"
+  nzComponentName="NzDemoTabsEditableCardComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/editable-card.md'">
+	<nz-demo-tabs-editable-card demo></nz-demo-tabs-editable-card>
+	<div intro ngNonBindable>
+		<p>Only card type Tabs support adding &amp; closable.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Container of card type Tab"
+  [nzId]="'components-tabs-demo-card-top'"
+  nzSelector="nz-demo-tabs-card-top"
+  [nzLink]="'components-tabs-demo-card-top'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-card-top <name>"
+  nzComponentName="NzDemoTabsCardTopComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/card-top.md'">
+	<nz-demo-tabs-card-top demo></nz-demo-tabs-card-top>
+	<div intro ngNonBindable>
+		<p>Should be used at the top of container, needs to override styles.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Customized trigger of new tab"
+  [nzId]="'components-tabs-demo-custom-add-trigger'"
+  nzSelector="nz-demo-tabs-custom-add-trigger"
+  [nzLink]="'components-tabs-demo-custom-add-trigger'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-custom-add-trigger <name>"
+  nzComponentName="NzDemoTabsCustomAddTriggerComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/custom-add-trigger.md'">
+	<nz-demo-tabs-custom-add-trigger demo></nz-demo-tabs-custom-add-trigger>
+	<div intro ngNonBindable>
+		<p>Bind event for customized trigger.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="LazyLoad"
+  [nzId]="'components-tabs-demo-lazy'"
+  nzSelector="nz-demo-tabs-lazy"
+  [nzLink]="'components-tabs-demo-lazy'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-lazy <name>"
+  nzComponentName="NzDemoTabsLazyComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/lazy.md'">
+	<nz-demo-tabs-lazy demo></nz-demo-tabs-lazy>
+	<div intro ngNonBindable>
+		<p>By default, the contents in <code>nz-tab</code> are eagerly loaded. Tab contents can be lazy loaded by declaring the body in a <code>ng-template</code> with the <code>[nz-tab]</code> directive.</p>
+<blockquote>
+<p>Combine with <code>nzDestroyInactiveTabPane</code> to destroy the component when the tab is hidden.</p>
+</blockquote>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="With Router"
+  [nzId]="'components-tabs-demo-link-router'"
+  nzSelector="nz-demo-tabs-link-router"
+  [nzLink]="'components-tabs-demo-link-router'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-link-router <name>"
+  nzComponentName="NzDemoTabsLinkRouterComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/link-router.md'">
+	<nz-demo-tabs-link-router demo></nz-demo-tabs-link-router>
+	<div intro ngNonBindable>
+		<p>Link with router.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Tab guard"
+  [nzId]="'components-tabs-demo-guard'"
+  nzSelector="nz-demo-tabs-guard"
+  [nzLink]="'components-tabs-demo-guard'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-guard <name>"
+  nzComponentName="NzDemoTabsGuardComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/guard.md'">
+	<nz-demo-tabs-guard demo></nz-demo-tabs-guard>
+	<div intro ngNonBindable>
+		<p>Via <code>nzCanDeactivate</code> to determine if a tab can be deactivated.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Draggable Tabs"
+  [nzId]="'components-tabs-demo-draggable'"
+  nzSelector="nz-demo-tabs-draggable"
+  [nzLink]="'components-tabs-demo-draggable'"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-draggable <name>"
+  nzComponentName="NzDemoTabsDraggableComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/draggable.md'">
+	<nz-demo-tabs-draggable demo></nz-demo-tabs-draggable>
+	<div intro ngNonBindable>
+		<p>Use CDK <code>DragDropModule</code> to make tabs draggable.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tabs"><span>nz-tabs</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tabs'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzSelectedIndex]</code></td>
+<td>Current tab&#39;s index</td>
+<td><code>number</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzAnimated]</code></td>
+<td>Whether to change tabs with animation. Only works while <code>nzTabPosition=&quot;top&quot; | &quot;bottom&quot;</code></td>
+<td><code>boolean | &#123;inkBar:boolean, tabPane:boolean&#125;</code></td>
+<td><code>true</code>, <code>false</code> when <code>type=&quot;card&quot;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>preset tab bar size</td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzTabBarExtraContent]</code></td>
+<td>Extra content in tab bar</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzTabBarStyle]</code></td>
+<td>Tab bar style object</td>
+<td><code>object</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzTabPosition]</code></td>
+<td>Position of tabs</td>
+<td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
+<td><code>&#39;top&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzType]</code></td>
+<td>Basic style of tabs</td>
+<td><code>&#39;line&#39; | &#39;card&#39; | &#39;editable-card&#39;</code></td>
+<td><code>&#39;line&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzTabBarGutter]</code></td>
+<td>The gap between tabs</td>
+<td><code>number</code></td>
+<td>-</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzHideAll]</code></td>
+<td>Whether hide all tabs</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzLinkRouter]</code></td>
+<td>Link with Angular router. It supports child mode and query param mode</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzLinkExact]</code></td>
+<td>Use exact routing matching</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzCanDeactivate]</code></td>
+<td>Determine if a tab can be deactivated</td>
+<td><code>NzTabsCanDeactivateFn</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzCentered]</code></td>
+<td>Centers tabs</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDestroyInactiveTabPane]</code></td>
+<td>Whether destroy inactive TabPane when change tab</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzSelectedIndexChange)</code></td>
+<td>Current tab&#39;s index change callback</td>
+<td><code>EventEmitter&lt;number&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzSelectChange)</code></td>
+<td>Current tab&#39;s change callback</td>
+<td><code>EventEmitter&lt;&#123;index: number,tab: NzTabComponent&#125;&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="nz-tabsnztype=andquot;editable-cardandquot;"><span>nz-tabs[nzType=&quot;editable-card&quot;]</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tabsnztype=andquot;editable-cardandquot;'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzHideAdd]</code></td>
+<td>Hide plus icon or not</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzAddIcon]</code></td>
+<td>Add icon</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzAdd)</code></td>
+<td>When add button clicked emit</td>
+<td><code>EventEmitter&lt;&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzClose)</code></td>
+<td>When close button clicked emit</td>
+<td><code>EventEmitter&lt;&#123; index: number &#125;&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="nz-tab"><span>nz-tab</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tab'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzTitle]</code></td>
+<td>Show text in tab&#39;s head</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzForceRender]</code></td>
+<td>Forced render of content in tabs, not lazy render after clicking on tabs</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>tab disable</td>
+<td><code>boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzClick)</code></td>
+<td>title click callback</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzContextmenu)</code></td>
+<td>title contextmenu callback</td>
+<td><code>EventEmitter&lt;MouseEvent&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzSelect)</code></td>
+<td>title select callback</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzDeselect)</code></td>
+<td>title deselect callback</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-tabsnztype=andquot;editable-cardandquot;_andgt;_nz-tab"><span>nz-tabs[nzType=&quot;editable-card&quot;] &gt; nz-tab</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tabsnztype=andquot;editable-cardandquot;_andgt;_nz-tab'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzClosable]</code></td>
+<td>Show close icon or not</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzCloseIcon]</code></td>
+<td>Close icon</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="template_variable_references_of_lesscodegreaternz-tabnztitleless/codegreater"><span>Template variable references of <code>nz-tab[nzTitle]</code></span><a onclick="window.location.hash = 'template_variable_references_of_lesscodegreaternz-tabnztitleless/codegreater'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>visible</code></td>
+<td>Is the title in the visible area, will be rendered to the dropdown menu if <code>false</code>.</td>
+<td><code>boolean</code></td>
+</tr>
+</tbody></table>
+<p>Use in <code>nz-tab[nzTitle]</code></p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-tab</span> <span class="token attr-name">[nzTitle]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>titleTemplate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">#titleTemplate</span> <span class="token attr-name">let-visible</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>visible<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-template</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-tab</span><span class="token punctuation">></span></span>
+</code></pre><p>Use in <code>*nzTabLink</code></p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-tab</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">*nzTabLink</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let visible = visible<span class="token punctuation">"</span></span> <span class="token attr-name">nz-tab-link</span> <span class="token attr-name">[routerLink]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>['.']<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-tab</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nz-tab"><span>[nz-tab]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-tab'" class="anchor">#</a></h3><p>Tab contents can be lazy loaded by declaring the body in a <code>ng-template</code> with the <code>[nz-tab]</code> attribute.</p>
+<h3 id="ng-templatenztablink_andgt;_anz-tab-link"><span>ng-template[nzTabLink] &gt; a[nz-tab-link]</span><a onclick="window.location.hash = 'ng-templatenztablink_andgt;_anz-tab-link'" class="anchor">#</a></h3><p>Show a link in tab&#39;s head. Used in router link mode.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-tabs</span> <span class="token attr-name">nzLinkRouter</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-tab</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">*nzTabLink</span> <span class="token attr-name">nz-tab-link</span> <span class="token attr-name">[routerLink]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>['.']<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    Default.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-tab</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-tabs</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nztabbarextracontent"><span>[nzTabBarExtraContent]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nztabbarextracontent'" class="anchor">#</a></h3><blockquote>
+<p>Note: <code>*nzTabBarExtraContent</code> has a higher priority than <code>nz-tabs[nzTabBarExtraContent]</code>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzTabBarExtraContent]</code></td>
+<td>Position of extra content</td>
+<td><code>&#39;start&#39; | &#39;end&#39;</code></td>
+<td><code>&#39;end&#39;</code></td>
+<td></td>
+</tr>
+</tbody></table>
+</section></article>

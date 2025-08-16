@@ -1,0 +1,164 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-check-list-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-check-list-demo-custom" nzTitle="复杂场景"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>CheckList<span class="subtitle">任务清单</span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/check-list/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="check-list" description="用于在项目中梳理任务流程。" language="zh"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>如果当前页面业务逻辑过于复杂，且带有较为强制的顺序流控制，那么你可以采用这个组件来帮你简化流程。</p>
+
+	</section>
+	
+	<h2>
+		<span>代码演示</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  [nzId]="'components-check-list-demo-basic'"
+  nzSelector="nz-demo-check-list-basic"
+  [nzLink]="'components-check-list-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:check-list-basic <name>"
+  nzComponentName="NzDemoCheckListBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/check-list/demo/basic.md'">
+	<nz-demo-check-list-basic demo></nz-demo-check-list-basic>
+	<div intro ngNonBindable>
+		<p>最简单的用法。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="复杂场景"
+  [nzId]="'components-check-list-demo-custom'"
+  nzSelector="nz-demo-check-list-custom"
+  [nzLink]="'components-check-list-demo-custom'"
+  nzGenerateCommand="ng g ng-zorro-antd:check-list-custom <name>"
+  nzComponentName="NzDemoCheckListCustomComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/check-list/demo/custom.md'">
+	<nz-demo-check-list-custom demo></nz-demo-check-list-custom>
+	<div intro ngNonBindable>
+		<p>通过自定义参数配置预览效果。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-check-list"><span>nz-check-list</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-check-list'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzItems]</code></td>
+<td>任务清单元素</td>
+<td><code>NzItemProps</code></td>
+<td><code>[]</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzVisible]</code></td>
+<td>显示任务清单</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzIndex]</code></td>
+<td>当前所属位置</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzProgress]</code></td>
+<td>显示任务进度</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzTriggerRender]</code></td>
+<td>清单悬浮按钮的渲染模板</td>
+<td><code>TemplateRef&lt;void&gt; | string</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzTitle]</code></td>
+<td>清单面板标题的渲染模板</td>
+<td><code>TemplateRef&lt;void&gt; | string</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzFooter]</code></td>
+<td>清单面板底部的渲染模板</td>
+<td><code>TemplateRef&lt;void&gt; | string</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzHide)</code></td>
+<td>隐藏清单的回调</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td><code>false</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>(nzHide)</code> 的回调值为是否不再显示清单。你可以在回调中存储数据到 <code>LocalStorage</code> 中，以避免再次显示清单。</p>
+</blockquote>
+<h3 id="interfaces"><span>Interfaces</span><a onclick="window.location.hash = 'interfaces'" class="anchor">#</a></h3><h4 id="nzitemprops"><span>NzItemProps</span><a onclick="window.location.hash = 'nzitemprops'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>key</code></td>
+<td>清单元素的唯一 key</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>清单元素描述内容</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>onClick</code></td>
+<td>点击步骤触发的方法</td>
+<td><code>() =&gt; void</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>key</code> 为清单元素的唯一标识，如果不填写，则默认使用 <code>description</code> 作为 key。</p>
+</blockquote>
+</section></article>

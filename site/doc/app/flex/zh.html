@@ -1,0 +1,167 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-flex-demo-basic" nzTitle="基本布局"></nz-link><nz-link nzHref="#components-flex-demo-align" nzTitle="对齐方式"></nz-link><nz-link nzHref="#components-flex-demo-gap" nzTitle="设置间隙"></nz-link><nz-link nzHref="#components-flex-demo-wrap" nzTitle="自动换行"></nz-link><nz-link nzHref="#components-flex-demo-combination" nzTitle="组合使用"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Flex<span class="subtitle">弹性布局</span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="flex" description="用于对齐的弹性布局容器。" language="zh"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>适合设置元素之间的间距。</li>
+<li>适合设置各种水平、垂直对齐方式。</li>
+</ul>
+<h3 id="与_space_组件的区别"><span>与 Space 组件的区别</span><a onclick="window.location.hash = '与_space_组件的区别'" class="anchor">#</a></h3><ul>
+<li>Space 为内联元素提供间距，其本身会为每一个子元素添加包裹元素用于内联对齐。适用于行、列中多个子元素的等距排列。</li>
+<li>Flex 为块级元素提供间距，其本身不会添加包裹元素。适用于垂直或水平方向上的子元素布局，并提供了更多的灵活性和控制能力。</li>
+</ul>
+
+	</section>
+	
+	<h2>
+		<span>代码演示</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本布局"
+  [nzId]="'components-flex-demo-basic'"
+  nzSelector="nz-demo-flex-basic"
+  [nzLink]="'components-flex-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-basic <name>"
+  nzComponentName="NzDemoFlexBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/basic.md'">
+	<nz-demo-flex-basic demo></nz-demo-flex-basic>
+	<div intro ngNonBindable>
+		<p>最简单的用法。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="对齐方式"
+  [nzId]="'components-flex-demo-align'"
+  nzSelector="nz-demo-flex-align"
+  [nzLink]="'components-flex-demo-align'"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-align <name>"
+  nzComponentName="NzDemoFlexAlignComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/align.md'">
+	<nz-demo-flex-align demo></nz-demo-flex-align>
+	<div intro ngNonBindable>
+		<p>设置对齐方式。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="设置间隙"
+  [nzId]="'components-flex-demo-gap'"
+  nzSelector="nz-demo-flex-gap"
+  [nzLink]="'components-flex-demo-gap'"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-gap <name>"
+  nzComponentName="NzDemoFlexGapComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/gap.md'">
+	<nz-demo-flex-gap demo></nz-demo-flex-gap>
+	<div intro ngNonBindable>
+		<p>使用 <code>gap</code> 设置元素之间的间距，预设了 <code>small</code>、<code>middle</code>、<code>large</code> 三种尺寸，也可以自定义间距。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自动换行"
+  [nzId]="'components-flex-demo-wrap'"
+  nzSelector="nz-demo-flex-wrap"
+  [nzLink]="'components-flex-demo-wrap'"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-wrap <name>"
+  nzComponentName="NzDemoFlexWrapComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/wrap.md'">
+	<nz-demo-flex-wrap demo></nz-demo-flex-wrap>
+	<div intro ngNonBindable>
+		<p>自动换行。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="组合使用"
+  [nzId]="'components-flex-demo-combination'"
+  nzSelector="nz-demo-flex-combination"
+  [nzLink]="'components-flex-demo-combination'"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-combination <name>"
+  nzComponentName="NzDemoFlexCombinationComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/combination.md'">
+	<nz-demo-flex-combination demo></nz-demo-flex-combination>
+	<div intro ngNonBindable>
+		<p>嵌套使用，可以实现更复杂的布局。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-flex"><span>[nz-flex]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-flex'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzVertical]</code></td>
+<td>使用 <code>flex-direction: column</code>描述flex的垂直方向</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzJustify]</code></td>
+<td>设置元素在主轴方向上的对齐方式，参照 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content" target="_blank" rel="noopener">justify-content</a></td>
+<td><code>NzJustify</code></td>
+<td><code>&#39;normal&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzAlign]</code></td>
+<td>设置元素在交叉轴方向上的对齐方式，参照 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items" target="_blank" rel="noopener">align-items</a></td>
+<td><code>NzAlign</code></td>
+<td><code>&#39;normal&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzGap]</code></td>
+<td>设置项目的间隙</td>
+<td><code>&#39;small&#39; | &#39;middle&#39; | &#39;large&#39; | number | string</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>[nzWrap]</code></td>
+<td>指定 flex 元素单行显示还是多行显示，参照 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-wrap" target="_blank" rel="noopener">flex-wrap</a></td>
+<td><code>NzWrap</code></td>
+<td><code>&#39;nowrap&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzFlex]</code></td>
+<td>flex css简写属性，参照 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex" target="_blank" rel="noopener">flex</a></td>
+<td><code>NzFlex</code></td>
+<td><code>&#39;unset&#39;</code></td>
+</tr>
+</tbody></table>
+</section></article>

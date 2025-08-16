@@ -1,0 +1,145 @@
+<article class="markdown">
+  <h1>全局配置项<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/docs/global-config.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#如何使用" nzTitle="如何使用"></nz-link><nz-link nzHref="#局部生效" nzTitle="局部生效"></nz-link><nz-link nzHref="#动态变更" nzTitle="动态变更"></nz-link><nz-link nzHref="#优先级说明" nzTitle="优先级说明"></nz-link><nz-link nzHref="#可配置项" nzTitle="可配置项"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>我们给众多组件添加了<strong>全局配置</strong>功能，你可以通过全局配置来定义组件的默认行为，从而减少在模板中需要写的代码（让你的代码更加清爽），还能在运行时修改全局配置项。</p>
+<h2 id="如何使用"><span>如何使用</span><a onclick="window.location.hash = '如何使用'" class="anchor">#</a></h2><p>想要为某些组件提供默认配置项, 可以使用 <code>provideNzConfig</code> 函数，传入一个符合 <code>NzConfig</code> 接口的对象。例如：</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfig<span class="token punctuation">,</span> provideNzConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> ngZorroConfig<span class="token operator">:</span> NzConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 注意组件名称没有 nz 前缀</span>
+  message<span class="token operator">:</span> <span class="token punctuation">&#123;</span> nzTop<span class="token operator">:</span> <span class="token number">120</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  notification<span class="token operator">:</span> <span class="token punctuation">&#123;</span> nzTop<span class="token operator">:</span> <span class="token number">240</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>ngZorroConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><p>这些全局配置项将会被注入 <code>NzConfigService</code> 当中并保存。</p>
+<h3 id="提供模板"><span>提供模板</span><a onclick="window.location.hash = '提供模板'" class="anchor">#</a></h3><p>一些组件支持传递模板 <code>TemplateRef&lt;T&gt;</code> 作为默认参数，我们来了解一下如何做到这一点。</p>
+<p>最简单的方式是在应用的根组件中调用 <code>NzConfigService</code> 的相关方法：</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfigService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">ViewChild</span></span><span class="token punctuation">(</span><span class="token string">'nzIndicatorTpl'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token keyword">static</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  nzIndicator<span class="token operator">!</span><span class="token operator">:</span> TemplateRef<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">;</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'spin'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> nzIndicator<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nzIndicator <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>然而这种方式可能会让你的 AppComponent 相当臃肿，并违反关注分离原则。</p>
+<p>因此，当你的项目比较大时，我们建议你使用一个 <code>FactoryProvider</code>，如下所示：</p>
+<pre><code class="language-typescript"><span class="token comment">// The module-level Component which contains template references.</span>
+<span class="token comment">// Exporting is required for AOT compatibility</span>
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;ng-template #nzIndicatorTpl>
+      &lt;span class="ant-spin-dot">
+        &lt;nz-icon nzType="loading" />
+      &lt;/span>
+    &lt;/ng-template>
+  </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">GlobalTemplatesComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">ViewChild</span></span><span class="token punctuation">(</span><span class="token string">'nzIndicatorTpl'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token keyword">static</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  nzIndicator<span class="token operator">!</span><span class="token operator">:</span> TemplateRef<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// The Factory function</span>
+<span class="token keyword">const</span> nzConfigFactory <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> NzConfig <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> environmentInjector <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>EnvironmentInjector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> nzIndicator <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>component<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> environmentInjector <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+    spin<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      nzIndicator
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span>
+      <span class="token comment">// The FactoryProvider</span>
+      provide<span class="token operator">:</span> <span class="token constant">NZ_CONFIG</span><span class="token punctuation">,</span>
+      useFactory<span class="token operator">:</span> nzConfigFactory
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><h2 id="局部生效"><span>局部生效</span><a onclick="window.location.hash = '局部生效'" class="anchor">#</a></h2><p>开发者可以利用 Angular 自带的依赖注入机制，在特定组件内重新设定 <code>NZ_CONFIG</code>， 该设定不会影响该组件以外的配置。</p>
+<pre><code class="language-typescript"><span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// 重设本地 NzConfigService</span>
+    NzConfigService<span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span>
+      provide<span class="token operator">:</span> <span class="token constant">NZ_CONFIG</span><span class="token punctuation">,</span>
+      useValue<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        button<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          nzSize<span class="token operator">:</span> <span class="token string">'large'</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre><p>也可以使用 <code>useFactory</code> 将全局配置与区域配置合并后生效</p>
+<blockquote>
+<p>注意：全局配置在初始化之后修改将不会影响该部分配置结果</p>
+</blockquote>
+<pre><code class="language-typescript"><span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// 重设本地 NzConfigService</span>
+    NzConfigService<span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span>
+      provide<span class="token operator">:</span> <span class="token constant">NZ_CONFIG</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">useFactory</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 获取全局 NzConfigService</span>
+        <span class="token keyword">const</span> globalConfig <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> skipSelf<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> localConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+          select<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            nzBorderless<span class="token operator">:</span> <span class="token boolean">true</span>
+          <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        <span class="token comment">// 合并全局配置与本地配置</span>
+        <span class="token keyword">const</span> mergedConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+          <span class="token operator">...</span>globalConfig<span class="token punctuation">,</span>
+          <span class="token operator">...</span>localConfig
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> mergedConfig<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre><h2 id="动态变更"><span>动态变更</span><a onclick="window.location.hash = '动态变更'" class="anchor">#</a></h2><p>你可以通过调用 <code>NzConfigService</code> 的 <code>set</code> 方法来改变某个组件的配置项，例如：</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfigService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ChangeZorroConfigComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">onChangeConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> nzSize<span class="token operator">:</span> <span class="token string">'large'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>所有的组件实例都会响应这些改变（只要它们没有被单独赋值）。</p>
+<h2 id="优先级说明"><span>优先级说明</span><a onclick="window.location.hash = '优先级说明'" class="anchor">#</a></h2><p>对于任何一个属性来说，各个来源的值的优先级如下：</p>
+<p><strong>为组件的某个实例单独设置的值（通过模板或类似于 <code>service.create</code> 的方法）&gt; 通过 <code>NZ_CONFIG</code> 提供的全局默认值（包括 <code>set</code> 方法） &gt; NG-ZORRO 内置的默认值。</strong></p>
+<p>例如，你想创建一个 NzNotification 组件：</p>
+<ol>
+<li>你在调用 <code>NzNotificationService.success</code> 时传递参数 <code>&#123; nzDuration: 6000 &#125;</code></li>
+<li>你通过 <code>NZ_CONFIG</code> 提供了全局默认值 <code>&#123; notification: &#123; nzDuration: 5000 &#125; &#125;</code></li>
+<li>NG-ZORRO 内部默认值为 4500</li>
+</ol>
+<p>最终该 Notification 将会显示 6000 毫秒。</p>
+<h2 id="可配置项"><span>可配置项</span><a onclick="window.location.hash = '可配置项'" class="anchor">#</a></h2><p><code>NzConfig</code> 接口提供的类型定义信息能够帮助你找到所有支持全局配置项的组件和属性。另外，每个组件的文档都会指出哪些属性可以通过全局配置项的方式指定。</p>
+</section>
+</article>

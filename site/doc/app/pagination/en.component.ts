@@ -1,0 +1,48 @@
+import { Component, QueryList, ViewChildren } from '@angular/core';
+import { NzCodeBoxComponent } from '../codebox/codebox.component';
+import { ShareModule } from '../share/share.module';
+
+import { NzDemoPaginationBasicComponent } from './basic';
+import { NzDemoPaginationChangerComponent } from './changer';
+import { NzDemoPaginationControlledComponent } from './controlled';
+import { NzDemoPaginationItemRenderComponent } from './item-render';
+import { NzDemoPaginationJumpComponent } from './jump';
+import { NzDemoPaginationMiniComponent } from './mini';
+import { NzDemoPaginationMoreComponent } from './more';
+import { NzDemoPaginationSimpleComponent } from './simple';
+import { NzDemoPaginationTotalComponent } from './total';
+
+
+@Component({
+  selector     : 'nz-demo-pagination',
+  standalone   : true,
+  imports      : [
+    ShareModule,
+		NzDemoPaginationBasicComponent,
+		NzDemoPaginationChangerComponent,
+		NzDemoPaginationControlledComponent,
+		NzDemoPaginationItemRenderComponent,
+		NzDemoPaginationJumpComponent,
+		NzDemoPaginationMiniComponent,
+		NzDemoPaginationMoreComponent,
+		NzDemoPaginationSimpleComponent,
+		NzDemoPaginationTotalComponent,
+
+  ],
+  templateUrl  : './en.html'
+})
+export class NzDemoPaginationEnComponent {
+  expanded = false;
+  @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
+
+  goLink(link: string): void {
+    if (window) {
+      window.location.hash = link;
+    }
+  }
+
+  expandAllCode(): void {
+    this.expanded = !this.expanded;
+    this.codeBoxes.forEach(code => code.expandCode(this.expanded));
+  }
+}

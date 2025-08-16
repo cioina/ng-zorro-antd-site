@@ -1,0 +1,451 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-tree-view-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-tree-view-demo-checkbox" nzTitle="选择框"></nz-link><nz-link nzHref="#components-tree-view-demo-directory" nzTitle="目录"></nz-link><nz-link nzHref="#components-tree-view-demo-dynamic" nzTitle="异步加载数据"></nz-link><nz-link nzHref="#components-tree-view-demo-line" nzTitle="带连接线的树"></nz-link><nz-link nzHref="#components-tree-view-demo-editable" nzTitle="可编辑"></nz-link><nz-link nzHref="#components-tree-view-demo-search" nzTitle="搜索"></nz-link><nz-link nzHref="#components-tree-view-demo-virtual-scroll" nzTitle="虚拟滚动"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>TreeView<span class="subtitle">树视图</span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="tree-view" description="树视图组件，相比封装好的 Tree 组件具有更高的定制度和更好的性能。" language="zh"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>更基础的 Tree 组件，允许在模版中定义每个组成部分，并手动管理状态。</p>
+
+	</section>
+	
+	<h2>
+		<span>代码演示</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  [nzId]="'components-tree-view-demo-basic'"
+  nzSelector="nz-demo-tree-view-basic"
+  [nzLink]="'components-tree-view-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-basic <name>"
+  nzComponentName="NzDemoTreeViewBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/basic.md'">
+	<nz-demo-tree-view-basic demo></nz-demo-tree-view-basic>
+	<div intro ngNonBindable>
+		<p>最简单的用法，选中，禁用，展开等功能。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="目录"
+  [nzId]="'components-tree-view-demo-directory'"
+  nzSelector="nz-demo-tree-view-directory"
+  [nzLink]="'components-tree-view-demo-directory'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-directory <name>"
+  nzComponentName="NzDemoTreeViewDirectoryComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/directory.md'">
+	<nz-demo-tree-view-directory demo></nz-demo-tree-view-directory>
+	<div intro ngNonBindable>
+		<p>目录树</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="带连接线的树"
+  [nzId]="'components-tree-view-demo-line'"
+  nzSelector="nz-demo-tree-view-line"
+  [nzLink]="'components-tree-view-demo-line'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-line <name>"
+  nzComponentName="NzDemoTreeViewLineComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/line.md'">
+	<nz-demo-tree-view-line demo></nz-demo-tree-view-line>
+	<div intro ngNonBindable>
+		<p>节点之间带连接线的树，常用于文件目录结构展示。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="搜索"
+  [nzId]="'components-tree-view-demo-search'"
+  nzSelector="nz-demo-tree-view-search"
+  [nzLink]="'components-tree-view-demo-search'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-search <name>"
+  nzComponentName="NzDemoTreeViewSearchComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/search.md'">
+	<nz-demo-tree-view-search demo></nz-demo-tree-view-search>
+	<div intro ngNonBindable>
+		<p>可搜索的树。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="选择框"
+  [nzId]="'components-tree-view-demo-checkbox'"
+  nzSelector="nz-demo-tree-view-checkbox"
+  [nzLink]="'components-tree-view-demo-checkbox'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-checkbox <name>"
+  nzComponentName="NzDemoTreeViewCheckboxComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/checkbox.md'">
+	<nz-demo-tree-view-checkbox demo></nz-demo-tree-view-checkbox>
+	<div intro ngNonBindable>
+		<p>带选择框的树。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="异步加载数据"
+  [nzId]="'components-tree-view-demo-dynamic'"
+  nzSelector="nz-demo-tree-view-dynamic"
+  [nzLink]="'components-tree-view-demo-dynamic'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-dynamic <name>"
+  nzComponentName="NzDemoTreeViewDynamicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/dynamic.md'">
+	<nz-demo-tree-view-dynamic demo></nz-demo-tree-view-dynamic>
+	<div intro ngNonBindable>
+		<p>点击展开节点，动态加载数据。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="可编辑"
+  [nzId]="'components-tree-view-demo-editable'"
+  nzSelector="nz-demo-tree-view-editable"
+  [nzLink]="'components-tree-view-demo-editable'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-editable <name>"
+  nzComponentName="NzDemoTreeViewEditableComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/editable.md'">
+	<nz-demo-tree-view-editable demo></nz-demo-tree-view-editable>
+	<div intro ngNonBindable>
+		<p>带添加和删除功能的树。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="虚拟滚动"
+  [nzId]="'components-tree-view-demo-virtual-scroll'"
+  nzSelector="nz-demo-tree-view-virtual-scroll"
+  [nzLink]="'components-tree-view-demo-virtual-scroll'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-view-virtual-scroll <name>"
+  nzComponentName="NzDemoTreeViewVirtualScrollComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/virtual-scroll.md'">
+	<nz-demo-tree-view-virtual-scroll demo></nz-demo-tree-view-virtual-scroll>
+	<div intro ngNonBindable>
+		<p>使用虚拟滚动。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tree-view"><span>nz-tree-view</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-view'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzTreeControl]</code></td>
+<td>树控制器</td>
+<td><a href="https://material.angular.io/cdk/tree/api#TreeControl" target="_blank" rel="noopener">TreeControl</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDataSource]</code></td>
+<td>用于渲染树的数组数据</td>
+<td><code>DataSource&lt;T&gt; | Observable&lt;T[]&gt; | T[]</code>, <a href="https://material.angular.io/cdk/tree/overview#data-source" target="_blank" rel="noopener">DataSource</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDirectoryTree]</code></td>
+<td>节点是否以文件夹样式显示</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzBlockNode]</code></td>
+<td>节点是否占据整行</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody></table>
+<h3 id="nz-tree-virtual-scroll-view"><span>nz-tree-virtual-scroll-view</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-virtual-scroll-view'" class="anchor">#</a></h3><p>虚拟滚动的树视图，可以通过组件实例上的 <code>virtualScrollViewport</code> 成员访问 <a href="https://material.angular.io/cdk/scrolling/api#CdkVirtualScrollViewport" target="_blank" rel="noopener">CdkVirtualScrollViewport</a> 实例。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzTreeControl]</code></td>
+<td>树控制器</td>
+<td><a href="https://material.angular.io/cdk/tree/api#TreeControl" target="_blank" rel="noopener">TreeControl</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDataSource]</code></td>
+<td>用于渲染树的数组数据</td>
+<td><code>DataSource&lt;T&gt; | Observable&lt;T[]&gt; | T[]</code>, <a href="https://material.angular.io/cdk/tree/overview#data-source" target="_blank" rel="noopener">DataSource</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDirectoryTree]</code></td>
+<td>节点是否以文件夹样式显示</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzBlockNode]</code></td>
+<td>节点是否占据整行</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzItemSize]</code></td>
+<td>节点的尺寸(px)</td>
+<td><code>number</code></td>
+<td><code>28</code></td>
+</tr>
+<tr>
+<td><code>[nzMinBufferPx]</code></td>
+<td>超出渲染区的最小缓存区大小(px)</td>
+<td><code>number</code></td>
+<td><code>28 * 5</code></td>
+</tr>
+<tr>
+<td><code>[nzMaxBufferPx]</code></td>
+<td>需要渲染新节点时的缓冲区大小(px)</td>
+<td><code>number</code></td>
+<td><code>28 * 10</code></td>
+</tr>
+</tbody></table>
+<h3 id="nztreenodedef"><span>[nzTreeNodeDef]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nztreenodedef'" class="anchor">#</a></h3><p>用于定义 <code>nz-tree-node</code> 的指令。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzTreeNodeDefWhen]</code></td>
+<td>用于定义是否使用此节点的方法，优先匹配第一个返回 <code>true</code> 的节点。如果没有返回 <code>true</code> 的节点，则匹配未定义此方法的节点。</td>
+<td><code>(index: number, nodeData: T) =&gt; boolean</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-tree-node"><span>nz-tree-node</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-node'" class="anchor">#</a></h3><p>树节点容器组件，需要通过 <code>nzTreeNodeDef</code> 指令定义。</p>
+<h3 id="nztreenodepadding"><span>[nzTreeNodePadding]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nztreenodepadding'" class="anchor">#</a></h3><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-tree-node</span> <span class="token attr-name">nzTreeNodePadding</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-tree-node</span><span class="token punctuation">></span></span>
+</code></pre><p>以添加 <code>padding</code> 的方式显示节点缩进 <strong>性能最好</strong>。</p>
+<h3 id="nztreenodeindentline"><span>nzTreeNodeIndentLine</span><a onclick="window.location.hash = 'nztreenodeindentline'" class="anchor">#</a></h3><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-tree-node</span> <span class="token attr-name">nzTreeNodeIndentLine</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-tree-node</span><span class="token punctuation">></span></span>
+</code></pre><p>以添加缩进线的方式显示节点缩进。</p>
+<h3 id="nz-tree-node-toggle"><span>nz-tree-node-toggle</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-node-toggle'" class="anchor">#</a></h3><p>切换部分，用于节点的展开/收起。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzTreeNodeToggleRecursive]</code></td>
+<td>是否为递归展开/收起</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody></table>
+<h3 id="nz-tree-node-togglenztreenodenooptoggle"><span>nz-tree-node-toggle[nzTreeNodeNoopToggle]</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-node-togglenztreenodenooptoggle'" class="anchor">#</a></h3><p>不做任何操作的切换部分，可用于占位或者显示图标。</p>
+<h3 id="nztreenodetogglerotateicon"><span>[nzTreeNodeToggleRotateIcon]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nztreenodetogglerotateicon'" class="anchor">#</a></h3><p>定义切换部分中的图标，会随着展开收起状态自动旋转。</p>
+<h3 id="nztreenodetoggleactiveicon"><span>[nzTreeNodeToggleActiveIcon]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nztreenodetoggleactiveicon'" class="anchor">#</a></h3><p>定义切换部分中的图标，使其具有激活状态的样式，可用于 loading 图标。</p>
+<h3 id="nz-tree-node-option"><span>nz-tree-node-option</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-node-option'" class="anchor">#</a></h3><p>定义节点中的可选择部分。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzSelected]</code></td>
+<td>是否选中</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>是否禁用</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzClick)</code></td>
+<td>点击时的事件</td>
+<td><code>EventEmitter&lt;MouseEvent&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-tree-node-checkbox"><span>nz-tree-node-checkbox</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-node-checkbox'" class="anchor">#</a></h3><p>定义节点中的可勾选的部分。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzChecked]</code></td>
+<td>是否勾选</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzIndeterminate]</code></td>
+<td>是否为半选</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled] </code></td>
+<td>是否禁用</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzClick)</code></td>
+<td>点击时的事件</td>
+<td><code>EventEmitter&lt;MouseEvent&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="classes"><span>Classes</span><a onclick="window.location.hash = 'classes'" class="anchor">#</a></h2><h3 id="nztreeflatdatasource_extends_datasource"><span>NzTreeFlatDataSource extends DataSource</span><a onclick="window.location.hash = 'nztreeflatdatasource_extends_datasource'" class="anchor">#</a></h3><p><strong>构造参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>treeControl: FlatTreeControl&lt;F, K&gt;</code></td>
+<td>Tree 控制器</td>
+</tr>
+<tr>
+<td><code>treeFlattener: NzTreeFlattener&lt;T, F, K&gt;</code></td>
+<td>用于将嵌套节点 <code>T</code> 处理为扁平节点 <code>F</code> 的展平器</td>
+</tr>
+<tr>
+<td><code>initialData: T[] = []</code></td>
+<td>初始化数据</td>
+</tr>
+</tbody></table>
+<p><strong>方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>connect(collectionViewer: CollectionViewer): Observable&lt;F[]&gt;</code></td>
+<td>TreeView 组件中调用，用于获取数据的更新</td>
+</tr>
+<tr>
+<td><code>disconnect(): void</code></td>
+<td>TreeView 组件销毁时调用</td>
+</tr>
+<tr>
+<td><code>setData(value: T[]): void</code></td>
+<td>设置原始数据</td>
+</tr>
+<tr>
+<td><code>getData(): T[]</code></td>
+<td>获取原始数据</td>
+</tr>
+</tbody></table>
+<h3 id="nztreeflattener"><span>NzTreeFlattener</span><a onclick="window.location.hash = 'nztreeflattener'" class="anchor">#</a></h3><p>将具有子节点的嵌套数据转换为具有级别（level）信息的转换器类。</p>
+<p><strong>构造参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>transformFunction: (node: T, level: number) =&gt; F</code></td>
+<td>接收一个嵌套节点，返回扁平节点</td>
+</tr>
+<tr>
+<td><code>getLevel: (node: F) =&gt; number</code></td>
+<td>定义获取 <code>level</code> 属性的方法</td>
+</tr>
+<tr>
+<td><code>isExpandable: (node: F) =&gt; boolean</code></td>
+<td>定义是否为可展开节点的方法</td>
+</tr>
+<tr>
+<td><code>getChildren: (node: T) =&gt; Observable&lt;T[]&gt; | T[] | undefined | null</code></td>
+<td>定义从嵌套数据中获取子节点的方法</td>
+</tr>
+</tbody></table>
+<p><strong>方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>flattenNodes(structuredData: T[]): F[]</code></td>
+<td>接收嵌套数据，返回扁平数据</td>
+</tr>
+<tr>
+<td><code>expandFlattenedNodes(nodes: F[], treeControl: TreeControl&lt;F, K&gt;): F[]</code></td>
+<td>按 TreeControl 中的展开状态获取节点</td>
+</tr>
+</tbody></table>
+</section></article>

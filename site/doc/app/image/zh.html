@@ -1,0 +1,359 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-image-demo-basic" nzTitle="基本用法"></nz-link><nz-link nzHref="#components-image-demo-fallback" nzTitle="容错处理"></nz-link><nz-link nzHref="#components-image-demo-placeholder" nzTitle="渐进加载"></nz-link><nz-link nzHref="#components-image-demo-preview-group" nzTitle="多张图片预览"></nz-link><nz-link nzHref="#components-image-demo-service" nzTitle="服务方式创建预览层"></nz-link><nz-link nzHref="#components-image-demo-controlled-preview" nzTitle="受控的预览"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Image<span class="subtitle">图片</span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="image" description="可预览的图片。" language="zh"></component-meta>
+  
+	<section class="markdown" ngNonBindable>
+		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要展示图片时使用。</li>
+<li>加载大图时渐进加载或加载失败时容错处理。</li>
+</ul>
+
+	</section>
+	
+	<h2>
+		<span>代码演示</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本用法"
+  [nzId]="'components-image-demo-basic'"
+  nzSelector="nz-demo-image-basic"
+  [nzLink]="'components-image-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:image-basic <name>"
+  nzComponentName="NzDemoImageBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/basic.md'">
+	<nz-demo-image-basic demo></nz-demo-image-basic>
+	<div intro ngNonBindable>
+		<p>单击图像可以放大显示。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="渐进加载"
+  [nzId]="'components-image-demo-placeholder'"
+  nzSelector="nz-demo-image-placeholder"
+  [nzLink]="'components-image-demo-placeholder'"
+  nzGenerateCommand="ng g ng-zorro-antd:image-placeholder <name>"
+  nzComponentName="NzDemoImagePlaceholderComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/placeholder.md'">
+	<nz-demo-image-placeholder demo></nz-demo-image-placeholder>
+	<div intro ngNonBindable>
+		<p>大图使用 placeholder 渐进加载。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="服务方式创建预览层"
+  [nzId]="'components-image-demo-service'"
+  nzSelector="nz-demo-image-service"
+  [nzLink]="'components-image-demo-service'"
+  nzGenerateCommand="ng g ng-zorro-antd:image-service <name>"
+  nzComponentName="NzDemoImageServiceComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/service.md'">
+	<nz-demo-image-service demo></nz-demo-image-service>
+	<div intro ngNonBindable>
+		<p>图片预览的 Service 用法，示例中包含使用 Service 创建单张或多张图片预览的用法</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="容错处理"
+  [nzId]="'components-image-demo-fallback'"
+  nzSelector="nz-demo-image-fallback"
+  [nzLink]="'components-image-demo-fallback'"
+  nzGenerateCommand="ng g ng-zorro-antd:image-fallback <name>"
+  nzComponentName="NzDemoImageFallbackComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/fallback.md'">
+	<nz-demo-image-fallback demo></nz-demo-image-fallback>
+	<div intro ngNonBindable>
+		<p>加载失败显示图像占位符。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="多张图片预览"
+  [nzId]="'components-image-demo-preview-group'"
+  nzSelector="nz-demo-image-preview-group"
+  [nzLink]="'components-image-demo-preview-group'"
+  nzGenerateCommand="ng g ng-zorro-antd:image-preview-group <name>"
+  nzComponentName="NzDemoImagePreviewGroupComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/preview-group.md'">
+	<nz-demo-image-preview-group demo></nz-demo-image-preview-group>
+	<div intro ngNonBindable>
+		<p>点击左右切换按钮可以预览多张图片。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="受控的预览"
+  [nzId]="'components-image-demo-controlled-preview'"
+  nzSelector="nz-demo-image-controlled-preview"
+  [nzLink]="'components-image-demo-controlled-preview'"
+  nzGenerateCommand="ng g ng-zorro-antd:image-controlled-preview <name>"
+  nzComponentName="NzDemoImageControlledPreviewComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/controlled-preview.md'">
+	<nz-demo-image-controlled-preview demo></nz-demo-image-controlled-preview>
+	<div intro ngNonBindable>
+		<p>可以使预览受控。</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>[nz-image]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>支持全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzSrc</code></td>
+<td>图片地址</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>nzFallback</code></td>
+<td>加载失败容错地址</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzPlaceholder</code></td>
+<td>加载占位地址</td>
+<td><code>string</code></td>
+<td>-</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzDisablePreview</code></td>
+<td>是否禁止预览</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzCloseOnNavigation</code></td>
+<td>当用户在历史中前进/后退时是否关闭预览。注意，这通常不包括点击链接（除非用户使用 HashLocationStrategy）。</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzDirection</code></td>
+<td>文字方向</td>
+<td><code>Direction</code></td>
+<td><code>&#39;ltr&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzScaleStep</code></td>
+<td><code>1 + nzScaleStep</code> 为缩放放大的每步倍数</td>
+<td><code>number</code></td>
+<td><code>0.5</code></td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<p>其他属性见 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Attributes" target="_blank" rel="noopener">&lt;img&gt;</a></p>
+<h3 id="nzimageservice"><span>NzImageService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzimageservice'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>images</code></td>
+<td>预览图片</td>
+<td><code>NzImage[]</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>预览参数</td>
+<td><code>NzImagePreviewOptions</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="相关类型定义"><span>相关类型定义</span><a onclick="window.location.hash = '相关类型定义'" class="anchor">#</a></h2><h3 id="nzimage"><span>NzImage</span><a onclick="window.location.hash = 'nzimage'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>src</code></td>
+<td>src</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>alt</code></td>
+<td>alt</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>图片宽度</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>图片高度</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nzimagepreviewoptions"><span>NzImagePreviewOptions</span><a onclick="window.location.hash = 'nzimagepreviewoptions'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzKeyboard</code></td>
+<td>是否支持键盘 esc 关闭、左右键切换图片</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>nzMaskClosable</code></td>
+<td>点击蒙层是否允许关闭</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>nzCloseOnNavigation</code></td>
+<td>当用户在历史中前进/后退时是否关闭预览。注意，这通常不包括点击链接（除非用户使用 HashLocationStrategy）。</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>nzZIndex</code></td>
+<td>设置预览层的 z-index</td>
+<td><code>number</code></td>
+<td><code>1000</code></td>
+</tr>
+<tr>
+<td><code>nzZoom</code></td>
+<td>缩放比例</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>nzRotate</code></td>
+<td>旋转角度</td>
+<td><code>number</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>nzScaleStep</code></td>
+<td><code>1 + nzScaleStep</code> 为缩放放大的每步倍数</td>
+<td><code>number</code></td>
+<td><code>0.5</code></td>
+</tr>
+<tr>
+<td><code>nzFlipHorizontally</code></td>
+<td>在水平向量上翻转图像</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>nzFlipVertically</code></td>
+<td>在垂直向量上翻转图像</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody></table>
+<h3 id="nzimagepreviewref"><span>NzImagePreviewRef</span><a onclick="window.location.hash = 'nzimagepreviewref'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>switchTo(index: number): void</code></td>
+<td>设置预览索引</td>
+</tr>
+<tr>
+<td><code>prev(): void</code></td>
+<td>上一张</td>
+</tr>
+<tr>
+<td><code>next(): void</code></td>
+<td>下一张</td>
+</tr>
+<tr>
+<td><code>close(): void</code></td>
+<td>关闭预览</td>
+</tr>
+</tbody></table>
+<h3 id="nzimagegroupcomponent"><span>NzImageGroupComponent</span><a onclick="window.location.hash = 'nzimagegroupcomponent'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzScaleStep</code></td>
+<td><code>1 + nzScaleStep</code> 为缩放放大的每步倍数</td>
+<td><code>number</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+</section></article>

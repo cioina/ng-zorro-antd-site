@@ -1,0 +1,203 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#components-experimental-image-demo-preloading" nzTitle="Priority"></nz-link><nz-link nzHref="#components-experimental-image-demo-src-loader" nzTitle="Use Src Loader"></nz-link><nz-link nzHref="#components-experimental-image-demo-auto-srcset" nzTitle="Auto Srcset"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+	<h1>Image<span class="subtitle"></span><span class="widget"></span>
+	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
+		<nz-icon nzType="edit" />
+  </a>
+</h1>
+
+  <component-meta name="experimental-image" description="Experimental image component." language="en"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO experiments are features that are released but not yet considered stable or production ready</p>
+<p>Developers and users can opt in into these features before they are fully released. But <strong>breaking changes</strong> may occur with any release.</p>
+</blockquote>
+	<section class="markdown" ngNonBindable>
+		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>When you need the browser to prioritize image loading (needs to be handled in SSR).</li>
+<li>When you need to optimize for HD displays (e.g. retina screens).</li>
+<li>When using image CDN.</li>
+<li>More in <a href="/components/image/en">Image documentation</a></li>
+<li>Next steps<ul>
+<li>Add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes" target="_blank" rel="noopener">sizes</a> attribute and responsive support.</li>
+</ul>
+</li>
+</ul>
+
+	</section>
+	
+	<h2>
+		<span>Examples</span>
+		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+	</h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Priority"
+  [nzId]="'components-experimental-image-demo-preloading'"
+  nzSelector="nz-demo-experimental-image-preloading"
+  [nzLink]="'components-experimental-image-demo-preloading'"
+  nzGenerateCommand="ng g ng-zorro-antd:experimental-image-preloading <name>"
+  nzComponentName="NzDemoExperimentalImagePreloadingComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md'">
+	<nz-demo-experimental-image-preloading demo></nz-demo-experimental-image-preloading>
+	<div intro ngNonBindable>
+		<p>Setting <code>nzPriority</code> will add the <code>&lt;link rel=&quot;preload&quot;&gt;</code> tag when rendering server-side (SSR), and browsers will treat it as a high priority resource to load. You can see this in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener">MDN - Preloading</a>, <a href="https://web.dev/preload-responsive-images/" target="_blank" rel="noopener">web.dev - Preloading responsive images</a> to learn more.</p>
+<p>Note: usually we only need to set <code>nzPriority</code> for the first screen images, so you only need to add it for the first few items in the cyclically generated template, e.g.</p>
+<pre><code class="language-html">&#64;for (product of products; track product)
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-image</span> <span class="token attr-name">[nzPriority]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$index &lt;= 8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-image</span><span class="token punctuation">></span></span>
+&#125;
+</code></pre>
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Use Src Loader"
+  [nzId]="'components-experimental-image-demo-src-loader'"
+  nzSelector="nz-demo-experimental-image-src-loader"
+  [nzLink]="'components-experimental-image-demo-src-loader'"
+  nzGenerateCommand="ng g ng-zorro-antd:experimental-image-src-loader <name>"
+  nzComponentName="NzDemoExperimentalImageSrcLoaderComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md'">
+	<nz-demo-experimental-image-src-loader demo></nz-demo-experimental-image-src-loader>
+	<div intro ngNonBindable>
+		<p>Custom <code>nzSrcLoader</code> is used to resolve image URLs, or you can also use the built-in image CND provider&#39;s Loaders. <br/>
+We recommend always specifying the image size (<code>nzWidth</code>, <code>nzHeight</code>), which can help improve the key metrics of the web experience <a href="https://web.dev/cls/" target="_blank" rel="noopener">CLS</a>, and can also be used with the Loader to optimize the images using the image CND to improve the loading speed. <br/>
+If you want to use a different Loader in a different environment you can do the following.</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> environment <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'environments/environment'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfig<span class="token punctuation">,</span> provideNzConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createAliObjectsLoader<span class="token punctuation">,</span> defaultImageSrcLoader <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/experimental/image'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> nzConfig<span class="token operator">:</span> NzConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  imageExperimental<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    nzSrcLoader<span class="token operator">:</span> environment<span class="token punctuation">.</span>production
+      <span class="token operator">?</span> <span class="token function">createAliObjectsLoader</span><span class="token punctuation">(</span><span class="token string">'https://zos.alipayobjects.com/rmsportal'</span><span class="token punctuation">)</span>
+      <span class="token operator">:</span> defaultImageSrcLoader
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>nzConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre>
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Auto Srcset"
+  [nzId]="'components-experimental-image-demo-auto-srcset'"
+  nzSelector="nz-demo-experimental-image-auto-srcset"
+  [nzLink]="'components-experimental-image-demo-auto-srcset'"
+  nzGenerateCommand="ng g ng-zorro-antd:experimental-image-auto-srcset <name>"
+  nzComponentName="NzDemoExperimentalImageAutoSrcsetComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md'">
+	<nz-demo-experimental-image-auto-srcset demo></nz-demo-experimental-image-auto-srcset>
+	<div intro ngNonBindable>
+		<p>Using <code>nzAutoSrcset</code> requires to specify the image size (<code>nzWidth</code>, <code>nzHeight</code>), with the Loader automatically generating <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset" target="_blank" rel="noopener">srcset</a> for different pixel densities.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>nz-image</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzSrc</code></td>
+<td>URL</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzAlt</code></td>
+<td>Alt</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzWidth</code></td>
+<td>Width</td>
+<td><code>number|string</code></td>
+<td><code>auto</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzHeight</code></td>
+<td>Height</td>
+<td><code>number|string</code></td>
+<td><code>auto</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzAutoSrcset</code></td>
+<td>Whether to optimize image loading</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzSrcLoader</code></td>
+<td>Loader</td>
+<td><code>NzImageSrcLoader</code></td>
+<td><code>defaultImageSrcLoader</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzPriority</code></td>
+<td>Whether to add <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener">preload</a> (only SSR)</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<h3 id="nzimagesrcloader"><span>NzImageSrcLoader</span><a onclick="window.location.hash = 'nzimagesrcloader'" class="anchor">#</a></h3><pre><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">NzImageSrcLoader</span> <span class="token operator">=</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> src<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> width<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</code></pre><h2 id="note"><span>Note</span><a onclick="window.location.hash = 'note'" class="anchor">#</a></h2><h3 id="nzsrcloader"><span>nzSrcLoader</span><a onclick="window.location.hash = 'nzsrcloader'" class="anchor">#</a></h3><p>Using <code>nzSrcLoader</code> helps you to fill in key information about the requested image, such as <code>src</code> and <code>width</code>, which defaults to</p>
+<pre><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">const</span> defaultImageSrcLoader<span class="token operator">:</span> <span class="token function-variable function">NzImageSrcLoader</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">&#123;</span> src <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> src<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><p>Built-in image CND creation method</p>
+<pre><code class="language-ts"><span class="token comment">/**
+ * AliObjectsLoader return format
+ * &#123;domain&#125;/&#123;src&#125;?x-oss-process=image/resize,w_&#123;width&#125;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createAliObjectsLoader</span><span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NzImageSrcLoader<span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * ImgixLoader return format
+ * &#123;domain&#125;/&#123;src&#125;?format=auto&amp;fit=max&amp;w=&#123;width&#125;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createImgixLoader</span><span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NzImageSrcLoader<span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * CloudinaryLoader return format
+ * &#123;domain&#125;/c_limit,q_auto,w_&#123;width&#125;/&#123;src&#125;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createCloudinaryLoader</span><span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NzImageSrcLoader<span class="token punctuation">;</span>
+</code></pre><h3 id="responsive_images_and_preloaded_images"><span>Responsive images and preloaded images</span><a onclick="window.location.hash = 'responsive_images_and_preloaded_images'" class="anchor">#</a></h3><p>Using responsive images can help web pages display well on different devices. Preloading images can help you load images faster, for more information please refer to.</p>
+<ul>
+<li><a href="https://web.dev/preload-responsive-images/" target="_blank" rel="noopener">preloading responsive images</a></li>
+<li><a href="https://nextjs.org/docs/basic-features/image-optimization" target="_blank" rel="noopener">next.js image component and image optimization</a></li>
+</ul>
+</section></article>

@@ -1,0 +1,48 @@
+import { Component, QueryList, ViewChildren } from '@angular/core';
+import { NzCodeBoxComponent } from '../codebox/codebox.component';
+import { ShareModule } from '../share/share.module';
+
+import { NzDemoSegmentedBasicComponent } from './basic';
+import { NzDemoSegmentedBlockComponent } from './block';
+import { NzDemoSegmentedCustomComponent } from './custom';
+import { NzDemoSegmentedDisabledComponent } from './disabled';
+import { NzDemoSegmentedDynamicComponent } from './dynamic';
+import { NzDemoSegmentedIconComponent } from './icon';
+import { NzDemoSegmentedSizeComponent } from './size';
+import { NzDemoSegmentedValueComponent } from './value';
+import { NzDemoSegmentedWithIconOnlyComponent } from './with-icon-only';
+
+
+@Component({
+  selector     : 'nz-demo-segmented',
+  standalone   : true,
+  imports      : [
+    ShareModule,
+		NzDemoSegmentedBasicComponent,
+		NzDemoSegmentedBlockComponent,
+		NzDemoSegmentedCustomComponent,
+		NzDemoSegmentedDisabledComponent,
+		NzDemoSegmentedDynamicComponent,
+		NzDemoSegmentedIconComponent,
+		NzDemoSegmentedSizeComponent,
+		NzDemoSegmentedValueComponent,
+		NzDemoSegmentedWithIconOnlyComponent,
+
+  ],
+  templateUrl  : './en.html'
+})
+export class NzDemoSegmentedEnComponent {
+  expanded = false;
+  @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
+
+  goLink(link: string): void {
+    if (window) {
+      window.location.hash = link;
+    }
+  }
+
+  expandAllCode(): void {
+    this.expanded = !this.expanded;
+    this.codeBoxes.forEach(code => code.expandCode(this.expanded));
+  }
+}
