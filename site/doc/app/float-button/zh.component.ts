@@ -9,6 +9,7 @@ import { NzDemoFloatButtonGroupPlacementComponent } from './group-placement';
 import { NzDemoFloatButtonGroupComponent } from './group';
 import { NzDemoFloatButtonOpenComponent } from './open';
 import { NzDemoFloatButtonShapeComponent } from './shape';
+import { NzDemoFloatButtonTooltipComponent } from './tooltip';
 import { NzDemoFloatButtonTopComponent } from './top';
 import { NzDemoFloatButtonTypeComponent } from './type';
 
@@ -25,6 +26,7 @@ import { NzDemoFloatButtonTypeComponent } from './type';
 		NzDemoFloatButtonGroupComponent,
 		NzDemoFloatButtonOpenComponent,
 		NzDemoFloatButtonShapeComponent,
+		NzDemoFloatButtonTooltipComponent,
 		NzDemoFloatButtonTopComponent,
 		NzDemoFloatButtonTypeComponent,
 

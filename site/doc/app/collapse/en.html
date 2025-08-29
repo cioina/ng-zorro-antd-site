@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-collapse-demo-basic" nzTitle="Collapse"></nz-link><nz-link nzHref="#components-collapse-demo-accordion" nzTitle="Accordion"></nz-link><nz-link nzHref="#components-collapse-demo-mix" nzTitle="Nested panel"></nz-link><nz-link nzHref="#components-collapse-demo-borderless" nzTitle="Borderless"></nz-link><nz-link nzHref="#components-collapse-demo-custom" nzTitle="Custom Panel"></nz-link><nz-link nzHref="#components-collapse-demo-noarrow" nzTitle="No arrow"></nz-link><nz-link nzHref="#components-collapse-demo-extra" nzTitle="Extra Node"></nz-link><nz-link nzHref="#components-collapse-demo-ghost" nzTitle="Ghost Collapse"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-collapse-demo-basic" nzTitle="Collapse"></nz-link><nz-link nzHref="#components-collapse-demo-accordion" nzTitle="Accordion"></nz-link><nz-link nzHref="#components-collapse-demo-size" nzTitle="Size"></nz-link><nz-link nzHref="#components-collapse-demo-mix" nzTitle="Nested panel"></nz-link><nz-link nzHref="#components-collapse-demo-borderless" nzTitle="Borderless"></nz-link><nz-link nzHref="#components-collapse-demo-custom" nzTitle="Custom Panel"></nz-link><nz-link nzHref="#components-collapse-demo-noarrow" nzTitle="No arrow"></nz-link><nz-link nzHref="#components-collapse-demo-extra" nzTitle="Extra Node"></nz-link><nz-link nzHref="#components-collapse-demo-ghost" nzTitle="Ghost Collapse"></nz-link><nz-link nzHref="#components-collapse-demo-collapsible" nzTitle="Collapsible"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Collapse<span class="subtitle"></span><span class="widget"></span>
@@ -37,8 +37,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/basic.md'">
-	<nz-demo-collapse-basic demo></nz-demo-collapse-basic>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/basic.md'"
+>
+	<nz-demo-collapse-basic demo />
 	<div intro ngNonBindable>
 		<p>More than one panel can be expanded at a time, the first panel is initialized to be active in this case.</p>
 
@@ -54,10 +55,30 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/accordion.md'">
-	<nz-demo-collapse-accordion demo></nz-demo-collapse-accordion>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/accordion.md'"
+>
+	<nz-demo-collapse-accordion demo />
 	<div intro ngNonBindable>
 		<p>Accordion mode, only one panel can be expanded at a time. The first panel will be expanded by default.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Size"
+  [nzId]="'components-collapse-demo-size'"
+  nzSelector="nz-demo-collapse-size"
+  [nzLink]="'components-collapse-demo-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:collapse-size <name>"
+  nzComponentName="NzDemoCollapseSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/size.md'"
+>
+	<nz-demo-collapse-size demo />
+	<div intro ngNonBindable>
+		<p>Set the size of the collapse.
+If a large or small collapse is desired, set the <code>nzSize</code> property to either <code>large</code> or <code>small</code> respectively. Omit the <code>nzSize</code> property for a collapse with the default size.</p>
 
 	</div>
 </nz-code-box>
@@ -71,8 +92,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/mix.md'">
-	<nz-demo-collapse-mix demo></nz-demo-collapse-mix>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/mix.md'"
+>
+	<nz-demo-collapse-mix demo />
 	<div intro ngNonBindable>
 		<p><code>Collapse</code> is nested inside the <code>Collapse</code>.</p>
 
@@ -88,8 +110,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/borderless.md'">
-	<nz-demo-collapse-borderless demo></nz-demo-collapse-borderless>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/borderless.md'"
+>
+	<nz-demo-collapse-borderless demo />
 	<div intro ngNonBindable>
 		<p>A borderless style of Collapse.</p>
 
@@ -105,8 +128,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/custom.md'">
-	<nz-demo-collapse-custom demo></nz-demo-collapse-custom>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/custom.md'"
+>
+	<nz-demo-collapse-custom demo />
 	<div intro ngNonBindable>
 		<p>Customize the background, border, margin and icon styles for each panel.</p>
 
@@ -122,8 +146,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/noarrow.md'">
-	<nz-demo-collapse-noarrow demo></nz-demo-collapse-noarrow>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/noarrow.md'"
+>
+	<nz-demo-collapse-noarrow demo />
 	<div intro ngNonBindable>
 		<p>You can disable showing arrow icon by passing <code>[nzShowArrow]=&quot;false&quot;</code> to <code>nz-collapse-panel</code> component.</p>
 
@@ -139,8 +164,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/extra.md'">
-	<nz-demo-collapse-extra demo></nz-demo-collapse-extra>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/extra.md'"
+>
+	<nz-demo-collapse-extra demo />
 	<div intro ngNonBindable>
 		<p>You can use <code>nzExtra</code> to put extra elements in the top right corner.</p>
 
@@ -156,10 +182,29 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/ghost.md'">
-	<nz-demo-collapse-ghost demo></nz-demo-collapse-ghost>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/ghost.md'"
+>
+	<nz-demo-collapse-ghost demo />
 	<div intro ngNonBindable>
 		<p>Making collapse&#39;s background to transparent.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Collapsible"
+  [nzId]="'components-collapse-demo-collapsible'"
+  nzSelector="nz-demo-collapse-collapsible"
+  [nzLink]="'components-collapse-demo-collapsible'"
+  nzGenerateCommand="ng g ng-zorro-antd:collapse-collapsible <name>"
+  nzComponentName="NzDemoCollapseCollapsibleComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/collapse/demo/collapsible.md'"
+>
+	<nz-demo-collapse-collapsible demo />
+	<div intro ngNonBindable>
+		<p>Specify the trigger area of collapsible by <code>nzCollapsible</code>.</p>
 
 	</div>
 </nz-code-box>
@@ -201,6 +246,13 @@
 <td>Set expand icon position</td>
 <td><code>&#39;start&#39; | &#39;end&#39;</code></td>
 <td><code>&#39;start&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Set size of collapse</td>
+<td><code>&#39;small&#39; | &#39;large&#39;</code></td>
+<td><code>&#39;middle&#39;</code></td>
 <td>-</td>
 </tr>
 </tbody></table>
@@ -253,6 +305,13 @@
 <td><code>[nzActive]</code></td>
 <td>Active status of panel, double binding</td>
 <td><code>boolean</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzCollapsible]</code></td>
+<td>Set collapsible trigger area</td>
+<td><code>&#39;header&#39; | &#39;icon&#39; | &#39;disabled&#39;</code></td>
 <td>-</td>
 <td>-</td>
 </tr>

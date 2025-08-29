@@ -16,7 +16,9 @@ import { NzDemoCascaderHoverComponent } from './hover';
 import { NzDemoCascaderLazyComponent } from './lazy';
 import { NzDemoCascaderModalComponent } from './modal';
 import { NzDemoCascaderMultipleComponent } from './multiple';
+import { NzDemoCascaderOpenComponent } from './open';
 import { NzDemoCascaderPlacementComponent } from './placement';
+import { NzDemoCascaderPrefixAndSuffixComponent } from './prefix-and-suffix';
 import { NzDemoCascaderReactiveFormComponent } from './reactive-form';
 import { NzDemoCascaderSearchComponent } from './search';
 import { NzDemoCascaderSizeComponent } from './size';
@@ -45,7 +47,9 @@ import { NzDemoCascaderVariantComponent } from './variant';
 		NzDemoCascaderLazyComponent,
 		NzDemoCascaderModalComponent,
 		NzDemoCascaderMultipleComponent,
+		NzDemoCascaderOpenComponent,
 		NzDemoCascaderPlacementComponent,
+		NzDemoCascaderPrefixAndSuffixComponent,
 		NzDemoCascaderReactiveFormComponent,
 		NzDemoCascaderSearchComponent,
 		NzDemoCascaderSizeComponent,

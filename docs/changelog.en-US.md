@@ -15,6 +15,40 @@ timeline: true
 
 ---
 
+## 20.2.0
+
+`2025-08-29`
+
+### Features
+
+- **cascader:** add `nzOpen` to control visibility ([#9339](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9339)) ([354c7cf](https://github.com/NG-ZORRO/ng-zorro-antd/commit/354c7cfb9e9746fc55ccc3f5967721ab01737652))
+- **collapse:** support `nzCollapsible` ([#9349](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9349)) ([1ddbcaf](https://github.com/NG-ZORRO/ng-zorro-antd/commit/1ddbcaf8e8c5f47a5c2354ac61bf3da707e8a99c))
+- **collapse:** support `nzSize` ([#9348](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9348)) ([b5c256d](https://github.com/NG-ZORRO/ng-zorro-antd/commit/b5c256da531b5b306f831c8ee05acf0139bc7ad3))
+- **divider:** support `nzSize` ([#9346](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9346)) ([1f54536](https://github.com/NG-ZORRO/ng-zorro-antd/commit/1f5453639f059c9058815834500e459df4082882))
+- **dropdown:** display arrow for content dropdown ([#9329](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9329)) ([3686b73](https://github.com/NG-ZORRO/ng-zorro-antd/commit/3686b7375839412b0db26f896fb810a4bdb2ae0c))
+- **float-button:** `nzIcon` support string type ([#9302](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9302)) ([ce611e5](https://github.com/NG-ZORRO/ng-zorro-antd/commit/ce611e5d9096456e032db78acc886b5dde60220c))
+- **segmented:** support `nzVertical` ([#9359](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9359)) ([52322cd](https://github.com/NG-ZORRO/ng-zorro-antd/commit/52322cd50c1d2883a0df7ca0aee91f803448315b))
+- **select,tree-select,cascader:** support prefix and suffix icon ([#9328](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9328)) ([527ffb6](https://github.com/NG-ZORRO/ng-zorro-antd/commit/527ffb6efee5759e58c7472f1fae2a619092f246))
+- **tag:** export `NzTagColor` type ([#9314](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9314)) ([1efd29e](https://github.com/NG-ZORRO/ng-zorro-antd/commit/1efd29ee1de0f77854dd75c10c9156d50013067d))
+
+### Bug Fixes
+
+- **carousel:** wrong dot position when placement is left or right ([#9358](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9358)) ([f117ccb](https://github.com/NG-ZORRO/ng-zorro-antd/commit/f117ccb739754e5a1b73be844679357cc807a238))
+- **range-picker:** clear outline on mouse leaving ([#9352](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9352)) ([573d092](https://github.com/NG-ZORRO/ng-zorro-antd/commit/573d092f6e332acaeb33dfc03c0e370be6753df8))
+- **segmented:** should render single element in item if icon-only ([#9363](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9363)) ([89d2168](https://github.com/NG-ZORRO/ng-zorro-antd/commit/89d216871b0a9127aa4adbf6a034b7e2e1febf2d))
+
+## 20.1.3
+
+`2025-08-22`
+
+### Bug Fixes
+
+- **i18n:** add missing translations to `cs_CZ` ([#9334](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9334)) ([93e486e](https://github.com/NG-ZORRO/ng-zorro-antd/commit/93e486eeb848fb3cbb2073f107ae7be4bba2457b))
+- **i18n:** add missing translations to `sk_SK` ([#9335](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9335)) ([ddefc7f](https://github.com/NG-ZORRO/ng-zorro-antd/commit/ddefc7f9e95cde34101896fd5bfe587ff1dd8a89))
+- **cascader:** invalid value and label when binding dynamically ([#9338](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9338)) ([324ab5b](https://github.com/NG-ZORRO/ng-zorro-antd/commit/324ab5b2ad281abb77344b9ca0dd66d4ca55e794))
+- **popconfirm:** correctly render icon & title ([#9322](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9322)) ([2c83788](https://github.com/NG-ZORRO/ng-zorro-antd/commit/2c837883853a77a5a8fe1c2245daa0548a7bb2d9))
+- **select:** shaking when closing dropdown if use a TemplateRef as `nzNotFoundContent` ([#9336](https://github.com/NG-ZORRO/ng-zorro-antd/issues/9336)) ([366f8eb](https://github.com/NG-ZORRO/ng-zorro-antd/commit/366f8ebcd79900a4d6a512b72094af3494c55871))
+
 ## 20.1.2
 
 `2025-08-08`

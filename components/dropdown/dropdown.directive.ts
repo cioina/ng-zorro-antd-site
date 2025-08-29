@@ -27,19 +27,31 @@ import { BehaviorSubject, EMPTY, Subject, combineLatest, fromEvent, merge } from
 import { auditTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs/operators';
 
 import { NzConfigKey, NzConfigService, WithConfig } from 'ng-zorro-antd/core/config';
-import { POSITION_MAP } from 'ng-zorro-antd/core/overlay';
+import {
+  POSITION_MAP,
+  getPlacementName,
+  POSITION_TYPE,
+  setConnectedPositionOffset,
+  TOOLTIP_OFFSET_MAP
+} from 'ng-zorro-antd/core/overlay';
 import { IndexableObject } from 'ng-zorro-antd/core/types';
 
 import { NzDropdownMenuComponent, NzPlacementType } from './dropdown-menu.component';
 
 const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'dropDown';
 
-const listOfPositions = [
-  POSITION_MAP.bottomLeft,
-  POSITION_MAP.bottomRight,
-  POSITION_MAP.topRight,
-  POSITION_MAP.topLeft
-];
+const listOfPositions: POSITION_TYPE[] = ['bottomLeft', 'bottomRight', 'topRight', 'topLeft'];
+
+const normalizePlacementForClass = (p: NzPlacementType): NzDropdownMenuComponent['placement'] => {
+  // Map center placements to generic top/bottom classes for styling
+  if (p === 'topCenter') {
+    return 'top';
+  }
+  if (p === 'bottomCenter') {
+    return 'bottom';
+  }
+  return p as NzDropdownMenuComponent['placement'];
+};
 
 @Directive({
   selector: '[nz-dropdown]',
@@ -76,6 +88,7 @@ export class NzDropDownDirective implements AfterViewInit, OnChanges {
   @Input({ transform: booleanAttribute }) nzClickHide = true;
   @Input({ transform: booleanAttribute }) nzDisabled = false;
   @Input({ transform: booleanAttribute }) nzVisible = false;
+  @Input({ transform: booleanAttribute }) nzArrow = false;
   @Input() nzOverlayClassName: string = '';
   @Input() nzOverlayStyle: IndexableObject = {};
   @Input() nzPlacement: NzPlacementType = 'bottomLeft';
@@ -154,6 +167,13 @@ export class NzDropDownDirective implements AfterViewInit, OnChanges {
                 hasBackdrop: this.nzBackdrop && this.nzTrigger === 'click',
                 scrollStrategy: this.overlay.scrollStrategies.reposition()
               });
+              // Listen for placement changes to update the menu classes (arrow position)
+              this.positionStrategy.positionChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(change => {
+                const placement = getPlacementName(change) as NzPlacementType | undefined;
+                if (placement) {
+                  this.setDropdownMenuValue('placement', normalizePlacementForClass(placement));
+                }
+              });
               merge(
                 this.overlayRef.backdropClick(),
                 this.overlayRef.detachments(),
@@ -172,11 +192,19 @@ export class NzDropDownDirective implements AfterViewInit, OnChanges {
               overlayConfig.minWidth = triggerWidth;
             }
             /** open dropdown with animation **/
-            this.positionStrategy.withPositions([POSITION_MAP[this.nzPlacement], ...listOfPositions]);
+            const positions = [this.nzPlacement, ...listOfPositions].map(position => {
+              return this.nzArrow
+                ? setConnectedPositionOffset(POSITION_MAP[position], TOOLTIP_OFFSET_MAP[position])
+                : POSITION_MAP[position];
+            });
+            this.positionStrategy.withPositions(positions);
             /** reset portal if needed **/
             if (!this.portal || this.portal.templateRef !== this.nzDropdownMenu!.templateRef) {
               this.portal = new TemplatePortal(this.nzDropdownMenu!.templateRef, this.viewContainerRef);
             }
+            // Initialize arrow and placement on open
+            this.setDropdownMenuValue('nzArrow', this.nzArrow);
+            this.setDropdownMenuValue('placement', normalizePlacementForClass(this.nzPlacement));
             this.overlayRef.attach(this.portal);
           } else {
             /** detach overlayRef if needed **/
@@ -198,7 +226,7 @@ export class NzDropDownDirective implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    const { nzVisible, nzDisabled, nzOverlayClassName, nzOverlayStyle, nzTrigger } = changes;
+    const { nzVisible, nzDisabled, nzOverlayClassName, nzOverlayStyle, nzTrigger, nzArrow, nzPlacement } = changes;
     if (nzTrigger) {
       this.nzTrigger$.next(this.nzTrigger);
     }
@@ -219,6 +247,12 @@ export class NzDropDownDirective implements AfterViewInit, OnChanges {
     }
     if (nzOverlayStyle) {
       this.setDropdownMenuValue('nzOverlayStyle', this.nzOverlayStyle);
+    }
+    if (nzArrow) {
+      this.setDropdownMenuValue('nzArrow', this.nzArrow);
+    }
+    if (nzPlacement) {
+      this.setDropdownMenuValue('placement', normalizePlacementForClass(this.nzPlacement));
     }
   }
 }

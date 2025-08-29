@@ -47,8 +47,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md'">
-	<nz-demo-experimental-image-preloading demo></nz-demo-experimental-image-preloading>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md'"
+>
+	<nz-demo-experimental-image-preloading demo />
 	<div intro ngNonBindable>
 		<p>Setting <code>nzPriority</code> will add the <code>&lt;link rel=&quot;preload&quot;&gt;</code> tag when rendering server-side (SSR), and browsers will treat it as a high priority resource to load. You can see this in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener">MDN - Preloading</a>, <a href="https://web.dev/preload-responsive-images/" target="_blank" rel="noopener">web.dev - Preloading responsive images</a> to learn more.</p>
 <p>Note: usually we only need to set <code>nzPriority</code> for the first screen images, so you only need to add it for the first few items in the cyclically generated template, e.g.</p>
@@ -68,8 +69,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md'">
-	<nz-demo-experimental-image-src-loader demo></nz-demo-experimental-image-src-loader>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md'"
+>
+	<nz-demo-experimental-image-src-loader demo />
 	<div intro ngNonBindable>
 		<p>Custom <code>nzSrcLoader</code> is used to resolve image URLs, or you can also use the built-in image CND provider&#39;s Loaders. <br/>
 We recommend always specifying the image size (<code>nzWidth</code>, <code>nzHeight</code>), which can help improve the key metrics of the web experience <a href="https://web.dev/cls/" target="_blank" rel="noopener">CLS</a>, and can also be used with the Loader to optimize the images using the image CND to improve the loading speed. <br/>
@@ -103,8 +105,9 @@ If you want to use a different Loader in a different environment you can do the 
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md'">
-	<nz-demo-experimental-image-auto-srcset demo></nz-demo-experimental-image-auto-srcset>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md'"
+>
+	<nz-demo-experimental-image-auto-srcset demo />
 	<div intro ngNonBindable>
 		<p>Using <code>nzAutoSrcset</code> requires to specify the image size (<code>nzWidth</code>, <code>nzHeight</code>), with the Loader automatically generating <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset" target="_blank" rel="noopener">srcset</a> for different pixel densities.</p>
 

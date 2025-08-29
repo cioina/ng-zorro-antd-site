@@ -8,6 +8,7 @@ import { NzDemoTreeSelectCheckableComponent } from './checkable';
 import { NzDemoTreeSelectMultipleComponent } from './multiple';
 import { NzDemoTreeSelectNoDataComponent } from './no-data';
 import { NzDemoTreeSelectPlacementComponent } from './placement';
+import { NzDemoTreeSelectPrefixAndSuffixComponent } from './prefix-and-suffix';
 import { NzDemoTreeSelectStatusComponent } from './status';
 import { NzDemoTreeSelectVariantComponent } from './variant';
 import { NzDemoTreeSelectVirtualScrollComponent } from './virtual-scroll';
@@ -24,6 +25,7 @@ import { NzDemoTreeSelectVirtualScrollComponent } from './virtual-scroll';
 		NzDemoTreeSelectMultipleComponent,
 		NzDemoTreeSelectNoDataComponent,
 		NzDemoTreeSelectPlacementComponent,
+		NzDemoTreeSelectPrefixAndSuffixComponent,
 		NzDemoTreeSelectStatusComponent,
 		NzDemoTreeSelectVariantComponent,
 		NzDemoTreeSelectVirtualScrollComponent,

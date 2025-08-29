@@ -5,6 +5,7 @@ import { ShareModule } from '../share/share.module';
 import { NzDemoDividerHorizontalComponent } from './horizontal';
 import { NzDemoDividerOrientationComponent } from './orientation';
 import { NzDemoDividerPlainComponent } from './plain';
+import { NzDemoDividerSizeComponent } from './size';
 import { NzDemoDividerVariantComponent } from './variant';
 import { NzDemoDividerVerticalComponent } from './vertical';
 
@@ -17,6 +18,7 @@ import { NzDemoDividerVerticalComponent } from './vertical';
 		NzDemoDividerHorizontalComponent,
 		NzDemoDividerOrientationComponent,
 		NzDemoDividerPlainComponent,
+		NzDemoDividerSizeComponent,
 		NzDemoDividerVariantComponent,
 		NzDemoDividerVerticalComponent,
 

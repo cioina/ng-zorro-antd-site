@@ -276,23 +276,6 @@ export const ROUTER_LIST: RouterList = {
 ],
   components: [
   {
-    "name": "其它",
-    "language": "zh",
-    "children": [
-      {
-        "label": "Affix",
-        "path": "components/affix/zh",
-        "zh": "固钉",
-        "experimental": false,
-        "hidden": false,
-        "cover": "https://gw.alipayobjects.com/zos/alicdn/tX6-md4H6/Affix.svg",
-        "tag": "",
-        "description": "Angular 固钉组件，将页面元素钉在可视范围。"
-      }
-    ],
-    "experimentalChildren": []
-  },
-  {
     "name": "通用",
     "language": "zh",
     "children": [
@@ -1853,6 +1836,43 @@ export const ROUTER_LIST: RouterList = {
     "experimentalChildren": []
   },
   {
+    "name": "其他",
+    "language": "zh",
+    "children": [
+      {
+        "label": "Affix",
+        "path": "components/affix/zh",
+        "zh": "固钉",
+        "experimental": false,
+        "hidden": false,
+        "cover": "https://gw.alipayobjects.com/zos/alicdn/tX6-md4H6/Affix.svg",
+        "tag": "",
+        "description": "Angular 固钉组件，将页面元素钉在可视范围。"
+      },
+      {
+        "label": "BackTop",
+        "path": "components/back-top/zh",
+        "zh": "回到顶部",
+        "experimental": false,
+        "hidden": false,
+        "cover": "https://gw.alipayobjects.com/zos/alicdn/tJZ5jbTwX/BackTop.svg",
+        "tag": "",
+        "description": "Angular 回到顶部组件，返回页面顶部的操作按钮。"
+      },
+      {
+        "label": "WaterMark",
+        "path": "components/water-mark/zh",
+        "zh": "水印",
+        "experimental": false,
+        "hidden": false,
+        "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
+        "tag": "15.1.0",
+        "description": "Angular 水印组件，给页面的某个区域加上水印。"
+      }
+    ],
+    "experimentalChildren": []
+  },
+  {
     "name": "Other",
     "language": "en",
     "children": [
@@ -1885,33 +1905,6 @@ export const ROUTER_LIST: RouterList = {
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
         "tag": "15.1.0",
         "description": "Angular WaterMark Component, Add specific text or patterns to the page."
-      }
-    ],
-    "experimentalChildren": []
-  },
-  {
-    "name": "其他",
-    "language": "zh",
-    "children": [
-      {
-        "label": "BackTop",
-        "path": "components/back-top/zh",
-        "zh": "回到顶部",
-        "experimental": false,
-        "hidden": false,
-        "cover": "https://gw.alipayobjects.com/zos/alicdn/tJZ5jbTwX/BackTop.svg",
-        "tag": "",
-        "description": "Angular 回到顶部组件，返回页面顶部的操作按钮。"
-      },
-      {
-        "label": "WaterMark",
-        "path": "components/water-mark/zh",
-        "zh": "水印",
-        "experimental": false,
-        "hidden": false,
-        "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
-        "tag": "15.1.0",
-        "description": "Angular 水印组件，给页面的某个区域加上水印。"
       }
     ],
     "experimentalChildren": []

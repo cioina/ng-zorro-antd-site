@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-tree-select-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-tree-select-demo-multiple" nzTitle="多选"></nz-link><nz-link nzHref="#components-tree-select-demo-async" nzTitle="异步数据加载"></nz-link><nz-link nzHref="#components-tree-select-demo-checkable" nzTitle="可勾选"></nz-link><nz-link nzHref="#components-tree-select-demo-virtual-scroll" nzTitle="虚拟滚动"></nz-link><nz-link nzHref="#components-tree-select-demo-no-data" nzTitle="自定义空状态"></nz-link><nz-link nzHref="#components-tree-select-demo-placement" nzTitle="位置"></nz-link><nz-link nzHref="#components-tree-select-demo-status" nzTitle="自定义状态"></nz-link><nz-link nzHref="#components-tree-select-demo-variant" nzTitle="形态变体"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-tree-select-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-tree-select-demo-multiple" nzTitle="多选"></nz-link><nz-link nzHref="#components-tree-select-demo-async" nzTitle="异步数据加载"></nz-link><nz-link nzHref="#components-tree-select-demo-checkable" nzTitle="可勾选"></nz-link><nz-link nzHref="#components-tree-select-demo-virtual-scroll" nzTitle="虚拟滚动"></nz-link><nz-link nzHref="#components-tree-select-demo-no-data" nzTitle="自定义空状态"></nz-link><nz-link nzHref="#components-tree-select-demo-placement" nzTitle="位置"></nz-link><nz-link nzHref="#components-tree-select-demo-status" nzTitle="自定义状态"></nz-link><nz-link nzHref="#components-tree-select-demo-variant" nzTitle="形态变体"></nz-link><nz-link nzHref="#components-tree-select-demo-prefix-and-suffix" nzTitle="前后缀"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>TreeSelect<span class="subtitle">树选择</span><span class="widget"></span>
@@ -34,8 +34,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/basic.md'">
-	<nz-demo-tree-select-basic demo></nz-demo-tree-select-basic>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/basic.md'"
+>
+	<nz-demo-tree-select-basic demo />
 	<div intro ngNonBindable>
 		<p>最简单的用法。</p>
 
@@ -51,8 +52,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/async.md'">
-	<nz-demo-tree-select-async demo></nz-demo-tree-select-async>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/async.md'"
+>
+	<nz-demo-tree-select-async demo />
 	<div intro ngNonBindable>
 		<p>点击展开节点，动态加载数据，直到执行 addChildren() 方法取消加载状态。</p>
 
@@ -68,8 +70,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/virtual-scroll.md'">
-	<nz-demo-tree-select-virtual-scroll demo></nz-demo-tree-select-virtual-scroll>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/virtual-scroll.md'"
+>
+	<nz-demo-tree-select-virtual-scroll demo />
 	<div intro ngNonBindable>
 		<p>设定 <code>nzVirtualHeight</code> 开启虚拟滚动。</p>
 
@@ -85,8 +88,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/placement.md'">
-	<nz-demo-tree-select-placement demo></nz-demo-tree-select-placement>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/placement.md'"
+>
+	<nz-demo-tree-select-placement demo />
 	<div intro ngNonBindable>
 		<p>可以通过 <code>nzPlacement</code> 手动指定弹出的位置。</p>
 
@@ -102,8 +106,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/variant.md'">
-	<nz-demo-tree-select-variant demo></nz-demo-tree-select-variant>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/variant.md'"
+>
+	<nz-demo-tree-select-variant demo />
 	<div intro ngNonBindable>
 		<p>TreeSelect 形态变体，可选 <code>outlined</code> <code>filled</code> <code>borderless</code> <code>underlined</code> 四种形态。</p>
 
@@ -122,8 +127,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/multiple.md'">
-	<nz-demo-tree-select-multiple demo></nz-demo-tree-select-multiple>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/multiple.md'"
+>
+	<nz-demo-tree-select-multiple demo />
 	<div intro ngNonBindable>
 		<p>多选的树选择，例子中通过 <code>nzMaxTagCount</code> 限制最多显示3个选项。</p>
 
@@ -139,8 +145,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/checkable.md'">
-	<nz-demo-tree-select-checkable demo></nz-demo-tree-select-checkable>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/checkable.md'"
+>
+	<nz-demo-tree-select-checkable demo />
 	<div intro ngNonBindable>
 		<p>使用勾选框实现多选功能。</p>
 
@@ -156,8 +163,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/no-data.md'">
-	<nz-demo-tree-select-no-data demo></nz-demo-tree-select-no-data>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/no-data.md'"
+>
+	<nz-demo-tree-select-no-data demo />
 	<div intro ngNonBindable>
 		<p>使用 <code>nzNotFoundContent</code> 自定义空数据状态</p>
 
@@ -173,10 +181,29 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/status.md'">
-	<nz-demo-tree-select-status demo></nz-demo-tree-select-status>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/status.md'"
+>
+	<nz-demo-tree-select-status demo />
 	<div intro ngNonBindable>
 		<p>使用 <code>nzStatus</code> 为 <code>TreeSelect</code> 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="前后缀"
+  [nzId]="'components-tree-select-demo-prefix-and-suffix'"
+  nzSelector="nz-demo-tree-select-prefix-and-suffix"
+  [nzLink]="'components-tree-select-demo-prefix-and-suffix'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-select-prefix-and-suffix <name>"
+  nzComponentName="NzDemoTreeSelectPrefixAndSuffixComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/prefix-and-suffix.md'"
+>
+	<nz-demo-tree-select-prefix-and-suffix demo />
+	<div intro ngNonBindable>
+		<p>自定义前缀 <code>nzPrefix</code> 和后缀图标 <code>nzSuffixIcon</code>。</p>
 
 	</div>
 </nz-code-box>
@@ -324,6 +351,20 @@
 <td>是否展示连接线</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPrefix]</code></td>
+<td>自定义的选择框前缀</td>
+<td><code>TemplateRef&lt;any&gt; | string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzSuffixIcon]</code></td>
+<td>自定义的选择框后缀图标</td>
+<td><code>TemplateRef&lt;any&gt; | string</code></td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>

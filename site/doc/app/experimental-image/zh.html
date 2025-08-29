@@ -47,8 +47,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md'">
-	<nz-demo-experimental-image-preloading demo></nz-demo-experimental-image-preloading>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md'"
+>
+	<nz-demo-experimental-image-preloading demo />
 	<div intro ngNonBindable>
 		<p>设置 <code>nzPriority</code> 将会在服务端渲染(SSR) 时添加 <code>&lt;link rel=&quot;preload&quot;&gt;</code> 标签，浏览器会将其视为高优先级资源加载。你可以在 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener">MDN - Preloading</a>、<a href="https://web.dev/preload-responsive-images/" target="_blank" rel="noopener">web.dev - Preloading responsive images</a> 了解更多。</p>
 <p>需要注意的是，通常只需要为首屏图片设置 <code>nzPriority</code> 因此在循环生成的模版中只需要为靠前的子项添加即可，例如：</p>
@@ -68,8 +69,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md'">
-	<nz-demo-experimental-image-src-loader demo></nz-demo-experimental-image-src-loader>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md'"
+>
+	<nz-demo-experimental-image-src-loader demo />
 	<div intro ngNonBindable>
 		<p>自定义 <code>nzSrcLoader</code> 用于解析图片 URLs, 也可以使用内置的图片 CND 提供商的 Loaders。 <br/>
 我们建议始终指定图片的尺寸(<code>nzWidth</code>、<code>nzHeight</code>)，不仅可以帮助提高网页体验的关键指标 <a href="https://web.dev/cls/" target="_blank" rel="noopener">CLS</a>，还可以配合 Loader 利用图片 CND 对图片进行优化处理提高加载速度。 <br/>
@@ -101,8 +103,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md'">
-	<nz-demo-experimental-image-auto-srcset demo></nz-demo-experimental-image-auto-srcset>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md'"
+>
+	<nz-demo-experimental-image-auto-srcset demo />
 	<div intro ngNonBindable>
 		<p>使用 <code>nzAutoSrcset</code> 时要求必须定义图片尺寸(<code>nzWidth</code>、<code>nzHeight</code>)，配合 Loader 为不同的像素密度自动生成 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset" target="_blank" rel="noopener">srcset</a>。</p>
 

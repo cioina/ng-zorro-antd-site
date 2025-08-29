@@ -17,6 +17,7 @@ import { NzDemoSelectMultipleComponent } from './multiple';
 import { NzDemoSelectOptgroupComponent } from './optgroup';
 import { NzDemoSelectOptionsComponent } from './options';
 import { NzDemoSelectPlacementComponent } from './placement';
+import { NzDemoSelectPrefixAndSuffixComponent } from './prefix-and-suffix';
 import { NzDemoSelectScrollLoadComponent } from './scroll-load';
 import { NzDemoSelectSearchBoxComponent } from './search-box';
 import { NzDemoSelectSearchComponent } from './search';
@@ -47,6 +48,7 @@ import { NzDemoSelectVariantComponent } from './variant';
 		NzDemoSelectOptgroupComponent,
 		NzDemoSelectOptionsComponent,
 		NzDemoSelectPlacementComponent,
+		NzDemoSelectPrefixAndSuffixComponent,
 		NzDemoSelectScrollLoadComponent,
 		NzDemoSelectSearchBoxComponent,
 		NzDemoSelectSearchComponent,

@@ -10,6 +10,7 @@ import { NzDemoSegmentedDynamicComponent } from './dynamic';
 import { NzDemoSegmentedIconComponent } from './icon';
 import { NzDemoSegmentedSizeComponent } from './size';
 import { NzDemoSegmentedValueComponent } from './value';
+import { NzDemoSegmentedVerticalComponent } from './vertical';
 import { NzDemoSegmentedWithIconOnlyComponent } from './with-icon-only';
 
 
@@ -26,6 +27,7 @@ import { NzDemoSegmentedWithIconOnlyComponent } from './with-icon-only';
 		NzDemoSegmentedIconComponent,
 		NzDemoSegmentedSizeComponent,
 		NzDemoSegmentedValueComponent,
+		NzDemoSegmentedVerticalComponent,
 		NzDemoSegmentedWithIconOnlyComponent,
 
   ],

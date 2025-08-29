@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-divider-demo-horizontal" nzTitle="Horizontal"></nz-link><nz-link nzHref="#components-divider-demo-orientation" nzTitle="Orientation of title"></nz-link><nz-link nzHref="#components-divider-demo-vertical" nzTitle="Vertical"></nz-link><nz-link nzHref="#components-divider-demo-plain" nzTitle="Text without heading style"></nz-link><nz-link nzHref="#components-divider-demo-variant" nzTitle="Variant"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-divider-demo-horizontal" nzTitle="Horizontal"></nz-link><nz-link nzHref="#components-divider-demo-orientation" nzTitle="Orientation of title"></nz-link><nz-link nzHref="#components-divider-demo-vertical" nzTitle="Vertical"></nz-link><nz-link nzHref="#components-divider-demo-plain" nzTitle="Text without heading style"></nz-link><nz-link nzHref="#components-divider-demo-variant" nzTitle="Variant"></nz-link><nz-link nzHref="#components-divider-demo-size" nzTitle="Size"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Divider<span class="subtitle"></span><span class="widget"></span>
@@ -37,8 +37,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/horizontal.md'">
-	<nz-demo-divider-horizontal demo></nz-demo-divider-horizontal>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/horizontal.md'"
+>
+	<nz-demo-divider-horizontal demo />
 	<div intro ngNonBindable>
 		<p>Divider default type is <code>horizontal</code>. Support inner text inside Divider.</p>
 
@@ -54,8 +55,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/vertical.md'">
-	<nz-demo-divider-vertical demo></nz-demo-divider-vertical>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/vertical.md'"
+>
+	<nz-demo-divider-vertical demo />
 	<div intro ngNonBindable>
 		<p>Use <code>nzType=&quot;vertical&quot;</code> make it vertical.</p>
 
@@ -71,8 +73,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/variant.md'">
-	<nz-demo-divider-variant demo></nz-demo-divider-variant>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/variant.md'"
+>
+	<nz-demo-divider-variant demo />
 	<div intro ngNonBindable>
 		<p>Divider is of <code>solid</code> variant by default. You can change that to either <code>dashed</code> or <code>dotted</code>.</p>
 
@@ -91,8 +94,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/orientation.md'">
-	<nz-demo-divider-orientation demo></nz-demo-divider-orientation>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/orientation.md'"
+>
+	<nz-demo-divider-orientation demo />
 	<div intro ngNonBindable>
 		<p>Set orientation of divider to left or right.</p>
 
@@ -108,10 +112,29 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/plain.md'">
-	<nz-demo-divider-plain demo></nz-demo-divider-plain>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/plain.md'"
+>
+	<nz-demo-divider-plain demo />
 	<div intro ngNonBindable>
 		<p>You can use non-heading style of divider text by setting <code>nzPlain</code>.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Size"
+  [nzId]="'components-divider-demo-size'"
+  nzSelector="nz-demo-divider-size"
+  [nzLink]="'components-divider-demo-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:divider-size <name>"
+  nzComponentName="NzDemoDividerSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/size.md'"
+>
+	<nz-demo-divider-size demo />
+	<div intro ngNonBindable>
+		<p>Divider support <code>nzSize</code> to set the size of Divider.</p>
 
 	</div>
 </nz-code-box>
@@ -162,6 +185,12 @@
 <td>Whether line is dashed, dotted or solid</td>
 <td><code>&#39;dashed&#39; | &#39;dotted&#39; | &#39;solid&#39;</code></td>
 <td><code>&#39;solid&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Divider size</td>
+<td><code>&#39;small&#39; | &#39;middle&#39; | &#39;large&#39;</code></td>
+<td>-</td>
 </tr>
 </tbody></table>
 </section></article>

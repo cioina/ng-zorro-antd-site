@@ -2,6 +2,7 @@ import { Component, QueryList, ViewChildren } from '@angular/core';
 import { NzCodeBoxComponent } from '../codebox/codebox.component';
 import { ShareModule } from '../share/share.module';
 
+import { NzDemoDropdownArrowComponent } from './arrow';
 import { NzDemoDropdownBasicComponent } from './basic';
 import { NzDemoDropdownContextMenuComponent } from './context-menu';
 import { NzDemoDropdownDropdownButtonComponent } from './dropdown-button';
@@ -18,6 +19,7 @@ import { NzDemoDropdownTriggerComponent } from './trigger';
   standalone   : true,
   imports      : [
     ShareModule,
+		NzDemoDropdownArrowComponent,
 		NzDemoDropdownBasicComponent,
 		NzDemoDropdownContextMenuComponent,
 		NzDemoDropdownDropdownButtonComponent,

@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-tree-select-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-tree-select-demo-multiple" nzTitle="Multiple Selection"></nz-link><nz-link nzHref="#components-tree-select-demo-async" nzTitle="Load data asynchronously"></nz-link><nz-link nzHref="#components-tree-select-demo-checkable" nzTitle="Checkable"></nz-link><nz-link nzHref="#components-tree-select-demo-virtual-scroll" nzTitle="Virtual Scroll"></nz-link><nz-link nzHref="#components-tree-select-demo-no-data" nzTitle="Custom empty state"></nz-link><nz-link nzHref="#components-tree-select-demo-placement" nzTitle="Placement"></nz-link><nz-link nzHref="#components-tree-select-demo-status" nzTitle="Status"></nz-link><nz-link nzHref="#components-tree-select-demo-variant" nzTitle="Variants"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-tree-select-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-tree-select-demo-multiple" nzTitle="Multiple Selection"></nz-link><nz-link nzHref="#components-tree-select-demo-async" nzTitle="Load data asynchronously"></nz-link><nz-link nzHref="#components-tree-select-demo-checkable" nzTitle="Checkable"></nz-link><nz-link nzHref="#components-tree-select-demo-virtual-scroll" nzTitle="Virtual Scroll"></nz-link><nz-link nzHref="#components-tree-select-demo-no-data" nzTitle="Custom empty state"></nz-link><nz-link nzHref="#components-tree-select-demo-placement" nzTitle="Placement"></nz-link><nz-link nzHref="#components-tree-select-demo-status" nzTitle="Status"></nz-link><nz-link nzHref="#components-tree-select-demo-variant" nzTitle="Variants"></nz-link><nz-link nzHref="#components-tree-select-demo-prefix-and-suffix" nzTitle="Prefix and Suffix"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>TreeSelect<span class="subtitle"></span><span class="widget"></span>
@@ -35,8 +35,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/basic.md'">
-	<nz-demo-tree-select-basic demo></nz-demo-tree-select-basic>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/basic.md'"
+>
+	<nz-demo-tree-select-basic demo />
 	<div intro ngNonBindable>
 		<p>The most basic usage.</p>
 
@@ -52,8 +53,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/async.md'">
-	<nz-demo-tree-select-async demo></nz-demo-tree-select-async>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/async.md'"
+>
+	<nz-demo-tree-select-async demo />
 	<div intro ngNonBindable>
 		<p>To load data asynchronously when click to expand a treeNode, loading state keeps until excute addChildren().</p>
 
@@ -69,8 +71,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/virtual-scroll.md'">
-	<nz-demo-tree-select-virtual-scroll demo></nz-demo-tree-select-virtual-scroll>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/virtual-scroll.md'"
+>
+	<nz-demo-tree-select-virtual-scroll demo />
 	<div intro ngNonBindable>
 		<p>Set <code>nzVirtualHeight</code> to enable virtual scroll.</p>
 
@@ -86,8 +89,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/placement.md'">
-	<nz-demo-tree-select-placement demo></nz-demo-tree-select-placement>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/placement.md'"
+>
+	<nz-demo-tree-select-placement demo />
 	<div intro ngNonBindable>
 		<p>You can manually specify the position of the popup via <code>nzPlacement</code>.</p>
 
@@ -103,8 +107,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/variant.md'">
-	<nz-demo-tree-select-variant demo></nz-demo-tree-select-variant>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/variant.md'"
+>
+	<nz-demo-tree-select-variant demo />
 	<div intro ngNonBindable>
 		<p>Variants of TreeSelect, there are four variants: <code>outlined</code> <code>filled</code> <code>borderless</code> and <code>underlined</code>.</p>
 
@@ -123,8 +128,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/multiple.md'">
-	<nz-demo-tree-select-multiple demo></nz-demo-tree-select-multiple>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/multiple.md'"
+>
+	<nz-demo-tree-select-multiple demo />
 	<div intro ngNonBindable>
 		<p>Multiple selection usage, max 3 option will display at the same time by <code>nzMaxTagCount</code>.</p>
 
@@ -140,8 +146,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/checkable.md'">
-	<nz-demo-tree-select-checkable demo></nz-demo-tree-select-checkable>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/checkable.md'"
+>
+	<nz-demo-tree-select-checkable demo />
 	<div intro ngNonBindable>
 		<p>Multiple and checkable.</p>
 
@@ -157,8 +164,9 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/no-data.md'">
-	<nz-demo-tree-select-no-data demo></nz-demo-tree-select-no-data>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/no-data.md'"
+>
+	<nz-demo-tree-select-no-data demo />
 	<div intro ngNonBindable>
 		<p>Use <code>nzNotFoundContent</code> to customize empty data style</p>
 
@@ -174,10 +182,29 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/status.md'">
-	<nz-demo-tree-select-status demo></nz-demo-tree-select-status>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/status.md'"
+>
+	<nz-demo-tree-select-status demo />
 	<div intro ngNonBindable>
 		<p>Add status to TreeSelect with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Prefix and Suffix"
+  [nzId]="'components-tree-select-demo-prefix-and-suffix'"
+  nzSelector="nz-demo-tree-select-prefix-and-suffix"
+  [nzLink]="'components-tree-select-demo-prefix-and-suffix'"
+  nzGenerateCommand="ng g ng-zorro-antd:tree-select-prefix-and-suffix <name>"
+  nzComponentName="NzDemoTreeSelectPrefixAndSuffixComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-select/demo/prefix-and-suffix.md'"
+>
+	<nz-demo-tree-select-prefix-and-suffix demo />
+	<div intro ngNonBindable>
+		<p>Custom <code>nzPrefix</code> and <code>nzSuffixIcon</code>.</p>
 
 	</div>
 </nz-code-box>
@@ -325,6 +352,20 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
 <td>Shows a connecting line</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPrefix]</code></td>
+<td>The custom prefix</td>
+<td><code>TemplateRef&lt;any&gt; | string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzSuffixIcon]</code></td>
+<td>The custom suffix icon</td>
+<td><code>TemplateRef&lt;any&gt; | string</code></td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>

@@ -5,11 +5,13 @@ import { ShareModule } from '../share/share.module';
 import { NzDemoCollapseAccordionComponent } from './accordion';
 import { NzDemoCollapseBasicComponent } from './basic';
 import { NzDemoCollapseBorderlessComponent } from './borderless';
+import { NzDemoCollapseCollapsibleComponent } from './collapsible';
 import { NzDemoCollapseCustomComponent } from './custom';
 import { NzDemoCollapseExtraComponent } from './extra';
 import { NzDemoCollapseGhostComponent } from './ghost';
 import { NzDemoCollapseMixComponent } from './mix';
 import { NzDemoCollapseNoarrowComponent } from './noarrow';
+import { NzDemoCollapseSizeComponent } from './size';
 
 
 @Component({
@@ -20,11 +22,13 @@ import { NzDemoCollapseNoarrowComponent } from './noarrow';
 		NzDemoCollapseAccordionComponent,
 		NzDemoCollapseBasicComponent,
 		NzDemoCollapseBorderlessComponent,
+		NzDemoCollapseCollapsibleComponent,
 		NzDemoCollapseCustomComponent,
 		NzDemoCollapseExtraComponent,
 		NzDemoCollapseGhostComponent,
 		NzDemoCollapseMixComponent,
 		NzDemoCollapseNoarrowComponent,
+		NzDemoCollapseSizeComponent,
 
   ],
   templateUrl  : './en.html'

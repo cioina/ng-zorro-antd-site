@@ -4,7 +4,7 @@
  */
 
 import { Component, DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
@@ -17,6 +17,12 @@ import { NzSegmentedModule } from './segmented.module';
 import { NzSegmentedOptions } from './types';
 
 describe('nz-segmented', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [provideNoopAnimations()]
+    });
+  });
+
   describe('basic', () => {
     let fixture: ComponentFixture<NzSegmentedTestComponent>;
     let component: NzSegmentedTestComponent;
@@ -27,9 +33,6 @@ describe('nz-segmented', () => {
     }
 
     beforeEach(() => {
-      TestBed.configureTestingModule({
-        providers: [provideNoopAnimations()]
-      });
       fixture = TestBed.createComponent(NzSegmentedTestComponent);
       component = fixture.componentInstance;
       spyOn(component, 'handleValueChange');
@@ -53,6 +56,14 @@ describe('nz-segmented', () => {
       component.size = 'small';
       fixture.detectChanges();
       expect(segmentedElement.classList).toContain('ant-segmented-sm');
+    });
+
+    it('should support vertical mode', () => {
+      const segmentedElement: HTMLElement = segmentedComponent.nativeElement;
+      expect(segmentedElement.classList).not.toContain('ant-segmented-vertical');
+      component.vertical = true;
+      fixture.detectChanges();
+      expect(segmentedElement.classList).toContain('ant-segmented-vertical');
     });
 
     it('should be auto selected the first option when if no value is set', async () => {
@@ -132,6 +143,51 @@ describe('nz-segmented', () => {
       expect(theFirstElement.classList).toContain('ant-segmented-item-selected');
       expect(theSecondElement.classList).not.toContain('ant-segmented-item-selected');
     });
+
+    it('should animate thumb correctly in vertical mode', fakeAsync(() => {
+      component.vertical = true;
+      fixture.detectChanges();
+
+      const segmentedComponentInstance = fixture.debugElement.query(
+        By.directive(NzSegmentedComponent)
+      ).componentInstance;
+
+      expect(segmentedComponentInstance.nzVertical).toBe(true);
+
+      const theSecondElement = getSegmentedOptionByIndex(1);
+
+      tick(100);
+      fixture.detectChanges();
+
+      dispatchMouseEvent(theSecondElement, 'click');
+      tick(100);
+      fixture.detectChanges();
+
+      expect(theSecondElement.classList).toContain('ant-segmented-item-selected');
+      expect(segmentedComponentInstance.animationState).toBeDefined();
+
+      if (segmentedComponentInstance.animationState) {
+        expect(['fromVertical', 'toVertical']).toContain(segmentedComponentInstance.animationState.value);
+      }
+    }));
+  });
+
+  describe('icon-only', () => {
+    let fixture: ComponentFixture<NzSegmentedIconOnlyTestComponent>;
+
+    beforeEach(() => {
+      fixture = TestBed.createComponent(NzSegmentedIconOnlyTestComponent);
+    });
+
+    it('should render only one element in .ant-segmented-item-label if the item is icon-only', () => {
+      const items = fixture.debugElement.queryAll(By.css('.ant-segmented-item-label'));
+      expect(items.length).toBe(2);
+      expect(items[0].children.length).toBe(2);
+      expect(items[0].children[0].nativeElement.classList).toContain('ant-segmented-item-icon');
+      expect(items[0].children[1].nativeElement.tagName).toBe('SPAN');
+      expect(items[1].children.length).toBe(1);
+      expect(items[1].children[0].nativeElement.classList).toContain('ant-segmented-item-icon');
+    });
   });
 
   describe('ng model', () => {
@@ -144,9 +200,6 @@ describe('nz-segmented', () => {
     }
 
     beforeEach(() => {
-      TestBed.configureTestingModule({
-        providers: [provideNoopAnimations()]
-      });
       fixture = TestBed.createComponent(NzSegmentedNgModelTestComponent);
       component = fixture.componentInstance;
       spyOn(component, 'handleValueChange');
@@ -194,9 +247,6 @@ describe('nz-segmented', () => {
     }
 
     beforeEach(() => {
-      TestBed.configureTestingModule({
-        providers: [provideNoopAnimations()]
-      });
       fixture = TestBed.createComponent(NzSegmentedInReactiveFormTestComponent);
       component = fixture.componentInstance;
       segmentedComponent = fixture.debugElement.query(By.directive(NzSegmentedComponent));
@@ -217,6 +267,51 @@ describe('nz-segmented', () => {
       expect(theThirdElement.classList).toContain('ant-segmented-item-selected');
     });
   });
+
+  describe('vertical segmented', () => {
+    let fixture: ComponentFixture<NzSegmentedVerticalTestComponent>;
+    let component: NzSegmentedVerticalTestComponent;
+    let segmentedComponent: DebugElement;
+
+    function getSegmentedOptionByIndex(index: number): HTMLElement {
+      return segmentedComponent.nativeElement.querySelectorAll('.ant-segmented-item')[index];
+    }
+
+    beforeEach(() => {
+      fixture = TestBed.createComponent(NzSegmentedVerticalTestComponent);
+      component = fixture.componentInstance;
+      spyOn(component, 'handleValueChange');
+      segmentedComponent = fixture.debugElement.query(By.directive(NzSegmentedComponent));
+      fixture.detectChanges();
+    });
+
+    it('should render in vertical mode', () => {
+      const segmentedElement: HTMLElement = segmentedComponent.nativeElement;
+      expect(segmentedElement.classList).toContain('ant-segmented-vertical');
+      const groupElement = segmentedElement.querySelector('.ant-segmented-group') as HTMLElement;
+      expect(groupElement).toBeTruthy();
+    });
+
+    it('should change selection in vertical mode', async () => {
+      const theFirstElement = getSegmentedOptionByIndex(0);
+      const theSecondElement = getSegmentedOptionByIndex(1);
+
+      await fixture.whenStable();
+      fixture.detectChanges();
+
+      expect(theFirstElement.classList).toContain('ant-segmented-item-selected');
+      expect(component.handleValueChange).toHaveBeenCalledTimes(0);
+
+      dispatchMouseEvent(theSecondElement, 'click');
+      await fixture.whenStable();
+      fixture.detectChanges();
+
+      expect(theFirstElement.classList).not.toContain('ant-segmented-item-selected');
+      expect(theSecondElement.classList).toContain('ant-segmented-item-selected');
+      expect(component.handleValueChange).toHaveBeenCalledTimes(1);
+      expect(component.handleValueChange).toHaveBeenCalledWith('Weekly');
+    });
+  });
 });
 
 @Component({
@@ -227,8 +322,9 @@ describe('nz-segmented', () => {
       [nzOptions]="options"
       [nzDisabled]="disabled"
       [nzBlock]="block"
+      [nzVertical]="vertical"
       (nzValueChange)="handleValueChange($event)"
-    ></nz-segmented>
+    />
   `
 })
 export class NzSegmentedTestComponent {
@@ -236,10 +332,22 @@ export class NzSegmentedTestComponent {
   options: NzSegmentedOptions = [1, 2, 3];
   block = false;
   disabled = false;
+  vertical = false;
 
   handleValueChange(_e: string | number): void {
     // empty
   }
+}
+
+@Component({
+  imports: [FormsModule, NzSegmentedModule],
+  template: `<nz-segmented [nzOptions]="options" />`
+})
+export class NzSegmentedIconOnlyTestComponent {
+  options: NzSegmentedOptions = [
+    { value: 'List', label: 'List', icon: 'bars' },
+    { value: 'Kanban', icon: 'appstore' }
+  ];
 }
 
 @Component({
@@ -262,4 +370,16 @@ export class NzSegmentedNgModelTestComponent {
 export class NzSegmentedInReactiveFormTestComponent {
   options = ['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Yearly'];
   formControl = new FormControl('Weekly');
+}
+
+@Component({
+  imports: [FormsModule, NzSegmentedModule],
+  template: `<nz-segmented [nzOptions]="options" [nzVertical]="true" (nzValueChange)="handleValueChange($event)" /> `
+})
+export class NzSegmentedVerticalTestComponent {
+  options = ['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Yearly'];
+
+  handleValueChange(_e: string | number): void {
+    // empty
+  }
 }

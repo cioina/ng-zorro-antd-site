@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-divider-demo-horizontal" nzTitle="水平分割线"></nz-link><nz-link nzHref="#components-divider-demo-orientation" nzTitle="标题位置"></nz-link><nz-link nzHref="#components-divider-demo-vertical" nzTitle="垂直分割线"></nz-link><nz-link nzHref="#components-divider-demo-plain" nzTitle="分割文字使用正文样式"></nz-link><nz-link nzHref="#components-divider-demo-variant" nzTitle="变体"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-divider-demo-horizontal" nzTitle="水平分割线"></nz-link><nz-link nzHref="#components-divider-demo-orientation" nzTitle="标题位置"></nz-link><nz-link nzHref="#components-divider-demo-vertical" nzTitle="垂直分割线"></nz-link><nz-link nzHref="#components-divider-demo-plain" nzTitle="分割文字使用正文样式"></nz-link><nz-link nzHref="#components-divider-demo-variant" nzTitle="变体"></nz-link><nz-link nzHref="#components-divider-demo-size" nzTitle="分割线大小"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Divider<span class="subtitle">分割线</span><span class="widget"></span>
@@ -37,8 +37,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/horizontal.md'">
-	<nz-demo-divider-horizontal demo></nz-demo-divider-horizontal>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/horizontal.md'"
+>
+	<nz-demo-divider-horizontal demo />
 	<div intro ngNonBindable>
 		<p>默认为水平分割线，可在中间加入文字。</p>
 
@@ -54,8 +55,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/vertical.md'">
-	<nz-demo-divider-vertical demo></nz-demo-divider-vertical>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/vertical.md'"
+>
+	<nz-demo-divider-vertical demo />
 	<div intro ngNonBindable>
 		<p>使用 <code>nzType=&quot;vertical&quot;</code> 设置为行内的垂直分割线。</p>
 
@@ -71,8 +73,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/variant.md'">
-	<nz-demo-divider-variant demo></nz-demo-divider-variant>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/variant.md'"
+>
+	<nz-demo-divider-variant demo />
 	<div intro ngNonBindable>
 		<p>分隔线默认为 <code>solid</code>（实线）变体。您可以将其更改为 <code>dashed</code>（虚线）或 <code>dotted</code>（点线）。</p>
 
@@ -91,8 +94,9 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/orientation.md'">
-	<nz-demo-divider-orientation demo></nz-demo-divider-orientation>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/orientation.md'"
+>
+	<nz-demo-divider-orientation demo />
 	<div intro ngNonBindable>
 		<p>修改分割线标题的位置。</p>
 
@@ -108,10 +112,29 @@
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/plain.md'">
-	<nz-demo-divider-plain demo></nz-demo-divider-plain>
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/plain.md'"
+>
+	<nz-demo-divider-plain demo />
 	<div intro ngNonBindable>
 		<p>使用 <code>nzPlain</code> 可以设置为更轻量的分割文字样式。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="分割线大小"
+  [nzId]="'components-divider-demo-size'"
+  nzSelector="nz-demo-divider-size"
+  [nzLink]="'components-divider-demo-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:divider-size <name>"
+  nzComponentName="NzDemoDividerSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/divider/demo/size.md'"
+>
+	<nz-demo-divider-size demo />
+	<div intro ngNonBindable>
+		<p>通过 <code>nzSize</code> 设置分割线的大小。</p>
 
 	</div>
 </nz-code-box>
@@ -162,6 +185,12 @@
 <td>分割线是虚线、点线还是实线</td>
 <td><code>&#39;dashed&#39; | &#39;dotted&#39; | &#39;solid&#39;</code></td>
 <td><code>&#39;solid&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>分割线大小</td>
+<td><code>&#39;small&#39; | &#39;middle&#39; | &#39;large&#39;</code></td>
+<td>-</td>
 </tr>
 </tbody></table>
 </section></article>
