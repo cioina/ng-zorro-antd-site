@@ -12,6 +12,7 @@ import { NzDemoSegmentedSizeComponent } from './size';
 import { NzDemoSegmentedValueComponent } from './value';
 import { NzDemoSegmentedVerticalComponent } from './vertical';
 import { NzDemoSegmentedWithIconOnlyComponent } from './with-icon-only';
+import { NzDemoSegmentedWithNameComponent } from './with-name';
 
 
 @Component({
@@ -29,6 +30,7 @@ import { NzDemoSegmentedWithIconOnlyComponent } from './with-icon-only';
 		NzDemoSegmentedValueComponent,
 		NzDemoSegmentedVerticalComponent,
 		NzDemoSegmentedWithIconOnlyComponent,
+		NzDemoSegmentedWithNameComponent,
 
   ],
   templateUrl  : './zh.html'

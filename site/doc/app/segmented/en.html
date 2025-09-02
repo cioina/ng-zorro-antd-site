@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-segmented-demo-basic" nzTitle="Basic usage"></nz-link><nz-link nzHref="#components-segmented-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-segmented-demo-dynamic" nzTitle="Dynamic"></nz-link><nz-link nzHref="#components-segmented-demo-value" nzTitle="ngModel"></nz-link><nz-link nzHref="#components-segmented-demo-custom" nzTitle="Custom Render"></nz-link><nz-link nzHref="#components-segmented-demo-size" nzTitle="Three sizes of Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-block" nzTitle="Block Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-icon" nzTitle="With Icon"></nz-link><nz-link nzHref="#components-segmented-demo-with-icon-only" nzTitle="With Icon only"></nz-link><nz-link nzHref="#components-segmented-demo-vertical" nzTitle="Vertical direction"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-segmented-demo-basic" nzTitle="Basic usage"></nz-link><nz-link nzHref="#components-segmented-demo-vertical" nzTitle="Vertical direction"></nz-link><nz-link nzHref="#components-segmented-demo-block" nzTitle="Block Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-segmented-demo-value" nzTitle="Controlled mode"></nz-link><nz-link nzHref="#components-segmented-demo-custom" nzTitle="Custom Render"></nz-link><nz-link nzHref="#components-segmented-demo-dynamic" nzTitle="Dynamic"></nz-link><nz-link nzHref="#components-segmented-demo-size" nzTitle="Three sizes of Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-icon" nzTitle="With Icon"></nz-link><nz-link nzHref="#components-segmented-demo-with-icon-only" nzTitle="With Icon only"></nz-link><nz-link nzHref="#components-segmented-demo-with-name" nzTitle="With name"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Segmented<span class="subtitle"></span><span class="widget"></span>
@@ -46,42 +46,6 @@
 	</div>
 </nz-code-box>
 <nz-code-box
-  nzTitle="Dynamic"
-  [nzId]="'components-segmented-demo-dynamic'"
-  nzSelector="nz-demo-segmented-dynamic"
-  [nzLink]="'components-segmented-demo-dynamic'"
-  nzGenerateCommand="ng g ng-zorro-antd:segmented-dynamic <name>"
-  nzComponentName="NzDemoSegmentedDynamicComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/dynamic.md'"
->
-	<nz-demo-segmented-dynamic demo />
-	<div intro ngNonBindable>
-		<p>Load <code>options</code> dynamically.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Custom Render"
-  [nzId]="'components-segmented-demo-custom'"
-  nzSelector="nz-demo-segmented-custom"
-  [nzLink]="'components-segmented-demo-custom'"
-  nzGenerateCommand="ng g ng-zorro-antd:segmented-custom <name>"
-  nzComponentName="NzDemoSegmentedCustomComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/custom.md'"
->
-	<nz-demo-segmented-custom demo />
-	<div intro ngNonBindable>
-		<p>Custom render each Segmented Item.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
   nzTitle="Block Segmented"
   [nzId]="'components-segmented-demo-block'"
   nzSelector="nz-demo-segmented-block"
@@ -100,46 +64,7 @@
 	</div>
 </nz-code-box>
 <nz-code-box
-  nzTitle="With Icon only"
-  [nzId]="'components-segmented-demo-with-icon-only'"
-  nzSelector="nz-demo-segmented-with-icon-only"
-  [nzLink]="'components-segmented-demo-with-icon-only'"
-  nzGenerateCommand="ng g ng-zorro-antd:segmented-with-icon-only <name>"
-  nzComponentName="NzDemoSegmentedWithIconOnlyComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/with-icon-only.md'"
->
-	<nz-demo-segmented-with-icon-only demo />
-	<div intro ngNonBindable>
-		<p>Set <code>icon</code> without <code>label</code> for Segmented Item.</p>
-
-	</div>
-</nz-code-box>
-
-	</div>
-	<div nz-col [nzXl]="12" [nzSpan]="24">
-		<nz-code-box
-  nzTitle="Disabled"
-  [nzId]="'components-segmented-demo-disabled'"
-  nzSelector="nz-demo-segmented-disabled"
-  [nzLink]="'components-segmented-demo-disabled'"
-  nzGenerateCommand="ng g ng-zorro-antd:segmented-disabled <name>"
-  nzComponentName="NzDemoSegmentedDisabledComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/disabled.md'"
->
-	<nz-demo-segmented-disabled demo />
-	<div intro ngNonBindable>
-		<p>Disabled Segmented.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="ngModel"
+  nzTitle="Controlled mode"
   [nzId]="'components-segmented-demo-value'"
   nzSelector="nz-demo-segmented-value"
   [nzLink]="'components-segmented-demo-value'"
@@ -157,20 +82,20 @@
 	</div>
 </nz-code-box>
 <nz-code-box
-  nzTitle="Three sizes of Segmented"
-  [nzId]="'components-segmented-demo-size'"
-  nzSelector="nz-demo-segmented-size"
-  [nzLink]="'components-segmented-demo-size'"
-  nzGenerateCommand="ng g ng-zorro-antd:segmented-size <name>"
-  nzComponentName="NzDemoSegmentedSizeComponent"
+  nzTitle="Dynamic"
+  [nzId]="'components-segmented-demo-dynamic'"
+  nzSelector="nz-demo-segmented-dynamic"
+  [nzLink]="'components-segmented-demo-dynamic'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-dynamic <name>"
+  nzComponentName="NzDemoSegmentedDynamicComponent"
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/size.md'"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/dynamic.md'"
 >
-	<nz-demo-segmented-size demo />
+	<nz-demo-segmented-dynamic demo />
 	<div intro ngNonBindable>
-		<p>There are three sizes of an Segmented: <code>large</code> (40px), <code>default</code> (32px) and <code>small</code> (24px).</p>
+		<p>Load <code>options</code> dynamically.</p>
 
 	</div>
 </nz-code-box>
@@ -193,6 +118,27 @@
 	</div>
 </nz-code-box>
 <nz-code-box
+  nzTitle="With name"
+  [nzId]="'components-segmented-demo-with-name'"
+  nzSelector="nz-demo-segmented-with-name"
+  [nzLink]="'components-segmented-demo-with-name'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-with-name <name>"
+  nzComponentName="NzDemoSegmentedWithNameComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/with-name.md'"
+>
+	<nz-demo-segmented-with-name demo />
+	<div intro ngNonBindable>
+		<p>Passing the <code>nzName</code> property to all <code>input[type=&quot;radio&quot;]</code> that are in the same nz-segmented. It is usually used to let the browser see your nz-segmented as a real &quot;group&quot; and keep the default behavior. For example, using left/right keyboard arrow to change your selection that in the same Segmented.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
   nzTitle="Vertical direction"
   [nzId]="'components-segmented-demo-vertical'"
   nzSelector="nz-demo-segmented-vertical"
@@ -207,6 +153,78 @@
 	<nz-demo-segmented-vertical demo />
 	<div intro ngNonBindable>
 		<p>Make it vertical.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Disabled"
+  [nzId]="'components-segmented-demo-disabled'"
+  nzSelector="nz-demo-segmented-disabled"
+  [nzLink]="'components-segmented-demo-disabled'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-disabled <name>"
+  nzComponentName="NzDemoSegmentedDisabledComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/disabled.md'"
+>
+	<nz-demo-segmented-disabled demo />
+	<div intro ngNonBindable>
+		<p>Disabled Segmented.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom Render"
+  [nzId]="'components-segmented-demo-custom'"
+  nzSelector="nz-demo-segmented-custom"
+  [nzLink]="'components-segmented-demo-custom'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-custom <name>"
+  nzComponentName="NzDemoSegmentedCustomComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/custom.md'"
+>
+	<nz-demo-segmented-custom demo />
+	<div intro ngNonBindable>
+		<p>Custom render each Segmented Item.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Three sizes of Segmented"
+  [nzId]="'components-segmented-demo-size'"
+  nzSelector="nz-demo-segmented-size"
+  [nzLink]="'components-segmented-demo-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-size <name>"
+  nzComponentName="NzDemoSegmentedSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/size.md'"
+>
+	<nz-demo-segmented-size demo />
+	<div intro ngNonBindable>
+		<p>There are three sizes of an Segmented: <code>large</code> (40px), <code>default</code> (32px) and <code>small</code> (24px).</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="With Icon only"
+  [nzId]="'components-segmented-demo-with-icon-only'"
+  nzSelector="nz-demo-segmented-with-icon-only"
+  [nzLink]="'components-segmented-demo-with-icon-only'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-with-icon-only <name>"
+  nzComponentName="NzDemoSegmentedWithIconOnlyComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/with-icon-only.md'"
+>
+	<nz-demo-segmented-with-icon-only demo />
+	<div intro ngNonBindable>
+		<p>Set <code>icon</code> without <code>label</code> for Segmented Item.</p>
 
 	</div>
 </nz-code-box>
@@ -256,7 +274,14 @@
 <td>Orientation</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzName]</code></td>
+<td>The name property of all <code>input[type=&quot;radio&quot;]</code> children</td>
+<td><code>string</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[ngModel]</code></td>
