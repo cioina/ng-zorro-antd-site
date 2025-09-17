@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-upload-demo-basic" nzTitle="Upload by clicking"></nz-link><nz-link nzHref="#components-upload-demo-avatar" nzTitle="Avatar"></nz-link><nz-link nzHref="#components-upload-demo-default-file-list" nzTitle="Default Files"></nz-link><nz-link nzHref="#components-upload-demo-picture-card" nzTitle="Pictures Wall"></nz-link><nz-link nzHref="#components-upload-demo-file-list" nzTitle="Complete control over file list"></nz-link><nz-link nzHref="#components-upload-demo-drag" nzTitle="Drag and Drop"></nz-link><nz-link nzHref="#components-upload-demo-directory" nzTitle="Upload directory"></nz-link><nz-link nzHref="#components-upload-demo-upload-manually" nzTitle="Upload manually"></nz-link><nz-link nzHref="#components-upload-demo-picture-style" nzTitle="Pictures with list style"></nz-link><nz-link nzHref="#components-upload-demo-preview-file" nzTitle="Customize preview file"></nz-link><nz-link nzHref="#components-upload-demo-transform-file" nzTitle="Transform file before request"></nz-link><nz-link nzHref="#components-upload-demo-upload-with-aliyun-oss" nzTitle="Aliyun OSS"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-upload-demo-basic" nzTitle="Upload by clicking"></nz-link><nz-link nzHref="#components-upload-demo-avatar" nzTitle="Avatar"></nz-link><nz-link nzHref="#components-upload-demo-default-file-list" nzTitle="Default Files"></nz-link><nz-link nzHref="#components-upload-demo-picture-card" nzTitle="Pictures Wall"></nz-link><nz-link nzHref="#components-upload-demo-file-list" nzTitle="Complete control over file list"></nz-link><nz-link nzHref="#components-upload-demo-drag" nzTitle="Drag and Drop"></nz-link><nz-link nzHref="#components-upload-demo-directory" nzTitle="Upload directory"></nz-link><nz-link nzHref="#components-upload-demo-upload-manually" nzTitle="Upload manually"></nz-link><nz-link nzHref="#components-upload-demo-picture-style" nzTitle="Pictures with list style"></nz-link><nz-link nzHref="#components-upload-demo-preview-file" nzTitle="Customize preview file"></nz-link><nz-link nzHref="#components-upload-demo-transform-file" nzTitle="Transform file before request"></nz-link><nz-link nzHref="#components-upload-demo-upload-with-aliyun-oss" nzTitle="Aliyun OSS"></nz-link><nz-link nzHref="#components-upload-demo-png-only" nzTitle="Upload png file only"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Upload<span class="subtitle"></span><span class="widget"></span>
@@ -139,7 +139,28 @@
 >
 	<nz-demo-upload-transform-file demo />
 	<div intro ngNonBindable>
-		<p>Use <code>nzTransformFile</code> for transform file before request such as add a watermark.</p>
+		<blockquote>
+<p>The old <code>nzTransformFile</code> input has been deprecated.</p>
+</blockquote>
+<p>Use <code>nzBeforeUpload</code> to transform file before requesting it, for example to add a watermark.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Upload png file only"
+  [nzId]="'components-upload-demo-png-only'"
+  nzSelector="nz-demo-upload-png-only"
+  [nzLink]="'components-upload-demo-png-only'"
+  nzGenerateCommand="ng g ng-zorro-antd:upload-png-only <name>"
+  nzComponentName="NzDemoUploadPngOnlyComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/upload/demo/png-only.md'"
+>
+	<nz-demo-upload-png-only demo />
+	<div intro ngNonBindable>
+		<p><code>nzBeforeUpload</code> only prevent upload behavior when return <code>false</code> or <code>Promise.reject()</code> or an <code>Observable</code> throw an error.</p>
 
 	</div>
 </nz-code-box>
@@ -430,9 +451,9 @@
 <td>Jump to new TAB</td>
 </tr>
 <tr>
-<td><code>[nzTransformFile]</code></td>
-<td>Customize transform file before request</td>
-<td><code>(file: NzUploadFile) =&gt; NzUploadTransformFileType</code></td>
+<td><del><code>[nzTransformFile]</code></del></td>
+<td><del>Customize transform file before request</del></td>
+<td><del><code>(file: NzUploadFile) =&gt; NzUploadTransformFileType</code></del></td>
 <td>-</td>
 </tr>
 <tr>

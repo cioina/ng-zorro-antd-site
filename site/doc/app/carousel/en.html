@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-carousel-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-carousel-demo-position" nzTitle="Position"></nz-link><nz-link nzHref="#components-carousel-demo-fade" nzTitle="Fade in"></nz-link><nz-link nzHref="#components-carousel-demo-autoplay" nzTitle="Scroll automatically"></nz-link><nz-link nzHref="#components-carousel-demo-custom" nzTitle="Custom transition effect"></nz-link><nz-link nzHref="#components-carousel-demo-loop" nzTitle="Loop"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-carousel-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-carousel-demo-position" nzTitle="Position"></nz-link><nz-link nzHref="#components-carousel-demo-fade" nzTitle="Fade in"></nz-link><nz-link nzHref="#components-carousel-demo-autoplay" nzTitle="Scroll automatically"></nz-link><nz-link nzHref="#components-carousel-demo-custom" nzTitle="Custom transition effect"></nz-link><nz-link nzHref="#components-carousel-demo-loop" nzTitle="Loop"></nz-link><nz-link nzHref="#components-carousel-demo-arrow" nzTitle="Arrows for switching"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Carousel<span class="subtitle"></span><span class="widget"></span>
@@ -79,6 +79,24 @@
 	<nz-demo-carousel-custom demo />
 	<div intro ngNonBindable>
 		<p>Customize carousel transition effect by providing a class that extends <code>NzCarouselBaseStrategy</code>.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Arrows for switching"
+  [nzId]="'components-carousel-demo-arrow'"
+  nzSelector="nz-demo-carousel-arrow"
+  [nzLink]="'components-carousel-demo-arrow'"
+  nzGenerateCommand="ng g ng-zorro-antd:carousel-arrow <name>"
+  nzComponentName="NzDemoCarouselArrowComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/arrow.md'"
+>
+	<nz-demo-carousel-arrow demo />
+	<div intro ngNonBindable>
+		<p>Show the arrows for switching.</p>
 
 	</div>
 </nz-code-box>
@@ -207,6 +225,13 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+</tr>
+<tr>
+<td><code>[nzArrows]</code></td>
+<td>Whether to show the arrow buttons</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>(nzAfterChange)</code></td>

@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-upload-demo-basic" nzTitle="点击上传"></nz-link><nz-link nzHref="#components-upload-demo-avatar" nzTitle="用户头像"></nz-link><nz-link nzHref="#components-upload-demo-default-file-list" nzTitle="已上传的文件列表"></nz-link><nz-link nzHref="#components-upload-demo-picture-card" nzTitle="照片墙"></nz-link><nz-link nzHref="#components-upload-demo-file-list" nzTitle="完全控制的上传列表"></nz-link><nz-link nzHref="#components-upload-demo-drag" nzTitle="拖拽上传"></nz-link><nz-link nzHref="#components-upload-demo-directory" nzTitle="文件夹上传"></nz-link><nz-link nzHref="#components-upload-demo-upload-manually" nzTitle="手动上传"></nz-link><nz-link nzHref="#components-upload-demo-picture-style" nzTitle="图片列表样式"></nz-link><nz-link nzHref="#components-upload-demo-preview-file" nzTitle="自定义预览"></nz-link><nz-link nzHref="#components-upload-demo-transform-file" nzTitle="上传前转换文件"></nz-link><nz-link nzHref="#components-upload-demo-upload-with-aliyun-oss" nzTitle="阿里云 OSS"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-upload-demo-basic" nzTitle="点击上传"></nz-link><nz-link nzHref="#components-upload-demo-avatar" nzTitle="用户头像"></nz-link><nz-link nzHref="#components-upload-demo-default-file-list" nzTitle="已上传的文件列表"></nz-link><nz-link nzHref="#components-upload-demo-picture-card" nzTitle="照片墙"></nz-link><nz-link nzHref="#components-upload-demo-file-list" nzTitle="完全控制的上传列表"></nz-link><nz-link nzHref="#components-upload-demo-drag" nzTitle="拖拽上传"></nz-link><nz-link nzHref="#components-upload-demo-directory" nzTitle="文件夹上传"></nz-link><nz-link nzHref="#components-upload-demo-upload-manually" nzTitle="手动上传"></nz-link><nz-link nzHref="#components-upload-demo-picture-style" nzTitle="图片列表样式"></nz-link><nz-link nzHref="#components-upload-demo-preview-file" nzTitle="自定义预览"></nz-link><nz-link nzHref="#components-upload-demo-transform-file" nzTitle="上传前转换文件"></nz-link><nz-link nzHref="#components-upload-demo-upload-with-aliyun-oss" nzTitle="阿里云 OSS"></nz-link><nz-link nzHref="#components-upload-demo-png-only" nzTitle="只上传 png 图片"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Upload<span class="subtitle">上传</span><span class="widget"></span>
@@ -139,7 +139,28 @@
 >
 	<nz-demo-upload-transform-file demo />
 	<div intro ngNonBindable>
-		<p>使用 <code>nzTransformFile</code> 转换上传的文件（例如添加水印）。</p>
+		<blockquote>
+<p>旧的 <code>nzTransformFile</code> 属性已被弃用.</p>
+</blockquote>
+<p>使用 <code>nzBeforeUpload</code> 在请求之前转换文件，例如添加水印。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="只上传 png 图片"
+  [nzId]="'components-upload-demo-png-only'"
+  nzSelector="nz-demo-upload-png-only"
+  [nzLink]="'components-upload-demo-png-only'"
+  nzGenerateCommand="ng g ng-zorro-antd:upload-png-only <name>"
+  nzComponentName="NzDemoUploadPngOnlyComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/upload/demo/png-only.md'"
+>
+	<nz-demo-upload-png-only demo />
+	<div intro ngNonBindable>
+		<p><code>nzBeforeUpload</code> 仅在返回 <code>false</code> 或 <code>Promise.reject()</code> 或 <code>Observable</code> 抛出错误时阻止上传行为。</p>
 
 	</div>
 </nz-code-box>
@@ -430,9 +451,9 @@
 <td>跳转新标签页</td>
 </tr>
 <tr>
-<td><code>[nzTransformFile]</code></td>
-<td>在上传之前转换文件。支持返回一个 Observable 对象</td>
-<td><code>(file: NzUploadFile) =&gt; NzUploadTransformFileType</code></td>
+<td><del><code>[nzTransformFile]</code></del></td>
+<td><del>在上传之前转换文件。支持返回一个 Observable 对象</del></td>
+<td><del><code>(file: NzUploadFile) =&gt; NzUploadTransformFileType</code></del></td>
 <td>-</td>
 </tr>
 <tr>

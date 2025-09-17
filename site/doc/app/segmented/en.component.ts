@@ -8,6 +8,7 @@ import { NzDemoSegmentedCustomComponent } from './custom';
 import { NzDemoSegmentedDisabledComponent } from './disabled';
 import { NzDemoSegmentedDynamicComponent } from './dynamic';
 import { NzDemoSegmentedIconComponent } from './icon';
+import { NzDemoSegmentedShapeComponent } from './shape';
 import { NzDemoSegmentedSizeComponent } from './size';
 import { NzDemoSegmentedValueComponent } from './value';
 import { NzDemoSegmentedVerticalComponent } from './vertical';
@@ -26,6 +27,7 @@ import { NzDemoSegmentedWithNameComponent } from './with-name';
 		NzDemoSegmentedDisabledComponent,
 		NzDemoSegmentedDynamicComponent,
 		NzDemoSegmentedIconComponent,
+		NzDemoSegmentedShapeComponent,
 		NzDemoSegmentedSizeComponent,
 		NzDemoSegmentedValueComponent,
 		NzDemoSegmentedVerticalComponent,

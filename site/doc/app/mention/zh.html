@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-mention-demo-basic" nzTitle="基本使用"></nz-link><nz-link nzHref="#components-mention-demo-async" nzTitle="异步加载"></nz-link><nz-link nzHref="#components-mention-demo-form" nzTitle="配合 Form 使用"></nz-link><nz-link nzHref="#components-mention-demo-prefix" nzTitle="自定义触发字符"></nz-link><nz-link nzHref="#components-mention-demo-readonly" nzTitle="无效或只读"></nz-link><nz-link nzHref="#components-mention-demo-placement" nzTitle="向上展开"></nz-link><nz-link nzHref="#components-mention-demo-avatar" nzTitle="头像"></nz-link><nz-link nzHref="#components-mention-demo-custom-tag" nzTitle="自定义建议"></nz-link><nz-link nzHref="#components-mention-demo-multilines" nzTitle="多行"></nz-link><nz-link nzHref="#components-mention-demo-preview" nzTitle="预览"></nz-link><nz-link nzHref="#components-mention-demo-status" nzTitle="自定义状态"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-mention-demo-basic" nzTitle="基本使用"></nz-link><nz-link nzHref="#components-mention-demo-async" nzTitle="异步加载"></nz-link><nz-link nzHref="#components-mention-demo-form" nzTitle="配合 Form 使用"></nz-link><nz-link nzHref="#components-mention-demo-prefix" nzTitle="自定义触发字符"></nz-link><nz-link nzHref="#components-mention-demo-readonly" nzTitle="无效或只读"></nz-link><nz-link nzHref="#components-mention-demo-placement" nzTitle="向上展开"></nz-link><nz-link nzHref="#components-mention-demo-avatar" nzTitle="头像"></nz-link><nz-link nzHref="#components-mention-demo-custom-tag" nzTitle="自定义建议"></nz-link><nz-link nzHref="#components-mention-demo-auto-size" nzTitle="自动大小"></nz-link><nz-link nzHref="#components-mention-demo-preview" nzTitle="预览"></nz-link><nz-link nzHref="#components-mention-demo-status" nzTitle="自定义状态"></nz-link><nz-link nzHref="#components-mention-demo-clear" nzTitle="带移除图标"></nz-link><nz-link nzHref="#components-mention-demo-variant" nzTitle="形态变体"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Mention<span class="subtitle">提及</span><span class="widget"></span>
@@ -98,20 +98,20 @@
 	</div>
 </nz-code-box>
 <nz-code-box
-  nzTitle="多行"
-  [nzId]="'components-mention-demo-multilines'"
-  nzSelector="nz-demo-mention-multilines"
-  [nzLink]="'components-mention-demo-multilines'"
-  nzGenerateCommand="ng g ng-zorro-antd:mention-multilines <name>"
-  nzComponentName="NzDemoMentionMultilinesComponent"
+  nzTitle="自动大小"
+  [nzId]="'components-mention-demo-auto-size'"
+  nzSelector="nz-demo-mention-auto-size"
+  [nzLink]="'components-mention-demo-auto-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:mention-auto-size <name>"
+  nzComponentName="NzDemoMentionAutoSizeComponent"
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/multilines.md'"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/auto-size.md'"
 >
-	<nz-demo-mention-multilines demo />
+	<nz-demo-mention-auto-size demo />
 	<div intro ngNonBindable>
-		<p>多行模式。</p>
+		<p>自适应内容高度。</p>
 
 	</div>
 </nz-code-box>
@@ -130,6 +130,24 @@
 	<nz-demo-mention-status demo />
 	<div intro ngNonBindable>
 		<p>使用 <code>nzStatus</code> 为 Mentions 添加状态。可选 <code>error</code> 或者 <code>warning</code>。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="形态变体"
+  [nzId]="'components-mention-demo-variant'"
+  nzSelector="nz-demo-mention-variant"
+  [nzLink]="'components-mention-demo-variant'"
+  nzGenerateCommand="ng g ng-zorro-antd:mention-variant <name>"
+  nzComponentName="NzDemoMentionVariantComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/variant.md'"
+>
+	<nz-demo-mention-variant demo />
+	<div intro ngNonBindable>
+		<p>Mentions 形态变体，可选 <code>outlined</code> <code>filled</code> <code>borderless</code> <code>underlined</code> 四种形态。</p>
 
 	</div>
 </nz-code-box>
@@ -227,6 +245,24 @@
 
 	</div>
 </nz-code-box>
+<nz-code-box
+  nzTitle="带移除图标"
+  [nzId]="'components-mention-demo-clear'"
+  nzSelector="nz-demo-mention-clear"
+  [nzLink]="'components-mention-demo-clear'"
+  nzGenerateCommand="ng g ng-zorro-antd:mention-clear <name>"
+  nzComponentName="NzDemoMentionClearComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/clear.md'"
+>
+	<nz-demo-mention-clear demo />
+	<div intro ngNonBindable>
+		<p>自定义清除按钮。</p>
+
+	</div>
+</nz-code-box>
 
 	</div>
 </div>
@@ -291,10 +327,28 @@
 <td>-</td>
 </tr>
 <tr>
+<td><code>[nzAllowClear]</code></td>
+<td>支持清除</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzClearIcon]</code></td>
+<td>自定义的多选框清空图标</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzVariant]</code></td>
+<td>形态变体</td>
+<td><code>&#39;outlined&#39; | &#39;filled&#39; | &#39;borderless&#39; | &#39;underlined&#39;</code></td>
+<td><code>&#39;outlined&#39;</code></td>
+</tr>
+<tr>
 <td><code>[nzValueWith]</code></td>
 <td>建议选项的取值方法</td>
 <td><code>(any) =&gt; string | (value: string) =&gt; string</code></td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>(nzOnSelect)</code></td>
@@ -306,6 +360,12 @@
 <td><code>(nzOnSearchChange)</code></td>
 <td>输入框中 &#64; 变化时回调</td>
 <td><code>EventEmitter&lt;MentionOnSearchTypes&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClear)</code></td>
+<td>清空已选项时触发的回调函数</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 </tr>
 </tbody></table>

@@ -3,16 +3,18 @@ import { NzCodeBoxComponent } from '../codebox/codebox.component';
 import { ShareModule } from '../share/share.module';
 
 import { NzDemoMentionAsyncComponent } from './async';
+import { NzDemoMentionAutoSizeComponent } from './auto-size';
 import { NzDemoMentionAvatarComponent } from './avatar';
 import { NzDemoMentionBasicComponent } from './basic';
+import { NzDemoMentionClearComponent } from './clear';
 import { NzDemoMentionCustomTagComponent } from './custom-tag';
 import { NzDemoMentionFormComponent } from './form';
-import { NzDemoMentionMultilinesComponent } from './multilines';
 import { NzDemoMentionPlacementComponent } from './placement';
 import { NzDemoMentionPrefixComponent } from './prefix';
 import { NzDemoMentionPreviewComponent } from './preview';
 import { NzDemoMentionReadonlyComponent } from './readonly';
 import { NzDemoMentionStatusComponent } from './status';
+import { NzDemoMentionVariantComponent } from './variant';
 
 
 @Component({
@@ -21,16 +23,18 @@ import { NzDemoMentionStatusComponent } from './status';
   imports      : [
     ShareModule,
 		NzDemoMentionAsyncComponent,
+		NzDemoMentionAutoSizeComponent,
 		NzDemoMentionAvatarComponent,
 		NzDemoMentionBasicComponent,
+		NzDemoMentionClearComponent,
 		NzDemoMentionCustomTagComponent,
 		NzDemoMentionFormComponent,
-		NzDemoMentionMultilinesComponent,
 		NzDemoMentionPlacementComponent,
 		NzDemoMentionPrefixComponent,
 		NzDemoMentionPreviewComponent,
 		NzDemoMentionReadonlyComponent,
 		NzDemoMentionStatusComponent,
+		NzDemoMentionVariantComponent,
 
   ],
   templateUrl  : './en.html'

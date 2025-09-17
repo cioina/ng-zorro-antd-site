@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-segmented-demo-basic" nzTitle="Basic usage"></nz-link><nz-link nzHref="#components-segmented-demo-vertical" nzTitle="Vertical direction"></nz-link><nz-link nzHref="#components-segmented-demo-block" nzTitle="Block Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-segmented-demo-value" nzTitle="Controlled mode"></nz-link><nz-link nzHref="#components-segmented-demo-custom" nzTitle="Custom Render"></nz-link><nz-link nzHref="#components-segmented-demo-dynamic" nzTitle="Dynamic"></nz-link><nz-link nzHref="#components-segmented-demo-size" nzTitle="Three sizes of Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-icon" nzTitle="With Icon"></nz-link><nz-link nzHref="#components-segmented-demo-with-icon-only" nzTitle="With Icon only"></nz-link><nz-link nzHref="#components-segmented-demo-with-name" nzTitle="With name"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-segmented-demo-basic" nzTitle="Basic usage"></nz-link><nz-link nzHref="#components-segmented-demo-vertical" nzTitle="Vertical direction"></nz-link><nz-link nzHref="#components-segmented-demo-block" nzTitle="Block Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-segmented-demo-value" nzTitle="Controlled mode"></nz-link><nz-link nzHref="#components-segmented-demo-custom" nzTitle="Custom Render"></nz-link><nz-link nzHref="#components-segmented-demo-dynamic" nzTitle="Dynamic"></nz-link><nz-link nzHref="#components-segmented-demo-size" nzTitle="Three sizes of Segmented"></nz-link><nz-link nzHref="#components-segmented-demo-icon" nzTitle="With Icon"></nz-link><nz-link nzHref="#components-segmented-demo-with-icon-only" nzTitle="With Icon only"></nz-link><nz-link nzHref="#components-segmented-demo-with-name" nzTitle="With name"></nz-link><nz-link nzHref="#components-segmented-demo-shape" nzTitle="Round Shape"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Segmented<span class="subtitle"></span><span class="widget"></span>
@@ -228,6 +228,24 @@
 
 	</div>
 </nz-code-box>
+<nz-code-box
+  nzTitle="Round Shape"
+  [nzId]="'components-segmented-demo-shape'"
+  nzSelector="nz-demo-segmented-shape"
+  [nzLink]="'components-segmented-demo-shape'"
+  nzGenerateCommand="ng g ng-zorro-antd:segmented-shape <name>"
+  nzComponentName="NzDemoSegmentedShapeComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/segmented/demo/shape.md'"
+>
+	<nz-demo-segmented-shape demo />
+	<div intro ngNonBindable>
+		<p>Round shape of Segmented.</p>
+
+	</div>
+</nz-code-box>
 
 	</div>
 </div>
@@ -270,11 +288,18 @@
 <td>✅</td>
 </tr>
 <tr>
+<td><code>[nzShape]</code></td>
+<td>Shape of Segmented</td>
+<td><code>default | round</code></td>
+<td><code>default</code></td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>[nzVertical]</code></td>
 <td>Orientation</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
-<td></td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>[nzName]</code></td>

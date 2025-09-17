@@ -10,6 +10,7 @@ import { NzDemoUploadDragComponent } from './drag';
 import { NzDemoUploadFileListComponent } from './file-list';
 import { NzDemoUploadPictureCardComponent } from './picture-card';
 import { NzDemoUploadPictureStyleComponent } from './picture-style';
+import { NzDemoUploadPngOnlyComponent } from './png-only';
 import { NzDemoUploadPreviewFileComponent } from './preview-file';
 import { NzDemoUploadTransformFileComponent } from './transform-file';
 import { NzDemoUploadUploadManuallyComponent } from './upload-manually';
@@ -29,6 +30,7 @@ import { NzDemoUploadUploadWithAliyunOssComponent } from './upload-with-aliyun-o
 		NzDemoUploadFileListComponent,
 		NzDemoUploadPictureCardComponent,
 		NzDemoUploadPictureStyleComponent,
+		NzDemoUploadPngOnlyComponent,
 		NzDemoUploadPreviewFileComponent,
 		NzDemoUploadTransformFileComponent,
 		NzDemoUploadUploadManuallyComponent,

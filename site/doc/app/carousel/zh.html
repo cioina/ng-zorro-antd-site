@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-carousel-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-carousel-demo-position" nzTitle="位置"></nz-link><nz-link nzHref="#components-carousel-demo-fade" nzTitle="渐显"></nz-link><nz-link nzHref="#components-carousel-demo-autoplay" nzTitle="自动切换"></nz-link><nz-link nzHref="#components-carousel-demo-custom" nzTitle="自定义切换效果"></nz-link><nz-link nzHref="#components-carousel-demo-loop" nzTitle="循环"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-carousel-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-carousel-demo-position" nzTitle="位置"></nz-link><nz-link nzHref="#components-carousel-demo-fade" nzTitle="渐显"></nz-link><nz-link nzHref="#components-carousel-demo-autoplay" nzTitle="自动切换"></nz-link><nz-link nzHref="#components-carousel-demo-custom" nzTitle="自定义切换效果"></nz-link><nz-link nzHref="#components-carousel-demo-loop" nzTitle="循环"></nz-link><nz-link nzHref="#components-carousel-demo-arrow" nzTitle="切换箭头"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Carousel<span class="subtitle">走马灯</span><span class="widget"></span>
@@ -79,6 +79,24 @@
 	<nz-demo-carousel-custom demo />
 	<div intro ngNonBindable>
 		<p>通过继承 <code>NzCarouselBaseStrategy</code> 自定义轮播图切换动画。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="切换箭头"
+  [nzId]="'components-carousel-demo-arrow'"
+  nzSelector="nz-demo-carousel-arrow"
+  [nzLink]="'components-carousel-demo-arrow'"
+  nzGenerateCommand="ng g ng-zorro-antd:carousel-arrow <name>"
+  nzComponentName="NzDemoCarouselArrowComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/arrow.md'"
+>
+	<nz-demo-carousel-arrow demo />
+	<div intro ngNonBindable>
+		<p>显示切换箭头。</p>
 
 	</div>
 </nz-code-box>
@@ -207,6 +225,13 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+</tr>
+<tr>
+<td><code>[nzArrows]</code></td>
+<td>是否显示箭头按钮</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>(nzAfterChange)</code></td>

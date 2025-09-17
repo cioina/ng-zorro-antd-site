@@ -14,7 +14,8 @@ import {
   forwardRef,
   inject,
   NgZone,
-  Output
+  Output,
+  signal
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -60,7 +61,10 @@ export class NzMentionTriggerDirective implements ControlValueAccessor {
   @Output() readonly onKeydown = new EventEmitter<KeyboardEvent>();
   // eslint-disable-next-line @angular-eslint/no-output-on-prefix
   @Output() readonly onClick = new EventEmitter<MouseEvent>();
-  value?: string;
+
+  readonly value = signal<string>('');
+
+  readonly disabled = signal(false);
 
   constructor() {
     this.destroyRef.onDestroy(() => {
@@ -100,16 +104,19 @@ export class NzMentionTriggerDirective implements ControlValueAccessor {
     this.elementRef.nativeElement.value = newValue;
     this.focus(mention.startPos + insertValue.length + 1);
     this.onChange(newValue);
-    this.value = newValue;
+    this.value.set(newValue);
+  }
+
+  clear(): void {
+    this.value.set('');
+    this.elementRef.nativeElement.value = '';
+    this.onChange('');
   }
 
   writeValue(value: string): void {
-    this.value = value;
-    if (typeof value === 'string') {
-      this.elementRef.nativeElement.value = value;
-    } else {
-      this.elementRef.nativeElement.value = '';
-    }
+    const parsedValue = typeof value === 'string' ? value : '';
+    this.value.set(parsedValue);
+    this.elementRef.nativeElement.value = parsedValue;
   }
 
   onChange: OnChangeType = () => {};
@@ -120,6 +127,10 @@ export class NzMentionTriggerDirective implements ControlValueAccessor {
 
   registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled.set(isDisabled);
   }
 
   private setupEventListener<TEvent extends Event>(eventName: string, eventEmitter: EventEmitter<TEvent>): void {

@@ -1,7 +1,7 @@
 <article>
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
-    <nz-link nzHref="#components-mention-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-mention-demo-async" nzTitle="Asynchronous loading"></nz-link><nz-link nzHref="#components-mention-demo-form" nzTitle="With Form"></nz-link><nz-link nzHref="#components-mention-demo-prefix" nzTitle="Customize Trigger Token"></nz-link><nz-link nzHref="#components-mention-demo-readonly" nzTitle="disabled or readOnly"></nz-link><nz-link nzHref="#components-mention-demo-placement" nzTitle="Placement"></nz-link><nz-link nzHref="#components-mention-demo-avatar" nzTitle="Icon Image"></nz-link><nz-link nzHref="#components-mention-demo-custom-tag" nzTitle="Customize Suggestion"></nz-link><nz-link nzHref="#components-mention-demo-multilines" nzTitle="Multi-lines Mode"></nz-link><nz-link nzHref="#components-mention-demo-preview" nzTitle="Preview"></nz-link><nz-link nzHref="#components-mention-demo-status" nzTitle="Status"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
+    <nz-link nzHref="#components-mention-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-mention-demo-async" nzTitle="Asynchronous loading"></nz-link><nz-link nzHref="#components-mention-demo-form" nzTitle="With Form"></nz-link><nz-link nzHref="#components-mention-demo-prefix" nzTitle="Customize Trigger Token"></nz-link><nz-link nzHref="#components-mention-demo-readonly" nzTitle="disabled or readOnly"></nz-link><nz-link nzHref="#components-mention-demo-placement" nzTitle="Placement"></nz-link><nz-link nzHref="#components-mention-demo-avatar" nzTitle="Icon Image"></nz-link><nz-link nzHref="#components-mention-demo-custom-tag" nzTitle="Customize Suggestion"></nz-link><nz-link nzHref="#components-mention-demo-auto-size" nzTitle="autoSize"></nz-link><nz-link nzHref="#components-mention-demo-preview" nzTitle="Preview"></nz-link><nz-link nzHref="#components-mention-demo-status" nzTitle="Status"></nz-link><nz-link nzHref="#components-mention-demo-clear" nzTitle="With clear icon"></nz-link><nz-link nzHref="#components-mention-demo-variant" nzTitle="Variants"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
 	<h1>Mention<span class="subtitle"></span><span class="widget"></span>
@@ -97,20 +97,20 @@
 	</div>
 </nz-code-box>
 <nz-code-box
-  nzTitle="Multi-lines Mode"
-  [nzId]="'components-mention-demo-multilines'"
-  nzSelector="nz-demo-mention-multilines"
-  [nzLink]="'components-mention-demo-multilines'"
-  nzGenerateCommand="ng g ng-zorro-antd:mention-multilines <name>"
-  nzComponentName="NzDemoMentionMultilinesComponent"
+  nzTitle="autoSize"
+  [nzId]="'components-mention-demo-auto-size'"
+  nzSelector="nz-demo-mention-auto-size"
+  [nzLink]="'components-mention-demo-auto-size'"
+  nzGenerateCommand="ng g ng-zorro-antd:mention-auto-size <name>"
+  nzComponentName="NzDemoMentionAutoSizeComponent"
   [nzIframe]="false"
   nzIframeSource="null"
   [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/multilines.md'"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/auto-size.md'"
 >
-	<nz-demo-mention-multilines demo />
+	<nz-demo-mention-auto-size demo />
 	<div intro ngNonBindable>
-		<p>Multi lines mode.</p>
+		<p>Height autoSize.</p>
 
 	</div>
 </nz-code-box>
@@ -129,6 +129,24 @@
 	<nz-demo-mention-status demo />
 	<div intro ngNonBindable>
 		<p>Add status to Mentions with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>。</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Variants"
+  [nzId]="'components-mention-demo-variant'"
+  nzSelector="nz-demo-mention-variant"
+  [nzLink]="'components-mention-demo-variant'"
+  nzGenerateCommand="ng g ng-zorro-antd:mention-variant <name>"
+  nzComponentName="NzDemoMentionVariantComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/variant.md'"
+>
+	<nz-demo-mention-variant demo />
+	<div intro ngNonBindable>
+		<p>Variants of Mentions, there are four variants: <code>outlined</code> <code>filled</code> <code>borderless</code> and <code>underlined</code>.</p>
 
 	</div>
 </nz-code-box>
@@ -225,6 +243,24 @@
 
 	</div>
 </nz-code-box>
+<nz-code-box
+  nzTitle="With clear icon"
+  [nzId]="'components-mention-demo-clear'"
+  nzSelector="nz-demo-mention-clear"
+  [nzLink]="'components-mention-demo-clear'"
+  nzGenerateCommand="ng g ng-zorro-antd:mention-clear <name>"
+  nzComponentName="NzDemoMentionClearComponent"
+  [nzIframe]="false"
+  nzIframeSource="null"
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/mention/demo/clear.md'"
+>
+	<nz-demo-mention-clear demo />
+	<div intro ngNonBindable>
+		<p>Customize clear button.</p>
+
+	</div>
+</nz-code-box>
 
 	</div>
 </div>
@@ -289,6 +325,24 @@
 <td>-</td>
 </tr>
 <tr>
+<td><code>[nzAllowClear]</code></td>
+<td>If allow to remove mentions content with clear icon</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzClearIcon]</code></td>
+<td>The custom clear icon</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzVariant]</code></td>
+<td>Variants of Input</td>
+<td><code>&#39;outlined&#39; | &#39;filled&#39; | &#39;borderless&#39; | &#39;underlined&#39;</code></td>
+<td><code>&#39;outlined&#39;</code></td>
+</tr>
+<tr>
 <td><code>[nzValueWith]</code></td>
 <td>Function that maps an suggestion&#39;s value</td>
 <td><code>(any) =&gt; string | (value: string) =&gt; string</code></td>
@@ -304,6 +358,12 @@
 <td><code>(nzOnSearchChange)</code></td>
 <td>Callback function called when search content changes</td>
 <td><code>EventEmitter&lt;MentionOnSearchTypes&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClear)</code></td>
+<td>Callback function called when click on clear button</td>
+<td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 </tr>
 </tbody></table>

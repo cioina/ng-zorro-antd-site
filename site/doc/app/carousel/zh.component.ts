@@ -2,6 +2,7 @@ import { Component, QueryList, ViewChildren } from '@angular/core';
 import { NzCodeBoxComponent } from '../codebox/codebox.component';
 import { ShareModule } from '../share/share.module';
 
+import { NzDemoCarouselArrowComponent } from './arrow';
 import { NzDemoCarouselAutoplayComponent } from './autoplay';
 import { NzDemoCarouselBasicComponent } from './basic';
 import { NzDemoCarouselCustomComponent } from './custom';
@@ -15,6 +16,7 @@ import { NzDemoCarouselPositionComponent } from './position';
   standalone   : true,
   imports      : [
     ShareModule,
+		NzDemoCarouselArrowComponent,
 		NzDemoCarouselAutoplayComponent,
 		NzDemoCarouselBasicComponent,
 		NzDemoCarouselCustomComponent,
