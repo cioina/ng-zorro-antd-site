@@ -12,17 +12,7 @@ import { NzDemoMessageTemplateComponent } from './template';
 
 @Component({
   selector     : 'nz-demo-message',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoMessageCloseComponent,
-		NzDemoMessageDurationComponent,
-		NzDemoMessageInfoComponent,
-		NzDemoMessageLoadingComponent,
-		NzDemoMessageOtherComponent,
-		NzDemoMessageTemplateComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoMessageCloseComponent, NzDemoMessageDurationComponent, NzDemoMessageInfoComponent, NzDemoMessageLoadingComponent, NzDemoMessageOtherComponent, NzDemoMessageTemplateComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoMessageEnComponent {

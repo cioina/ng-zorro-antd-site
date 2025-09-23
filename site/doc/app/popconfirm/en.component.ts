@@ -14,19 +14,7 @@ import { NzDemoPopconfirmPromiseComponent } from './promise';
 
 @Component({
   selector     : 'nz-demo-popconfirm',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoPopconfirmAsyncComponent,
-		NzDemoPopconfirmBasicComponent,
-		NzDemoPopconfirmCustomIconComponent,
-		NzDemoPopconfirmDynamicTriggerComponent,
-		NzDemoPopconfirmHideArrowComponent,
-		NzDemoPopconfirmLocaleComponent,
-		NzDemoPopconfirmPlacementComponent,
-		NzDemoPopconfirmPromiseComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoPopconfirmAsyncComponent, NzDemoPopconfirmBasicComponent, NzDemoPopconfirmCustomIconComponent, NzDemoPopconfirmDynamicTriggerComponent, NzDemoPopconfirmHideArrowComponent, NzDemoPopconfirmLocaleComponent, NzDemoPopconfirmPlacementComponent, NzDemoPopconfirmPromiseComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoPopconfirmEnComponent {

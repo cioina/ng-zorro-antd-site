@@ -11,16 +11,7 @@ import { NzDemoCodeEditorFullControlComponent } from './full-control';
 
 @Component({
   selector     : 'nz-demo-code-editor',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCodeEditorBasicComponent,
-		NzDemoCodeEditorComplexComponent,
-		NzDemoCodeEditorConfigComponent,
-		NzDemoCodeEditorDiffComponent,
-		NzDemoCodeEditorFullControlComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCodeEditorBasicComponent, NzDemoCodeEditorComplexComponent, NzDemoCodeEditorConfigComponent, NzDemoCodeEditorDiffComponent, NzDemoCodeEditorFullControlComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCodeEditorEnComponent {

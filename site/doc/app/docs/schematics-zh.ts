@@ -3,7 +3,6 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-schematics-zh',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './schematics-zh.html'
 })

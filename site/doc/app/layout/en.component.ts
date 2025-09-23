@@ -15,20 +15,7 @@ import { NzDemoLayoutTopComponent } from './top';
 
 @Component({
   selector     : 'nz-demo-layout',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoLayoutBasicComponent,
-		NzDemoLayoutCustomTriggerComponent,
-		NzDemoLayoutFixedSiderComponent,
-		NzDemoLayoutFixedComponent,
-		NzDemoLayoutResponsiveComponent,
-		NzDemoLayoutSideComponent,
-		NzDemoLayoutTopSide2Component,
-		NzDemoLayoutTopSideComponent,
-		NzDemoLayoutTopComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoLayoutBasicComponent, NzDemoLayoutCustomTriggerComponent, NzDemoLayoutFixedSiderComponent, NzDemoLayoutFixedComponent, NzDemoLayoutResponsiveComponent, NzDemoLayoutSideComponent, NzDemoLayoutTopSide2Component, NzDemoLayoutTopSideComponent, NzDemoLayoutTopComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoLayoutEnComponent {

@@ -20,25 +20,7 @@ import { NzDemoInputVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-input',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoInputAddonComponent,
-		NzDemoInputAllowClearComponent,
-		NzDemoInputAutosizeTextareaComponent,
-		NzDemoInputBasicComponent,
-		NzDemoInputOtpComponent,
-		NzDemoInputPasswordInputComponent,
-		NzDemoInputPresuffixComponent,
-		NzDemoInputSearchInputComponent,
-		NzDemoInputSizeComponent,
-		NzDemoInputStatusComponent,
-		NzDemoInputTextareaWithCharacterCountComponent,
-		NzDemoInputTextareaComponent,
-		NzDemoInputTooltipComponent,
-		NzDemoInputVariantComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoInputAddonComponent, NzDemoInputAllowClearComponent, NzDemoInputAutosizeTextareaComponent, NzDemoInputBasicComponent, NzDemoInputOtpComponent, NzDemoInputPasswordInputComponent, NzDemoInputPresuffixComponent, NzDemoInputSearchInputComponent, NzDemoInputSizeComponent, NzDemoInputStatusComponent, NzDemoInputTextareaWithCharacterCountComponent, NzDemoInputTextareaComponent, NzDemoInputTooltipComponent, NzDemoInputVariantComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoInputZhComponent {

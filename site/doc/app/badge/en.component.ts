@@ -17,22 +17,7 @@ import { NzDemoBadgeStatusComponent } from './status';
 
 @Component({
   selector     : 'nz-demo-badge',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoBadgeBasicComponent,
-		NzDemoBadgeColorfulComponent,
-		NzDemoBadgeDotComponent,
-		NzDemoBadgeDynamicComponent,
-		NzDemoBadgeLinkComponent,
-		NzDemoBadgeNoWrapperComponent,
-		NzDemoBadgeOffsetComponent,
-		NzDemoBadgeOverflowComponent,
-		NzDemoBadgeRibbonComponent,
-		NzDemoBadgeSizeComponent,
-		NzDemoBadgeStatusComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoBadgeBasicComponent, NzDemoBadgeColorfulComponent, NzDemoBadgeDotComponent, NzDemoBadgeDynamicComponent, NzDemoBadgeLinkComponent, NzDemoBadgeNoWrapperComponent, NzDemoBadgeOffsetComponent, NzDemoBadgeOverflowComponent, NzDemoBadgeRibbonComponent, NzDemoBadgeSizeComponent, NzDemoBadgeStatusComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoBadgeEnComponent {

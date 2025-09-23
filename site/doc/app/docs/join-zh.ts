@@ -3,7 +3,6 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-join-zh',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './join-zh.html'
 })

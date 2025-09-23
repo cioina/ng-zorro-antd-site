@@ -9,14 +9,7 @@ import { NzDemoAffixTargetComponent } from './target';
 
 @Component({
   selector     : 'nz-demo-affix',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoAffixBasicComponent,
-		NzDemoAffixOnChangeComponent,
-		NzDemoAffixTargetComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoAffixBasicComponent, NzDemoAffixOnChangeComponent, NzDemoAffixTargetComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoAffixEnComponent {

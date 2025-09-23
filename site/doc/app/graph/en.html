@@ -4,10 +4,9 @@
     <nz-link nzHref="#components-graph-demo-customized" nzTitle="Custom graph node"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Graph<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/graph/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Graph
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="graph" description="Render graph." language="en"></component-meta>
@@ -16,19 +15,14 @@
 <p>NG-ZORRO experiments are features that are released but not yet considered stable or production ready</p>
 <p>Developers and users can opt in into these features before they are fully released. But <strong>breaking changes</strong> may occur with any release.</p>
 </blockquote>
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to use graph in Angular.</p>
-<blockquote>
-<p>The graph depends on d3-drag d3-zoom d3-selection d3-transition d3-shape (may be removed in next major version)</p>
-</blockquote>
-<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -40,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:graph-customized <name>"
   nzComponentName="NzDemoGraphCustomizedComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/graph/demo/customized.md'"
 >
@@ -52,7 +46,12 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>Dependencies:</p>
+</div><section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to use graph in Angular.</p>
+<blockquote>
+<p>The graph depends on d3-drag d3-zoom d3-selection d3-transition d3-shape (may be removed in next major version)</p>
+</blockquote>
+<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>Dependencies:</p>
 <pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> dagre-compound dagre d3-transition d3-zoom d3-selection d3-shape d3-drag &#64;types/d3
 </code></pre><h3 id="nz-graph"><span>nz-graph</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-graph'" class="anchor">#</a></h3><table>
 <thead>

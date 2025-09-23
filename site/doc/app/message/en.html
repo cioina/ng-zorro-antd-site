@@ -4,26 +4,21 @@
     <nz-link nzHref="#components-message-demo-info" nzTitle="Normal prompt"></nz-link><nz-link nzHref="#components-message-demo-other" nzTitle="Other types of message"></nz-link><nz-link nzHref="#components-message-demo-duration" nzTitle="Customize duration"></nz-link><nz-link nzHref="#components-message-demo-loading" nzTitle="Message of loading"></nz-link><nz-link nzHref="#components-message-demo-close" nzTitle="Customize duration"></nz-link><nz-link nzHref="#components-message-demo-template" nzTitle="Custom Template"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Message<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Message
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="message" description="Display global messages as feedback in response to user operations." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>To provide feedback such as success, warning, error etc.</li>
-<li>A message is displayed at top and center and will be dismissed automatically, as a non-interrupting light-weighted prompt.</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -35,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:message-info <name>"
   nzComponentName="NzDemoMessageInfoComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/demo/info.md'"
 >
@@ -53,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:message-duration <name>"
   nzComponentName="NzDemoMessageDurationComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/demo/duration.md'"
 >
@@ -71,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:message-close <name>"
   nzComponentName="NzDemoMessageCloseComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/demo/close.md'"
 >
@@ -92,7 +87,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:message-other <name>"
   nzComponentName="NzDemoMessageOtherComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/demo/other.md'"
 >
@@ -110,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:message-loading <name>"
   nzComponentName="NzDemoMessageLoadingComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/demo/loading.md'"
 >
@@ -128,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:message-template <name>"
   nzComponentName="NzDemoMessageTemplateComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/message/demo/template.md'"
 >
@@ -142,7 +137,11 @@ You would have the possibility to pass some optional data to this custom templat
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmessageservice"><span>NzMessageService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmessageservice'" class="anchor">#</a></h3><p>This components provides some service methods, with usage and arguments as following:</p>
+<section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>To provide feedback such as success, warning, error etc.</li>
+<li>A message is displayed at top and center and will be dismissed automatically, as a non-interrupting light-weighted prompt.</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmessageservice"><span>NzMessageService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmessageservice'" class="anchor">#</a></h3><p>This components provides some service methods, with usage and arguments as following:</p>
 <ul>
 <li><code>NzMessageService.success(content, [options])</code></li>
 <li><code>NzMessageService.error(content, [options])</code></li>

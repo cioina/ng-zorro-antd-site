@@ -4,10 +4,9 @@
     <nz-link nzHref="#components-code-editor-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-code-editor-demo-diff" nzTitle="Diff 编辑器"></nz-link><nz-link nzHref="#components-code-editor-demo-config" nzTitle="修改配置"></nz-link><nz-link nzHref="#components-code-editor-demo-full-control" nzTitle="完全受控模式"></nz-link><nz-link nzHref="#components-code-editor-demo-complex" nzTitle="复杂"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Code Editor<span class="subtitle">代码编辑器</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Code Editor
+	<span class="subtitle">代码编辑器</span>
 </h1>
 
   <component-meta name="code-editor" description="基于 monaco-editor 的代码编辑器。" language="zh"></component-meta>
@@ -16,16 +15,14 @@
 <p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
 <p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
 </blockquote>
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 monaco editor 时使用。</p>
-<h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/code-editor/style/entry.less'</span><span class="token punctuation">;</span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -37,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-basic <name>"
   nzComponentName="NzDemoCodeEditorBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/basic.md'"
 >
@@ -55,7 +52,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-diff <name>"
   nzComponentName="NzDemoCodeEditorDiffComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/diff.md'"
 >
@@ -73,7 +70,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-config <name>"
   nzComponentName="NzDemoCodeEditorConfigComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/config.md'"
 >
@@ -91,7 +88,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-full-control <name>"
   nzComponentName="NzDemoCodeEditorFullControlComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/full-control.md'"
 >
@@ -109,7 +106,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-complex <name>"
   nzComponentName="NzDemoCodeEditorComplexComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/complex.md'"
 >
@@ -121,7 +118,9 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>别忘记先安装 monaco editor：</p>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 monaco editor 时使用。</p>
+<h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/code-editor/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>别忘记先安装 monaco editor：</p>
 <pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> monaco-editor
 </code></pre><h3 id="动态加载"><span>动态加载</span><a onclick="window.location.hash = '动态加载'" class="anchor">#</a></h3><p>如果你使用动态加载，你就需要在运行时加载 monaco editor 本身的资源。</p>
 <p>在 <code>angular.json</code> 中添加：</p>

@@ -12,17 +12,7 @@ import { NzDemoSkeletonListComponent } from './list';
 
 @Component({
   selector     : 'nz-demo-skeleton',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSkeletonActiveComponent,
-		NzDemoSkeletonBasicComponent,
-		NzDemoSkeletonChildrenComponent,
-		NzDemoSkeletonComplexComponent,
-		NzDemoSkeletonElementComponent,
-		NzDemoSkeletonListComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSkeletonActiveComponent, NzDemoSkeletonBasicComponent, NzDemoSkeletonChildrenComponent, NzDemoSkeletonComplexComponent, NzDemoSkeletonElementComponent, NzDemoSkeletonListComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoSkeletonEnComponent {

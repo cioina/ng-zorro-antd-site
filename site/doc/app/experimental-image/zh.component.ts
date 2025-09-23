@@ -9,14 +9,7 @@ import { NzDemoExperimentalImageSrcLoaderComponent } from './src-loader';
 
 @Component({
   selector     : 'nz-demo-experimental-image',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoExperimentalImageAutoSrcsetComponent,
-		NzDemoExperimentalImagePreloadingComponent,
-		NzDemoExperimentalImageSrcLoaderComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoExperimentalImageAutoSrcsetComponent, NzDemoExperimentalImagePreloadingComponent, NzDemoExperimentalImageSrcLoaderComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoExperimentalImageZhComponent {

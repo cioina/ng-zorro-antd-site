@@ -4,26 +4,21 @@
     <nz-link nzHref="#components-checkbox-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-checkbox-demo-disabled" nzTitle="Disabled"></nz-link><nz-link nzHref="#components-checkbox-demo-controller" nzTitle="Controlled Checkbox"></nz-link><nz-link nzHref="#components-checkbox-demo-group" nzTitle="Checkbox Group"></nz-link><nz-link nzHref="#components-checkbox-demo-check-all" nzTitle="Check all"></nz-link><nz-link nzHref="#components-checkbox-demo-layout" nzTitle="Use with Grid"></nz-link><nz-link nzHref="#components-checkbox-demo-layout-legacy" nzTitle="Use with Grid (Deprecated)"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Checkbox<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Checkbox
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="checkbox" description="Collect user's choices." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>Used for selecting multiple values from several options.</li>
-<li>If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -35,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-basic <name>"
   nzComponentName="NzDemoCheckboxBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/basic.md'"
 >
@@ -53,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-controller <name>"
   nzComponentName="NzDemoCheckboxControllerComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/controller.md'"
 >
@@ -71,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-check-all <name>"
   nzComponentName="NzDemoCheckboxCheckAllComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/check-all.md'"
 >
@@ -89,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-layout-legacy <name>"
   nzComponentName="NzDemoCheckboxLayoutLegacyComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/layout-legacy.md'"
 >
@@ -113,7 +108,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-disabled <name>"
   nzComponentName="NzDemoCheckboxDisabledComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/disabled.md'"
 >
@@ -131,7 +126,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-group <name>"
   nzComponentName="NzDemoCheckboxGroupComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/group.md'"
 >
@@ -149,7 +144,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:checkbox-layout <name>"
   nzComponentName="NzDemoCheckboxLayoutComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/layout.md'"
 >
@@ -162,7 +157,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-checkbox"><span>[nz-checkbox]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-checkbox'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>Used for selecting multiple values from several options.</li>
+<li>If you use only one checkbox, it is the same as using Switch to toggle between two states. The difference is that Switch will trigger the state change directly, but Checkbox just marks the state as changed and this needs to be submitted.</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-checkbox"><span>[nz-checkbox]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-checkbox'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>

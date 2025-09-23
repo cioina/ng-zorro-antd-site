@@ -16,21 +16,7 @@ import { NzDemoInputNumberLegacyStatusComponent } from './status';
 
 @Component({
   selector     : 'nz-demo-input-number-legacy',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoInputNumberLegacyAddonComponent,
-		NzDemoInputNumberLegacyBasicComponent,
-		NzDemoInputNumberLegacyBorderlessComponent,
-		NzDemoInputNumberLegacyDigitComponent,
-		NzDemoInputNumberLegacyDisabledComponent,
-		NzDemoInputNumberLegacyFormatterComponent,
-		NzDemoInputNumberLegacyPrecisionComponent,
-		NzDemoInputNumberLegacyPrefixComponent,
-		NzDemoInputNumberLegacySizeComponent,
-		NzDemoInputNumberLegacyStatusComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoInputNumberLegacyAddonComponent, NzDemoInputNumberLegacyBasicComponent, NzDemoInputNumberLegacyBorderlessComponent, NzDemoInputNumberLegacyDigitComponent, NzDemoInputNumberLegacyDisabledComponent, NzDemoInputNumberLegacyFormatterComponent, NzDemoInputNumberLegacyPrecisionComponent, NzDemoInputNumberLegacyPrefixComponent, NzDemoInputNumberLegacySizeComponent, NzDemoInputNumberLegacyStatusComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoInputNumberLegacyEnComponent {

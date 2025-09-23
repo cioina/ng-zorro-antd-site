@@ -3,11 +3,10 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-i18n-en',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './i18n-en.html'
 })
-export class NzDocI18nEnComponent {
+export class NzDocI18NEnComponent {
   goLink(link: string) {
     if (window) {
       window.location.hash = link;

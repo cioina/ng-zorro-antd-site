@@ -4,28 +4,21 @@
     <nz-link nzHref="#components-skeleton-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-skeleton-demo-complex" nzTitle="Complex combination"></nz-link><nz-link nzHref="#components-skeleton-demo-active" nzTitle="Active Animation"></nz-link><nz-link nzHref="#components-skeleton-demo-element" nzTitle="Button/Avatar/Input/Image"></nz-link><nz-link nzHref="#components-skeleton-demo-children" nzTitle="Contains sub component"></nz-link><nz-link nzHref="#components-skeleton-demo-list" nzTitle="List Sample"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Skeleton<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Skeleton
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="skeleton" description="Provide a placeholder while you wait for content to load or visualize content that doesn't exist yet." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>When resource needs long time loading, like low network speed.</li>
-<li>The component contains information, such as a List or Card.</li>
-<li>Only works when loading data for the first time.</li>
-<li>Could be replaced by Spin in any situation but can provide a better user experience.</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -37,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-basic <name>"
   nzComponentName="NzDemoSkeletonBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/basic.md'"
 >
@@ -55,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-complex <name>"
   nzComponentName="NzDemoSkeletonComplexComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/complex.md'"
 >
@@ -73,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-active <name>"
   nzComponentName="NzDemoSkeletonActiveComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/active.md'"
 >
@@ -91,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-element <name>"
   nzComponentName="NzDemoSkeletonElementComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/element.md'"
 >
@@ -109,7 +102,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-children <name>"
   nzComponentName="NzDemoSkeletonChildrenComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/children.md'"
 >
@@ -127,7 +120,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-list <name>"
   nzComponentName="NzDemoSkeletonListComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/list.md'"
 >
@@ -139,7 +132,13 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-skeleton"><span>nz-skeleton</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-skeleton'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>When resource needs long time loading, like low network speed.</li>
+<li>The component contains information, such as a List or Card.</li>
+<li>Only works when loading data for the first time.</li>
+<li>Could be replaced by Spin in any situation but can provide a better user experience.</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-skeleton"><span>nz-skeleton</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-skeleton'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>

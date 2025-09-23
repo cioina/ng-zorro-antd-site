@@ -21,26 +21,7 @@ import { NzDemoFormValidateTemplateComponent } from './validate-template';
 
 @Component({
   selector     : 'nz-demo-form',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoFormAdvancedSearchComponent,
-		NzDemoFormAutoTipsComponent,
-		NzDemoFormCoordinatedComponent,
-		NzDemoFormDynamicFormItemComponent,
-		NzDemoFormDynamicRuleComponent,
-		NzDemoFormHorizontalLoginComponent,
-		NzDemoFormLabelAlignComponent,
-		NzDemoFormLabelWrapComponent,
-		NzDemoFormLayoutComponent,
-		NzDemoFormNormalLoginComponent,
-		NzDemoFormRegisterComponent,
-		NzDemoFormTimeRelatedControlsComponent,
-		NzDemoFormValidateReactiveComponent,
-		NzDemoFormValidateStaticComponent,
-		NzDemoFormValidateTemplateComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoFormAdvancedSearchComponent, NzDemoFormAutoTipsComponent, NzDemoFormCoordinatedComponent, NzDemoFormDynamicFormItemComponent, NzDemoFormDynamicRuleComponent, NzDemoFormHorizontalLoginComponent, NzDemoFormLabelAlignComponent, NzDemoFormLabelWrapComponent, NzDemoFormLayoutComponent, NzDemoFormNormalLoginComponent, NzDemoFormRegisterComponent, NzDemoFormTimeRelatedControlsComponent, NzDemoFormValidateReactiveComponent, NzDemoFormValidateStaticComponent, NzDemoFormValidateTemplateComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoFormZhComponent {

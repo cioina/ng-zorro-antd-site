@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-anchor-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-anchor-demo-static" nzTitle="静态位置"></nz-link><nz-link nzHref="#components-anchor-demo-on-click" nzTitle="自定义 onClick 事件"></nz-link><nz-link nzHref="#components-anchor-demo-customize-highlight" nzTitle="自定义锚点高亮"></nz-link><nz-link nzHref="#components-anchor-demo-target-offset" nzTitle="设置锚点滚动偏移量"></nz-link><nz-link nzHref="#components-anchor-demo-on-change" nzTitle="监听锚点链接改变"></nz-link><nz-link nzHref="#components-anchor-demo-horizontal-anchor" nzTitle="横向 Anchor"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Anchor<span class="subtitle">锚点</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Anchor
+	<span class="subtitle">锚点</span>
 </h1>
 
   <component-meta name="anchor" description="用于跳转到页面指定位置。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-basic <name>"
   nzComponentName="NzDemoAnchorBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/basic.md'"
 >
@@ -50,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-on-click <name>"
   nzComponentName="NzDemoAnchorOnClickComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/on-click.md'"
 >
@@ -68,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-target-offset <name>"
   nzComponentName="NzDemoAnchorTargetOffsetComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/target-offset.md'"
 >
@@ -86,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-horizontal-anchor <name>"
   nzComponentName="NzDemoAnchorHorizontalAnchorComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/horizontal-anchor.md'"
 >
@@ -107,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-static <name>"
   nzComponentName="NzDemoAnchorStaticComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/static.md'"
 >
@@ -125,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-customize-highlight <name>"
   nzComponentName="NzDemoAnchorCustomizeHighlightComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/customize-highlight.md'"
 >
@@ -143,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:anchor-on-change <name>"
   nzComponentName="NzDemoAnchorOnChangeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/on-change.md'"
 >
@@ -156,7 +154,8 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-anchor"><span>nz-anchor</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-anchor'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-anchor"><span>nz-anchor</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-anchor'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>成员</th>

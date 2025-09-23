@@ -4,52 +4,21 @@
     <nz-link nzHref="#components-table-demo-basic" nzTitle="基本用法"></nz-link><nz-link nzHref="#components-table-demo-row-selection-and-operation" nzTitle="选择和操作"></nz-link><nz-link nzHref="#components-table-demo-row-selection-custom" nzTitle="自定义选择项"></nz-link><nz-link nzHref="#components-table-demo-sort-filter" nzTitle="筛选和排序"></nz-link><nz-link nzHref="#components-table-demo-multiple-sorter" nzTitle="多列排序"></nz-link><nz-link nzHref="#components-table-demo-reset-filter" nzTitle="可控的筛选和排序"></nz-link><nz-link nzHref="#components-table-demo-custom-filter-panel" nzTitle="自定义筛选菜单"></nz-link><nz-link nzHref="#components-table-demo-ajax" nzTitle="远程加载数据"></nz-link><nz-link nzHref="#components-table-demo-size" nzTitle="紧凑型"></nz-link><nz-link nzHref="#components-table-demo-bordered" nzTitle="带边框"></nz-link><nz-link nzHref="#components-table-demo-expand" nzTitle="可展开"></nz-link><nz-link nzHref="#components-table-demo-expand-icon" nzTitle="自定义展开 icon"></nz-link><nz-link nzHref="#components-table-demo-colspan-rowspan" nzTitle="表格行/列合并"></nz-link><nz-link nzHref="#components-table-demo-expand-children" nzTitle="树形数据展示"></nz-link><nz-link nzHref="#components-table-demo-fixed-header" nzTitle="固定表头"></nz-link><nz-link nzHref="#components-table-demo-fixed-columns" nzTitle="固定列"></nz-link><nz-link nzHref="#components-table-demo-fixed-columns-header" nzTitle="固定头和列"></nz-link><nz-link nzHref="#components-table-demo-grouping-columns" nzTitle="表头分组"></nz-link><nz-link nzHref="#components-table-demo-edit-cell" nzTitle="可编辑单元格"></nz-link><nz-link nzHref="#components-table-demo-edit-row" nzTitle="可编辑行"></nz-link><nz-link nzHref="#components-table-demo-nested-table" nzTitle="嵌套子表格"></nz-link><nz-link nzHref="#components-table-demo-virtual" nzTitle="虚拟滚动"></nz-link><nz-link nzHref="#components-table-demo-drag-sorting" nzTitle="拖拽排序"></nz-link><nz-link nzHref="#components-table-demo-template" nzTitle="模板用法"></nz-link><nz-link nzHref="#components-table-demo-break-word" nzTitle="折行显示"></nz-link><nz-link nzHref="#components-table-demo-ellipsis" nzTitle="单元格自动省略"></nz-link><nz-link nzHref="#components-table-demo-summary" nzTitle="总结栏"></nz-link><nz-link nzHref="#components-table-demo-dynamic-settings" nzTitle="动态控制表格属性"></nz-link><nz-link nzHref="#components-table-demo-custom-column" nzTitle="自定义列"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Table<span class="subtitle">表格</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Table
+	<span class="subtitle">表格</span>
 </h1>
 
   <component-meta name="table" description="展示行列数据。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>当有大量结构化的数据需要展现时；</li>
-<li>当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。</li>
-</ul>
-<h2 id="如何使用"><span>如何使用</span><a onclick="window.location.hash = '如何使用'" class="anchor">#</a></h2><p>Table 组件同时具备了易用性和高度可定制性</p>
-<h3 id="高度定制"><span>高度定制</span><a onclick="window.location.hash = '高度定制'" class="anchor">#</a></h3><p>在 <code>nz-table</code> 组件中完整的暴露了 <a href="https://www.w3.org/TR/html401/struct/tables.html" target="_blank" rel="noopener"><code>W3C标准 &lt;table&gt;</code></a> 的所有组成部分，你可以像使用 <code>table</code> 元素一样使用 <code>nz-table</code> ，根据依据业务需求，使用者可以自由的控制任何一个部分的样式、内容、逻辑和事件绑定。</p>
-<h3 id="组件增强"><span>组件增强</span><a onclick="window.location.hash = '组件增强'" class="anchor">#</a></h3><p>在 <code>nz-table</code>, <code>thead</code>, <code>th</code>, <code>td</code> 等多个暴露的元素上，组件提供了增强语法，经过配置之后可以很方便的实现多选、过滤、排序、固定列、固定表头、服务端分页等功能。</p>
-<h3 id="数据处理"><span>数据处理</span><a onclick="window.location.hash = '数据处理'" class="anchor">#</a></h3><p>将数据传入<code>[nzData]</code>，经过组件处理之后（包括分页、排序、筛选等），通过 <a href="https://angular.cn/guide/templates/template-statements#statement-context" target="_blank" rel="noopener">模板变量</a> 获取当前展示表格部分的数据，使用 <code>*ngFor</code> 依据需求将数据渲染。</p>
-<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-table</span> <span class="token attr-name">#basicTable</span> <span class="token attr-name">[nzData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dataSet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Age<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Address<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Action<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let data of basicTable.data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.age&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.address&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Action 一 &#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-divider</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-divider</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Delete<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-table</span><span class="token punctuation">></span></span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -61,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-basic <name>"
   nzComponentName="NzDemoTableBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/basic.md'"
 >
@@ -79,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-row-selection-and-operation <name>"
   nzComponentName="NzDemoTableRowSelectionAndOperationComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/row-selection-and-operation.md'"
 >
@@ -97,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-row-selection-custom <name>"
   nzComponentName="NzDemoTableRowSelectionCustomComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/row-selection-custom.md'"
 >
@@ -115,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-sort-filter <name>"
   nzComponentName="NzDemoTableSortFilterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/sort-filter.md'"
 >
@@ -134,7 +103,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-multiple-sorter <name>"
   nzComponentName="NzDemoTableMultipleSorterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/multiple-sorter.md'"
 >
@@ -152,7 +121,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-reset-filter <name>"
   nzComponentName="NzDemoTableResetFilterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/reset-filter.md'"
 >
@@ -170,7 +139,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-custom-filter-panel <name>"
   nzComponentName="NzDemoTableCustomFilterPanelComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/custom-filter-panel.md'"
 >
@@ -188,7 +157,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-ajax <name>"
   nzComponentName="NzDemoTableAjaxComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/ajax.md'"
 >
@@ -219,7 +188,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-size <name>"
   nzComponentName="NzDemoTableSizeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/size.md'"
 >
@@ -237,7 +206,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-bordered <name>"
   nzComponentName="NzDemoTableBorderedComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/bordered.md'"
 >
@@ -255,7 +224,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-expand <name>"
   nzComponentName="NzDemoTableExpandComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/expand.md'"
 >
@@ -273,7 +242,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-expand-icon <name>"
   nzComponentName="NzDemoTableExpandIconComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/expand-icon.md'"
 >
@@ -291,7 +260,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-colspan-rowspan <name>"
   nzComponentName="NzDemoTableColspanRowspanComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/colspan-rowspan.md'"
 >
@@ -309,7 +278,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-expand-children <name>"
   nzComponentName="NzDemoTableExpandChildrenComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/expand-children.md'"
 >
@@ -327,7 +296,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-fixed-header <name>"
   nzComponentName="NzDemoTableFixedHeaderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/fixed-header.md'"
 >
@@ -345,7 +314,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-fixed-columns <name>"
   nzComponentName="NzDemoTableFixedColumnsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/fixed-columns.md'"
 >
@@ -368,7 +337,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-fixed-columns-header <name>"
   nzComponentName="NzDemoTableFixedColumnsHeaderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/fixed-columns-header.md'"
 >
@@ -391,7 +360,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-grouping-columns <name>"
   nzComponentName="NzDemoTableGroupingColumnsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/grouping-columns.md'"
 >
@@ -409,7 +378,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-edit-cell <name>"
   nzComponentName="NzDemoTableEditCellComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/edit-cell.md'"
 >
@@ -433,7 +402,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-edit-row <name>"
   nzComponentName="NzDemoTableEditRowComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/edit-row.md'"
 >
@@ -457,7 +426,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-nested-table <name>"
   nzComponentName="NzDemoTableNestedTableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/nested-table.md'"
 >
@@ -475,7 +444,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-virtual <name>"
   nzComponentName="NzDemoTableVirtualComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/virtual.md'"
 >
@@ -493,7 +462,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-drag-sorting <name>"
   nzComponentName="NzDemoTableDragSortingComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/drag-sorting.md'"
 >
@@ -514,7 +483,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-template <name>"
   nzComponentName="NzDemoTableTemplateComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/template.md'"
 >
@@ -532,7 +501,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-break-word <name>"
   nzComponentName="NzDemoTableBreakWordComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/break-word.md'"
 >
@@ -550,7 +519,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-ellipsis <name>"
   nzComponentName="NzDemoTableEllipsisComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/ellipsis.md'"
 >
@@ -571,7 +540,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-summary <name>"
   nzComponentName="NzDemoTableSummaryComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/summary.md'"
 >
@@ -589,7 +558,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-dynamic-settings <name>"
   nzComponentName="NzDemoTableDynamicSettingsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/dynamic-settings.md'"
 >
@@ -607,7 +576,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-custom-column <name>"
   nzComponentName="NzDemoTableCustomColumnComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/custom-column.md'"
 >
@@ -619,7 +588,37 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-table"><span>nz-table</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-table'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>当有大量结构化的数据需要展现时；</li>
+<li>当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。</li>
+</ul>
+<h2 id="如何使用"><span>如何使用</span><a onclick="window.location.hash = '如何使用'" class="anchor">#</a></h2><p>Table 组件同时具备了易用性和高度可定制性</p>
+<h3 id="高度定制"><span>高度定制</span><a onclick="window.location.hash = '高度定制'" class="anchor">#</a></h3><p>在 <code>nz-table</code> 组件中完整的暴露了 <a href="https://www.w3.org/TR/html401/struct/tables.html" target="_blank" rel="noopener"><code>W3C标准 &lt;table&gt;</code></a> 的所有组成部分，你可以像使用 <code>table</code> 元素一样使用 <code>nz-table</code> ，根据依据业务需求，使用者可以自由的控制任何一个部分的样式、内容、逻辑和事件绑定。</p>
+<h3 id="组件增强"><span>组件增强</span><a onclick="window.location.hash = '组件增强'" class="anchor">#</a></h3><p>在 <code>nz-table</code>, <code>thead</code>, <code>th</code>, <code>td</code> 等多个暴露的元素上，组件提供了增强语法，经过配置之后可以很方便的实现多选、过滤、排序、固定列、固定表头、服务端分页等功能。</p>
+<h3 id="数据处理"><span>数据处理</span><a onclick="window.location.hash = '数据处理'" class="anchor">#</a></h3><p>将数据传入<code>[nzData]</code>，经过组件处理之后（包括分页、排序、筛选等），通过 <a href="https://angular.cn/guide/templates/template-statements#statement-context" target="_blank" rel="noopener">模板变量</a> 获取当前展示表格部分的数据，使用 <code>*ngFor</code> 依据需求将数据渲染。</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-table</span> <span class="token attr-name">#basicTable</span> <span class="token attr-name">[nzData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dataSet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Age<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Address<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Action<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let data of basicTable.data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.age&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.address&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Action 一 &#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-divider</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-divider</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Delete<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-table</span><span class="token punctuation">></span></span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-table"><span>nz-table</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-table'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

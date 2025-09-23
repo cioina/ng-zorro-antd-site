@@ -12,17 +12,7 @@ import { NzDemoTooltipTemplateComponent } from './template';
 
 @Component({
   selector     : 'nz-demo-tooltip',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTooltipArrowPointAtCenterComponent,
-		NzDemoTooltipBasicComponent,
-		NzDemoTooltipColorComponent,
-		NzDemoTooltipOriginComponent,
-		NzDemoTooltipPlacementComponent,
-		NzDemoTooltipTemplateComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTooltipArrowPointAtCenterComponent, NzDemoTooltipBasicComponent, NzDemoTooltipColorComponent, NzDemoTooltipOriginComponent, NzDemoTooltipPlacementComponent, NzDemoTooltipTemplateComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoTooltipEnComponent {

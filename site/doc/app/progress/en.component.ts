@@ -17,22 +17,7 @@ import { NzDemoProgressStepComponent } from './step';
 
 @Component({
   selector     : 'nz-demo-progress',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoProgressCircleMiniComponent,
-		NzDemoProgressCircleComponent,
-		NzDemoProgressDashboardComponent,
-		NzDemoProgressDynamicComponent,
-		NzDemoProgressFormatComponent,
-		NzDemoProgressGradientComponent,
-		NzDemoProgressLineMiniComponent,
-		NzDemoProgressLineComponent,
-		NzDemoProgressRoundComponent,
-		NzDemoProgressSegmentComponent,
-		NzDemoProgressStepComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoProgressCircleMiniComponent, NzDemoProgressCircleComponent, NzDemoProgressDashboardComponent, NzDemoProgressDynamicComponent, NzDemoProgressFormatComponent, NzDemoProgressGradientComponent, NzDemoProgressLineMiniComponent, NzDemoProgressLineComponent, NzDemoProgressRoundComponent, NzDemoProgressSegmentComponent, NzDemoProgressStepComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoProgressEnComponent {

@@ -17,22 +17,7 @@ import { NzDemoTimePickerVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-time-picker',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTimePickerAddonComponent,
-		NzDemoTimePickerBasicComponent,
-		NzDemoTimePickerDisabledPartComponent,
-		NzDemoTimePickerDisabledComponent,
-		NzDemoTimePickerHideColumnComponent,
-		NzDemoTimePickerIntervalOptionsComponent,
-		NzDemoTimePickerSizeComponent,
-		NzDemoTimePickerStatusComponent,
-		NzDemoTimePickerUse12HoursComponent,
-		NzDemoTimePickerValueComponent,
-		NzDemoTimePickerVariantComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTimePickerAddonComponent, NzDemoTimePickerBasicComponent, NzDemoTimePickerDisabledPartComponent, NzDemoTimePickerDisabledComponent, NzDemoTimePickerHideColumnComponent, NzDemoTimePickerIntervalOptionsComponent, NzDemoTimePickerSizeComponent, NzDemoTimePickerStatusComponent, NzDemoTimePickerUse12HoursComponent, NzDemoTimePickerValueComponent, NzDemoTimePickerVariantComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoTimePickerEnComponent {

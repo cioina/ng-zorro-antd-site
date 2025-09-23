@@ -11,16 +11,7 @@ import { NzDemoCalendarSelectComponent } from './select';
 
 @Component({
   selector     : 'nz-demo-calendar',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCalendarBasicComponent,
-		NzDemoCalendarCardComponent,
-		NzDemoCalendarCustomizeHeaderComponent,
-		NzDemoCalendarNoticeCalendarComponent,
-		NzDemoCalendarSelectComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCalendarBasicComponent, NzDemoCalendarCardComponent, NzDemoCalendarCustomizeHeaderComponent, NzDemoCalendarNoticeCalendarComponent, NzDemoCalendarSelectComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoCalendarZhComponent {

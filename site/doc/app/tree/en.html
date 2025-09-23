@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-tree-demo-basic" nzTitle="basic"></nz-link><nz-link nzHref="#components-tree-demo-basic-controlled" nzTitle="basic controlled example"></nz-link><nz-link nzHref="#components-tree-demo-draggable" nzTitle="draggable"></nz-link><nz-link nzHref="#components-tree-demo-draggable-confirm" nzTitle="draggable-with-two-confirmation"></nz-link><nz-link nzHref="#components-tree-demo-dynamic" nzTitle="load data asynchronously"></nz-link><nz-link nzHref="#components-tree-demo-search" nzTitle="Searchable"></nz-link><nz-link nzHref="#components-tree-demo-line" nzTitle="Tree With Line"></nz-link><nz-link nzHref="#components-tree-demo-customized-icon" nzTitle="Customize Icon"></nz-link><nz-link nzHref="#components-tree-demo-directory" nzTitle="directory"></nz-link><nz-link nzHref="#components-tree-demo-virtual-scroll" nzTitle="Virtual Scroll"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Tree<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Tree
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="tree" description="Multiple-level structure list." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Almost anything can be represented in a tree structure. Examples include directories, organization hierarchies, biological classifications, countries, etc. The <code>Tree</code> component is a way of representing the hierarchical relationship between these things. You can also expand, collapse, and select a treeNode within a <code>Tree</code>.</p>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-basic <name>"
   nzComponentName="NzDemoTreeBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/basic.md'"
 >
@@ -50,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-draggable <name>"
   nzComponentName="NzDemoTreeDraggableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/draggable.md'"
 >
@@ -68,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-dynamic <name>"
   nzComponentName="NzDemoTreeDynamicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/dynamic.md'"
 >
@@ -86,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-line <name>"
   nzComponentName="NzDemoTreeLineComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/line.md'"
 >
@@ -104,7 +102,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-directory <name>"
   nzComponentName="NzDemoTreeDirectoryComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/directory.md'"
 >
@@ -125,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-basic-controlled <name>"
   nzComponentName="NzDemoTreeBasicControlledComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/basic-controlled.md'"
 >
@@ -143,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-draggable-confirm <name>"
   nzComponentName="NzDemoTreeDraggableConfirmComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/draggable-confirm.md'"
 >
@@ -161,7 +159,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-search <name>"
   nzComponentName="NzDemoTreeSearchComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/search.md'"
 >
@@ -179,7 +177,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-customized-icon <name>"
   nzComponentName="NzDemoTreeCustomizedIconComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/customized-icon.md'"
 >
@@ -197,7 +195,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-virtual-scroll <name>"
   nzComponentName="NzDemoTreeVirtualScrollComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree/demo/virtual-scroll.md'"
 >
@@ -210,7 +208,8 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tree"><span>nz-tree</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree'" class="anchor">#</a></h3><blockquote>
+<section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Almost anything can be represented in a tree structure. Examples include directories, organization hierarchies, biological classifications, countries, etc. The <code>Tree</code> component is a way of representing the hierarchical relationship between these things. You can also expand, collapse, and select a treeNode within a <code>Tree</code>.</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tree"><span>nz-tree</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree'" class="anchor">#</a></h3><blockquote>
 <p>Tips: According to the current data structure design, you need to ensure that <code>nzData</code> is set first, otherwise other attributes will not take effect. After the asynchronous operation returns data, re-assign other attributes to trigger rendering(including <code>nzExpandAll</code> <code>nzExpandedKeys</code> <code>nzCheckedKeys</code> <code>nzSelectedKeys</code> <code>nzSearchValue</code>). Please refer to <a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/5152" target="_blank" rel="noopener">#5152</a> to track the optimization progress.</p>
 </blockquote>
 <table>

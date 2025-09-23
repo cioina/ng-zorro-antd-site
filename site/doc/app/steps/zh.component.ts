@@ -19,24 +19,7 @@ import { NzDemoStepsVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-steps',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoStepsClickableComponent,
-		NzDemoStepsCustomizedProgressDotComponent,
-		NzDemoStepsErrorComponent,
-		NzDemoStepsIconComponent,
-		NzDemoStepsNavComponent,
-		NzDemoStepsProgressDotComponent,
-		NzDemoStepsProgressComponent,
-		NzDemoStepsSimpleComponent,
-		NzDemoStepsSmallSizeComponent,
-		NzDemoStepsStartIndexComponent,
-		NzDemoStepsStepNextComponent,
-		NzDemoStepsVerticalSmallComponent,
-		NzDemoStepsVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoStepsClickableComponent, NzDemoStepsCustomizedProgressDotComponent, NzDemoStepsErrorComponent, NzDemoStepsIconComponent, NzDemoStepsNavComponent, NzDemoStepsProgressDotComponent, NzDemoStepsProgressComponent, NzDemoStepsSimpleComponent, NzDemoStepsSmallSizeComponent, NzDemoStepsStartIndexComponent, NzDemoStepsStepNextComponent, NzDemoStepsVerticalSmallComponent, NzDemoStepsVerticalComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoStepsZhComponent {

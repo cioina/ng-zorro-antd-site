@@ -13,18 +13,7 @@ import { NzDemoRateTextComponent } from './text';
 
 @Component({
   selector     : 'nz-demo-rate',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoRateBasicComponent,
-		NzDemoRateCharacterComponent,
-		NzDemoRateClearComponent,
-		NzDemoRateCustomizeComponent,
-		NzDemoRateDisabledComponent,
-		NzDemoRateHalfComponent,
-		NzDemoRateTextComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoRateBasicComponent, NzDemoRateCharacterComponent, NzDemoRateClearComponent, NzDemoRateCustomizeComponent, NzDemoRateDisabledComponent, NzDemoRateHalfComponent, NzDemoRateTextComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoRateEnComponent {

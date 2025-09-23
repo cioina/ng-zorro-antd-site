@@ -14,19 +14,7 @@ import { NzDemoAutoCompleteUncertainCategoryComponent } from './uncertain-catego
 
 @Component({
   selector     : 'nz-demo-auto-complete',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoAutoCompleteBasicComponent,
-		NzDemoAutoCompleteCertainCategoryComponent,
-		NzDemoAutoCompleteCustomComponent,
-		NzDemoAutoCompleteNonCaseSensitiveComponent,
-		NzDemoAutoCompleteObjectValueComponent,
-		NzDemoAutoCompleteOptionsComponent,
-		NzDemoAutoCompleteStatusComponent,
-		NzDemoAutoCompleteUncertainCategoryComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoAutoCompleteBasicComponent, NzDemoAutoCompleteCertainCategoryComponent, NzDemoAutoCompleteCustomComponent, NzDemoAutoCompleteNonCaseSensitiveComponent, NzDemoAutoCompleteObjectValueComponent, NzDemoAutoCompleteOptionsComponent, NzDemoAutoCompleteStatusComponent, NzDemoAutoCompleteUncertainCategoryComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoAutoCompleteZhComponent {

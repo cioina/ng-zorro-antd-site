@@ -4,27 +4,21 @@
     <nz-link nzHref="#components-breadcrumb-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-breadcrumb-demo-with-icon" nzTitle="带有图标的"></nz-link><nz-link nzHref="#components-breadcrumb-demo-router" nzTitle="路由"></nz-link><nz-link nzHref="#components-breadcrumb-demo-auto" nzTitle="自动生成"></nz-link><nz-link nzHref="#components-breadcrumb-demo-separator" nzTitle="分隔符"></nz-link><nz-link nzHref="#components-breadcrumb-demo-dropdown" nzTitle="带下拉菜单的面包屑"></nz-link><nz-link nzHref="#components-breadcrumb-demo-separator-independent" nzTitle="独立的分隔符"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Breadcrumb<span class="subtitle">面包屑</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Breadcrumb
+	<span class="subtitle">面包屑</span>
 </h1>
 
   <component-meta name="breadcrumb" description="显示当前页面在系统层级结构中的位置，并能向上返回。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>当系统拥有超过两级以上的层级结构时；</li>
-<li>当需要告知用户『你在哪里』时；</li>
-<li>当需要向上导航的功能时。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -36,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:breadcrumb-basic <name>"
   nzComponentName="NzDemoBreadcrumbBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/demo/basic.md'"
 >
@@ -54,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:breadcrumb-router <name>"
   nzComponentName="NzDemoBreadcrumbRouterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/demo/router.md'"
 >
@@ -72,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:breadcrumb-separator <name>"
   nzComponentName="NzDemoBreadcrumbSeparatorComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/demo/separator.md'"
 >
@@ -90,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:breadcrumb-separator-independent <name>"
   nzComponentName="NzDemoBreadcrumbSeparatorIndependentComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/demo/separator-independent.md'"
 >
@@ -111,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:breadcrumb-with-icon <name>"
   nzComponentName="NzDemoBreadcrumbWithIconComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/demo/with-icon.md'"
 >
@@ -147,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:breadcrumb-dropdown <name>"
   nzComponentName="NzDemoBreadcrumbDropdownComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/breadcrumb/demo/dropdown.md'"
 >
@@ -160,7 +154,12 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-breadcrumb"><span>nz-breadcrumb</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-breadcrumb'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>当系统拥有超过两级以上的层级结构时；</li>
+<li>当需要告知用户『你在哪里』时；</li>
+<li>当需要向上导航的功能时。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-breadcrumb"><span>nz-breadcrumb</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-breadcrumb'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

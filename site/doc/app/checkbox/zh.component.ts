@@ -13,18 +13,7 @@ import { NzDemoCheckboxLayoutComponent } from './layout';
 
 @Component({
   selector     : 'nz-demo-checkbox',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCheckboxBasicComponent,
-		NzDemoCheckboxCheckAllComponent,
-		NzDemoCheckboxControllerComponent,
-		NzDemoCheckboxDisabledComponent,
-		NzDemoCheckboxGroupComponent,
-		NzDemoCheckboxLayoutLegacyComponent,
-		NzDemoCheckboxLayoutComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCheckboxBasicComponent, NzDemoCheckboxCheckAllComponent, NzDemoCheckboxControllerComponent, NzDemoCheckboxDisabledComponent, NzDemoCheckboxGroupComponent, NzDemoCheckboxLayoutLegacyComponent, NzDemoCheckboxLayoutComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoCheckboxZhComponent {

@@ -13,18 +13,7 @@ import { NzDemoDrawerUserProfileComponent } from './user-profile';
 
 @Component({
   selector     : 'nz-demo-drawer',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoDrawerBasicRightComponent,
-		NzDemoDrawerFromDrawerComponent,
-		NzDemoDrawerMultiLevelDrawerComponent,
-		NzDemoDrawerPlacementComponent,
-		NzDemoDrawerServiceComponent,
-		NzDemoDrawerSizeComponent,
-		NzDemoDrawerUserProfileComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoDrawerBasicRightComponent, NzDemoDrawerFromDrawerComponent, NzDemoDrawerMultiLevelDrawerComponent, NzDemoDrawerPlacementComponent, NzDemoDrawerServiceComponent, NzDemoDrawerSizeComponent, NzDemoDrawerUserProfileComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoDrawerZhComponent {

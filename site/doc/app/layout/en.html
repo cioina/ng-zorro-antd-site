@@ -4,16 +4,197 @@
     <nz-link nzHref="#components-layout-demo-basic" nzTitle="Basic Structure"></nz-link><nz-link nzHref="#components-layout-demo-top" nzTitle="Header-Content-Footer"></nz-link><nz-link nzHref="#components-layout-demo-top-side" nzTitle="Header-Sider"></nz-link><nz-link nzHref="#components-layout-demo-top-side-2" nzTitle="Header Sider 2"></nz-link><nz-link nzHref="#components-layout-demo-side" nzTitle="Sider"></nz-link><nz-link nzHref="#components-layout-demo-custom-trigger" nzTitle="Custom trigger"></nz-link><nz-link nzHref="#components-layout-demo-responsive" nzTitle="Responsive"></nz-link><nz-link nzHref="#components-layout-demo-fixed" nzTitle="Fixed Header"></nz-link><nz-link nzHref="#components-layout-demo-fixed-sider" nzTitle="Fixed Sider"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Layout<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Layout
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="layout" description="Handling the overall layout of a page." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="specification"><span>Specification</span><a onclick="window.location.hash = 'specification'" class="anchor">#</a></h2><h3 id="size"><span>Size</span><a onclick="window.location.hash = 'size'" class="anchor">#</a></h3><p>The first level navigation is inclined left near a logo, and the secondary menu is inclined right.</p>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic Structure"
+  [nzId]="'components-layout-demo-basic'"
+  nzSelector="nz-demo-layout-basic"
+  [nzLink]="'components-layout-demo-basic'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-basic <name>"
+  nzComponentName="NzDemoLayoutBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/basic.md'"
+>
+	<nz-demo-layout-basic demo />
+	<div intro ngNonBindable>
+		<p>Classic page layouts.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Header-Content-Footer"
+  [nzId]="'components-layout-demo-top'"
+  nzSelector="nz-demo-layout-top"
+  [nzLink]="'components-layout-demo-top'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-top <name>"
+  nzComponentName="NzDemoLayoutTopComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/top.md'"
+>
+	<nz-demo-layout-top demo />
+	<div intro ngNonBindable>
+		<p>The most basic &quot;header-content-footer&quot; layout.</p>
+<p>Generally, the mainnav is placed at the top of the page, and includes the logo, the first level navigation, and the secondary menu (users, settings, notifications) from left to right in it.
+We always put contents in a fixed size navigation (eg: <code>1200px</code>), the layout of the whole page is stable, it&#39;s not affected by viewing area.</p>
+<p>Top-bottom structure is conform with the top-bottom viewing habit, it&#39;s a classical navigation pattern of websites. This pattern demonstrates efficiency in the main workarea, while using some vertical space. And because the horizontal space of the navigation is limited, this pattern is not suitable for cases when the first level navigation contains many elements or links</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Header-Sider"
+  [nzId]="'components-layout-demo-top-side'"
+  nzSelector="nz-demo-layout-top-side"
+  [nzLink]="'components-layout-demo-top-side'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-top-side <name>"
+  nzComponentName="NzDemoLayoutTopSideComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/top-side.md'"
+>
+	<nz-demo-layout-top-side demo />
+	<div intro ngNonBindable>
+		<p>Both the top navigation and the sidebar, commonly used in documentation site.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Header Sider 2"
+  [nzId]="'components-layout-demo-top-side-2'"
+  nzSelector="nz-demo-layout-top-side-2"
+  [nzLink]="'components-layout-demo-top-side-2'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-top-side-2 <name>"
+  nzComponentName="NzDemoLayoutTopSide2Component"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/top-side-2.md'"
+>
+	<nz-demo-layout-top-side-2 demo />
+	<div intro ngNonBindable>
+		<p>Both the top navigation and the sidebar, commonly used in application site.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Sider"
+  [nzId]="'components-layout-demo-side'"
+  nzSelector="nz-demo-layout-side"
+  [nzLink]="'components-layout-demo-side'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-side <name>"
+  nzComponentName="NzDemoLayoutSideComponent"
+  [nzIframe]="true"
+  nzIframeSource=""
+  [nzIframeHeight]="360"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/side.md'"
+>
+	<nz-demo-layout-side demo />
+	<div intro ngNonBindable>
+		<p>Two-columns layout. The sider menu can be collapsed when horizontal space is limited.</p>
+<p>Generally, the mainnav is placed on the left side of the page, and the secondary menu is placed on the top of the working area. Contents will adapt the layout to the viewing area to improve the horizontal space usage, while the layout of the whole page is not stable.</p>
+<p>The level of the aisde navigation is scalable. The first, second, and third level navigations could be present more fluently and relevantly, and aside navigation can be fixed, allowing the user to quickly switch and spot the current position, improving the user experience. However, this navigation occupies some horizontal space of the contents</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom trigger"
+  [nzId]="'components-layout-demo-custom-trigger'"
+  nzSelector="nz-demo-layout-custom-trigger"
+  [nzLink]="'components-layout-demo-custom-trigger'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-custom-trigger <name>"
+  nzComponentName="NzDemoLayoutCustomTriggerComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/custom-trigger.md'"
+>
+	<nz-demo-layout-custom-trigger demo />
+	<div intro ngNonBindable>
+		<p>If you want to use a customized trigger, you can hide the default one by setting <code>[nzTrigger]=&quot;null&quot;</code>.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Responsive"
+  [nzId]="'components-layout-demo-responsive'"
+  nzSelector="nz-demo-layout-responsive"
+  [nzLink]="'components-layout-demo-responsive'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-responsive <name>"
+  nzComponentName="NzDemoLayoutResponsiveComponent"
+  [nzIframe]="true"
+  nzIframeSource=""
+  [nzIframeHeight]="360"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/responsive.md'"
+>
+	<nz-demo-layout-responsive demo />
+	<div intro ngNonBindable>
+		<p>Layout.Sider supports responsive layout.</p>
+<blockquote>
+<p>Note: You can get a responsive layout by setting <code>nzBreakpoint</code>, the <code>nz-sider</code> will collapse to the width of <code>nzCollapsedWidth</code> when window width is below the <code>nzBreakpoint</code>. And a special trigger will appear if the <code>nzCollapsedWidth</code> is set to <code>0</code>.</p>
+</blockquote>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Fixed Header"
+  [nzId]="'components-layout-demo-fixed'"
+  nzSelector="nz-demo-layout-fixed"
+  [nzLink]="'components-layout-demo-fixed'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-fixed <name>"
+  nzComponentName="NzDemoLayoutFixedComponent"
+  [nzIframe]="true"
+  nzIframeSource=""
+  [nzIframeHeight]="360"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/fixed.md'"
+>
+	<nz-demo-layout-fixed demo />
+	<div intro ngNonBindable>
+		<p>Fixed Header is generally used to fix the top navigation to facilitate page switching.</p>
+
+	</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Fixed Sider"
+  [nzId]="'components-layout-demo-fixed-sider'"
+  nzSelector="nz-demo-layout-fixed-sider"
+  [nzLink]="'components-layout-demo-fixed-sider'"
+  nzGenerateCommand="ng g ng-zorro-antd:layout-fixed-sider <name>"
+  nzComponentName="NzDemoLayoutFixedSiderComponent"
+  [nzIframe]="true"
+  nzIframeSource=""
+  [nzIframeHeight]="360"
+  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/fixed-sider.md'"
+>
+	<nz-demo-layout-fixed-sider demo />
+	<div intro ngNonBindable>
+		<p>When dealing with long content, a fixed sider can provide a better user experience.</p>
+
+	</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="specification"><span>Specification</span><a onclick="window.location.hash = 'specification'" class="anchor">#</a></h2><h3 id="size"><span>Size</span><a onclick="window.location.hash = 'size'" class="anchor">#</a></h3><p>The first level navigation is inclined left near a logo, and the secondary menu is inclined right.</p>
 <ul>
 <li>Top Navigation (almost systems): the height of the first level navigation <code>64px</code>, the second level navigation <code>48px</code>.</li>
 <li>Top Navigation(contents page): the height of the first level navigation <code>80px</code>, the second level navigation <code>56px</code>.</li>
@@ -51,189 +232,7 @@
 <blockquote>
 <p>Based on <code>flex layout</code>, please pay attention to the <a href="http://caniuse.com/#search=flex" target="_blank" rel="noopener">compatibility</a>.</p>
 </blockquote>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
-</section>
-<div nz-row [nzGutter]="8">
-	<div nz-col [nzSpan]="24">
-		<nz-code-box
-  nzTitle="Basic Structure"
-  [nzId]="'components-layout-demo-basic'"
-  nzSelector="nz-demo-layout-basic"
-  [nzLink]="'components-layout-demo-basic'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-basic <name>"
-  nzComponentName="NzDemoLayoutBasicComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/basic.md'"
->
-	<nz-demo-layout-basic demo />
-	<div intro ngNonBindable>
-		<p>Classic page layouts.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Header-Content-Footer"
-  [nzId]="'components-layout-demo-top'"
-  nzSelector="nz-demo-layout-top"
-  [nzLink]="'components-layout-demo-top'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-top <name>"
-  nzComponentName="NzDemoLayoutTopComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/top.md'"
->
-	<nz-demo-layout-top demo />
-	<div intro ngNonBindable>
-		<p>The most basic &quot;header-content-footer&quot; layout.</p>
-<p>Generally, the mainnav is placed at the top of the page, and includes the logo, the first level navigation, and the secondary menu (users, settings, notifications) from left to right in it.
-We always put contents in a fixed size navigation (eg: <code>1200px</code>), the layout of the whole page is stable, it&#39;s not affected by viewing area.</p>
-<p>Top-bottom structure is conform with the top-bottom viewing habit, it&#39;s a classical navigation pattern of websites. This pattern demonstrates efficiency in the main workarea, while using some vertical space. And because the horizontal space of the navigation is limited, this pattern is not suitable for cases when the first level navigation contains many elements or links</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Header-Sider"
-  [nzId]="'components-layout-demo-top-side'"
-  nzSelector="nz-demo-layout-top-side"
-  [nzLink]="'components-layout-demo-top-side'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-top-side <name>"
-  nzComponentName="NzDemoLayoutTopSideComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/top-side.md'"
->
-	<nz-demo-layout-top-side demo />
-	<div intro ngNonBindable>
-		<p>Both the top navigation and the sidebar, commonly used in documentation site.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Header Sider 2"
-  [nzId]="'components-layout-demo-top-side-2'"
-  nzSelector="nz-demo-layout-top-side-2"
-  [nzLink]="'components-layout-demo-top-side-2'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-top-side-2 <name>"
-  nzComponentName="NzDemoLayoutTopSide2Component"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/top-side-2.md'"
->
-	<nz-demo-layout-top-side-2 demo />
-	<div intro ngNonBindable>
-		<p>Both the top navigation and the sidebar, commonly used in application site.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Sider"
-  [nzId]="'components-layout-demo-side'"
-  nzSelector="nz-demo-layout-side"
-  [nzLink]="'components-layout-demo-side'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-side <name>"
-  nzComponentName="NzDemoLayoutSideComponent"
-  [nzIframe]="true"
-  nzIframeSource="null"
-  [nzIframeHeight]="360"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/side.md'"
->
-	<nz-demo-layout-side demo />
-	<div intro ngNonBindable>
-		<p>Two-columns layout. The sider menu can be collapsed when horizontal space is limited.</p>
-<p>Generally, the mainnav is placed on the left side of the page, and the secondary menu is placed on the top of the working area. Contents will adapt the layout to the viewing area to improve the horizontal space usage, while the layout of the whole page is not stable.</p>
-<p>The level of the aisde navigation is scalable. The first, second, and third level navigations could be present more fluently and relevantly, and aside navigation can be fixed, allowing the user to quickly switch and spot the current position, improving the user experience. However, this navigation occupies some horizontal space of the contents</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Custom trigger"
-  [nzId]="'components-layout-demo-custom-trigger'"
-  nzSelector="nz-demo-layout-custom-trigger"
-  [nzLink]="'components-layout-demo-custom-trigger'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-custom-trigger <name>"
-  nzComponentName="NzDemoLayoutCustomTriggerComponent"
-  [nzIframe]="false"
-  nzIframeSource="null"
-  [nzIframeHeight]="null"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/custom-trigger.md'"
->
-	<nz-demo-layout-custom-trigger demo />
-	<div intro ngNonBindable>
-		<p>If you want to use a customized trigger, you can hide the default one by setting <code>[nzTrigger]=&quot;null&quot;</code>.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Responsive"
-  [nzId]="'components-layout-demo-responsive'"
-  nzSelector="nz-demo-layout-responsive"
-  [nzLink]="'components-layout-demo-responsive'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-responsive <name>"
-  nzComponentName="NzDemoLayoutResponsiveComponent"
-  [nzIframe]="true"
-  nzIframeSource="null"
-  [nzIframeHeight]="360"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/responsive.md'"
->
-	<nz-demo-layout-responsive demo />
-	<div intro ngNonBindable>
-		<p>Layout.Sider supports responsive layout.</p>
-<blockquote>
-<p>Note: You can get a responsive layout by setting <code>nzBreakpoint</code>, the <code>nz-sider</code> will collapse to the width of <code>nzCollapsedWidth</code> when window width is below the <code>nzBreakpoint</code>. And a special trigger will appear if the <code>nzCollapsedWidth</code> is set to <code>0</code>.</p>
-</blockquote>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Fixed Header"
-  [nzId]="'components-layout-demo-fixed'"
-  nzSelector="nz-demo-layout-fixed"
-  [nzLink]="'components-layout-demo-fixed'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-fixed <name>"
-  nzComponentName="NzDemoLayoutFixedComponent"
-  [nzIframe]="true"
-  nzIframeSource="null"
-  [nzIframeHeight]="360"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/fixed.md'"
->
-	<nz-demo-layout-fixed demo />
-	<div intro ngNonBindable>
-		<p>Fixed Header is generally used to fix the top navigation to facilitate page switching.</p>
-
-	</div>
-</nz-code-box>
-<nz-code-box
-  nzTitle="Fixed Sider"
-  [nzId]="'components-layout-demo-fixed-sider'"
-  nzSelector="nz-demo-layout-fixed-sider"
-  [nzLink]="'components-layout-demo-fixed-sider'"
-  nzGenerateCommand="ng g ng-zorro-antd:layout-fixed-sider <name>"
-  nzComponentName="NzDemoLayoutFixedSiderComponent"
-  [nzIframe]="true"
-  nzIframeSource="null"
-  [nzIframeHeight]="360"
-  [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/layout/demo/fixed-sider.md'"
->
-	<nz-demo-layout-fixed-sider demo />
-	<div intro ngNonBindable>
-		<p>When dealing with long content, a fixed sider can provide a better user experience.</p>
-
-	</div>
-</nz-code-box>
-
-	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-layout</span><span class="token punctuation">></span></span>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-layout</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-header</span><span class="token punctuation">></span></span>header<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-header</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-layout</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-sider</span><span class="token punctuation">></span></span>left sidebar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-sider</span><span class="token punctuation">></span></span>

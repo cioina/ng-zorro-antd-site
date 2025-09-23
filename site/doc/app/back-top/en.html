@@ -4,30 +4,25 @@
     <nz-link nzHref="#components-back-top-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-back-top-demo-custom" nzTitle="Custom style"></nz-link><nz-link nzHref="#components-back-top-demo-target" nzTitle="Using nzTarget"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>BackTop<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	BackTop
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="back-top" description="Makes it easy to go back to the top of the page." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<blockquote>
+  <section class="markdown" ngNonBindable>
+    <blockquote>
 <p>⚠️ <strong>Note</strong>: This component will be removed in v21, please use <code>&lt;nz-float-button-top&gt;</code> in <a href="/components/float-button/en">FloatButton</a> instead.</p>
 </blockquote>
 <p><code>nz-back-top</code> makes it easy to go back to the top of the page.</p>
-<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>When the page content is very long.</li>
-<li>When you need to go back to the top very frequently in order to view the contents.</li>
-</ul>
 
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -39,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:back-top-basic <name>"
   nzComponentName="NzDemoBackTopBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/demo/basic.md'"
 >
@@ -57,7 +52,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:back-top-target <name>"
   nzComponentName="NzDemoBackTopTargetComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/demo/target.md'"
 >
@@ -78,7 +73,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:back-top-custom <name>"
   nzComponentName="NzDemoBackTopCustomComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/demo/custom.md'"
 >
@@ -91,7 +86,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-back-top"><span>nz-back-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-back-top'" class="anchor">#</a></h3><blockquote>
+<section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>When the page content is very long.</li>
+<li>When you need to go back to the top very frequently in order to view the contents.</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-back-top"><span>nz-back-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-back-top'" class="anchor">#</a></h3><blockquote>
 <p>The distance to the bottom is set to <code>50px</code> by default, which is overridable.
 If you decide to use custom styles, please note the size limit: no more than <code>40px * 40px</code>.</p>
 </blockquote>

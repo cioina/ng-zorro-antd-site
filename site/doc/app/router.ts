@@ -283,8 +283,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Button",
         "path": "components/button/zh",
         "zh": "按钮",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg",
         "tag": "",
         "description": "Angular 按钮组件，按钮用于开始一个即时操作。"
@@ -293,8 +291,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "FloatButton",
         "path": "components/float-button/zh",
         "zh": "悬浮按钮",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*HS-wTIIwu0kAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "19.0.0",
         "description": "Angular 悬浮按钮组件，悬浮于页面上方的按钮。"
@@ -303,8 +299,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Icon",
         "path": "components/icon/zh",
         "zh": "图标",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/rrwbSt3FQ/Icon.svg",
         "tag": "",
         "description": "Angular 图标组件，语义化的矢量图形。"
@@ -313,8 +307,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Typography",
         "path": "components/typography/zh",
         "zh": "排版",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/GOM1KQ24O/Typography.svg",
         "tag": "",
         "description": "Angular 排版组件，文本的基本格式。"
@@ -326,7 +318,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/pipes/zh",
         "zh": "",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular Pipes Component, 常用 Pipes 集合。"
       }
@@ -340,8 +331,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Button",
         "path": "components/button/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/fNUKzY1sk/Button.svg",
         "tag": "",
         "description": "Angular Button Component, To trigger an operation."
@@ -350,8 +339,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "FloatButton",
         "path": "components/float-button/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*HS-wTIIwu0kAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "19.0.0",
         "description": "Angular FloatButton Component, A button that floats at the top of the page."
@@ -360,8 +347,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Icon",
         "path": "components/icon/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/rrwbSt3FQ/Icon.svg",
         "tag": "",
         "description": "Angular Icon Component, Semantic vector graphics."
@@ -370,8 +355,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Typography",
         "path": "components/typography/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/GOM1KQ24O/Typography.svg",
         "tag": "",
         "description": "Angular Typography Component, Basic text writing, including headings, body text, lists, and more."
@@ -383,7 +366,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/pipes/en",
         "zh": "",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular Pipes Component, Common Pipe Collections."
       }
@@ -397,8 +379,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Divider",
         "path": "components/divider/zh",
         "zh": "分割线",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/5swjECahe/Divider.svg",
         "tag": "",
         "description": "Angular 分割线组件，区隔内容的分割线。"
@@ -407,8 +387,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Flex",
         "path": "components/flex/zh",
         "zh": "弹性布局",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*SMzgSJZE_AwAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "17.1.0",
         "description": "Angular 弹性布局组件，用于对齐的弹性布局容器。"
@@ -417,8 +395,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Grid",
         "path": "components/grid/zh",
         "zh": "栅格",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/5rWLU27so/Grid.svg",
         "tag": "",
         "description": "Angular 栅格组件，24 栅格系统。"
@@ -427,8 +403,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Layout",
         "path": "components/layout/zh",
         "zh": "布局",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/hzEndUVEx/Layout.svg",
         "tag": "",
         "description": "Angular 布局组件，协助进行页面级整体布局。"
@@ -437,8 +411,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Space",
         "path": "components/space/zh",
         "zh": "间距",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/wc6%263gJ0Y8/Space.svg",
         "tag": "",
         "description": "Angular 间距组件，设置组件之间的间距。"
@@ -447,8 +419,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Splitter",
         "path": "components/splitter/zh",
         "zh": "分隔面板",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*f0SISaETY0wAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "19.2.0",
         "description": "Angular 分隔面板组件，自由切分指定区域。"
@@ -460,7 +430,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/resizable/zh",
         "zh": "调整尺寸",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular 调整尺寸组件，调整元素尺寸。"
       }
@@ -474,8 +443,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Divider",
         "path": "components/divider/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/5swjECahe/Divider.svg",
         "tag": "",
         "description": "Angular Divider Component, A divider line separates different content."
@@ -484,8 +451,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Flex",
         "path": "components/flex/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*SMzgSJZE_AwAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "17.1.0",
         "description": "Angular Flex Component, A flex layout container for alignment."
@@ -494,8 +459,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Grid",
         "path": "components/grid/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/5rWLU27so/Grid.svg",
         "tag": "",
         "description": "Angular Grid Component, 24 Grids System。"
@@ -504,8 +467,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Layout",
         "path": "components/layout/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/hzEndUVEx/Layout.svg",
         "tag": "",
         "description": "Angular Layout Component, Handling the overall layout of a page."
@@ -514,8 +475,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Space",
         "path": "components/space/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/wc6%263gJ0Y8/Space.svg",
         "tag": "",
         "description": "Angular Space Component, Set components spacing."
@@ -524,8 +483,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Splitter",
         "path": "components/splitter/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*f0SISaETY0wAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "19.2.0",
         "description": "Angular Splitter Component, Splits the area into multiple horizontal or vertical sides."
@@ -537,7 +494,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/resizable/en",
         "zh": "",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular Resizable Component, Resize element."
       }
@@ -551,8 +507,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Anchor",
         "path": "components/anchor/zh",
         "zh": "锚点",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/_1-C1JwsC/Anchor.svg",
         "tag": "",
         "description": "Angular 锚点组件，用于跳转到页面指定位置。"
@@ -561,8 +515,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Breadcrumb",
         "path": "components/breadcrumb/zh",
         "zh": "面包屑",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/9Ltop8JwH/Breadcrumb.svg",
         "tag": "",
         "description": "Angular 面包屑组件，显示当前页面在系统层级结构中的位置，并能向上返回。"
@@ -571,8 +523,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Dropdown",
         "path": "components/dropdown/zh",
         "zh": "下拉菜单",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/eedWN59yJ/Dropdown.svg",
         "tag": "",
         "description": "Angular 下拉菜单组件，向下弹出的列表。"
@@ -581,8 +531,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Menu",
         "path": "components/menu/zh",
         "zh": "导航菜单",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/3XZcjGpvK/Menu.svg",
         "tag": "",
         "description": "Angular 导航菜单组件，为页面和功能提供导航的菜单列表。"
@@ -591,8 +539,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "PageHeader",
         "path": "components/page-header/zh",
         "zh": "页头",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/6bKE0Cq0R/PageHeader.svg",
         "tag": "",
         "description": "Angular 页头组件，带有通用操作的页头。"
@@ -601,8 +547,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Pagination",
         "path": "components/pagination/zh",
         "zh": "分页",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/1vqv2bj68/Pagination.svg",
         "tag": "",
         "description": "Angular 分页组件，分页器用于分隔长列表，每次只加载一个页面。"
@@ -611,8 +555,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Steps",
         "path": "components/steps/zh",
         "zh": "步骤条",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/UZYqMizXHaj/Steps.svg",
         "tag": "",
         "description": "Angular 步骤条组件，引导用户按照流程完成任务的导航条。"
@@ -621,8 +563,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tabs",
         "path": "components/tabs/zh",
         "zh": "标签页",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/lkI2hNEDr2V/Tabs.svg",
         "tag": "",
         "description": "Angular 标签页组件，选项卡切换组件。"
@@ -638,8 +578,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Anchor",
         "path": "components/anchor/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/_1-C1JwsC/Anchor.svg",
         "tag": "",
         "description": "Angular Anchor Component, Hyperlinks to scroll on one page."
@@ -648,8 +586,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Breadcrumb",
         "path": "components/breadcrumb/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/9Ltop8JwH/Breadcrumb.svg",
         "tag": "",
         "description": "Angular Breadcrumb Component, Displays the current location within a hierarchy. And allow going back to states higher up in the hierarchy."
@@ -658,8 +594,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Dropdown",
         "path": "components/dropdown/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/eedWN59yJ/Dropdown.svg",
         "tag": "",
         "description": "Angular Dropdown Component, A dropdown list."
@@ -668,8 +602,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Menu",
         "path": "components/menu/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/3XZcjGpvK/Menu.svg",
         "tag": "",
         "description": "Angular Menu Component, A versatile menu for navigation."
@@ -678,8 +610,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "PageHeader",
         "path": "components/page-header/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/6bKE0Cq0R/PageHeader.svg",
         "tag": "",
         "description": "Angular PageHeader Component, A header with common actions and design elements built in."
@@ -688,8 +618,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Pagination",
         "path": "components/pagination/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/1vqv2bj68/Pagination.svg",
         "tag": "",
         "description": "Angular Pagination Component, A long list can be divided into several pages by `Pagination`, and only one page will be loaded at a time."
@@ -698,8 +626,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Steps",
         "path": "components/steps/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/UZYqMizXHaj/Steps.svg",
         "tag": "",
         "description": "Angular Steps Component, A navigation bar that guides users through the steps of a task."
@@ -708,8 +634,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tabs",
         "path": "components/tabs/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/lkI2hNEDr2V/Tabs.svg",
         "tag": "",
         "description": "Angular Tabs Component, Tabs make it easy to switch between different views."
@@ -725,8 +649,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "AutoComplete",
         "path": "components/auto-complete/zh",
         "zh": "自动完成",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/qtJm4yt45/AutoComplete.svg",
         "tag": "",
         "description": "Angular 自动完成组件，输入框自动完成功能。"
@@ -735,8 +657,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Cascader",
         "path": "components/cascader/zh",
         "zh": "级联选择",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/UdS8y8xyZ/Cascader.svg",
         "tag": "",
         "description": "Angular 级联选择组件，级联选择框。"
@@ -745,8 +665,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Checkbox",
         "path": "components/checkbox/zh",
         "zh": "多选框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/8nbVbHEm_/CheckBox.svg",
         "tag": "",
         "description": "Angular 多选框组件，收集用户的多项选择。"
@@ -755,8 +673,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "ColorPicker",
         "path": "components/color-picker/zh",
         "zh": "颜色选择器",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*PpY4RYNM8UcAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "16.2.0",
         "description": "Angular 颜色选择器组件，用于颜色选择。"
@@ -765,8 +681,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "DatePicker",
         "path": "components/date-picker/zh",
         "zh": "日期选择框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg",
         "tag": "",
         "description": "Angular 日期选择框组件，输入或选择日期的控件。"
@@ -775,8 +689,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Form",
         "path": "components/form/zh",
         "zh": "表单",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg",
         "tag": "",
         "description": "Angular 表单组件，高性能表单控件，自带数据域管理。包含数据录入、校验以及对应样式。"
@@ -785,8 +697,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Input",
         "path": "components/input/zh",
         "zh": "输入框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/xS9YEJhfe/Input.svg",
         "tag": "",
         "description": "Angular 输入框组件，通过鼠标或键盘输入内容，是最基础的表单域的包装。"
@@ -795,8 +705,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "InputNumber",
         "path": "components/input-number/zh",
         "zh": "数字输入框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
         "tag": "19.0.0",
         "description": "Angular 数字输入框组件，通过鼠标或键盘，输入范围内的数值。"
@@ -805,8 +713,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "InputNumberLegacy",
         "path": "components/input-number-legacy/zh",
         "zh": "数字输入框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
         "tag": "deprecated",
         "description": "Angular 数字输入框组件，通过鼠标或键盘，输入范围内的数值。"
@@ -815,8 +721,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Mention",
         "path": "components/mention/zh",
         "zh": "提及",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/jPE-itMFM/Mentions.svg",
         "tag": "",
         "description": "Angular 提及组件，用于在输入中提及某人或某事。"
@@ -825,8 +729,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Radio",
         "path": "components/radio/zh",
         "zh": "单选框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/8cYb5seNB/Radio.svg",
         "tag": "",
         "description": "Angular 单选框组件，用于在多个备选项中选中单个状态。"
@@ -835,8 +737,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Rate",
         "path": "components/rate/zh",
         "zh": "评分",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/R5uiIWmxe/Rate.svg",
         "tag": "",
         "description": "Angular 评分组件，用于对事物进行评分操作。"
@@ -845,8 +745,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Select",
         "path": "components/select/zh",
         "zh": "选择器",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/_0XzgOis7/Select.svg",
         "tag": "",
         "description": "Angular 选择器组件，下拉选择器。"
@@ -855,8 +753,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Slider",
         "path": "components/slider/zh",
         "zh": "滑动输入条",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/HZ3meFc6W/Silder.svg",
         "tag": "",
         "description": "Angular 滑动输入条组件，滑动型输入器，展示当前值和可选范围。"
@@ -865,8 +761,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Switch",
         "path": "components/switch/zh",
         "zh": "开关",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/zNdJQMhfm/Switch.svg",
         "tag": "",
         "description": "Angular 开关组件，使用开关切换两种状态之间。"
@@ -875,8 +769,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "TimePicker",
         "path": "components/time-picker/zh",
         "zh": "时间选择框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/h04Zsl98I/TimePicker.svg",
         "tag": "",
         "description": "Angular 时间选择框组件，输入或选择时间的控件。"
@@ -885,8 +777,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Transfer",
         "path": "components/transfer/zh",
         "zh": "穿梭框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/QAXskNI4G/Transfer.svg",
         "tag": "",
         "description": "Angular 穿梭框组件，双栏穿梭选择框。"
@@ -895,8 +785,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "TreeSelect",
         "path": "components/tree-select/zh",
         "zh": "树选择",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Ax4DA0njr/TreeSelect.svg",
         "tag": "",
         "description": "Angular 树选择组件，树型选择控件。"
@@ -905,8 +793,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Upload",
         "path": "components/upload/zh",
         "zh": "上传",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/QaeBt_ZMg/Upload.svg",
         "tag": "",
         "description": "Angular 上传组件，文件选择上传和拖拽上传控件。"
@@ -918,7 +804,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/code-editor/zh",
         "zh": "代码编辑器",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular 代码编辑器组件，基于 monaco-editor 的代码编辑器。"
       },
@@ -927,7 +812,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/cron-expression/zh",
         "zh": "cron 表单",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular cron 表单组件，显示和编辑 cron 表达式。"
       }
@@ -941,8 +825,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "AutoComplete",
         "path": "components/auto-complete/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/qtJm4yt45/AutoComplete.svg",
         "tag": "",
         "description": "Angular AutoComplete Component, AutoComplete function of input field."
@@ -951,8 +833,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Cascader",
         "path": "components/cascader/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/UdS8y8xyZ/Cascader.svg",
         "tag": "",
         "description": "Angular Cascader Component, Cascade selection box."
@@ -961,8 +841,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Checkbox",
         "path": "components/checkbox/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/8nbVbHEm_/CheckBox.svg",
         "tag": "",
         "description": "Angular Checkbox Component, Collect user's choices."
@@ -971,8 +849,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "ColorPicker",
         "path": "components/color-picker/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*PpY4RYNM8UcAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "16.2.0",
         "description": "Angular ColorPicker Component, Used for color selection."
@@ -981,8 +857,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "DatePicker",
         "path": "components/date-picker/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/RT_USzA48/DatePicker.svg",
         "tag": "",
         "description": "Angular DatePicker Component, To select or input a date."
@@ -991,8 +865,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Form",
         "path": "components/form/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/ORmcdeaoO/Form.svg",
         "tag": "",
         "description": "Angular Form Component, High-performance form component with data domain management. Includes data entry, validation, and corresponding styles."
@@ -1001,8 +873,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Input",
         "path": "components/input/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/xS9YEJhfe/Input.svg",
         "tag": "",
         "description": "Angular Input Component, Through mouse or keyboard input content, it is the most basic form field wrapper."
@@ -1011,8 +881,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "InputNumber",
         "path": "components/input-number/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
         "tag": "19.0.0",
         "description": "Angular InputNumber Component, Enter a number within certain range with the mouse or keyboard."
@@ -1021,8 +889,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "InputNumberLegacy",
         "path": "components/input-number-legacy/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
         "tag": "deprecated",
         "description": "Angular InputNumberLegacy Component, Enter a number within certain range with the mouse or keyboard."
@@ -1031,8 +897,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Mention",
         "path": "components/mention/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/jPE-itMFM/Mentions.svg",
         "tag": "",
         "description": "Angular Mention Component, Used to mention someone or something in an input."
@@ -1041,8 +905,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Radio",
         "path": "components/radio/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/8cYb5seNB/Radio.svg",
         "tag": "",
         "description": "Angular Radio Component, Used to select a single state from multiple options."
@@ -1051,8 +913,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Rate",
         "path": "components/rate/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/R5uiIWmxe/Rate.svg",
         "tag": "",
         "description": "Angular Rate Component, Used for rating operation on something."
@@ -1061,8 +921,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Select",
         "path": "components/select/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/_0XzgOis7/Select.svg",
         "tag": "",
         "description": "Angular Select Component, A dropdown menu for displaying choices."
@@ -1071,8 +929,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Slider",
         "path": "components/slider/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/HZ3meFc6W/Silder.svg",
         "tag": "",
         "description": "Angular Slider Component, A Slider component for displaying current value and intervals in range."
@@ -1081,8 +937,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Switch",
         "path": "components/switch/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/zNdJQMhfm/Switch.svg",
         "tag": "",
         "description": "Angular Switch Component, Used to toggle between two states."
@@ -1091,8 +945,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "TimePicker",
         "path": "components/time-picker/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/h04Zsl98I/TimePicker.svg",
         "tag": "",
         "description": "Angular TimePicker Component, To select/input a time."
@@ -1101,8 +953,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Transfer",
         "path": "components/transfer/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/QAXskNI4G/Transfer.svg",
         "tag": "",
         "description": "Angular Transfer Component, Double column transfer choice box."
@@ -1111,8 +961,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "TreeSelect",
         "path": "components/tree-select/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Ax4DA0njr/TreeSelect.svg",
         "tag": "",
         "description": "Angular TreeSelect Component, Tree selection control."
@@ -1121,8 +969,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Upload",
         "path": "components/upload/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/QaeBt_ZMg/Upload.svg",
         "tag": "",
         "description": "Angular Upload Component, Used to select and upload files or drag and drop files."
@@ -1134,7 +980,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/code-editor/en",
         "zh": "",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular Code Editor Component, Code Editor based on monaco-editor."
       },
@@ -1143,7 +988,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/cron-expression/en",
         "zh": "cron form",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular cron form组件，Display and edit cron expression."
       }
@@ -1157,8 +1001,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Avatar",
         "path": "components/avatar/zh",
         "zh": "头像",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/aBcnbw68hP/Avatar.svg",
         "tag": "",
         "description": "Angular 头像组件，用来代表用户或事物，支持图片、图标或字符展示。"
@@ -1167,8 +1009,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Badge",
         "path": "components/badge/zh",
         "zh": "徽标数",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/6%26GF9WHwvY/Badge.svg",
         "tag": "",
         "description": "Angular 徽标数组件，图标右上角的圆形徽标数字。"
@@ -1177,8 +1017,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Calendar",
         "path": "components/calendar/zh",
         "zh": "日历",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/dPQmLq08DI/Calendar.svg",
         "tag": "",
         "description": "Angular 日历组件，按照日历形式展示数据的容器。"
@@ -1187,8 +1025,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Card",
         "path": "components/card/zh",
         "zh": "卡片",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/keNB-R8Y9/Card.svg",
         "tag": "",
         "description": "Angular 卡片组件，通用卡片容器。"
@@ -1197,8 +1033,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Carousel",
         "path": "components/carousel/zh",
         "zh": "走马灯",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/%24C9tmj978R/Carousel.svg",
         "tag": "",
         "description": "Angular 走马灯组件，一组轮播的区域。"
@@ -1207,8 +1041,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Collapse",
         "path": "components/collapse/zh",
         "zh": "折叠面板",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/IxH16B9RD/Collapse.svg",
         "tag": "",
         "description": "Angular 折叠面板组件，可以折叠/展开的内容区域。"
@@ -1217,8 +1049,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Comment",
         "path": "components/comment/zh",
         "zh": "评论",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/ILhxpGzBO/Comment.svg",
         "tag": "",
         "description": "Angular 评论组件，对网站内容的反馈、评价和讨论。"
@@ -1227,8 +1057,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Descriptions",
         "path": "components/descriptions/zh",
         "zh": "描述列表",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/MjtG9_FOI/Descriptions.svg",
         "tag": "",
         "description": "Angular 描述列表组件，展示多个只读字段的组合。"
@@ -1237,8 +1065,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Empty",
         "path": "components/empty/zh",
         "zh": "空状态",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/MNbKfLBVb/Empty.svg",
         "tag": "",
         "description": "Angular 空状态组件，空状态时的展示占位图。"
@@ -1247,8 +1073,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Image",
         "path": "components/image/zh",
         "zh": "图片",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/D1dXz9PZqa/image.svg",
         "tag": "",
         "description": "Angular 图片组件，可预览的图片。"
@@ -1257,8 +1081,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "List",
         "path": "components/list/zh",
         "zh": "列表",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/5FrZKStG_/List.svg",
         "tag": "",
         "description": "Angular 列表组件，最基础的列表展示，可承载文字、列表、图片、段落。"
@@ -1267,8 +1089,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Popover",
         "path": "components/popover/zh",
         "zh": "气泡卡片",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/1PNL1p_cO/Popover.svg",
         "tag": "",
         "description": "Angular 气泡卡片组件，点击/鼠标移入元素，弹出气泡式的卡片浮层。"
@@ -1277,8 +1097,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "QRCode",
         "path": "components/qr-code/zh",
         "zh": "二维码",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cJopQrf0ncwAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "15.1.0",
         "description": "Angular 二维码组件，能够将文本转换生成二维码的组件，支持自定义配色和 Logo 配置。"
@@ -1287,8 +1105,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Segmented",
         "path": "components/segmented/zh",
         "zh": "分段控制器",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/bmw-prod/a3ff040f-24ba-43e0-92e9-c845df1612ad.svg",
         "tag": "",
         "description": "Angular 分段控制器组件，用于展示多个选项并允许用户选择其中单个选项。"
@@ -1297,8 +1113,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Statistic",
         "path": "components/statistic/zh",
         "zh": "统计",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/rcBNhLBrKbE/Statistic.svg",
         "tag": "",
         "description": "Angular 统计组件，展示统计数字。"
@@ -1307,8 +1121,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Table",
         "path": "components/table/zh",
         "zh": "表格",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/f-SbcX2Lx/Table.svg",
         "tag": "",
         "description": "Angular 表格组件，展示行列数据。"
@@ -1317,8 +1129,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tag",
         "path": "components/tag/zh",
         "zh": "标签",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/cH1BOLfxC/Tag.svg",
         "tag": "",
         "description": "Angular 标签组件，进行标记和分类的小标签。"
@@ -1327,8 +1137,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Timeline",
         "path": "components/timeline/zh",
         "zh": "时间轴",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/vJmo00mmgR/Timeline.svg",
         "tag": "",
         "description": "Angular 时间轴组件，垂直展示的时间流信息。"
@@ -1337,8 +1145,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tooltip",
         "path": "components/tooltip/zh",
         "zh": "文字提示",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Vyyeu8jq2/Tooltp.svg",
         "tag": "",
         "description": "Angular 文字提示组件，简单的文字提示气泡框。"
@@ -1347,8 +1153,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tree",
         "path": "components/tree/zh",
         "zh": "树形控件",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg",
         "tag": "",
         "description": "Angular 树形控件组件，多层次的结构列表。"
@@ -1357,8 +1161,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "TreeView",
         "path": "components/tree-view/zh",
         "zh": "树视图",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg",
         "tag": "",
         "description": "Angular 树视图组件，树视图组件，相比封装好的 Tree 组件具有更高的定制度和更好的性能。"
@@ -1370,7 +1172,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/experimental-image/zh",
         "zh": "图片",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular 图片组件，实验性的图片组件。"
       },
@@ -1379,7 +1180,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/graph/zh",
         "zh": "流程图",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular 流程图组件，渲染流程图。"
       }
@@ -1393,8 +1193,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Avatar",
         "path": "components/avatar/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/aBcnbw68hP/Avatar.svg",
         "tag": "",
         "description": "Angular Avatar Component, Used to represent users or things, supporting the display of images, icons, or characters."
@@ -1403,8 +1201,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Badge",
         "path": "components/badge/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/6%26GF9WHwvY/Badge.svg",
         "tag": "",
         "description": "Angular Badge Component, Small numerical value or status descriptor for UI elements."
@@ -1413,8 +1209,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Calendar",
         "path": "components/calendar/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/dPQmLq08DI/Calendar.svg",
         "tag": "",
         "description": "Angular Calendar Component, Container for displaying data in calendar form."
@@ -1423,8 +1217,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Card",
         "path": "components/card/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/keNB-R8Y9/Card.svg",
         "tag": "",
         "description": "Angular Card Component, Simple rectangular container."
@@ -1433,8 +1225,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Carousel",
         "path": "components/carousel/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/%24C9tmj978R/Carousel.svg",
         "tag": "",
         "description": "Angular Carousel Component, A carousel component. Scales with its container."
@@ -1443,8 +1233,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Collapse",
         "path": "components/collapse/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/IxH16B9RD/Collapse.svg",
         "tag": "",
         "description": "Angular Collapse Component, A content area which can be collapsed and expanded."
@@ -1453,8 +1241,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Comment",
         "path": "components/comment/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/ILhxpGzBO/Comment.svg",
         "tag": "",
         "description": "Angular Comment Component, A comment displays user feedback and discussion to website content."
@@ -1463,8 +1249,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Descriptions",
         "path": "components/descriptions/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/MjtG9_FOI/Descriptions.svg",
         "tag": "",
         "description": "Angular Descriptions Component, Display multiple read-only fields in a group."
@@ -1473,8 +1257,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Empty",
         "path": "components/empty/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/MNbKfLBVb/Empty.svg",
         "tag": "",
         "description": "Angular Empty Component, Empty state placeholder."
@@ -1483,8 +1265,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Image",
         "path": "components/image/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/D1dXz9PZqa/image.svg",
         "tag": "",
         "description": "Angular Image Component, Preview-able image."
@@ -1493,8 +1273,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "List",
         "path": "components/list/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/5FrZKStG_/List.svg",
         "tag": "",
         "description": "Angular List Component, Basic list display, which can carry text, lists, pictures, paragraphs."
@@ -1503,8 +1281,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Popover",
         "path": "components/popover/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/1PNL1p_cO/Popover.svg",
         "tag": "",
         "description": "Angular Popover Component, The floating card popped by clicking or hovering."
@@ -1513,8 +1289,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "QRCode",
         "path": "components/qr-code/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://mdn.alipayobjects.com/huamei_7uahnr/afts/img/A*cJopQrf0ncwAAAAAAAAAAAAADrJ8AQ/original",
         "tag": "15.1.0",
         "description": "Angular QRCode Component, Convert text into QR codes, and support custom color and logo."
@@ -1523,8 +1297,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Segmented",
         "path": "components/segmented/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/bmw-prod/a3ff040f-24ba-43e0-92e9-c845df1612ad.svg",
         "tag": "",
         "description": "Angular Segmented Component, Display multiple options and allow users to select a single option."
@@ -1533,8 +1305,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Statistic",
         "path": "components/statistic/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/rcBNhLBrKbE/Statistic.svg",
         "tag": "",
         "description": "Angular Statistic Component, Display statistic number."
@@ -1543,8 +1313,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Table",
         "path": "components/table/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/f-SbcX2Lx/Table.svg",
         "tag": "",
         "description": "Angular Table Component, A table displays rows of data."
@@ -1553,8 +1321,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tag",
         "path": "components/tag/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/cH1BOLfxC/Tag.svg",
         "tag": "",
         "description": "Angular Tag Component, Used for marking and categorization."
@@ -1563,8 +1329,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Timeline",
         "path": "components/timeline/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/antfincdn/vJmo00mmgR/Timeline.svg",
         "tag": "",
         "description": "Angular Timeline Component, Vertical display timeline."
@@ -1573,8 +1337,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tooltip",
         "path": "components/tooltip/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Vyyeu8jq2/Tooltp.svg",
         "tag": "",
         "description": "Angular Tooltip Component, Simple text popup box."
@@ -1583,8 +1345,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Tree",
         "path": "components/tree/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg",
         "tag": "",
         "description": "Angular Tree Component, Multiple-level structure list."
@@ -1593,8 +1353,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "TreeView",
         "path": "components/tree-view/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Xh-oWqg9k/Tree.svg",
         "tag": "",
         "description": "Angular TreeView Component, Tree view component with better performance and customizability."
@@ -1606,7 +1364,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/experimental-image/en",
         "zh": "",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular Image Component, Experimental image component."
       },
@@ -1615,7 +1372,6 @@ export const ROUTER_LIST: RouterList = {
         "path": "experimental/graph/en",
         "zh": "",
         "experimental": true,
-        "hidden": false,
         "tag": "",
         "description": "Angular Graph Component, Render graph."
       }
@@ -1629,8 +1385,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Alert",
         "path": "components/alert/zh",
         "zh": "警告提示",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/8emPa3fjl/Alert.svg",
         "tag": "",
         "description": "Angular 警告提示组件，警告提示，展现需要关注的信息。"
@@ -1639,8 +1393,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Drawer",
         "path": "components/drawer/zh",
         "zh": "抽屉",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/7z8NJQhFb/Drawer.svg",
         "tag": "",
         "description": "Angular 抽屉组件，屏幕边缘滑出的浮层面板。"
@@ -1649,8 +1401,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Message",
         "path": "components/message/zh",
         "zh": "全局提示",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/hAkKTIW0K/Message.svg",
         "tag": "",
         "description": "Angular 全局提示组件，全局展示操作反馈信息。"
@@ -1659,8 +1409,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Modal",
         "path": "components/modal/zh",
         "zh": "对话框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/3StSdUlSH/Modal.svg",
         "tag": "",
         "description": "Angular 对话框组件，展示一个对话框，提供标题、内容区、操作区。"
@@ -1669,8 +1417,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Notification",
         "path": "components/notification/zh",
         "zh": "通知提醒框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Jxm5nw61w/Notification.svg",
         "tag": "",
         "description": "Angular 通知提醒框组件，全局展示通知提醒信息。"
@@ -1679,8 +1425,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Popconfirm",
         "path": "components/popconfirm/zh",
         "zh": "气泡确认框",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/fjMCD9xRq/Popconfirm.svg",
         "tag": "",
         "description": "Angular 气泡确认框组件，点击元素，弹出气泡式的确认框。"
@@ -1689,8 +1433,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Progress",
         "path": "components/progress/zh",
         "zh": "进度条",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/xqsDu4ZyR/Progress.svg",
         "tag": "",
         "description": "Angular 进度条组件，展示操作的当前进度。"
@@ -1699,8 +1441,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Result",
         "path": "components/result/zh",
         "zh": "结果",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/9nepwjaLa/Result.svg",
         "tag": "",
         "description": "Angular 结果组件，用于反馈一系列操作任务的处理结果。"
@@ -1709,8 +1449,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Skeleton",
         "path": "components/skeleton/zh",
         "zh": "骨架屏",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/KpcciCJgv/Skeleton.svg",
         "tag": "",
         "description": "Angular 骨架屏组件，在需要等待加载内容的位置提供一个占位图形组合。"
@@ -1719,8 +1457,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Spin",
         "path": "components/spin/zh",
         "zh": "加载中",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/LBcJqCPRv/Spin.svg",
         "tag": "",
         "description": "Angular 加载中组件，用于页面和区块的加载中状态。"
@@ -1736,8 +1472,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Alert",
         "path": "components/alert/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/8emPa3fjl/Alert.svg",
         "tag": "",
         "description": "Angular Alert Component, Alert component for feedback."
@@ -1746,8 +1480,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Drawer",
         "path": "components/drawer/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/7z8NJQhFb/Drawer.svg",
         "tag": "",
         "description": "Angular Drawer Component, A panel that slides out from the edge of the screen."
@@ -1756,8 +1488,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Message",
         "path": "components/message/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/hAkKTIW0K/Message.svg",
         "tag": "",
         "description": "Angular Message Component, Display global messages as feedback in response to user operations."
@@ -1766,8 +1496,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Modal",
         "path": "components/modal/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/3StSdUlSH/Modal.svg",
         "tag": "",
         "description": "Angular Modal Component, Display a modal dialog box, providing a title, content area, and action buttons."
@@ -1776,8 +1504,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Notification",
         "path": "components/notification/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/Jxm5nw61w/Notification.svg",
         "tag": "",
         "description": "Angular Notification Component, Prompt notification message globally."
@@ -1786,8 +1512,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Popconfirm",
         "path": "components/popconfirm/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/fjMCD9xRq/Popconfirm.svg",
         "tag": "",
         "description": "Angular Popconfirm Component, Pop up a bubble confirmation box for an action."
@@ -1796,8 +1520,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Progress",
         "path": "components/progress/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/xqsDu4ZyR/Progress.svg",
         "tag": "",
         "description": "Angular Progress Component, Display the current progress of an operation."
@@ -1806,8 +1528,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Result",
         "path": "components/result/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/9nepwjaLa/Result.svg",
         "tag": "",
         "description": "Angular Result Component, Used to feed back the results of a series of operational tasks."
@@ -1816,8 +1536,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Skeleton",
         "path": "components/skeleton/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/KpcciCJgv/Skeleton.svg",
         "tag": "",
         "description": "Angular Skeleton Component, Provide a placeholder while you wait for content to load or visualize content that doesn't exist yet."
@@ -1826,8 +1544,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Spin",
         "path": "components/spin/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/LBcJqCPRv/Spin.svg",
         "tag": "",
         "description": "Angular Spin Component, Used for the loading status of a page or a block."
@@ -1843,8 +1559,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Affix",
         "path": "components/affix/zh",
         "zh": "固钉",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/tX6-md4H6/Affix.svg",
         "tag": "",
         "description": "Angular 固钉组件，将页面元素钉在可视范围。"
@@ -1853,8 +1567,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "BackTop",
         "path": "components/back-top/zh",
         "zh": "回到顶部",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/tJZ5jbTwX/BackTop.svg",
         "tag": "",
         "description": "Angular 回到顶部组件，返回页面顶部的操作按钮。"
@@ -1863,8 +1575,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "WaterMark",
         "path": "components/water-mark/zh",
         "zh": "水印",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
         "tag": "15.1.0",
         "description": "Angular 水印组件，给页面的某个区域加上水印。"
@@ -1880,8 +1590,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "Affix",
         "path": "components/affix/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/tX6-md4H6/Affix.svg",
         "tag": "",
         "description": "Angular Affix Component, Make an element stick to viewport."
@@ -1890,8 +1598,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "BackTop",
         "path": "components/back-top/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://gw.alipayobjects.com/zos/alicdn/tJZ5jbTwX/BackTop.svg",
         "tag": "",
         "description": "Angular BackTop Component, Makes it easy to go back to the top of the page."
@@ -1900,8 +1606,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "WaterMark",
         "path": "components/water-mark/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
         "tag": "15.1.0",
         "description": "Angular WaterMark Component, Add specific text or patterns to the page."
@@ -1917,8 +1621,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "CheckList",
         "path": "components/check-list/zh",
         "zh": "任务清单",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01E9BUpE1TCyZry8ETC_!!6000000002347-2-tps-386-453.png",
         "tag": "19.1.0",
         "description": "Angular 任务清单组件，用于在项目中梳理任务流程。"
@@ -1927,8 +1629,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "HashCode",
         "path": "components/hash-code/zh",
         "zh": "哈希码",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://img.alicdn.com/imgextra/i3/O1CN01jn3OGS1qq7Xkq6O6b_!!6000000005546-2-tps-1074-374.png",
         "tag": "17.0.0",
         "description": "Angular 哈希码组件，展示区块链数据的哈希值。"
@@ -1944,8 +1644,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "CheckList",
         "path": "components/check-list/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01E9BUpE1TCyZry8ETC_!!6000000002347-2-tps-386-453.png",
         "tag": "19.1.0",
         "description": "Angular CheckList Component, Used to organize the flow of tasks in a project."
@@ -1954,8 +1652,6 @@ export const ROUTER_LIST: RouterList = {
         "label": "HashCode",
         "path": "components/hash-code/en",
         "zh": "",
-        "experimental": false,
-        "hidden": false,
         "cover": "https://img.alicdn.com/imgextra/i3/O1CN01jn3OGS1qq7Xkq6O6b_!!6000000005546-2-tps-1074-374.png",
         "tag": "17.0.0",
         "description": "Angular HashCode Component, Display the hash value of blockchain data."

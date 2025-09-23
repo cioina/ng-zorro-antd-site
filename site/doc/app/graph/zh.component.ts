@@ -7,12 +7,7 @@ import { NzDemoGraphCustomizedComponent } from './customized';
 
 @Component({
   selector     : 'nz-demo-graph',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoGraphCustomizedComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoGraphCustomizedComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoGraphZhComponent {

@@ -15,20 +15,7 @@ import { NzDemoRadioSolidComponent } from './solid';
 
 @Component({
   selector     : 'nz-demo-radio',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoRadioBasicComponent,
-		NzDemoRadioDisableComponent,
-		NzDemoRadioRadiobuttonComponent,
-		NzDemoRadioRadiogroupMoreComponent,
-		NzDemoRadioRadiogroupOptionsComponent,
-		NzDemoRadioRadiogroupWithNameComponent,
-		NzDemoRadioRadiogroupComponent,
-		NzDemoRadioSizeComponent,
-		NzDemoRadioSolidComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoRadioBasicComponent, NzDemoRadioDisableComponent, NzDemoRadioRadiobuttonComponent, NzDemoRadioRadiogroupMoreComponent, NzDemoRadioRadiogroupOptionsComponent, NzDemoRadioRadiogroupWithNameComponent, NzDemoRadioRadiogroupComponent, NzDemoRadioSizeComponent, NzDemoRadioSolidComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoRadioZhComponent {

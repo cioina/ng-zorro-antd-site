@@ -12,17 +12,7 @@ import { NzDemoImageServiceComponent } from './service';
 
 @Component({
   selector     : 'nz-demo-image',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoImageBasicComponent,
-		NzDemoImageControlledPreviewComponent,
-		NzDemoImageFallbackComponent,
-		NzDemoImagePlaceholderComponent,
-		NzDemoImagePreviewGroupComponent,
-		NzDemoImageServiceComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoImageBasicComponent, NzDemoImageControlledPreviewComponent, NzDemoImageFallbackComponent, NzDemoImagePlaceholderComponent, NzDemoImagePreviewGroupComponent, NzDemoImageServiceComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoImageEnComponent {

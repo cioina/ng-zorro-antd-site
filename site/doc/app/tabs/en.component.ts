@@ -22,27 +22,7 @@ import { NzDemoTabsSlideComponent } from './slide';
 
 @Component({
   selector     : 'nz-demo-tabs',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTabsBasicComponent,
-		NzDemoTabsCardTopComponent,
-		NzDemoTabsCardComponent,
-		NzDemoTabsCenteredComponent,
-		NzDemoTabsCustomAddTriggerComponent,
-		NzDemoTabsDisabledComponent,
-		NzDemoTabsDraggableComponent,
-		NzDemoTabsEditableCardComponent,
-		NzDemoTabsExtraComponent,
-		NzDemoTabsGuardComponent,
-		NzDemoTabsIconComponent,
-		NzDemoTabsLazyComponent,
-		NzDemoTabsLinkRouterComponent,
-		NzDemoTabsPositionComponent,
-		NzDemoTabsSizeComponent,
-		NzDemoTabsSlideComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTabsBasicComponent, NzDemoTabsCardTopComponent, NzDemoTabsCardComponent, NzDemoTabsCenteredComponent, NzDemoTabsCustomAddTriggerComponent, NzDemoTabsDisabledComponent, NzDemoTabsDraggableComponent, NzDemoTabsEditableCardComponent, NzDemoTabsExtraComponent, NzDemoTabsGuardComponent, NzDemoTabsIconComponent, NzDemoTabsLazyComponent, NzDemoTabsLinkRouterComponent, NzDemoTabsPositionComponent, NzDemoTabsSizeComponent, NzDemoTabsSlideComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoTabsEnComponent {

@@ -16,21 +16,7 @@ import { NzDemoDropdownTriggerComponent } from './trigger';
 
 @Component({
   selector     : 'nz-demo-dropdown',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoDropdownArrowComponent,
-		NzDemoDropdownBasicComponent,
-		NzDemoDropdownContextMenuComponent,
-		NzDemoDropdownDropdownButtonComponent,
-		NzDemoDropdownEventComponent,
-		NzDemoDropdownItemComponent,
-		NzDemoDropdownOverlayVisibleComponent,
-		NzDemoDropdownPlacementComponent,
-		NzDemoDropdownSubMenuComponent,
-		NzDemoDropdownTriggerComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoDropdownArrowComponent, NzDemoDropdownBasicComponent, NzDemoDropdownContextMenuComponent, NzDemoDropdownDropdownButtonComponent, NzDemoDropdownEventComponent, NzDemoDropdownItemComponent, NzDemoDropdownOverlayVisibleComponent, NzDemoDropdownPlacementComponent, NzDemoDropdownSubMenuComponent, NzDemoDropdownTriggerComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoDropdownZhComponent {

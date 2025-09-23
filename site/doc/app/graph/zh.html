@@ -4,10 +4,9 @@
     <nz-link nzHref="#components-graph-demo-customized" nzTitle="自定义"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Graph<span class="subtitle">流程图</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/graph/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Graph
+	<span class="subtitle">流程图</span>
 </h1>
 
   <component-meta name="graph" description="渲染流程图。" language="zh"></component-meta>
@@ -16,19 +15,14 @@
 <p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
 <p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
 </blockquote>
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 GRAPH 图时使用。</p>
-<blockquote>
-<p>目前组件依赖 d3-drag d3-zoom d3-selection d3-transition d3-shape 用于绘制相关属性（可能会在之后的版本中逐步替换）</p>
-</blockquote>
-<h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -40,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:graph-customized <name>"
   nzComponentName="NzDemoGraphCustomizedComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/graph/demo/customized.md'"
 >
@@ -52,7 +46,12 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>安装依赖：</p>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 GRAPH 图时使用。</p>
+<blockquote>
+<p>目前组件依赖 d3-drag d3-zoom d3-selection d3-transition d3-shape 用于绘制相关属性（可能会在之后的版本中逐步替换）</p>
+</blockquote>
+<h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>安装依赖：</p>
 <pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> dagre-compound dagre d3-transition d3-zoom d3-selection d3-shape d3-drag &#64;types/d3
 </code></pre><h3 id="nz-graph"><span>nz-graph</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-graph'" class="anchor">#</a></h3><table>
 <thead>

@@ -3,7 +3,6 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-animations-zh',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './animations-zh.html'
 })

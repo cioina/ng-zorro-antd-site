@@ -14,19 +14,7 @@ import { NzDemoTagStatusComponent } from './status';
 
 @Component({
   selector     : 'nz-demo-tag',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTagBasicComponent,
-		NzDemoTagBorderlessComponent,
-		NzDemoTagCheckableComponent,
-		NzDemoTagColorfulComponent,
-		NzDemoTagControlComponent,
-		NzDemoTagHotTagsComponent,
-		NzDemoTagIconComponent,
-		NzDemoTagStatusComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTagBasicComponent, NzDemoTagBorderlessComponent, NzDemoTagCheckableComponent, NzDemoTagColorfulComponent, NzDemoTagControlComponent, NzDemoTagHotTagsComponent, NzDemoTagIconComponent, NzDemoTagStatusComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoTagZhComponent {

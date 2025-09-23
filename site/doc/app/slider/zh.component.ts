@@ -15,20 +15,7 @@ import { NzDemoSliderVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-slider',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSliderBasicComponent,
-		NzDemoSliderEventComponent,
-		NzDemoSliderIconSliderComponent,
-		NzDemoSliderInputNumberComponent,
-		NzDemoSliderMarkComponent,
-		NzDemoSliderReverseComponent,
-		NzDemoSliderTipFormatterComponent,
-		NzDemoSliderTooltipComponent,
-		NzDemoSliderVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSliderBasicComponent, NzDemoSliderEventComponent, NzDemoSliderIconSliderComponent, NzDemoSliderInputNumberComponent, NzDemoSliderMarkComponent, NzDemoSliderReverseComponent, NzDemoSliderTipFormatterComponent, NzDemoSliderTooltipComponent, NzDemoSliderVerticalComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoSliderZhComponent {

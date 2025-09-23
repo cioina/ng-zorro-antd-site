@@ -4,26 +4,21 @@
     <nz-link nzHref="#components-modal-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-modal-demo-async" nzTitle="异步关闭"></nz-link><nz-link nzHref="#components-modal-demo-footer" nzTitle="自定义组成部分"></nz-link><nz-link nzHref="#components-modal-demo-footer2" nzTitle="自定义页脚"></nz-link><nz-link nzHref="#components-modal-demo-confirm" nzTitle="确认对话框"></nz-link><nz-link nzHref="#components-modal-demo-confirm-promise" nzTitle="确认对话框"></nz-link><nz-link nzHref="#components-modal-demo-info" nzTitle="信息提示"></nz-link><nz-link nzHref="#components-modal-demo-locale" nzTitle="国际化"></nz-link><nz-link nzHref="#components-modal-demo-manual" nzTitle="手动移除"></nz-link><nz-link nzHref="#components-modal-demo-position" nzTitle="自定义位置"></nz-link><nz-link nzHref="#components-modal-demo-service" nzTitle="服务方式创建"></nz-link><nz-link nzHref="#components-modal-demo-draggable" nzTitle="可拖拽"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Modal<span class="subtitle">对话框</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Modal
+	<span class="subtitle">对话框</span>
 </h1>
 
   <component-meta name="modal" description="展示一个对话框，提供标题、内容区、操作区。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 <code>Modal</code> 在当前页面正中打开一个浮层，承载相应的操作。</p>
-<p>另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 <code>NzModalService.confirm()</code> 等方法。</p>
-<p>推荐使用加载 Component 的方式弹出 Modal，这样弹出层的 Component 逻辑可以与外层 Component 完全隔离，并且做到可以随时复用，</p>
-<p>在弹出层 Component 中可以通过依赖注入<code>NzModalRef</code>方式直接获取模态框的组件实例，用于控制在弹出层组件中控制模态框行为。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -35,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-basic <name>"
   nzComponentName="NzDemoModalBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/basic.md'"
 >
@@ -53,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-footer <name>"
   nzComponentName="NzDemoModalFooterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/footer.md'"
 >
@@ -72,7 +67,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-confirm <name>"
   nzComponentName="NzDemoModalConfirmComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/confirm.md'"
 >
@@ -90,7 +85,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-info <name>"
   nzComponentName="NzDemoModalInfoComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/info.md'"
 >
@@ -108,7 +103,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-manual <name>"
   nzComponentName="NzDemoModalManualComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/manual.md'"
 >
@@ -126,7 +121,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-service <name>"
   nzComponentName="NzDemoModalServiceComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/service.md'"
 >
@@ -148,7 +143,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-async <name>"
   nzComponentName="NzDemoModalAsyncComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/async.md'"
 >
@@ -166,7 +161,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-footer2 <name>"
   nzComponentName="NzDemoModalFooter2Component"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/footer2.md'"
 >
@@ -184,7 +179,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-confirm-promise <name>"
   nzComponentName="NzDemoModalConfirmPromiseComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/confirm-promise.md'"
 >
@@ -202,7 +197,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-locale <name>"
   nzComponentName="NzDemoModalLocaleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/locale.md'"
 >
@@ -220,7 +215,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-position <name>"
   nzComponentName="NzDemoModalPositionComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/position.md'"
 >
@@ -241,7 +236,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:modal-draggable <name>"
   nzComponentName="NzDemoModalDraggableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/draggable.md'"
 >
@@ -254,7 +249,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmodalservice"><span>NzModalService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmodalservice'" class="anchor">#</a></h3><p>对话框当前分为 2 种模式，<code>普通模式</code> 和 <code>确认框模式</code>（即<code>Confirm</code>对话框，通过调用<code>confirm/info/success/error/warning</code>弹出），两种模式对 API 的支持程度稍有不同。</p>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 <code>Modal</code> 在当前页面正中打开一个浮层，承载相应的操作。</p>
+<p>另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 <code>NzModalService.confirm()</code> 等方法。</p>
+<p>推荐使用加载 Component 的方式弹出 Modal，这样弹出层的 Component 逻辑可以与外层 Component 完全隔离，并且做到可以随时复用，</p>
+<p>在弹出层 Component 中可以通过依赖注入<code>NzModalRef</code>方式直接获取模态框的组件实例，用于控制在弹出层组件中控制模态框行为。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmodalservice"><span>NzModalService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmodalservice'" class="anchor">#</a></h3><p>对话框当前分为 2 种模式，<code>普通模式</code> 和 <code>确认框模式</code>（即<code>Confirm</code>对话框，通过调用<code>confirm/info/success/error/warning</code>弹出），两种模式对 API 的支持程度稍有不同。</p>
 <table>
 <thead>
 <tr>

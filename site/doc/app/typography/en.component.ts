@@ -12,17 +12,7 @@ import { NzDemoTypographyTitleComponent } from './title';
 
 @Component({
   selector     : 'nz-demo-typography',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTypographyBasicComponent,
-		NzDemoTypographyEllipsisComponent,
-		NzDemoTypographyInteractiveComponent,
-		NzDemoTypographySuffixComponent,
-		NzDemoTypographyTextComponent,
-		NzDemoTypographyTitleComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTypographyBasicComponent, NzDemoTypographyEllipsisComponent, NzDemoTypographyInteractiveComponent, NzDemoTypographySuffixComponent, NzDemoTypographyTextComponent, NzDemoTypographyTitleComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoTypographyEnComponent {

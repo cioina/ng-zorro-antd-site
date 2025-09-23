@@ -12,17 +12,7 @@ import { NzDemoPageHeaderResponsiveComponent } from './responsive';
 
 @Component({
   selector     : 'nz-demo-page-header',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoPageHeaderActionsComponent,
-		NzDemoPageHeaderBasicComponent,
-		NzDemoPageHeaderBreadcrumbComponent,
-		NzDemoPageHeaderContentComponent,
-		NzDemoPageHeaderGhostComponent,
-		NzDemoPageHeaderResponsiveComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoPageHeaderActionsComponent, NzDemoPageHeaderBasicComponent, NzDemoPageHeaderBreadcrumbComponent, NzDemoPageHeaderContentComponent, NzDemoPageHeaderGhostComponent, NzDemoPageHeaderResponsiveComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoPageHeaderEnComponent {

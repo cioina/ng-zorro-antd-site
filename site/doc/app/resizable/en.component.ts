@@ -14,19 +14,7 @@ import { NzDemoResizableTableComponent } from './table';
 
 @Component({
   selector     : 'nz-demo-resizable',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoResizableBasicComponent,
-		NzDemoResizableCustomizeComponent,
-		NzDemoResizableDrawerComponent,
-		NzDemoResizableGridComponent,
-		NzDemoResizableLayoutComponent,
-		NzDemoResizableLockAspectRatioComponent,
-		NzDemoResizablePreviewComponent,
-		NzDemoResizableTableComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoResizableBasicComponent, NzDemoResizableCustomizeComponent, NzDemoResizableDrawerComponent, NzDemoResizableGridComponent, NzDemoResizableLayoutComponent, NzDemoResizableLockAspectRatioComponent, NzDemoResizablePreviewComponent, NzDemoResizableTableComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoResizableEnComponent {

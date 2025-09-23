@@ -9,14 +9,7 @@ import { NzDemoBackTopTargetComponent } from './target';
 
 @Component({
   selector     : 'nz-demo-back-top',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoBackTopBasicComponent,
-		NzDemoBackTopCustomComponent,
-		NzDemoBackTopTargetComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoBackTopBasicComponent, NzDemoBackTopCustomComponent, NzDemoBackTopTargetComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoBackTopZhComponent {

@@ -16,21 +16,7 @@ import { NzDemoMenuVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-menu',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoMenuHorizontalPositionComponent,
-		NzDemoMenuHorizontalComponent,
-		NzDemoMenuInlineCollapsedComponent,
-		NzDemoMenuInlineComponent,
-		NzDemoMenuRecursiveComponent,
-		NzDemoMenuRouterComponent,
-		NzDemoMenuSiderCurrentComponent,
-		NzDemoMenuSwitchModeComponent,
-		NzDemoMenuThemeComponent,
-		NzDemoMenuVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoMenuHorizontalPositionComponent, NzDemoMenuHorizontalComponent, NzDemoMenuInlineCollapsedComponent, NzDemoMenuInlineComponent, NzDemoMenuRecursiveComponent, NzDemoMenuRouterComponent, NzDemoMenuSiderCurrentComponent, NzDemoMenuSwitchModeComponent, NzDemoMenuThemeComponent, NzDemoMenuVerticalComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoMenuZhComponent {

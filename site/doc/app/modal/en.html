@@ -4,29 +4,21 @@
     <nz-link nzHref="#components-modal-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-modal-demo-async" nzTitle="Asynchronously close"></nz-link><nz-link nzHref="#components-modal-demo-footer" nzTitle="Customized Parts"></nz-link><nz-link nzHref="#components-modal-demo-footer2" nzTitle="Customized Footer"></nz-link><nz-link nzHref="#components-modal-demo-confirm" nzTitle="Confirmation modal dialog"></nz-link><nz-link nzHref="#components-modal-demo-confirm-promise" nzTitle="Confirmation modal dialog"></nz-link><nz-link nzHref="#components-modal-demo-info" nzTitle="Information modal dialog"></nz-link><nz-link nzHref="#components-modal-demo-locale" nzTitle="Internationalization"></nz-link><nz-link nzHref="#components-modal-demo-manual" nzTitle="Manual to destroy"></nz-link><nz-link nzHref="#components-modal-demo-position" nzTitle="To customize the position of modal"></nz-link><nz-link nzHref="#components-modal-demo-service" nzTitle="Modal's service"></nz-link><nz-link nzHref="#components-modal-demo-draggable" nzTitle="Draggable"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Modal<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Modal
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="modal" description="Display a modal dialog box, providing a title, content area, and action buttons." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When requiring users to interact with the application without jumping to a new page to interrupt the user&#39;s workflow,
-you can use <code>Modal</code> to create a new floating layer over the current page for user-getting feedback or information
-purposes. Additionally, if you need to show a simple confirmation dialog, you can use <code>NzModalService.confirm()</code> and so
-on.</p>
-<p>It is recommended to use the <code>Component</code> way to pop up the Modal so that the component logic of the popup layer can be
-completely isolated from the outer component and reused at any time. In the popup layer component, you can obtain
-Modal&#39;s component instance by injecting <code>NzModalRef</code> to control the behavior of the modal box.</p>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -38,7 +30,7 @@ Modal&#39;s component instance by injecting <code>NzModalRef</code> to control t
   nzGenerateCommand="ng g ng-zorro-antd:modal-basic <name>"
   nzComponentName="NzDemoModalBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/basic.md'"
 >
@@ -56,7 +48,7 @@ Modal&#39;s component instance by injecting <code>NzModalRef</code> to control t
   nzGenerateCommand="ng g ng-zorro-antd:modal-footer <name>"
   nzComponentName="NzDemoModalFooterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/footer.md'"
 >
@@ -77,7 +69,7 @@ the modal dialog will be closed.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-confirm <name>"
   nzComponentName="NzDemoModalConfirmComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/confirm.md'"
 >
@@ -95,7 +87,7 @@ the modal dialog will be closed.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-info <name>"
   nzComponentName="NzDemoModalInfoComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/info.md'"
 >
@@ -113,7 +105,7 @@ the modal dialog will be closed.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-manual <name>"
   nzComponentName="NzDemoModalManualComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/manual.md'"
 >
@@ -131,7 +123,7 @@ the modal dialog will be closed.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-service <name>"
   nzComponentName="NzDemoModalServiceComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/service.md'"
 >
@@ -153,7 +145,7 @@ the modal dialog will be closed.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-async <name>"
   nzComponentName="NzDemoModalAsyncComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/async.md'"
 >
@@ -172,7 +164,7 @@ you can use this pattern when you submit a form.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-footer2 <name>"
   nzComponentName="NzDemoModalFooter2Component"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/footer2.md'"
 >
@@ -190,7 +182,7 @@ you can use this pattern when you submit a form.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-confirm-promise <name>"
   nzComponentName="NzDemoModalConfirmPromiseComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/confirm-promise.md'"
 >
@@ -209,7 +201,7 @@ delay closing the dialog.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-locale <name>"
   nzComponentName="NzDemoModalLocaleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/locale.md'"
 >
@@ -227,7 +219,7 @@ delay closing the dialog.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-position <name>"
   nzComponentName="NzDemoModalPositionComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/position.md'"
 >
@@ -248,7 +240,7 @@ delay closing the dialog.</p>
   nzGenerateCommand="ng g ng-zorro-antd:modal-draggable <name>"
   nzComponentName="NzDemoModalDraggableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/modal/demo/draggable.md'"
 >
@@ -261,7 +253,14 @@ delay closing the dialog.</p>
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmodalservice"><span>NzModalService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmodalservice'" class="anchor">#</a></h3><p>The dialog is currently divided into 2 modes, <code>normal mode</code> and <code>confirm box mode</code> (for instance, the <code>Confirm</code> dialog,
+<section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When requiring users to interact with the application without jumping to a new page to interrupt the user&#39;s workflow,
+you can use <code>Modal</code> to create a new floating layer over the current page for user-getting feedback or information
+purposes. Additionally, if you need to show a simple confirmation dialog, you can use <code>NzModalService.confirm()</code> and so
+on.</p>
+<p>It is recommended to use the <code>Component</code> way to pop up the Modal so that the component logic of the popup layer can be
+completely isolated from the outer component and reused at any time. In the popup layer component, you can obtain
+Modal&#39;s component instance by injecting <code>NzModalRef</code> to control the behavior of the modal box.</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmodalservice"><span>NzModalService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmodalservice'" class="anchor">#</a></h3><p>The dialog is currently divided into 2 modes, <code>normal mode</code> and <code>confirm box mode</code> (for instance, the <code>Confirm</code> dialog,
 which is called by <code>confirm/info/success/error/warning</code>). The degree of API support for the two modes is slightly
 different.</p>
 <table>

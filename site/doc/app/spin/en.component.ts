@@ -13,18 +13,7 @@ import { NzDemoSpinTipComponent } from './tip';
 
 @Component({
   selector     : 'nz-demo-spin',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSpinBasicComponent,
-		NzDemoSpinCustomIndicatorComponent,
-		NzDemoSpinDelayAndDebounceComponent,
-		NzDemoSpinInsideComponent,
-		NzDemoSpinNestedComponent,
-		NzDemoSpinSizeComponent,
-		NzDemoSpinTipComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSpinBasicComponent, NzDemoSpinCustomIndicatorComponent, NzDemoSpinDelayAndDebounceComponent, NzDemoSpinInsideComponent, NzDemoSpinNestedComponent, NzDemoSpinSizeComponent, NzDemoSpinTipComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoSpinEnComponent {

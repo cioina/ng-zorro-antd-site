@@ -4,32 +4,21 @@
     <nz-link nzHref="#components-flex-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-flex-demo-align" nzTitle="Align"></nz-link><nz-link nzHref="#components-flex-demo-gap" nzTitle="Gap"></nz-link><nz-link nzHref="#components-flex-demo-wrap" nzTitle="Wrap"></nz-link><nz-link nzHref="#components-flex-demo-combination" nzTitle="Combination"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Flex<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Flex
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="flex" description="A flex layout container for alignment." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>Good for setting spacing between elements.</li>
-<li>Suitable for setting various horizontal and vertical alignments.</li>
-</ul>
-<h3 id="difference_with_space_component"><span>Difference with Space component</span><a onclick="window.location.hash = 'difference_with_space_component'" class="anchor">#</a></h3><ul>
-<li>Space is used to set the spacing between inline elements. It will add a wrapper element for each child element for
-inline alignment. Suitable for equidistant arrangement of multiple child elements in rows and columns.</li>
-<li>Flex is used to set the layout of block-level elements. It does not add a wrapper element. Suitable for layout of
-child elements in vertical or horizontal direction, and provides more flexibility and control.</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -41,7 +30,7 @@ child elements in vertical or horizontal direction, and provides more flexibilit
   nzGenerateCommand="ng g ng-zorro-antd:flex-basic <name>"
   nzComponentName="NzDemoFlexBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/basic.md'"
 >
@@ -59,7 +48,7 @@ child elements in vertical or horizontal direction, and provides more flexibilit
   nzGenerateCommand="ng g ng-zorro-antd:flex-align <name>"
   nzComponentName="NzDemoFlexAlignComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/align.md'"
 >
@@ -77,7 +66,7 @@ child elements in vertical or horizontal direction, and provides more flexibilit
   nzGenerateCommand="ng g ng-zorro-antd:flex-gap <name>"
   nzComponentName="NzDemoFlexGapComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/gap.md'"
 >
@@ -95,7 +84,7 @@ child elements in vertical or horizontal direction, and provides more flexibilit
   nzGenerateCommand="ng g ng-zorro-antd:flex-wrap <name>"
   nzComponentName="NzDemoFlexWrapComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/wrap.md'"
 >
@@ -113,7 +102,7 @@ child elements in vertical or horizontal direction, and provides more flexibilit
   nzGenerateCommand="ng g ng-zorro-antd:flex-combination <name>"
   nzComponentName="NzDemoFlexCombinationComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/combination.md'"
 >
@@ -125,7 +114,17 @@ child elements in vertical or horizontal direction, and provides more flexibilit
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-flex"><span>[nz-flex]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-flex'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>Good for setting spacing between elements.</li>
+<li>Suitable for setting various horizontal and vertical alignments.</li>
+</ul>
+<h3 id="difference_with_space_component"><span>Difference with Space component</span><a onclick="window.location.hash = 'difference_with_space_component'" class="anchor">#</a></h3><ul>
+<li>Space is used to set the spacing between inline elements. It will add a wrapper element for each child element for
+inline alignment. Suitable for equidistant arrangement of multiple child elements in rows and columns.</li>
+<li>Flex is used to set the layout of block-level elements. It does not add a wrapper element. Suitable for layout of
+child elements in vertical or horizontal direction, and provides more flexibility and control.</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-flex"><span>[nz-flex]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-flex'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>

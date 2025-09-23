@@ -13,18 +13,7 @@ import { NzDemoSplitterVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-splitter',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSplitterBasicComponent,
-		NzDemoSplitterCollapsibleComponent,
-		NzDemoSplitterComplexComponent,
-		NzDemoSplitterControlComponent,
-		NzDemoSplitterLazyComponent,
-		NzDemoSplitterMultipleComponent,
-		NzDemoSplitterVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSplitterBasicComponent, NzDemoSplitterCollapsibleComponent, NzDemoSplitterComplexComponent, NzDemoSplitterControlComponent, NzDemoSplitterLazyComponent, NzDemoSplitterMultipleComponent, NzDemoSplitterVerticalComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoSplitterEnComponent {

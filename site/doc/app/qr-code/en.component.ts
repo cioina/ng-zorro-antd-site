@@ -15,20 +15,7 @@ import { NzDemoQrCodeStatusComponent } from './status';
 
 @Component({
   selector     : 'nz-demo-qr-code',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoQrCodeBackgroundComponent,
-		NzDemoQrCodeBasicComponent,
-		NzDemoQrCodeColorComponent,
-		NzDemoQrCodeCustomStatusComponent,
-		NzDemoQrCodeDownloadComponent,
-		NzDemoQrCodeErrorLevelComponent,
-		NzDemoQrCodeIconComponent,
-		NzDemoQrCodePaddingComponent,
-		NzDemoQrCodeStatusComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoQrCodeBackgroundComponent, NzDemoQrCodeBasicComponent, NzDemoQrCodeColorComponent, NzDemoQrCodeCustomStatusComponent, NzDemoQrCodeDownloadComponent, NzDemoQrCodeErrorLevelComponent, NzDemoQrCodeIconComponent, NzDemoQrCodePaddingComponent, NzDemoQrCodeStatusComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoQrCodeEnComponent {

@@ -30,35 +30,7 @@ import { NzDemoSelectVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-select',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSelectAutomaticTokenizationComponent,
-		NzDemoSelectBasicComponent,
-		NzDemoSelectBigDataComponent,
-		NzDemoSelectCoordinateComponent,
-		NzDemoSelectCustomContentComponent,
-		NzDemoSelectCustomDropdownMenuComponent,
-		NzDemoSelectCustomTemplateComponent,
-		NzDemoSelectDefaultValueComponent,
-		NzDemoSelectHideSelectedComponent,
-		NzDemoSelectLabelInValueComponent,
-		NzDemoSelectMaxCountComponent,
-		NzDemoSelectMultipleComponent,
-		NzDemoSelectOptgroupComponent,
-		NzDemoSelectOptionsComponent,
-		NzDemoSelectPlacementComponent,
-		NzDemoSelectPrefixAndSuffixComponent,
-		NzDemoSelectScrollLoadComponent,
-		NzDemoSelectSearchBoxComponent,
-		NzDemoSelectSearchComponent,
-		NzDemoSelectSelectUsersComponent,
-		NzDemoSelectSizeComponent,
-		NzDemoSelectStatusComponent,
-		NzDemoSelectTagsComponent,
-		NzDemoSelectVariantComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSelectAutomaticTokenizationComponent, NzDemoSelectBasicComponent, NzDemoSelectBigDataComponent, NzDemoSelectCoordinateComponent, NzDemoSelectCustomContentComponent, NzDemoSelectCustomDropdownMenuComponent, NzDemoSelectCustomTemplateComponent, NzDemoSelectDefaultValueComponent, NzDemoSelectHideSelectedComponent, NzDemoSelectLabelInValueComponent, NzDemoSelectMaxCountComponent, NzDemoSelectMultipleComponent, NzDemoSelectOptgroupComponent, NzDemoSelectOptionsComponent, NzDemoSelectPlacementComponent, NzDemoSelectPrefixAndSuffixComponent, NzDemoSelectScrollLoadComponent, NzDemoSelectSearchBoxComponent, NzDemoSelectSearchComponent, NzDemoSelectSelectUsersComponent, NzDemoSelectSizeComponent, NzDemoSelectStatusComponent, NzDemoSelectTagsComponent, NzDemoSelectVariantComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoSelectEnComponent {

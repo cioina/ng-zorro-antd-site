@@ -11,16 +11,7 @@ import { NzDemoEmptySimpleComponent } from './simple';
 
 @Component({
   selector     : 'nz-demo-empty',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoEmptyBasicComponent,
-		NzDemoEmptyConfigComponent,
-		NzDemoEmptyCustomizeComponent,
-		NzDemoEmptyDescriptionComponent,
-		NzDemoEmptySimpleComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoEmptyBasicComponent, NzDemoEmptyConfigComponent, NzDemoEmptyCustomizeComponent, NzDemoEmptyDescriptionComponent, NzDemoEmptySimpleComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoEmptyEnComponent {

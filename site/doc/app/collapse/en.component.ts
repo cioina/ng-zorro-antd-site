@@ -16,21 +16,7 @@ import { NzDemoCollapseSizeComponent } from './size';
 
 @Component({
   selector     : 'nz-demo-collapse',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCollapseAccordionComponent,
-		NzDemoCollapseBasicComponent,
-		NzDemoCollapseBorderlessComponent,
-		NzDemoCollapseCollapsibleComponent,
-		NzDemoCollapseCustomComponent,
-		NzDemoCollapseExtraComponent,
-		NzDemoCollapseGhostComponent,
-		NzDemoCollapseMixComponent,
-		NzDemoCollapseNoarrowComponent,
-		NzDemoCollapseSizeComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCollapseAccordionComponent, NzDemoCollapseBasicComponent, NzDemoCollapseBorderlessComponent, NzDemoCollapseCollapsibleComponent, NzDemoCollapseCustomComponent, NzDemoCollapseExtraComponent, NzDemoCollapseGhostComponent, NzDemoCollapseMixComponent, NzDemoCollapseNoarrowComponent, NzDemoCollapseSizeComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCollapseEnComponent {

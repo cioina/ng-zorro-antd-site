@@ -4,10 +4,9 @@
     <nz-link nzHref="#components-resizable-demo-basic" nzTitle="Basic Usage"></nz-link><nz-link nzHref="#components-resizable-demo-customize" nzTitle="Customize"></nz-link><nz-link nzHref="#components-resizable-demo-lock-aspect-ratio" nzTitle="Lock Aspect Ratio"></nz-link><nz-link nzHref="#components-resizable-demo-preview" nzTitle="Preview"></nz-link><nz-link nzHref="#components-resizable-demo-grid" nzTitle="Grid"></nz-link><nz-link nzHref="#components-resizable-demo-layout" nzTitle="Layout"></nz-link><nz-link nzHref="#components-resizable-demo-drawer" nzTitle="Drawer"></nz-link><nz-link nzHref="#components-resizable-demo-table" nzTitle="Table"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Resizable<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Resizable
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="resizable" description="Resize element." language="en"></component-meta>
@@ -16,21 +15,14 @@
 <p>NG-ZORRO experiments are features that are released but not yet considered stable or production ready</p>
 <p>Developers and users can opt in into these features before they are fully released. But <strong>breaking changes</strong> may occur with any release.</p>
 </blockquote>
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to resize elements.</p>
-<ul>
-<li>Support preview</li>
-<li>Support Grids System</li>
-<li>Support for custom handles and preview styles</li>
-</ul>
-<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/resizable/style/entry.less'</span><span class="token punctuation">;</span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -42,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-basic <name>"
   nzComponentName="NzDemoResizableBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/basic.md'"
 >
@@ -60,7 +52,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-customize <name>"
   nzComponentName="NzDemoResizableCustomizeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/customize.md'"
 >
@@ -78,7 +70,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-lock-aspect-ratio <name>"
   nzComponentName="NzDemoResizableLockAspectRatioComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/lock-aspect-ratio.md'"
 >
@@ -96,7 +88,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-preview <name>"
   nzComponentName="NzDemoResizablePreviewComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/preview.md'"
 >
@@ -114,7 +106,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-grid <name>"
   nzComponentName="NzDemoResizableGridComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/grid.md'"
 >
@@ -132,7 +124,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-layout <name>"
   nzComponentName="NzDemoResizableLayoutComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/layout.md'"
 >
@@ -150,7 +142,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-drawer <name>"
   nzComponentName="NzDemoResizableDrawerComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/drawer.md'"
 >
@@ -168,7 +160,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:resizable-table <name>"
   nzComponentName="NzDemoResizableTableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/resizable/demo/table.md'"
 >
@@ -180,7 +172,14 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-resizable"><span>[nz-resizable]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-resizable'" class="anchor">#</a></h3><p>Resizable element the <code>position</code> attribute must be one of <code>&#39;relative&#39; | &#39;absolute&#39; | &#39;fixed&#39; |&#39;sticky&#39;</code>，default is <code>&#39;relative&#39;</code>.</p>
+</div><section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to resize elements.</p>
+<ul>
+<li>Support preview</li>
+<li>Support Grids System</li>
+<li>Support for custom handles and preview styles</li>
+</ul>
+<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/resizable/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-resizable"><span>[nz-resizable]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-resizable'" class="anchor">#</a></h3><p>Resizable element the <code>position</code> attribute must be one of <code>&#39;relative&#39; | &#39;absolute&#39; | &#39;fixed&#39; |&#39;sticky&#39;</code>，default is <code>&#39;relative&#39;</code>.</p>
 <pre><code class="language-ts"><span class="token keyword">interface</span> <span class="token class-name">NzResizeEvent</span> <span class="token punctuation">&#123;</span>
   width<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
   height<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>

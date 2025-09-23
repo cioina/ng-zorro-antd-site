@@ -35,40 +35,7 @@ import { NzDemoTableVirtualComponent } from './virtual';
 
 @Component({
   selector     : 'nz-demo-table',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTableAjaxComponent,
-		NzDemoTableBasicComponent,
-		NzDemoTableBorderedComponent,
-		NzDemoTableBreakWordComponent,
-		NzDemoTableColspanRowspanComponent,
-		NzDemoTableCustomColumnComponent,
-		NzDemoTableCustomFilterPanelComponent,
-		NzDemoTableDragSortingComponent,
-		NzDemoTableDynamicSettingsComponent,
-		NzDemoTableEditCellComponent,
-		NzDemoTableEditRowComponent,
-		NzDemoTableEllipsisComponent,
-		NzDemoTableExpandChildrenComponent,
-		NzDemoTableExpandIconComponent,
-		NzDemoTableExpandComponent,
-		NzDemoTableFixedColumnsHeaderComponent,
-		NzDemoTableFixedColumnsComponent,
-		NzDemoTableFixedHeaderComponent,
-		NzDemoTableGroupingColumnsComponent,
-		NzDemoTableMultipleSorterComponent,
-		NzDemoTableNestedTableComponent,
-		NzDemoTableResetFilterComponent,
-		NzDemoTableRowSelectionAndOperationComponent,
-		NzDemoTableRowSelectionCustomComponent,
-		NzDemoTableSizeComponent,
-		NzDemoTableSortFilterComponent,
-		NzDemoTableSummaryComponent,
-		NzDemoTableTemplateComponent,
-		NzDemoTableVirtualComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTableAjaxComponent, NzDemoTableBasicComponent, NzDemoTableBorderedComponent, NzDemoTableBreakWordComponent, NzDemoTableColspanRowspanComponent, NzDemoTableCustomColumnComponent, NzDemoTableCustomFilterPanelComponent, NzDemoTableDragSortingComponent, NzDemoTableDynamicSettingsComponent, NzDemoTableEditCellComponent, NzDemoTableEditRowComponent, NzDemoTableEllipsisComponent, NzDemoTableExpandChildrenComponent, NzDemoTableExpandIconComponent, NzDemoTableExpandComponent, NzDemoTableFixedColumnsHeaderComponent, NzDemoTableFixedColumnsComponent, NzDemoTableFixedHeaderComponent, NzDemoTableGroupingColumnsComponent, NzDemoTableMultipleSorterComponent, NzDemoTableNestedTableComponent, NzDemoTableResetFilterComponent, NzDemoTableRowSelectionAndOperationComponent, NzDemoTableRowSelectionCustomComponent, NzDemoTableSizeComponent, NzDemoTableSortFilterComponent, NzDemoTableSummaryComponent, NzDemoTableTemplateComponent, NzDemoTableVirtualComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoTableEnComponent {

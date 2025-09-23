@@ -10,15 +10,7 @@ import { NzDemoWaterMarkMultiLineComponent } from './multi-line';
 
 @Component({
   selector     : 'nz-demo-water-mark',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoWaterMarkBasicComponent,
-		NzDemoWaterMarkCustomComponent,
-		NzDemoWaterMarkImageComponent,
-		NzDemoWaterMarkMultiLineComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoWaterMarkBasicComponent, NzDemoWaterMarkCustomComponent, NzDemoWaterMarkImageComponent, NzDemoWaterMarkMultiLineComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoWaterMarkZhComponent {

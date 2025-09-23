@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-tree-view-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-tree-view-demo-checkbox" nzTitle="选择框"></nz-link><nz-link nzHref="#components-tree-view-demo-directory" nzTitle="目录"></nz-link><nz-link nzHref="#components-tree-view-demo-dynamic" nzTitle="异步加载数据"></nz-link><nz-link nzHref="#components-tree-view-demo-line" nzTitle="带连接线的树"></nz-link><nz-link nzHref="#components-tree-view-demo-editable" nzTitle="可编辑"></nz-link><nz-link nzHref="#components-tree-view-demo-search" nzTitle="搜索"></nz-link><nz-link nzHref="#components-tree-view-demo-virtual-scroll" nzTitle="虚拟滚动"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>TreeView<span class="subtitle">树视图</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	TreeView
+	<span class="subtitle">树视图</span>
 </h1>
 
   <component-meta name="tree-view" description="树视图组件，相比封装好的 Tree 组件具有更高的定制度和更好的性能。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>更基础的 Tree 组件，允许在模版中定义每个组成部分，并手动管理状态。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-basic <name>"
   nzComponentName="NzDemoTreeViewBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/basic.md'"
 >
@@ -50,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-directory <name>"
   nzComponentName="NzDemoTreeViewDirectoryComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/directory.md'"
 >
@@ -68,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-line <name>"
   nzComponentName="NzDemoTreeViewLineComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/line.md'"
 >
@@ -86,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-search <name>"
   nzComponentName="NzDemoTreeViewSearchComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/search.md'"
 >
@@ -107,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-checkbox <name>"
   nzComponentName="NzDemoTreeViewCheckboxComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/checkbox.md'"
 >
@@ -125,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-dynamic <name>"
   nzComponentName="NzDemoTreeViewDynamicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/dynamic.md'"
 >
@@ -143,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-editable <name>"
   nzComponentName="NzDemoTreeViewEditableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/editable.md'"
 >
@@ -161,7 +159,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tree-view-virtual-scroll <name>"
   nzComponentName="NzDemoTreeViewVirtualScrollComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tree-view/demo/virtual-scroll.md'"
 >
@@ -174,7 +172,8 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tree-view"><span>nz-tree-view</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-view'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>更基础的 Tree 组件，允许在模版中定义每个组成部分，并手动管理状态。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tree-view"><span>nz-tree-view</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-view'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

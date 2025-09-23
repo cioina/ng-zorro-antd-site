@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-calendar-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-calendar-demo-notice-calendar" nzTitle="通知事项日历"></nz-link><nz-link nzHref="#components-calendar-demo-card" nzTitle="卡片模式"></nz-link><nz-link nzHref="#components-calendar-demo-select" nzTitle="选择功能"></nz-link><nz-link nzHref="#components-calendar-demo-customize-header" nzTitle="自定义头部"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Calendar<span class="subtitle">日历</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/calendar/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Calendar
+	<span class="subtitle">日历</span>
 </h1>
 
   <component-meta name="calendar" description="按照日历形式展示数据的容器。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>当数据是日期或按照日期划分时，例如日程、课表、价格日历等，农历等。目前支持年/月切换。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:calendar-basic <name>"
   nzComponentName="NzDemoCalendarBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/calendar/demo/basic.md'"
 >
@@ -50,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:calendar-notice-calendar <name>"
   nzComponentName="NzDemoCalendarNoticeCalendarComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/calendar/demo/notice-calendar.md'"
 >
@@ -68,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:calendar-card <name>"
   nzComponentName="NzDemoCalendarCardComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/calendar/demo/card.md'"
 >
@@ -86,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:calendar-select <name>"
   nzComponentName="NzDemoCalendarSelectComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/calendar/demo/select.md'"
 >
@@ -104,7 +102,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:calendar-customize-header <name>"
   nzComponentName="NzDemoCalendarCustomizeHeaderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/calendar/demo/customize-header.md'"
 >
@@ -116,7 +114,8 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>**注意：**Calendar 的部分 locale 来自于 Angular 自身的国际化支持，需要在 <code>app.config.ts</code> 文件中 引入相应的 Angular 语言包。</p>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>当数据是日期或按照日期划分时，例如日程、课表、价格日历等，农历等。目前支持年/月切换。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>**注意：**Calendar 的部分 locale 来自于 Angular 自身的国际化支持，需要在 <code>app.config.ts</code> 文件中 引入相应的 Angular 语言包。</p>
 <p>例如：</p>
 <pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> registerLocaleData <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'&#64;angular/common'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> zh <span class="token keyword">from</span> <span class="token string">'&#64;angular/common/locales/zh'</span><span class="token punctuation">;</span>

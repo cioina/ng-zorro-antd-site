@@ -13,18 +13,7 @@ import { NzDemoPopoverTriggerTypeComponent } from './trigger-type';
 
 @Component({
   selector     : 'nz-demo-popover',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoPopoverArrowPointAtCenterComponent,
-		NzDemoPopoverBasicComponent,
-		NzDemoPopoverControlComponent,
-		NzDemoPopoverOverlayComponent,
-		NzDemoPopoverPlacementComponent,
-		NzDemoPopoverTemplateComponent,
-		NzDemoPopoverTriggerTypeComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoPopoverArrowPointAtCenterComponent, NzDemoPopoverBasicComponent, NzDemoPopoverControlComponent, NzDemoPopoverOverlayComponent, NzDemoPopoverPlacementComponent, NzDemoPopoverTemplateComponent, NzDemoPopoverTriggerTypeComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoPopoverZhComponent {

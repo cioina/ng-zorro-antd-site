@@ -4,27 +4,21 @@
     <nz-link nzHref="#components-carousel-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-carousel-demo-position" nzTitle="位置"></nz-link><nz-link nzHref="#components-carousel-demo-fade" nzTitle="渐显"></nz-link><nz-link nzHref="#components-carousel-demo-autoplay" nzTitle="自动切换"></nz-link><nz-link nzHref="#components-carousel-demo-custom" nzTitle="自定义切换效果"></nz-link><nz-link nzHref="#components-carousel-demo-loop" nzTitle="循环"></nz-link><nz-link nzHref="#components-carousel-demo-arrow" nzTitle="切换箭头"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Carousel<span class="subtitle">走马灯</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Carousel
+	<span class="subtitle">走马灯</span>
 </h1>
 
   <component-meta name="carousel" description="一组轮播的区域。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>当有一组平级的内容。</li>
-<li>当内容空间不足时，可以用走马灯的形式进行收纳，进行轮播展现。</li>
-<li>常用于一组图片或卡片轮播。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -36,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-basic <name>"
   nzComponentName="NzDemoCarouselBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/basic.md'"
 >
@@ -54,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-fade <name>"
   nzComponentName="NzDemoCarouselFadeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/fade.md'"
 >
@@ -72,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-custom <name>"
   nzComponentName="NzDemoCarouselCustomComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/custom.md'"
 >
@@ -90,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-arrow <name>"
   nzComponentName="NzDemoCarouselArrowComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/arrow.md'"
 >
@@ -111,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-position <name>"
   nzComponentName="NzDemoCarouselPositionComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/position.md'"
 >
@@ -129,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-autoplay <name>"
   nzComponentName="NzDemoCarouselAutoplayComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/autoplay.md'"
 >
@@ -147,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:carousel-loop <name>"
   nzComponentName="NzDemoCarouselLoopComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/carousel/demo/loop.md'"
 >
@@ -160,7 +154,12 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-carousel"><span>nz-carousel</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-carousel'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>当有一组平级的内容。</li>
+<li>当内容空间不足时，可以用走马灯的形式进行收纳，进行轮播展现。</li>
+<li>常用于一组图片或卡片轮播。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-carousel"><span>nz-carousel</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-carousel'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

@@ -4,38 +4,21 @@
     <nz-link nzHref="#components-button-demo-basic" nzTitle="按钮类型"></nz-link><nz-link nzHref="#components-button-demo-icon" nzTitle="图标按钮"></nz-link><nz-link nzHref="#components-button-demo-size" nzTitle="按钮尺寸"></nz-link><nz-link nzHref="#components-button-demo-disabled" nzTitle="不可用状态"></nz-link><nz-link nzHref="#components-button-demo-loading" nzTitle="加载中状态"></nz-link><nz-link nzHref="#components-button-demo-multiple" nzTitle="多个按钮组合"></nz-link><nz-link nzHref="#components-button-demo-ghost" nzTitle="幽灵按钮"></nz-link><nz-link nzHref="#components-button-demo-block" nzTitle="Block 按钮"></nz-link><nz-link nzHref="#components-button-demo-danger" nzTitle="危险按钮"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Button<span class="subtitle">按钮</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Button
+	<span class="subtitle">按钮</span>
 </h1>
 
   <component-meta name="button" description="按钮用于开始一个即时操作。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。</p>
-<p>在 Ant Design 中，我们有五种按钮。</p>
-<ul>
-<li>🔵 主按钮：用于主行动点，一个操作区域只能有一个主按钮。</li>
-<li>⚪️ 默认按钮：用于没有主次之分的一组行动点。</li>
-<li>🫥 虚线按钮：常用于添加操作。</li>
-<li>🔤 文本按钮：用于最次级的行动点。</li>
-<li>🔗 链接按钮：一般用于链接，即导航至某位置。</li>
-</ul>
-<p>以及四种状态属性与上面配合使用。</p>
-<ul>
-<li>⚠️ 危险：删除/移动/修改权限等危险操作，一般需要二次确认。</li>
-<li>👻 幽灵：用于背景色比较复杂的地方，常用在首页/产品页等展示场景。</li>
-<li>🚫 禁用：行动点不可用的时候，一般需要文案解释。</li>
-<li>🔃 加载中：用于异步操作等待反馈的时候，也可以避免多次提交。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -47,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-basic <name>"
   nzComponentName="NzDemoButtonBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/basic.md'"
 >
@@ -65,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-size <name>"
   nzComponentName="NzDemoButtonSizeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/size.md'"
 >
@@ -84,7 +67,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-loading <name>"
   nzComponentName="NzDemoButtonLoadingComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/loading.md'"
 >
@@ -102,7 +85,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-ghost <name>"
   nzComponentName="NzDemoButtonGhostComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/ghost.md'"
 >
@@ -120,7 +103,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-danger <name>"
   nzComponentName="NzDemoButtonDangerComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/danger.md'"
 >
@@ -141,7 +124,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-icon <name>"
   nzComponentName="NzDemoButtonIconComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/icon.md'"
 >
@@ -159,7 +142,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-disabled <name>"
   nzComponentName="NzDemoButtonDisabledComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/disabled.md'"
 >
@@ -177,7 +160,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-multiple <name>"
   nzComponentName="NzDemoButtonMultipleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/multiple.md'"
 >
@@ -195,7 +178,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:button-block <name>"
   nzComponentName="NzDemoButtonBlockComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/button/demo/block.md'"
 >
@@ -208,7 +191,23 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-button"><span>[nz-button]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-button'" class="anchor">#</a></h3><blockquote>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。</p>
+<p>在 Ant Design 中，我们有五种按钮。</p>
+<ul>
+<li>🔵 主按钮：用于主行动点，一个操作区域只能有一个主按钮。</li>
+<li>⚪️ 默认按钮：用于没有主次之分的一组行动点。</li>
+<li>🫥 虚线按钮：常用于添加操作。</li>
+<li>🔤 文本按钮：用于最次级的行动点。</li>
+<li>🔗 链接按钮：一般用于链接，即导航至某位置。</li>
+</ul>
+<p>以及四种状态属性与上面配合使用。</p>
+<ul>
+<li>⚠️ 危险：删除/移动/修改权限等危险操作，一般需要二次确认。</li>
+<li>👻 幽灵：用于背景色比较复杂的地方，常用在首页/产品页等展示场景。</li>
+<li>🚫 禁用：行动点不可用的时候，一般需要文案解释。</li>
+<li>🔃 加载中：用于异步操作等待反馈的时候，也可以避免多次提交。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-button"><span>[nz-button]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-button'" class="anchor">#</a></h3><blockquote>
 <p>注意：nz-button 是一个 Directive，除以下表格之外还支持例如 disabled 等原生 button 的<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button" target="_blank" rel="noopener">所有属性</a>。</p>
 </blockquote>
 <p>通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：<code>nzType</code> -&gt; <code>nzShape</code> -&gt; <code>nzSize</code> -&gt; <code>nzLoading</code> -&gt; <code>disabled</code></p>

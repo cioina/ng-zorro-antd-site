@@ -13,18 +13,7 @@ import { NzDemoAnchorTargetOffsetComponent } from './target-offset';
 
 @Component({
   selector     : 'nz-demo-anchor',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoAnchorBasicComponent,
-		NzDemoAnchorCustomizeHighlightComponent,
-		NzDemoAnchorHorizontalAnchorComponent,
-		NzDemoAnchorOnChangeComponent,
-		NzDemoAnchorOnClickComponent,
-		NzDemoAnchorStaticComponent,
-		NzDemoAnchorTargetOffsetComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoAnchorBasicComponent, NzDemoAnchorCustomizeHighlightComponent, NzDemoAnchorHorizontalAnchorComponent, NzDemoAnchorOnChangeComponent, NzDemoAnchorOnClickComponent, NzDemoAnchorStaticComponent, NzDemoAnchorTargetOffsetComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoAnchorEnComponent {

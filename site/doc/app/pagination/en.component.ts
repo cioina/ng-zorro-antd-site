@@ -15,20 +15,7 @@ import { NzDemoPaginationTotalComponent } from './total';
 
 @Component({
   selector     : 'nz-demo-pagination',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoPaginationBasicComponent,
-		NzDemoPaginationChangerComponent,
-		NzDemoPaginationControlledComponent,
-		NzDemoPaginationItemRenderComponent,
-		NzDemoPaginationJumpComponent,
-		NzDemoPaginationMiniComponent,
-		NzDemoPaginationMoreComponent,
-		NzDemoPaginationSimpleComponent,
-		NzDemoPaginationTotalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoPaginationBasicComponent, NzDemoPaginationChangerComponent, NzDemoPaginationControlledComponent, NzDemoPaginationItemRenderComponent, NzDemoPaginationJumpComponent, NzDemoPaginationMiniComponent, NzDemoPaginationMoreComponent, NzDemoPaginationSimpleComponent, NzDemoPaginationTotalComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoPaginationEnComponent {

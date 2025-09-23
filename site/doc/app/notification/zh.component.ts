@@ -15,20 +15,7 @@ import { NzDemoNotificationWithIconComponent } from './with-icon';
 
 @Component({
   selector     : 'nz-demo-notification',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoNotificationBasicComponent,
-		NzDemoNotificationCustomIconComponent,
-		NzDemoNotificationCustomStyleComponent,
-		NzDemoNotificationDurationComponent,
-		NzDemoNotificationPlacementComponent,
-		NzDemoNotificationTemplateComponent,
-		NzDemoNotificationUpdateComponent,
-		NzDemoNotificationWithBtnComponent,
-		NzDemoNotificationWithIconComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoNotificationBasicComponent, NzDemoNotificationCustomIconComponent, NzDemoNotificationCustomStyleComponent, NzDemoNotificationDurationComponent, NzDemoNotificationPlacementComponent, NzDemoNotificationTemplateComponent, NzDemoNotificationUpdateComponent, NzDemoNotificationWithBtnComponent, NzDemoNotificationWithIconComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoNotificationZhComponent {

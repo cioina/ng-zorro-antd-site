@@ -19,24 +19,7 @@ import { NzDemoUploadUploadWithAliyunOssComponent } from './upload-with-aliyun-o
 
 @Component({
   selector     : 'nz-demo-upload',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoUploadAvatarComponent,
-		NzDemoUploadBasicComponent,
-		NzDemoUploadDefaultFileListComponent,
-		NzDemoUploadDirectoryComponent,
-		NzDemoUploadDragComponent,
-		NzDemoUploadFileListComponent,
-		NzDemoUploadPictureCardComponent,
-		NzDemoUploadPictureStyleComponent,
-		NzDemoUploadPngOnlyComponent,
-		NzDemoUploadPreviewFileComponent,
-		NzDemoUploadTransformFileComponent,
-		NzDemoUploadUploadManuallyComponent,
-		NzDemoUploadUploadWithAliyunOssComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoUploadAvatarComponent, NzDemoUploadBasicComponent, NzDemoUploadDefaultFileListComponent, NzDemoUploadDirectoryComponent, NzDemoUploadDragComponent, NzDemoUploadFileListComponent, NzDemoUploadPictureCardComponent, NzDemoUploadPictureStyleComponent, NzDemoUploadPngOnlyComponent, NzDemoUploadPreviewFileComponent, NzDemoUploadTransformFileComponent, NzDemoUploadUploadManuallyComponent, NzDemoUploadUploadWithAliyunOssComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoUploadEnComponent {

@@ -12,17 +12,7 @@ import { NzDemoPipesTrimComponent } from './trim';
 
 @Component({
   selector     : 'nz-demo-pipes',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoPipesAggregateComponent,
-		NzDemoPipesBytesComponent,
-		NzDemoPipesCssUnitComponent,
-		NzDemoPipesEllipsisComponent,
-		NzDemoPipesSanitizerComponent,
-		NzDemoPipesTrimComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoPipesAggregateComponent, NzDemoPipesBytesComponent, NzDemoPipesCssUnitComponent, NzDemoPipesEllipsisComponent, NzDemoPipesSanitizerComponent, NzDemoPipesTrimComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoPipesEnComponent {

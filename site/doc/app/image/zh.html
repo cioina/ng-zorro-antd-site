@@ -4,26 +4,21 @@
     <nz-link nzHref="#components-image-demo-basic" nzTitle="基本用法"></nz-link><nz-link nzHref="#components-image-demo-fallback" nzTitle="容错处理"></nz-link><nz-link nzHref="#components-image-demo-placeholder" nzTitle="渐进加载"></nz-link><nz-link nzHref="#components-image-demo-preview-group" nzTitle="多张图片预览"></nz-link><nz-link nzHref="#components-image-demo-service" nzTitle="服务方式创建预览层"></nz-link><nz-link nzHref="#components-image-demo-controlled-preview" nzTitle="受控的预览"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Image<span class="subtitle">图片</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Image
+	<span class="subtitle">图片</span>
 </h1>
 
   <component-meta name="image" description="可预览的图片。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>需要展示图片时使用。</li>
-<li>加载大图时渐进加载或加载失败时容错处理。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -35,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:image-basic <name>"
   nzComponentName="NzDemoImageBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/basic.md'"
 >
@@ -53,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:image-placeholder <name>"
   nzComponentName="NzDemoImagePlaceholderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/placeholder.md'"
 >
@@ -71,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:image-service <name>"
   nzComponentName="NzDemoImageServiceComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/service.md'"
 >
@@ -92,7 +87,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:image-fallback <name>"
   nzComponentName="NzDemoImageFallbackComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/fallback.md'"
 >
@@ -110,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:image-preview-group <name>"
   nzComponentName="NzDemoImagePreviewGroupComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/preview-group.md'"
 >
@@ -128,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:image-controlled-preview <name>"
   nzComponentName="NzDemoImageControlledPreviewComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/image/demo/controlled-preview.md'"
 >
@@ -141,7 +136,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>[nz-image]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要展示图片时使用。</li>
+<li>加载大图时渐进加载或加载失败时容错处理。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>[nz-image]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

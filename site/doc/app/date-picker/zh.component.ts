@@ -23,28 +23,7 @@ import { NzDemoDatePickerWeekNumberComponent } from './week-number';
 
 @Component({
   selector     : 'nz-demo-date-picker',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoDatePickerBasicComponent,
-		NzDemoDatePickerDateRenderComponent,
-		NzDemoDatePickerDisabledDateComponent,
-		NzDemoDatePickerDisabledComponent,
-		NzDemoDatePickerExtraFooterComponent,
-		NzDemoDatePickerFormatComponent,
-		NzDemoDatePickerInlineComponent,
-		NzDemoDatePickerPlacementComponent,
-		NzDemoDatePickerPresettedRangesComponent,
-		NzDemoDatePickerRangePickerComponent,
-		NzDemoDatePickerSizeComponent,
-		NzDemoDatePickerStartEndComponent,
-		NzDemoDatePickerStatusComponent,
-		NzDemoDatePickerSwitchComponent,
-		NzDemoDatePickerTimeComponent,
-		NzDemoDatePickerVariantComponent,
-		NzDemoDatePickerWeekNumberComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoDatePickerBasicComponent, NzDemoDatePickerDateRenderComponent, NzDemoDatePickerDisabledDateComponent, NzDemoDatePickerDisabledComponent, NzDemoDatePickerExtraFooterComponent, NzDemoDatePickerFormatComponent, NzDemoDatePickerInlineComponent, NzDemoDatePickerPlacementComponent, NzDemoDatePickerPresettedRangesComponent, NzDemoDatePickerRangePickerComponent, NzDemoDatePickerSizeComponent, NzDemoDatePickerStartEndComponent, NzDemoDatePickerStatusComponent, NzDemoDatePickerSwitchComponent, NzDemoDatePickerTimeComponent, NzDemoDatePickerVariantComponent, NzDemoDatePickerWeekNumberComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoDatePickerZhComponent {

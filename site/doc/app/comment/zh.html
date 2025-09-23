@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-comment-demo-basic" nzTitle="基本评论"></nz-link><nz-link nzHref="#components-comment-demo-list" nzTitle="配合列表组件"></nz-link><nz-link nzHref="#components-comment-demo-nested" nzTitle="嵌套评论"></nz-link><nz-link nzHref="#components-comment-demo-editor" nzTitle="回复框"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Comment<span class="subtitle">评论</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/comment/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Comment
+	<span class="subtitle">评论</span>
 </h1>
 
   <component-meta name="comment" description="对网站内容的反馈、评价和讨论。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>评论组件可用于对事物的讨论，例如页面、博客文章、问题等等。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:comment-basic <name>"
   nzComponentName="NzDemoCommentBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/comment/demo/basic.md'"
 >
@@ -50,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:comment-list <name>"
   nzComponentName="NzDemoCommentListComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/comment/demo/list.md'"
 >
@@ -68,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:comment-nested <name>"
   nzComponentName="NzDemoCommentNestedComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/comment/demo/nested.md'"
 >
@@ -86,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:comment-editor <name>"
   nzComponentName="NzDemoCommentEditorComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/comment/demo/editor.md'"
 >
@@ -98,7 +96,8 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-comment"><span>nz-comment</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-comment'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>评论组件可用于对事物的讨论，例如页面、博客文章、问题等等。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-comment"><span>nz-comment</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-comment'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>

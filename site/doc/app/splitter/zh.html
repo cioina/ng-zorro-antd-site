@@ -4,27 +4,21 @@
     <nz-link nzHref="#components-splitter-demo-basic" nzTitle="基本用法"></nz-link><nz-link nzHref="#components-splitter-demo-control" nzTitle="受控模式"></nz-link><nz-link nzHref="#components-splitter-demo-vertical" nzTitle="垂直方向"></nz-link><nz-link nzHref="#components-splitter-demo-collapsible" nzTitle="可折叠"></nz-link><nz-link nzHref="#components-splitter-demo-multiple" nzTitle="多面板"></nz-link><nz-link nzHref="#components-splitter-demo-complex" nzTitle="复杂组合"></nz-link><nz-link nzHref="#components-splitter-demo-lazy" nzTitle="延迟渲染模式"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Splitter<span class="subtitle">分隔面板</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Splitter
+	<span class="subtitle">分隔面板</span>
 </h1>
 
   <component-meta name="splitter" description="自由切分指定区域。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>可以水平或垂直地分隔区域。</li>
-<li>当需要自由拖拽调整各区域大小。</li>
-<li>当需要指定区域的最大最小宽高时。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -36,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-basic <name>"
   nzComponentName="NzDemoSplitterBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/basic.md'"
 >
@@ -54,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-vertical <name>"
   nzComponentName="NzDemoSplitterVerticalComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/vertical.md'"
 >
@@ -72,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-multiple <name>"
   nzComponentName="NzDemoSplitterMultipleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/multiple.md'"
 >
@@ -90,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-lazy <name>"
   nzComponentName="NzDemoSplitterLazyComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/lazy.md'"
 >
@@ -111,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-control <name>"
   nzComponentName="NzDemoSplitterControlComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/control.md'"
 >
@@ -129,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-collapsible <name>"
   nzComponentName="NzDemoSplitterCollapsibleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/collapsible.md'"
 >
@@ -147,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:splitter-complex <name>"
   nzComponentName="NzDemoSplitterComplexComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/complex.md'"
 >
@@ -160,7 +154,12 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-splitter"><span>nz-splitter</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-splitter'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>可以水平或垂直地分隔区域。</li>
+<li>当需要自由拖拽调整各区域大小。</li>
+<li>当需要指定区域的最大最小宽高时。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-splitter"><span>nz-splitter</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-splitter'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

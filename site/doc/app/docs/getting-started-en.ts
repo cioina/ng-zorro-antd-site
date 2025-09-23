@@ -3,7 +3,6 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-getting-started-en',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './getting-started-en.html'
 })

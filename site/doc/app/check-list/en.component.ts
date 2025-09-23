@@ -8,13 +8,7 @@ import { NzDemoCheckListCustomComponent } from './custom';
 
 @Component({
   selector     : 'nz-demo-check-list',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCheckListBasicComponent,
-		NzDemoCheckListCustomComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCheckListBasicComponent, NzDemoCheckListCustomComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCheckListEnComponent {

@@ -14,19 +14,7 @@ import { NzDemoCronExpressionUseComponent } from './use';
 
 @Component({
   selector     : 'nz-demo-cron-expression',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCronExpressionBasicComponent,
-		NzDemoCronExpressionBorderlessComponent,
-		NzDemoCronExpressionCollapseComponent,
-		NzDemoCronExpressionSemanticComponent,
-		NzDemoCronExpressionShortcutsComponent,
-		NzDemoCronExpressionSizeComponent,
-		NzDemoCronExpressionTypeComponent,
-		NzDemoCronExpressionUseComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCronExpressionBasicComponent, NzDemoCronExpressionBorderlessComponent, NzDemoCronExpressionCollapseComponent, NzDemoCronExpressionSemanticComponent, NzDemoCronExpressionShortcutsComponent, NzDemoCronExpressionSizeComponent, NzDemoCronExpressionTypeComponent, NzDemoCronExpressionUseComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCronExpressionEnComponent {

@@ -16,21 +16,7 @@ import { NzDemoCardTabsComponent } from './tabs';
 
 @Component({
   selector     : 'nz-demo-card',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCardBasicComponent,
-		NzDemoCardBorderLessComponent,
-		NzDemoCardFlexibleContentComponent,
-		NzDemoCardGridCardComponent,
-		NzDemoCardInColumnComponent,
-		NzDemoCardInnerComponent,
-		NzDemoCardLoadingComponent,
-		NzDemoCardMetaComponent,
-		NzDemoCardSimpleComponent,
-		NzDemoCardTabsComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCardBasicComponent, NzDemoCardBorderLessComponent, NzDemoCardFlexibleContentComponent, NzDemoCardGridCardComponent, NzDemoCardInColumnComponent, NzDemoCardInnerComponent, NzDemoCardLoadingComponent, NzDemoCardMetaComponent, NzDemoCardSimpleComponent, NzDemoCardTabsComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCardEnComponent {

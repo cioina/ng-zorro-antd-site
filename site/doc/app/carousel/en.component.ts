@@ -13,18 +13,7 @@ import { NzDemoCarouselPositionComponent } from './position';
 
 @Component({
   selector     : 'nz-demo-carousel',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCarouselArrowComponent,
-		NzDemoCarouselAutoplayComponent,
-		NzDemoCarouselBasicComponent,
-		NzDemoCarouselCustomComponent,
-		NzDemoCarouselFadeComponent,
-		NzDemoCarouselLoopComponent,
-		NzDemoCarouselPositionComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCarouselArrowComponent, NzDemoCarouselAutoplayComponent, NzDemoCarouselBasicComponent, NzDemoCarouselCustomComponent, NzDemoCarouselFadeComponent, NzDemoCarouselLoopComponent, NzDemoCarouselPositionComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCarouselEnComponent {

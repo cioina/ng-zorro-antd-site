@@ -4,10 +4,9 @@
     <nz-link nzHref="#components-experimental-image-demo-preloading" nzTitle="优先加载"></nz-link><nz-link nzHref="#components-experimental-image-demo-src-loader" nzTitle="使用 Src Loader"></nz-link><nz-link nzHref="#components-experimental-image-demo-auto-srcset" nzTitle="自动填充 srcset"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Image<span class="subtitle">图片</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Image
+	<span class="subtitle">图片</span>
 </h1>
 
   <component-meta name="experimental-image" description="实验性的图片组件。" language="zh"></component-meta>
@@ -16,24 +15,14 @@
 <p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
 <p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
 </blockquote>
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>需要浏览器优先加载图片时（需要在 SSR 下处理）。</li>
-<li>需要对高清显示器（如视网膜屏）优化时。</li>
-<li>使用图片 CDN 服务时。</li>
-<li>以及 <a href="/components/image/zh">Image documentation</a> 中的功能</li>
-<li>下一步计划<ul>
-<li>添加 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes" target="_blank" rel="noopener">sizes</a> 属性及响应式的支持</li>
-</ul>
-</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -45,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:experimental-image-preloading <name>"
   nzComponentName="NzDemoExperimentalImagePreloadingComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md'"
 >
@@ -67,7 +56,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:experimental-image-src-loader <name>"
   nzComponentName="NzDemoExperimentalImageSrcLoaderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md'"
 >
@@ -101,7 +90,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:experimental-image-auto-srcset <name>"
   nzComponentName="NzDemoExperimentalImageAutoSrcsetComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md'"
 >
@@ -113,7 +102,17 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>nz-image</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要浏览器优先加载图片时（需要在 SSR 下处理）。</li>
+<li>需要对高清显示器（如视网膜屏）优化时。</li>
+<li>使用图片 CDN 服务时。</li>
+<li>以及 <a href="/components/image/zh">Image documentation</a> 中的功能</li>
+<li>下一步计划<ul>
+<li>添加 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes" target="_blank" rel="noopener">sizes</a> 属性及响应式的支持</li>
+</ul>
+</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>nz-image</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

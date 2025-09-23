@@ -16,21 +16,7 @@ import { NzDemoFloatButtonTypeComponent } from './type';
 
 @Component({
   selector     : 'nz-demo-float-button',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoFloatButtonBasicComponent,
-		NzDemoFloatButtonDescriptionComponent,
-		NzDemoFloatButtonGroupMenuComponent,
-		NzDemoFloatButtonGroupPlacementComponent,
-		NzDemoFloatButtonGroupComponent,
-		NzDemoFloatButtonOpenComponent,
-		NzDemoFloatButtonShapeComponent,
-		NzDemoFloatButtonTooltipComponent,
-		NzDemoFloatButtonTopComponent,
-		NzDemoFloatButtonTypeComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoFloatButtonBasicComponent, NzDemoFloatButtonDescriptionComponent, NzDemoFloatButtonGroupMenuComponent, NzDemoFloatButtonGroupPlacementComponent, NzDemoFloatButtonGroupComponent, NzDemoFloatButtonOpenComponent, NzDemoFloatButtonShapeComponent, NzDemoFloatButtonTooltipComponent, NzDemoFloatButtonTopComponent, NzDemoFloatButtonTypeComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoFloatButtonEnComponent {

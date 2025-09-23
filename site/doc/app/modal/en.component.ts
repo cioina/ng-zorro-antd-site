@@ -18,23 +18,7 @@ import { NzDemoModalServiceComponent } from './service';
 
 @Component({
   selector     : 'nz-demo-modal',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoModalAsyncComponent,
-		NzDemoModalBasicComponent,
-		NzDemoModalConfirmPromiseComponent,
-		NzDemoModalConfirmComponent,
-		NzDemoModalDraggableComponent,
-		NzDemoModalFooterComponent,
-		NzDemoModalFooter2Component,
-		NzDemoModalInfoComponent,
-		NzDemoModalLocaleComponent,
-		NzDemoModalManualComponent,
-		NzDemoModalPositionComponent,
-		NzDemoModalServiceComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoModalAsyncComponent, NzDemoModalBasicComponent, NzDemoModalConfirmPromiseComponent, NzDemoModalConfirmComponent, NzDemoModalDraggableComponent, NzDemoModalFooterComponent, NzDemoModalFooter2Component, NzDemoModalInfoComponent, NzDemoModalLocaleComponent, NzDemoModalManualComponent, NzDemoModalPositionComponent, NzDemoModalServiceComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoModalEnComponent {

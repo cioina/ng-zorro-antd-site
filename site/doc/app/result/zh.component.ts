@@ -14,19 +14,7 @@ import { NzDemoResultWarningComponent } from './warning';
 
 @Component({
   selector     : 'nz-demo-result',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoResultCustomComponent,
-		NzDemoResultErrorComponent,
-		NzDemoResultFofComponent,
-		NzDemoResultFooComponent,
-		NzDemoResultFotComponent,
-		NzDemoResultInfoComponent,
-		NzDemoResultSuccessComponent,
-		NzDemoResultWarningComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoResultCustomComponent, NzDemoResultErrorComponent, NzDemoResultFofComponent, NzDemoResultFooComponent, NzDemoResultFotComponent, NzDemoResultInfoComponent, NzDemoResultSuccessComponent, NzDemoResultWarningComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoResultZhComponent {

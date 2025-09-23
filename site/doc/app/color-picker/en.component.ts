@@ -17,22 +17,7 @@ import { NzDemoColorPickerUseComponent } from './use';
 
 @Component({
   selector     : 'nz-demo-color-picker',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoColorPickerBasicComponent,
-		NzDemoColorPickerBlockComponent,
-		NzDemoColorPickerClearComponent,
-		NzDemoColorPickerDisableAlphaComponent,
-		NzDemoColorPickerDisableComponent,
-		NzDemoColorPickerFlipFlopComponent,
-		NzDemoColorPickerFormatComponent,
-		NzDemoColorPickerShowTextComponent,
-		NzDemoColorPickerSizeComponent,
-		NzDemoColorPickerTriggerComponent,
-		NzDemoColorPickerUseComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoColorPickerBasicComponent, NzDemoColorPickerBlockComponent, NzDemoColorPickerClearComponent, NzDemoColorPickerDisableAlphaComponent, NzDemoColorPickerDisableComponent, NzDemoColorPickerFlipFlopComponent, NzDemoColorPickerFormatComponent, NzDemoColorPickerShowTextComponent, NzDemoColorPickerSizeComponent, NzDemoColorPickerTriggerComponent, NzDemoColorPickerUseComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoColorPickerEnComponent {

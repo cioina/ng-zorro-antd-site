@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-hash-code-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-hash-code-demo-copy" nzTitle="复制"></nz-link><nz-link nzHref="#components-hash-code-demo-primary" nzTitle="更换样式"></nz-link><nz-link nzHref="#components-hash-code-demo-single" nzTitle="单行模式"></nz-link><nz-link nzHref="#components-hash-code-demo-strip" nzTitle="长条模式"></nz-link><nz-link nzHref="#components-hash-code-demo-rect" nzTitle="矩形模式"></nz-link><nz-link nzHref="#components-hash-code-demo-logo" nzTitle="添加 Logo"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>HashCode<span class="subtitle">哈希码</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	HashCode
+	<span class="subtitle">哈希码</span>
 </h1>
 
   <component-meta name="hash-code" description="展示区块链数据的哈希值。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>哈希码组件是以 64 位设计的样式，如果给出的数据不足或者高于 64 位，可能会带来一些展示上的差异。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-basic <name>"
   nzComponentName="NzDemoHashCodeBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/basic.md'"
 >
@@ -50,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-primary <name>"
   nzComponentName="NzDemoHashCodePrimaryComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/primary.md'"
 >
@@ -68,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-strip <name>"
   nzComponentName="NzDemoHashCodeStripComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/strip.md'"
 >
@@ -86,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-logo <name>"
   nzComponentName="NzDemoHashCodeLogoComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/logo.md'"
 >
@@ -107,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-copy <name>"
   nzComponentName="NzDemoHashCodeCopyComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/copy.md'"
 >
@@ -125,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-single <name>"
   nzComponentName="NzDemoHashCodeSingleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/single.md'"
 >
@@ -143,7 +141,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:hash-code-rect <name>"
   nzComponentName="NzDemoHashCodeRectComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/hash-code/demo/rect.md'"
 >
@@ -156,7 +154,8 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-hash-code"><span>nz-hash-code</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-hash-code'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>哈希码组件是以 64 位设计的样式，如果给出的数据不足或者高于 64 位，可能会带来一些展示上的差异。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-hash-code"><span>nz-hash-code</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-hash-code'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

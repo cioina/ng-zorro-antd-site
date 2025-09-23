@@ -13,18 +13,7 @@ import { NzDemoHashCodeStripComponent } from './strip';
 
 @Component({
   selector     : 'nz-demo-hash-code',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoHashCodeBasicComponent,
-		NzDemoHashCodeCopyComponent,
-		NzDemoHashCodeLogoComponent,
-		NzDemoHashCodePrimaryComponent,
-		NzDemoHashCodeRectComponent,
-		NzDemoHashCodeSingleComponent,
-		NzDemoHashCodeStripComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoHashCodeBasicComponent, NzDemoHashCodeCopyComponent, NzDemoHashCodeLogoComponent, NzDemoHashCodePrimaryComponent, NzDemoHashCodeRectComponent, NzDemoHashCodeSingleComponent, NzDemoHashCodeStripComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoHashCodeEnComponent {

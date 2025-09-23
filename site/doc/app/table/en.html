@@ -4,52 +4,21 @@
     <nz-link nzHref="#components-table-demo-basic" nzTitle="Basic Usage"></nz-link><nz-link nzHref="#components-table-demo-row-selection-and-operation" nzTitle="Selection and operation"></nz-link><nz-link nzHref="#components-table-demo-row-selection-custom" nzTitle="Custom selection"></nz-link><nz-link nzHref="#components-table-demo-sort-filter" nzTitle="Filter and sorter"></nz-link><nz-link nzHref="#components-table-demo-multiple-sorter" nzTitle="Multiple sorter"></nz-link><nz-link nzHref="#components-table-demo-reset-filter" nzTitle="Reset filters and sorters"></nz-link><nz-link nzHref="#components-table-demo-custom-filter-panel" nzTitle="Customized filter panel"></nz-link><nz-link nzHref="#components-table-demo-ajax" nzTitle="Ajax"></nz-link><nz-link nzHref="#components-table-demo-size" nzTitle="size"></nz-link><nz-link nzHref="#components-table-demo-bordered" nzTitle="border, title and footer"></nz-link><nz-link nzHref="#components-table-demo-expand" nzTitle="Expandable Row"></nz-link><nz-link nzHref="#components-table-demo-expand-icon" nzTitle="Customize the expansion icon"></nz-link><nz-link nzHref="#components-table-demo-colspan-rowspan" nzTitle="colSpan and rowSpan"></nz-link><nz-link nzHref="#components-table-demo-expand-children" nzTitle="Tree data"></nz-link><nz-link nzHref="#components-table-demo-fixed-header" nzTitle="Fixed Header"></nz-link><nz-link nzHref="#components-table-demo-fixed-columns" nzTitle="Fixed Columns"></nz-link><nz-link nzHref="#components-table-demo-fixed-columns-header" nzTitle="Fixed Columns and Header"></nz-link><nz-link nzHref="#components-table-demo-grouping-columns" nzTitle="Grouping table head"></nz-link><nz-link nzHref="#components-table-demo-edit-cell" nzTitle="Editable Cells"></nz-link><nz-link nzHref="#components-table-demo-edit-row" nzTitle="Editable Rows"></nz-link><nz-link nzHref="#components-table-demo-nested-table" nzTitle="Nested tables"></nz-link><nz-link nzHref="#components-table-demo-virtual" nzTitle="Virtual Scroll"></nz-link><nz-link nzHref="#components-table-demo-drag-sorting" nzTitle="Drag sorting"></nz-link><nz-link nzHref="#components-table-demo-template" nzTitle="Template"></nz-link><nz-link nzHref="#components-table-demo-break-word" nzTitle="Break Word"></nz-link><nz-link nzHref="#components-table-demo-ellipsis" nzTitle="ellipsis column"></nz-link><nz-link nzHref="#components-table-demo-summary" nzTitle="Summary"></nz-link><nz-link nzHref="#components-table-demo-dynamic-settings" nzTitle="Dynamic Settings"></nz-link><nz-link nzHref="#components-table-demo-custom-column" nzTitle="Custom Column"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Table<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Table
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="table" description="A table displays rows of data." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>To display a collection of structured data.</li>
-<li>To sort, search, paginate and filter data.</li>
-</ul>
-<h2 id="how_to_use"><span>How To Use</span><a onclick="window.location.hash = 'how_to_use'" class="anchor">#</a></h2><p>The Table component is both easy to use and highly customizable.</p>
-<h3 id="highly_customizable"><span>Highly Customizable</span><a onclick="window.location.hash = 'highly_customizable'" class="anchor">#</a></h3><p>The <code>nz-table</code> can be used like <a href="https://www.w3.org/TR/html401/struct/tables.html" target="_blank" rel="noopener"><code> W3C Standard &lt;table&gt;</code></a>. Developers can control every part of the table as they wish.</p>
-<h3 id="component_enhancements"><span>Component Enhancements</span><a onclick="window.location.hash = 'component_enhancements'" class="anchor">#</a></h3><p>The component in <code>nz-table</code> such as <code>th</code>, <code>td</code>, <code>thead</code> etc. are enhanced. Developers can make the table sortable, filterable, with fixed header, perform server side rendering etc. easily with the provided api.</p>
-<h3 id="data_processing"><span>Data Processing</span><a onclick="window.location.hash = 'data_processing'" class="anchor">#</a></h3><p>The data passed to <code>[nzData]</code> is exported with <a href="https://angular.dev/guide/templates/template-statements#statement-context" target="_blank" rel="noopener">Template Context</a> after processing (including paging, sorting and filtering). <code>*ngFor</code> can be used to render current page data in table.</p>
-<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-table</span> <span class="token attr-name">#basicTable</span> <span class="token attr-name">[nzData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dataSet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Age<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Address<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Action<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let data of basicTable.data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.age&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.address&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Action 一 &#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-divider</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-divider</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Delete<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-table</span><span class="token punctuation">></span></span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -61,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-basic <name>"
   nzComponentName="NzDemoTableBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/basic.md'"
 >
@@ -79,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-row-selection-and-operation <name>"
   nzComponentName="NzDemoTableRowSelectionAndOperationComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/row-selection-and-operation.md'"
 >
@@ -97,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-row-selection-custom <name>"
   nzComponentName="NzDemoTableRowSelectionCustomComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/row-selection-custom.md'"
 >
@@ -115,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-sort-filter <name>"
   nzComponentName="NzDemoTableSortFilterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/sort-filter.md'"
 >
@@ -134,7 +103,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-multiple-sorter <name>"
   nzComponentName="NzDemoTableMultipleSorterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/multiple-sorter.md'"
 >
@@ -152,7 +121,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-reset-filter <name>"
   nzComponentName="NzDemoTableResetFilterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/reset-filter.md'"
 >
@@ -170,7 +139,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-custom-filter-panel <name>"
   nzComponentName="NzDemoTableCustomFilterPanelComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/custom-filter-panel.md'"
 >
@@ -188,7 +157,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-ajax <name>"
   nzComponentName="NzDemoTableAjaxComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/ajax.md'"
 >
@@ -219,7 +188,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-size <name>"
   nzComponentName="NzDemoTableSizeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/size.md'"
 >
@@ -237,7 +206,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-bordered <name>"
   nzComponentName="NzDemoTableBorderedComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/bordered.md'"
 >
@@ -255,7 +224,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-expand <name>"
   nzComponentName="NzDemoTableExpandComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/expand.md'"
 >
@@ -273,7 +242,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-expand-icon <name>"
   nzComponentName="NzDemoTableExpandIconComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/expand-icon.md'"
 >
@@ -291,7 +260,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-colspan-rowspan <name>"
   nzComponentName="NzDemoTableColspanRowspanComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/colspan-rowspan.md'"
 >
@@ -309,7 +278,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-expand-children <name>"
   nzComponentName="NzDemoTableExpandChildrenComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/expand-children.md'"
 >
@@ -327,7 +296,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-fixed-header <name>"
   nzComponentName="NzDemoTableFixedHeaderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/fixed-header.md'"
 >
@@ -345,7 +314,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:table-fixed-columns <name>"
   nzComponentName="NzDemoTableFixedColumnsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/fixed-columns.md'"
 >
@@ -368,7 +337,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-fixed-columns-header <name>"
   nzComponentName="NzDemoTableFixedColumnsHeaderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/fixed-columns-header.md'"
 >
@@ -391,7 +360,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-grouping-columns <name>"
   nzComponentName="NzDemoTableGroupingColumnsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/grouping-columns.md'"
 >
@@ -409,7 +378,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-edit-cell <name>"
   nzComponentName="NzDemoTableEditCellComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/edit-cell.md'"
 >
@@ -433,7 +402,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-edit-row <name>"
   nzComponentName="NzDemoTableEditRowComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/edit-row.md'"
 >
@@ -457,7 +426,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-nested-table <name>"
   nzComponentName="NzDemoTableNestedTableComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/nested-table.md'"
 >
@@ -475,7 +444,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-virtual <name>"
   nzComponentName="NzDemoTableVirtualComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/virtual.md'"
 >
@@ -493,7 +462,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-drag-sorting <name>"
   nzComponentName="NzDemoTableDragSortingComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/drag-sorting.md'"
 >
@@ -514,7 +483,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-template <name>"
   nzComponentName="NzDemoTableTemplateComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/template.md'"
 >
@@ -532,7 +501,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-break-word <name>"
   nzComponentName="NzDemoTableBreakWordComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/break-word.md'"
 >
@@ -550,7 +519,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-ellipsis <name>"
   nzComponentName="NzDemoTableEllipsisComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/ellipsis.md'"
 >
@@ -571,7 +540,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-summary <name>"
   nzComponentName="NzDemoTableSummaryComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/summary.md'"
 >
@@ -589,7 +558,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-dynamic-settings <name>"
   nzComponentName="NzDemoTableDynamicSettingsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/dynamic-settings.md'"
 >
@@ -607,7 +576,7 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
   nzGenerateCommand="ng g ng-zorro-antd:table-custom-column <name>"
   nzComponentName="NzDemoTableCustomColumnComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/table/demo/custom-column.md'"
 >
@@ -619,7 +588,37 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-table"><span>nz-table</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-table'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>To display a collection of structured data.</li>
+<li>To sort, search, paginate and filter data.</li>
+</ul>
+<h2 id="how_to_use"><span>How To Use</span><a onclick="window.location.hash = 'how_to_use'" class="anchor">#</a></h2><p>The Table component is both easy to use and highly customizable.</p>
+<h3 id="highly_customizable"><span>Highly Customizable</span><a onclick="window.location.hash = 'highly_customizable'" class="anchor">#</a></h3><p>The <code>nz-table</code> can be used like <a href="https://www.w3.org/TR/html401/struct/tables.html" target="_blank" rel="noopener"><code> W3C Standard &lt;table&gt;</code></a>. Developers can control every part of the table as they wish.</p>
+<h3 id="component_enhancements"><span>Component Enhancements</span><a onclick="window.location.hash = 'component_enhancements'" class="anchor">#</a></h3><p>The component in <code>nz-table</code> such as <code>th</code>, <code>td</code>, <code>thead</code> etc. are enhanced. Developers can make the table sortable, filterable, with fixed header, perform server side rendering etc. easily with the provided api.</p>
+<h3 id="data_processing"><span>Data Processing</span><a onclick="window.location.hash = 'data_processing'" class="anchor">#</a></h3><p>The data passed to <code>[nzData]</code> is exported with <a href="https://angular.dev/guide/templates/template-statements#statement-context" target="_blank" rel="noopener">Template Context</a> after processing (including paging, sorting and filtering). <code>*ngFor</code> can be used to render current page data in table.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-table</span> <span class="token attr-name">#basicTable</span> <span class="token attr-name">[nzData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dataSet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Age<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Address<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">></span></span>Action<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let data of basicTable.data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.age&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>&#123;&#123;data.address&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Action 一 &#123;&#123;data.name&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-divider</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vertical<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-divider</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">></span></span>Delete<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-table</span><span class="token punctuation">></span></span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-table"><span>nz-table</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-table'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>

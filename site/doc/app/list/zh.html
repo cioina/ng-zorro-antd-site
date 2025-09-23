@@ -4,23 +4,21 @@
     <nz-link nzHref="#components-list-demo-simple" nzTitle="简单列表"></nz-link><nz-link nzHref="#components-list-demo-basic" nzTitle="基础列表"></nz-link><nz-link nzHref="#components-list-demo-loadmore" nzTitle="加载更多"></nz-link><nz-link nzHref="#components-list-demo-vertical" nzTitle="竖排列表样式"></nz-link><nz-link nzHref="#components-list-demo-grid" nzTitle="栅格列表"></nz-link><nz-link nzHref="#components-list-demo-responsive" nzTitle="响应式的栅格列表"></nz-link><nz-link nzHref="#components-list-demo-infinite-load" nzTitle="滚动加载无限长列表"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>List<span class="subtitle">列表</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	List
+	<span class="subtitle">列表</span>
 </h1>
 
   <component-meta name="list" description="最基础的列表展示，可承载文字、列表、图片、段落。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。</p>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -32,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-simple <name>"
   nzComponentName="NzDemoListSimpleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/simple.md'"
 >
@@ -52,7 +50,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-basic <name>"
   nzComponentName="NzDemoListBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/basic.md'"
 >
@@ -70,7 +68,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-loadmore <name>"
   nzComponentName="NzDemoListLoadmoreComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/loadmore.md'"
 >
@@ -88,7 +86,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-vertical <name>"
   nzComponentName="NzDemoListVerticalComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/vertical.md'"
 >
@@ -106,7 +104,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-grid <name>"
   nzComponentName="NzDemoListGridComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/grid.md'"
 >
@@ -124,7 +122,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-responsive <name>"
   nzComponentName="NzDemoListResponsiveComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/responsive.md'"
 >
@@ -142,7 +140,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:list-infinite-load <name>"
   nzComponentName="NzDemoListInfiniteLoadComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/list/demo/infinite-load.md'"
 >
@@ -155,7 +153,8 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-list"><span>nz-list</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-list'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。</p>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-list"><span>nz-list</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-list'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

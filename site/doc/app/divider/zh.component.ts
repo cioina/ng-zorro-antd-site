@@ -12,17 +12,7 @@ import { NzDemoDividerVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-divider',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoDividerHorizontalComponent,
-		NzDemoDividerOrientationComponent,
-		NzDemoDividerPlainComponent,
-		NzDemoDividerSizeComponent,
-		NzDemoDividerVariantComponent,
-		NzDemoDividerVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoDividerHorizontalComponent, NzDemoDividerOrientationComponent, NzDemoDividerPlainComponent, NzDemoDividerSizeComponent, NzDemoDividerVariantComponent, NzDemoDividerVerticalComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoDividerZhComponent {

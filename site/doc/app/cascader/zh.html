@@ -4,27 +4,21 @@
     <nz-link nzHref="#components-cascader-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-cascader-demo-default-value" nzTitle="默认值"></nz-link><nz-link nzHref="#components-cascader-demo-trigger" nzTitle="可以自定义显示"></nz-link><nz-link nzHref="#components-cascader-demo-hover" nzTitle="移入展开"></nz-link><nz-link nzHref="#components-cascader-demo-disabled" nzTitle="禁用选项"></nz-link><nz-link nzHref="#components-cascader-demo-change-on-select" nzTitle="选择即改变"></nz-link><nz-link nzHref="#components-cascader-demo-multiple" nzTitle="多选"></nz-link><nz-link nzHref="#components-cascader-demo-reactive-form" nzTitle="响应表单"></nz-link><nz-link nzHref="#components-cascader-demo-size" nzTitle="大小"></nz-link><nz-link nzHref="#components-cascader-demo-custom-render" nzTitle="自定义已选项"></nz-link><nz-link nzHref="#components-cascader-demo-lazy" nzTitle="动态加载选项"></nz-link><nz-link nzHref="#components-cascader-demo-change-on-function" nzTitle="指定选择"></nz-link><nz-link nzHref="#components-cascader-demo-modal" nzTitle="模态窗口"></nz-link><nz-link nzHref="#components-cascader-demo-search" nzTitle="搜索"></nz-link><nz-link nzHref="#components-cascader-demo-trigger-action" nzTitle="鼠标移入触发"></nz-link><nz-link nzHref="#components-cascader-demo-default-value-and-lazy-load" nzTitle="默认值与延迟加载"></nz-link><nz-link nzHref="#components-cascader-demo-default-value-and-async-options" nzTitle="默认值与异步列表"></nz-link><nz-link nzHref="#components-cascader-demo-custom-field-names" nzTitle="自定义字段名"></nz-link><nz-link nzHref="#components-cascader-demo-custom-template" nzTitle="自定义选择项"></nz-link><nz-link nzHref="#components-cascader-demo-prefix-and-suffix" nzTitle="前后缀"></nz-link><nz-link nzHref="#components-cascader-demo-placement" nzTitle="弹出位置"></nz-link><nz-link nzHref="#components-cascader-demo-status" nzTitle="自定义状态"></nz-link><nz-link nzHref="#components-cascader-demo-variant" nzTitle="形态变体"></nz-link><nz-link nzHref="#components-cascader-demo-open" nzTitle="控制浮层显隐"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Cascader<span class="subtitle">级联选择</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Cascader
+	<span class="subtitle">级联选择</span>
 </h1>
 
   <component-meta name="cascader" description="级联选择框。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>需要从一组相关联的数据集合进行选择，例如省市区，公司层级，事物分类等。</li>
-<li>从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择。</li>
-<li>比起 Select 组件，可以在同一个浮层中完成选择，有较好的体验。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -36,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-basic <name>"
   nzComponentName="NzDemoCascaderBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/basic.md'"
 >
@@ -54,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-trigger <name>"
   nzComponentName="NzDemoCascaderTriggerComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/trigger.md'"
 >
@@ -72,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-disabled <name>"
   nzComponentName="NzDemoCascaderDisabledComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/disabled.md'"
 >
@@ -90,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-multiple <name>"
   nzComponentName="NzDemoCascaderMultipleComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/multiple.md'"
 >
@@ -108,7 +102,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-size <name>"
   nzComponentName="NzDemoCascaderSizeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/size.md'"
 >
@@ -126,7 +120,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-lazy <name>"
   nzComponentName="NzDemoCascaderLazyComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/lazy.md'"
 >
@@ -144,7 +138,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-modal <name>"
   nzComponentName="NzDemoCascaderModalComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/modal.md'"
 >
@@ -162,7 +156,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-trigger-action <name>"
   nzComponentName="NzDemoCascaderTriggerActionComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/trigger-action.md'"
 >
@@ -180,7 +174,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-default-value-and-async-options <name>"
   nzComponentName="NzDemoCascaderDefaultValueAndAsyncOptionsComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/default-value-and-async-options.md'"
 >
@@ -198,7 +192,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-custom-template <name>"
   nzComponentName="NzDemoCascaderCustomTemplateComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/custom-template.md'"
 >
@@ -216,7 +210,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-placement <name>"
   nzComponentName="NzDemoCascaderPlacementComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/placement.md'"
 >
@@ -234,7 +228,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-variant <name>"
   nzComponentName="NzDemoCascaderVariantComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/variant.md'"
 >
@@ -255,7 +249,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-default-value <name>"
   nzComponentName="NzDemoCascaderDefaultValueComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/default-value.md'"
 >
@@ -273,7 +267,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-hover <name>"
   nzComponentName="NzDemoCascaderHoverComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/hover.md'"
 >
@@ -291,7 +285,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-change-on-select <name>"
   nzComponentName="NzDemoCascaderChangeOnSelectComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/change-on-select.md'"
 >
@@ -309,7 +303,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-reactive-form <name>"
   nzComponentName="NzDemoCascaderReactiveFormComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/reactive-form.md'"
 >
@@ -327,7 +321,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-custom-render <name>"
   nzComponentName="NzDemoCascaderCustomRenderComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/custom-render.md'"
 >
@@ -345,7 +339,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-change-on-function <name>"
   nzComponentName="NzDemoCascaderChangeOnFunctionComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/change-on-function.md'"
 >
@@ -363,7 +357,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-search <name>"
   nzComponentName="NzDemoCascaderSearchComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/search.md'"
 >
@@ -381,7 +375,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-default-value-and-lazy-load <name>"
   nzComponentName="NzDemoCascaderDefaultValueAndLazyLoadComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/default-value-and-lazy-load.md'"
 >
@@ -399,7 +393,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-custom-field-names <name>"
   nzComponentName="NzDemoCascaderCustomFieldNamesComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/custom-field-names.md'"
 >
@@ -417,7 +411,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-prefix-and-suffix <name>"
   nzComponentName="NzDemoCascaderPrefixAndSuffixComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/prefix-and-suffix.md'"
 >
@@ -435,7 +429,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-status <name>"
   nzComponentName="NzDemoCascaderStatusComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/status.md'"
 >
@@ -453,7 +447,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:cascader-open <name>"
   nzComponentName="NzDemoCascaderOpenComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/open.md'"
 >
@@ -466,7 +460,12 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-cascader</span> <span class="token attr-name">[nzOptions]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>options<span class="token punctuation">"</span></span> <span class="token attr-name">[(ngModel)]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>values<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-cascader</span><span class="token punctuation">></span></span>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要从一组相关联的数据集合进行选择，例如省市区，公司层级，事物分类等。</li>
+<li>从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择。</li>
+<li>比起 Select 组件，可以在同一个浮层中完成选择，有较好的体验。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-cascader</span> <span class="token attr-name">[nzOptions]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>options<span class="token punctuation">"</span></span> <span class="token attr-name">[(ngModel)]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>values<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-cascader</span><span class="token punctuation">></span></span>
 </code></pre><h3 id="nz-cascader"><span>nz-cascader</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-cascader'" class="anchor">#</a></h3><table>
 <thead>
 <tr>

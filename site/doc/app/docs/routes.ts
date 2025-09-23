@@ -18,8 +18,8 @@ import { NzDocGettingStartedEnComponent } from './getting-started-en';
 import { NzDocGettingStartedZhComponent } from './getting-started-zh';
 import { NzDocGlobalConfigEnComponent } from './global-config-en';
 import { NzDocGlobalConfigZhComponent } from './global-config-zh';
-import { NzDocI18nEnComponent } from './i18n-en';
-import { NzDocI18nZhComponent } from './i18n-zh';
+import { NzDocI18NEnComponent } from './i18n-en';
+import { NzDocI18NZhComponent } from './i18n-zh';
 import { NzDocIntroduceEnComponent } from './introduce-en';
 import { NzDocIntroduceZhComponent } from './introduce-zh';
 import { NzDocJoinEnComponent } from './join-en';
@@ -51,8 +51,8 @@ const routes: Routes = [
 	{ path: 'getting-started/en', component: NzDocGettingStartedEnComponent },
 	{ path: 'global-config/zh', component: NzDocGlobalConfigZhComponent },
 	{ path: 'global-config/en', component: NzDocGlobalConfigEnComponent },
-	{ path: 'i18n/zh', component: NzDocI18nZhComponent },
-	{ path: 'i18n/en', component: NzDocI18nEnComponent },
+	{ path: 'i18n/zh', component: NzDocI18NZhComponent },
+	{ path: 'i18n/en', component: NzDocI18NEnComponent },
 	{ path: 'introduce/zh', component: NzDocIntroduceZhComponent },
 	{ path: 'introduce/en', component: NzDocIntroduceEnComponent },
 	{ path: 'join/zh', component: NzDocJoinZhComponent },

@@ -10,15 +10,7 @@ import { NzDemoCommentNestedComponent } from './nested';
 
 @Component({
   selector     : 'nz-demo-comment',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoCommentBasicComponent,
-		NzDemoCommentEditorComponent,
-		NzDemoCommentListComponent,
-		NzDemoCommentNestedComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoCommentBasicComponent, NzDemoCommentEditorComponent, NzDemoCommentListComponent, NzDemoCommentNestedComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoCommentEnComponent {

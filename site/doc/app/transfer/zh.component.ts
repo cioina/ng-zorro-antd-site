@@ -14,19 +14,7 @@ import { NzDemoTransferTreeTransferComponent } from './tree-transfer';
 
 @Component({
   selector     : 'nz-demo-transfer',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTransferAdvancedComponent,
-		NzDemoTransferBasicComponent,
-		NzDemoTransferCustomItemComponent,
-		NzDemoTransferOneWayComponent,
-		NzDemoTransferSearchComponent,
-		NzDemoTransferStatusComponent,
-		NzDemoTransferTableTransferComponent,
-		NzDemoTransferTreeTransferComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTransferAdvancedComponent, NzDemoTransferBasicComponent, NzDemoTransferCustomItemComponent, NzDemoTransferOneWayComponent, NzDemoTransferSearchComponent, NzDemoTransferStatusComponent, NzDemoTransferTableTransferComponent, NzDemoTransferTreeTransferComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoTransferZhComponent {

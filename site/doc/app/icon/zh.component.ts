@@ -12,17 +12,7 @@ import { NzPageDemoIconZhComponent } from './zh.page.component';
 
 @Component({
   selector     : 'nz-demo-icon',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoIconBasicComponent,
-		NzDemoIconCustomComponent,
-		NzDemoIconIconfontComponent,
-		NzDemoIconNamespaceComponent,
-		NzDemoIconTwotoneComponent,
-		NzPageDemoIconZhComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoIconBasicComponent, NzDemoIconCustomComponent, NzDemoIconIconfontComponent, NzDemoIconNamespaceComponent, NzDemoIconTwotoneComponent, NzPageDemoIconZhComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoIconZhComponent {

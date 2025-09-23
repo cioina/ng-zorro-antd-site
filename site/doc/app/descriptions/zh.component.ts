@@ -12,17 +12,7 @@ import { NzDemoDescriptionsVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-descriptions',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoDescriptionsBasicComponent,
-		NzDemoDescriptionsBorderComponent,
-		NzDemoDescriptionsCustomSizeComponent,
-		NzDemoDescriptionsResponsiveComponent,
-		NzDemoDescriptionsVerticalBorderComponent,
-		NzDemoDescriptionsVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoDescriptionsBasicComponent, NzDemoDescriptionsBorderComponent, NzDemoDescriptionsCustomSizeComponent, NzDemoDescriptionsResponsiveComponent, NzDemoDescriptionsVerticalBorderComponent, NzDemoDescriptionsVerticalComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoDescriptionsZhComponent {

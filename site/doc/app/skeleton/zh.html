@@ -4,28 +4,21 @@
     <nz-link nzHref="#components-skeleton-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-skeleton-demo-complex" nzTitle="复杂的组合"></nz-link><nz-link nzHref="#components-skeleton-demo-active" nzTitle="动画效果"></nz-link><nz-link nzHref="#components-skeleton-demo-element" nzTitle="按钮/头像/输入框/图像"></nz-link><nz-link nzHref="#components-skeleton-demo-children" nzTitle="包含子组件"></nz-link><nz-link nzHref="#components-skeleton-demo-list" nzTitle="列表样例"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Skeleton<span class="subtitle">骨架屏</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Skeleton
+	<span class="subtitle">骨架屏</span>
 </h1>
 
   <component-meta name="skeleton" description="在需要等待加载内容的位置提供一个占位图形组合。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>网络较慢，需要长时间等待加载处理的情况下。</li>
-<li>图文信息内容较多的列表/卡片中。</li>
-<li>只适合用在第一次加载数据的场景。</li>
-<li>可以被 Spin 完全代替，但是在可用的场景下可以比 Spin 提供更好的视觉效果和用户体验。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -37,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-basic <name>"
   nzComponentName="NzDemoSkeletonBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/basic.md'"
 >
@@ -55,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-complex <name>"
   nzComponentName="NzDemoSkeletonComplexComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/complex.md'"
 >
@@ -73,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-active <name>"
   nzComponentName="NzDemoSkeletonActiveComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/active.md'"
 >
@@ -91,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-element <name>"
   nzComponentName="NzDemoSkeletonElementComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/element.md'"
 >
@@ -109,7 +102,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-children <name>"
   nzComponentName="NzDemoSkeletonChildrenComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/children.md'"
 >
@@ -127,7 +120,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:skeleton-list <name>"
   nzComponentName="NzDemoSkeletonListComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/skeleton/demo/list.md'"
 >
@@ -139,7 +132,13 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-skeleton"><span>nz-skeleton</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-skeleton'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>网络较慢，需要长时间等待加载处理的情况下。</li>
+<li>图文信息内容较多的列表/卡片中。</li>
+<li>只适合用在第一次加载数据的场景。</li>
+<li>可以被 Spin 完全代替，但是在可用的场景下可以比 Spin 提供更好的视觉效果和用户体验。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-skeleton"><span>nz-skeleton</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-skeleton'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>属性</th>

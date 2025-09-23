@@ -16,21 +16,7 @@ import { NzDemoTreeVirtualScrollComponent } from './virtual-scroll';
 
 @Component({
   selector     : 'nz-demo-tree',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTreeBasicControlledComponent,
-		NzDemoTreeBasicComponent,
-		NzDemoTreeCustomizedIconComponent,
-		NzDemoTreeDirectoryComponent,
-		NzDemoTreeDraggableConfirmComponent,
-		NzDemoTreeDraggableComponent,
-		NzDemoTreeDynamicComponent,
-		NzDemoTreeLineComponent,
-		NzDemoTreeSearchComponent,
-		NzDemoTreeVirtualScrollComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTreeBasicControlledComponent, NzDemoTreeBasicComponent, NzDemoTreeCustomizedIconComponent, NzDemoTreeDirectoryComponent, NzDemoTreeDraggableConfirmComponent, NzDemoTreeDraggableComponent, NzDemoTreeDynamicComponent, NzDemoTreeLineComponent, NzDemoTreeSearchComponent, NzDemoTreeVirtualScrollComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoTreeZhComponent {

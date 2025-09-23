@@ -11,16 +11,7 @@ import { NzDemoAvatarTypeComponent } from './type';
 
 @Component({
   selector     : 'nz-demo-avatar',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoAvatarBadgeComponent,
-		NzDemoAvatarBasicComponent,
-		NzDemoAvatarDynamicComponent,
-		NzDemoAvatarGroupComponent,
-		NzDemoAvatarTypeComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoAvatarBadgeComponent, NzDemoAvatarBasicComponent, NzDemoAvatarDynamicComponent, NzDemoAvatarGroupComponent, NzDemoAvatarTypeComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoAvatarZhComponent {

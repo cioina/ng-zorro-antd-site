@@ -18,23 +18,7 @@ import { NzDemoInputNumberVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-input-number',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoInputNumberAddonComponent,
-		NzDemoInputNumberBasicComponent,
-		NzDemoInputNumberDigitComponent,
-		NzDemoInputNumberDisabledComponent,
-		NzDemoInputNumberFormatterComponent,
-		NzDemoInputNumberHandlerIconComponent,
-		NzDemoInputNumberKeyboardComponent,
-		NzDemoInputNumberOutOfRangeComponent,
-		NzDemoInputNumberPrefixComponent,
-		NzDemoInputNumberSizeComponent,
-		NzDemoInputNumberStatusComponent,
-		NzDemoInputNumberVariantComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoInputNumberAddonComponent, NzDemoInputNumberBasicComponent, NzDemoInputNumberDigitComponent, NzDemoInputNumberDisabledComponent, NzDemoInputNumberFormatterComponent, NzDemoInputNumberHandlerIconComponent, NzDemoInputNumberKeyboardComponent, NzDemoInputNumberOutOfRangeComponent, NzDemoInputNumberPrefixComponent, NzDemoInputNumberSizeComponent, NzDemoInputNumberStatusComponent, NzDemoInputNumberVariantComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoInputNumberZhComponent {

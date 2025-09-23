@@ -3,7 +3,6 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-changelog-zh',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './changelog-zh.html'
 })

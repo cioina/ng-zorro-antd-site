@@ -4,29 +4,24 @@
     <nz-link nzHref="#components-back-top-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-back-top-demo-custom" nzTitle="自定义样式"></nz-link><nz-link nzHref="#components-back-top-demo-target" nzTitle="滚动容器"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>BackTop<span class="subtitle">回到顶部</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	BackTop
+	<span class="subtitle">回到顶部</span>
 </h1>
 
   <component-meta name="back-top" description="返回页面顶部的操作按钮。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<blockquote>
+  <section class="markdown" ngNonBindable>
+    <blockquote>
 <p>⚠️ <strong>注意</strong>：该组件将在 v21 版本移除，请使用 <a href="/components/float-button/zh">FloatButton</a> 中的 <code>&lt;nz-float-button-top&gt;</code> 组件替代。</p>
 </blockquote>
-<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>当页面内容区域比较长时；</li>
-<li>当用户需要频繁返回顶部查看相关内容时。</li>
-</ul>
 
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -38,7 +33,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:back-top-basic <name>"
   nzComponentName="NzDemoBackTopBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/demo/basic.md'"
 >
@@ -56,7 +51,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:back-top-target <name>"
   nzComponentName="NzDemoBackTopTargetComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/demo/target.md'"
 >
@@ -77,7 +72,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:back-top-custom <name>"
   nzComponentName="NzDemoBackTopCustomComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/back-top/demo/custom.md'"
 >
@@ -90,7 +85,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-back-top"><span>nz-back-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-back-top'" class="anchor">#</a></h3><blockquote>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>当页面内容区域比较长时；</li>
+<li>当用户需要频繁返回顶部查看相关内容时。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-back-top"><span>nz-back-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-back-top'" class="anchor">#</a></h3><blockquote>
 <p>有默认样式，距离底部 <code>50px</code>，可覆盖。
 自定义样式宽高不大于 <code>40px * 40px</code>。</p>
 </blockquote>

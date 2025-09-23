@@ -18,23 +18,7 @@ import { NzDemoSegmentedWithNameComponent } from './with-name';
 
 @Component({
   selector     : 'nz-demo-segmented',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSegmentedBasicComponent,
-		NzDemoSegmentedBlockComponent,
-		NzDemoSegmentedCustomComponent,
-		NzDemoSegmentedDisabledComponent,
-		NzDemoSegmentedDynamicComponent,
-		NzDemoSegmentedIconComponent,
-		NzDemoSegmentedShapeComponent,
-		NzDemoSegmentedSizeComponent,
-		NzDemoSegmentedValueComponent,
-		NzDemoSegmentedVerticalComponent,
-		NzDemoSegmentedWithIconOnlyComponent,
-		NzDemoSegmentedWithNameComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSegmentedBasicComponent, NzDemoSegmentedBlockComponent, NzDemoSegmentedCustomComponent, NzDemoSegmentedDisabledComponent, NzDemoSegmentedDynamicComponent, NzDemoSegmentedIconComponent, NzDemoSegmentedShapeComponent, NzDemoSegmentedSizeComponent, NzDemoSegmentedValueComponent, NzDemoSegmentedVerticalComponent, NzDemoSegmentedWithIconOnlyComponent, NzDemoSegmentedWithNameComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoSegmentedEnComponent {

@@ -4,30 +4,21 @@
     <nz-link nzHref="#components-flex-demo-basic" nzTitle="基本布局"></nz-link><nz-link nzHref="#components-flex-demo-align" nzTitle="对齐方式"></nz-link><nz-link nzHref="#components-flex-demo-gap" nzTitle="设置间隙"></nz-link><nz-link nzHref="#components-flex-demo-wrap" nzTitle="自动换行"></nz-link><nz-link nzHref="#components-flex-demo-combination" nzTitle="组合使用"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Flex<span class="subtitle">弹性布局</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Flex
+	<span class="subtitle">弹性布局</span>
 </h1>
 
   <component-meta name="flex" description="用于对齐的弹性布局容器。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>适合设置元素之间的间距。</li>
-<li>适合设置各种水平、垂直对齐方式。</li>
-</ul>
-<h3 id="与_space_组件的区别"><span>与 Space 组件的区别</span><a onclick="window.location.hash = '与_space_组件的区别'" class="anchor">#</a></h3><ul>
-<li>Space 为内联元素提供间距，其本身会为每一个子元素添加包裹元素用于内联对齐。适用于行、列中多个子元素的等距排列。</li>
-<li>Flex 为块级元素提供间距，其本身不会添加包裹元素。适用于垂直或水平方向上的子元素布局，并提供了更多的灵活性和控制能力。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -39,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:flex-basic <name>"
   nzComponentName="NzDemoFlexBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/basic.md'"
 >
@@ -57,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:flex-align <name>"
   nzComponentName="NzDemoFlexAlignComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/align.md'"
 >
@@ -75,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:flex-gap <name>"
   nzComponentName="NzDemoFlexGapComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/gap.md'"
 >
@@ -93,7 +84,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:flex-wrap <name>"
   nzComponentName="NzDemoFlexWrapComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/wrap.md'"
 >
@@ -111,7 +102,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:flex-combination <name>"
   nzComponentName="NzDemoFlexCombinationComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/combination.md'"
 >
@@ -123,7 +114,15 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-flex"><span>[nz-flex]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-flex'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>适合设置元素之间的间距。</li>
+<li>适合设置各种水平、垂直对齐方式。</li>
+</ul>
+<h3 id="与_space_组件的区别"><span>与 Space 组件的区别</span><a onclick="window.location.hash = '与_space_组件的区别'" class="anchor">#</a></h3><ul>
+<li>Space 为内联元素提供间距，其本身会为每一个子元素添加包裹元素用于内联对齐。适用于行、列中多个子元素的等距排列。</li>
+<li>Flex 为块级元素提供间距，其本身不会添加包裹元素。适用于垂直或水平方向上的子元素布局，并提供了更多的灵活性和控制能力。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-flex"><span>[nz-flex]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-flex'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

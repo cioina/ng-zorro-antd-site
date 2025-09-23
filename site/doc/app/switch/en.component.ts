@@ -12,17 +12,7 @@ import { NzDemoSwitchTextComponent } from './text';
 
 @Component({
   selector     : 'nz-demo-switch',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSwitchBasicComponent,
-		NzDemoSwitchControlComponent,
-		NzDemoSwitchDisabledComponent,
-		NzDemoSwitchLoadingComponent,
-		NzDemoSwitchSizeComponent,
-		NzDemoSwitchTextComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSwitchBasicComponent, NzDemoSwitchControlComponent, NzDemoSwitchDisabledComponent, NzDemoSwitchLoadingComponent, NzDemoSwitchSizeComponent, NzDemoSwitchTextComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoSwitchEnComponent {

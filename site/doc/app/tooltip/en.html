@@ -4,26 +4,21 @@
     <nz-link nzHref="#components-tooltip-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-tooltip-demo-placement" nzTitle="Placement"></nz-link><nz-link nzHref="#components-tooltip-demo-arrow-point-at-center" nzTitle="Arrow pointing at the center"></nz-link><nz-link nzHref="#components-tooltip-demo-template" nzTitle="Template"></nz-link><nz-link nzHref="#components-tooltip-demo-origin" nzTitle="Target"></nz-link><nz-link nzHref="#components-tooltip-demo-color" nzTitle="Colorful tooltip"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Tooltip<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Tooltip
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="tooltip" description="Simple text popup box." language="en"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
-<li>The Tooltip doesn&#39;t support complex text or operations. The tip is shown on mouse enter and is hidden on mouse leave.</li>
-<li>To provide an explanation fo a <code>button/text/operation</code>. It&#39;s often used instead of the HTML <code>title</code> attribute to explain <code>button/text/operation</code>.</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -35,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tooltip-basic <name>"
   nzComponentName="NzDemoTooltipBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/demo/basic.md'"
 >
@@ -53,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tooltip-arrow-point-at-center <name>"
   nzComponentName="NzDemoTooltipArrowPointAtCenterComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/demo/arrow-point-at-center.md'"
 >
@@ -71,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tooltip-origin <name>"
   nzComponentName="NzDemoTooltipOriginComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/demo/origin.md'"
 >
@@ -92,7 +87,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tooltip-placement <name>"
   nzComponentName="NzDemoTooltipPlacementComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/demo/placement.md'"
 >
@@ -110,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tooltip-template <name>"
   nzComponentName="NzDemoTooltipTemplateComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/demo/template.md'"
 >
@@ -128,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:tooltip-color <name>"
   nzComponentName="NzDemoTooltipColorComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tooltip/demo/color.md'"
 >
@@ -141,7 +136,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tooltip"><span>[nz-tooltip]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-tooltip'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>The Tooltip doesn&#39;t support complex text or operations. The tip is shown on mouse enter and is hidden on mouse leave.</li>
+<li>To provide an explanation fo a <code>button/text/operation</code>. It&#39;s often used instead of the HTML <code>title</code> attribute to explain <code>button/text/operation</code>.</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tooltip"><span>[nz-tooltip]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-tooltip'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>

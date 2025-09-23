@@ -3,7 +3,6 @@ import { ShareModule } from '../share/share.module';
 
 @Component({
   selector     : 'nz-doc-customize-theme-variable-zh',
-  standalone   : true,
   imports      : [ShareModule],
   templateUrl  : './customize-theme-variable-zh.html'
 })

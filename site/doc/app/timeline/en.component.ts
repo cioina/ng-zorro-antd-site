@@ -14,19 +14,7 @@ import { NzDemoTimelineRightComponent } from './right';
 
 @Component({
   selector     : 'nz-demo-timeline',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoTimelineAlternateComponent,
-		NzDemoTimelineBasicComponent,
-		NzDemoTimelineColorComponent,
-		NzDemoTimelineCustomComponent,
-		NzDemoTimelineLabelComponent,
-		NzDemoTimelinePendingComponent,
-		NzDemoTimelinePositionComponent,
-		NzDemoTimelineRightComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoTimelineAlternateComponent, NzDemoTimelineBasicComponent, NzDemoTimelineColorComponent, NzDemoTimelineCustomComponent, NzDemoTimelineLabelComponent, NzDemoTimelinePendingComponent, NzDemoTimelinePositionComponent, NzDemoTimelineRightComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoTimelineEnComponent {

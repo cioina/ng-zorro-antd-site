@@ -4,10 +4,9 @@
     <nz-link nzHref="#components-code-editor-demo-basic" nzTitle="Basic"></nz-link><nz-link nzHref="#components-code-editor-demo-diff" nzTitle="Diff Editor"></nz-link><nz-link nzHref="#components-code-editor-demo-config" nzTitle="Change Config"></nz-link><nz-link nzHref="#components-code-editor-demo-full-control" nzTitle="Full Control Mode"></nz-link><nz-link nzHref="#components-code-editor-demo-complex" nzTitle="Complex"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Code Editor<span class="subtitle"></span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/doc/index.en-US.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Code Editor
+	<span class="subtitle"></span>
 </h1>
 
   <component-meta name="code-editor" description="Code Editor based on monaco-editor." language="en"></component-meta>
@@ -16,16 +15,14 @@
 <p>NG-ZORRO experiments are features that are released but not yet considered stable or production ready</p>
 <p>Developers and users can opt in into these features before they are fully released. But <strong>breaking changes</strong> may occur with any release.</p>
 </blockquote>
-	<section class="markdown" ngNonBindable>
-		<h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to use monaco editor in Angular.</p>
-<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/code-editor/style/entry.less'</span><span class="token punctuation">;</span>
-</code></pre>
-	</section>
-	
-	<h2>
-		<span>Examples</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="8">
 	<div nz-col [nzSpan]="24">
@@ -37,7 +34,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-basic <name>"
   nzComponentName="NzDemoCodeEditorBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/basic.md'"
 >
@@ -55,7 +52,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-diff <name>"
   nzComponentName="NzDemoCodeEditorDiffComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/diff.md'"
 >
@@ -73,7 +70,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-config <name>"
   nzComponentName="NzDemoCodeEditorConfigComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/config.md'"
 >
@@ -91,7 +88,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-full-control <name>"
   nzComponentName="NzDemoCodeEditorFullControlComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/full-control.md'"
 >
@@ -109,7 +106,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:code-editor-complex <name>"
   nzComponentName="NzDemoCodeEditorComplexComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/code-editor/demo/complex.md'"
 >
@@ -121,7 +118,9 @@
 </nz-code-box>
 
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>Install <code>monaco-editor</code> in your project first:</p>
+</div><section class="markdown api-container" ngNonBindable><h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to use monaco editor in Angular.</p>
+<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/code-editor/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>Install <code>monaco-editor</code> in your project first:</p>
 <pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> monaco-editor
 </code></pre><h3 id="dynamic_loading"><span>Dynamic Loading</span><a onclick="window.location.hash = 'dynamic_loading'" class="anchor">#</a></h3><p>If you would like to load monaco dynamically (which means you load resources of monaco editor right before you would like to use it), you will need to register assets of monaco editor itself. You can do that by adding these lines in <code>angular.json</code> file:</p>
 <pre><code class="language-diff">"assets": [

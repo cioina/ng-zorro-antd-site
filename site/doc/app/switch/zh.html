@@ -4,26 +4,21 @@
     <nz-link nzHref="#components-switch-demo-basic" nzTitle="基本"></nz-link><nz-link nzHref="#components-switch-demo-disabled" nzTitle="不可用"></nz-link><nz-link nzHref="#components-switch-demo-text" nzTitle="文字和图标"></nz-link><nz-link nzHref="#components-switch-demo-size" nzTitle="两种大小"></nz-link><nz-link nzHref="#components-switch-demo-loading" nzTitle="加载中"></nz-link><nz-link nzHref="#components-switch-demo-control" nzTitle="完整控制"></nz-link><nz-link nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
-	<h1>Switch<span class="subtitle">开关</span><span class="widget"></span>
-	<a class="edit-button" aria-label="Edit this page on Github" href="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/doc/index.zh-CN.md" target="_blank" rel="noopener noreferrer">
-		<nz-icon nzType="edit" />
-  </a>
+  <h1>
+	Switch
+	<span class="subtitle">开关</span>
 </h1>
 
   <component-meta name="switch" description="使用开关切换两种状态之间。" language="zh"></component-meta>
   
-	<section class="markdown" ngNonBindable>
-		<h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
-<li>需要表示开关状态/两种状态之间的切换时；</li>
-<li>和 <code>checkbox</code>的区别是，切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>
-</ul>
-
-	</section>
-	
-	<h2>
-		<span>代码演示</span>
-		<nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
-	</h2>
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2>
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+  </h2>
 </section>
 <div nz-row [nzGutter]="16">
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -35,7 +30,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:switch-basic <name>"
   nzComponentName="NzDemoSwitchBasicComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/demo/basic.md'"
 >
@@ -53,7 +48,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:switch-text <name>"
   nzComponentName="NzDemoSwitchTextComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/demo/text.md'"
 >
@@ -71,7 +66,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:switch-loading <name>"
   nzComponentName="NzDemoSwitchLoadingComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/demo/loading.md'"
 >
@@ -92,7 +87,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:switch-disabled <name>"
   nzComponentName="NzDemoSwitchDisabledComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/demo/disabled.md'"
 >
@@ -110,7 +105,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:switch-size <name>"
   nzComponentName="NzDemoSwitchSizeComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/demo/size.md'"
 >
@@ -128,7 +123,7 @@
   nzGenerateCommand="ng g ng-zorro-antd:switch-control <name>"
   nzComponentName="NzDemoSwitchControlComponent"
   [nzIframe]="false"
-  nzIframeSource="null"
+  nzIframeSource=""
   [nzIframeHeight]="null"
   [nzHref]="'https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/switch/demo/control.md'"
 >
@@ -141,7 +136,11 @@
 
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-switch"><span>nz-switch</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-switch'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要表示开关状态/两种状态之间的切换时；</li>
+<li>和 <code>checkbox</code>的区别是，切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>
+</ul>
+<h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-switch"><span>nz-switch</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-switch'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>

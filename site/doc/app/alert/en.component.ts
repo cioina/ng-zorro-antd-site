@@ -15,20 +15,7 @@ import { NzDemoAlertStyleComponent } from './style';
 
 @Component({
   selector     : 'nz-demo-alert',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoAlertActionComponent,
-		NzDemoAlertBannerComponent,
-		NzDemoAlertBasicComponent,
-		NzDemoAlertClosableComponent,
-		NzDemoAlertCloseTextComponent,
-		NzDemoAlertCustomIconComponent,
-		NzDemoAlertDescriptionComponent,
-		NzDemoAlertIconComponent,
-		NzDemoAlertStyleComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoAlertActionComponent, NzDemoAlertBannerComponent, NzDemoAlertBasicComponent, NzDemoAlertClosableComponent, NzDemoAlertCloseTextComponent, NzDemoAlertCustomIconComponent, NzDemoAlertDescriptionComponent, NzDemoAlertIconComponent, NzDemoAlertStyleComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoAlertEnComponent {

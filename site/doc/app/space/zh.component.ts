@@ -16,21 +16,7 @@ import { NzDemoSpaceWrapComponent } from './wrap';
 
 @Component({
   selector     : 'nz-demo-space',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoSpaceAlignComponent,
-		NzDemoSpaceBasicComponent,
-		NzDemoSpaceCompactButtonVerticalComponent,
-		NzDemoSpaceCompactButtonsComponent,
-		NzDemoSpaceCompactComponent,
-		NzDemoSpaceCustomizeComponent,
-		NzDemoSpaceSizeComponent,
-		NzDemoSpaceSplitComponent,
-		NzDemoSpaceVerticalComponent,
-		NzDemoSpaceWrapComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoSpaceAlignComponent, NzDemoSpaceBasicComponent, NzDemoSpaceCompactButtonVerticalComponent, NzDemoSpaceCompactButtonsComponent, NzDemoSpaceCompactComponent, NzDemoSpaceCustomizeComponent, NzDemoSpaceSizeComponent, NzDemoSpaceSplitComponent, NzDemoSpaceVerticalComponent, NzDemoSpaceWrapComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoSpaceZhComponent {

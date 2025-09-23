@@ -13,18 +13,7 @@ import { NzDemoBreadcrumbWithIconComponent } from './with-icon';
 
 @Component({
   selector     : 'nz-demo-breadcrumb',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoBreadcrumbAutoComponent,
-		NzDemoBreadcrumbBasicComponent,
-		NzDemoBreadcrumbDropdownComponent,
-		NzDemoBreadcrumbRouterComponent,
-		NzDemoBreadcrumbSeparatorIndependentComponent,
-		NzDemoBreadcrumbSeparatorComponent,
-		NzDemoBreadcrumbWithIconComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoBreadcrumbAutoComponent, NzDemoBreadcrumbBasicComponent, NzDemoBreadcrumbDropdownComponent, NzDemoBreadcrumbRouterComponent, NzDemoBreadcrumbSeparatorIndependentComponent, NzDemoBreadcrumbSeparatorComponent, NzDemoBreadcrumbWithIconComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoBreadcrumbZhComponent {

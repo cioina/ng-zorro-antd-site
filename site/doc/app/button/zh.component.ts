@@ -15,20 +15,7 @@ import { NzDemoButtonSizeComponent } from './size';
 
 @Component({
   selector     : 'nz-demo-button',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoButtonBasicComponent,
-		NzDemoButtonBlockComponent,
-		NzDemoButtonDangerComponent,
-		NzDemoButtonDisabledComponent,
-		NzDemoButtonGhostComponent,
-		NzDemoButtonIconComponent,
-		NzDemoButtonLoadingComponent,
-		NzDemoButtonMultipleComponent,
-		NzDemoButtonSizeComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoButtonBasicComponent, NzDemoButtonBlockComponent, NzDemoButtonDangerComponent, NzDemoButtonDisabledComponent, NzDemoButtonGhostComponent, NzDemoButtonIconComponent, NzDemoButtonLoadingComponent, NzDemoButtonMultipleComponent, NzDemoButtonSizeComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoButtonZhComponent {

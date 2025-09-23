@@ -17,22 +17,7 @@ import { NzDemoGridSortComponent } from './sort';
 
 @Component({
   selector     : 'nz-demo-grid',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoGridBasicComponent,
-		NzDemoGridFlexAlignComponent,
-		NzDemoGridFlexOrderComponent,
-		NzDemoGridFlexStretchComponent,
-		NzDemoGridFlexComponent,
-		NzDemoGridGutterComponent,
-		NzDemoGridOffsetComponent,
-		NzDemoGridPlaygroundComponent,
-		NzDemoGridResponsiveMoreComponent,
-		NzDemoGridResponsiveComponent,
-		NzDemoGridSortComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoGridBasicComponent, NzDemoGridFlexAlignComponent, NzDemoGridFlexOrderComponent, NzDemoGridFlexStretchComponent, NzDemoGridFlexComponent, NzDemoGridGutterComponent, NzDemoGridOffsetComponent, NzDemoGridPlaygroundComponent, NzDemoGridResponsiveMoreComponent, NzDemoGridResponsiveComponent, NzDemoGridSortComponent],
   templateUrl  : './zh.html'
 })
 export class NzDemoGridZhComponent {

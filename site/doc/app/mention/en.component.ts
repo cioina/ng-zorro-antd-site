@@ -19,24 +19,7 @@ import { NzDemoMentionVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-mention',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoMentionAsyncComponent,
-		NzDemoMentionAutoSizeComponent,
-		NzDemoMentionAvatarComponent,
-		NzDemoMentionBasicComponent,
-		NzDemoMentionClearComponent,
-		NzDemoMentionCustomTagComponent,
-		NzDemoMentionFormComponent,
-		NzDemoMentionPlacementComponent,
-		NzDemoMentionPrefixComponent,
-		NzDemoMentionPreviewComponent,
-		NzDemoMentionReadonlyComponent,
-		NzDemoMentionStatusComponent,
-		NzDemoMentionVariantComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoMentionAsyncComponent, NzDemoMentionAutoSizeComponent, NzDemoMentionAvatarComponent, NzDemoMentionBasicComponent, NzDemoMentionClearComponent, NzDemoMentionCustomTagComponent, NzDemoMentionFormComponent, NzDemoMentionPlacementComponent, NzDemoMentionPrefixComponent, NzDemoMentionPreviewComponent, NzDemoMentionReadonlyComponent, NzDemoMentionStatusComponent, NzDemoMentionVariantComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoMentionEnComponent {

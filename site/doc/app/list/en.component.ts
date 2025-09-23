@@ -13,18 +13,7 @@ import { NzDemoListVerticalComponent } from './vertical';
 
 @Component({
   selector     : 'nz-demo-list',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoListBasicComponent,
-		NzDemoListGridComponent,
-		NzDemoListInfiniteLoadComponent,
-		NzDemoListLoadmoreComponent,
-		NzDemoListResponsiveComponent,
-		NzDemoListSimpleComponent,
-		NzDemoListVerticalComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoListBasicComponent, NzDemoListGridComponent, NzDemoListInfiniteLoadComponent, NzDemoListLoadmoreComponent, NzDemoListResponsiveComponent, NzDemoListSimpleComponent, NzDemoListVerticalComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoListEnComponent {

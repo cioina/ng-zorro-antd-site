@@ -10,15 +10,7 @@ import { NzDemoStatisticUnitComponent } from './unit';
 
 @Component({
   selector     : 'nz-demo-statistic',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoStatisticBasicComponent,
-		NzDemoStatisticCardComponent,
-		NzDemoStatisticCountdownComponent,
-		NzDemoStatisticUnitComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoStatisticBasicComponent, NzDemoStatisticCardComponent, NzDemoStatisticCountdownComponent, NzDemoStatisticUnitComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoStatisticEnComponent {

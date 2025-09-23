@@ -11,16 +11,7 @@ import { NzDemoFlexWrapComponent } from './wrap';
 
 @Component({
   selector     : 'nz-demo-flex',
-  standalone   : true,
-  imports      : [
-    ShareModule,
-		NzDemoFlexAlignComponent,
-		NzDemoFlexBasicComponent,
-		NzDemoFlexCombinationComponent,
-		NzDemoFlexGapComponent,
-		NzDemoFlexWrapComponent,
-
-  ],
+  imports      : [ShareModule, NzDemoFlexAlignComponent, NzDemoFlexBasicComponent, NzDemoFlexCombinationComponent, NzDemoFlexGapComponent, NzDemoFlexWrapComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoFlexEnComponent {
