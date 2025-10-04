@@ -1,0 +1,467 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-basic" nzTitle="基本用法"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-one-way" nzTitle="单向样式"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-search" nzTitle="带搜索框"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-advanced" nzTitle="高级用法"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-custom-item" nzTitle="自定义渲染行数据"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-table-transfer" nzTitle="表格穿梭框"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-tree-transfer" nzTitle="树穿梭框"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-transfer-demo-status" nzTitle="自定义状态"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Transfer
+	<span class="subtitle">穿梭框</span>
+</h1>
+
+  <component-meta name="transfer" description="双栏穿梭选择框。" language="zh"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要在多个可选项中进行多选时。</li>
+<li>比起 Select 和 TreeSelect，穿梭框占据更大的空间，可以展示可选项的更多信息。</li>
+</ul>
+<p>穿梭选择框用直观的方式在两栏中移动元素，完成选择行为。</p>
+<p>选择一个或以上的选项后，点击对应的方向键，可以把选中的选项移动到另一栏。
+其中，左边一栏为 <code>source</code>，右边一栏为 <code>target</code>，API 的设计也反映了这两个概念。</p>
+
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本用法"
+  nzId="components-transfer-demo-basic"
+  nzSelector="nz-demo-transfer-basic"
+  nzLink="components-transfer-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-basic <name>"
+  nzComponentName="NzDemoTransferBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/basic.md"
+>
+	<nz-demo-transfer-basic demo></nz-demo-transfer-basic>
+	<div intro ngNonBindable><p>最基本的用法，展示了 <code>nzDataSource</code> 每行的渲染函数 <code>nzRender</code> 以及回调函数 <code>nzChange</code>、<code>nzSelectChange</code> 的用法。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="单向样式"
+  nzId="components-transfer-demo-one-way"
+  nzSelector="nz-demo-transfer-one-way"
+  nzLink="components-transfer-demo-one-way"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-one-way <name>"
+  nzComponentName="NzDemoTransferOneWayComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/one-way.md"
+>
+	<nz-demo-transfer-one-way demo></nz-demo-transfer-one-way>
+	<div intro ngNonBindable><p>通过 <code>nzOneWay</code> 将 Transfer 转为单向样式。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="带搜索框"
+  nzId="components-transfer-demo-search"
+  nzSelector="nz-demo-transfer-search"
+  nzLink="components-transfer-demo-search"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-search <name>"
+  nzComponentName="NzDemoTransferSearchComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/search.md"
+>
+	<nz-demo-transfer-search demo></nz-demo-transfer-search>
+	<div intro ngNonBindable><p>带搜索框的穿梭框，可以自定义搜索函数。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="高级用法"
+  nzId="components-transfer-demo-advanced"
+  nzSelector="nz-demo-transfer-advanced"
+  nzLink="components-transfer-demo-advanced"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-advanced <name>"
+  nzComponentName="NzDemoTransferAdvancedComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/advanced.md"
+>
+	<nz-demo-transfer-advanced demo></nz-demo-transfer-advanced>
+	<div intro ngNonBindable><p>穿梭框高级用法，可配置操作文案，可定制宽高，可对底部进行自定义渲染。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义渲染行数据"
+  nzId="components-transfer-demo-custom-item"
+  nzSelector="nz-demo-transfer-custom-item"
+  nzLink="components-transfer-demo-custom-item"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-custom-item <name>"
+  nzComponentName="NzDemoTransferCustomItemComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/custom-item.md"
+>
+	<nz-demo-transfer-custom-item demo></nz-demo-transfer-custom-item>
+	<div intro ngNonBindable><p>自定义渲染每一个 Transfer Item，可用于渲染复杂数据。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="表格穿梭框"
+  nzId="components-transfer-demo-table-transfer"
+  nzSelector="nz-demo-transfer-table-transfer"
+  nzLink="components-transfer-demo-table-transfer"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-table-transfer <name>"
+  nzComponentName="NzDemoTransferTableTransferComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/table-transfer.md"
+>
+	<nz-demo-transfer-table-transfer demo></nz-demo-transfer-table-transfer>
+	<div intro ngNonBindable><p>使用 Table 组件作为自定义渲染列表。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="树穿梭框"
+  nzId="components-transfer-demo-tree-transfer"
+  nzSelector="nz-demo-transfer-tree-transfer"
+  nzLink="components-transfer-demo-tree-transfer"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-tree-transfer <name>"
+  nzComponentName="NzDemoTransferTreeTransferComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/tree-transfer.md"
+>
+	<nz-demo-transfer-tree-transfer demo></nz-demo-transfer-tree-transfer>
+	<div intro ngNonBindable><p>使用 Tree 组件作为自定义渲染列表。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义状态"
+  nzId="components-transfer-demo-status"
+  nzSelector="nz-demo-transfer-status"
+  nzLink="components-transfer-demo-status"
+  nzGenerateCommand="ng g ng-zorro-antd:transfer-status <name>"
+  nzComponentName="NzDemoTransferStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/transfer/demo/status.md"
+>
+	<nz-demo-transfer-status demo></nz-demo-transfer-status>
+	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 Transfer 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-transfer"><span>nz-transfer</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-transfer'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzDataSource]</code></td>
+<td>数据源，其中若数据属性 <code>direction: &#39;right&#39;</code> 将会被渲染到右边一栏中或使用 <code>nzTargetKeys</code></td>
+<td><code>TransferItem[]</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>是否禁用</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzTitles]</code></td>
+<td>标题集合，顺序从左至右</td>
+<td><code>string[]</code></td>
+<td><code>[&#39;&#39;, &#39;&#39;]</code></td>
+</tr>
+<tr>
+<td><code>[nzOperations]</code></td>
+<td>操作文案集合，顺序从下至上</td>
+<td><code>string[]</code></td>
+<td><code>[&#39;&#39;, &#39;&#39;]</code></td>
+</tr>
+<tr>
+<td><code>[nzListStyle]</code></td>
+<td>两个穿梭框的自定义样式，等同 <code>ngStyle</code></td>
+<td><code>object</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzItemUnit]</code></td>
+<td>单数单位</td>
+<td><code>string</code></td>
+<td><code>&#39;项目&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzItemsUnit]</code></td>
+<td>复数单位</td>
+<td><code>string</code></td>
+<td><code>&#39;项目&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzRenderList]</code></td>
+<td>自定义渲染列表，见示例</td>
+<td><code>Array&lt;TemplateRef&lt;void&gt; | null&gt;</code></td>
+<td><code>[null, null]</code></td>
+</tr>
+<tr>
+<td><code>[nzRender]</code></td>
+<td>每行数据渲染模板，见示例</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzFooter]</code></td>
+<td>底部渲染模板，见示例</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzShowSelectAll]</code></td>
+<td>是否显示全选框</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[nzShowSearch]</code></td>
+<td>是否显示搜索框</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzFilterOption]</code></td>
+<td>接收 <code>inputValue</code> <code>option</code> 两个参数，当 <code>option</code> 符合筛选条件时，应返回 <code>true</code>，反之则返回 <code>false</code>。</td>
+<td><code>(inputValue: string, item: TransferItem) =&gt; boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSearchPlaceholder]</code></td>
+<td>搜索框的默认值</td>
+<td><code>string</code></td>
+<td><code>&#39;请输入搜索内容&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzNotFoundContent]</code></td>
+<td>当列表为空时显示的内容</td>
+<td><code>string</code></td>
+<td><code>&#39;列表为空&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzCanMove]</code></td>
+<td>穿梭时二次校验。<strong>注意：</strong> 穿梭组件内部始终只保留一份数据，二次校验过程中需取消穿梭项则直接删除该项；具体用法见示例。</td>
+<td><code>(arg: TransferCanMove) =&gt; Observable&lt;TransferItem[]&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSelectedKeys]</code></td>
+<td>设置被选中的 key 集合</td>
+<td><code>string[]</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzTargetKeys]</code></td>
+<td>显示在右侧框数据的 key 集合</td>
+<td><code>string[]</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOneWay]</code></td>
+<td>展示为单向样式</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzStatus]</code></td>
+<td>设置校验状态</td>
+<td><code>&#39;error&#39; | &#39;warning&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzChange)</code></td>
+<td>选项在两栏之间转移时的回调函数</td>
+<td><code>EventEmitter&lt;TransferChange&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzSearchChange)</code></td>
+<td>搜索框内容时改变时的回调函数</td>
+<td><code>EventEmitter&lt;TransferSearchChange&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzSelectChange)</code></td>
+<td>选中项发生改变时的回调函数</td>
+<td><code>EventEmitter&lt;TransferSearchChange&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h4 id="transferitem"><span>TransferItem</span><a onclick="window.location.hash = 'transferitem'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>标题，用于显示及搜索关键字判断</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>指定数据方向，若指定 <code>right</code> 为右栏，其他情况为左栏</td>
+<td><code>&#39;left&#39; | &#39;right&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>指定 checkbox 为不可用状态</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td>checked</td>
+<td>指定 checkbox 为选中状态</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody></table>
+<h4 id="transfercanmove"><span>TransferCanMove</span><a onclick="window.location.hash = 'transfercanmove'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>direction</td>
+<td>数据方向</td>
+<td><code>&#39;left&#39; | &#39;right&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>list</td>
+<td>数据源</td>
+<td><code>TransferItem[]</code></td>
+<td><code>[]</code></td>
+</tr>
+</tbody></table>
+<h4 id="transferchange"><span>TransferChange</span><a onclick="window.location.hash = 'transferchange'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>from</td>
+<td>数据方向</td>
+<td><code>&#39;left&#39; | &#39;right&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>to</td>
+<td>数据方向</td>
+<td><code>&#39;left&#39; | &#39;right&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>list</td>
+<td>数据源</td>
+<td><code>TransferItem[]</code></td>
+<td><code>[]</code></td>
+</tr>
+</tbody></table>
+<h4 id="transfersearchchange"><span>TransferSearchChange</span><a onclick="window.location.hash = 'transfersearchchange'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>direction</td>
+<td>数据方向</td>
+<td><code>&#39;left&#39; | &#39;right&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>value</td>
+<td>搜索关键词</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h4 id="nzrenderlist"><span>nzRenderList</span><a onclick="window.location.hash = 'nzrenderlist'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>direction</code></td>
+<td>渲染列表的方向</td>
+<td><code>&#39;left&#39; | &#39;right&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td>是否禁用列表</td>
+<td><code>boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td>过滤后的数据</td>
+<td><code>TransferItem[]</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>onItemSelect</code></td>
+<td>勾选条目</td>
+<td><code>(item: TransferItem) =&gt; void</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>onItemSelectAll</code></td>
+<td>勾选一组条目</td>
+<td><code>(selected: boolean) =&gt; void</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+</section></article>

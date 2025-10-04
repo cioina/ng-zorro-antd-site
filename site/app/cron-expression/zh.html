@@ -1,0 +1,234 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-basic" nzTitle="基本"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-size" nzTitle="三种大小"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-borderless" nzTitle="无边框"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-type" nzTitle="两种规则类型"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-collapse" nzTitle="隐藏折叠面板"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-shortcuts" nzTitle="额外节点"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-semantic" nzTitle="自定义渲染 cron 时间"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cron-expression-demo-use" nzTitle="结合表单使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Cron Expression
+	<span class="subtitle">cron 表单</span>
+</h1>
+
+  <component-meta name="cron-expression" description="显示和编辑 cron 表达式。" language="zh"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
+<p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
+</blockquote>
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在表单中使用 cron 格式验证时使用。</p>
+
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  nzId="components-cron-expression-demo-basic"
+  nzSelector="nz-demo-cron-expression-basic"
+  nzLink="components-cron-expression-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-basic <name>"
+  nzComponentName="NzDemoCronExpressionBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/basic.md"
+>
+	<nz-demo-cron-expression-basic demo></nz-demo-cron-expression-basic>
+	<div intro ngNonBindable><p>最简单的用法。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="三种大小"
+  nzId="components-cron-expression-demo-size"
+  nzSelector="nz-demo-cron-expression-size"
+  nzLink="components-cron-expression-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-size <name>"
+  nzComponentName="NzDemoCronExpressionSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/size.md"
+>
+	<nz-demo-cron-expression-size demo></nz-demo-cron-expression-size>
+	<div intro ngNonBindable><p>我们为 <code>nz-cron-expression</code> 输入框定义了三种尺寸（大、默认、小），高度分别为 <code>40px</code>、<code>32px</code> 和 <code>24px</code>。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="无边框"
+  nzId="components-cron-expression-demo-borderless"
+  nzSelector="nz-demo-cron-expression-borderless"
+  nzLink="components-cron-expression-demo-borderless"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-borderless <name>"
+  nzComponentName="NzDemoCronExpressionBorderlessComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/borderless.md"
+>
+	<nz-demo-cron-expression-borderless demo></nz-demo-cron-expression-borderless>
+	<div intro ngNonBindable><p>没有边框</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="两种规则类型"
+  nzId="components-cron-expression-demo-type"
+  nzSelector="nz-demo-cron-expression-type"
+  nzLink="components-cron-expression-demo-type"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-type <name>"
+  nzComponentName="NzDemoCronExpressionTypeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/type.md"
+>
+	<nz-demo-cron-expression-type demo></nz-demo-cron-expression-type>
+	<div intro ngNonBindable><p>我们为 <code>nz-cron-expression</code> 输入框定义了两种规则类型（五段式， 六段式），分别为: <code>nzType=&quot;linux&quot;</code>、<code>nzType=&quot;spring&quot;</code>。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="隐藏折叠面板"
+  nzId="components-cron-expression-demo-collapse"
+  nzSelector="nz-demo-cron-expression-collapse"
+  nzLink="components-cron-expression-demo-collapse"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-collapse <name>"
+  nzComponentName="NzDemoCronExpressionCollapseComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/collapse.md"
+>
+	<nz-demo-cron-expression-collapse demo></nz-demo-cron-expression-collapse>
+	<div intro ngNonBindable><p><code>[nzCollapseDisable]=&quot;true&quot;</code></p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="额外节点"
+  nzId="components-cron-expression-demo-shortcuts"
+  nzSelector="nz-demo-cron-expression-shortcuts"
+  nzLink="components-cron-expression-demo-shortcuts"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-shortcuts <name>"
+  nzComponentName="NzDemoCronExpressionShortcutsComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/shortcuts.md"
+>
+	<nz-demo-cron-expression-shortcuts demo></nz-demo-cron-expression-shortcuts>
+	<div intro ngNonBindable><p>你可以通过 nzExtra 来指定右侧的内容。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义渲染 cron 时间"
+  nzId="components-cron-expression-demo-semantic"
+  nzSelector="nz-demo-cron-expression-semantic"
+  nzLink="components-cron-expression-demo-semantic"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-semantic <name>"
+  nzComponentName="NzDemoCronExpressionSemanticComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/semantic.md"
+>
+	<nz-demo-cron-expression-semantic demo></nz-demo-cron-expression-semantic>
+	<div intro ngNonBindable><p>自定义渲染下次执行时间</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="结合表单使用"
+  nzId="components-cron-expression-demo-use"
+  nzSelector="nz-demo-cron-expression-use"
+  nzLink="components-cron-expression-demo-use"
+  nzGenerateCommand="ng g ng-zorro-antd:cron-expression-use <name>"
+  nzComponentName="NzDemoCronExpressionUseComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cron-expression/demo/use.md"
+>
+	<nz-demo-cron-expression-use demo></nz-demo-cron-expression-use>
+	<div intro ngNonBindable><p><code>&lt;nz-cron-expression formControlName=&quot;cron&quot;&gt;&lt;/nz-cron-expression&gt;</code></p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>别忘记先安装 cron-parser：</p>
+<pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> cron-parser
+</code></pre><h3 id="nz-cron-expression"><span>nz-cron-expression</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-cron-expression'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzType]</code></td>
+<td>cron 规则类型</td>
+<td><code>&#39;linux&#39;｜&#39;spring&#39;</code></td>
+<td><code>linux</code></td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>设置输入框大小</td>
+<td><code>&#39;large&#39;｜&#39;small&#39;｜&#39;default&#39;</code></td>
+<td><code>default</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>禁用</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzBorderless]</code></td>
+<td>是否隐藏边框</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzCollapseDisable]</code></td>
+<td>隐藏折叠面板</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzExtra]</code></td>
+<td>自定义渲染右侧的内容</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSemantic]</code></td>
+<td>自定义渲染下次执行时间</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><h3 id="支持格式"><span>支持格式</span><a onclick="window.location.hash = '支持格式'" class="anchor">#</a></h3><pre><code class="language-text">*    *    *    *    *    *
+┬    ┬    ┬    ┬    ┬    ┬
+│    │    │    │    │    |
+│    │    │    │    │    └ day of week (0 - 7, 1L - 7L) (0 or 7 is Sun)
+│    │    │    │    └───── month (1 - 12)
+│    │    │    └────────── day of month (1 - 31, L)
+│    │    └─────────────── hour (0 - 23)
+│    └──────────────────── minute (0 - 59)
+└───────────────────────── second (0 - 59, optional)
+</code></pre></section></article>

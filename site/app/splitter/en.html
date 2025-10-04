@@ -1,0 +1,242 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-control" nzTitle="Control Mode"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-vertical" nzTitle="Vertical"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-collapsible" nzTitle="Collapsible"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-multiple" nzTitle="Multiple Panels"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-complex" nzTitle="Complex combination"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-splitter-demo-lazy" nzTitle="Lazy"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Splitter
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="splitter" description="Splits the area into multiple horizontal or vertical sides." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>The Splitter component can be used to separate areas horizontally or vertically.
+You can freely drag the splitter to adjust the size of each side, while also being able to specify its minimum and
+maximum width and height.</p>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-splitter-demo-basic"
+  nzSelector="nz-demo-splitter-basic"
+  nzLink="components-splitter-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-basic <name>"
+  nzComponentName="NzDemoSplitterBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/basic.md"
+>
+	<nz-demo-splitter-basic demo></nz-demo-splitter-basic>
+	<div intro ngNonBindable><p>Initialize panel size, panel size limit.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Vertical"
+  nzId="components-splitter-demo-vertical"
+  nzSelector="nz-demo-splitter-vertical"
+  nzLink="components-splitter-demo-vertical"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-vertical <name>"
+  nzComponentName="NzDemoSplitterVerticalComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/vertical.md"
+>
+	<nz-demo-splitter-vertical demo></nz-demo-splitter-vertical>
+	<div intro ngNonBindable><p>Use vertical layout.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Multiple Panels"
+  nzId="components-splitter-demo-multiple"
+  nzSelector="nz-demo-splitter-multiple"
+  nzLink="components-splitter-demo-multiple"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-multiple <name>"
+  nzComponentName="NzDemoSplitterMultipleComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/multiple.md"
+>
+	<nz-demo-splitter-multiple demo></nz-demo-splitter-multiple>
+	<div intro ngNonBindable><p>Multiple panels.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Lazy"
+  nzId="components-splitter-demo-lazy"
+  nzSelector="nz-demo-splitter-lazy"
+  nzLink="components-splitter-demo-lazy"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-lazy <name>"
+  nzComponentName="NzDemoSplitterLazyComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/lazy.md"
+>
+	<nz-demo-splitter-lazy demo></nz-demo-splitter-lazy>
+	<div intro ngNonBindable><p>Lazy mode, dragging does not update the size immediately, but updates when released.</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Control Mode"
+  nzId="components-splitter-demo-control"
+  nzSelector="nz-demo-splitter-control"
+  nzLink="components-splitter-demo-control"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-control <name>"
+  nzComponentName="NzDemoSplitterControlComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/control.md"
+>
+	<nz-demo-splitter-control demo></nz-demo-splitter-control>
+	<div intro ngNonBindable><p>Control the size of the splitter. When one of the panels disables <code>nzResizable</code>, dragging will be disabled.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Collapsible"
+  nzId="components-splitter-demo-collapsible"
+  nzSelector="nz-demo-splitter-collapsible"
+  nzLink="components-splitter-demo-collapsible"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-collapsible <name>"
+  nzComponentName="NzDemoSplitterCollapsibleComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/collapsible.md"
+>
+	<nz-demo-splitter-collapsible demo></nz-demo-splitter-collapsible>
+	<div intro ngNonBindable><p>Set <code>nzCollapsible</code> to enable collapse. Can through <code>nzMin</code> to limit dragging to expand when collapsed.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Complex combination"
+  nzId="components-splitter-demo-complex"
+  nzSelector="nz-demo-splitter-complex"
+  nzLink="components-splitter-demo-complex"
+  nzGenerateCommand="ng g ng-zorro-antd:splitter-complex <name>"
+  nzComponentName="NzDemoSplitterComplexComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/splitter/demo/complex.md"
+>
+	<nz-demo-splitter-complex demo></nz-demo-splitter-complex>
+	<div intro ngNonBindable><p>Complex combination panel, quick folding, prohibited from changing size.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-splitter"><span>nz-splitter</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-splitter'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzLayout]</code></td>
+<td>Layout direction</td>
+<td><code>&#39;horizontal&#39; | &#39;vertical&#39;</code></td>
+<td><code>&#39;horizontal&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzLazy]</code></td>
+<td>Lazy Mode</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzResizeStart)</code></td>
+<td>Callback before dragging starts</td>
+<td><code>EventEmitter&lt;number[]&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzResize)</code></td>
+<td>Panel size change callback</td>
+<td><code>EventEmitter&lt;number[]&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzResizeEnd)</code></td>
+<td>Drag end callback</td>
+<td><code>EventEmitter&lt;number[]&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-splitter-panel"><span>nz-splitter-panel</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-splitter-panel'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzDefaultSize]</code></td>
+<td>Initial panel size support number for px or &#39;percent%&#39; usage</td>
+<td><code>number | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzMin]</code></td>
+<td>Minimum threshold support number for px or &#39;percent%&#39; usage</td>
+<td><code>number | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzMax]</code></td>
+<td>Maximum threshold support number for px or &#39;percent%&#39; usage</td>
+<td><code>number | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Controlled panel size support number for px or &#39;percent%&#39; usage</td>
+<td><code>number | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzCollapsible]</code></td>
+<td>Quick folding</td>
+<td><code>boolean  | &#123; start?: boolean; end?: boolean &#125;</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzResizable]</code></td>
+<td>Whether to enable drag and drop</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody></table>
+</section></article>

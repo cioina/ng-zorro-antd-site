@@ -1,0 +1,171 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-flex-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-flex-demo-align" nzTitle="Align"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-flex-demo-gap" nzTitle="Gap"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-flex-demo-wrap" nzTitle="Wrap"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-flex-demo-combination" nzTitle="Combination"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Flex
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="flex" description="A flex layout container for alignment." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>Good for setting spacing between elements.</li>
+<li>Suitable for setting various horizontal and vertical alignments.</li>
+</ul>
+<h3 id="difference_with_space_component"><span>Difference with Space component</span><a onclick="window.location.hash = 'difference_with_space_component'" class="anchor">#</a></h3><ul>
+<li>Space is used to set the spacing between inline elements. It will add a wrapper element for each child element for
+inline alignment. Suitable for equidistant arrangement of multiple child elements in rows and columns.</li>
+<li>Flex is used to set the layout of block-level elements. It does not add a wrapper element. Suitable for layout of
+child elements in vertical or horizontal direction, and provides more flexibility and control.</li>
+</ul>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-flex-demo-basic"
+  nzSelector="nz-demo-flex-basic"
+  nzLink="components-flex-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-basic <name>"
+  nzComponentName="NzDemoFlexBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/basic.md"
+>
+	<nz-demo-flex-basic demo></nz-demo-flex-basic>
+	<div intro ngNonBindable><p>The basic usage.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Align"
+  nzId="components-flex-demo-align"
+  nzSelector="nz-demo-flex-align"
+  nzLink="components-flex-demo-align"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-align <name>"
+  nzComponentName="NzDemoFlexAlignComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/align.md"
+>
+	<nz-demo-flex-align demo></nz-demo-flex-align>
+	<div intro ngNonBindable><p>Set align.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Gap"
+  nzId="components-flex-demo-gap"
+  nzSelector="nz-demo-flex-gap"
+  nzLink="components-flex-demo-gap"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-gap <name>"
+  nzComponentName="NzDemoFlexGapComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/gap.md"
+>
+	<nz-demo-flex-gap demo></nz-demo-flex-gap>
+	<div intro ngNonBindable><p>Set the <code>gap</code> between elements, which has three preset sizes: <code>small</code>, <code>middle</code>, <code>large</code>, You can also customize the gap size.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Wrap"
+  nzId="components-flex-demo-wrap"
+  nzSelector="nz-demo-flex-wrap"
+  nzLink="components-flex-demo-wrap"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-wrap <name>"
+  nzComponentName="NzDemoFlexWrapComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/wrap.md"
+>
+	<nz-demo-flex-wrap demo></nz-demo-flex-wrap>
+	<div intro ngNonBindable><p>Wrap line.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Combination"
+  nzId="components-flex-demo-combination"
+  nzSelector="nz-demo-flex-combination"
+  nzLink="components-flex-demo-combination"
+  nzGenerateCommand="ng g ng-zorro-antd:flex-combination <name>"
+  nzComponentName="NzDemoFlexCombinationComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/flex/demo/combination.md"
+>
+	<nz-demo-flex-combination demo></nz-demo-flex-combination>
+	<div intro ngNonBindable><p>Nesting can achieve more complex layouts.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-flex"><span>[nz-flex]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-flex'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzVertical]</code></td>
+<td>Is direction of the flex vertical, use <code>flex-direction: column</code></td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzJustify]</code></td>
+<td>Sets the alignment of elements in the direction of the main axis</td>
+<td>reference <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank" rel="noopener">justify-content</a></td>
+<td><code>&#39;normal&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzAlign]</code></td>
+<td>Sets the alignment of elements in the direction of the cross axis</td>
+<td>reference <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank" rel="noopener">align-items</a></td>
+<td><code>&#39;normal&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzGap]</code></td>
+<td>Sets the gap between items</td>
+<td><code>&#39;small&#39; | &#39;middle&#39; | &#39;large&#39; | number | string</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>[nzWrap]</code></td>
+<td>Set whether the element is displayed in a single line or in multiple lines</td>
+<td>reference <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank" rel="noopener">flex-wrap</a></td>
+<td><code>&#39;nowrap&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzFlex]</code></td>
+<td>Flex CSS shorthand properties</td>
+<td>reference <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex" target="_blank" rel="noopener">flex</a></td>
+<td><code>&#39;unset&#39;</code></td>
+</tr>
+</tbody></table>
+</section></article>

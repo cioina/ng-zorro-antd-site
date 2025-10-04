@@ -1,0 +1,203 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-experimental-image-demo-preloading" nzTitle="优先加载"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-experimental-image-demo-src-loader" nzTitle="使用 Src Loader"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-experimental-image-demo-auto-srcset" nzTitle="自动填充 srcset"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Image
+	<span class="subtitle">图片</span>
+</h1>
+
+  <component-meta name="experimental-image" description="实验性的图片组件。" language="zh"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
+<p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
+</blockquote>
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>需要浏览器优先加载图片时（需要在 SSR 下处理）。</li>
+<li>需要对高清显示器（如视网膜屏）优化时。</li>
+<li>使用图片 CDN 服务时。</li>
+<li>以及 <a href="/components/image/zh">Image documentation</a> 中的功能</li>
+<li>下一步计划<ul>
+<li>添加 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes" target="_blank" rel="noopener">sizes</a> 属性及响应式的支持</li>
+</ul>
+</li>
+</ul>
+
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="优先加载"
+  nzId="components-experimental-image-demo-preloading"
+  nzSelector="nz-demo-experimental-image-preloading"
+  nzLink="components-experimental-image-demo-preloading"
+  nzGenerateCommand="ng g ng-zorro-antd:experimental-image-preloading <name>"
+  nzComponentName="NzDemoExperimentalImagePreloadingComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/preloading.md"
+>
+	<nz-demo-experimental-image-preloading demo></nz-demo-experimental-image-preloading>
+	<div intro ngNonBindable><p>设置 <code>nzPriority</code> 将会在服务端渲染(SSR) 时添加 <code>&lt;link rel=&quot;preload&quot;&gt;</code> 标签，浏览器会将其视为高优先级资源加载。你可以在 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener">MDN - Preloading</a>、<a href="https://web.dev/preload-responsive-images/" target="_blank" rel="noopener">web.dev - Preloading responsive images</a> 了解更多。</p>
+<p>需要注意的是，通常只需要为首屏图片设置 <code>nzPriority</code> 因此在循环生成的模版中只需要为靠前的子项添加即可，例如：</p>
+<pre><code class="language-html">&#64;for (product of products; track product)
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-image</span> <span class="token attr-name">[nzPriority]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$index &lt;= 8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-image</span><span class="token punctuation">></span></span>
+&#125;
+</code></pre></div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="使用 Src Loader"
+  nzId="components-experimental-image-demo-src-loader"
+  nzSelector="nz-demo-experimental-image-src-loader"
+  nzLink="components-experimental-image-demo-src-loader"
+  nzGenerateCommand="ng g ng-zorro-antd:experimental-image-src-loader <name>"
+  nzComponentName="NzDemoExperimentalImageSrcLoaderComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/src-loader.md"
+>
+	<nz-demo-experimental-image-src-loader demo></nz-demo-experimental-image-src-loader>
+	<div intro ngNonBindable><p>自定义 <code>nzSrcLoader</code> 用于解析图片 URLs, 也可以使用内置的图片 CND 提供商的 Loaders。 <br/>
+我们建议始终指定图片的尺寸(<code>nzWidth</code>、<code>nzHeight</code>)，不仅可以帮助提高网页体验的关键指标 <a href="https://web.dev/cls/" target="_blank" rel="noopener">CLS</a>，还可以配合 Loader 利用图片 CND 对图片进行优化处理提高加载速度。 <br/>
+如果希望在不同的环境下使用不同的 Loader 时你可以像下面这样做：</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> environment <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'environments/environment'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfig<span class="token punctuation">,</span> provideNzConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> aliObjectsLoader<span class="token punctuation">,</span> defaultImageSrcLoader <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/experimental/image'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> nzConfig<span class="token operator">:</span> NzConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  imageExperimental<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    nzSrcLoader<span class="token operator">:</span> environment<span class="token punctuation">.</span>production <span class="token operator">?</span> aliObjectsLoader <span class="token operator">:</span> defaultImageSrcLoader
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>nzConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre></div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自动填充 srcset"
+  nzId="components-experimental-image-demo-auto-srcset"
+  nzSelector="nz-demo-experimental-image-auto-srcset"
+  nzLink="components-experimental-image-demo-auto-srcset"
+  nzGenerateCommand="ng g ng-zorro-antd:experimental-image-auto-srcset <name>"
+  nzComponentName="NzDemoExperimentalImageAutoSrcsetComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/experimental-image/demo/auto-srcset.md"
+>
+	<nz-demo-experimental-image-auto-srcset demo></nz-demo-experimental-image-auto-srcset>
+	<div intro ngNonBindable><p>使用 <code>nzAutoSrcset</code> 时要求必须定义图片尺寸(<code>nzWidth</code>、<code>nzHeight</code>)，配合 Loader 为不同的像素密度自动生成 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset" target="_blank" rel="noopener">srcset</a>。</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>nz-image</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>支持全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzSrc</code></td>
+<td>url</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzAlt</code></td>
+<td>alt</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzWidth</code></td>
+<td>宽度</td>
+<td><code>number|string</code></td>
+<td><code>auto</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzHeight</code></td>
+<td>高度</td>
+<td><code>number|string</code></td>
+<td><code>auto</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>nzAutoSrcset</code></td>
+<td>是否优化图片加载</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzSrcLoader</code></td>
+<td>加载器</td>
+<td><code>NzImageSrcLoader</code></td>
+<td><code>defaultImageSrcLoader</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nzPriority</code></td>
+<td>是否添加 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank" rel="noopener">preload</a></td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="nzimagesrcloader"><span>NzImageSrcLoader</span><a onclick="window.location.hash = 'nzimagesrcloader'" class="anchor">#</a></h3><pre><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">NzImageSrcLoader</span> <span class="token operator">=</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> <span class="token punctuation">&#123;</span> src<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> width<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+</code></pre><h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><h3 id="nzsrcloader"><span>nzSrcLoader</span><a onclick="window.location.hash = 'nzsrcloader'" class="anchor">#</a></h3><p>使用 <code>nzSrcLoader</code> 可以帮助你填充请求图片的关键信息，例如 <code>src</code> 和 <code>srcset</code>，默认为：</p>
+<pre><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">const</span> defaultImageSrcLoader<span class="token operator">:</span> <span class="token function-variable function">NzImageSrcLoader</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">&#123;</span> src <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> src<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><p>内置的图片 CND 创建方法</p>
+<pre><code class="language-ts"><span class="token comment">/**
+ * AliObjectsLoader return format
+ * &#123;domain&#125;/&#123;src&#125;?x-oss-process=image/resize,w_&#123;width&#125;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createAliObjectsLoader</span><span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NzImageSrcLoader<span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * ImgixLoader return format
+ * &#123;domain&#125;/&#123;src&#125;?format=auto&amp;fit=max&amp;w=&#123;width&#125;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createImgixLoader</span><span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NzImageSrcLoader<span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * CloudinaryLoader return format
+ * &#123;domain&#125;/c_limit,q_auto,w_&#123;width&#125;/&#123;src&#125;
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createCloudinaryLoader</span><span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> NzImageSrcLoader<span class="token punctuation">;</span>
+</code></pre><h3 id="响应式图片和预加载图片"><span>响应式图片和预加载图片</span><a onclick="window.location.hash = '响应式图片和预加载图片'" class="anchor">#</a></h3><p>使用响应式图片可以帮助网页在不同的设备上显示良好的效果，预加载图片可以帮助你更快地加载图片，更多信息请参考：</p>
+<ul>
+<li><a href="https://web.dev/preload-responsive-images/" target="_blank" rel="noopener">preloading responsive images</a></li>
+<li><a href="https://nextjs.org/docs/basic-features/image-optimization" target="_blank" rel="noopener">next.js image component and image optimization</a></li>
+</ul>
+</section></article>

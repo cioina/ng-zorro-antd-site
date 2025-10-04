@@ -1,0 +1,211 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-avatar-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-avatar-demo-type" nzTitle="Type"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-avatar-demo-dynamic" nzTitle="Autoset Font Size"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-avatar-demo-badge" nzTitle="With Badge"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-avatar-demo-group" nzTitle="Avatar Group"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Avatar
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="avatar" description="Used to represent users or things, supporting the display of images, icons, or characters." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-avatar-demo-basic"
+  nzSelector="nz-demo-avatar-basic"
+  nzLink="components-avatar-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:avatar-basic <name>"
+  nzComponentName="NzDemoAvatarBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/avatar/demo/basic.md"
+>
+	<nz-demo-avatar-basic demo></nz-demo-avatar-basic>
+	<div intro ngNonBindable><p>Three sizes and two shapes are available.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Autoset Font Size"
+  nzId="components-avatar-demo-dynamic"
+  nzSelector="nz-demo-avatar-dynamic"
+  nzLink="components-avatar-demo-dynamic"
+  nzGenerateCommand="ng g ng-zorro-antd:avatar-dynamic <name>"
+  nzComponentName="NzDemoAvatarDynamicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/avatar/demo/dynamic.md"
+>
+	<nz-demo-avatar-dynamic demo></nz-demo-avatar-dynamic>
+	<div intro ngNonBindable><p>For letter type Avatar, when the letters are too long to display, the font size can be automatically adjusted according to the width of the Avatar.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Avatar Group"
+  nzId="components-avatar-demo-group"
+  nzSelector="nz-demo-avatar-group"
+  nzLink="components-avatar-demo-group"
+  nzGenerateCommand="ng g ng-zorro-antd:avatar-group <name>"
+  nzComponentName="NzDemoAvatarGroupComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/avatar/demo/group.md"
+>
+	<nz-demo-avatar-group demo></nz-demo-avatar-group>
+	<div intro ngNonBindable><p>Avatar group display.</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Type"
+  nzId="components-avatar-demo-type"
+  nzSelector="nz-demo-avatar-type"
+  nzLink="components-avatar-demo-type"
+  nzGenerateCommand="ng g ng-zorro-antd:avatar-type <name>"
+  nzComponentName="NzDemoAvatarTypeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/avatar/demo/type.md"
+>
+	<nz-demo-avatar-type demo></nz-demo-avatar-type>
+	<div intro ngNonBindable><p>Image, Icon and letter are supported, and the latter two kinds avatar can have custom colors and background colors.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="With Badge"
+  nzId="components-avatar-demo-badge"
+  nzSelector="nz-demo-avatar-badge"
+  nzLink="components-avatar-demo-badge"
+  nzGenerateCommand="ng g ng-zorro-antd:avatar-badge <name>"
+  nzComponentName="NzDemoAvatarBadgeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/avatar/demo/badge.md"
+>
+	<nz-demo-avatar-badge demo></nz-demo-avatar-badge>
+	<div intro ngNonBindable><p>Usually used for messages remind.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-avatar"><span>nz-avatar</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-avatar'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzIcon]</code></td>
+<td>The <code>Icon</code> type for an icon avatar, see <code>Icon</code></td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzShape]</code></td>
+<td>The shape of avatar</td>
+<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
+<td><code>&#39;circle&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>The size of the avatar</td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39; | number</code></td>
+<td><code>&#39;default&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzGap]</code></td>
+<td>Letter type unit distance between left and right sides</td>
+<td><code>number</code></td>
+<td><code>4</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzSrc]</code></td>
+<td>Avatar image URL</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzSrcSet]</code></td>
+<td>a list of sources to use for different screen resolutions</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzAlt]</code></td>
+<td>This attribute defines the alternative text describing the image</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzText]</code></td>
+<td>Letter type avatar</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzLoading]</code></td>
+<td>Sets the native <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#loading" target="_blank" rel="noopener"><code>loading</code></a> attribute on the avatar image element</td>
+<td><code>&#39;eager&#39; | &#39;lazy&#39;</code></td>
+<td><code>&#39;eager&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzFetchPriority]</code></td>
+<td>Sets the native <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#fetchpriority" target="_blank" rel="noopener"><code>fetchpriority</code></a> attribute on the avatar image element</td>
+<td><code>&#39;high&#39; | &#39;low&#39; | &#39;auto&#39;</code></td>
+<td><code>&#39;auto&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzError)</code></td>
+<td>Handler when img load error, call the <code>preventDefault</code> method to prevent default fallback behavior</td>
+<td><code>EventEmitter&lt;Event&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="nz-avatar-group"><span>nz-avatar-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-avatar-group'" class="anchor">#</a></h3><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-avatar-group</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-avatar</span> <span class="token attr-name">nzIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-avatar</span><span class="token punctuation">></span></span>
+  <span class="token comment">&lt;!--  ...  --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-avatar-group</span><span class="token punctuation">></span></span>
+</code></pre></section></article>

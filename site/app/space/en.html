@@ -1,0 +1,299 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-basic" nzTitle="Basic Usage"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-vertical" nzTitle="Vertical Space"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-size" nzTitle="Space Size"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-align" nzTitle="Align"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-customize" nzTitle="Customize Size"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-wrap" nzTitle="Wrap"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-split" nzTitle="Split"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-compact" nzTitle="Compact Mode"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-compact-buttons" nzTitle="Button Compact Mode"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-space-demo-compact-button-vertical" nzTitle="Vertical Compact Mode"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Space
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="space" description="Set components spacing." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>Avoid components clinging together and set a unified space.</li>
+<li>Use <code>&lt;nz-space-compact&gt;</code> when child form components are compactly connected and the border is collapsed.</li>
+</ul>
+<p>The difference with Flex component is:</p>
+<ul>
+<li>Space is used to set the spacing between inline elements. It will add a wrapper element for each child element for inline alignment. Suitable for equidistant arrangement of multiple child elements in rows and columns.</li>
+<li>Flex is used to set the layout of block-level elements. It does not add a wrapper element. Suitable for layout of child elements in vertical or horizontal direction, and provides more flexibility and control.</li>
+</ul>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic Usage"
+  nzId="components-space-demo-basic"
+  nzSelector="nz-demo-space-basic"
+  nzLink="components-space-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:space-basic <name>"
+  nzComponentName="NzDemoSpaceBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/basic.md"
+>
+	<nz-demo-space-basic demo></nz-demo-space-basic>
+	<div intro ngNonBindable><p>Crowded components horizontal spacing.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Vertical Space"
+  nzId="components-space-demo-vertical"
+  nzSelector="nz-demo-space-vertical"
+  nzLink="components-space-demo-vertical"
+  nzGenerateCommand="ng g ng-zorro-antd:space-vertical <name>"
+  nzComponentName="NzDemoSpaceVerticalComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/vertical.md"
+>
+	<nz-demo-space-vertical demo></nz-demo-space-vertical>
+	<div intro ngNonBindable><p>Crowded components vertical spacing.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Space Size"
+  nzId="components-space-demo-size"
+  nzSelector="nz-demo-space-size"
+  nzLink="components-space-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:space-size <name>"
+  nzComponentName="NzDemoSpaceSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/size.md"
+>
+	<nz-demo-space-size demo></nz-demo-space-size>
+	<div intro ngNonBindable><p><code>large</code>, <code>middle</code> and <code>small</code> preset sizes.</p>
+<p>Set the <code>nzSize</code> to <code>large</code> and <code>middle</code> by setting size to large and middle respectively. If <code>size</code> is not set, the spacing is <code>small</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Align"
+  nzId="components-space-demo-align"
+  nzSelector="nz-demo-space-align"
+  nzLink="components-space-demo-align"
+  nzGenerateCommand="ng g ng-zorro-antd:space-align <name>"
+  nzComponentName="NzDemoSpaceAlignComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/align.md"
+>
+	<nz-demo-space-align demo></nz-demo-space-align>
+	<div intro ngNonBindable><p>Config item align.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Customize Size"
+  nzId="components-space-demo-customize"
+  nzSelector="nz-demo-space-customize"
+  nzLink="components-space-demo-customize"
+  nzGenerateCommand="ng g ng-zorro-antd:space-customize <name>"
+  nzComponentName="NzDemoSpaceCustomizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/customize.md"
+>
+	<nz-demo-space-customize demo></nz-demo-space-customize>
+	<div intro ngNonBindable><p>Custom spacing size.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Wrap"
+  nzId="components-space-demo-wrap"
+  nzSelector="nz-demo-space-wrap"
+  nzLink="components-space-demo-wrap"
+  nzGenerateCommand="ng g ng-zorro-antd:space-wrap <name>"
+  nzComponentName="NzDemoSpaceWrapComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/wrap.md"
+>
+	<nz-demo-space-wrap demo></nz-demo-space-wrap>
+	<div intro ngNonBindable><p>Auto wrap line.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Split"
+  nzId="components-space-demo-split"
+  nzSelector="nz-demo-space-split"
+  nzLink="components-space-demo-split"
+  nzGenerateCommand="ng g ng-zorro-antd:space-split <name>"
+  nzComponentName="NzDemoSpaceSplitComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/split.md"
+>
+	<nz-demo-space-split demo></nz-demo-space-split>
+	<div intro ngNonBindable><p>Crowded components split.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Compact Mode"
+  nzId="components-space-demo-compact"
+  nzSelector="nz-demo-space-compact"
+  nzLink="components-space-demo-compact"
+  nzGenerateCommand="ng g ng-zorro-antd:space-compact <name>"
+  nzComponentName="NzDemoSpaceCompactComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/compact.md"
+>
+	<nz-demo-space-compact demo></nz-demo-space-compact>
+	<div intro ngNonBindable><p>Compact Mode for form component.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Button Compact Mode"
+  nzId="components-space-demo-compact-buttons"
+  nzSelector="nz-demo-space-compact-buttons"
+  nzLink="components-space-demo-compact-buttons"
+  nzGenerateCommand="ng g ng-zorro-antd:space-compact-buttons <name>"
+  nzComponentName="NzDemoSpaceCompactButtonsComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/compact-buttons.md"
+>
+	<nz-demo-space-compact-buttons demo></nz-demo-space-compact-buttons>
+	<div intro ngNonBindable><p>Button component compact example.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Vertical Compact Mode"
+  nzId="components-space-demo-compact-button-vertical"
+  nzSelector="nz-demo-space-compact-button-vertical"
+  nzLink="components-space-demo-compact-button-vertical"
+  nzGenerateCommand="ng g ng-zorro-antd:space-compact-button-vertical <name>"
+  nzComponentName="NzDemoSpaceCompactButtonVerticalComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/space/demo/compact-button-vertical.md"
+>
+	<nz-demo-space-compact-button-vertical demo></nz-demo-space-compact-button-vertical>
+	<div intro ngNonBindable><p>Vertical Mode for Space.Compact, support Button only.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-space"><span>nz-space</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-space'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzSize]</code></td>
+<td>The space size</td>
+<td><code>NzSpaceSize | NzSpaceSize[]</code></td>
+<td><code>&#39;small&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzDirection]</code></td>
+<td>The space direction</td>
+<td><code>&#39;vertical&#39; | &#39;horizontal&#39;</code></td>
+<td><code>&#39;horizontal&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzAlign]</code></td>
+<td>Align items</td>
+<td><code>&#39;start&#39; | &#39;end&#39; | &#39;baseline&#39; | &#39;center&#39;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzWrap]</code></td>
+<td>Auto wrap line, when <code>horizontal</code> effective</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzSplit]</code></td>
+<td>Set split</td>
+<td><code>TemplateRef | string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="interfaces"><span>Interfaces</span><a onclick="window.location.hash = 'interfaces'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token keyword">type</span> <span class="token class-name">NzSpaceSize</span> <span class="token operator">=</span> <span class="token string">'small'</span> <span class="token operator">|</span> <span class="token string">'middle'</span> <span class="token operator">|</span> <span class="token string">'large'</span> <span class="token operator">|</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+</code></pre><h3 id="nz-space-compact"><span>nz-space-compact</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-space-compact'" class="anchor">#</a></h3><p>Use <code>&lt;nz-space-compact&gt;</code> when child form components are compactly connected and the border is collapsed. The supported components are：</p>
+<ul>
+<li>Button</li>
+<li>Cascader</li>
+<li>DatePicker</li>
+<li>Input</li>
+<li>Select</li>
+<li>TimePicker</li>
+<li>TreeSelect</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>支持全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzBlock]</code></td>
+<td>Option to fit width to its parent&#39;s width</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDirection]</code></td>
+<td>Set direction of layout</td>
+<td><code>&#39;vertical&#39; | &#39;horizontal&#39;</code></td>
+<td><code>&#39;horizontal&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Set child component size</td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+<td></td>
+</tr>
+</tbody></table>
+</section></article>

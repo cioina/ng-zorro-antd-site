@@ -1,0 +1,353 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-basic" nzTitle="基本"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-duration" nzTitle="自动关闭的延时"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-with-icon" nzTitle="带有图标的通知提醒框"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-with-btn" nzTitle="自定义按钮"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-custom-icon" nzTitle="自定义图标"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-placement" nzTitle="位置"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-custom-style" nzTitle="自定义样式"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-update" nzTitle="更新消息内容"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-notification-demo-template" nzTitle="使用模板"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Notification
+	<span class="subtitle">通知提醒框</span>
+</h1>
+
+  <component-meta name="notification" description="全局展示通知提醒信息。" language="zh"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>在系统四个角显示通知提醒信息。经常用于以下情况：</p>
+<ul>
+<li>较为复杂的通知内容。</li>
+<li>带有交互的通知，给出用户下一步的行动点。</li>
+<li>系统主动推送。</li>
+</ul>
+
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  nzId="components-notification-demo-basic"
+  nzSelector="nz-demo-notification-basic"
+  nzLink="components-notification-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-basic <name>"
+  nzComponentName="NzDemoNotificationBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/basic.md"
+>
+	<nz-demo-notification-basic demo></nz-demo-notification-basic>
+	<div intro ngNonBindable><p>最简单的用法，4.5 秒后自动关闭。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="带有图标的通知提醒框"
+  nzId="components-notification-demo-with-icon"
+  nzSelector="nz-demo-notification-with-icon"
+  nzLink="components-notification-demo-with-icon"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-with-icon <name>"
+  nzComponentName="NzDemoNotificationWithIconComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/with-icon.md"
+>
+	<nz-demo-notification-with-icon demo></nz-demo-notification-with-icon>
+	<div intro ngNonBindable><p>通知提醒框左侧有图标。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义图标"
+  nzId="components-notification-demo-custom-icon"
+  nzSelector="nz-demo-notification-custom-icon"
+  nzLink="components-notification-demo-custom-icon"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-custom-icon <name>"
+  nzComponentName="NzDemoNotificationCustomIconComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/custom-icon.md"
+>
+	<nz-demo-notification-custom-icon demo></nz-demo-notification-custom-icon>
+	<div intro ngNonBindable><p>图标可以被自定义。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义样式"
+  nzId="components-notification-demo-custom-style"
+  nzSelector="nz-demo-notification-custom-style"
+  nzLink="components-notification-demo-custom-style"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-custom-style <name>"
+  nzComponentName="NzDemoNotificationCustomStyleComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/custom-style.md"
+>
+	<nz-demo-notification-custom-style demo></nz-demo-notification-custom-style>
+	<div intro ngNonBindable><p>使用 nzStyle 和 nzClass 来定义样式。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="使用模板"
+  nzId="components-notification-demo-template"
+  nzSelector="nz-demo-notification-template"
+  nzLink="components-notification-demo-template"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-template <name>"
+  nzComponentName="NzDemoNotificationTemplateComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/template.md"
+>
+	<nz-demo-notification-template demo></nz-demo-notification-template>
+	<div intro ngNonBindable><p>通过模板来实现更加复杂的效果和交互。</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="自动关闭的延时"
+  nzId="components-notification-demo-duration"
+  nzSelector="nz-demo-notification-duration"
+  nzLink="components-notification-demo-duration"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-duration <name>"
+  nzComponentName="NzDemoNotificationDurationComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/duration.md"
+>
+	<nz-demo-notification-duration demo></nz-demo-notification-duration>
+	<div intro ngNonBindable><p>自定义通知框自动关闭的延时，默认<code>4.5s</code>，取消自动关闭只要将该值设为 <code>0</code> 即可。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义按钮"
+  nzId="components-notification-demo-with-btn"
+  nzSelector="nz-demo-notification-with-btn"
+  nzLink="components-notification-demo-with-btn"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-with-btn <name>"
+  nzComponentName="NzDemoNotificationWithBtnComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/with-btn.md"
+>
+	<nz-demo-notification-with-btn demo></nz-demo-notification-with-btn>
+	<div intro ngNonBindable><p>自定义关闭按钮的样式和文字。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="位置"
+  nzId="components-notification-demo-placement"
+  nzSelector="nz-demo-notification-placement"
+  nzLink="components-notification-demo-placement"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-placement <name>"
+  nzComponentName="NzDemoNotificationPlacementComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/placement.md"
+>
+	<nz-demo-notification-placement demo></nz-demo-notification-placement>
+	<div intro ngNonBindable><p>通知从右上角、右下角、左下角、左上角、上方、下方弹出。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="更新消息内容"
+  nzId="components-notification-demo-update"
+  nzSelector="nz-demo-notification-update"
+  nzLink="components-notification-demo-update"
+  nzGenerateCommand="ng g ng-zorro-antd:notification-update <name>"
+  nzComponentName="NzDemoNotificationUpdateComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/notification/demo/update.md"
+>
+	<nz-demo-notification-update demo></nz-demo-notification-update>
+	<div intro ngNonBindable><p>可以通过唯一的 <code>nzKey</code> 来更新内容。</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nznotificationservice"><span>NzNotificationService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nznotificationservice'" class="anchor">#</a></h3><p>组件提供了一些服务方法，使用方式和参数如下：</p>
+<ul>
+<li><code>NzNotificationService.blank(title, content, [options])</code> // 不带图标的提示</li>
+<li><code>NzNotificationService.success(title, content, [options])</code></li>
+<li><code>NzNotificationService.error(title, content, [options])</code></li>
+<li><code>NzNotificationService.info(title, content, [options])</code></li>
+<li><code>NzNotificationService.warning(title, content, [options])</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>title</code></td>
+<td>标题</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>提示内容</td>
+<td><code>NzNotificationContentType</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>支持设置针对当前提示框的参数，见下方表格</td>
+<td><code>object</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p><code>options</code> 支持设置的参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzKey</code></td>
+<td>通知提示的唯一标识符</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>nzDuration</code></td>
+<td>持续时间(毫秒)，当设置为 0 时不消失</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>nzPauseOnHover</code></td>
+<td>鼠标移上时禁止自动移除</td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><code>nzAnimate</code></td>
+<td>开关动画效果</td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><code>nzStyle</code></td>
+<td>自定义内联样式</td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><code>nzClass</code></td>
+<td>自定义 CSS class</td>
+<td><code>object</code></td>
+</tr>
+<tr>
+<td><code>nzData</code></td>
+<td>任何想要在模板中作为上下文的数据</td>
+<td><code>any</code></td>
+</tr>
+<tr>
+<td><code>nzCloseIcon</code></td>
+<td>自定义关闭图标</td>
+<td><code>TemplateRef&lt;void&gt; | string</code></td>
+</tr>
+<tr>
+<td><code>nzButton</code></td>
+<td>自定义按钮</td>
+<td><code>TemplateRef&lt;&#123; $implicit: NzNotificationComponent &#125;&gt; | string</code></td>
+</tr>
+</tbody></table>
+<p>还提供了全局销毁方法：</p>
+<ul>
+<li><code>NzNotificationService.remove(id)</code> // 移除特定id的消息，当id为空时，移除所有消息（该消息id通过上述方法返回值中得到）</li>
+</ul>
+<h3 id="全局配置"><span>全局配置</span><a onclick="window.location.hash = '全局配置'" class="anchor">#</a></h3><p>可以通过 <code>NzConfigService</code> 进行全局配置，详情请见文档中 <a href="/docs/global-config/zh">全局配置项</a> 章节。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzDuration</code></td>
+<td>持续时间(毫秒)，当设置为0时不消失</td>
+<td><code>number</code></td>
+<td><code>4500</code></td>
+</tr>
+<tr>
+<td><code>nzMaxStack</code></td>
+<td>同一时间可展示的最大提示数量</td>
+<td><code>number</code></td>
+<td><code>8</code></td>
+</tr>
+<tr>
+<td><code>nzPauseOnHover</code></td>
+<td>鼠标移上时禁止自动移除</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>nzAnimate</code></td>
+<td>开关动画效果</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>nzTop</code></td>
+<td>消息从顶部弹出时，距离顶部的位置。</td>
+<td><code>string</code></td>
+<td><code>&#39;24px&#39;</code></td>
+</tr>
+<tr>
+<td><code>nzBottom</code></td>
+<td>消息从底部弹出时，距离底部的位置。</td>
+<td><code>string</code></td>
+<td><code>&#39;24px&#39;</code></td>
+</tr>
+<tr>
+<td><code>nzPlacement</code></td>
+<td>弹出位置，可选 <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code> <code>bottomRight</code> <code>top</code> <code>bottom</code></td>
+<td><code>&#39;topLeft&#39; | &#39;topRight&#39; | &#39;bottomLeft&#39; | &#39;bottomRight&#39; | &#39;top&#39; | &#39;bottom&#39;</code></td>
+<td><code>&#39;topRight&#39;</code></td>
+</tr>
+<tr>
+<td><code>nzDirection</code></td>
+<td>通知的文字方向</td>
+<td><code>&#39;ltr&#39; | &#39;rtl&#39;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nznotificationref"><span>NzNotificationRef</span><a onclick="window.location.hash = 'nznotificationref'" class="anchor">#</a></h3><p>当你调用 <code>NzNotificationService.success</code> 或其他方法时会返回该对象。</p>
+<pre><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">NzNotificationDataRef</span> <span class="token punctuation">&#123;</span>
+  messageId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  onClose<span class="token operator">:</span> Subject<span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">></span><span class="token punctuation">;</span> <span class="token comment">// 当 notification 关闭时它会派发一个事件，如果为用户手动关闭会派发 `true`</span>
+  onClick<span class="token operator">:</span> Subject<span class="token operator">&lt;</span>MouseEvent<span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre></section></article>

@@ -1,0 +1,272 @@
+[
+  {
+    "path": "docs/introduce/en",
+    "label": "Ant Design of Angular",
+    "language": "en",
+    "order": 0,
+    "hidden": false,
+    "description": "An enterprise-class Angular UI component library based on Ant Design, all components are open source and free to use under MIT license.An enterprise-c...",
+    "experimental": false
+  },
+  {
+    "path": "docs/introduce/zh",
+    "label": "Ant Design of Angular",
+    "language": "zh",
+    "order": 0,
+    "hidden": false,
+    "description": "ng-zorro-antd 是遵循 Ant Design 设计规范的 Angular UI 组件库，主要用于研发企业级中后台产品。全部代码开源并遵循 MIT 协议，任何企业、组织及个人均可免费使用。提炼自企业级中后台产品的交互语言和视觉风格。开箱即用的高质量 Angular 组件库，与 Angula...",
+    "experimental": false
+  },
+  {
+    "path": "docs/getting-started/en",
+    "label": "Getting Started",
+    "language": "en",
+    "order": 1,
+    "hidden": false,
+    "description": "Ant Design of Angular is dedicated to providing a good development experience for programmers.The prerequisite of Ant Design Angular is a solid backgr...",
+    "experimental": false
+  },
+  {
+    "path": "docs/getting-started/zh",
+    "label": "快速上手",
+    "language": "zh",
+    "order": 1,
+    "hidden": false,
+    "description": "NG-ZORRO 致力于提供给程序员愉悦的开发体验。官方指南假设你已了解关于 HTML、CSS 和 JavaScript 的中级知识，并且已经完全掌握了 Angular 及配套设施的正确开发方式。如果你刚开始学习前端或者 Angular ，将框架作为你的第一步可能不是最好的主意 —— 掌握好基础知识...",
+    "experimental": false
+  },
+  {
+    "path": "docs/schematics/en",
+    "label": "Schematics",
+    "language": "en",
+    "order": 2,
+    "hidden": false,
+    "description": "Using a CLI helps initialize projects, generate template codes and reduce development time.Theng-zorro-antd scaffolding is essentially based on schema...",
+    "experimental": false
+  },
+  {
+    "path": "docs/schematics/zh",
+    "label": "脚手架",
+    "language": "zh",
+    "order": 2,
+    "hidden": false,
+    "description": "使用脚手架可以更加方便的初始化项目，生成模板代码，节省开发时间。脚手架部分完全基于 Schematics 部分进行开发。在项目下运行命令 ng add ng-zorro-antd 跟随选项便可完成初始化配置，包括引入国际化文件，导入模块，引入样式文件等工作。同时你可以通过选择预设的模板创建一个 An...",
+    "experimental": false
+  },
+  {
+    "path": "docs/i18n/en",
+    "label": "Internationalization",
+    "language": "en",
+    "order": 4,
+    "hidden": false,
+    "description": "The default language of ng-zorro-antd is Chinese yet.\nIf you want to use other languages, you can follow the instructions below.\nYou can also set the ...",
+    "experimental": false
+  },
+  {
+    "path": "docs/i18n/zh",
+    "label": "国际化",
+    "language": "zh",
+    "order": 4,
+    "hidden": false,
+    "description": "目前的默认文案是中文，如果需要使用其他语言，可以在初始化时进行配置，也可以在运行中随时修改，可以参考下面的方案。\n你也可以在新建项目时通过 ng add ng-zorro-antd 设置国际化语言。ng-zorro-antd 提供了几个配置型 token 用于全局配置国际化文案和日期，NZ_I18N",
+    "experimental": false
+  },
+  {
+    "path": "docs/customize-theme/en",
+    "label": "Theme Customization",
+    "language": "en",
+    "order": 6,
+    "hidden": false,
+    "description": "Ant Design allows you to customize some basic design aspects in order to meet the needs of UI diversity from business and brand, including primary col...",
+    "experimental": false
+  },
+  {
+    "path": "docs/customize-theme/zh",
+    "label": "定制主题",
+    "language": "zh",
+    "order": 6,
+    "hidden": false,
+    "description": "Ant Design 设计规范上支持一定程度的样式定制，以满足业务和品牌上多样化的视觉需求，包括但不限于主色、圆角、边框和部分组件的视觉定制。Ant Design 的样式使用了 Less 作为开发语言，并定义了一系列全局/组件的样式变量，你可以根据需求进行相应调整，默认样式变量Ant Design ...",
+    "experimental": false
+  },
+  {
+    "path": "docs/customize-theme-variable/en",
+    "label": "Dynamic Theme (Experimental)",
+    "language": "en",
+    "order": 6.1,
+    "hidden": false,
+    "description": "Except less customize theme, We also provide CSS Variable version to enable dynamic theme.This function depends on CSS Variables. Please check the bro...",
+    "experimental": false
+  },
+  {
+    "path": "docs/customize-theme-variable/zh",
+    "label": "动态主题（实验性）",
+    "language": "zh",
+    "order": 6.1,
+    "hidden": false,
+    "description": "除了 less 定制主题 外，我们还提供了 CSS Variable 版本以支持动态切换主题能力。该功能通过动态修改 CSS Variable 实现，因而在 IE 中页面将无法正常展示。请先确认你的用户环境是否需要支持 IE。该功能在 ng-zorro-antd@13.2.x 版本起支持。替换当前项...",
+    "experimental": false
+  },
+  {
+    "path": "docs/global-config/en",
+    "label": "Global Configuration",
+    "language": "en",
+    "order": 7,
+    "hidden": false,
+    "description": "We add a global configuration support to many components. You can define the default behavior of these components through the global configuration, wh...",
+    "experimental": false
+  },
+  {
+    "path": "docs/global-config/zh",
+    "label": "全局配置项",
+    "language": "zh",
+    "order": 7,
+    "hidden": false,
+    "description": "我们给众多组件添加了全局配置功能，你可以通过全局配置来定义组件的默认行为，从而减少在模板中需要写的代码（让你的代码更加清爽），还能在运行时修改全局配置项。想要为某些组件提供默认配置项, 可以使用 provideNzConfig 函数，传入一个符合 NzConfig 接口的对象。例如：这些全局配置项将...",
+    "experimental": false
+  },
+  {
+    "path": "docs/animations/en",
+    "label": "Animations Switch",
+    "language": "en",
+    "order": 8,
+    "hidden": false,
+    "description": "NG-ZORRO allows developers to turn off the animations. You can set animations' switch by adding corresponding directives or\nconfigurations, or use the...",
+    "experimental": false
+  },
+  {
+    "path": "docs/animations/zh",
+    "label": "动画开关",
+    "language": "zh",
+    "order": 8,
+    "hidden": false,
+    "description": "NG-ZORRO 允许开发者关闭动画效果，您可以通过添加对应指令或者配置来设置动画的开关，也可以通过全局配置关闭所有动画。在模块中使用 NoopAnimationsModule 替换 BrowserAnimationsModule。引入 NzNoAnimationModule 模块。在想关闭动画的组...",
+    "experimental": false
+  },
+  {
+    "path": "docs/direction/en",
+    "label": "Direction",
+    "language": "en",
+    "order": 9,
+    "hidden": false,
+    "description": "Set the direction (LTR / RTL).Set the dir attribute on the document body or html tag.Import the Angular CDK bidi module.Set the direction for the appl...",
+    "experimental": false
+  },
+  {
+    "path": "docs/direction/zh",
+    "label": "文字方向",
+    "language": "zh",
+    "order": 9,
+    "hidden": false,
+    "description": "设置文字方向（LTR / RTL）。在文档 body 或者 html 标签上设置 dir 属性。引入 Angular CDK bidi 模块在模版中为应用或其后代设置方向。例如对话框（Modal）服务。Angular CDK Bidirectionalitydir - HTML | MDN",
+    "experimental": false
+  },
+  {
+    "path": "docs/recommendation/en",
+    "label": "Resources",
+    "language": "en",
+    "order": 10,
+    "hidden": false,
+    "description": "ng-zorro-antd is essentially implementing Ant Design in Angular. We recommend you to use the following existing\nresources, which can hopefully serve w...",
+    "experimental": false
+  },
+  {
+    "path": "docs/recommendation/zh",
+    "label": "资源推荐",
+    "language": "zh",
+    "order": 10,
+    "hidden": false,
+    "description": "我们根据自己的开发和使用经验总结了一些可能对开发者有用的资源。ng-zorro-antd 是 Ant Design 设计规范的 Angular 实现，我们推荐使用以下社区已有的优秀实现和网站，希望能为你的开发过程提供帮助。这里包含了一些优秀的 Angular 博客和网站，供开发者参考。Angular...",
+    "experimental": false
+  },
+  {
+    "path": "docs/faq/en",
+    "label": "FAQ",
+    "language": "en",
+    "order": 11,
+    "hidden": false,
+    "description": "For more questions please search issues with FAQ tag.The size hello-world project of angular after gzip is about 30KB, the size of ng-zorro-antd's doc...",
+    "experimental": false
+  },
+  {
+    "path": "docs/faq/zh",
+    "label": "常见问题",
+    "language": "zh",
+    "order": 11,
+    "hidden": false,
+    "description": "更多常见问题请搜索标有 FAQ 的 issue。Angular 的 hello-world 项目（包含路由、动画与 Http 等模块） gzip 之后大概 30KB，ng-zorro-antd 的官网（包含所有组件，懒加载）打包后 gzip 之后为 287KB。这与 React 或者 Vue 增加路...",
+    "experimental": false
+  },
+  {
+    "path": "docs/contributing/en",
+    "label": "How to Contribute",
+    "language": "en",
+    "order": 12,
+    "hidden": false,
+    "description": "The following is a set of guidelines about making contributions to NG-ZORRO. Please spend several minutes in reading these guidelines before submittin...",
+    "experimental": false
+  },
+  {
+    "path": "docs/contributing/zh",
+    "label": "贡献指南",
+    "language": "zh",
+    "order": 12,
+    "hidden": false,
+    "description": "这篇指南会指导你如何为 NG-ZORRO 贡献一份自己的力量，请在你要提 issue 或者 pull request 之前花几分钟来阅读一遍这篇指南。我们有一份 行为准则，希望所有的贡献者都能遵守，请花时间阅读一遍全文以确保你能明白哪些是可以做的，哪些是不可以做的。我们所有的工作都会放在 GitHu...",
+    "experimental": false
+  },
+  {
+    "path": "docs/changelog/en",
+    "label": "Change Log",
+    "language": "en",
+    "order": 13,
+    "hidden": false,
+    "description": "ng-zorro-antd strictly follows Semantic Versioning 2.0.0.Weekly release: patch version at the end of every week for routine bugfix (anytime for urgent...",
+    "experimental": false
+  },
+  {
+    "path": "docs/changelog/zh",
+    "label": "更新日志",
+    "language": "zh",
+    "order": 13,
+    "hidden": false,
+    "description": "ng-zorro-antd 严格遵循 Semantic Versioning 2.0.0 语义化版本规范。修订版本号：每周末会进行日常 bugfix 更新。（如果有紧急的 bugfix，则任何时候都可发布）次版本号：每月发布一个带有新特性的向下兼容的版本。主版本号：含有破坏性更新和新特性，不在发布周...",
+    "experimental": false
+  },
+  {
+    "path": "docs/migration-v20/en",
+    "label": "v20 Migration Guide",
+    "language": "en",
+    "order": 15,
+    "hidden": false,
+    "description": "This document will help you upgrade from ng-zorro-antd 19.x version to 20.x version.Make sure Node.js >= 20.19.0 or >= 22.12.0 or >= 24.0.0.Create a n...",
+    "experimental": false
+  },
+  {
+    "path": "docs/migration-v20/zh",
+    "label": "v20 升级指南",
+    "language": "zh",
+    "order": 15,
+    "hidden": false,
+    "description": "本文档将帮助你从 ng-zorro-antd 19.x 版本升级到 20.x 版本。确保 Node.js >= 20.19.0 或 >= 22.12.0 或 >= 24.0.0创建新的分支，或者使用其他方式备份当前项目删除项目下 package-lock.json 文件参考升级指南将项目升级到 An...",
+    "experimental": false
+  },
+  {
+    "path": "docs/join/en",
+    "label": "Join us",
+    "language": "en",
+    "order": 16,
+    "hidden": true,
+    "description": "",
+    "experimental": false
+  },
+  {
+    "path": "docs/join/zh",
+    "label": "社区招募",
+    "language": "zh",
+    "order": 16,
+    "hidden": false,
+    "description": "NG-ZORRO 经过多年发展，受到的许多开发者的青睐帮助，目前已成为年下载量超 400+ 万的组件库。\n在此感谢每一位参与社区推广与开发的同学，以及每一位 NG-ZORRO 用户!为了更好地提升 NG-ZORRO 的用户体验，我们也期望更多的同学能够参与到组件库的日常开发与社区答疑，\n来帮助 NG...",
+    "experimental": false
+  }
+]

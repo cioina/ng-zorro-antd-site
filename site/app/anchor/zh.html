@@ -1,0 +1,266 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-basic" nzTitle="基本"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-static" nzTitle="静态位置"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-on-click" nzTitle="自定义 onClick 事件"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-customize-highlight" nzTitle="自定义锚点高亮"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-target-offset" nzTitle="设置锚点滚动偏移量"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-on-change" nzTitle="监听锚点链接改变"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-anchor-demo-horizontal-anchor" nzTitle="横向 Anchor"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Anchor
+	<span class="subtitle">锚点</span>
+</h1>
+
+  <component-meta name="anchor" description="用于跳转到页面指定位置。" language="zh"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要展现当前页面上可供跳转的锚点链接，以及快速在锚点之间跳转。</p>
+
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  nzId="components-anchor-demo-basic"
+  nzSelector="nz-demo-anchor-basic"
+  nzLink="components-anchor-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-basic <name>"
+  nzComponentName="NzDemoAnchorBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/basic.md"
+>
+	<nz-demo-anchor-basic demo></nz-demo-anchor-basic>
+	<div intro ngNonBindable><p>最简单的用法。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义 onClick 事件"
+  nzId="components-anchor-demo-on-click"
+  nzSelector="nz-demo-anchor-on-click"
+  nzLink="components-anchor-demo-on-click"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-on-click <name>"
+  nzComponentName="NzDemoAnchorOnClickComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/on-click.md"
+>
+	<nz-demo-anchor-on-click demo></nz-demo-anchor-on-click>
+	<div intro ngNonBindable><p>点击锚点不记录历史。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="设置锚点滚动偏移量"
+  nzId="components-anchor-demo-target-offset"
+  nzSelector="nz-demo-anchor-target-offset"
+  nzLink="components-anchor-demo-target-offset"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-target-offset <name>"
+  nzComponentName="NzDemoAnchorTargetOffsetComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/target-offset.md"
+>
+	<nz-demo-anchor-target-offset demo></nz-demo-anchor-target-offset>
+	<div intro ngNonBindable><p>锚点目标滚动到屏幕正中间。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="横向 Anchor"
+  nzId="components-anchor-demo-horizontal-anchor"
+  nzSelector="nz-demo-anchor-horizontal-anchor"
+  nzLink="components-anchor-demo-horizontal-anchor"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-horizontal-anchor <name>"
+  nzComponentName="NzDemoAnchorHorizontalAnchorComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/horizontal-anchor.md"
+>
+	<nz-demo-anchor-horizontal-anchor demo></nz-demo-anchor-horizontal-anchor>
+	<div intro ngNonBindable><p>横向 Anchor。</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="静态位置"
+  nzId="components-anchor-demo-static"
+  nzSelector="nz-demo-anchor-static"
+  nzLink="components-anchor-demo-static"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-static <name>"
+  nzComponentName="NzDemoAnchorStaticComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/static.md"
+>
+	<nz-demo-anchor-static demo></nz-demo-anchor-static>
+	<div intro ngNonBindable><p>不浮动，状态不随页面滚动变化。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="自定义锚点高亮"
+  nzId="components-anchor-demo-customize-highlight"
+  nzSelector="nz-demo-anchor-customize-highlight"
+  nzLink="components-anchor-demo-customize-highlight"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-customize-highlight <name>"
+  nzComponentName="NzDemoAnchorCustomizeHighlightComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/customize-highlight.md"
+>
+	<nz-demo-anchor-customize-highlight demo></nz-demo-anchor-customize-highlight>
+	<div intro ngNonBindable><p>自定义锚点高亮。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="监听锚点链接改变"
+  nzId="components-anchor-demo-on-change"
+  nzSelector="nz-demo-anchor-on-change"
+  nzLink="components-anchor-demo-on-change"
+  nzGenerateCommand="ng g ng-zorro-antd:anchor-on-change <name>"
+  nzComponentName="NzDemoAnchorOnChangeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/anchor/demo/on-change.md"
+>
+	<nz-demo-anchor-on-change demo></nz-demo-anchor-on-change>
+	<div intro ngNonBindable><p>监听锚点链接改变</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-anchor"><span>nz-anchor</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-anchor'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>成员</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzAffix]</code></td>
+<td>固定模式</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzBounds]</code></td>
+<td>锚点区域边界，单位：px</td>
+<td><code>number</code></td>
+<td><code>5</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzOffsetTop]</code></td>
+<td>距离窗口顶部达到指定偏移量后触发</td>
+<td><code>number</code></td>
+<td>-</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzShowInkInFixed]</code></td>
+<td>固定模式是否显示小圆点</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzTargetOffset]</code></td>
+<td>锚点滚动偏移量，默认与 <code>offsetTop</code> 相同</td>
+<td>number</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzContainer]</code></td>
+<td>指定滚动的容器</td>
+<td><code>string | HTMLElement</code></td>
+<td><code>window</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzCurrentAnchor]</code></td>
+<td>自定义高亮的锚点</td>
+<td>string</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDirection]</code></td>
+<td>设置导航方向</td>
+<td><code>&#39;vertical&#39; | &#39;horizontal&#39;</code></td>
+<td><code>&#39;vertical&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzClick)</code></td>
+<td>点击项触发</td>
+<td><code>EventEmitter&lt;string&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzChange)</code></td>
+<td>监听锚点链接改变</td>
+<td><code>EventEmitter&lt;string&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzScroll)</code></td>
+<td>滚动至某锚点时触发</td>
+<td><code>EventEmitter&lt;NzAnchorLinkComponent&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="nz-link"><span>nz-link</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-link'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>成员</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzHref]</code></td>
+<td>锚点链接</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>[nzTarget]</code></td>
+<td>该属性指定在何处显示链接的资源</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>[nzTitle]</code></td>
+<td>文字内容</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+</tr>
+</tbody></table>
+</section></article>

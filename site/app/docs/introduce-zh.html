@@ -1,0 +1,116 @@
+<article class="markdown">
+  <h1>
+	Ant Design of Angular
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#特性" class="toc-indent-1" nzTitle="特性"></nz-link>
+<nz-link nzHref="#支持环境" class="toc-indent-1" nzTitle="支持环境"></nz-link>
+<nz-link nzHref="#当前版本" class="toc-indent-1" nzTitle="当前版本"></nz-link>
+<nz-link nzHref="#支持-angular-版本" class="toc-indent-1" nzTitle="支持 Angular 版本"></nz-link>
+<nz-link nzHref="#设计规范" class="toc-indent-1" nzTitle="设计规范"></nz-link>
+<nz-link nzHref="#安装" class="toc-indent-1" nzTitle="安装"></nz-link>
+<nz-link nzHref="#链接" class="toc-indent-1" nzTitle="链接"></nz-link>
+<nz-link nzHref="#谁在使用" class="toc-indent-1" nzTitle="谁在使用"></nz-link>
+<nz-link nzHref="#如何贡献" class="toc-indent-1" nzTitle="如何贡献"></nz-link>
+<nz-link nzHref="#社区互助" class="toc-indent-1" nzTitle="社区互助"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p><code>ng-zorro-antd</code> 是遵循 Ant Design 设计规范的 Angular UI 组件库，主要用于研发企业级中后台产品。全部代码开源并遵循 MIT 协议，任何企业、组织及个人均可免费使用。</p>
+<div class="pic-plus">
+  <img alt="Ant Design" style="margin-right: 24px" width="150" height="150" src="https://img.alicdn.com/tfs/TB1g.mWZAL0gK0jSZFtXXXQCXXa-200-200.svg">
+  <span>+</span>
+  <img alt="Angular" width="180" height="180" src="https://img.alicdn.com/imgextra/i1/O1CN01RSfkps1J0vtVaKr0U_!!6000000000967-49-tps-1920-1920.webp">
+</div>
+
+<h2 id="特性"><span>特性</span><a onclick="window.location.hash = '特性'" class="anchor">#</a></h2><ul>
+<li>提炼自企业级中后台产品的交互语言和视觉风格。</li>
+<li>开箱即用的高质量 Angular 组件库，与 Angular 保持同步升级。</li>
+<li>使用 TypeScript 构建，提供完整的类型定义文件。</li>
+<li>支持 OnPush 模式，性能卓越。</li>
+<li>数十个国际化语言支持。</li>
+<li>深入每个细节的主题定制能力。</li>
+</ul>
+<h2 id="支持环境"><span>支持环境</span><a onclick="window.location.hash = '支持环境'" class="anchor">#</a></h2><ul>
+<li>现代浏览器，<a href="https://angular.cn/reference/versions#browser-support" target="_blank" rel="noopener">浏览器支持</a></li>
+<li>支持服务端渲染</li>
+<li><a href="https://www.electronjs.org/" target="_blank" rel="noopener">Electron</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a href="https://godban.github.io/browsers-support-badges//" target="_blank" rel="noopener"><img src="https://img.alicdn.com/tfs/TB1G5ewZuL2gK0jSZPhXXahvXXa-48-48.png" alt="Edge" width="24px" height="24px"></a><br>Edge</th>
+<th><a href="https://godban.github.io/browsers-support-badges/" target="_blank" rel="noopener"><img src="https://img.alicdn.com/tfs/TB1Dx73o79l0K4jSZFKXXXFjpXa-48-48.png" alt="Firefox" width="24px" height="24px"></a><br>Firefox</th>
+<th><a href="https://godban.github.io/browsers-support-badges/" target="_blank" rel="noopener"><img src="https://img.alicdn.com/tfs/TB1mY9FZrr1gK0jSZFDXXb9yVXa-48-48.png" alt="Chrome" width="24px" height="24px"></a><br>Chrome</th>
+<th><a href="https://godban.github.io/browsers-support-badges/" target="_blank" rel="noopener"><img src="https://img.alicdn.com/tfs/TB1Vas5o79l0K4jSZFKXXXFjpXa-48-48.png" alt="Safari" width="24px" height="24px"></a><br>Safari</th>
+<th><a href="https://godban.github.io/browsers-support-badges/" target="_blank" rel="noopener"><img src="https://img.alicdn.com/tfs/TB12EmNZET1gK0jSZFrXXcNCXXa-48-48.png" alt="Opera" width="24px" height="24px"></a><br>Opera</th>
+<th><a href="https://godban.github.io/browsers-support-badges/" target="_blank" rel="noopener"><img src="https://img.alicdn.com/tfs/TB1TMW8paNj0u4jSZFyXXXgMVXa-48-48.png" alt="Electron" width="24px" height="24px"></a><br>Electron</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>last 2 versions</td>
+<td>last 2 versions</td>
+<td>last 2 versions</td>
+<td>last 2 versions</td>
+<td>last 2 versions</td>
+<td>last 2 versions</td>
+</tr>
+</tbody></table>
+<h2 id="当前版本"><span>当前版本</span><a onclick="window.location.hash = '当前版本'" class="anchor">#</a></h2><p><a href="https://www.npmjs.org/package/ng-zorro-antd" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/ng-zorro-antd.svg?style=flat-square" alt="npm package"></a></p>
+<h2 id="支持_angular_版本"><span>支持 Angular 版本</span><a onclick="window.location.hash = '支持_angular_版本'" class="anchor">#</a></h2><p><code>ng-zorro-antd</code> 与 <code>&#64;angular/core</code> 保持相同的主版本号，目前支持 Angular <code>^20.0.0</code> 版本。</p>
+<h2 id="设计规范"><span>设计规范</span><a onclick="window.location.hash = '设计规范'" class="anchor">#</a></h2><p>与 Ant Design 设计规范定期同步，你可以在线查看<a href="https://github.com/NG-ZORRO/ng-zorro-antd/actions?query=workflow:%22styles-sync%22" target="_blank" rel="noopener">同步日志</a>。</p>
+<h2 id="安装"><span>安装</span><a onclick="window.location.hash = '安装'" class="anchor">#</a></h2><p>我们强烈推荐官方的 <code>&#64;angular/cli</code> 工具链辅助进行开发，在实际项目开发中，它可以很好的满足对 TypeScript 代码的构建、调试、代理、打包部署等一系列工程化的需求。</p>
+<pre><code class="language-bash">$ <span class="token function">ng</span> new PROJECT_NAME
+$ <span class="token function">cd</span> PROJECT_NAME
+$ <span class="token function">ng</span> add <span class="token function">ng-zorro-antd</span>
+</code></pre><blockquote>
+<p>如果你想了解更多CLI工具链的功能和命令，建议访问 <a href="https://github.com/angular/angular-cli" target="_blank" rel="noopener">Angular CLI</a> 了解更多</p>
+</blockquote>
+<h2 id="链接"><span>链接</span><a onclick="window.location.hash = '链接'" class="anchor">#</a></h2><ul>
+<li><a href="https://ng.ant.design" target="_blank" rel="noopener">首页</a></li>
+<li><a href="https://angular.dev/" target="_blank" rel="noopener">Angular官方文档</a></li>
+<li><a href="https://angular.cn/tools/cli" target="_blank" rel="noopener">开发脚手架</a></li>
+<li><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a></li>
+<li><a href="https://github.com/ReactiveX/rxjs" target="_blank" rel="noopener">RxJS</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=cipchk.ng-zorro-vscode" target="_blank" rel="noopener">VSCode Snippet 插件</a></li>
+</ul>
+<h2 id="谁在使用"><span>谁在使用</span><a onclick="window.location.hash = '谁在使用'" class="anchor">#</a></h2><ul>
+<li><a href="https://www.alibaba.com/" target="_blank" rel="noopener">阿里巴巴</a></li>
+<li><a href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云</a></li>
+<li><a href="https://www.thoughtworks.com/" target="_blank" rel="noopener">思特沃克</a></li>
+<li><a href="https://www.cmbchina.com/" target="_blank" rel="noopener">招商银行</a></li>
+<li><a href="https://www.gongdao.com/" target="_blank" rel="noopener">共道科技</a></li>
+<li><a href="https://www.uce.cn/" target="_blank" rel="noopener">优速快递</a></li>
+<li><a href="https://qingflow.com/" target="_blank" rel="noopener">轻流</a></li>
+<li><a href="https://www.aisino.com/" target="_blank" rel="noopener">航天信息股份有限公司</a></li>
+<li><a href="https://datagrand.com/" target="_blank" rel="noopener">达观数据</a></li>
+<li><a href="https://www.ververica.com/" target="_blank" rel="noopener">Ververica</a></li>
+<li><a href="https://flink.apache.org/" target="_blank" rel="noopener">Apache Flink</a></li>
+<li><a href="https://zeppelin.apache.org/" target="_blank" rel="noopener">Apache Zeppelin</a></li>
+<li><a href="https://submarine.apache.org/" target="_blank" rel="noopener">Apache Submarine</a></li>
+<li><a href="https://metron.apache.org/" target="_blank" rel="noopener">Apache Metron</a></li>
+<li><a href="https://pag.company/" target="_blank" rel="noopener">Process Automation Group</a></li>
+<li><a href="https://www.scentbird.com/" target="_blank" rel="noopener">ScentBird</a></li>
+<li><a href="https://www.sit.ac.nz/" target="_blank" rel="noopener">Southern Institute of Technology</a></li>
+<li><a href="https://hub.hapify.io/" target="_blank" rel="noopener">Hapify (Dynamic boilerplates tool)</a></li>
+</ul>
+<blockquote>
+<p>这里列出了部分使用者，如果你的公司和产品使用了 NG-ZORRO，欢迎到 <a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/1142" target="_blank" rel="noopener">这里</a> 留言。</p>
+</blockquote>
+<h2 id="如何贡献"><span>如何贡献</span><a onclick="window.location.hash = '如何贡献'" class="anchor">#</a></h2><p>在任何形式的参与前，请先阅读 <a href="https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">贡献者文档</a>。如果你希望参与贡献，欢迎 <a href="https://github.com/NG-ZORRO/ng-zorro-antd/pulls" target="_blank" rel="noopener">Pull Request</a>，或给我们 <a href="https://ng.ant.design/issue-helper/#/en" target="_blank" rel="noopener">报告 Bug</a>。</p>
+<blockquote>
+<p>强烈推荐阅读 <a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener">《提问的智慧》</a>、<a href="https://github.com/seajs/seajs/issues/545" target="_blank" rel="noopener">《如何向开源社区提问题》</a> 和 <a href="https://www.chiark.greenend.org.uk/%7Esgtatham/bugs-cn.html" target="_blank" rel="noopener">《如何有效地报告 Bug》</a>、<a href="https://zhuanlan.zhihu.com/p/25795393" target="_blank" rel="noopener">《如何向开源项目提交无法解答的问题》</a>，更好的问题更容易获得帮助。</p>
+</blockquote>
+<h2 id="社区互助"><span>社区互助</span><a onclick="window.location.hash = '社区互助'" class="anchor">#</a></h2><p>如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。</p>
+<p>通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 <code>ng-zorro-antd</code> 标签。</p>
+<ol>
+<li><a href="https://stackoverflow.com/questions/tagged/ng-zorro-antd" target="_blank" rel="noopener">Stack Overflow</a>（English）</li>
+<li><a href="https://segmentfault.com/t/ng-zorro" target="_blank" rel="noopener">Segment Fault</a>（中文）</li>
+<li><a href="https://github.com/NG-ZORRO/ng-zorro-antd/discussions" target="_blank" rel="noopener">Discussions · NG-ZORRO/ng-zorro-antd</a></li>
+<li>加入钉钉 NG-ZORRO 自助服务群（中文）</li>
+</ol>
+<img src="https://img.alicdn.com/imgextra/i2/O1CN01996NqO1ykdnAdOLqG_!!6000000006617-2-tps-864-822.png" width="400" height="400" loading="lazy" alt="ding talk qr-code">
+</section>
+</article>

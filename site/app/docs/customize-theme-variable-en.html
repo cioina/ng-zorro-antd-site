@@ -1,0 +1,60 @@
+<article class="markdown">
+  <h1>
+	Dynamic Theme (Experimental)
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#caveats" class="toc-indent-1" nzTitle="Caveats"></nz-link>
+<nz-link nzHref="#how-to-use" class="toc-indent-1" nzTitle="How to use"></nz-link>
+<nz-link nzHref="#import-antd-variable-min-css" class="toc-indent-2" nzTitle="Import antd.variable.min.css"></nz-link>
+<nz-link nzHref="#static-config" class="toc-indent-2" nzTitle="Static config"></nz-link>
+<nz-link nzHref="#dynamically-change-configurations" class="toc-indent-2" nzTitle="Dynamically Change Configurations"></nz-link>
+<nz-link nzHref="#conflict-resolve" class="toc-indent-1" nzTitle="Conflict resolve"></nz-link>
+<nz-link nzHref="#compile-less" class="toc-indent-2" nzTitle="Compile less"></nz-link>
+<nz-link nzHref="#related-changes" class="toc-indent-2" nzTitle="Related changes"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>Except <a href="/docs/customize-theme/en">less customize theme</a>, We also provide CSS Variable version to enable dynamic theme.</p>
+<h2 id="caveats"><span>Caveats</span><a onclick="window.location.hash = 'caveats'" class="anchor">#</a></h2><ul>
+<li>This function depends on CSS Variables. Please check the <a href="https://caniuse.com/css-variables" target="_blank" rel="noopener">browser compatibility</a>.</li>
+<li>This function requires at least <code>ng-zorro-antd&#64;13.2.x</code>.</li>
+</ul>
+<h2 id="how_to_use"><span>How to use</span><a onclick="window.location.hash = 'how_to_use'" class="anchor">#</a></h2><h3 id="import_antdvariablemincss"><span>Import antd.variable.min.css</span><a onclick="window.location.hash = 'import_antdvariablemincss'" class="anchor">#</a></h3><p>Replace your import style file with CSS Variable version:</p>
+<pre><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> &#64;import "~ng-zorro-antd/ng-zorro-antd.min.css";
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> &#64;import "~ng-zorro-antd/ng-zorro-antd.variable.min.css";</span></span>
+</code></pre><p>Note: You need remove <code>babel-plugin-import</code> for the dynamic theme.</p>
+<h3 id="static_config"><span>Static config</span><a onclick="window.location.hash = 'static_config'" class="anchor">#</a></h3><p>In order to provide default configurations in certain components, please pass an object that implements the interface <code>NzConfig</code> through the injection token <code>NZ_CONFIG</code> in the root injector. For example:</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfig<span class="token punctuation">,</span> provideNzConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> ngZorroConfig<span class="token operator">:</span> NzConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  theme<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    primaryColor<span class="token operator">:</span> <span class="token string">'#1890ff'</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>ngZorroConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><p>These global configurations would be injected and stored in a service named <code>NzConfigService</code>.</p>
+<h3 id="dynamically_change_configurations"><span>Dynamically Change Configurations</span><a onclick="window.location.hash = 'dynamically_change_configurations'" class="anchor">#</a></h3><p>You can alter the global configuration of CSS Variable through the <code>set</code> method of <code>NzConfigService</code>. For example:</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfigService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-change-zorro-config'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ChangeZorroConfigComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">onChangeConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'theme'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> primaryColor<span class="token operator">:</span> <span class="token string">'#1890ff'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>All component instances is responsive to this configuration change (as long as they are not configured independently).</p>
+<h2 id="conflict_resolve"><span>Conflict resolve</span><a onclick="window.location.hash = 'conflict_resolve'" class="anchor">#</a></h2><p>CSS Variable use <code>--ant</code> prefix by default. When exist multiple antd style file in your project, you can modify prefix to fix it.</p>
+<h3 id="compile_less"><span>Compile less</span><a onclick="window.location.hash = 'compile_less'" class="anchor">#</a></h3><p>Since prefix modified. Origin <code>antd.variable.css</code> should also be replaced:</p>
+<pre><code class="language-bash">lessc --js --modify-var<span class="token operator">=</span><span class="token string">"ant-prefix=custom"</span> antd/dist/antd.variable.less modified.css
+</code></pre><h3 id="related_changes"><span>Related changes</span><a onclick="window.location.hash = 'related_changes'" class="anchor">#</a></h3><p>In order to implement CSS Variable and maintain original usage compatibility, we added <code>&#64;root-entry-name: xxx;</code> entry injection to the <code>ng-zorro-antd.xxx.less</code> file to support less dynamic loading of the corresponding less file. Under normal circumstances, you do not need to pay attention to this change.</p>
+</section>
+</article>

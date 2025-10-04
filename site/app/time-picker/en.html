@@ -1,0 +1,466 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-value" nzTitle="Data binding"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-size" nzTitle="Three Sizes"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-disabled" nzTitle="disabled"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-hide-column" nzTitle="Hour and minute"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-interval-options" nzTitle="interval option"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-addon" nzTitle="Addon"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-disabled-part" nzTitle="disabled part"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-use12-hours" nzTitle="12 hours"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-status" nzTitle="Status"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-variant" nzTitle="Variants"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	TimePicker
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="time-picker" description="To select/input a time." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>By clicking the input box, you can select a time from a popup panel.</p>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-time-picker-demo-basic"
+  nzSelector="nz-demo-time-picker-basic"
+  nzLink="components-time-picker-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-basic <name>"
+  nzComponentName="NzDemoTimePickerBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/basic.md"
+>
+	<nz-demo-time-picker-basic demo></nz-demo-time-picker-basic>
+	<div intro ngNonBindable><p>Click <code>nz-time-picker</code>, and then we could select or input a time in panel.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Three Sizes"
+  nzId="components-time-picker-demo-size"
+  nzSelector="nz-demo-time-picker-size"
+  nzLink="components-time-picker-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-size <name>"
+  nzComponentName="NzDemoTimePickerSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/size.md"
+>
+	<nz-demo-time-picker-size demo></nz-demo-time-picker-size>
+	<div intro ngNonBindable><p>The input box comes in three sizes. large is used in the form, while the medium size is the default.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Hour and minute"
+  nzId="components-time-picker-demo-hide-column"
+  nzSelector="nz-demo-time-picker-hide-column"
+  nzLink="components-time-picker-demo-hide-column"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-hide-column <name>"
+  nzComponentName="NzDemoTimePickerHideColumnComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/hide-column.md"
+>
+	<nz-demo-time-picker-hide-column demo></nz-demo-time-picker-hide-column>
+	<div intro ngNonBindable><p>While part of <code>nzFormat</code> is omitted, the corresponding column in panel will disappear, too.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Addon"
+  nzId="components-time-picker-demo-addon"
+  nzSelector="nz-demo-time-picker-addon"
+  nzLink="components-time-picker-demo-addon"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-addon <name>"
+  nzComponentName="NzDemoTimePickerAddonComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/addon.md"
+>
+	<nz-demo-time-picker-addon demo></nz-demo-time-picker-addon>
+	<div intro ngNonBindable><p>Render addon contents to <code>nz-time-picker</code> panel&#39;s bottom.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="12 hours"
+  nzId="components-time-picker-demo-use12-hours"
+  nzSelector="nz-demo-time-picker-use12-hours"
+  nzLink="components-time-picker-demo-use12-hours"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-use12-hours <name>"
+  nzComponentName="NzDemoTimePickerUse12HoursComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/use12-hours.md"
+>
+	<nz-demo-time-picker-use12-hours demo></nz-demo-time-picker-use12-hours>
+	<div intro ngNonBindable><p>TimePicker of 12 hours with default format <code>h:mm:ss a</code></p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Variants"
+  nzId="components-time-picker-demo-variant"
+  nzSelector="nz-demo-time-picker-variant"
+  nzLink="components-time-picker-demo-variant"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-variant <name>"
+  nzComponentName="NzDemoTimePickerVariantComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/variant.md"
+>
+	<nz-demo-time-picker-variant demo></nz-demo-time-picker-variant>
+	<div intro ngNonBindable><p>Variants of TimePicker, there are four variants: <code>outlined</code>, <code>filled</code>, <code>borderless</code> and <code>underlined</code>.</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Data binding"
+  nzId="components-time-picker-demo-value"
+  nzSelector="nz-demo-time-picker-value"
+  nzLink="components-time-picker-demo-value"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-value <name>"
+  nzComponentName="NzDemoTimePickerValueComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/value.md"
+>
+	<nz-demo-time-picker-value demo></nz-demo-time-picker-value>
+	<div intro ngNonBindable><p>Work with two-way binding.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="disabled"
+  nzId="components-time-picker-demo-disabled"
+  nzSelector="nz-demo-time-picker-disabled"
+  nzLink="components-time-picker-demo-disabled"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled <name>"
+  nzComponentName="NzDemoTimePickerDisabledComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled.md"
+>
+	<nz-demo-time-picker-disabled demo></nz-demo-time-picker-disabled>
+	<div intro ngNonBindable><p>A disabled state of the <code>nz-time-picker</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="interval option"
+  nzId="components-time-picker-demo-interval-options"
+  nzSelector="nz-demo-time-picker-interval-options"
+  nzLink="components-time-picker-demo-interval-options"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-interval-options <name>"
+  nzComponentName="NzDemoTimePickerIntervalOptionsComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/interval-options.md"
+>
+	<nz-demo-time-picker-interval-options demo></nz-demo-time-picker-interval-options>
+	<div intro ngNonBindable><p>Show stepped options by <code>nzHourStep</code> <code>nzMinuteStep</code> <code>nzSecondStep</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="disabled part"
+  nzId="components-time-picker-demo-disabled-part"
+  nzSelector="nz-demo-time-picker-disabled-part"
+  nzLink="components-time-picker-demo-disabled-part"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled-part <name>"
+  nzComponentName="NzDemoTimePickerDisabledPartComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled-part.md"
+>
+	<nz-demo-time-picker-disabled-part demo></nz-demo-time-picker-disabled-part>
+	<div intro ngNonBindable><p>To specify the hours|minutes|seconds that cannot be selected</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Status"
+  nzId="components-time-picker-demo-status"
+  nzSelector="nz-demo-time-picker-status"
+  nzLink="components-time-picker-demo-status"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-status <name>"
+  nzComponentName="NzDemoTimePickerStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/status.md"
+>
+	<nz-demo-time-picker-status demo></nz-demo-time-picker-status>
+	<div intro ngNonBindable><p>Add status to TimePicker with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-time-picker"><span>nz-time-picker</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-time-picker'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzId]</code></td>
+<td>input id attribute inside the component</td>
+<td><code>string</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[ngModel]</code></td>
+<td>to set time</td>
+<td><code>Date</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzAddOn]</code></td>
+<td>called from timepicker panel to render some addon to its bottom</td>
+<td><code>TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzAllowEmpty]</code></td>
+<td>allow clearing text</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzAutoFocus]</code></td>
+<td>get focus when component mounted</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzBackdrop]</code></td>
+<td>whether or not the overlay should attach a backdrop</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzClearText]</code></td>
+<td>clear tooltip of icon</td>
+<td><code>string</code></td>
+<td><code>&#39;clear&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzNowText]</code></td>
+<td>text of the Now button</td>
+<td><code>string</code></td>
+<td><code>&#39;Now&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzOkText]</code></td>
+<td>text of the Ok button</td>
+<td><code>string</code></td>
+<td><code>&#39;Ok&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzDefaultOpenValue]</code></td>
+<td>default open panel value if <code>[ngModel]</code> is null</td>
+<td><code>Date</code></td>
+<td><code>new Date()</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>determine whether the TimePicker is disabled</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDisabledHours]</code></td>
+<td>to specify the hours that cannot be selected</td>
+<td><code>() =&gt; number[]</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDisabledMinutes]</code></td>
+<td>to specify the minutes that cannot be selected</td>
+<td><code>(hour: number) =&gt; number[]</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzDisabledSeconds]</code></td>
+<td>to specify the seconds that cannot be selected</td>
+<td><code>(hour: number, minute: number) =&gt; number[]</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzFormat]</code></td>
+<td>to set the time format</td>
+<td><a href="https://angular.dev/api/common/DatePipe" target="_blank" rel="noopener">DatePipe</a></td>
+<td><code>&#39;HH:mm:ss&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzHideDisabledOptions]</code></td>
+<td>hide the options that can not be selected</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzHourStep]</code></td>
+<td>interval between hours in picker</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzMinuteStep]</code></td>
+<td>interval between minutes in picker</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzSecondStep]</code></td>
+<td>interval between seconds in picker</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>width of time picker box</td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzStatus]</code></td>
+<td>Set validation status</td>
+<td><code>&#39;error&#39; | &#39;warning&#39;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><del><code>[nzBorderless]</code></del></td>
+<td><del>remove the border</del></td>
+<td><del><code>boolean</code></del></td>
+<td><del><code>false</code></del></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzVariant]</code></td>
+<td>Variants of TimePicker</td>
+<td><code>&#39;outlined&#39; | &#39;borderless&#39; | &#39;filled&#39; | &#39;underlined&#39;</code></td>
+<td><code>&#39;outlined&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzInputReadOnly]</code></td>
+<td>set the readonly attribute of the input tag (avoids virtual keyboard on touch devices)</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOpen]</code></td>
+<td>whether to popup panel, double binding</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPlaceHolder]</code></td>
+<td>display when there&#39;s no value</td>
+<td><code>string</code></td>
+<td><code>&#39;Select a time&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPopupClassName]</code></td>
+<td>className of panel</td>
+<td><code>string</code></td>
+<td><code>&#39;&#39;</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzUse12Hours]</code></td>
+<td>display as 12 hours format, with default format <code>h:mm:ss a</code></td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzSuffixIcon]</code></td>
+<td>the custom suffix icon</td>
+<td><code>string | TemplateRef</code></td>
+<td>-</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>(ngModelChange)</code></td>
+<td>a callback function, can be executed when the selected time is changing</td>
+<td><code>EventEmitter&lt;Date&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>(nzOpenChange)</code></td>
+<td>a callback function which will be called while panel opening/closing</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="methods"><span>Methods</span><a onclick="window.location.hash = 'methods'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>blur()</code></td>
+<td>remove focus</td>
+</tr>
+<tr>
+<td><code>focus()</code></td>
+<td>get focus</td>
+</tr>
+</tbody></table>
+</section></article>

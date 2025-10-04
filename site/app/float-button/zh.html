@@ -1,0 +1,342 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-basic" nzTitle="基本"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-type" nzTitle="类型"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-shape" nzTitle="形状"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-description" nzTitle="描述"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-tooltip" nzTitle="含有气泡卡片的悬浮按钮"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group" nzTitle="浮动按钮组"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group-menu" nzTitle="菜单模式"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-open" nzTitle="受控模式"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group-placement" nzTitle="弹出方向"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-top" nzTitle="返回顶部"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	FloatButton
+	<span class="subtitle">悬浮按钮</span>
+</h1>
+
+  <component-meta name="float-button" description="悬浮于页面上方的按钮。" language="zh"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><ul>
+<li>用于网站上的全局功能；</li>
+<li>无论浏览到何处都可以看见的按钮。</li>
+</ul>
+
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="基本"
+  nzId="components-float-button-demo-basic"
+  nzSelector="nz-demo-float-button-basic"
+  nzLink="components-float-button-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-basic <name>"
+  nzComponentName="NzDemoFloatButtonBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/basic.md"
+>
+	<nz-demo-float-button-basic demo></nz-demo-float-button-basic>
+	<div intro ngNonBindable><p>最简单的用法。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="形状"
+  nzId="components-float-button-demo-shape"
+  nzSelector="nz-demo-float-button-shape"
+  nzLink="components-float-button-demo-shape"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-shape <name>"
+  nzComponentName="NzDemoFloatButtonShapeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/shape.md"
+>
+	<nz-demo-float-button-shape demo></nz-demo-float-button-shape>
+	<div intro ngNonBindable><p>通过 <code>nsShape</code> 设置不同的形状。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="含有气泡卡片的悬浮按钮"
+  nzId="components-float-button-demo-tooltip"
+  nzSelector="nz-demo-float-button-tooltip"
+  nzLink="components-float-button-demo-tooltip"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-tooltip <name>"
+  nzComponentName="NzDemoFloatButtonTooltipComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/tooltip.md"
+>
+	<nz-demo-float-button-tooltip demo></nz-demo-float-button-tooltip>
+	<div intro ngNonBindable><p>添加 <code>nz-tooltip</code> 指令，即可开启气泡卡片。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="菜单模式"
+  nzId="components-float-button-demo-group-menu"
+  nzSelector="nz-demo-float-button-group-menu"
+  nzLink="components-float-button-demo-group-menu"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-group-menu <name>"
+  nzComponentName="NzDemoFloatButtonGroupMenuComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/group-menu.md"
+>
+	<nz-demo-float-button-group-menu demo></nz-demo-float-button-group-menu>
+	<div intro ngNonBindable><p>设置 <code>nzTrigger</code> 属性即可开启菜单模式。提供 <code>hover</code> 和 <code>click</code> 两种触发方式。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="弹出方向"
+  nzId="components-float-button-demo-group-placement"
+  nzSelector="nz-demo-float-button-group-placement"
+  nzLink="components-float-button-demo-group-placement"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-group-placement <name>"
+  nzComponentName="NzDemoFloatButtonGroupPlacementComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/group-placement.md"
+>
+	<nz-demo-float-button-group-placement demo></nz-demo-float-button-group-placement>
+	<div intro ngNonBindable><p>自定义弹出位置，提供了四个预设值：<code>top</code>、<code>right</code>、<code>bottom</code>、<code>left</code>，默认值为 <code>top</code>。</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="类型"
+  nzId="components-float-button-demo-type"
+  nzSelector="nz-demo-float-button-type"
+  nzLink="components-float-button-demo-type"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-type <name>"
+  nzComponentName="NzDemoFloatButtonTypeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/type.md"
+>
+	<nz-demo-float-button-type demo></nz-demo-float-button-type>
+	<div intro ngNonBindable><p>通过 <code>nzType</code> 改变悬浮按钮的类型。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="描述"
+  nzId="components-float-button-demo-description"
+  nzSelector="nz-demo-float-button-description"
+  nzLink="components-float-button-demo-description"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-description <name>"
+  nzComponentName="NzDemoFloatButtonDescriptionComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/description.md"
+>
+	<nz-demo-float-button-description demo></nz-demo-float-button-description>
+	<div intro ngNonBindable><p>可以通过 <code>nzDescription</code> 设置文字内容。</p>
+<blockquote>
+<p>仅当 <code>shape</code> 属性为 <code>square</code> 时支持。由于空间较小，推荐使用比较精简的双数文字。</p>
+</blockquote>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="浮动按钮组"
+  nzId="components-float-button-demo-group"
+  nzSelector="nz-demo-float-button-group"
+  nzLink="components-float-button-demo-group"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-group <name>"
+  nzComponentName="NzDemoFloatButtonGroupComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/group.md"
+>
+	<nz-demo-float-button-group demo></nz-demo-float-button-group>
+	<div intro ngNonBindable><p>按钮组合使用时，推荐使用 <code>nz-float-button-group</code>，并通过设置 <code>nzShape</code> 属性改变悬浮按钮组的形状。</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="受控模式"
+  nzId="components-float-button-demo-open"
+  nzSelector="nz-demo-float-button-open"
+  nzLink="components-float-button-demo-open"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-open <name>"
+  nzComponentName="NzDemoFloatButtonOpenComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/open.md"
+>
+	<nz-demo-float-button-open demo></nz-demo-float-button-open>
+	<div intro ngNonBindable><p>设置 <code>nzOpen</code> 属性控制 <code>nz-float-button-group</code> 是否展开</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="返回顶部"
+  nzId="components-float-button-demo-top"
+  nzSelector="nz-demo-float-button-top"
+  nzLink="components-float-button-demo-top"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-top <name>"
+  nzComponentName="NzDemoFloatButtonTopComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/top.md"
+>
+	<nz-demo-float-button-top demo></nz-demo-float-button-top>
+	<div intro ngNonBindable><p>返回页面顶部的操作按钮。</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="共同的_api"><span>共同的 API</span><a onclick="window.location.hash = '共同的_api'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzIcon]</code></td>
+<td>自定义图标</td>
+<td><code>string | TemplateRef&lt;void&gt; | null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDescription]</code></td>
+<td>文字及其它内容</td>
+<td><code>string | TemplateRef&lt;void&gt; | null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzType]</code></td>
+<td>按钮类型</td>
+<td><code>&#39;default&#39; | &#39;primary&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzShape]</code></td>
+<td>按钮形状</td>
+<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
+<td><code>&#39;circle&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzHref]</code></td>
+<td>点击跳转的地址，指定此参数 button 的行为和 a 链接一致</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzTarget]</code></td>
+<td>相当于 a 标签的 target 属性，<code>nzHref</code> 存在时生效</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClick)</code></td>
+<td>点击按钮时的回调</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-float-button-group"><span>nz-float-button-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-group'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzShape]</code></td>
+<td>设置按钮组形状</td>
+<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
+<td><code>&#39;circle&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzTrigger]</code></td>
+<td>触发方式（有触发方式为菜单模式）</td>
+<td><code>&#39;click&#39; | &#39;hover&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPlacement]</code></td>
+<td>自定义菜单弹出位置</td>
+<td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
+<td><code>&#39;top&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzOpen]</code></td>
+<td>受控展开</td>
+<td><code>boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnOpenChange)</code></td>
+<td>展开收起时的回调</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-float-button-top"><span>nz-float-button-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-top'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+<th>全局配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzVisibilityHeight]</code></td>
+<td>滚动高度达到此值时才出现 <code>nz-float-button-top</code></td>
+<td><code>number</code></td>
+<td><code>400</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzTarget]</code></td>
+<td>设置需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数</td>
+<td><code>string | Element</code></td>
+<td><code>window</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDuration]</code></td>
+<td>回到顶部所需时间（毫秒）</td>
+<td><code>number</code></td>
+<td><code>450</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClick)</code></td>
+<td>点击按钮的回调函数</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+</section></article>

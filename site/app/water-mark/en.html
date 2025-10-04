@@ -1,0 +1,215 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-water-mark-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-water-mark-demo-multi-line" nzTitle="Multi-line watermark"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-water-mark-demo-image" nzTitle="Image watermark"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-water-mark-demo-custom" nzTitle="Custom configuration"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	WaterMark
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="water-mark" description="Add specific text or patterns to the page." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>Use when the page needs to be watermarked to identify the copyright.</li>
+<li>Suitable for preventing information theft.</li>
+</ul>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-water-mark-demo-basic"
+  nzSelector="nz-demo-water-mark-basic"
+  nzLink="components-water-mark-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:water-mark-basic <name>"
+  nzComponentName="NzDemoWaterMarkBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/water-mark/demo/basic.md"
+>
+	<nz-demo-water-mark-basic demo></nz-demo-water-mark-basic>
+	<div intro ngNonBindable><p>The most basic usage.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Multi-line watermark"
+  nzId="components-water-mark-demo-multi-line"
+  nzSelector="nz-demo-water-mark-multi-line"
+  nzLink="components-water-mark-demo-multi-line"
+  nzGenerateCommand="ng g ng-zorro-antd:water-mark-multi-line <name>"
+  nzComponentName="NzDemoWaterMarkMultiLineComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/water-mark/demo/multi-line.md"
+>
+	<nz-demo-water-mark-multi-line demo></nz-demo-water-mark-multi-line>
+	<div intro ngNonBindable><p>Use <code>nzContent</code> to set a string array to specify multi-line text watermark content.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Image watermark"
+  nzId="components-water-mark-demo-image"
+  nzSelector="nz-demo-water-mark-image"
+  nzLink="components-water-mark-demo-image"
+  nzGenerateCommand="ng g ng-zorro-antd:water-mark-image <name>"
+  nzComponentName="NzDemoWaterMarkImageComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/water-mark/demo/image.md"
+>
+	<nz-demo-water-mark-image demo></nz-demo-water-mark-image>
+	<div intro ngNonBindable><p>Specify the image address via <code>nzImage</code>. To ensure that the image is high definition and not stretched, set the width and height, and upload at least twice the width and height of the logo image address.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom configuration"
+  nzId="components-water-mark-demo-custom"
+  nzSelector="nz-demo-water-mark-custom"
+  nzLink="components-water-mark-demo-custom"
+  nzGenerateCommand="ng g ng-zorro-antd:water-mark-custom <name>"
+  nzComponentName="NzDemoWaterMarkCustomComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/water-mark/demo/custom.md"
+>
+	<nz-demo-water-mark-custom demo></nz-demo-water-mark-custom>
+	<div intro ngNonBindable><p>Preview the watermark effect by configuring custom parameters.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-water-mark"><span>nz-water-mark</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-water-mark'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nzContent</code></td>
+<td>Watermark text content</td>
+<td><code>string | string[]</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>nzWidth</code></td>
+<td>The width of the watermark, the default value of <code>nzContent</code> is its own width</td>
+<td><code>number</code></td>
+<td><code>120</code></td>
+</tr>
+<tr>
+<td><code>nzHeight</code></td>
+<td>The height of the watermark, the default value of <code>nzContent</code> is its own height</td>
+<td><code>number</code></td>
+<td><code>64</code></td>
+</tr>
+<tr>
+<td><code>nzRotate</code></td>
+<td>When the watermark is drawn, the rotation Angle, unit <code>°</code></td>
+<td><code>number</code></td>
+<td><code>-22</code></td>
+</tr>
+<tr>
+<td><code>nzZIndex</code></td>
+<td>The z-index of the appended watermark element</td>
+<td><code>number</code></td>
+<td><code>9</code></td>
+</tr>
+<tr>
+<td><code>nzImage</code></td>
+<td>Image source, it is recommended to export 2x or 3x image, high priority (support base64 format)</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>nzFont</code></td>
+<td>Text style</td>
+<td><code>FontType</code></td>
+<td>FontType</td>
+</tr>
+<tr>
+<td><code>nzGap</code></td>
+<td>The spacing between watermarks</td>
+<td><code>[number, number]</code></td>
+<td><code>[100, 100]</code></td>
+</tr>
+<tr>
+<td><code>nzOffset</code></td>
+<td>The offset of the watermark from the upper left corner of the container. The default is <code>nzGap/2</code></td>
+<td><code>[number, number]</code></td>
+<td><code>[nzGap[0]/2, nzGap[1]/2]</code></td>
+</tr>
+</tbody></table>
+<h3 id="fonttype"><span>FontType</span><a onclick="window.location.hash = 'fonttype'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>color</code></td>
+<td>font color</td>
+<td><code>string</code></td>
+<td><code>rgba(0,0,0,.15)</code></td>
+</tr>
+<tr>
+<td><code>fontSize</code></td>
+<td>font size</td>
+<td><code>number</code></td>
+<td><code>16</code></td>
+</tr>
+<tr>
+<td><code>fontWeight</code></td>
+<td>font weight</td>
+<td><code>&#39;normal&#39; | &#39;light&#39; | &#39;weight&#39; | number</code></td>
+<td><code>&#39;normal&#39;</code></td>
+</tr>
+<tr>
+<td><code>fontFamily</code></td>
+<td>font family</td>
+<td><code>string</code></td>
+<td><code>&#39;sans-serif&#39;</code></td>
+</tr>
+<tr>
+<td><code>fontStyle</code></td>
+<td>font style</td>
+<td><code>&#39;none&#39; | &#39;normal&#39; | &#39;italic&#39; | &#39;oblique&#39;</code></td>
+<td><code>&#39;normal&#39;</code></td>
+</tr>
+</tbody></table>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="handle_abnormal_image_watermarks"><span>Handle abnormal image watermarks</span><a onclick="window.location.hash = 'handle_abnormal_image_watermarks'" class="anchor">#</a></h3><p>When using an image watermark and the image loads abnormally, you can add <code>nzContent</code> at the same time to prevent the watermark from becoming invalid.</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-water-mark</span>
+  <span class="token attr-name">[nzWidth]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>212<span class="token punctuation">"</span></span>
+  <span class="token attr-name">[nzHeight]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>32<span class="token punctuation">"</span></span>
+  <span class="token attr-name">nzContent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NG Ant Design<span class="token punctuation">"</span></span>
+  <span class="token attr-name">nzImage</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://img.alicdn.com/imgextra/i3/O1CN01UR3Zkq1va9fnZsZcr_!!6000000006188-55-tps-424-64.svg<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">height</span><span class="token punctuation">:</span> 500px</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-water-mark</span><span class="token punctuation">></span></span>
+</code></pre></section></article>

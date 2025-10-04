@@ -1,0 +1,292 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-basic" nzTitle="Basic Usage"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-object-value" nzTitle="Use option with object type"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-options" nzTitle="Customized"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-custom" nzTitle="Customize Input Component"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-non-case-sensitive" nzTitle="Non-case-sensitive AutoComplete"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-certain-category" nzTitle="Lookup-Patterns - Certain Category"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-uncertain-category" nzTitle="Lookup-Patterns - Uncertain Category"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-status" nzTitle="Status"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-auto-complete-demo-variant" nzTitle="Variants"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	AutoComplete
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="auto-complete" description="AutoComplete function of input field." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When there is a need for autocomplete functionality.</p>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic Usage"
+  nzId="components-auto-complete-demo-basic"
+  nzSelector="nz-demo-auto-complete-basic"
+  nzLink="components-auto-complete-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-basic <name>"
+  nzComponentName="NzDemoAutoCompleteBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/basic.md"
+>
+	<nz-demo-auto-complete-basic demo></nz-demo-auto-complete-basic>
+	<div intro ngNonBindable><p>Basic Usage, set <code>nzDataSource</code> of <code>nz-autocomplete</code> with dataSource property.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Customized"
+  nzId="components-auto-complete-demo-options"
+  nzSelector="nz-demo-auto-complete-options"
+  nzLink="components-auto-complete-demo-options"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-options <name>"
+  nzComponentName="NzDemoAutoCompleteOptionsComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/options.md"
+>
+	<nz-demo-auto-complete-options demo></nz-demo-auto-complete-options>
+	<div intro ngNonBindable><p>You could pass <code>nz-auto-option</code> as Content of <code>nz-autocomplete</code>, instead of using nzDataSource`.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Non-case-sensitive AutoComplete"
+  nzId="components-auto-complete-demo-non-case-sensitive"
+  nzSelector="nz-demo-auto-complete-non-case-sensitive"
+  nzLink="components-auto-complete-demo-non-case-sensitive"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-non-case-sensitive <name>"
+  nzComponentName="NzDemoAutoCompleteNonCaseSensitiveComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/non-case-sensitive.md"
+>
+	<nz-demo-auto-complete-non-case-sensitive demo></nz-demo-auto-complete-non-case-sensitive>
+	<div intro ngNonBindable><p>A non-case-sensitive AutoComplete</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Lookup-Patterns - Uncertain Category"
+  nzId="components-auto-complete-demo-uncertain-category"
+  nzSelector="nz-demo-auto-complete-uncertain-category"
+  nzLink="components-auto-complete-demo-uncertain-category"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-uncertain-category <name>"
+  nzComponentName="NzDemoAutoCompleteUncertainCategoryComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/uncertain-category.md"
+>
+	<nz-demo-auto-complete-uncertain-category demo></nz-demo-auto-complete-uncertain-category>
+	<div intro ngNonBindable><p>Demonstration of <a href="https://ant.design/docs/spec/reaction#Lookup-Patterns" target="_blank" rel="noopener">Lookup Patterns: Uncertain Category</a>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Variants"
+  nzId="components-auto-complete-demo-variant"
+  nzSelector="nz-demo-auto-complete-variant"
+  nzLink="components-auto-complete-demo-variant"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-variant <name>"
+  nzComponentName="NzDemoAutoCompleteVariantComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/variant.md"
+>
+	<nz-demo-auto-complete-variant demo></nz-demo-auto-complete-variant>
+	<div intro ngNonBindable><p>Variant is supported out of the box by using <code>nz-input</code> and setting <code>nzVariant</code> to <code>outlined</code>, <code>underlined</code>, <code>filled</code> and <code>borderless</code></p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Use option with object type"
+  nzId="components-auto-complete-demo-object-value"
+  nzSelector="nz-demo-auto-complete-object-value"
+  nzLink="components-auto-complete-demo-object-value"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-object-value <name>"
+  nzComponentName="NzDemoAutoCompleteObjectValueComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/object-value.md"
+>
+	<nz-demo-auto-complete-object-value demo></nz-demo-auto-complete-object-value>
+	<div intro ngNonBindable><p>Use <code>compareWith</code>(<a href="https://angular.dev/api/forms/SelectControlValueAccessor" target="_blank" rel="noopener">SelectControlValueAccessor</a>) when the <code>nzValue</code> and <code>ngModel</code> type is <code>object</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Customize Input Component"
+  nzId="components-auto-complete-demo-custom"
+  nzSelector="nz-demo-auto-complete-custom"
+  nzLink="components-auto-complete-demo-custom"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-custom <name>"
+  nzComponentName="NzDemoAutoCompleteCustomComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/custom.md"
+>
+	<nz-demo-auto-complete-custom demo></nz-demo-auto-complete-custom>
+	<div intro ngNonBindable><p>Customize Input Component</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Lookup-Patterns - Certain Category"
+  nzId="components-auto-complete-demo-certain-category"
+  nzSelector="nz-demo-auto-complete-certain-category"
+  nzLink="components-auto-complete-demo-certain-category"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-certain-category <name>"
+  nzComponentName="NzDemoAutoCompleteCertainCategoryComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/certain-category.md"
+>
+	<nz-demo-auto-complete-certain-category demo></nz-demo-auto-complete-certain-category>
+	<div intro ngNonBindable><p>Demonstration of <a href="https://ant.design/docs/spec/reaction#Lookup-Patterns" target="_blank" rel="noopener">Lookup Patterns: Certain Category</a>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Status"
+  nzId="components-auto-complete-demo-status"
+  nzSelector="nz-demo-auto-complete-status"
+  nzLink="components-auto-complete-demo-status"
+  nzGenerateCommand="ng g ng-zorro-antd:auto-complete-status <name>"
+  nzComponentName="NzDemoAutoCompleteStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/auto-complete/demo/status.md"
+>
+	<nz-demo-auto-complete-status demo></nz-demo-auto-complete-status>
+	<div intro ngNonBindable><p>Add status to AutoComplete with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token attr-name">[(ngModel)]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>value<span class="token punctuation">"</span></span> <span class="token attr-name">[nzAutocomplete]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>auto<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-autocomplete</span> <span class="token attr-name">[nzDataSource]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>['12345', '23456', '34567']<span class="token punctuation">"</span></span> <span class="token attr-name">#auto</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-autocomplete</span><span class="token punctuation">></span></span>
+</code></pre><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token attr-name">[(ngModel)]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>value<span class="token punctuation">"</span></span> <span class="token attr-name">[nzAutocomplete]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>auto<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-autocomplete</span> <span class="token attr-name">#auto</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-auto-option</span> <span class="token attr-name">[nzValue]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span>12345'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>12345<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-auto-option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-auto-option</span> <span class="token attr-name">[nzValue]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span>23456'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>23456<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-auto-option</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-auto-option</span> <span class="token attr-name">[nzValue]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">'</span>34567'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>34567<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-auto-option</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-autocomplete</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nzautocomplete"><span>[nzAutocomplete]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzautocomplete'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzAutocomplete]</code></td>
+<td>used to bind <code>nzAutocomplete</code> components</td>
+<td><code>NzAutocompleteComponent</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-autocomplete"><span>nz-autocomplete</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-autocomplete'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzBackfill]</code></td>
+<td>backfill selected item the input when using keyboard</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzDataSource]</code></td>
+<td>Data source for autocomplete</td>
+<td><code>AutocompleteDataSource</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDefaultActiveFirstOption]</code></td>
+<td>Whether active first option by default</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[nzWidth]</code></td>
+<td>Custom width, unit px</td>
+<td><code>number</code></td>
+<td>trigger element width</td>
+</tr>
+<tr>
+<td><code>[nzOverlayClassName]</code></td>
+<td>Class name of the dropdown root element</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzOverlayStyle]</code></td>
+<td>Style of the dropdown root element</td>
+<td><code>object</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[compareWith]</code></td>
+<td>Same as <a href="https://angular.dev/api/forms/SelectControlValueAccessor" target="_blank" rel="noopener">SelectControlValueAccessor</a></td>
+<td><code>(o1: any, o2: any) =&gt; boolean</code></td>
+<td><code>(o1: any, o2: any) =&gt; o1===o2</code></td>
+</tr>
+</tbody></table>
+<h3 id="nz-auto-option"><span>nz-auto-option</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-auto-option'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzValue]</code></td>
+<td>bind ngModel of the trigger element</td>
+<td><code>any</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzLabel]</code></td>
+<td>display value of the trigger element</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>disabled option</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody></table>
+</section></article>

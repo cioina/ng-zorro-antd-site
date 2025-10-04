@@ -1,0 +1,396 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-size" nzTitle="Trigger size"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-show-text" nzTitle="Show Color Text"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-disable" nzTitle="Disabled"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-disable-alpha" nzTitle="Disabled Alpha"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-clear" nzTitle="Clear Color"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-trigger" nzTitle="Custom Trigger Event"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-flip-flop" nzTitle="Custom Trigger"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-format" nzTitle="Color Format"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-block" nzTitle="Color Block"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-use" nzTitle="Use with forms"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	ColorPicker
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="color-picker" description="Used for color selection." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Used when the user needs to customize the color selection.</p>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-color-picker-demo-basic"
+  nzSelector="nz-demo-color-picker-basic"
+  nzLink="components-color-picker-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-basic <name>"
+  nzComponentName="NzDemoColorPickerBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/basic.md"
+>
+	<nz-demo-color-picker-basic demo></nz-demo-color-picker-basic>
+	<div intro ngNonBindable><p>The simplest usage.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Show Color Text"
+  nzId="components-color-picker-demo-show-text"
+  nzSelector="nz-demo-color-picker-show-text"
+  nzLink="components-color-picker-demo-show-text"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-show-text <name>"
+  nzComponentName="NzDemoColorPickerShowTextComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/show-text.md"
+>
+	<nz-demo-color-picker-show-text demo></nz-demo-color-picker-show-text>
+	<div intro ngNonBindable><p>The default text of the rendering trigger, effective when <code>nzShowText</code> is <code>true</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Disabled Alpha"
+  nzId="components-color-picker-demo-disable-alpha"
+  nzSelector="nz-demo-color-picker-disable-alpha"
+  nzLink="components-color-picker-demo-disable-alpha"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-disable-alpha <name>"
+  nzComponentName="NzDemoColorPickerDisableAlphaComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/disable-alpha.md"
+>
+	<nz-demo-color-picker-disable-alpha demo></nz-demo-color-picker-disable-alpha>
+	<div intro ngNonBindable><p>Disabled color alpha.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom Trigger Event"
+  nzId="components-color-picker-demo-trigger"
+  nzSelector="nz-demo-color-picker-trigger"
+  nzLink="components-color-picker-demo-trigger"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-trigger <name>"
+  nzComponentName="NzDemoColorPickerTriggerComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/trigger.md"
+>
+	<nz-demo-color-picker-trigger demo></nz-demo-color-picker-trigger>
+	<div intro ngNonBindable><p>Triggers event for customizing color panels, provide options <code>click</code> and <code>hover</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Color Format"
+  nzId="components-color-picker-demo-format"
+  nzSelector="nz-demo-color-picker-format"
+  nzLink="components-color-picker-demo-format"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-format <name>"
+  nzComponentName="NzDemoColorPickerFormatComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/format.md"
+>
+	<nz-demo-color-picker-format demo></nz-demo-color-picker-format>
+	<div intro ngNonBindable><p>Encoding formats, support <code>HEX</code>, <code>HSB</code>, <code>RGB</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Use with forms"
+  nzId="components-color-picker-demo-use"
+  nzSelector="nz-demo-color-picker-use"
+  nzLink="components-color-picker-demo-use"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-use <name>"
+  nzComponentName="NzDemoColorPickerUseComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/use.md"
+>
+	<nz-demo-color-picker-use demo></nz-demo-color-picker-use>
+	<div intro ngNonBindable><p><code>&lt;nz-color-picker formControlName=&quot;color&quot;&gt;&lt;/nz-color-picker&gt;</code></p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Trigger size"
+  nzId="components-color-picker-demo-size"
+  nzSelector="nz-demo-color-picker-size"
+  nzLink="components-color-picker-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-size <name>"
+  nzComponentName="NzDemoColorPickerSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/size.md"
+>
+	<nz-demo-color-picker-size demo></nz-demo-color-picker-size>
+	<div intro ngNonBindable><p>The trigger has three sizes: large, medium and small.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Disabled"
+  nzId="components-color-picker-demo-disable"
+  nzSelector="nz-demo-color-picker-disable"
+  nzLink="components-color-picker-demo-disable"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-disable <name>"
+  nzComponentName="NzDemoColorPickerDisableComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/disable.md"
+>
+	<nz-demo-color-picker-disable demo></nz-demo-color-picker-disable>
+	<div intro ngNonBindable><p>Set to disabled state.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Clear Color"
+  nzId="components-color-picker-demo-clear"
+  nzSelector="nz-demo-color-picker-clear"
+  nzLink="components-color-picker-demo-clear"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-clear <name>"
+  nzComponentName="NzDemoColorPickerClearComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/clear.md"
+>
+	<nz-demo-color-picker-clear demo></nz-demo-color-picker-clear>
+	<div intro ngNonBindable><p>Clear Color.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom Trigger"
+  nzId="components-color-picker-demo-flip-flop"
+  nzSelector="nz-demo-color-picker-flip-flop"
+  nzLink="components-color-picker-demo-flip-flop"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-flip-flop <name>"
+  nzComponentName="NzDemoColorPickerFlipFlopComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/flip-flop.md"
+>
+	<nz-demo-color-picker-flip-flop demo></nz-demo-color-picker-flip-flop>
+	<div intro ngNonBindable><p>Triggers for customizing color panels.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Color Block"
+  nzId="components-color-picker-demo-block"
+  nzSelector="nz-demo-color-picker-block"
+  nzLink="components-color-picker-demo-block"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-block <name>"
+  nzComponentName="NzDemoColorPickerBlockComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/block.md"
+>
+	<nz-demo-color-picker-block demo></nz-demo-color-picker-block>
+	<div intro ngNonBindable><p>Color Block.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-color-picker"><span>nz-color-picker</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-color-picker'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzFormat]</code></td>
+<td>Format of color</td>
+<td><code>&#39;rgb&#39; | &#39;hex&#39; | &#39;hsb&#39;</code></td>
+<td><code>&#39;hex&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzValue]</code></td>
+<td>Value of color</td>
+<td><code>string | NzColor</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Setting the trigger size</td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzDefaultValue]</code></td>
+<td>Default value of color</td>
+<td><code>string | NzColor</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzAllowClear]</code></td>
+<td>Allow clearing color selected</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzTrigger]</code></td>
+<td>ColorPicker trigger mode</td>
+<td><code>&#39;hover&#39; | &#39;click&#39;</code></td>
+<td><code>&#39;click&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzShowText]</code></td>
+<td>Show color text</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzOpen]</code></td>
+<td>Whether to show popups</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabled]</code></td>
+<td>Disable ColorPicker</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzDisabledAlpha]</code></td>
+<td>Disable Alpha</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzTitle]</code></td>
+<td>Setting the title of the color picker</td>
+<td><code>TemplateRef&lt;void&gt; | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnChange)</code></td>
+<td>Callback when value is changed</td>
+<td><code>EventEmitter&lt;&#123; color: NzColor; format: string &#125;&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClear)</code></td>
+<td>Called when clear</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnFormatChange)</code></td>
+<td>Callback when <code>format</code> is changed</td>
+<td><code>EventEmitter&lt;&#39;rgb&#39;｜&#39;hex&#39;｜&#39;hsb&#39;&gt;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnOpenChange)</code></td>
+<td>Callback for opening the color panel</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-color-block"><span>nz-color-block</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-color-block'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzColor]</code></td>
+<td>Module colors</td>
+<td><code>string</code></td>
+<td><code>&#39;#1677ff&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Color block size</td>
+<td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzOnClick]</code></td>
+<td>Callbacks for clicking on color blocks</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nzcolor"><span>NzColor</span><a onclick="window.location.hash = 'nzcolor'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>toHex</code></td>
+<td>Convert to <code>hex</code> format characters, the return type like: <code>1677ff</code></td>
+<td><code>() =&gt; string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>toHexString</code></td>
+<td>Convert to <code>hex</code> format color string, the return type like: <code>#1677ff</code></td>
+<td><code>() =&gt; string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>toHsb</code></td>
+<td>Convert to <code>hsb</code> object</td>
+<td><code>() =&gt; (&#123; h: number, s: number, b: number, a number &#125;)</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>toHsbString</code></td>
+<td>Convert to <code>hsb</code> format color string, the return type like: <code>hsb(215, 91%, 100%)</code></td>
+<td><code>() =&gt; string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>toRgb</code></td>
+<td>Convert to <code>rgb</code> object</td>
+<td><code>() =&gt; (&#123; r: number, g: number, b: number, a number &#125;)</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>toRgbString</code></td>
+<td>Convert to <code>rgb</code> format color string, the return type like: <code>rgb(22, 119, 255)</code></td>
+<td><code>() =&gt; string</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+</section></article>

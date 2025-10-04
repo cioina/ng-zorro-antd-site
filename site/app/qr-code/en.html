@@ -1,0 +1,282 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-icon" nzTitle="With Icon"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-status" nzTitle="Other Status"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-custom-status" nzTitle="custom status"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-padding" nzTitle="With padding"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-color" nzTitle="Custom Color"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-background" nzTitle="With custom background color"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-error-level" nzTitle="Error Level"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-download" nzTitle="Download QRCode"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	QRCode
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="qr-code" description="Convert text into QR codes, and support custom color and logo." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Used when the text needs to be converted into a QR Code.</p>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-qr-code-demo-basic"
+  nzSelector="nz-demo-qr-code-basic"
+  nzLink="components-qr-code-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-basic <name>"
+  nzComponentName="NzDemoQrCodeBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/basic.md"
+>
+	<nz-demo-qr-code-basic demo></nz-demo-qr-code-basic>
+	<div intro ngNonBindable><p>The simplest usage.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Other Status"
+  nzId="components-qr-code-demo-status"
+  nzSelector="nz-demo-qr-code-status"
+  nzLink="components-qr-code-demo-status"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-status <name>"
+  nzComponentName="NzDemoQrCodeStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/status.md"
+>
+	<nz-demo-qr-code-status demo></nz-demo-qr-code-status>
+	<div intro ngNonBindable><p>The status can be controlled by the value <code>nzStatus</code>, four values of <code>active</code>, <code>expired</code>, <code>loading</code>, <code>scanned</code> are provided.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="With padding"
+  nzId="components-qr-code-demo-padding"
+  nzSelector="nz-demo-qr-code-padding"
+  nzLink="components-qr-code-demo-padding"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-padding <name>"
+  nzComponentName="NzDemoQrCodePaddingComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/padding.md"
+>
+	<nz-demo-qr-code-padding demo></nz-demo-qr-code-padding>
+	<div intro ngNonBindable><p>Customize the padding of the QR Code.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="With custom background color"
+  nzId="components-qr-code-demo-background"
+  nzSelector="nz-demo-qr-code-background"
+  nzLink="components-qr-code-demo-background"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-background <name>"
+  nzComponentName="NzDemoQrCodeBackgroundComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/background.md"
+>
+	<nz-demo-qr-code-background demo></nz-demo-qr-code-background>
+	<div intro ngNonBindable><p>Customize the background color of the QR Code.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Download QRCode"
+  nzId="components-qr-code-demo-download"
+  nzSelector="nz-demo-qr-code-download"
+  nzLink="components-qr-code-demo-download"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-download <name>"
+  nzComponentName="NzDemoQrCodeDownloadComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/download.md"
+>
+	<nz-demo-qr-code-download demo></nz-demo-qr-code-download>
+	<div intro ngNonBindable><p>A way to download QRCode.</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="With Icon"
+  nzId="components-qr-code-demo-icon"
+  nzSelector="nz-demo-qr-code-icon"
+  nzLink="components-qr-code-demo-icon"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-icon <name>"
+  nzComponentName="NzDemoQrCodeIconComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/icon.md"
+>
+	<nz-demo-qr-code-icon demo></nz-demo-qr-code-icon>
+	<div intro ngNonBindable><p>QRCode with icon.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="custom status"
+  nzId="components-qr-code-demo-custom-status"
+  nzSelector="nz-demo-qr-code-custom-status"
+  nzLink="components-qr-code-demo-custom-status"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-custom-status <name>"
+  nzComponentName="NzDemoQrCodeCustomStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/custom-status.md"
+>
+	<nz-demo-qr-code-custom-status demo></nz-demo-qr-code-custom-status>
+	<div intro ngNonBindable><p>You can control the rendering logic of the QR code in different states through the value of <code>nzStatusRender</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Custom Color"
+  nzId="components-qr-code-demo-color"
+  nzSelector="nz-demo-qr-code-color"
+  nzLink="components-qr-code-demo-color"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-color <name>"
+  nzComponentName="NzDemoQrCodeColorComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/color.md"
+>
+	<nz-demo-qr-code-color demo></nz-demo-qr-code-color>
+	<div intro ngNonBindable><p>Customize QR code color.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Error Level"
+  nzId="components-qr-code-demo-error-level"
+  nzSelector="nz-demo-qr-code-error-level"
+  nzLink="components-qr-code-demo-error-level"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-error-level <name>"
+  nzComponentName="NzDemoQrCodeErrorLevelComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/error-level.md"
+>
+	<nz-demo-qr-code-error-level demo></nz-demo-qr-code-error-level>
+	<div intro ngNonBindable><p>Set Error Level.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-qrcode"><span>nz-qrcode</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-qrcode'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzValue]</code></td>
+<td>scanned text</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzColor]</code></td>
+<td>QR code Color</td>
+<td><code>string</code></td>
+<td><code>&#39;#000000&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzBgColor]</code></td>
+<td>QR code background color</td>
+<td><code>string</code></td>
+<td><code>&#39;#FFFFFF&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>QR code Size</td>
+<td><code>number</code></td>
+<td><code>160</code></td>
+</tr>
+<tr>
+<td><code>[nzPadding]</code></td>
+<td>QR code Padding</td>
+<td><code>number | number[]</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>[nzIcon]</code></td>
+<td>Icon address in QR code</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzIconSize]</code></td>
+<td>The size of the icon in the QR code</td>
+<td><code>number</code></td>
+<td><code>40</code></td>
+</tr>
+<tr>
+<td><code>[nzBordered]</code></td>
+<td>Whether has border style</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>[nzStatus]</code></td>
+<td>QR code status</td>
+<td><code>&#39;active&#39;｜&#39;expired&#39; ｜&#39;loading&#39;</code></td>
+<td><code>&#39;active&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzStatusRender]</code></td>
+<td>custom status</td>
+<td><code>TemplateRef&lt;void&gt; | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzLevel]</code></td>
+<td>Error Code Level</td>
+<td><code>&#39;L&#39;｜&#39;M&#39;｜&#39;Q&#39;｜&#39;H&#39;</code></td>
+<td><code>&#39;M&#39;</code></td>
+</tr>
+<tr>
+<td><code>(nzRefresh)</code></td>
+<td>callback</td>
+<td><code>EventEmitter&lt;string&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="note"><span>Note</span><a onclick="window.location.hash = 'note'" class="anchor">#</a></h2><h3 id="invalid_qr_code"><span>Invalid QR Code</span><a onclick="window.location.hash = 'invalid_qr_code'" class="anchor">#</a></h3><p><code>nzValue</code> has a conservative upper limit of 738 or fewer strings. If error correction levels are used, the <code>nzValue</code>
+upper limit will be lowered.</p>
+<h3 id="qr_code_error_correction_level"><span>QR Code error correction level</span><a onclick="window.location.hash = 'qr_code_error_correction_level'" class="anchor">#</a></h3><p>The ErrorLevel means that the QR code can be scanned normally after being blocked, and the maximum area that can be
+blocked is the error correction rate.</p>
+<p>Generally, the QR code is divided into 4 error correction levels: Level <code>L</code> can correct about <code>7%</code> errors, Level <code>M</code> can
+correct about <code>15%</code> errors, Level <code>Q</code> can correct about <code>25%</code> errors, and Level <code>H</code> can correct about <code>30%</code> errors. When
+the content encoding of the QR code carries less information, in other words, when the value link is short, set
+different error correction levels, and the generated image will not change.</p>
+<blockquote>
+<p>For more information, see
+the: <a href="https://www.qrcode.com/en/about/error_correction.html" target="_blank" rel="noopener">https://www.qrcode.com/en/about/error_correction</a></p>
+</blockquote>
+</section></article>

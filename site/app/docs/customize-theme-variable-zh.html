@@ -1,0 +1,61 @@
+<article class="markdown">
+  <h1>
+	动态主题（实验性）
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#注意事项" class="toc-indent-1" nzTitle="注意事项"></nz-link>
+<nz-link nzHref="#如何使用" class="toc-indent-1" nzTitle="如何使用"></nz-link>
+<nz-link nzHref="#引入-ng-zorro-antd-variable-min-css" class="toc-indent-2" nzTitle="引入 ng-zorro-antd.variable.min.css"></nz-link>
+<nz-link nzHref="#静态方法配置" class="toc-indent-2" nzTitle="静态方法配置"></nz-link>
+<nz-link nzHref="#动态变更" class="toc-indent-2" nzTitle="动态变更"></nz-link>
+<nz-link nzHref="#冲突解决" class="toc-indent-1" nzTitle="冲突解决"></nz-link>
+<nz-link nzHref="#编译-less" class="toc-indent-2" nzTitle="编译 less"></nz-link>
+<nz-link nzHref="#相关变更" class="toc-indent-2" nzTitle="相关变更"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>除了 <a href="/docs/customize-theme/zh">less 定制主题</a> 外，我们还提供了 CSS Variable 版本以支持动态切换主题能力。</p>
+<h2 id="注意事项"><span>注意事项</span><a onclick="window.location.hash = '注意事项'" class="anchor">#</a></h2><ul>
+<li>该功能通过动态修改 CSS Variable 实现，因而在 IE 中页面将无法正常展示。请先确认你的用户环境是否需要支持 IE。</li>
+<li>该功能在 <code>ng-zorro-antd&#64;13.2.x</code> 版本起支持。</li>
+</ul>
+<h2 id="如何使用"><span>如何使用</span><a onclick="window.location.hash = '如何使用'" class="anchor">#</a></h2><h3 id="引入_ng-zorro-antdvariablemincss"><span>引入 ng-zorro-antd.variable.min.css</span><a onclick="window.location.hash = '引入_ng-zorro-antdvariablemincss'" class="anchor">#</a></h3><p>替换当前项目引入样式文件为 CSS Variable 版本：</p>
+<pre><code class="language-diff"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> &#64;import "~ng-zorro-antd/ng-zorro-antd.min.css";
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> &#64;import "~ng-zorro-antd/ng-zorro-antd.variable.min.css";</span></span>
+</code></pre><p>注：如果你使用了 <code>babel-plugin-import</code>，需要将其去除。</p>
+<h3 id="静态方法配置"><span>静态方法配置</span><a onclick="window.location.hash = '静态方法配置'" class="anchor">#</a></h3><p>利用全局配置项功能，在根注入器中根据注入令牌 <code>NZ_CONFIG</code> 提供一个符合 <code>NzConfig</code> 接口的对象，例如：</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfig<span class="token punctuation">,</span> provideNzConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> ngZorroConfig<span class="token operator">:</span> NzConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 注意组件名称没有 nz 前缀</span>
+  theme<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    primaryColor<span class="token operator">:</span> <span class="token string">'#1890ff'</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>ngZorroConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><p>这些全局配置项将会被注入 <code>NzConfigService</code> 当中并保存。</p>
+<h3 id="动态变更"><span>动态变更</span><a onclick="window.location.hash = '动态变更'" class="anchor">#</a></h3><p>你可以通过调用 <code>NzConfigService</code> 的 <code>set</code> 方法来改变 CSS Variable 样式配置项，例如：</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfigService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-change-zorro-config'</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ChangeZorroConfigComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">onChangeConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'theme'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> primaryColor<span class="token operator">:</span> <span class="token string">'#1890ff'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>所有的组件实例都会响应这些改变（只要它们没有被单独赋值）。</p>
+<h2 id="冲突解决"><span>冲突解决</span><a onclick="window.location.hash = '冲突解决'" class="anchor">#</a></h2><p>默认情况下，CSS Variable 会以 <code>--ant</code> 作为前缀。当你的项目中引用多份 css 文件时，可以通过修改前缀的方式避免冲突。</p>
+<h3 id="编译_less"><span>编译 less</span><a onclick="window.location.hash = '编译_less'" class="anchor">#</a></h3><p>由于前缀变更，你需要重新生成一份对应的 css 文件。</p>
+<pre><code class="language-bash">lessc --js --modify-var<span class="token operator">=</span><span class="token string">"ant-prefix=custom"</span> ng-zorro-antd/ng-zorro-antd.variable.less modified.css
+</code></pre><h3 id="相关变更"><span>相关变更</span><a onclick="window.location.hash = '相关变更'" class="anchor">#</a></h3><p>为了实现 CSS Variable 并保持原始用法兼容性，我们于 <code>ng-zorro-antd.xxx.less</code> 文件中添加了 <code>&#64;root-entry-name: xxx;</code> 入口注入以支持 less 动态加载对应的 less 文件。一般情况下，你不需要关注该变化。</p>
+</section>
+</article>

@@ -1,0 +1,148 @@
+<article class="markdown">
+  <h1>
+	Global Configuration
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#how-to-use" class="toc-indent-1" nzTitle="How to Use?"></nz-link>
+<nz-link nzHref="#provide-template-instances" class="toc-indent-2" nzTitle="Provide Template Instances"></nz-link>
+<nz-link nzHref="#overwrite-inside-component" class="toc-indent-1" nzTitle="Overwrite inside Component"></nz-link>
+<nz-link nzHref="#dynamically-change-configurations" class="toc-indent-1" nzTitle="Dynamically Change Configurations"></nz-link>
+<nz-link nzHref="#priority-of-global-configurations" class="toc-indent-1" nzTitle="Priority of Global Configurations"></nz-link>
+<nz-link nzHref="#check-all-available-globally-configurable-parameters" class="toc-indent-1" nzTitle="Check all Available Globally Configurable Parameters"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>We add a <strong>global configuration</strong> support to many components. You can define the default behavior of these components through the global configuration, which reduces redundant codes that must be written in the templates (makes your codes concise). Moreover, it supports altering the global configuration at runtime.</p>
+<h2 id="how_to_use?"><span>How to Use?</span><a onclick="window.location.hash = 'how_to_use?'" class="anchor">#</a></h2><p>In order to provide default configurations in certain components, please use <code>provideNzConfig</code> function. object providing implements interface <code>NzConfig</code>For example:</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfig<span class="token punctuation">,</span> provideNzConfig <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> ngZorroConfig<span class="token operator">:</span> NzConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  message<span class="token operator">:</span> <span class="token punctuation">&#123;</span> nzTop<span class="token operator">:</span> <span class="token number">120</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  notification<span class="token operator">:</span> <span class="token punctuation">&#123;</span> nzTop<span class="token operator">:</span> <span class="token number">240</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>ngZorroConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><p>These global configurations would be injected and stored in a service named <code>NzConfigService</code>.</p>
+<h3 id="provide_template_instances"><span>Provide Template Instances</span><a onclick="window.location.hash = 'provide_template_instances'" class="anchor">#</a></h3><p>Some components accept <code>TemplateRef&lt;T&gt;</code> as a default parameter.</p>
+<p>One of the easiest approaches is to invoke relevant functions from <code>NzConfigService</code> in the root component.</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfigService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token keyword">implements</span> <span class="token class-name">OnInit</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">ViewChild</span></span><span class="token punctuation">(</span><span class="token string">'nzIndicatorTpl'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token keyword">static</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  nzIndicator<span class="token operator">!</span><span class="token operator">:</span> TemplateRef<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">;</span>
+
+  <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'spin'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> nzIndicator<span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>nzIndicator <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>However, this violates the separation of concerns principle and causes codes to be bloated in the <code>AppComponent</code>.</p>
+<p>To solve this, it is recommended to use a <code>FactoryProvider</code> instead of a <code>ValueProvider</code> (shown above) at the <code>NgModule</code> level.</p>
+<pre><code class="language-typescript"><span class="token comment">// The module-level Component which contains template references.</span>
+<span class="token comment">// Exporting is required for AOT compatibility</span>
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+    &lt;ng-template #nzIndicatorTpl>
+      &lt;span class="ant-spin-dot">
+        &lt;nz-icon nzType="loading" />
+      &lt;/span>
+    &lt;/ng-template>
+  </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">GlobalTemplatesComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">ViewChild</span></span><span class="token punctuation">(</span><span class="token string">'nzIndicatorTpl'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token keyword">static</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  nzIndicator<span class="token operator">!</span><span class="token operator">:</span> TemplateRef<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// The Factory function</span>
+<span class="token keyword">const</span> nzConfigFactory <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> NzConfig <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> environmentInjector <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>EnvironmentInjector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> nzIndicator <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>component<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> environmentInjector <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>instance<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">&#123;</span>
+    spin<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      nzIndicator
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span>
+      <span class="token comment">// The FactoryProvider</span>
+      provide<span class="token operator">:</span> <span class="token constant">NZ_CONFIG</span><span class="token punctuation">,</span>
+      useFactory<span class="token operator">:</span> nzConfigFactory
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><h2 id="overwrite_inside_component"><span>Overwrite inside Component</span><a onclick="window.location.hash = 'overwrite_inside_component'" class="anchor">#</a></h2><p>Developers can use Dependency Injection to reset <code>NZ_CONFIG</code> within a particular component, which will not affect configurations outside it.</p>
+<pre><code class="language-typescript"><span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// reset local NzConfigService</span>
+    NzConfigService<span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span>
+      provide<span class="token operator">:</span> <span class="token constant">NZ_CONFIG</span><span class="token punctuation">,</span>
+      useValue<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        button<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          nzSize<span class="token operator">:</span> <span class="token string">'large'</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre><p>You can also use <code>useFactory</code> to combine the global configuration with the local configuration to take effect</p>
+<blockquote>
+<p>Note: Change global configuration after component initialization won&#39;t affect local configuration</p>
+</blockquote>
+<pre><code class="language-typescript"><span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// reset local NzConfigService</span>
+    NzConfigService<span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span>
+      provide<span class="token operator">:</span> <span class="token constant">NZ_CONFIG</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">useFactory</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// get global NzConfigService</span>
+        <span class="token keyword">const</span> globalConfig <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> skipSelf<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> localConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+          select<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            nzBorderless<span class="token operator">:</span> <span class="token boolean">true</span>
+          <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        <span class="token comment">// merge local and global config</span>
+        <span class="token keyword">const</span> mergedConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+          <span class="token operator">...</span>globalConfig<span class="token punctuation">,</span>
+          <span class="token operator">...</span>localConfig
+        <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> mergedConfig<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre><h2 id="dynamically_change_configurations"><span>Dynamically Change Configurations</span><a onclick="window.location.hash = 'dynamically_change_configurations'" class="anchor">#</a></h2><p>You can alter the global configuration of a specific component through the <code>set</code> method of <code>NzConfigService</code>. For example:</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzConfigService <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/config'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ChangeZorroConfigComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">onChangeConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> nzSize<span class="token operator">:</span> <span class="token string">'large'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>All component instances is responsive to this configuration change (as long as they are not configured independently).</p>
+<h2 id="priority_of_global_configurations"><span>Priority of Global Configurations</span><a onclick="window.location.hash = 'priority_of_global_configurations'" class="anchor">#</a></h2><p>For any property that supports global configuration, the sequence of priority is based on following:</p>
+<p><strong>Parameters passed to a component instance (in templates or through methods like <code>service.create</code> &gt; global configuration provided by the injection token <code>NZ_CONFIG</code> &gt; default value in ng-zorro-antd</strong></p>
+<p>For example, if you want to create a <code>NzNotification</code> component:</p>
+<ol>
+<li>When you call <code>NzNotificationService.success</code>, you pass <code>&#123; nzDuration: 6000 &#125;</code> as the third parameter</li>
+<li>You provide <code>&#123; notification: &#123; nzDuration: 5000 &#125; &#125;</code> through the injection token <code>NZ_CONFIG</code></li>
+<li><code>ng-zorro-antd</code> has a default value of 4500</li>
+</ol>
+<p>Consequently, this particular notification will be visible for 6000 milliseconds.</p>
+<h2 id="check_all_available_globally_configurable_parameters"><span>Check all Available Globally Configurable Parameters</span><a onclick="window.location.hash = 'check_all_available_globally_configurable_parameters'" class="anchor">#</a></h2><p>The interface <code>NzConfig</code> provide complete information about all components and parameters that are globally configurable. You can also check each individual component&#39;s API for more details.</p>
+</section>
+</article>

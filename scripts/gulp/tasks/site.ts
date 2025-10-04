@@ -14,10 +14,9 @@ import { buildConfig } from '../../build-config';
 import { generateLLms } from '../../generate-llms';
 import { generate } from '../../prerender/ngsw-config';
 import { generateSitemap } from '../../prerender/sitemap';
+import siteGenerate from '../../site/generate-site';
+import themeGenerate from '../../site/generate-theme';
 import { execNodeTask, execTask } from '../util/task-helpers';
-
-const siteGenerate = require('../../site/generate-site');
-const themeGenerate = require('../../site/generate-theme');
 
 const docsGlob = join(buildConfig.componentsDir, `**/doc/*.+(md|txt)`);
 const demoGlob = join(buildConfig.componentsDir, `**/demo/*.+(md|ts)`);

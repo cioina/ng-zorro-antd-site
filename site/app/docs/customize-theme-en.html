@@ -1,0 +1,303 @@
+<article class="markdown">
+  <h1>
+	Theme Customization
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#use-pre-defined-themes" class="toc-indent-1" nzTitle="Use Pre-defined Themes"></nz-link>
+<nz-link nzHref="#customize-the-theme" class="toc-indent-2" nzTitle="Customize the theme"></nz-link>
+<nz-link nzHref="#official-themes" class="toc-indent-2" nzTitle="Official Themes"></nz-link>
+<nz-link nzHref="#customize-pre-defined-theme" class="toc-indent-1" nzTitle="Customize Pre-defined Theme"></nz-link>
+<nz-link nzHref="#method-1:-override-style-variables-in-less" class="toc-indent-2" nzTitle="Method 1: Override style variables in Less"></nz-link>
+<nz-link nzHref="#method-2:-override-theme-variables-in-webpack" class="toc-indent-2" nzTitle="Method 2: Override theme variables in webpack"></nz-link>
+<nz-link nzHref="#theme-dynamic-switching" class="toc-indent-1" nzTitle="Theme Dynamic Switching"></nz-link>
+<nz-link nzHref="#configure-angular-json-file" class="toc-indent-2" nzTitle="Configure angular.json file"></nz-link>
+<nz-link nzHref="#customize-theme-stylesheets" class="toc-indent-2" nzTitle="Customize theme stylesheets"></nz-link>
+<nz-link nzHref="#switch-themes" class="toc-indent-2" nzTitle="Switch themes"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>Ant Design allows you to customize some basic design aspects in order to meet the needs of UI diversity from business and brand, including primary color, border radius, border color, etc.</p>
+<p><img src="https://zos.alipayobjects.com/rmsportal/zTFoszBtDODhXfLAazfSpYbSLSEeytoG.png" alt="Example"></p>
+<p>We are using <a href="https://lesscss.org/" target="_blank" rel="noopener">Less</a> as the development language for styling. A set of Less variables are defined for each design aspect that can be customized to your needs.</p>
+<blockquote>
+<p>You can use the theme define file of react version in ng-zorro-antd too.</p>
+</blockquote>
+<h2 id="use_pre-defined_themes"><span>Use Pre-defined Themes</span><a onclick="window.location.hash = 'use_pre-defined_themes'" class="anchor">#</a></h2><h3 id="customize_the_theme"><span>Customize the theme</span><a onclick="window.location.hash = 'customize_the_theme'" class="anchor">#</a></h3><ol>
+<li>Configure with schematics. Run <code>ng add ng-zorro-antd</code>, choose not to set up custom theme file and your <code>angular.json</code> will be configured automatically:</li>
+</ol>
+<pre><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"./node_modules/ng-zorro-antd/ng-zorro-antd.min.css"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>You can also add this config manually in <code>angular.json</code>.</p>
+<h3 id="official_themes"><span>Official Themes</span><a onclick="window.location.hash = 'official_themes'" class="anchor">#</a></h3><p>Besides the default theme, we have provided 3 more official themes. Please try them out and give us feedbacks.</p>
+<ul>
+<li>🌑 Dark Theme</li>
+<li>📦 Compact Theme</li>
+<li>☁️ Aliyun Theme</li>
+</ul>
+<h4 id="method_1_less"><span>Method 1: Less</span><a onclick="window.location.hash = 'method_1_less'" class="anchor">#</a></h4><p>Import <code>ng-zorro-antd.less</code>, <code>ng-zorro-antd.dark.less</code>, <code>ng-zorro-antd.compact.less</code> or <code>ng-zorro-antd.aliyun.less</code> in the style file and override style variables.</p>
+<pre><code class="language-less"><span class="token comment">// Import the official default less style file</span>
+<span class="token variable">&#64;import</span> <span class="token string">'~ng-zorro-antd/ng-zorro-antd.less'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Import the official dark less style file</span>
+<span class="token comment">//&#64;import "~ng-zorro-antd/ng-zorro-antd.dark.less";</span>
+
+<span class="token comment">// Import the official compact less style file</span>
+<span class="token comment">//&#64;import "~ng-zorro-antd/ng-zorro-antd.compact.less";</span>
+
+<span class="token comment">// Import the official Aliyun less style file</span>
+<span class="token comment">//&#64;import "~ng-zorro-antd/ng-zorro-antd.aliyun.less";</span>
+</code></pre><h4 id="method_2_css"><span>Method 2: CSS</span><a onclick="window.location.hash = 'method_2_css'" class="anchor">#</a></h4><p>If the project does not use Less, you can include <code>ng-zorro-antd.css</code>, <code>ng-zorro-antd.dark.css</code>, <code>ng-zorro-antd.compact.css</code> or <code>ng-zorro-antd.aliyun.css</code> in the CSS file or add to the <code>angular.json</code> config.</p>
+<p>CSS file:</p>
+<pre><code class="language-css"><span class="token atrule"><span class="token rule">&#64;import</span> <span class="token string">'~ng-zorro-antd/ng-zorro-antd.css'</span><span class="token punctuation">;</span></span>
+<span class="token comment">/*&#64;import "~ng-zorro-antd/ng-zorro-antd.dark.css";*/</span>
+<span class="token comment">/*&#64;import "~ng-zorro-antd/ng-zorro-antd.compact.css";*/</span>
+<span class="token comment">/*&#64;import "~ng-zorro-antd/ng-zorro-antd.aliyun.css";*/</span>
+</code></pre><p>In <code>angular.json</code>:</p>
+<pre><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"build"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules/ng-zorro-antd/ng-zorro-antd.css"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><h2 id="customize_pre-defined_theme"><span>Customize Pre-defined Theme</span><a onclick="window.location.hash = 'customize_pre-defined_theme'" class="anchor">#</a></h2><h3 id="method_1_override_style_variables_in_less"><span>Method 1: Override style variables in Less</span><a onclick="window.location.hash = 'method_1_override_style_variables_in_less'" class="anchor">#</a></h3><h4 id="import_pre-defined_theme_file"><span>Import pre-defined theme file</span><a onclick="window.location.hash = 'import_pre-defined_theme_file'" class="anchor">#</a></h4><p>Import pre-defined theme file in the <code>src/styles.less</code> (or run <code>ng add ng-zorro-antd</code>, choose to set up custom theme automatically):</p>
+<pre><code class="language-less"><span class="token comment">// Custom Theming for NG-ZORRO</span>
+<span class="token comment">// For more information: https://ng.ant.design/docs/customize-theme/en</span>
+<span class="token variable">&#64;import</span> <span class="token string">"../node_modules/ng-zorro-antd/ng-zorro-antd.less"</span><span class="token punctuation">;</span>
+...
+</code></pre><h4 id="customize_style_variables"><span>Customize style variables</span><a onclick="window.location.hash = 'customize_style_variables'" class="anchor">#</a></h4><p>After importing the theme file, override the values of theme style variables based on the project requirements. For example, the demo below illustrates how we can override the <code>ng-zorro-antd</code> default theme&#39;s <code>&#64;primary-color</code> to <code>#f5222d</code>:</p>
+<pre><code class="language-less"><span class="token comment">// -------- import official less file -----------</span>
+<span class="token variable">&#64;import</span> <span class="token string">'../node_modules/ng-zorro-antd/ng-zorro-antd.less'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// -------- override less variables -----------</span>
+<span class="token variable">&#64;primary-color<span class="token punctuation">:</span></span> #f5222d<span class="token punctuation">;</span>
+</code></pre><h3 id="method_2_override_theme_variables_in_webpack"><span>Method 2: Override theme variables in webpack</span><a onclick="window.location.hash = 'method_2_override_theme_variables_in_webpack'" class="anchor">#</a></h3><h4 id="override_by_pre-defined_theme_variables"><span>Override by pre-defined theme variables</span><a onclick="window.location.hash = 'override_by_pre-defined_theme_variables'" class="anchor">#</a></h4><p>Using less-loader in webpack if needed:</p>
+<pre><code class="language-javascript"><span class="token keyword">const</span> darkThemeVars <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ng-zorro-antd/dark-theme'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> compactThemeVars <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ng-zorro-antd/compact-theme'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.less$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'less-loader'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          <span class="token literal-property property">modifyVars</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            <span class="token literal-property property">hack</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">true;&#64;import "</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>require<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'ng-zorro-antd/style/color/colorPalette.less'</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">";</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+            <span class="token operator">...</span>darkThemeVars<span class="token punctuation">,</span>
+            <span class="token operator">...</span>compactThemeVars
+          <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">javascriptEnabled</span><span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><h4 id="override_by_customized_style_variables"><span>Override by customized style variables</span><a onclick="window.location.hash = 'override_by_customized_style_variables'" class="anchor">#</a></h4><p>Angular CLI provide <a href="https://www.npmjs.com/package/&#64;angular-builders/custom-webpack" target="_blank" rel="noopener">custom-webpack-builder</a>, you can modify the less variable via adjusting the <a href="https://github.com/webpack-contrib/less-loader" target="_blank" rel="noopener">less-loader</a> options in webpack.</p>
+<ol>
+<li><p>Import <code>ng-zorro-antd.less</code> in <code>angular.json</code></p>
+<pre><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules/ng-zorro-antd/ng-zorro-antd.less"</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+</code></pre></li>
+<li><p>Install <code>&#64;angular-builders/custom-webpack</code> builder</p>
+<pre><code class="language-bash"><span class="token function">npm</span> i -D &#64;angular-builders/custom-webpack
+</code></pre></li>
+<li><p>create <code>extra-webpack.config.js</code></p>
+<pre><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  <span class="token literal-property property">module</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">rules</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">&#123;</span>
+        <span class="token literal-property property">test</span><span class="token operator">:</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.less$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span>
+        <span class="token literal-property property">loader</span><span class="token operator">:</span> <span class="token string">'less-loader'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+          <span class="token literal-property property">modifyVars</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">// modify theme variable</span>
+            <span class="token string-property property">'primary-color'</span><span class="token operator">:</span> <span class="token string">'#1DA57A'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'link-color'</span><span class="token operator">:</span> <span class="token string">'#1DA57A'</span><span class="token punctuation">,</span>
+            <span class="token string-property property">'border-radius-base'</span><span class="token operator">:</span> <span class="token string">'2px'</span>
+          <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">javascriptEnabled</span><span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre></li>
+<li><p>Customize builder in <code>angular.json</code></p>
+<pre><code class="language-diff"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> "architect": &#123;
+</span><span class="token prefix unchanged"> </span><span class="token line">   "build": &#123;
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">     "builder": "&#64;angular-devkit/build-angular:browser",
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">     "builder": "&#64;angular-builders/custom-webpack:browser",
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">     "options": &#123;
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">        "customWebpackConfig": &#123;
+</span><span class="token prefix inserted">+</span><span class="token line">          "path": "./extra-webpack.config.js",
+</span><span class="token prefix inserted">+</span><span class="token line">          "mergeStrategies": &#123;
+</span><span class="token prefix inserted">+</span><span class="token line">            "module.rules": "append"
+</span><span class="token prefix inserted">+</span><span class="token line">          &#125;,
+</span><span class="token prefix inserted">+</span><span class="token line">          "replaceDuplicatePlugins": true
+</span><span class="token prefix inserted">+</span><span class="token line">        &#125;
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">     &#125;,
+</span><span class="token prefix unchanged"> </span><span class="token line">   &#125;,
+</span><span class="token prefix unchanged"> </span><span class="token line">   "serve": &#123;
+</span></span><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">      "builder": "&#64;angular-devkit/build-angular:dev-server",
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">      "builder": "&#64;angular-builders/custom-webpack:dev-server",
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">   &#125;
+</span><span class="token prefix unchanged"> </span><span class="token line"> &#125;</span></span>
+</code></pre></li>
+</ol>
+<p>You can get more information about custom-webpack builder following the articles</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/&#64;angular-builders/custom-webpack" target="_blank" rel="noopener">Angular Builder Document</a></li>
+<li><a href="https://alligator.io/angular/custom-webpack-config/" target="_blank" rel="noopener">Angular CLI: Custom webpack Config</a></li>
+<li><a href="https://netbasal.com/customize-webpack-configuration-in-your-angular-application-d09683f6bd22" target="_blank" rel="noopener">Customize Webpack Configuration in Your Angular Application</a></li>
+</ul>
+<p>All less variables can be viewed <a href="https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less" target="_blank" rel="noopener">here</a> is a sample of theme define file.</p>
+<h2 id="theme_dynamic_switching"><span>Theme Dynamic Switching</span><a onclick="window.location.hash = 'theme_dynamic_switching'" class="anchor">#</a></h2><p>We have prepared you a demonstration project illustrating how theme dynamic switching works, you can check it out <a href="https://github.com/yangjunhan/nz-themes" target="_blank" rel="noopener">here</a>.</p>
+<h3 id="configure_angularjson_file"><span>Configure angular.json file</span><a onclick="window.location.hash = 'configure_angularjson_file'" class="anchor">#</a></h3><ol>
+<li><p>Style preprocessor option <code>stylePreprocessorOptions</code></p>
+<p>Add path in a style preprocessor option called <code>stylePreprocessorOptions</code> in <code>angular.json</code>:</p>
+<pre><code class="language-json"><span class="token property">"stylePreprocessorOptions"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+  <span class="token property">"includePaths"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"src/path-to-mixin"</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+</code></pre><p>As such, this config allows you to import <code>.themeMixin(&#64;rules)</code> definition file which is under <code>src/path-to-mixin</code> path anywhere in the project without the need of using relative path:</p>
+<pre><code class="language-css">// A relative path works
+<span class="token atrule"><span class="token rule">&#64;import</span> <span class="token string">'src/path-to-mixin/mixin'</span><span class="token punctuation">;</span></span>
+// But now this works as well
+<span class="token atrule"><span class="token rule">&#64;import</span> <span class="token string">'mixin'</span><span class="token punctuation">;</span></span>
+</code></pre></li>
+<li><p><code>bundleName</code> and <code>inject</code> in styles</p>
+<p>If you intend to dynamically switch the pre-defined themes at runtime, you would need to configure every theme&#39;s bundling strategy for the bundler. For example, if your app has default and dark themes, the <code>styles</code> option of <code>angular.json</code> needs to be configured as below:</p>
+<pre><code class="language-json"><span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token string">"src/styles.less"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token property">"input"</span><span class="token operator">:</span> <span class="token string">"src/styles/default.less"</span><span class="token punctuation">,</span>
+    <span class="token property">"bundleName"</span><span class="token operator">:</span> <span class="token string">"default"</span><span class="token punctuation">,</span>
+    <span class="token property">"inject"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">&#123;</span>
+    <span class="token property">"input"</span><span class="token operator">:</span> <span class="token string">"src/styles/dark.less"</span><span class="token punctuation">,</span>
+    <span class="token property">"bundleName"</span><span class="token operator">:</span> <span class="token string">"dark"</span><span class="token punctuation">,</span>
+    <span class="token property">"inject"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre></li>
+</ol>
+<p><code>bundleName</code> refers to the CSS bundle filename which is used for the href attribute in link tag for switching the pre-defined themes in the later section. <code>inject</code>&#39;s default value is <code>true</code>, which the bundle is injected by default. For the purpose of theme dynamic switching, you need to set it to false to exclude the bundle from injection.</p>
+<h3 id="customize_theme_stylesheets"><span>Customize theme stylesheets</span><a onclick="window.location.hash = 'customize_theme_stylesheets'" class="anchor">#</a></h3><p>In the context of multiple themes, every theme is supposed to have its own style entry file. For better project manageability, we also recommend you to put all relevant theme entry files under <code>src/styles</code> path. For a project with default and dark themes, your project styles can be in the following structure:</p>
+<pre>
+  src/styles
+  ├── dark.less
+  ├── default.less
+  └── themes
+      ├── base.less
+      ├── dark.less
+      ├── default.less
+      └── mixin.less
+</pre>
+
+<p>Stylesheets under <code>src/styles/</code> are entry files which are used to import the pre-defined official entry file as well as theme customization stylesheets under <code>src/styles/themes/</code>. For example, <code>src/styles/dark.less</code> entry file contains the following lines:</p>
+<pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'../../node_modules/ng-zorro-antd/ng-zorro-antd'</span><span class="token punctuation">;</span>
+<span class="token variable">&#64;import</span> <span class="token string">'./themes/dark'</span><span class="token punctuation">;</span>
+</code></pre><p>Accordingly, <code>src/styles/themes/dark.less</code> is in charge of customizing dark theme:</p>
+<pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token punctuation">(</span>multiple<span class="token punctuation">)</span> <span class="token string">'../../../node_modules/ng-zorro-antd/src/style/themes/dark'</span><span class="token punctuation">;</span>
+<span class="token variable">&#64;import</span> <span class="token string">'./base'</span><span class="token punctuation">;</span>
+
+<span class="token variable">&#64;layout-sider-background<span class="token punctuation">:</span></span> <span class="token variable">&#64;component-background</span><span class="token punctuation">;</span>
+<span class="token variable">&#64;layout-header-background<span class="token punctuation">:</span></span> <span class="token variable">&#64;component-background</span><span class="token punctuation">;</span>
+</code></pre><blockquote>
+<p>The theme filename that you define can be identical to corresponding pre-defined theme filename. In such cases, <code>&#64;import &#39;&lt;url&gt;&#39;;</code> has no effects. Less provides us a solution to this circumstance which uses <code>multiple</code> method to import <code>.less</code> files with identical filenames, i.e. <code>&#64;import (multiple) &#39;&lt;url&gt;&#39;;</code>.</p>
+</blockquote>
+<p>Note that if there exists common style variables for all themes, you should create a <code>base.less</code> stylesheet and import it in every theme customization stylesheet:</p>
+<pre><code class="language-less"><span class="token comment">// base.less customizes common style variables</span>
+<span class="token variable">&#64;margin-md<span class="token punctuation">:</span></span> 17px<span class="token punctuation">;</span>
+...
+</code></pre><h3 id="switch_themes"><span>Switch themes</span><a onclick="window.location.hash = 'switch_themes'" class="anchor">#</a></h3><p>Switching themes involves two parts. First is switching the project component theme, and the other is switching the pre-defined theme.</p>
+<h4 id="switching_component_theme"><span>Switching component theme</span><a onclick="window.location.hash = 'switching_component_theme'" class="anchor">#</a></h4><p>The default encapsulation policy of Angular for the template and CSS styles is <code>ViewEncapsulation.Emulated</code>, also known as shimmed CSS that emulates the native behavior. Based on different encapsulation policy, Angular will package component styles into a JS file in different ways.</p>
+<p>However, it is troublesome to define styles in the following format:</p>
+<pre><code class="language-less"><span class="token selector">html</span> <span class="token punctuation">&#123;</span>
+  <span class="token selector">&amp;.default</span> <span class="token punctuation">&#123;</span>
+    <span class="token variable">&#64;import</span> <span class="token string">'default'</span><span class="token punctuation">;</span>
+    <span class="token comment">// Component styles</span>
+    ...<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token selector">&amp;.dark</span> <span class="token punctuation">&#123;</span>
+    <span class="token variable">&#64;import</span> <span class="token string">'dark'</span><span class="token punctuation">;</span>
+    <span class="token comment">// Component styles</span>
+    ...<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><blockquote>
+<p>Be noted that the configured path in the style preprocessor option <code>stylePreprocessorOptions</code> allows you to import file without the need of relative path.</p>
+</blockquote>
+<p>A better way to achieve this is to define a Mixin called <code>.themeMixin(&#64;rules)</code> in the <code>mixin.less</code> file mentioned above:</p>
+<pre><code class="language-less"><span class="token selector">.themeMixin(<span class="token variable">&#64;rules</span>)</span> <span class="token punctuation">&#123;</span>
+  <span class="token selector">html</span> <span class="token punctuation">&#123;</span>
+    <span class="token selector">&amp;.default</span> <span class="token punctuation">&#123;</span>
+      <span class="token variable">&#64;import</span> <span class="token string">'./default.less'</span><span class="token punctuation">;</span>
+      <span class="token variable">&#64;rules</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token selector">&amp;.dark</span> <span class="token punctuation">&#123;</span>
+      <span class="token variable">&#64;import</span> <span class="token string">'./dark.less'</span><span class="token punctuation">;</span>
+      <span class="token variable">&#64;rules</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>Then, wrap all the component styles in the <code>.themeMixin(&#64;rules)</code>:</p>
+<pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'mixin'</span><span class="token punctuation">;</span> <span class="token comment">// Similarly, no need for relative path</span>
+
+.themeMixin<span class="token selector">(</span><span class="token punctuation">&#123;</span>
+  <span class="token selector">:host</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// Component styles</span>
+    ...
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h4 id="switch_pre-defined_theme"><span>Switch pre-defined theme</span><a onclick="window.location.hash = 'switch_pre-defined_theme'" class="anchor">#</a></h4><p>Loading a pre-defined theme file can be achieved by dynamically creating a <code>link</code> tag, append it on the DOM and remove previous tag.</p>
+<pre><code class="language-ts"><span class="token keyword">private</span> <span class="token function">loadCss</span><span class="token punctuation">(</span>href<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>Event<span class="token operator">></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> style <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'link'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    style<span class="token punctuation">.</span>rel <span class="token operator">=</span> <span class="token string">'stylesheet'</span><span class="token punctuation">;</span>
+    style<span class="token punctuation">.</span>href <span class="token operator">=</span> href<span class="token punctuation">;</span>
+    style<span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    style<span class="token punctuation">.</span>onload <span class="token operator">=</span> resolve<span class="token punctuation">;</span>
+    style<span class="token punctuation">.</span>onerror <span class="token operator">=</span> reject<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>head<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>style<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p><code>href</code> here refers to the path of the <a href="/docs/customize-theme/zh#Configure-angular-json-file">bundle name</a>, i.e. <code>bundleName</code>.</p>
+<h4 id="synchronize_the_style_switching"><span>Synchronize the style switching</span><a onclick="window.location.hash = 'synchronize_the_style_switching'" class="anchor">#</a></h4><p>Project component styles will be packaged into a JS file which take effects immediately while switching themes via html <code>className</code>. On the other hand, it takes time to dynamically load the CSS theme file. If you attempt to perform two actions simultaneously, project styles will change immediately whereas styles of the pre-defined theme remain unchanged until the CSS theme file is fully loaded, resulting two themes mixing on the web page. As such, you must wrap the loading CSS process in a Promise and force the <code>className</code> switching to wait until the former completely finishes.</p>
+<pre><code class="language-ts"><span class="token keyword">private</span> <span class="token function">removeUnusedTheme</span><span class="token punctuation">(</span>theme<span class="token operator">:</span> ThemeType<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+  document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>theme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> removedThemeStyle <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>theme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>removedThemeStyle<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    document<span class="token punctuation">.</span>head<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>removedThemeStyle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function">loadTheme</span><span class="token punctuation">(</span>firstLoad <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>Event<span class="token operator">></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> theme <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>currentTheme<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstLoad<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>theme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadCss</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>theme<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">.css</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> theme<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>
+    e <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>firstLoad<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>theme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">removeUnusedTheme</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>previousTheme<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">resolve</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    e <span class="token operator">=></span> <span class="token function">reject</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>Note: First-time loading of the user-defined default component theme must be performed immediately or there is a short period of time the app has no class of theme.</p>
+</section>
+</article>

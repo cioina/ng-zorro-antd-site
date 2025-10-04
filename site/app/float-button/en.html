@@ -1,0 +1,342 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-type" nzTitle="Type"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-shape" nzTitle="Shape"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-description" nzTitle="Description"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-tooltip" nzTitle="FloatButton with tooltip"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group" nzTitle="FloatButton Group"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group-menu" nzTitle="Menu mode"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-open" nzTitle="Controlled mode"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group-placement" nzTitle="Placement"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-top" nzTitle="Back Top"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	FloatButton
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="float-button" description="A button that floats at the top of the page." language="en"></component-meta>
+  
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
+<li>For global functionality on the site.</li>
+<li>Buttons that can be seen wherever you browse.</li>
+</ul>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="16">
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Basic"
+  nzId="components-float-button-demo-basic"
+  nzSelector="nz-demo-float-button-basic"
+  nzLink="components-float-button-demo-basic"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-basic <name>"
+  nzComponentName="NzDemoFloatButtonBasicComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/basic.md"
+>
+	<nz-demo-float-button-basic demo></nz-demo-float-button-basic>
+	<div intro ngNonBindable><p>The most basic usage.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Shape"
+  nzId="components-float-button-demo-shape"
+  nzSelector="nz-demo-float-button-shape"
+  nzLink="components-float-button-demo-shape"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-shape <name>"
+  nzComponentName="NzDemoFloatButtonShapeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/shape.md"
+>
+	<nz-demo-float-button-shape demo></nz-demo-float-button-shape>
+	<div intro ngNonBindable><p>Change the shape of the FloatButton with <code>nsShape</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="FloatButton with tooltip"
+  nzId="components-float-button-demo-tooltip"
+  nzSelector="nz-demo-float-button-tooltip"
+  nzLink="components-float-button-demo-tooltip"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-tooltip <name>"
+  nzComponentName="NzDemoFloatButtonTooltipComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/tooltip.md"
+>
+	<nz-demo-float-button-tooltip demo></nz-demo-float-button-tooltip>
+	<div intro ngNonBindable><p>Adding the <code>tooltip</code> directive shows the FloatButton with a tooltip.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Menu mode"
+  nzId="components-float-button-demo-group-menu"
+  nzSelector="nz-demo-float-button-group-menu"
+  nzLink="components-float-button-demo-group-menu"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-group-menu <name>"
+  nzComponentName="NzDemoFloatButtonGroupMenuComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/group-menu.md"
+>
+	<nz-demo-float-button-group-menu demo></nz-demo-float-button-group-menu>
+	<div intro ngNonBindable><p>Open menu mode with <code>nzTrigger</code>, which could be <code>hover</code> or <code>click</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Placement"
+  nzId="components-float-button-demo-group-placement"
+  nzSelector="nz-demo-float-button-group-placement"
+  nzLink="components-float-button-demo-group-placement"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-group-placement <name>"
+  nzComponentName="NzDemoFloatButtonGroupPlacementComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/group-placement.md"
+>
+	<nz-demo-float-button-group-placement demo></nz-demo-float-button-group-placement>
+	<div intro ngNonBindable><p>Customize animation placement, providing four preset placement: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, the <code>top</code> position by default.</p>
+</div>
+</nz-code-box>
+
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Type"
+  nzId="components-float-button-demo-type"
+  nzSelector="nz-demo-float-button-type"
+  nzLink="components-float-button-demo-type"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-type <name>"
+  nzComponentName="NzDemoFloatButtonTypeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/type.md"
+>
+	<nz-demo-float-button-type demo></nz-demo-float-button-type>
+	<div intro ngNonBindable><p>Change the type of the FloatButton with <code>nzType</code>.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Description"
+  nzId="components-float-button-demo-description"
+  nzSelector="nz-demo-float-button-description"
+  nzLink="components-float-button-demo-description"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-description <name>"
+  nzComponentName="NzDemoFloatButtonDescriptionComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/description.md"
+>
+	<nz-demo-float-button-description demo></nz-demo-float-button-description>
+	<div intro ngNonBindable><p>Setting <code>nzDescription</code> prop to show FloatButton with description.</p>
+<blockquote>
+<p>supported only when <code>shape</code> is <code>square</code>. Due to narrow space for text, short sentence is recommended.</p>
+</blockquote>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="FloatButton Group"
+  nzId="components-float-button-demo-group"
+  nzSelector="nz-demo-float-button-group"
+  nzLink="components-float-button-demo-group"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-group <name>"
+  nzComponentName="NzDemoFloatButtonGroupComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/group.md"
+>
+	<nz-demo-float-button-group demo></nz-demo-float-button-group>
+	<div intro ngNonBindable><p>When multiple buttons are used together, <code>nz-float-button-group</code> is recommended. By setting <code>nzShape</code> of FloatButtonGroup, you can change the shape of group.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Controlled mode"
+  nzId="components-float-button-demo-open"
+  nzSelector="nz-demo-float-button-open"
+  nzLink="components-float-button-demo-open"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-open <name>"
+  nzComponentName="NzDemoFloatButtonOpenComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/open.md"
+>
+	<nz-demo-float-button-open demo></nz-demo-float-button-open>
+	<div intro ngNonBindable><p>Set the <code>nzOpen</code> property to control whether <code>nz-float-button-group</code> is expanded.</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="Back Top"
+  nzId="components-float-button-demo-top"
+  nzSelector="nz-demo-float-button-top"
+  nzLink="components-float-button-demo-top"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-top <name>"
+  nzComponentName="NzDemoFloatButtonTopComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/top.md"
+>
+	<nz-demo-float-button-top demo></nz-demo-float-button-top>
+	<div intro ngNonBindable><p>Set the <code>nzOpen</code> property to control whether <code>nz-float-button-group</code> is expanded.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="common_api"><span>Common API</span><a onclick="window.location.hash = 'common_api'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzIcon]</code></td>
+<td>Set the icon component of button</td>
+<td><code>string | TemplateRef&lt;void&gt; | null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDescription]</code></td>
+<td>Text and other content</td>
+<td><code>string | TemplateRef&lt;void&gt; | null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzType]</code></td>
+<td>Button type</td>
+<td><code>&#39;default&#39; | &#39;primary&#39;</code></td>
+<td><code>&#39;default&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzShape]</code></td>
+<td>Button shape</td>
+<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
+<td><code>&#39;circle&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzHref]</code></td>
+<td>The target of hyperlink</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzTarget]</code></td>
+<td>Specifies where to display the linked URL</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClick)</code></td>
+<td>Callback of <code>click</code> event</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-float-button-group"><span>nz-float-button-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-group'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzShape]</code></td>
+<td>Shape of button group</td>
+<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
+<td><code>&#39;circle&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzTrigger]</code></td>
+<td>Which action can trigger menu open/close</td>
+<td><code>&#39;click&#39; | &#39;hover&#39;</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPlacement]</code></td>
+<td>Customize menu animation placement</td>
+<td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
+<td><code>&#39;top&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzOpen]</code></td>
+<td>Whether the menu is visible or not</td>
+<td><code>boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnOpenChange)</code></td>
+<td>Callback executed when active menu is changed</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-float-button-top"><span>nz-float-button-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-top'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Global Config</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzVisibilityHeight]</code></td>
+<td>The <code>nz-float-button-top</code> button will not show until the scroll height reaches this value</td>
+<td><code>number</code></td>
+<td><code>400</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>[nzTarget]</code></td>
+<td>Specifies the scrollable area dom node</td>
+<td><code>string | Element</code></td>
+<td><code>window</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzDuration]</code></td>
+<td>Duration of scrolling to top (ms)</td>
+<td><code>number</code></td>
+<td><code>450</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>(nzOnClick)</code></td>
+<td>Callback executed when click the button</td>
+<td><code>EventEmitter&lt;boolean&gt;</code></td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+</section></article>

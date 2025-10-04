@@ -1,0 +1,96 @@
+<article class="markdown">
+  <h1>
+	Getting Started
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#playground" class="toc-indent-1" nzTitle="Playground"></nz-link>
+<nz-link nzHref="#first-local-development" class="toc-indent-1" nzTitle="First Local Development"></nz-link>
+<nz-link nzHref="#installation" class="toc-indent-2" nzTitle="Installation"></nz-link>
+<nz-link nzHref="#create-a-new-project" class="toc-indent-2" nzTitle="Create a New Project"></nz-link>
+<nz-link nzHref="#install-ng-zorro-antd" class="toc-indent-2" nzTitle="Install ng-zorro-antd"></nz-link>
+<nz-link nzHref="#development-&-debugging" class="toc-indent-2" nzTitle="Development & Debugging"></nz-link>
+<nz-link nzHref="#building-&-deployment" class="toc-indent-2" nzTitle="Building & Deployment"></nz-link>
+<nz-link nzHref="#customized-build" class="toc-indent-1" nzTitle="Customized Build"></nz-link>
+<nz-link nzHref="#install-ng-zorro-antd" class="toc-indent-2" nzTitle="Install ng-zorro-antd"></nz-link>
+<nz-link nzHref="#import-styles" class="toc-indent-2" nzTitle="Import Styles"></nz-link>
+<nz-link nzHref="#other" class="toc-indent-1" nzTitle="Other"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>Ant Design of Angular is dedicated to providing a <strong>good development experience</strong> for programmers.</p>
+<blockquote>
+<p>The prerequisite of Ant Design Angular is a solid background knowledge of <a href="https://angular.dev" target="_blank" rel="noopener">Angular</a> and <a href="http://babeljs.io/docs/learn-es2015/" target="_blank" rel="noopener">JavaScript ES2015</a>.</p>
+</blockquote>
+<h2 id="playground"><span>Playground</span><a onclick="window.location.hash = 'playground'" class="anchor">#</a></h2><p>The following StackBlitz link demonstrates a basic use case, and it is recommended to fork this demo as a baseline while doing <code>Bug Report</code>. However, please do not use this demo as a scaffold in a real production environment.</p>
+<ul>
+<li><a href="https://stackblitz.com/edit/ng-zorro-antd-ivy" target="_blank" rel="noopener">NG-ZORRO StackBlitz</a></li>
+</ul>
+<h2 id="first_local_development"><span>First Local Development</span><a onclick="window.location.hash = 'first_local_development'" class="anchor">#</a></h2><p>There are several engineering requirements during development, including compiling, debugging, proxying, and packaging codes in TypeScript. We strongly encourage you to develop your project with the help of Angular official CLI <code>&#64;angular/cli</code>. To be concise, a simple example is demonstrated below.</p>
+<h3 id="installation"><span>Installation</span><a onclick="window.location.hash = 'installation'" class="anchor">#</a></h3><blockquote>
+<p>Read the documentation of <a href="https://angular.dev/cli" target="_blank" rel="noopener">Angular</a> to explore more features.</p>
+</blockquote>
+<pre><code class="language-bash">$ <span class="token function">npm</span> install -g <span class="token function">&#64;angular/cli</span>
+<span class="token comment"># Or if you use yarn</span>
+$ yarn global add <span class="token function">&#64;angular/cli</span>
+</code></pre><h3 id="create_a_new_project"><span>Create a New Project</span><a onclick="window.location.hash = 'create_a_new_project'" class="anchor">#</a></h3><p>The following command allows <code>&#64;angular/cli</code> to create a folder called <code>PROJECT-NAME</code> under the current directory, with necessary dependencies.</p>
+<pre><code class="language-bash">$ <span class="token function">ng</span> new PROJECT-NAME
+</code></pre><p><code>&#64;angular/cli</code> will run <code>npm install</code> or <code>yarn</code> after a project is created. You can run <code>npm install</code> or <code>yarn</code> by yourself if it fails.</p>
+<h3 id="install_ng-zorro-antd"><span>Install ng-zorro-antd</span><a onclick="window.location.hash = 'install_ng-zorro-antd'" class="anchor">#</a></h3><p>After changing the directory to the newly created project, you can automatically run the following commands to initialize the project&#39;s configuration, including importing i18n files and stylesheets and loading initial modules.</p>
+<pre><code class="language-bash">$ <span class="token function">cd</span> PROJECT-NAME
+$ <span class="token function">ng</span> add <span class="token function">ng-zorro-antd</span>
+</code></pre><img alt="CLI" style="display: block; border-radius: 4px; box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.2);" src="https://img.alicdn.com/tfs/TB19fFHdkxz61VjSZFtXXaDSVXa-680-243.svg">
+
+<p><code>ng-zorro-antd</code> supports initializing configuration with schematics, more information is available in the <a href="/docs/schematics/en">schematics</a> section.</p>
+<h3 id="development_andamp;_debugging"><span>Development &amp; Debugging</span><a onclick="window.location.hash = 'development_andamp;_debugging'" class="anchor">#</a></h3><p>Your project is now ready to run. After running the following command, a welcome page will be displayed in your browser.</p>
+<pre><code class="language-bash">$ <span class="token function">ng</span> serve --port 0 --open
+</code></pre><img alt="welcome" style="display: block;padding: 30px 30%;height: 260px;" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
+
+<h3 id="building_andamp;_deployment"><span>Building &amp; Deployment</span><a onclick="window.location.hash = 'building_andamp;_deployment'" class="anchor">#</a></h3><pre><code class="language-bash">$ <span class="token function">ng</span> build --prod
+</code></pre><p>Project files are built and generated in the <code>dist</code> directory by default.</p>
+<h2 id="customized_build"><span>Customized Build</span><a onclick="window.location.hash = 'customized_build'" class="anchor">#</a></h2><p>You may use any existing scaffold tools in the Angular ecosystem in order to customize the building process. Please refer to <a href="https://github.com/NG-ZORRO/ng-zorro-antd/tree/master/integration" target="_blank" rel="noopener">configure</a> section if you encounter any issues.</p>
+<h3 id="install_ng-zorro-antd"><span>Install ng-zorro-antd</span><a onclick="window.location.hash = 'install_ng-zorro-antd'" class="anchor">#</a></h3><pre><code class="language-bash">$ <span class="token function">npm</span> install <span class="token function">ng-zorro-antd</span> --save
+<span class="token comment"># Or if you use yarn</span>
+$ yarn add <span class="token function">ng-zorro-antd</span>
+</code></pre><h3 id="import_styles"><span>Import Styles</span><a onclick="window.location.hash = 'import_styles'" class="anchor">#</a></h3><h4 id="use_all_component_styles"><span>Use all component styles</span><a onclick="window.location.hash = 'use_all_component_styles'" class="anchor">#</a></h4><p>This configuration contains all the styles of our components&#39; library.
+If you want to use only certain components&#39; styles, please refer to <a href="/docs/getting-started/en#use-only-certain-component-styles">Use only certain component styles</a> section.</p>
+<p>Import the pre-built stylesheet in <code>angular.json</code></p>
+<pre><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"styles"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"node_modules/ng-zorro-antd/ng-zorro-antd.min.css"</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><p>Import the pre-built stylesheet in <code>style.css</code></p>
+<pre><code class="language-css"><span class="token atrule"><span class="token rule">&#64;import</span> <span class="token string">'~ng-zorro-antd/ng-zorro-antd.min.css'</span><span class="token punctuation">;</span></span>
+</code></pre><p>Import the less stylesheet in <code>style.less</code></p>
+<pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'~ng-zorro-antd/ng-zorro-antd.less'</span><span class="token punctuation">;</span>
+</code></pre><h4 id="use_only_certain_component_styles"><span>Use only certain component styles</span><a onclick="window.location.hash = 'use_only_certain_component_styles'" class="anchor">#</a></h4><blockquote>
+<p>Please note that importing CSS files of several components may result in code redundancy due to the dependency relationships among some components&#39; styles.</p>
+</blockquote>
+<p>It is necessary to import base styles (common to all components) before using certain components&#39; styles.</p>
+<p>Import the pre-build styles in <code>style.css</code></p>
+<pre><code class="language-css"><span class="token atrule"><span class="token rule">&#64;import</span> <span class="token string">'~ng-zorro-antd/style/index.min.css'</span><span class="token punctuation">;</span></span> <span class="token comment">/* Import base styles */</span>
+<span class="token atrule"><span class="token rule">&#64;import</span> <span class="token string">'~ng-zorro-antd/button/style/index.min.css'</span><span class="token punctuation">;</span></span> <span class="token comment">/* Import one component's styles */</span>
+</code></pre><p>Import the less styles in <code>style.less</code></p>
+<pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'~ng-zorro-antd/style/entry.less'</span><span class="token punctuation">;</span> <span class="token comment">/* Import base styles */</span>
+<span class="token variable">&#64;import</span> <span class="token string">'~ng-zorro-antd/button/style/entry.less'</span><span class="token punctuation">;</span> <span class="token comment">/* Import one component's styles */</span>
+</code></pre><h4 id="import_component_module"><span>Import component module</span><a onclick="window.location.hash = 'import_component_module'" class="anchor">#</a></h4><p>Finally, you need to import the component modules that you want to use into your components.</p>
+<p>Taking the following <code>NzButtonModule</code> module as an example, first import the component module:</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> Component <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'&#64;angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzButtonModule <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/button'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>NzButtonModule<span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+</code></pre><p>Then use the component inside the template:</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">nz-button</span> <span class="token attr-name">nzType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre><h1 id="precautions"><span>Precautions</span><a onclick="window.location.hash = 'precautions'" class="anchor">#</a></h1><ul>
+<li><code>ng-zorro-antd</code> already contains <code>&#64;angular/cdk/overlay-prebuilt.css</code> overlay style, no additional import is required.</li>
+</ul>
+<h2 id="other"><span>Other</span><a onclick="window.location.hash = 'other'" class="anchor">#</a></h2><ul>
+<li><a href="/docs/i18n/en">I18n</a></li>
+<li><a href="/docs/customize-theme/en">Customize Theme</a></li>
+<li><a href="/components/icon/en">Use Icons</a></li>
+</ul>
+</section>
+</article>

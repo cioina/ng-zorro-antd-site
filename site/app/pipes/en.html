@@ -1,0 +1,243 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-pipes-demo-bytes" nzTitle="nzBytes"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-pipes-demo-css-unit" nzTitle="nzToCssUnit"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-pipes-demo-ellipsis" nzTitle="nzEllipsis"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-pipes-demo-aggregate" nzTitle="nzAggregate"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-pipes-demo-sanitizer" nzTitle="nzSanitizer"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-pipes-demo-trim" nzTitle="nzTrim"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Pipes
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="pipes" description="Common Pipe Collections." language="en"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO experiments are features that are released but not yet considered stable or production ready</p>
+<p>Developers and users can opt in into these features before they are fully released. But <strong>breaking changes</strong> may occur with any release.</p>
+</blockquote>
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>After importing Pipe, use it like Angular&#39;s built-in Pipe</p>
+
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="nzBytes"
+  nzId="components-pipes-demo-bytes"
+  nzSelector="nz-demo-pipes-bytes"
+  nzLink="components-pipes-demo-bytes"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-bytes <name>"
+  nzComponentName="NzDemoPipesBytesComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/bytes.md"
+>
+	<nz-demo-pipes-bytes demo></nz-demo-pipes-bytes>
+	<div intro ngNonBindable><p>Conversion of storage units to increase readability</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzToCssUnit"
+  nzId="components-pipes-demo-css-unit"
+  nzSelector="nz-demo-pipes-css-unit"
+  nzLink="components-pipes-demo-css-unit"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-css-unit <name>"
+  nzComponentName="NzDemoPipesCssUnitComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/css-unit.md"
+>
+	<nz-demo-pipes-css-unit demo></nz-demo-pipes-css-unit>
+	<div intro ngNonBindable><p>Css unit</p>
+<p>Tip: If possible, we prefer to use Angular&#39;s built-in syntax, for example:</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style.border-radius.px]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>px<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style.border-radius.%]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>%<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style.border-radius.rem]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>rem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre></div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzEllipsis"
+  nzId="components-pipes-demo-ellipsis"
+  nzSelector="nz-demo-pipes-ellipsis"
+  nzLink="components-pipes-demo-ellipsis"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-ellipsis <name>"
+  nzComponentName="NzDemoPipesEllipsisComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/ellipsis.md"
+>
+	<nz-demo-pipes-ellipsis demo></nz-demo-pipes-ellipsis>
+	<div intro ngNonBindable><p>Truncate the string, ending with the specified string</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzAggregate"
+  nzId="components-pipes-demo-aggregate"
+  nzSelector="nz-demo-pipes-aggregate"
+  nzLink="components-pipes-demo-aggregate"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-aggregate <name>"
+  nzComponentName="NzDemoPipesAggregateComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/aggregate.md"
+>
+	<nz-demo-pipes-aggregate demo></nz-demo-pipes-aggregate>
+	<div intro ngNonBindable><p>Sum, Min, Max, Average and other operations on arrays</p>
+</div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzSanitizer"
+  nzId="components-pipes-demo-sanitizer"
+  nzSelector="nz-demo-pipes-sanitizer"
+  nzLink="components-pipes-demo-sanitizer"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-sanitizer <name>"
+  nzComponentName="NzDemoPipesSanitizerComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/sanitizer.md"
+>
+	<nz-demo-pipes-sanitizer demo></nz-demo-pipes-sanitizer>
+	<div intro ngNonBindable><p>Pipe implementation of DomSanitizer</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[innerHTML]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>html | nzSanitizer: 'html'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">[style]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style | nzSanitizer: 'style'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">[src]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>url | nzSanitizer: 'url'<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">[src]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>resourceUrl | nzSanitizer: 'resourceUrl'<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span>
+</code></pre></div>
+</nz-code-box>
+<nz-code-box
+  nzTitle="nzTrim"
+  nzId="components-pipes-demo-trim"
+  nzSelector="nz-demo-pipes-trim"
+  nzLink="components-pipes-demo-trim"
+  nzGenerateCommand="ng g ng-zorro-antd:pipes-trim <name>"
+  nzComponentName="NzDemoPipesTrimComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/pipes/demo/trim.md"
+>
+	<nz-demo-pipes-trim demo></nz-demo-pipes-trim>
+	<div intro ngNonBindable><p>Strip left and right empty string</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzbytes"><span>nzBytes</span><a onclick="window.location.hash = 'nzbytes'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>decimal</code></td>
+<td>Decimal</td>
+<td><code>number</code></td>
+<td>&#39;0&#39;</td>
+</tr>
+<tr>
+<td><code>from</code></td>
+<td>Unit of current value</td>
+<td><code>string</code></td>
+<td>&#39;B&#39;</td>
+</tr>
+<tr>
+<td><code>to</code></td>
+<td>Units converted to target value</td>
+<td><code>string</code></td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nztocssunit"><span>nzToCssUnit</span><a onclick="window.location.hash = 'nztocssunit'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>defaultUnit</code></td>
+<td>Default Unit</td>
+<td><code>string</code></td>
+<td>&#39;px&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nzellipsis"><span>nzEllipsis</span><a onclick="window.location.hash = 'nzellipsis'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>length</code></td>
+<td>Truncate length</td>
+<td><code>number</code></td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td><code>suffix</code></td>
+<td>Replace character</td>
+<td><code>string</code></td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nzaggregate"><span>nzAggregate</span><a onclick="window.location.hash = 'nzaggregate'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>method</code></td>
+<td>Aggregation</td>
+<td><code>&#39;sum&#39; | &#39;max&#39; | &#39;min&#39; | &#39;avg&#39;</code></td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody></table>
+<h3 id="nzsanitizer"><span>nzSanitizer</span><a onclick="window.location.hash = 'nzsanitizer'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>type</code></td>
+<td>sanitizer type</td>
+<td><code>string</code></td>
+<td>&#39;html&#39;</td>
+</tr>
+</tbody></table>
+</section></article>

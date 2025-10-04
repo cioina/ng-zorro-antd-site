@@ -1,0 +1,412 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-graph-demo-customized" nzTitle="自定义"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Graph
+	<span class="subtitle">流程图</span>
+</h1>
+
+  <component-meta name="graph" description="渲染流程图。" language="zh"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO 实验性功能是指已发布但不稳定或者还未准备好用于生产环境的功能。</p>
+<p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
+</blockquote>
+  <section class="markdown" ngNonBindable>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 GRAPH 图时使用。</p>
+<blockquote>
+<p>目前组件依赖 d3-drag d3-zoom d3-selection d3-transition d3-shape 用于绘制相关属性（可能会在之后的版本中逐步替换）</p>
+</blockquote>
+<h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre>
+  </section>
+  
+  <h2 id="代码演示">
+    <span>代码演示</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="展开全部代码" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = '代码演示'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="自定义"
+  nzId="components-graph-demo-customized"
+  nzSelector="nz-demo-graph-customized"
+  nzLink="components-graph-demo-customized"
+  nzGenerateCommand="ng g ng-zorro-antd:graph-customized <name>"
+  nzComponentName="NzDemoGraphCustomizedComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/graph/demo/customized.md"
+>
+	<nz-demo-graph-customized demo></nz-demo-graph-customized>
+	<div intro ngNonBindable><p>自定义 node 样式。</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>安装依赖：</p>
+<pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> dagre-compound dagre d3-transition d3-zoom d3-selection d3-shape d3-drag &#64;types/d3
+</code></pre><h3 id="nz-graph"><span>nz-graph</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-graph'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzGraphData]</code></td>
+<td>数据源</td>
+<td><code>NzGraphData(data: NzGraphDataDef?)</code></td>
+<td>``</td>
+</tr>
+<tr>
+<td><code>[nzRankDirection]</code></td>
+<td>图方向</td>
+<td><code>TB</code> | <code>BT</code> | <code>LR</code> | <code>RL</code></td>
+<td><code>LR</code></td>
+</tr>
+<tr>
+<td><code>[nzAutoSize]</code></td>
+<td>是否根据节点内容自适应高度(默认等高)</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzGraphLayoutConfig]</code></td>
+<td>全局配置</td>
+<td><code>NzGraphLayoutConfig</code></td>
+<td>``</td>
+</tr>
+</tbody></table>
+<h4 id="组件方法"><span>组件方法</span><a onclick="window.location.hash = '组件方法'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>fitCenter()</code></td>
+<td>居中图并自适应缩放（如使用缩放功能请使用 <code>nz-graph-zoom</code>）</td>
+</tr>
+</tbody></table>
+<h3 id="nz-graph-zoom"><span>[nz-graph-zoom]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-graph-zoom'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[(nzZoom)]</code></td>
+<td>缩放比例</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>[nzMinZoom]</code></td>
+<td>最小缩放</td>
+<td><code>number</code></td>
+<td><code>0.1</code></td>
+</tr>
+<tr>
+<td><code>[nzMaxZoom]</code></td>
+<td>最大缩放</td>
+<td><code>number</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>(nzTransformEvent)</code></td>
+<td>缩放事件</td>
+<td><code>() =&gt; NzZoomTransform</code></td>
+<td>``</td>
+</tr>
+<tr>
+<td><code>(fitCenter)</code></td>
+<td>居中图并自适应缩放</td>
+<td><code>() =&gt; void</code></td>
+<td><code>void</code></td>
+</tr>
+<tr>
+<td><code>(focus)</code></td>
+<td>居中单个节点</td>
+<td><code>(e: SVGGElement, duration: number) =&gt; void</code></td>
+<td><code>void</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphdata"><span>NzGraphData</span><a onclick="window.location.hash = 'nzgraphdata'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>属性/方法</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>setData</code></td>
+<td>设置数据源</td>
+<td><code>(data: NzGraphDataDef) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>toggle</code></td>
+<td>收起/展开 group 节点</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>expand</code></td>
+<td>展开 group 节点</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>expandAll</code></td>
+<td>展开全部 group 节点</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>collapse</code></td>
+<td>收起全部 group 节点</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>isExpand</code></td>
+<td>获取 group 节点展开状态</td>
+<td><code>(nodeName: string) =&gt; boolean</code></td>
+</tr>
+<tr>
+<td><code>expansionModel</code></td>
+<td>展开节点存储对象</td>
+<td><code>SelectionModel&lt;string&gt;</code></td>
+</tr>
+</tbody></table>
+<h3 id="nzgraphlayoutconfig"><span>NzGraphLayoutConfig</span><a onclick="window.location.hash = 'nzgraphlayoutconfig'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>layout</code></td>
+<td>布局参数</td>
+<td><code>&#123; nodeSep: number; rankSep: number; edgeSep: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>subScene</code></td>
+<td>group 节点</td>
+<td><code>&#123; paddingTop: number; paddingBottom: number; paddingLeft: number; paddingRight: number; labelHeight: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>defaultCompoundNode</code></td>
+<td>group 节点 size</td>
+<td><code>&#123; width: number; height: number; maxLabelWidth: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>defaultNode</code></td>
+<td>默认节点 size</td>
+<td><code>&#123; width: number; height: number; labelOffset: number; maxLabelWidth: number; &#125;</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphdatadef"><span>NzGraphDataDef</span><a onclick="window.location.hash = 'nzgraphdatadef'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nodes</code></td>
+<td>节点</td>
+<td><code>Array&lt;&#123; id: number|string; label?: string; width?: number; height?: number; [key: string]: any; &#125;&gt;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>edges</code></td>
+<td>线</td>
+<td><code>Array&lt;&#123; v: number|string; w: number|string; [key: string]: any; &#125;&gt;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>compound</code></td>
+<td>分组</td>
+<td><code>&#123; [parent: string]: string[]; &#125;</code></td>
+<td><code>null</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphnode"><span>NzGraphNode</span><a onclick="window.location.hash = 'nzgraphnode'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>id</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>label?</code></td>
+<td>节点内容</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>节点名称</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>节点类型(组: 0, 节点: 1)</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>parentNodeName</code></td>
+<td>父节点名称</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>coreBox</code></td>
+<td>布局高宽</td>
+<td><code>&#123; width: number; height: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>xOffset</code></td>
+<td>x 偏移</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>yOffset</code></td>
+<td>y 偏移</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>宽度</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>高度</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>[key: string]</code></td>
+<td>用户输入</td>
+<td><code>any</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphedge"><span>NzGraphEdge</span><a onclick="window.location.hash = 'nzgraphedge'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>id</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>v</code></td>
+<td>起始节点</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>目标节点</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>label?</code></td>
+<td>线内容</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>points</code></td>
+<td>points</td>
+<td><code>Array&lt;&#123; x: number; y: number; &#125;&gt;</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphgroupnode"><span>NzGraphGroupNode</span><a onclick="window.location.hash = 'nzgraphgroupnode'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>expanded</code></td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><code>nodes</code></td>
+<td><code>Array&lt;NzGraphNode|NzGraphGroupNode&gt;</code></td>
+</tr>
+<tr>
+<td><code>edges</code></td>
+<td><code>NzGraphEdge[]</code></td>
+</tr>
+</tbody></table>
+<h3 id="nzgraphnode"><span>[nzGraphNode]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzgraphnode'" class="anchor">#</a></h3><p>自定义叶子节点渲染模板</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-graph</span> <span class="token attr-name">[nzGraphData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-container</span> <span class="token attr-name">*nzGraphNode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let node<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>&#123;&#123; node.name &#125;&#125; - &#123;&#123; node.label &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-container</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-graph</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nzgraphgroupnode"><span>[nzGraphGroupNode]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzgraphgroupnode'" class="anchor">#</a></h3><p>自定义组节点渲染模板</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-graph</span> <span class="token attr-name">[nzGraphData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-container</span> <span class="token attr-name">*nzGraphGroupNode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let node<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>&#123;&#123; node.name &#125;&#125; - &#123;&#123; node.label &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-container</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-graph</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nzgraphedge"><span>[nzGraphEdge]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzgraphedge'" class="anchor">#</a></h3><p>自定义边渲染模板</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-graph</span> <span class="token attr-name">[nzGraphData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-container</span> <span class="token attr-name">*nzGraphEdge</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">svg:</span>g</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>path</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">svg:</span>g</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-container</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-graph</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="样式"><span>样式</span><a onclick="window.location.hash = '样式'" class="anchor">#</a></h3><p>组件样式包含了必要的属性和简单的样式，你可以通过覆写下列类名自定义样式。</p>
+<ul>
+<li><code>.nz-graph</code> <code>nz-graph</code> 组件命名空间</li>
+<li><code>.nz-graph-nodes</code> 节点<ul>
+<li><code>.nz-graph-node</code> 单个节点</li>
+<li><code>.nz-graph-node-expanded</code> 展开节点</li>
+<li><code>.nz-graph-group-node</code> 组节点</li>
+<li><code>.nz-graph-base-node</code> 叶子节点</li>
+</ul>
+</li>
+<li><code>.nz-graph-edges</code> 连接线<ul>
+<li><code>.nz-graph-edge</code> 单条线<ul>
+<li><code>path.nz-graph-edge-line</code> 线 path 元素</li>
+<li><code>.nz-graph-edge-text</code> 线文本元素</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="说明"><span>说明</span><a onclick="window.location.hash = '说明'" class="anchor">#</a></h2><ul>
+<li><a href="https://www.npmjs.com/package/dagre-compound" target="_blank" rel="noopener">dagre-compound</a>: 基于 Dagre 的 嵌套布局计算库</li>
+<li><a href="https://github.com/angular/components/blob/master/src/cdk/collections/selection-model.ts" target="_blank" rel="noopener">SelectionModel</a></li>
+</ul>
+</section></article>

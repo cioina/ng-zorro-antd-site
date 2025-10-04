@@ -1,0 +1,53 @@
+<article class="markdown">
+  <h1>
+	动画开关
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#在全局关闭" class="toc-indent-2" nzTitle="在全局关闭"></nz-link>
+<nz-link nzHref="#在模版中关闭" class="toc-indent-2" nzTitle="在模版中关闭"></nz-link>
+<nz-link nzHref="#在服务中关闭" class="toc-indent-2" nzTitle="在服务中关闭"></nz-link>
+<nz-link nzHref="#关闭波浪效果" class="toc-indent-2" nzTitle="关闭波浪效果"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>NG-ZORRO 允许开发者关闭动画效果，您可以通过添加对应指令或者配置来设置动画的开关，也可以通过全局配置关闭所有动画。</p>
+<h3 id="在全局关闭"><span>在全局关闭</span><a onclick="window.location.hash = '在全局关闭'" class="anchor">#</a></h3><p>在模块中使用 <code>NoopAnimationsModule</code> 替换 <code>BrowserAnimationsModule</code>。</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> provideNoopAnimations <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'&#64;angular/platform-browser/animations'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// ...</span>
+    <span class="token function">provideNoopAnimations</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre><h3 id="在模版中关闭"><span>在模版中关闭</span><a onclick="window.location.hash = '在模版中关闭'" class="anchor">#</a></h3><p>引入 <code>NzNoAnimationModule</code> 模块。</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzNoAnimationModule <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/no-animation'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// ...</span>
+    NzNoAnimationModule
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre><p>在想关闭动画的组件上添加 <code>nzNoAnimation</code> 指令。</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-modal</span> <span class="token attr-name">nzNoAnimation</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-modal</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">nz-menu</span> <span class="token attr-name">nzNoAnimation</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="在服务中关闭"><span>在服务中关闭</span><a onclick="window.location.hash = '在服务中关闭'" class="anchor">#</a></h3><p>在调用组件服务时传入以下配置来关闭动画。</p>
+<h4 id="modal,_drawer"><span>Modal, Drawer</span><a onclick="window.location.hash = 'modal,_drawer'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token punctuation">&#123;</span>
+    <span class="token operator">...</span><span class="token punctuation">,</span>
+    nzNoAnimation<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><h4 id="notification,_message"><span>Notification, Message</span><a onclick="window.location.hash = 'notification,_message'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token punctuation">&#123;</span>
+   <span class="token operator">...</span><span class="token punctuation">,</span>
+   nzAnimate<span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><h3 id="关闭波浪效果"><span>关闭波浪效果</span><a onclick="window.location.hash = '关闭波浪效果'" class="anchor">#</a></h3><p>部分组件（如：Button）为了支持波纹效果，使用了动态样式，因此无法直接使用样式覆盖。但是你可以通过 <code>provideNzWave</code>
+或者使用 <code>NoopAnimationsModule</code> 来关闭波浪效果。</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> provideNzWave <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/wave'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzWave</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> disabled<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+</code></pre></section>
+</article>

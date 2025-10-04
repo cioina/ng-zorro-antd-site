@@ -1,0 +1,412 @@
+<article>
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-graph-demo-customized" nzTitle="Custom graph node"></nz-link>
+<nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
+  </nz-anchor>
+</nz-affix><section class="markdown">
+  <h1>
+	Graph
+	<span class="subtitle"></span>
+</h1>
+
+  <component-meta name="graph" description="Render graph." language="en"></component-meta>
+  
+<blockquote style="border-color: #faad14">
+<p>NG-ZORRO experiments are features that are released but not yet considered stable or production ready</p>
+<p>Developers and users can opt in into these features before they are fully released. But <strong>breaking changes</strong> may occur with any release.</p>
+</blockquote>
+  <section class="markdown" ngNonBindable>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When you want to use graph in Angular.</p>
+<blockquote>
+<p>The graph depends on d3-drag d3-zoom d3-selection d3-transition d3-shape (may be removed in next major version)</p>
+</blockquote>
+<h3 id="import_style"><span>Import Style</span><a onclick="window.location.hash = 'import_style'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
+</code></pre>
+  </section>
+  
+  <h2 id="examples">
+    <span>Examples</span>
+    <nz-icon nzType="appstore" class="code-box-expand-trigger" nz-tooltip nzTooltipTitle="Expand All Code" (click)="expandAllCode()" />
+    <a onclick="window.location.hash = 'examples'" class="anchor">#</a>
+  </h2>
+</section>
+<div nz-row [nzGutter]="8">
+	<div nz-col [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Custom graph node"
+  nzId="components-graph-demo-customized"
+  nzSelector="nz-demo-graph-customized"
+  nzLink="components-graph-demo-customized"
+  nzGenerateCommand="ng g ng-zorro-antd:graph-customized <name>"
+  nzComponentName="NzDemoGraphCustomizedComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/graph/demo/customized.md"
+>
+	<nz-demo-graph-customized demo></nz-demo-graph-customized>
+	<div intro ngNonBindable><p>Custom node style of graph.</p>
+</div>
+</nz-code-box>
+
+	</div>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>Dependencies:</p>
+<pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> dagre-compound dagre d3-transition d3-zoom d3-selection d3-shape d3-drag &#64;types/d3
+</code></pre><h3 id="nz-graph"><span>nz-graph</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-graph'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzGraphData]</code></td>
+<td>Data source</td>
+<td><code>NzGraphData(data: NzGraphDataDef?)</code></td>
+<td>``</td>
+</tr>
+<tr>
+<td><code>[nzRankDirection]</code></td>
+<td>Graph Direction</td>
+<td><code>TB</code> | <code>BT</code> | <code>LR</code> | <code>RL</code></td>
+<td><code>LR</code></td>
+</tr>
+<tr>
+<td><code>[nzAutoSize]</code></td>
+<td>Whether to automatically adjust the height of the node, the default equal height</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzGraphLayoutConfig]</code></td>
+<td>Global config of graph</td>
+<td><code>NzGraphLayoutConfig</code></td>
+<td>``</td>
+</tr>
+</tbody></table>
+<h4 id="methods"><span>Methods</span><a onclick="window.location.hash = 'methods'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>fitCenter()</code></td>
+<td>Move graph to center(use <code>nz-graph-zoom</code> instead if zooming is enabled)</td>
+</tr>
+</tbody></table>
+<h3 id="nz-graph-zoom"><span>[nz-graph-zoom]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-graph-zoom'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[(nzZoom)]</code></td>
+<td>Default zoom scale</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>[nzMinZoom]</code></td>
+<td>Minimum zoom scale</td>
+<td><code>number</code></td>
+<td><code>0.1</code></td>
+</tr>
+<tr>
+<td><code>[nzMaxZoom]</code></td>
+<td>Maximum zoom scale</td>
+<td><code>number</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>(nzTransformEvent)</code></td>
+<td>Event of zooming</td>
+<td><code>() =&gt; NzZoomTransform</code></td>
+<td>``</td>
+</tr>
+<tr>
+<td><code>(fitCenter)</code></td>
+<td>Move graph to center</td>
+<td><code>() =&gt; void</code></td>
+<td><code>void</code></td>
+</tr>
+<tr>
+<td><code>(focus)</code></td>
+<td>Move target node to center</td>
+<td><code>(e: SVGGElement, duration: number) =&gt; void</code></td>
+<td><code>void</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphdata"><span>NzGraphData</span><a onclick="window.location.hash = 'nzgraphdata'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>setData</code></td>
+<td>set data source</td>
+<td><code>(data: NzGraphDataDef) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>toggle</code></td>
+<td>toggle group node</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>expand</code></td>
+<td>expand group node</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>expandAll</code></td>
+<td>expand all group nodes</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>collapse</code></td>
+<td>collapse group node</td>
+<td><code>(nodeName: string) =&gt; void</code></td>
+</tr>
+<tr>
+<td><code>isExpand</code></td>
+<td>get if expanded of node</td>
+<td><code>(nodeName: string) =&gt; boolean</code></td>
+</tr>
+<tr>
+<td><code>expansionModel</code></td>
+<td>model of expanded nodes&#39; info</td>
+<td><code>SelectionModel&lt;string&gt;</code></td>
+</tr>
+</tbody></table>
+<h3 id="nzgraphlayoutconfig"><span>NzGraphLayoutConfig</span><a onclick="window.location.hash = 'nzgraphlayoutconfig'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>layout</code></td>
+<td>graph layout config</td>
+<td><code>&#123; nodeSep: number; rankSep: number; edgeSep: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>subScene</code></td>
+<td>group node config</td>
+<td><code>&#123; paddingTop: number; paddingBottom: number; paddingLeft: number; paddingRight: number; labelHeight: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>defaultCompoundNode</code></td>
+<td>group node size</td>
+<td><code>&#123; width: number; height: number; maxLabelWidth: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>defaultNode</code></td>
+<td>default node size</td>
+<td><code>&#123; width: number; height: number; labelOffset: number; maxLabelWidth: number; &#125;</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphdatadef"><span>NzGraphDataDef</span><a onclick="window.location.hash = 'nzgraphdatadef'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nodes</code></td>
+<td>nodes</td>
+<td><code>Array&lt;&#123; id: number|string; label?: string; width?: number; height?: number; [key: string]: any; &#125;&gt;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>edges</code></td>
+<td>edges</td>
+<td><code>Array&lt;&#123; v: number|string; w: number|string; [key: string]: any; &#125;&gt;</code></td>
+<td><code>[]</code></td>
+</tr>
+<tr>
+<td><code>compound</code></td>
+<td>group</td>
+<td><code>&#123; [parent: string]: string[]; &#125;</code></td>
+<td><code>null</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphnode"><span>NzGraphNode</span><a onclick="window.location.hash = 'nzgraphnode'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>id</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>label?</code></td>
+<td>node content</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>node name</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>node type(group: 0, node: 1)</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>parentNodeName</code></td>
+<td>parentNode name</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>coreBox</code></td>
+<td>coreBox</td>
+<td><code>&#123; width: number; height: number; &#125;</code></td>
+</tr>
+<tr>
+<td><code>xOffset</code></td>
+<td>x-offset</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>yOffset</code></td>
+<td>y-offset</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>width</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>height</td>
+<td><code>number</code></td>
+</tr>
+<tr>
+<td><code>[key: string]</code></td>
+<td>user inputs</td>
+<td><code>any</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphedge"><span>NzGraphEdge</span><a onclick="window.location.hash = 'nzgraphedge'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>id</code></td>
+<td>id</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>v</code></td>
+<td>source node</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>target node</td>
+<td><code>number|string</code></td>
+</tr>
+<tr>
+<td><code>label?</code></td>
+<td>edge content</td>
+<td><code>string</code></td>
+</tr>
+<tr>
+<td><code>points</code></td>
+<td>points</td>
+<td><code>Array&lt;&#123; x: number; y: number; &#125;&gt;</code></td>
+</tr>
+</tbody></table>
+<h4 id="nzgraphgroupnode"><span>NzGraphGroupNode</span><a onclick="window.location.hash = 'nzgraphgroupnode'" class="anchor">#</a></h4><table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>expanded</code></td>
+<td><code>boolean</code></td>
+</tr>
+<tr>
+<td><code>nodes</code></td>
+<td><code>Array&lt;NzGraphNode|NzGraphGroupNode&gt;</code></td>
+</tr>
+<tr>
+<td><code>edges</code></td>
+<td><code>NzGraphEdge[]</code></td>
+</tr>
+</tbody></table>
+<h3 id="nzgraphnode"><span>[nzGraphNode]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzgraphnode'" class="anchor">#</a></h3><p>Customize the graph node template</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-graph</span> <span class="token attr-name">[nzGraphData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-container</span> <span class="token attr-name">*nzGraphNode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let node<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>&#123;&#123; node.name &#125;&#125; - &#123;&#123; node.label &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-container</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-graph</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nzgraphgroupnode"><span>[nzGraphGroupNode]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzgraphgroupnode'" class="anchor">#</a></h3><p>Customize the graph group-node template</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-graph</span> <span class="token attr-name">[nzGraphData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-container</span> <span class="token attr-name">*nzGraphGroupNode</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let node<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>&#123;&#123; node.name &#125;&#125; - &#123;&#123; node.label &#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-container</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-graph</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="nzgraphedge"><span>[nzGraphEdge]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nzgraphedge'" class="anchor">#</a></h3><p>Customize the graph edge template</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-graph</span> <span class="token attr-name">[nzGraphData]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-container</span> <span class="token attr-name">*nzGraphEdge</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">svg:</span>g</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>path</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>path</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">svg:</span>g</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-container</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-graph</span><span class="token punctuation">></span></span>
+</code></pre><h3 id="styling"><span>Styling</span><a onclick="window.location.hash = 'styling'" class="anchor">#</a></h3><p>The Component styles only contain the necessary positional properties and simple styles, you can customize the style by overriding the following class.</p>
+<ul>
+<li><code>.nz-graph</code> <code>nz-graph</code> The <code>nz-graph</code> component namespace</li>
+<li><code>.nz-graph-nodes</code> The class name of container covered all nodes<ul>
+<li><code>.nz-graph-node</code> The class name of <code>nz-graph-node</code></li>
+<li><code>.nz-graph-node-expanded</code> The class name of expanded node</li>
+<li><code>.nz-graph-group-node</code> The class name of group node</li>
+<li><code>.nz-graph-base-node</code> The class name of leaf(OP) node</li>
+</ul>
+</li>
+<li><code>.nz-graph-edges</code> The class name of container covered edges in the target node<ul>
+<li><code>.nz-graph-edge</code> The class name of edge<ul>
+<li><code>path.nz-graph-edge-line</code> The class name of svg:path element</li>
+<li><code>.nz-graph-edge-text</code> The class name of svg:text element</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="more"><span>More</span><a onclick="window.location.hash = 'more'" class="anchor">#</a></h2><ul>
+<li><a href="https://www.npmjs.com/package/dagre-compound" target="_blank" rel="noopener">dagre-compound</a>: Dagre-based nested layout calculation library</li>
+<li><a href="https://github.com/angular/components/blob/master/src/cdk/collections/selection-model.ts" target="_blank" rel="noopener">SelectionModel</a></li>
+</ul>
+</section></article>

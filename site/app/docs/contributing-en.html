@@ -1,0 +1,64 @@
+<article class="markdown">
+  <h1>
+	How to Contribute
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#code-of-conduct" class="toc-indent-1" nzTitle="Code of Conduct"></nz-link>
+<nz-link nzHref="#open-development" class="toc-indent-1" nzTitle="Open Development"></nz-link>
+<nz-link nzHref="#bugs" class="toc-indent-1" nzTitle="Bugs"></nz-link>
+<nz-link nzHref="#propose-a-change" class="toc-indent-1" nzTitle="Propose a Change"></nz-link>
+<nz-link nzHref="#your-first-pull-request" class="toc-indent-1" nzTitle="Your First Pull Request"></nz-link>
+<nz-link nzHref="#contribute" class="toc-indent-1" nzTitle="Contribute"></nz-link>
+<nz-link nzHref="#how-to-submit-a-pull-request" class="toc-indent-1" nzTitle="How to Submit a Pull Request"></nz-link>
+<nz-link nzHref="#development-workflow" class="toc-indent-1" nzTitle="Development Workflow"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>The following is a set of guidelines about making contributions to NG-ZORRO. Please spend several minutes in reading these guidelines before submitting an issue or pull request.</p>
+<h2 id="code_of_conduct"><span>Code of Conduct</span><a onclick="window.location.hash = 'code_of_conduct'" class="anchor">#</a></h2><p>We have adopted a <a href="https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Code of Conduct</a> that we expect every contributor to adhere to. Please look through each section carefully so that you can understand what actions will and will not be allowed.</p>
+<h2 id="open_development"><span>Open Development</span><a onclick="window.location.hash = 'open_development'" class="anchor">#</a></h2><p>All work on NG-ZORRO happens directly on <a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" rel="noopener">GitHub</a>. Both core team members and external contributors go through the same reviewing process in order to submit a pull request.</p>
+<h2 id="bugs"><span>Bugs</span><a onclick="window.location.hash = 'bugs'" class="anchor">#</a></h2><p>We are using <a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues" target="_blank" rel="noopener">GitHub Issues</a> for bug tracing. The best way to get your bug fixed is using our <a href="https://ng.ant.design/issue-helper/#/en" target="_blank" rel="noopener">issue helper</a> and provide a reproduction following this <a href="https://stackblitz.com/edit/ng-zorro-antd-ivy" target="_blank" rel="noopener">template</a>.</p>
+<p>Before reporting a new bug, please make sure you have filtered existing issues, and read our <a href="docs/faq/en">FAQ</a>.</p>
+<h2 id="propose_a_change"><span>Propose a Change</span><a onclick="window.location.hash = 'propose_a_change'" class="anchor">#</a></h2><p>If you intend to change a public API or introduce a new feature, we also recommend you to use our <a href="https://ng.ant.design/issue-helper/#/en" target="_blank" rel="noopener">issue helper</a> to submit a feature request issue.</p>
+<h2 id="your_first_pull_request"><span>Your First Pull Request</span><a onclick="window.location.hash = 'your_first_pull_request'" class="anchor">#</a></h2><p>Please use the following resources for your first pull request:</p>
+<ul>
+<li><a href="https://opensource.guide/how-to-contribute/" target="_blank" rel="noopener">How to Contribute to Open Source</a></li>
+<li><a href="https://github.com/firstcontributions/first-contributions" target="_blank" rel="noopener">First Contributions</a></li>
+</ul>
+<p>To help you get your feet wet and get familiar with our contribution process, we have a list of <a href="https://github.com/NG-ZORRO/ng-zorro-antd/labels/good%20first%20issue" target="_blank" rel="noopener">Good First Issue</a> that contain either bugs that are relatively easy to be fixed or small features. These issues are considered as great starting points.</p>
+<p>If you decide to handle an issue, please be sure to check the comment thread in case someone else has already been working on it. If nobody is working on it at the moment, please leave a comment stating that you intend to work on it, preventing others from doing duplicate work.</p>
+<p>If somebody claimed an issue without any follow up for more than two weeks, it should be fine to take over it. Nevertheless, be sure to leave a comment under such issues.</p>
+<h2 id="contribute"><span>Contribute</span><a onclick="window.location.hash = 'contribute'" class="anchor">#</a></h2><p>The core team is monitoring all pull requests. Your pull request will be either successfully merged, requested for a change, or closed with a reasonable explanation.</p>
+<p><strong>Before submitting a pull request</strong>, please make sure to follow the steps below:</p>
+<ol>
+<li>Run <code>npm install</code> in the repository root.</li>
+<li>If you have fixed a bug or added a feature that should be tested, please add test cases!</li>
+<li>Make sure the test suite passes (<code>npm run test</code>).</li>
+<li>Make sure your code lints (<code>npm run lint</code>).</li>
+<li>Make sure rebase your code to keep the history clean.</li>
+<li>Make sure your commit message meet the requirements of <a href="https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/CONTRIBUTING.md#-commit-message-guidelines" target="_blank" rel="noopener">guidelines</a></li>
+</ol>
+<h2 id="how_to_submit_a_pull_request"><span>How to Submit a Pull Request</span><a onclick="window.location.hash = 'how_to_submit_a_pull_request'" class="anchor">#</a></h2><ol>
+<li>Fork the repository of <code>ng-zorro-antd</code>. The later steps must be done on the forked repository</li>
+<li>On <code>master</code>: <code>git remote add upstream https://github.com/NG-ZORRO/ng-zorro-antd.git</code></li>
+<li>On <code>master</code>: <code>git pull upstream master</code></li>
+<li>On <code>master</code>: <code>git push origin master</code></li>
+<li>Checkout to the feature branch (for example, if the branch is called <code>docs-fix</code>): <code>git checkout docs-fix</code></li>
+<li>On <code>docs-fix</code> rebase on master: <code>git rebase origin/master</code></li>
+<li>On <code>docs-fix</code> resolve codes and commit: <code>git commit -a</code>, you need to follow the <a href="https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/CONTRIBUTING.md#-commit-message-guidelines" target="_blank" rel="noopener">commit message guidelines</a></li>
+<li>Then, push up: <code>git push</code> (might need <code>-f</code>, just be sure you understand force pushing before you do it)</li>
+<li>Submit a Pull Request on the Github</li>
+</ol>
+<h2 id="development_workflow"><span>Development Workflow</span><a onclick="window.location.hash = 'development_workflow'" class="anchor">#</a></h2><p>After cloning <code>ng-zorro-antd</code> and running <code>npm install</code> to install its dependencies, you can also run the following commands:</p>
+<ul>
+<li><code>npm start</code> runs NG-ZORRO website locally.</li>
+<li><code>npm run lint</code> checks the code style.</li>
+<li><code>npm test</code> runs the complete test suite.</li>
+<li><code>npm run test:watch [name]</code> run some test files and monitor changes.</li>
+<li><code>npm run build:lib</code> creates a build of <code>ng-zorro-antd</code> under <code>publish</code> directory.</li>
+</ul>
+<p>If you encounter problems while developing <code>ng-zorro-antd</code>, please refer to our <a href="https://github.com/NG-ZORRO/ng-zorro-antd/wiki/Development-Guide" target="_blank" rel="noopener">development guide</a> on the GitHub.</p>
+</section>
+</article>

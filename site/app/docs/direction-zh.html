@@ -1,0 +1,40 @@
+<article class="markdown">
+  <h1>
+	文字方向
+	<span class="subtitle"></span>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#设置默认方向" class="toc-indent-1" nzTitle="设置默认方向"></nz-link>
+<nz-link nzHref="#在模版中设置" class="toc-indent-1" nzTitle="在模版中设置"></nz-link>
+<nz-link nzHref="#在服务中设置" class="toc-indent-1" nzTitle="在服务中设置"></nz-link>
+<nz-link nzHref="#参考" class="toc-indent-1" nzTitle="参考"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>设置文字方向（LTR / RTL）。</p>
+<h2 id="设置默认方向"><span>设置默认方向</span><a onclick="window.location.hash = '设置默认方向'" class="anchor">#</a></h2><p>在文档 <code>body</code> 或者 <code>html</code> 标签上设置 <code>dir</code> 属性。</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">dir</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rtl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+</code></pre><h2 id="在模版中设置"><span>在模版中设置</span><a onclick="window.location.hash = '在模版中设置'" class="anchor">#</a></h2><p>引入 Angular CDK bidi 模块</p>
+<pre><code class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> BidiModule <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'&#64;angular/cdk/bidi'</span><span class="token punctuation">;</span>
+</code></pre><p>在模版中为应用或其后代设置方向。</p>
+<pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">dir</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rtl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre><h2 id="在服务中设置"><span>在服务中设置</span><a onclick="window.location.hash = '在服务中设置'" class="anchor">#</a></h2><p>例如对话框（Modal）服务。</p>
+<pre><code class="language-typescript"><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">private</span> modalService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzModalService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span> nzConfigService <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">openModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>modal<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> nzDirection<span class="token operator">:</span> <span class="token string">'rtl'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token function">setDirWithConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>nzConfigService<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">'modal'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> nzDirection<span class="token operator">:</span> <span class="token string">'rtl'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><h2 id="参考"><span>参考</span><a onclick="window.location.hash = '参考'" class="anchor">#</a></h2><ul>
+<li><a href="https://material.angular.io/cdk/bidi/api" target="_blank" rel="noopener">Angular CDK Bidirectionality</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/dir" target="_blank" rel="noopener">dir - HTML | MDN</a></li>
+</ul>
+</section>
+</article>
