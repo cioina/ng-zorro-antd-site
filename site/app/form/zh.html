@@ -18,6 +18,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-dynamic-rule" nzTitle="动态校验规则"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-wrap" nzTitle="表单标签可换行"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-align" nzTitle="表单标签文本对齐方式"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-form-demo-required-style" nzTitle="必选样式"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -336,6 +337,22 @@
 	<div intro ngNonBindable><p>表单标签文本对齐方式。</p>
 </div>
 </nz-code-box>
+<nz-code-box
+  nzTitle="必选样式"
+  nzId="components-form-demo-required-style"
+  nzSelector="nz-demo-form-required-style"
+  nzLink="components-form-demo-required-style"
+  nzGenerateCommand="ng g ng-zorro-antd:form-required-style <name>"
+  nzComponentName="NzDemoFormRequiredStyleComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/form/demo/required-style.md"
+>
+	<nz-demo-form-required-style demo></nz-demo-form-required-style>
+	<div intro ngNonBindable><p>通过 <code>nzRequiredMark</code> 切换必选与可选样式。</p>
+</div>
+</nz-code-box>
 
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-form"><span>[nz-form]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-form'" class="anchor">#</a></h3><table>
@@ -395,6 +412,13 @@
 <td>配置 <code>nz-form-label</code> 的 <code>[nzLabelWrap]</code> 的默认值</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzRequiredMark]</code></td>
+<td>必填标记样式。可使用必填标记或可选标记。</td>
+<td><code>NzRequiredMark</code></td>
+<td><code>true</code></td>
 <td></td>
 </tr>
 </tbody></table>

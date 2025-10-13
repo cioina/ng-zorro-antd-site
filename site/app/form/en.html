@@ -18,6 +18,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-dynamic-rule" nzTitle="Dynamic Rules"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-wrap" nzTitle="Label can wrap"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-align" nzTitle="Text align of form label"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-form-demo-required-style" nzTitle="Required style"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -336,6 +337,22 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 	<div intro ngNonBindable><p>text align of form label.</p>
 </div>
 </nz-code-box>
+<nz-code-box
+  nzTitle="Required style"
+  nzId="components-form-demo-required-style"
+  nzSelector="nz-demo-form-required-style"
+  nzLink="components-form-demo-required-style"
+  nzGenerateCommand="ng g ng-zorro-antd:form-required-style <name>"
+  nzComponentName="NzDemoFormRequiredStyleComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/form/demo/required-style.md"
+>
+	<nz-demo-form-required-style demo></nz-demo-form-required-style>
+	<div intro ngNonBindable><p>Switch required or optional style with <code>nzRequiredMark</code>.</p>
+</div>
+</nz-code-box>
 
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-form"><span>[nz-form]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-form'" class="anchor">#</a></h3><table>
@@ -395,6 +412,13 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td>Set default props <code>[nzLabelWrap]</code> value of <code>nz-form-label</code></td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzRequiredMark]</code></td>
+<td>Required mark style. Can use required mark or optional mark.</td>
+<td><code>NzRequiredMark</code></td>
+<td><code>true</code></td>
 <td></td>
 </tr>
 </tbody></table>

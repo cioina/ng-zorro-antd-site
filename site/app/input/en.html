@@ -338,7 +338,53 @@ An options object can be provided to <code>nzAutosize</code> to specify the mini
 <td><del><code>true</code></del></td>
 </tr>
 </tbody></table>
-<h3 id="nz-input-wrapper"><span>nz-input-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-wrapper'" class="anchor">#</a></h3><p>Used when you need to add prefixes and suffixes or pre- and post-tabs to <code>[nz-input]</code>.</p>
+<h3 id="nz-input-wrapper"><span>nz-input-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-wrapper'" class="anchor">#</a></h3><p>Use when you need to add extra functionality to <code>[nz-input]</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzAddonBefore]</code></td>
+<td>The label text displayed before (on the left side of) the input field</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzAddonAfter]</code></td>
+<td>The label text displayed after (on the right side of) the input field</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPrefix]</code></td>
+<td>The prefix icon for the Input</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSuffix]</code></td>
+<td>The suffix icon for the Input</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzAllowClear]</code></td>
+<td>If allow to remove input content with clear icon</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzClear)</code></td>
+<td>Event emitted when the clear icon is clicked</td>
+<td><code>OutputEmitterRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
 <h3 id="nz-input-group"><span>nz-input-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-group'" class="anchor">#</a></h3><blockquote>
 <p>⚠️ <code>nz-input-group</code> has been deprecated in <code>v20.0.0</code> and will be removed in <code>v22.0.0</code>. Please use the <code>nz-input-wrapper</code> component instead.</p>
 </blockquote>

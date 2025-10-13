@@ -331,7 +331,53 @@
 <td>-</td>
 </tr>
 </tbody></table>
-<h3 id="nz-input-wrapper"><span>nz-input-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-wrapper'" class="anchor">#</a></h3><p>当需要为 <code>[nz-input]</code> 添加前/后缀或前/后置标签时使用。</p>
+<h3 id="nz-input-wrapper"><span>nz-input-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-wrapper'" class="anchor">#</a></h3><p>当需要为 <code>[nz-input]</code> 添加额外功能时使用。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzAddonBefore]</code></td>
+<td>带标签的 input，设置前置标签</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzAddonAfter]</code></td>
+<td>带标签的 input，设置后置标签</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPrefix]</code></td>
+<td>带有前缀图标的 input</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSuffix]</code></td>
+<td>带有后缀图标的 input</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzAllowClear]</code></td>
+<td>可以点击清除图标删除内容</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzClear)</code></td>
+<td>点击清除图标时触发</td>
+<td><code>OutputEmitterRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
 <h3 id="nz-input-group"><span>nz-input-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-group'" class="anchor">#</a></h3><blockquote>
 <p>⚠️ <code>nz-input-group</code> 已在 <code>v20.0.0</code> 中废弃，将在 <code>v22.0.0</code> 中移除，请使用 <code>nz-input-wrapper</code> 组件。</p>
 </blockquote>
