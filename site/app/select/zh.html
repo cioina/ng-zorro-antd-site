@@ -56,6 +56,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本使用"
+  nzVersion=""
   nzId="components-select-demo-basic"
   nzSelector="nz-demo-select-basic"
   nzLink="components-select-demo-basic"
@@ -69,9 +70,9 @@
 	<nz-demo-select-basic demo></nz-demo-select-basic>
 	<div intro ngNonBindable><p>基本使用。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="多选"
+  nzVersion=""
   nzId="components-select-demo-multiple"
   nzSelector="nz-demo-select-multiple"
   nzLink="components-select-demo-multiple"
@@ -85,9 +86,9 @@
 	<nz-demo-select-multiple demo></nz-demo-select-multiple>
 	<div intro ngNonBindable><p>多选，从已有条目中选择，例子中通过 <code>nzMaxTagCount</code> 限制最多显示3个选项。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="标签"
+  nzVersion=""
   nzId="components-select-demo-tags"
   nzSelector="nz-demo-select-tags"
   nzLink="components-select-demo-tags"
@@ -101,9 +102,9 @@
 	<nz-demo-select-tags demo></nz-demo-select-tags>
 	<div intro ngNonBindable><p>tags select，随意输入的内容（scroll the menu）</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="联动"
+  nzVersion=""
   nzId="components-select-demo-coordinate"
   nzSelector="nz-demo-select-coordinate"
   nzLink="components-select-demo-coordinate"
@@ -118,9 +119,9 @@
 	<div intro ngNonBindable><p>省市联动是典型的例子。</p>
 <p>推荐使用 <a href="/components/cascader/zh">Cascader</a> 组件。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="获得选项的对象"
+  nzVersion=""
   nzId="components-select-demo-label-in-value"
   nzSelector="nz-demo-select-label-in-value"
   nzLink="components-select-demo-label-in-value"
@@ -134,9 +135,9 @@
 	<nz-demo-select-label-in-value demo></nz-demo-select-label-in-value>
 	<div intro ngNonBindable><p><code>ngModel</code> 取到的值为选中 <code>nz-option</code> 的 <code>nzValue</code> 值，当 <code>nzValue</code> 传入为一个对象时，<code>ngModel</code> 获取的值也是一个对象，<code>compareWith</code> 的用法参见 <a href="https://angular.cn/api/forms/SelectControlValueAccessor" target="_blank" rel="noopener">SelectControlValueAccessor</a>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="搜索用户"
+  nzVersion=""
   nzId="components-select-demo-select-users"
   nzSelector="nz-demo-select-select-users"
   nzLink="components-select-demo-select-users"
@@ -150,9 +151,9 @@
 	<nz-demo-select-select-users demo></nz-demo-select-select-users>
 	<div intro ngNonBindable><p>一个带有远程搜索，节流控制，请求时序控制，加载状态的多选示例。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="扩展菜单"
+  nzVersion=""
   nzId="components-select-demo-custom-dropdown-menu"
   nzSelector="nz-demo-select-custom-dropdown-menu"
   nzLink="components-select-demo-custom-dropdown-menu"
@@ -166,9 +167,9 @@
 	<nz-demo-select-custom-dropdown-menu demo></nz-demo-select-custom-dropdown-menu>
 	<div intro ngNonBindable><p>使用 <code>nzDropdownRender</code> 对下拉菜单进行自由扩展。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义下拉菜单内容"
+  nzVersion=""
   nzId="components-select-demo-custom-content"
   nzSelector="nz-demo-select-custom-content"
   nzLink="components-select-demo-custom-content"
@@ -182,9 +183,9 @@
 	<nz-demo-select-custom-content demo></nz-demo-select-custom-content>
 	<div intro ngNonBindable><p>通过 <code>nzCustomContent</code> 自定义下拉菜单选项显示的内容。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="默认数据"
+  nzVersion=""
   nzId="components-select-demo-default-value"
   nzSelector="nz-demo-select-default-value"
   nzLink="components-select-demo-default-value"
@@ -198,9 +199,9 @@
 	<nz-demo-select-default-value demo></nz-demo-select-default-value>
 	<div intro ngNonBindable><p>当需要显示默认值，同时默认值又不在选项列表中时，可以使用 <code>nzHide</code> 在 <code>nz-option</code> 中将默认选项隐藏</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="形态变体"
+  nzVersion="20.0.0"
   nzId="components-select-demo-variant"
   nzSelector="nz-demo-select-variant"
   nzLink="components-select-demo-variant"
@@ -214,9 +215,9 @@
 	<nz-demo-select-variant demo></nz-demo-select-variant>
 	<div intro ngNonBindable><p>Select 形态变体，可选 <code>outlined</code>、<code>filled</code>、<code>borderless</code>、<code>underlined</code> 四种形态。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="传入 Options"
+  nzVersion=""
   nzId="components-select-demo-options"
   nzSelector="nz-demo-select-options"
   nzLink="components-select-demo-options"
@@ -230,9 +231,9 @@
 	<nz-demo-select-options demo></nz-demo-select-options>
 	<div intro ngNonBindable><p>通过 <code>nzOptions</code> 直接传入选项内容</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="弹出位置"
+  nzVersion=""
   nzId="components-select-demo-placement"
   nzSelector="nz-demo-select-placement"
   nzLink="components-select-demo-placement"
@@ -247,11 +248,11 @@
 	<div intro ngNonBindable><p>可以通过 <code>placement</code> 手动指定弹出的位置。</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="带搜索框"
+  nzVersion=""
   nzId="components-select-demo-search"
   nzSelector="nz-demo-select-search"
   nzLink="components-select-demo-search"
@@ -265,9 +266,9 @@
 	<nz-demo-select-search demo></nz-demo-select-search>
 	<div intro ngNonBindable><p>展开后可对选项进行搜索。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="三种大小"
+  nzVersion=""
   nzId="components-select-demo-size"
   nzSelector="nz-demo-select-size"
   nzLink="components-select-demo-size"
@@ -281,9 +282,9 @@
 	<nz-demo-select-size demo></nz-demo-select-size>
 	<div intro ngNonBindable><p>三种大小的选择框，当 <code>nzSize</code> 分别为 <code>large</code> 和 <code>small</code> 时，输入框高度为 <code>40px</code> 和 <code>24px</code> ，默认高度为 <code>32px</code>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="分组"
+  nzVersion=""
   nzId="components-select-demo-optgroup"
   nzSelector="nz-demo-select-optgroup"
   nzLink="components-select-demo-optgroup"
@@ -297,9 +298,9 @@
 	<nz-demo-select-optgroup demo></nz-demo-select-optgroup>
 	<div intro ngNonBindable><p>用 <code>nz-option-group</code> 进行选项分组。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="搜索框"
+  nzVersion=""
   nzId="components-select-demo-search-box"
   nzSelector="nz-demo-select-search-box"
   nzLink="components-select-demo-search-box"
@@ -313,9 +314,9 @@
 	<nz-demo-select-search-box demo></nz-demo-select-search-box>
 	<div intro ngNonBindable><p>搜索和远程数据结合。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自动分词"
+  nzVersion=""
   nzId="components-select-demo-automatic-tokenization"
   nzSelector="nz-demo-select-automatic-tokenization"
   nzLink="components-select-demo-automatic-tokenization"
@@ -329,9 +330,9 @@
 	<nz-demo-select-automatic-tokenization demo></nz-demo-select-automatic-tokenization>
 	<div intro ngNonBindable><p>试下复制 <code>露西,杰克</code> 到输入框里。只在 tags 和 multiple 模式下可用。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="前后缀"
+  nzVersion=""
   nzId="components-select-demo-prefix-and-suffix"
   nzSelector="nz-demo-select-prefix-and-suffix"
   nzLink="components-select-demo-prefix-and-suffix"
@@ -345,9 +346,9 @@
 	<nz-demo-select-prefix-and-suffix demo></nz-demo-select-prefix-and-suffix>
 	<div intro ngNonBindable><p>自定义前缀 <code>nzPrefix</code> 和后缀图标 <code>nzSuffixIcon</code>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="隐藏已选择选项"
+  nzVersion=""
   nzId="components-select-demo-hide-selected"
   nzSelector="nz-demo-select-hide-selected"
   nzLink="components-select-demo-hide-selected"
@@ -361,9 +362,9 @@
 	<nz-demo-select-hide-selected demo></nz-demo-select-hide-selected>
 	<div intro ngNonBindable><p>通过 <code>nzHide</code> 隐藏下拉列表中已选择的选项。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="下拉加载"
+  nzVersion=""
   nzId="components-select-demo-scroll-load"
   nzSelector="nz-demo-select-scroll-load"
   nzLink="components-select-demo-scroll-load"
@@ -377,9 +378,9 @@
 	<nz-demo-select-scroll-load demo></nz-demo-select-scroll-load>
 	<div intro ngNonBindable><p>一个带有下拉加载远程数据的例子。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="大量数据"
+  nzVersion=""
   nzId="components-select-demo-big-data"
   nzSelector="nz-demo-select-big-data"
   nzLink="components-select-demo-big-data"
@@ -393,9 +394,9 @@
 	<nz-demo-select-big-data demo></nz-demo-select-big-data>
 	<div intro ngNonBindable><p>组件使用了虚拟滚动技术，可以同时处理大量数据。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义选择标签"
+  nzVersion=""
   nzId="components-select-demo-custom-template"
   nzSelector="nz-demo-select-custom-template"
   nzLink="components-select-demo-custom-template"
@@ -409,9 +410,9 @@
 	<nz-demo-select-custom-template demo></nz-demo-select-custom-template>
 	<div intro ngNonBindable><p>通过 <code>nzCustomTemplate</code> 自定义 nz-select 显示的内容。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义状态"
+  nzVersion=""
   nzId="components-select-demo-status"
   nzSelector="nz-demo-select-status"
   nzLink="components-select-demo-status"
@@ -425,9 +426,9 @@
 	<nz-demo-select-status demo></nz-demo-select-status>
 	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 Select 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="最大选中数量"
+  nzVersion=""
   nzId="components-select-demo-max-count"
   nzSelector="nz-demo-select-max-count"
   nzLink="components-select-demo-max-count"
@@ -442,7 +443,6 @@
 	<div intro ngNonBindable><p>你可以通过设置 <code>nzMaxMultipleCount</code> 约束最多可选中的数量，当超出限制时会变成禁止选中状态。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-select</span><span class="token punctuation">></span></span>
@@ -456,6 +456,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -464,12 +465,14 @@
 <td><code>string</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[ngModel]</code></td>
 <td>当前选中的 nz-option 的 nzValue 值，可双向绑定，当 <code>nzMode</code> 为 <code>multiple</code> 或 <code>tags</code> 时，ngModel 为数组</td>
 <td><code>any | any[]</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -478,12 +481,14 @@
 <td><code>(o1: any, o2: any) =&gt; boolean</code></td>
 <td><code>(o1: any, o2: any) =&gt; o1===o2</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoClearSearchValue]</code></td>
 <td>是否在选中项后清空搜索框，只在 <code>mode</code> 为 <code>multiple</code> 或 <code>tags</code> 时有效。</td>
 <td><code>boolean</code></td>
 <td><code>true</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -492,12 +497,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBackdrop]</code></td>
 <td>浮层是否应带有背景板</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -506,6 +513,7 @@
 <td><del><code>boolean</code></del></td>
 <td><del><code>false</code></del></td>
 <td><del>✅</del></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzVariant]</code></td>
@@ -513,12 +521,14 @@
 <td><code>&#39;outlined&#39; | &#39;borderless&#39; | &#39;filled&#39; | &#39;underlined&#39;</code></td>
 <td><code>&#39;outlined&#39;</code></td>
 <td>✅</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>[nzOpen]</code></td>
 <td>下拉菜单是否打开，可双向绑定</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -527,12 +537,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDisabled]</code></td>
 <td>是否禁用</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -541,12 +553,14 @@
 <td><code>string | string[]</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDropdownMatchSelectWidth]</code></td>
 <td>下拉菜单和选择器同宽</td>
 <td><code>boolean</code></td>
 <td><code>true</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -555,12 +569,14 @@
 <td><code>object</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzCustomTemplate]</code></td>
 <td>自定义选择框的 Template 内容</td>
 <td><code>TemplateRef&lt;&#123; $implicit: NzOptionComponent &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -569,12 +585,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzFilterOption]</code></td>
 <td>是否根据输入项进行筛选。当其为一个函数时，会接收 <code>inputValue</code> <code>option</code> 两个参数，当 <code>option</code> 符合筛选条件时，应返回 <code>true</code>，反之则返回 <code>false</code>。</td>
 <td><code>(input?: string, option?: NzOptionComponent) =&gt; boolean;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -583,12 +601,14 @@
 <td><code>number</code></td>
 <td><code>Infinity</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzMode]</code></td>
 <td>设置 nz-select 的模式</td>
 <td><code>&#39;multiple&#39; | &#39;tags&#39; | &#39;default&#39;</code></td>
 <td><code>&#39;default&#39;</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -597,12 +617,14 @@
 <td><code>string | TemplateRef&lt;void&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzPlaceHolder]</code></td>
 <td>选择框默认文字</td>
 <td><code>string</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -611,12 +633,14 @@
 <td><code>boolean</code></td>
 <td>单选为 <code>true</code>，多选为 <code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShowSearch]</code></td>
 <td>使单选模式可搜索</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -625,12 +649,14 @@
 <td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
 <td><code>&#39;default&#39;</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzStatus]</code></td>
 <td>设置校验状态</td>
 <td><code>&#39;error&#39; | &#39;warning&#39;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -639,6 +665,7 @@
 <td><code>TemplateRef&lt;any&gt; | string</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzSuffixIcon]</code></td>
@@ -646,12 +673,14 @@
 <td><code>TemplateRef&lt;any&gt; | string</code></td>
 <td>-</td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzRemoveIcon]</code></td>
 <td>自定义的多选框清除图标</td>
 <td><code>TemplateRef&lt;any&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -660,12 +689,14 @@
 <td><code>TemplateRef&lt;any&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzMenuItemSelectedIcon]</code></td>
 <td>自定义当前选中的条目图标</td>
 <td><code>TemplateRef&lt;any&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -674,12 +705,14 @@
 <td><code>string[]</code></td>
 <td><code>[]</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzLoading]</code></td>
 <td>加载中状态</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -688,12 +721,14 @@
 <td><code>number</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzMaxTagPlaceholder]</code></td>
 <td>隐藏 tag 时显示的内容</td>
 <td><code>TemplateRef&lt;&#123; $implicit: any[] &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -702,6 +737,7 @@
 <td><code>Array&lt;&#123; label: string | number | TemplateRef&lt;any&gt;; value: any; key?: string | number; disabled?: boolean; hide?: boolean; groupLabel?: string | TemplateRef&lt;any&gt;;&#125;&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOptionHeightPx]</code></td>
@@ -709,12 +745,14 @@
 <td><code>number</code></td>
 <td><code>32</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOptionOverflowSize]</code></td>
 <td>下拉菜单中最多展示的 Option 个数，超出部分滚动</td>
 <td><code>number</code></td>
 <td><code>8</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -723,12 +761,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(ngModelChange)</code></td>
 <td>选中的 nz-option 发生变化时，调用此函数</td>
 <td><code>EventEmitter&lt;any[]&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -737,12 +777,14 @@
 <td><code>EventEmitter&lt;boolean&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzScrollToBottom)</code></td>
 <td>下拉列表滚动到底部的回调</td>
 <td><code>EventEmitter&lt;any&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -751,13 +793,15 @@
 <td><code>EventEmitter&lt;string&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzOnClear)</code></td>
 <td>清空已选项时触发的回调函数。</td>
 <td><code>EventEmitter&lt;any&gt;</code></td>
 <td>-</td>
-<td></td>
+<td>-</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>(nzFocus)</code></td>
@@ -765,12 +809,14 @@
 <td><code>EventEmitter&lt;any&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzBlur)</code></td>
 <td>blur 时回调</td>
 <td><code>EventEmitter&lt;any&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>
@@ -858,4 +904,6 @@
 <td>获取焦点</td>
 </tr>
 </tbody></table>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q：滚动时浮层yuan素没有跟随滚动位置"><span>Q：滚动时浮层元素没有跟随滚动位置</span><a onclick="window.location.hash = 'q：滚动时浮层yuan素没有跟随滚动位置'" class="anchor">#</a></h3><p>默认情况下，浮层元素使用 <code>body</code> 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> 指令。
+注意：您需要从 <code>&#64;angular/cdk/scrolling</code> 导入 <code>CdkScrollable</code> 指令或 <code>ScrollingModule</code> 模块。</p>
 </section></article>

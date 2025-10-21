@@ -37,6 +37,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Basic"
+  nzVersion=""
   nzId="components-popconfirm-demo-basic"
   nzSelector="nz-demo-popconfirm-basic"
   nzLink="components-popconfirm-demo-basic"
@@ -50,9 +51,9 @@
 	<nz-demo-popconfirm-basic demo></nz-demo-popconfirm-basic>
 	<div intro ngNonBindable><p>The basic example.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Placement"
+  nzVersion=""
   nzId="components-popconfirm-demo-placement"
   nzSelector="nz-demo-popconfirm-placement"
   nzLink="components-popconfirm-demo-placement"
@@ -66,9 +67,9 @@
 	<nz-demo-popconfirm-placement demo></nz-demo-popconfirm-placement>
 	<div intro ngNonBindable><p>There are 12 placement options available.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Customize icon"
+  nzVersion=""
   nzId="components-popconfirm-demo-custom-icon"
   nzSelector="nz-demo-popconfirm-custom-icon"
   nzLink="components-popconfirm-demo-custom-icon"
@@ -82,9 +83,9 @@
 	<nz-demo-popconfirm-custom-icon demo></nz-demo-popconfirm-custom-icon>
 	<div intro ngNonBindable><p>Set <code>nzIcon</code> to customize the icon.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Asynchronously close"
+  nzVersion=""
   nzId="components-popconfirm-demo-async"
   nzSelector="nz-demo-popconfirm-async"
   nzLink="components-popconfirm-demo-async"
@@ -99,11 +100,11 @@
 	<div intro ngNonBindable><p>Asynchronously close a popconfirm when a the OK button is pressed. For example, you can use this pattern when you submit a form.</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Locale text"
+  nzVersion=""
   nzId="components-popconfirm-demo-locale"
   nzSelector="nz-demo-popconfirm-locale"
   nzLink="components-popconfirm-demo-locale"
@@ -117,9 +118,9 @@
 	<nz-demo-popconfirm-locale demo></nz-demo-popconfirm-locale>
 	<div intro ngNonBindable><p>Set <code>okText</code> and <code>cancelText</code> props to customise the button&#39;s labels.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Conditional trigger"
+  nzVersion=""
   nzId="components-popconfirm-demo-dynamic-trigger"
   nzSelector="nz-demo-popconfirm-dynamic-trigger"
   nzLink="components-popconfirm-demo-dynamic-trigger"
@@ -133,9 +134,9 @@
 	<nz-demo-popconfirm-dynamic-trigger demo></nz-demo-popconfirm-dynamic-trigger>
 	<div intro ngNonBindable><p>Make it pop up under some conditions.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Hide arrow"
+  nzVersion=""
   nzId="components-popconfirm-demo-hide-arrow"
   nzSelector="nz-demo-popconfirm-hide-arrow"
   nzLink="components-popconfirm-demo-hide-arrow"
@@ -149,9 +150,9 @@
 	<nz-demo-popconfirm-hide-arrow demo></nz-demo-popconfirm-hide-arrow>
 	<div intro ngNonBindable><p>Set <code>[nzPopconfirmShowArrow]=&quot;false&quot;</code> to hide arrow.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Asynchronously close on Promise"
+  nzVersion=""
   nzId="components-popconfirm-demo-promise"
   nzSelector="nz-demo-popconfirm-promise"
   nzLink="components-popconfirm-demo-promise"
@@ -166,7 +167,6 @@
 	<div intro ngNonBindable><p>Asynchronously close a popconfirm when the OK button is pressed. For example, you can use this pattern when you submit a form.</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-popconfirm"><span>[nz-popconfirm]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-popconfirm'" class="anchor">#</a></h3><table>
@@ -271,6 +271,7 @@
 <th>Type</th>
 <th>Default value</th>
 <th>Global Config</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -279,6 +280,7 @@
 <td><code>string</code></td>
 <td><code>&#39;Cancel&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkText]</code></td>
@@ -286,6 +288,7 @@
 <td><code>string</code></td>
 <td><code>&#39;Confirm&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkType]</code></td>
@@ -293,6 +296,7 @@
 <td><code>&#39;primary&#39; | &#39;ghost&#39; | &#39;dashed&#39; | &#39;danger&#39; | &#39;default&#39;</code></td>
 <td><code>&#39;primary&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkDanger]</code></td>
@@ -300,6 +304,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkDisabled]</code></td>
@@ -307,6 +312,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkButtonProps]</code></td>
@@ -314,6 +320,7 @@
 <td><code>NzPopConfirmButtonProps</code></td>
 <td><code>null</code></td>
 <td>-</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>[nzCancelButtonProps]</code></td>
@@ -321,6 +328,7 @@
 <td><code>NzPopConfirmButtonProps</code></td>
 <td><code>null</code></td>
 <td>-</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>[nzCondition]</code></td>
@@ -328,6 +336,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzIcon]</code></td>
@@ -335,6 +344,7 @@
 <td><code>string | TemplateRef&lt;void&gt; | null</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoFocus]</code></td>
@@ -342,6 +352,7 @@
 <td><code>null | &#39;ok&#39; | &#39;cancel&#39;</code></td>
 <td><code>null</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBeforeConfirm]</code></td>
@@ -349,6 +360,7 @@
 <td><code>(() =&gt; Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean) | null</code></td>
 <td><code>null</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzOnCancel)</code></td>
@@ -356,6 +368,7 @@
 <td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzOnConfirm)</code></td>
@@ -363,8 +376,11 @@
 <td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 </tbody></table>
 <p>Consult <a href="/components/tooltip/en#api">Tooltip's documentation</a> to find more APIs.</p>
 <h2 id="note"><span>Note</span><a onclick="window.location.hash = 'note'" class="anchor">#</a></h2><p>Please ensure that the node of <code>[nz-popconfirm]</code> accepts <code>onMouseEnter</code>, <code>onMouseLeave</code>, <code>onFocus</code>, <code>onClick</code> events.</p>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q_the_overlay_layer_element_does_not_follow_the_scroll_position_when_scrolling"><span>Q: The overlay layer element does not follow the scroll position when scrolling</span><a onclick="window.location.hash = 'q_the_overlay_layer_element_does_not_follow_the_scroll_position_when_scrolling'" class="anchor">#</a></h3><p>By default, the overlay layer element uses body as the scroll container. If using another scroll container, add the <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> directive to the custom scroll container element.
+Note: You need to import the <code>CdkScrollable</code> directive or <code>ScrollingModule</code> module from <code>&#64;angular/cdk/scrolling</code>.</p>
 </section></article>

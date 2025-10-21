@@ -36,6 +36,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本"
+  nzVersion=""
   nzId="components-popover-demo-basic"
   nzSelector="nz-demo-popover-basic"
   nzLink="components-popover-demo-basic"
@@ -49,9 +50,9 @@
 	<nz-demo-popover-basic demo></nz-demo-popover-basic>
 	<div intro ngNonBindable><p>最简单的用法，浮层的大小由内容区域决定。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="从浮层内关闭"
+  nzVersion=""
   nzId="components-popover-demo-control"
   nzSelector="nz-demo-popover-control"
   nzLink="components-popover-demo-control"
@@ -65,9 +66,9 @@
 	<nz-demo-popover-control demo></nz-demo-popover-control>
 	<div intro ngNonBindable><p>使用 <code>nzPopoverVisible</code> 属性控制浮层显示。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="模板渲染"
+  nzVersion=""
   nzId="components-popover-demo-template"
   nzSelector="nz-demo-popover-template"
   nzLink="components-popover-demo-template"
@@ -81,9 +82,9 @@
 	<nz-demo-popover-template demo></nz-demo-popover-template>
 	<div intro ngNonBindable><p><code>nzPopoverContent</code> 与 <code>nzPopoverTitle</code> 可以传入 <code>TemplateRef&lt;void&gt;</code> 模板渲染。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="禁止通过蒙层关闭面板"
+  nzVersion=""
   nzId="components-popover-demo-overlay"
   nzSelector="nz-demo-popover-overlay"
   nzLink="components-popover-demo-overlay"
@@ -98,11 +99,11 @@
 	<div intro ngNonBindable><p>在 <code>nzPopoverTrigger</code> 为 <code>&#39;click&#39;</code> 时，通过设置 <code>nzPopoverOverlayClickable</code> 为 <code>false</code> 禁止通过点击蒙层关闭面板。</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="位置"
+  nzVersion=""
   nzId="components-popover-demo-placement"
   nzSelector="nz-demo-popover-placement"
   nzLink="components-popover-demo-placement"
@@ -116,9 +117,9 @@
 	<nz-demo-popover-placement demo></nz-demo-popover-placement>
 	<div intro ngNonBindable><p>位置有十二个方向。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="箭头指向"
+  nzVersion=""
   nzId="components-popover-demo-arrow-point-at-center"
   nzSelector="nz-demo-popover-arrow-point-at-center"
   nzLink="components-popover-demo-arrow-point-at-center"
@@ -132,9 +133,9 @@
 	<nz-demo-popover-arrow-point-at-center demo></nz-demo-popover-arrow-point-at-center>
 	<div intro ngNonBindable><p>通过设置 <code>nzPopoverPlacement</code> ，可以箭头将指向目标元素的中心。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="三种触发方式"
+  nzVersion=""
   nzId="components-popover-demo-trigger-type"
   nzSelector="nz-demo-popover-trigger-type"
   nzLink="components-popover-demo-trigger-type"
@@ -149,7 +150,6 @@
 	<div intro ngNonBindable><p>鼠标移入、聚集、点击。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-popover"><span>[nz-popover]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-popover'" class="anchor">#</a></h3><table>
@@ -260,4 +260,6 @@
 </tbody></table>
 <p>更多属性请参考 <a href="/components/tooltip/zh#api">Tooltip</a>。</p>
 <h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><p>请确保 <code>[nz-popover]</code> 元素能接受 <code>onMouseEnter</code>、<code>onMouseLeave</code>、<code>onFocus</code>、<code>onClick</code> 事件。</p>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q：滚动时浮层yuan素没有跟随滚动位置"><span>Q：滚动时浮层元素没有跟随滚动位置</span><a onclick="window.location.hash = 'q：滚动时浮层yuan素没有跟随滚动位置'" class="anchor">#</a></h3><p>默认情况下，浮层元素使用 <code>body</code> 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> 指令。
+注意：您需要从 <code>&#64;angular/cdk/scrolling</code> 导入 <code>CdkScrollable</code> 指令或 <code>ScrollingModule</code> 模块。</p>
 </section></article>

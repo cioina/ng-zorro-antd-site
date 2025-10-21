@@ -39,6 +39,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本"
+  nzVersion=""
   nzId="components-carousel-demo-basic"
   nzSelector="nz-demo-carousel-basic"
   nzLink="components-carousel-demo-basic"
@@ -52,9 +53,9 @@
 	<nz-demo-carousel-basic demo></nz-demo-carousel-basic>
 	<div intro ngNonBindable><p>最简单的用法。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="渐显"
+  nzVersion=""
   nzId="components-carousel-demo-fade"
   nzSelector="nz-demo-carousel-fade"
   nzLink="components-carousel-demo-fade"
@@ -68,9 +69,9 @@
 	<nz-demo-carousel-fade demo></nz-demo-carousel-fade>
 	<div intro ngNonBindable><p>切换效果为渐显。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义切换效果"
+  nzVersion=""
   nzId="components-carousel-demo-custom"
   nzSelector="nz-demo-carousel-custom"
   nzLink="components-carousel-demo-custom"
@@ -84,9 +85,9 @@
 	<nz-demo-carousel-custom demo></nz-demo-carousel-custom>
 	<div intro ngNonBindable><p>通过继承 <code>NzCarouselBaseStrategy</code> 自定义轮播图切换动画。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="切换箭头"
+  nzVersion="20.3.0"
   nzId="components-carousel-demo-arrow"
   nzSelector="nz-demo-carousel-arrow"
   nzLink="components-carousel-demo-arrow"
@@ -101,11 +102,11 @@
 	<div intro ngNonBindable><p>显示切换箭头。</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="位置"
+  nzVersion=""
   nzId="components-carousel-demo-position"
   nzSelector="nz-demo-carousel-position"
   nzLink="components-carousel-demo-position"
@@ -119,9 +120,9 @@
 	<nz-demo-carousel-position demo></nz-demo-carousel-position>
 	<div intro ngNonBindable><p>位置有 4 个方向。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自动切换"
+  nzVersion=""
   nzId="components-carousel-demo-autoplay"
   nzSelector="nz-demo-carousel-autoplay"
   nzLink="components-carousel-demo-autoplay"
@@ -135,9 +136,9 @@
 	<nz-demo-carousel-autoplay demo></nz-demo-carousel-autoplay>
 	<div intro ngNonBindable><p>定时切换下一张。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="循环"
+  nzVersion=""
   nzId="components-carousel-demo-loop"
   nzSelector="nz-demo-carousel-loop"
   nzLink="components-carousel-demo-loop"
@@ -152,7 +153,6 @@
 	<div intro ngNonBindable><p>防止轮播进入循环</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-carousel"><span>nz-carousel</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-carousel'" class="anchor">#</a></h3><table>
@@ -163,6 +163,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>支持全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -171,6 +172,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoPlaySpeed]</code></td>
@@ -178,12 +180,14 @@
 <td><code>number</code></td>
 <td><code>3000</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDotRender]</code></td>
 <td>Dot 渲染模板</td>
 <td><code>TemplateRef&lt;&#123; $implicit: number &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -192,6 +196,7 @@
 <td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
 <td><code>&#39;bottom&#39;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDots]</code></td>
@@ -199,6 +204,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzEffect]</code></td>
@@ -206,6 +212,7 @@
 <td><code>&#39;scrollx&#39; | &#39;fade&#39;</code></td>
 <td><code>&#39;scrollx&#39;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzEnableSwipe]</code></td>
@@ -213,6 +220,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzLoop]</code></td>
@@ -220,6 +228,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzArrows]</code></td>
@@ -227,6 +236,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td>20.3.0</td>
 </tr>
 <tr>
 <td><code>(nzAfterChange)</code></td>
@@ -234,12 +244,14 @@
 <td><code>EventEmitter&lt;number&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzBeforeChange)</code></td>
 <td>切换面板的回调</td>
 <td><code>EventEmitter&lt;&#123; from: number; to: number &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>

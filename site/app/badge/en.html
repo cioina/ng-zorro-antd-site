@@ -39,6 +39,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Basic"
+  nzVersion=""
   nzId="components-badge-demo-basic"
   nzSelector="nz-demo-badge-basic"
   nzLink="components-badge-demo-basic"
@@ -52,9 +53,9 @@
 	<nz-demo-badge-basic demo></nz-demo-badge-basic>
 	<div intro ngNonBindable><p>Simplest Usage. Badge will be hidden when <code>nzCount</code> is <code>0</code>, but we can use <code>nzShowZero</code> to show it.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Overflow Count"
+  nzVersion=""
   nzId="components-badge-demo-overflow"
   nzSelector="nz-demo-badge-overflow"
   nzLink="components-badge-demo-overflow"
@@ -68,9 +69,9 @@
 	<nz-demo-badge-overflow demo></nz-demo-badge-overflow>
 	<div intro ngNonBindable><p><code>nzOverflowCount+</code> is displayed when count is larger than <code>nzOverflowCount</code>. The default value of <code>nzOverflowCount</code> is <code>99</code>.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Clickable"
+  nzVersion=""
   nzId="components-badge-demo-link"
   nzSelector="nz-demo-badge-link"
   nzLink="components-badge-demo-link"
@@ -84,9 +85,9 @@
 	<nz-demo-badge-link demo></nz-demo-badge-link>
 	<div intro ngNonBindable><p>The badge can be wrapped with <code>a</code> tag to make it linkable.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Offset"
+  nzVersion=""
   nzId="components-badge-demo-offset"
   nzSelector="nz-demo-badge-offset"
   nzLink="components-badge-demo-offset"
@@ -100,9 +101,9 @@
 	<nz-demo-badge-offset demo></nz-demo-badge-offset>
 	<div intro ngNonBindable><p>Set offset of the badge dot, the format is <code>[left, top]</code>, which represents the offset of the status dot from the left and top of the default position.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Size"
+  nzVersion=""
   nzId="components-badge-demo-size"
   nzSelector="nz-demo-badge-size"
   nzLink="components-badge-demo-size"
@@ -116,9 +117,9 @@
 	<nz-demo-badge-size demo></nz-demo-badge-size>
 	<div intro ngNonBindable><p>Set size of numeral Badge.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Ribbon"
+  nzVersion=""
   nzId="components-badge-demo-ribbon"
   nzSelector="nz-demo-badge-ribbon"
   nzLink="components-badge-demo-ribbon"
@@ -133,11 +134,11 @@
 	<div intro ngNonBindable><p>Use ribbon badge.</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Standalone"
+  nzVersion=""
   nzId="components-badge-demo-no-wrapper"
   nzSelector="nz-demo-badge-no-wrapper"
   nzLink="components-badge-demo-no-wrapper"
@@ -151,9 +152,9 @@
 	<nz-demo-badge-no-wrapper demo></nz-demo-badge-no-wrapper>
 	<div intro ngNonBindable><p>Add <code>nzStandalone</code> when there are no children.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Red badge"
+  nzVersion=""
   nzId="components-badge-demo-dot"
   nzSelector="nz-demo-badge-dot"
   nzLink="components-badge-demo-dot"
@@ -167,9 +168,9 @@
 	<nz-demo-badge-dot demo></nz-demo-badge-dot>
 	<div intro ngNonBindable><p>This will simply display a red badge, without a specific count.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Dynamic"
+  nzVersion=""
   nzId="components-badge-demo-dynamic"
   nzSelector="nz-demo-badge-dynamic"
   nzLink="components-badge-demo-dynamic"
@@ -183,9 +184,9 @@
 	<nz-demo-badge-dynamic demo></nz-demo-badge-dynamic>
 	<div intro ngNonBindable><p>The count will be animated as it changes.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Status"
+  nzVersion=""
   nzId="components-badge-demo-status"
   nzSelector="nz-demo-badge-status"
   nzLink="components-badge-demo-status"
@@ -199,9 +200,9 @@
 	<nz-demo-badge-status demo></nz-demo-badge-status>
 	<div intro ngNonBindable><p>Standalone badge with status.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Colorful Badge"
+  nzVersion=""
   nzId="components-badge-demo-colorful"
   nzSelector="nz-demo-badge-colorful"
   nzLink="components-badge-demo-colorful"
@@ -217,7 +218,6 @@
 And you can always set it to a hex color string for custom color.</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-badge</span> <span class="token attr-name">[nzCount]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>

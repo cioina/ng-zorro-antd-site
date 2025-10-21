@@ -33,15 +33,15 @@ The difference with the `confirm` modal dialog is that it's more lightweight tha
 | `[nzPopconfirmOverlayStyle]`       | Style of the popconfirm card                                        | `object`                                                                                                                                                                          | -             |
 | `[nzPopconfirmBackdrop]`           | whether or not the overlay should attach a backdrop                 | `boolean`                                                                                                                                                                         | `false`       |
 
-| Param                   | Description                                                                                                                                                     | Type                                                                 | Default value | Global Config |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------- | ------------- |
+| Param                   | Description                                                                                                                                                     | Type                                                                 | Default value | Global Config | Version |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------- | ------------- | ------- |
 | `[nzCancelText]`        | Text of the Cancel button (Deprecated, please use nzCancelButtonProps instead)                                                                                  | `string`                                                             | `'Cancel'`    | -             |
 | `[nzOkText]`            | Text of the Confirm button (Deprecated, please use nzOkButtonProps instead)                                                                                     | `string`                                                             | `'Confirm'`   | -             |
 | `[nzOkType]`            | Button `type` of the Confirm button (Deprecated, please use nzOkButtonProps instead)                                                                            | `'primary' \| 'ghost' \| 'dashed' \| 'danger' \| 'default'`          | `'primary'`   | -             |
 | `[nzOkDanger]`          | Danger status of the OK button. <i>Consistent with the `nzDanger` of the `nz-button`.</i> (Deprecated, please use nzOkButtonProps instead)                      | `boolean`                                                            | `false`       | -             |
 | `[nzOkDisabled]`        | prevents a user from interacting with the OK button. <i>Consistent with the `disabled` of the `nz-button`.</i> (Deprecated, please use nzOkButtonProps instead) | `boolean`                                                            | `false`       | -             |
-| `[nzOkButtonProps]`     | config object of the ok button                                                                                                                                  | `NzPopConfirmButtonProps`                                            | `null`        | -             |
-| `[nzCancelButtonProps]` | config object of the cancel button                                                                                                                              | `NzPopConfirmButtonProps`                                            | `null`        | -             |
+| `[nzOkButtonProps]`     | config object of the ok button                                                                                                                                  | `NzPopConfirmButtonProps`                                            | `null`        | -             | 20.0.0  |
+| `[nzCancelButtonProps]` | config object of the cancel button                                                                                                                              | `NzPopConfirmButtonProps`                                            | `null`        | -             | 20.0.0  |
 | `[nzCondition]`         | Whether to directly emit `onConfirm` without showing Popconfirm                                                                                                 | `boolean`                                                            | `false`       | -             |
 | `[nzIcon]`              | Customize icon of confirmation                                                                                                                                  | `string \| TemplateRef<void> \| null`                                | -             | -             |
 | `[nzAutoFocus]`         | Autofocus a button                                                                                                                                              | `null \| 'ok' \| 'cancel'`                                           | `null`        | ✅            |
@@ -54,3 +54,10 @@ Consult [Tooltip's documentation](/components/tooltip/en#api) to find more APIs.
 ## Note
 
 Please ensure that the node of `[nz-popconfirm]` accepts `onMouseEnter`, `onMouseLeave`, `onFocus`, `onClick` events.
+
+## FAQ
+
+### Q: The overlay layer element does not follow the scroll position when scrolling
+
+By default, the overlay layer element uses body as the scroll container. If using another scroll container, add the [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) directive to the custom scroll container element.
+Note: You need to import the `CdkScrollable` directive or `ScrollingModule` module from `@angular/cdk/scrolling`.

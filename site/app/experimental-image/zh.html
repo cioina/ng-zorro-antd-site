@@ -44,6 +44,7 @@
 	<div nz-col [nzSpan]="24">
 		<nz-code-box
   nzTitle="优先加载"
+  nzVersion=""
   nzId="components-experimental-image-demo-preloading"
   nzSelector="nz-demo-experimental-image-preloading"
   nzLink="components-experimental-image-demo-preloading"
@@ -61,9 +62,9 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-image</span> <span class="token attr-name">[nzPriority]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$index &lt;= 8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-image</span><span class="token punctuation">></span></span>
 &#125;
 </code></pre></div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="使用 Src Loader"
+  nzVersion=""
   nzId="components-experimental-image-demo-src-loader"
   nzSelector="nz-demo-experimental-image-src-loader"
   nzLink="components-experimental-image-demo-src-loader"
@@ -93,9 +94,9 @@
   providers<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">provideNzConfig</span><span class="token punctuation">(</span>nzConfig<span class="token punctuation">)</span><span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 </code></pre></div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自动填充 srcset"
+  nzVersion=""
   nzId="components-experimental-image-demo-auto-srcset"
   nzSelector="nz-demo-experimental-image-auto-srcset"
   nzLink="components-experimental-image-demo-auto-srcset"
@@ -110,7 +111,6 @@
 	<div intro ngNonBindable><p>使用 <code>nzAutoSrcset</code> 时要求必须定义图片尺寸(<code>nzWidth</code>、<code>nzHeight</code>)，配合 Loader 为不同的像素密度自动生成 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset" target="_blank" rel="noopener">srcset</a>。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-image"><span>nz-image</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-image'" class="anchor">#</a></h3><table>
 <thead>

@@ -37,6 +37,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Basic Usage"
+  nzVersion=""
   nzId="components-auto-complete-demo-basic"
   nzSelector="nz-demo-auto-complete-basic"
   nzLink="components-auto-complete-demo-basic"
@@ -50,9 +51,9 @@
 	<nz-demo-auto-complete-basic demo></nz-demo-auto-complete-basic>
 	<div intro ngNonBindable><p>Basic Usage, set <code>nzDataSource</code> of <code>nz-autocomplete</code> with dataSource property.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Customized"
+  nzVersion=""
   nzId="components-auto-complete-demo-options"
   nzSelector="nz-demo-auto-complete-options"
   nzLink="components-auto-complete-demo-options"
@@ -66,9 +67,9 @@
 	<nz-demo-auto-complete-options demo></nz-demo-auto-complete-options>
 	<div intro ngNonBindable><p>You could pass <code>nz-auto-option</code> as Content of <code>nz-autocomplete</code>, instead of using nzDataSource`.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Non-case-sensitive AutoComplete"
+  nzVersion=""
   nzId="components-auto-complete-demo-non-case-sensitive"
   nzSelector="nz-demo-auto-complete-non-case-sensitive"
   nzLink="components-auto-complete-demo-non-case-sensitive"
@@ -82,9 +83,9 @@
 	<nz-demo-auto-complete-non-case-sensitive demo></nz-demo-auto-complete-non-case-sensitive>
 	<div intro ngNonBindable><p>A non-case-sensitive AutoComplete</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Lookup-Patterns - Uncertain Category"
+  nzVersion=""
   nzId="components-auto-complete-demo-uncertain-category"
   nzSelector="nz-demo-auto-complete-uncertain-category"
   nzLink="components-auto-complete-demo-uncertain-category"
@@ -98,9 +99,9 @@
 	<nz-demo-auto-complete-uncertain-category demo></nz-demo-auto-complete-uncertain-category>
 	<div intro ngNonBindable><p>Demonstration of <a href="https://ant.design/docs/spec/reaction#Lookup-Patterns" target="_blank" rel="noopener">Lookup Patterns: Uncertain Category</a>.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Variants"
+  nzVersion=""
   nzId="components-auto-complete-demo-variant"
   nzSelector="nz-demo-auto-complete-variant"
   nzLink="components-auto-complete-demo-variant"
@@ -115,11 +116,11 @@
 	<div intro ngNonBindable><p>Variant is supported out of the box by using <code>nz-input</code> and setting <code>nzVariant</code> to <code>outlined</code>, <code>underlined</code>, <code>filled</code> and <code>borderless</code></p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Use option with object type"
+  nzVersion=""
   nzId="components-auto-complete-demo-object-value"
   nzSelector="nz-demo-auto-complete-object-value"
   nzLink="components-auto-complete-demo-object-value"
@@ -133,9 +134,9 @@
 	<nz-demo-auto-complete-object-value demo></nz-demo-auto-complete-object-value>
 	<div intro ngNonBindable><p>Use <code>compareWith</code>(<a href="https://angular.dev/api/forms/SelectControlValueAccessor" target="_blank" rel="noopener">SelectControlValueAccessor</a>) when the <code>nzValue</code> and <code>ngModel</code> type is <code>object</code>.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Customize Input Component"
+  nzVersion=""
   nzId="components-auto-complete-demo-custom"
   nzSelector="nz-demo-auto-complete-custom"
   nzLink="components-auto-complete-demo-custom"
@@ -149,9 +150,9 @@
 	<nz-demo-auto-complete-custom demo></nz-demo-auto-complete-custom>
 	<div intro ngNonBindable><p>Customize Input Component</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Lookup-Patterns - Certain Category"
+  nzVersion=""
   nzId="components-auto-complete-demo-certain-category"
   nzSelector="nz-demo-auto-complete-certain-category"
   nzLink="components-auto-complete-demo-certain-category"
@@ -165,9 +166,9 @@
 	<nz-demo-auto-complete-certain-category demo></nz-demo-auto-complete-certain-category>
 	<div intro ngNonBindable><p>Demonstration of <a href="https://ant.design/docs/spec/reaction#Lookup-Patterns" target="_blank" rel="noopener">Lookup Patterns: Certain Category</a>.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Status"
+  nzVersion=""
   nzId="components-auto-complete-demo-status"
   nzSelector="nz-demo-auto-complete-status"
   nzLink="components-auto-complete-demo-status"
@@ -182,7 +183,6 @@
 	<div intro ngNonBindable><p>Add status to AutoComplete with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token attr-name">[(ngModel)]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>value<span class="token punctuation">"</span></span> <span class="token attr-name">[nzAutocomplete]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>auto<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
@@ -289,4 +289,6 @@
 <td><code>false</code></td>
 </tr>
 </tbody></table>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q_the_overlay_layer_element_does_not_follow_the_scroll_position_when_scrolling"><span>Q: The overlay layer element does not follow the scroll position when scrolling</span><a onclick="window.location.hash = 'q_the_overlay_layer_element_does_not_follow_the_scroll_position_when_scrolling'" class="anchor">#</a></h3><p>By default, the overlay layer element uses body as the scroll container. If using another scroll container, add the <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> directive to the custom scroll container element.
+Note: You need to import the <code>CdkScrollable</code> directive or <code>ScrollingModule</code> module from <code>&#64;angular/cdk/scrolling</code>.</p>
 </section></article>

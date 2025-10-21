@@ -27,7 +27,7 @@
   
   <section class="markdown" ngNonBindable>
     <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>When requiring users to interact with the application without jumping to a new page to interrupt the user&#39;s workflow,
-you can use <code>Modal</code> to create a new floating layer over the current page for user-getting feedback or information
+you can use <code>Modal</code> to create a new overlay layer over the current page for user-getting feedback or information
 purposes. Additionally, if you need to show a simple confirmation dialog, you can use <code>NzModalService.confirm()</code> and so
 on.</p>
 <p>It is recommended to use the <code>Component</code> way to pop up the Modal so that the component logic of the popup layer can be
@@ -46,6 +46,7 @@ Modal&#39;s component instance by injecting <code>NzModalRef</code> to control t
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Basic"
+  nzVersion=""
   nzId="components-modal-demo-basic"
   nzSelector="nz-demo-modal-basic"
   nzLink="components-modal-demo-basic"
@@ -59,9 +60,9 @@ Modal&#39;s component instance by injecting <code>NzModalRef</code> to control t
 	<nz-demo-modal-basic demo></nz-demo-modal-basic>
 	<div intro ngNonBindable><p>Basic modal.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Customized Parts"
+  nzVersion=""
   nzId="components-modal-demo-footer"
   nzSelector="nz-demo-modal-footer"
   nzLink="components-modal-demo-footer"
@@ -78,9 +79,9 @@ the dialog will change to loading state after clicking submit button, when the l
 the modal dialog will be closed.</p>
 <p>You could set <code>nzFooter</code> to <code>null</code> if you don&#39;t need default footer buttons.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Confirmation modal dialog"
+  nzVersion=""
   nzId="components-modal-demo-confirm"
   nzSelector="nz-demo-modal-confirm"
   nzLink="components-modal-demo-confirm"
@@ -94,9 +95,9 @@ the modal dialog will be closed.</p>
 	<nz-demo-modal-confirm demo></nz-demo-modal-confirm>
 	<div intro ngNonBindable><p>To use <code>NzModalService.confirm()</code> to popup a confirmation modal dialog.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Information modal dialog"
+  nzVersion=""
   nzId="components-modal-demo-info"
   nzSelector="nz-demo-modal-info"
   nzLink="components-modal-demo-info"
@@ -110,9 +111,9 @@ the modal dialog will be closed.</p>
 	<nz-demo-modal-info demo></nz-demo-modal-info>
 	<div intro ngNonBindable><p>In the various types of information modal dialog, only one button to close dialog is provided.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Manual to destroy"
+  nzVersion=""
   nzId="components-modal-demo-manual"
   nzSelector="nz-demo-modal-manual"
   nzLink="components-modal-demo-manual"
@@ -126,9 +127,9 @@ the modal dialog will be closed.</p>
 	<nz-demo-modal-manual demo></nz-demo-modal-manual>
 	<div intro ngNonBindable><p>Manually destroying a modal.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Modal's service"
+  nzVersion=""
   nzId="components-modal-demo-service"
   nzSelector="nz-demo-modal-service"
   nzLink="components-modal-demo-service"
@@ -144,11 +145,11 @@ the modal dialog will be closed.</p>
 <p>The template context is <code> &#123; $implicit: nzData, modalRef: NzModalRef &#125;</code> when the content or footer is templates.</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Asynchronously close"
+  nzVersion=""
   nzId="components-modal-demo-async"
   nzSelector="nz-demo-modal-async"
   nzLink="components-modal-demo-async"
@@ -163,9 +164,9 @@ the modal dialog will be closed.</p>
 	<div intro ngNonBindable><p>Asynchronously close a modal dialog when a user clicked OK button, for example,
 you can use this pattern when you submit a form.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Customized Footer"
+  nzVersion=""
   nzId="components-modal-demo-footer2"
   nzSelector="nz-demo-modal-footer2"
   nzLink="components-modal-demo-footer2"
@@ -179,9 +180,9 @@ you can use this pattern when you submit a form.</p>
 	<nz-demo-modal-footer2 demo></nz-demo-modal-footer2>
 	<div intro ngNonBindable><p>use <code>nzModalFooter</code> directive to customized footer button bar.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Confirmation modal dialog"
+  nzVersion=""
   nzId="components-modal-demo-confirm-promise"
   nzSelector="nz-demo-modal-confirm-promise"
   nzLink="components-modal-demo-confirm-promise"
@@ -196,9 +197,9 @@ you can use this pattern when you submit a form.</p>
 	<div intro ngNonBindable><p>To use <code>NzModalService.confirm()</code> to popup confirmation modal dialog. Let NzOnCancel/NzOnOk function return a promise object to
 delay closing the dialog.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Internationalization"
+  nzVersion=""
   nzId="components-modal-demo-locale"
   nzSelector="nz-demo-modal-locale"
   nzLink="components-modal-demo-locale"
@@ -212,9 +213,9 @@ delay closing the dialog.</p>
 	<nz-demo-modal-locale demo></nz-demo-modal-locale>
 	<div intro ngNonBindable><p>To customize the text of the buttons, you need to set <code>nzOkText</code> and <code>nzCancelText</code> props.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="To customize the position of modal"
+  nzVersion=""
   nzId="components-modal-demo-position"
   nzSelector="nz-demo-modal-position"
   nzLink="components-modal-demo-position"
@@ -231,9 +232,9 @@ delay closing the dialog.</p>
 <p><strong>NOTE</strong> Due to Angular&#39;s style isolation, you may need to override the NgZorro style with <code>:: ng-deep</code> within a custom style if <code>encapsulation: ViewEncapsulation.None</code> is not included in the Component</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Draggable"
+  nzVersion=""
   nzId="components-modal-demo-draggable"
   nzSelector="nz-demo-modal-draggable"
   nzLink="components-modal-demo-draggable"
@@ -248,7 +249,6 @@ delay closing the dialog.</p>
 	<div intro ngNonBindable><p>Draggable modal.</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmodalservice"><span>NzModalService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmodalservice'" class="anchor">#</a></h3><p>The dialog is currently divided into 2 modes, <code>normal mode</code> and <code>confirm box mode</code> (for instance, the <code>Confirm</code> dialog,
@@ -413,7 +413,7 @@ different.</p>
 </tr>
 <tr>
 <td><code>nzStyle</code></td>
-<td>Style of floating layer, typically used at least for adjusting the position.</td>
+<td>Style of overlay layer, typically used at least for adjusting the position.</td>
 <td><code>object</code></td>
 <td>-</td>
 <td></td>

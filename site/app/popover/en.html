@@ -36,6 +36,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Basic"
+  nzVersion=""
   nzId="components-popover-demo-basic"
   nzSelector="nz-demo-popover-basic"
   nzLink="components-popover-demo-basic"
@@ -49,9 +50,9 @@
 	<nz-demo-popover-basic demo></nz-demo-popover-basic>
 	<div intro ngNonBindable><p>The most basic example. The size of the floating layer depends on the contents region.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Controlling the close of the dialog"
+  nzVersion=""
   nzId="components-popover-demo-control"
   nzSelector="nz-demo-popover-control"
   nzLink="components-popover-demo-control"
@@ -65,9 +66,9 @@
 	<nz-demo-popover-control demo></nz-demo-popover-control>
 	<div intro ngNonBindable><p>Use <code>nzPopoverVisible</code> prop to control the display of the card.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Template"
+  nzVersion=""
   nzId="components-popover-demo-template"
   nzSelector="nz-demo-popover-template"
   nzLink="components-popover-demo-template"
@@ -81,9 +82,9 @@
 	<nz-demo-popover-template demo></nz-demo-popover-template>
 	<div intro ngNonBindable><p><code>nzPopoverContent</code> and <code>nzPopoverTitle</code> accept the type of <code>TemplateRef&lt;void&gt;</code></p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Disable closing popover through mask"
+  nzVersion=""
   nzId="components-popover-demo-overlay"
   nzSelector="nz-demo-popover-overlay"
   nzLink="components-popover-demo-overlay"
@@ -98,11 +99,11 @@
 	<div intro ngNonBindable><p>Set <code>nzPopoverOverlayClickable</code> to be <code>false</code> to disable closing popover by clicking the mask when <code>nzPopoverTrigger</code> is <code>&#39;click&#39;</code>.</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Placement"
+  nzVersion=""
   nzId="components-popover-demo-placement"
   nzSelector="nz-demo-popover-placement"
   nzLink="components-popover-demo-placement"
@@ -116,9 +117,9 @@
 	<nz-demo-popover-placement demo></nz-demo-popover-placement>
 	<div intro ngNonBindable><p>There are 12 <code>placement</code> options available.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Arrow pointing at the center"
+  nzVersion=""
   nzId="components-popover-demo-arrow-point-at-center"
   nzSelector="nz-demo-popover-arrow-point-at-center"
   nzLink="components-popover-demo-arrow-point-at-center"
@@ -132,9 +133,9 @@
 	<nz-demo-popover-arrow-point-at-center demo></nz-demo-popover-arrow-point-at-center>
 	<div intro ngNonBindable><p>By specifying <code>nzPopoverPlacement</code> prop, the arrow can be point to the center of the target element.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Three ways to trigger"
+  nzVersion=""
   nzId="components-popover-demo-trigger-type"
   nzSelector="nz-demo-popover-trigger-type"
   nzLink="components-popover-demo-trigger-type"
@@ -149,7 +150,6 @@
 	<div intro ngNonBindable><p>Mouse to click, focus and move in.</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-popover"><span>[nz-popover]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-popover'" class="anchor">#</a></h3><table>
@@ -255,4 +255,6 @@
 <p>Consult <a href="/components/tooltip/en#api">Tooltip's documentation</a> to find more APIs.
 | <code>[nzPopoverBackdrop]</code> | whether or not the overlay should attach a backdrop | <code>boolean</code> | <code>false</code> |</p>
 <h2 id="note"><span>Note</span><a onclick="window.location.hash = 'note'" class="anchor">#</a></h2><p>Please ensure that the node of <code>[nz-popover]</code> accepts <code>onMouseEnter</code>, <code>onMouseLeave</code>, <code>onFocus</code>, <code>onClick</code> events.</p>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q_the_overlay_layer_element_does_not_follow_the_scroll_position_when_scrolling"><span>Q: The overlay layer element does not follow the scroll position when scrolling</span><a onclick="window.location.hash = 'q_the_overlay_layer_element_does_not_follow_the_scroll_position_when_scrolling'" class="anchor">#</a></h3><p>By default, the overlay layer element uses body as the scroll container. If using another scroll container, add the <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> directive to the custom scroll container element.
+Note: You need to import the <code>CdkScrollable</code> directive or <code>ScrollingModule</code> module from <code>&#64;angular/cdk/scrolling</code>.</p>
 </section></article>

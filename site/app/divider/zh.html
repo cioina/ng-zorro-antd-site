@@ -37,6 +37,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="水平分割线"
+  nzVersion=""
   nzId="components-divider-demo-horizontal"
   nzSelector="nz-demo-divider-horizontal"
   nzLink="components-divider-demo-horizontal"
@@ -50,9 +51,9 @@
 	<nz-demo-divider-horizontal demo></nz-demo-divider-horizontal>
 	<div intro ngNonBindable><p>默认为水平分割线，可在中间加入文字。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="垂直分割线"
+  nzVersion=""
   nzId="components-divider-demo-vertical"
   nzSelector="nz-demo-divider-vertical"
   nzLink="components-divider-demo-vertical"
@@ -66,9 +67,9 @@
 	<nz-demo-divider-vertical demo></nz-demo-divider-vertical>
 	<div intro ngNonBindable><p>使用 <code>nzType=&quot;vertical&quot;</code> 设置为行内的垂直分割线。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="变体"
+  nzVersion=""
   nzId="components-divider-demo-variant"
   nzSelector="nz-demo-divider-variant"
   nzLink="components-divider-demo-variant"
@@ -83,11 +84,11 @@
 	<div intro ngNonBindable><p>分隔线默认为 <code>solid</code>（实线）变体。您可以将其更改为 <code>dashed</code>（虚线）或 <code>dotted</code>（点线）。</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="标题位置"
+  nzVersion=""
   nzId="components-divider-demo-orientation"
   nzSelector="nz-demo-divider-orientation"
   nzLink="components-divider-demo-orientation"
@@ -101,9 +102,9 @@
 	<nz-demo-divider-orientation demo></nz-demo-divider-orientation>
 	<div intro ngNonBindable><p>修改分割线标题的位置。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="分割文字使用正文样式"
+  nzVersion=""
   nzId="components-divider-demo-plain"
   nzSelector="nz-demo-divider-plain"
   nzLink="components-divider-demo-plain"
@@ -117,9 +118,9 @@
 	<nz-demo-divider-plain demo></nz-demo-divider-plain>
 	<div intro ngNonBindable><p>使用 <code>nzPlain</code> 可以设置为更轻量的分割文字样式。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="分割线大小"
+  nzVersion="20.2.0"
   nzId="components-divider-demo-size"
   nzSelector="nz-demo-divider-size"
   nzLink="components-divider-demo-size"
@@ -134,7 +135,6 @@
 	<div intro ngNonBindable><p>通过 <code>nzSize</code> 设置分割线的大小。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-divider"><span>nz-divider</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-divider'" class="anchor">#</a></h3><table>
@@ -144,6 +144,7 @@
 <th>说明</th>
 <th>类型</th>
 <th>默认值</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -151,42 +152,49 @@
 <td>是否虚线</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzType]</code></td>
 <td>水平还是垂直类型</td>
 <td><code>&#39;horizontal&#39; | &#39;vertical&#39;</code></td>
 <td><code>&#39;horizontal&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzText]</code></td>
 <td>中间文字</td>
 <td><code>string | TemplateRef&lt;void&gt;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzPlain]</code></td>
 <td>文字是否显示为普通正文样式</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOrientation]</code></td>
 <td>中间文字方向</td>
 <td><code>&#39;center&#39; | &#39;left&#39; | &#39;right&#39;</code></td>
 <td><code>&#39;center&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzVariant]</code></td>
 <td>分割线是虚线、点线还是实线</td>
 <td><code>&#39;dashed&#39; | &#39;dotted&#39; | &#39;solid&#39;</code></td>
 <td><code>&#39;solid&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzSize]</code></td>
 <td>分割线大小</td>
 <td><code>&#39;small&#39; | &#39;middle&#39; | &#39;large&#39;</code></td>
 <td>-</td>
+<td>20.2.0</td>
 </tr>
 </tbody></table>
 </section></article>

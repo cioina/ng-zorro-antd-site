@@ -86,6 +86,7 @@
 	<div nz-col [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本用法"
+  nzVersion=""
   nzId="components-table-demo-basic"
   nzSelector="nz-demo-table-basic"
   nzLink="components-table-demo-basic"
@@ -99,9 +100,9 @@
 	<nz-demo-table-basic demo></nz-demo-table-basic>
 	<div intro ngNonBindable><p>简单的表格，最后一列是各种操作。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="选择和操作"
+  nzVersion=""
   nzId="components-table-demo-row-selection-and-operation"
   nzSelector="nz-demo-table-row-selection-and-operation"
   nzLink="components-table-demo-row-selection-and-operation"
@@ -115,9 +116,9 @@
 	<nz-demo-table-row-selection-and-operation demo></nz-demo-table-row-selection-and-operation>
 	<div intro ngNonBindable><p>第一列是联动的选择框，增加 <code>[nzChecked]</code> 后，<code>th</code> 获得和 <code>nz-checkbox</code> 一样的功能，选择后进行操作，完成后清空选择，请注意：数据逻辑需要自行控制。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义选择项"
+  nzVersion=""
   nzId="components-table-demo-row-selection-custom"
   nzSelector="nz-demo-table-row-selection-custom"
   nzLink="components-table-demo-row-selection-custom"
@@ -131,9 +132,9 @@
 	<nz-demo-table-row-selection-custom demo></nz-demo-table-row-selection-custom>
 	<div intro ngNonBindable><p>通过 <code>nzSelections</code> 自定义选择项.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="筛选和排序"
+  nzVersion=""
   nzId="components-table-demo-sort-filter"
   nzSelector="nz-demo-table-sort-filter"
   nzLink="components-table-demo-sort-filter"
@@ -148,9 +149,9 @@
 	<div intro ngNonBindable><p>筛选：对某一列数据进行筛选，通过指定 <code>[nzFilters]</code> 属性来指定筛选菜单，<code>[nzFilterFn]</code> 指定筛选函数，<code>[nzFilterMultiple]</code> 用于指定多选和单选，通过设置 <code>[nzFilters]</code> 中的 <code>&#123; byDefault: true &#125;</code> 属性来默认启用一个筛选器。</p>
 <p>排序：对某一列数据进行排序，通过指定 <code>[nzSortOrder]</code> 来指定默认排序顺序，<code>[nzSortFn]</code> 指定排序函数 <code>[nzSortDirections]</code> 改变每列可用的排序方式。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="多列排序"
+  nzVersion=""
   nzId="components-table-demo-multiple-sorter"
   nzSelector="nz-demo-table-multiple-sorter"
   nzLink="components-table-demo-multiple-sorter"
@@ -164,9 +165,9 @@
 	<nz-demo-table-multiple-sorter demo></nz-demo-table-multiple-sorter>
 	<div intro ngNonBindable><p>使用 <code>[nzSortPriority]</code> 字段以配置多列排序优先级。通过 <code>[nzSortFn]</code> 配置排序逻辑。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可控的筛选和排序"
+  nzVersion=""
   nzId="components-table-demo-reset-filter"
   nzSelector="nz-demo-table-reset-filter"
   nzLink="components-table-demo-reset-filter"
@@ -180,9 +181,9 @@
 	<nz-demo-table-reset-filter demo></nz-demo-table-reset-filter>
 	<div intro ngNonBindable><p>修改 <code>[nzSortOrder]</code> 和 <code>[nzFilters]</code> 来指定当前列的排序与筛选状态。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义筛选菜单"
+  nzVersion=""
   nzId="components-table-demo-custom-filter-panel"
   nzSelector="nz-demo-table-custom-filter-panel"
   nzLink="components-table-demo-custom-filter-panel"
@@ -196,9 +197,9 @@
 	<nz-demo-table-custom-filter-panel demo></nz-demo-table-custom-filter-panel>
 	<div intro ngNonBindable><p>通过 <code>&lt;nz-filter-trigger&gt;</code> 组件定义自定义的列筛选功能，并实现一个搜索列的示例。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="远程加载数据"
+  nzVersion=""
   nzId="components-table-demo-ajax"
   nzSelector="nz-demo-table-ajax"
   nzLink="components-table-demo-ajax"
@@ -225,9 +226,9 @@
 <span class="token punctuation">&#125;</span>
 </code></pre><p><strong>注意，此示例使用 <a href="https://randomuser.me" target="_blank" rel="noopener">模拟接口</a>，展示数据可能不准确，请打开网络面板查看请求。</strong></p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="紧凑型"
+  nzVersion=""
   nzId="components-table-demo-size"
   nzSelector="nz-demo-table-size"
   nzLink="components-table-demo-size"
@@ -241,9 +242,9 @@
 	<nz-demo-table-size demo></nz-demo-table-size>
 	<div intro ngNonBindable><p>两种紧凑型的列表，小型列表只用于对话框内。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="带边框"
+  nzVersion=""
   nzId="components-table-demo-bordered"
   nzSelector="nz-demo-table-bordered"
   nzLink="components-table-demo-bordered"
@@ -257,9 +258,9 @@
 	<nz-demo-table-bordered demo></nz-demo-table-bordered>
 	<div intro ngNonBindable><p>添加表格边框线，页头和页脚。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可展开"
+  nzVersion=""
   nzId="components-table-demo-expand"
   nzSelector="nz-demo-table-expand"
   nzLink="components-table-demo-expand"
@@ -273,9 +274,9 @@
 	<nz-demo-table-expand demo></nz-demo-table-expand>
 	<div intro ngNonBindable><p>当表格内容较多不能一次性完全展示时，可以通过 <code>td</code> 上的 <code>nzExpand</code> 属性展开。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义展开 icon"
+  nzVersion=""
   nzId="components-table-demo-expand-icon"
   nzSelector="nz-demo-table-expand-icon"
   nzLink="components-table-demo-expand-icon"
@@ -289,9 +290,9 @@
 	<nz-demo-table-expand-icon demo></nz-demo-table-expand-icon>
 	<div intro ngNonBindable><p>当使用 <code>nzExpand</code> 属性时，添加 <code>nzExpandIcon</code> 自定义展开图标。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="表格行/列合并"
+  nzVersion=""
   nzId="components-table-demo-colspan-rowspan"
   nzSelector="nz-demo-table-colspan-rowspan"
   nzLink="components-table-demo-colspan-rowspan"
@@ -305,9 +306,9 @@
 	<nz-demo-table-colspan-rowspan demo></nz-demo-table-colspan-rowspan>
 	<div intro ngNonBindable><p>像 <a href="https://www.w3.org/TR/html401/struct/tables.html" target="_blank" rel="noopener"><code>W3C标准 &lt;table&gt;</code></a> 一样，使用 <code>colspan</code> 和 <code>rowspan</code> 合并行/列。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="树形数据展示"
+  nzVersion=""
   nzId="components-table-demo-expand-children"
   nzSelector="nz-demo-table-expand-children"
   nzLink="components-table-demo-expand-children"
@@ -321,9 +322,9 @@
 	<nz-demo-table-expand-children demo></nz-demo-table-expand-children>
 	<div intro ngNonBindable><p>表格支持树形数据的展示，可以通过设置 <code>nzIndentSize</code> 以控制每一层的缩进宽度，本例子中提供了树与数组之间的转换函数，实际业务中请根据需求修改。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="固定表头"
+  nzVersion=""
   nzId="components-table-demo-fixed-header"
   nzSelector="nz-demo-table-fixed-header"
   nzLink="components-table-demo-fixed-header"
@@ -337,9 +338,9 @@
 	<nz-demo-table-fixed-header demo></nz-demo-table-fixed-header>
 	<div intro ngNonBindable><p>指定 <code>[nzScroll]</code> 的 <code>y</code> 数值 方便一页内展示大量数据，每一列的宽度可以由 <code>[nzWidth]</code> 指定。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="固定列"
+  nzVersion=""
   nzId="components-table-demo-fixed-columns"
   nzSelector="nz-demo-table-fixed-columns"
   nzLink="components-table-demo-fixed-columns"
@@ -358,9 +359,9 @@
 注意：固定列通过 sticky 实现，IE 11 会降级成横向滚动。</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="固定头和列"
+  nzVersion=""
   nzId="components-table-demo-fixed-columns-header"
   nzSelector="nz-demo-table-fixed-columns-header"
   nzLink="components-table-demo-fixed-columns-header"
@@ -379,9 +380,9 @@
 注意：固定列通过 sticky 实现，IE 11 会降级成横向滚动。</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="表头分组"
+  nzVersion=""
   nzId="components-table-demo-grouping-columns"
   nzSelector="nz-demo-table-grouping-columns"
   nzLink="components-table-demo-grouping-columns"
@@ -395,9 +396,9 @@
 	<nz-demo-table-grouping-columns demo></nz-demo-table-grouping-columns>
 	<div intro ngNonBindable><p>固定列与分组表头联合使用。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可编辑单元格"
+  nzVersion=""
   nzId="components-table-demo-edit-cell"
   nzSelector="nz-demo-table-edit-cell"
   nzLink="components-table-demo-edit-cell"
@@ -417,9 +418,9 @@
 <p>开发者可以参照该例子根据自己需求自由定制表格的编辑功能。</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可编辑行"
+  nzVersion=""
   nzId="components-table-demo-edit-row"
   nzSelector="nz-demo-table-edit-row"
   nzLink="components-table-demo-edit-row"
@@ -439,9 +440,9 @@
 <p>开发者可以参照该例子根据自己需求自由定制表格的编辑功能。</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="嵌套子表格"
+  nzVersion=""
   nzId="components-table-demo-nested-table"
   nzSelector="nz-demo-table-nested-table"
   nzLink="components-table-demo-nested-table"
@@ -455,9 +456,9 @@
 	<nz-demo-table-nested-table demo></nz-demo-table-nested-table>
 	<div intro ngNonBindable><p>展示每行数据更详细的信息。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="虚拟滚动"
+  nzVersion=""
   nzId="components-table-demo-virtual"
   nzSelector="nz-demo-table-virtual"
   nzLink="components-table-demo-virtual"
@@ -471,9 +472,9 @@
 	<nz-demo-table-virtual demo></nz-demo-table-virtual>
 	<div intro ngNonBindable><p>虚拟滚动，结合 <a href="https://material.angular.io/cdk/scrolling/overview" target="_blank" rel="noopener">cdk scrolling</a> 的虚拟滚动，用于巨量数据加载。可以通过获得 <code>cdkVirtualScrollViewport</code> 进行进一步操作，见本示例及 <a href="https://material.angular.io/cdk/scrolling/api#CdkVirtualScrollViewport" target="_blank" rel="noopener">API</a>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="拖拽排序"
+  nzVersion=""
   nzId="components-table-demo-drag-sorting"
   nzSelector="nz-demo-table-drag-sorting"
   nzLink="components-table-demo-drag-sorting"
@@ -490,9 +491,9 @@
 <p>注意：需要手动导入 <code>import &#123; DragDropModule &#125; from &#39;&#64;angular/cdk/drag-drop&#39;</code>;</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="模板用法"
+  nzVersion=""
   nzId="components-table-demo-template"
   nzSelector="nz-demo-table-template"
   nzLink="components-table-demo-template"
@@ -506,9 +507,9 @@
 	<nz-demo-table-template demo></nz-demo-table-template>
 	<div intro ngNonBindable><p>模板模式，显示内容仅由模板内容控制，不再需要向 <code>nzData</code> 传入数据，完全像普通 <code>table</code> 一样使用，使用 ant-design 的样式。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="折行显示"
+  nzVersion=""
   nzId="components-table-demo-break-word"
   nzSelector="nz-demo-table-break-word"
   nzLink="components-table-demo-break-word"
@@ -522,9 +523,9 @@
 	<nz-demo-table-break-word demo></nz-demo-table-break-word>
 	<div intro ngNonBindable><p>当有连续超长字符串时，可以使用 <code>nzBreakWord</code> 来折行显示</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="单元格自动省略"
+  nzVersion=""
   nzId="components-table-demo-ellipsis"
   nzSelector="nz-demo-table-ellipsis"
   nzLink="components-table-demo-ellipsis"
@@ -541,9 +542,9 @@
 <p>列头缩略暂不支持和排序筛选一起使用。</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="总结栏"
+  nzVersion=""
   nzId="components-table-demo-summary"
   nzSelector="nz-demo-table-summary"
   nzLink="components-table-demo-summary"
@@ -557,9 +558,9 @@
 	<nz-demo-table-summary demo></nz-demo-table-summary>
 	<div intro ngNonBindable><p>通过 <code>nzSummary</code> 设置总结栏。可以通过配置 <code>nzFixed</code> 属性使其固定。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="动态控制表格属性"
+  nzVersion=""
   nzId="components-table-demo-dynamic-settings"
   nzSelector="nz-demo-table-dynamic-settings"
   nzLink="components-table-demo-dynamic-settings"
@@ -573,9 +574,9 @@
 	<nz-demo-table-dynamic-settings demo></nz-demo-table-dynamic-settings>
 	<div intro ngNonBindable><p>选择不同配置组合查看效果。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义列"
+  nzVersion=""
   nzId="components-table-demo-custom-column"
   nzSelector="nz-demo-table-custom-column"
   nzLink="components-table-demo-custom-column"
@@ -590,7 +591,6 @@
 	<div intro ngNonBindable><p>控制表格中列的展示与排序</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-table"><span>nz-table</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-table'" class="anchor">#</a></h3><table>
 <thead>

@@ -43,6 +43,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本"
+  nzVersion=""
   nzId="components-modal-demo-basic"
   nzSelector="nz-demo-modal-basic"
   nzLink="components-modal-demo-basic"
@@ -56,9 +57,9 @@
 	<nz-demo-modal-basic demo></nz-demo-modal-basic>
 	<div intro ngNonBindable><p>第一个对话框。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义组成部分"
+  nzVersion=""
   nzId="components-modal-demo-footer"
   nzSelector="nz-demo-modal-footer"
   nzLink="components-modal-demo-footer"
@@ -73,9 +74,9 @@
 	<div intro ngNonBindable><p>更复杂的例子，自定义了页脚的按钮，点击提交后进入 loading 状态，完成后关闭。</p>
 <p>不需要默认确定取消按钮时，你可以把 <code>nzFooter</code> 设为 <code>null</code>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="确认对话框"
+  nzVersion=""
   nzId="components-modal-demo-confirm"
   nzSelector="nz-demo-modal-confirm"
   nzLink="components-modal-demo-confirm"
@@ -89,9 +90,9 @@
 	<nz-demo-modal-confirm demo></nz-demo-modal-confirm>
 	<div intro ngNonBindable><p>使用 <code>NzModalService.confirm()</code> 可以快捷地弹出确认框。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="信息提示"
+  nzVersion=""
   nzId="components-modal-demo-info"
   nzSelector="nz-demo-modal-info"
   nzLink="components-modal-demo-info"
@@ -105,9 +106,9 @@
 	<nz-demo-modal-info demo></nz-demo-modal-info>
 	<div intro ngNonBindable><p>各种类型的信息提示，只提供一个按钮用于关闭。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="手动移除"
+  nzVersion=""
   nzId="components-modal-demo-manual"
   nzSelector="nz-demo-modal-manual"
   nzLink="components-modal-demo-manual"
@@ -121,9 +122,9 @@
 	<nz-demo-modal-manual demo></nz-demo-modal-manual>
 	<div intro ngNonBindable><p>手动关闭modal。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="服务方式创建"
+  nzVersion=""
   nzId="components-modal-demo-service"
   nzSelector="nz-demo-modal-service"
   nzLink="components-modal-demo-service"
@@ -139,11 +140,11 @@
 <p>使用模版作为内容或页脚时的上下文为 <code> &#123; $implicit: nzData, modalRef: NzModalRef &#125;</code></p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="异步关闭"
+  nzVersion=""
   nzId="components-modal-demo-async"
   nzSelector="nz-demo-modal-async"
   nzLink="components-modal-demo-async"
@@ -157,9 +158,9 @@
 	<nz-demo-modal-async demo></nz-demo-modal-async>
 	<div intro ngNonBindable><p>点击确定后异步关闭对话框，例如提交表单。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义页脚"
+  nzVersion=""
   nzId="components-modal-demo-footer2"
   nzSelector="nz-demo-modal-footer2"
   nzLink="components-modal-demo-footer2"
@@ -173,9 +174,9 @@
 	<nz-demo-modal-footer2 demo></nz-demo-modal-footer2>
 	<div intro ngNonBindable><p>使用 <code>nzModalFooter</code> 指令自定义了页脚的按钮。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="确认对话框"
+  nzVersion=""
   nzId="components-modal-demo-confirm-promise"
   nzSelector="nz-demo-modal-confirm-promise"
   nzLink="components-modal-demo-confirm-promise"
@@ -189,9 +190,9 @@
 	<nz-demo-modal-confirm-promise demo></nz-demo-modal-confirm-promise>
 	<div intro ngNonBindable><p>使用 <code>NzModalService.confirm()</code> 可以快捷地弹出确认框。NzOnCancel/NzOnOk 返回 promise 可以延迟关闭</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="国际化"
+  nzVersion=""
   nzId="components-modal-demo-locale"
   nzSelector="nz-demo-modal-locale"
   nzLink="components-modal-demo-locale"
@@ -205,9 +206,9 @@
 	<nz-demo-modal-locale demo></nz-demo-modal-locale>
 	<div intro ngNonBindable><p>设置 <code>nzOkText</code> 与 <code>nzCancelText</code> 以自定义按钮文字。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义位置"
+  nzVersion=""
   nzId="components-modal-demo-position"
   nzSelector="nz-demo-modal-position"
   nzLink="components-modal-demo-position"
@@ -224,9 +225,9 @@
 <p><strong>注意</strong> 由于Angular的样式隔离，若在Component中没有加入<code>encapsulation: ViewEncapsulation.None</code>，则您可能需要在自定义样式内采用<code>::ng-deep</code>来覆盖NgZorro的样式</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可拖拽"
+  nzVersion=""
   nzId="components-modal-demo-draggable"
   nzSelector="nz-demo-modal-draggable"
   nzLink="components-modal-demo-draggable"
@@ -241,7 +242,6 @@
 	<div intro ngNonBindable><p>可拖拽的对话框。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nzmodalservice"><span>NzModalService</span><label class="api-type-label service">service</label><a onclick="window.location.hash = 'nzmodalservice'" class="anchor">#</a></h3><p>对话框当前分为 2 种模式，<code>普通模式</code> 和 <code>确认框模式</code>（即<code>Confirm</code>对话框，通过调用<code>confirm/info/success/error/warning</code>弹出），两种模式对 API 的支持程度稍有不同。</p>

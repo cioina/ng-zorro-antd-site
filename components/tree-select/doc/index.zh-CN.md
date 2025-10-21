@@ -15,8 +15,8 @@ description: 树型选择控件。
 
 ### nz-tree-select
 
-| 参数                           | 说明                                                                                                                 | 类型                                                       | 默认值                             | 全局配置 |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- | -------- |
+| 参数                           | 说明                                                                                                                 | 类型                                                       | 默认值                             | 全局配置 | 版本   |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- | -------- | ------ |
 | `[nzId]`                       | 组件内部 input 的 id 值                                                                                              | `string`                                                   | -                                  |
 | `[nzAllowClear]`               | 显示清除按钮                                                                                                         | `boolean`                                                  | `false`                            |
 | `[nzPlaceHolder]`              | 选择框默认文字                                                                                                       | `string`                                                   | -                                  |
@@ -46,7 +46,7 @@ description: 树型选择控件。
 | `[nzMaxTagCount]`              | 最多显示多少个 tag                                                                                                   | `number`                                                   | -                                  |
 | `[nzMaxTagPlaceholder]`        | 隐藏 tag 时显示的内容                                                                                                | `TemplateRef<{ $implicit: NzTreeNode[] }>`                 | -                                  |
 | `[nzTreeTemplate]`             | 自定义节点                                                                                                           | `TemplateRef<{ $implicit: NzTreeNode }>`                   | -                                  |
-| `[nzVariant]`                  | 形态变体                                                                                                             | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`   | `'outlined'`                       | ✅       |
+| `[nzVariant]`                  | 形态变体                                                                                                             | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`   | `'outlined'`                       | ✅       | 20.0.0 |
 | `[nzVirtualHeight]`            | 虚拟滚动的总高度                                                                                                     | `string`                                                   | `-`                                |
 | `[nzVirtualItemSize]`          | 虚拟滚动时每一列的高度，与 [cdk itemSize](https://material.angular.io/cdk/scrolling/api) 相同                        | `number`                                                   | `28`                               |
 | `[nzVirtualMaxBufferPx]`       | 缓冲区最大像素高度，与 [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api) 相同                         | `number`                                                   | `500`                              |
@@ -65,3 +65,10 @@ description: 树型选择控件。
 | `getHalfCheckedNodeList` | 获取组件半选状态节点               | `NzTreeNode[]` |
 | `getExpandedNodeList`    | 获取组件展开状态节点               | `NzTreeNode[]` |
 | `getMatchedNodeList`     | 获取组搜索匹配到的节点             | `NzTreeNode[]` |
+
+## FAQ
+
+### Q：滚动时浮层元素没有跟随滚动位置
+
+默认情况下，浮层元素使用 `body` 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) 指令。
+注意：您需要从 `@angular/cdk/scrolling` 导入 `CdkScrollable` 指令或 `ScrollingModule` 模块。

@@ -15,8 +15,8 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
 
 ### nz-tree-select
 
-| Property                       | Description                                                                                                                                           | Type                                                       | Default                            | Global Config |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- | ------------- |
+| Property                       | Description                                                                                                                                           | Type                                                       | Default                            | Global Config | Version |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------- | ------------- | ------- |
 | `[nzId]`                       | input id attribute inside the component                                                                                                               | `string`                                                   | -                                  |
 | `[nzAllowClear]`               | Whether allow clear                                                                                                                                   | `boolean`                                                  | `false`                            |
 | `[nzPlaceHolder]`              | Placeholder of the select input                                                                                                                       | `string`                                                   | -                                  |
@@ -46,7 +46,7 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
 | `[nzMaxTagCount]`              | Max tag count to show                                                                                                                                 | number                                                     | -                                  |
 | `[nzMaxTagPlaceholder]`        | Placeholder for not showing tags                                                                                                                      | TemplateRef<{ $implicit: NzTreeNode[] }>                   | -                                  |
 | `[nzTreeTemplate]`             | Custom Nodes                                                                                                                                          | `TemplateRef<{ $implicit: NzTreeNode }>`                   | -                                  |
-| `[nzVariant]`                  | Variants of TreeSelect                                                                                                                                | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`   | `'outlined'`                       | ✅            |
+| `[nzVariant]`                  | Variants of TreeSelect                                                                                                                                | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`   | `'outlined'`                       | ✅            | 20.0.0  |
 | `[nzVirtualHeight]`            | The height of virtual scroll                                                                                                                          | `string`                                                   | `-`                                |
 | `[nzVirtualItemSize]`          | The size of the items in the list, same as [cdk itemSize](https://material.angular.io/cdk/scrolling/api)                                              | `number`                                                   | `28`                               |
 | `[nzVirtualMaxBufferPx]`       | The number of pixels worth of buffer to render for when rendering new items, same as [cdk maxBufferPx](https://material.angular.io/cdk/scrolling/api) | `number`                                                   | `500`                              |
@@ -65,3 +65,10 @@ Any data whose entries are defined in a hierarchical manner is fit to use this c
 | `getHalfCheckedNodeList` | get half checked nodes                            | `NzTreeNode[]` |
 | `getExpandedNodeList`    | get expanded nodes                                | `NzTreeNode[]` |
 | `getMatchedNodeList`     | get matched nodes(if `nzSearchValue` is not null) | `NzTreeNode[]` |
+
+## FAQ
+
+### Q: The overlay layer element does not follow the scroll position when scrolling
+
+By default, the overlay layer element uses body as the scroll container. If using another scroll container, add the [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) directive to the custom scroll container element.
+Note: You need to import the `CdkScrollable` directive or `ScrollingModule` module from `@angular/cdk/scrolling`.

@@ -37,15 +37,15 @@ description: 点击元素，弹出气泡式的确认框。
 | `[nzPopconfirmOverlayStyle]`       | 卡片样式                                 | `object`                                                                                                                                                                          | -         |
 | `[nzPopconfirmBackdrop]`           | 浮层是否应带有背景板                     | `boolean`                                                                                                                                                                         | `false`   |
 
-| 参数                    | 说明                                                                                                         | 类型                                                                 | 默认值      | 全局配置 |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------- | -------- |
+| 参数                    | 说明                                                                                                         | 类型                                                                 | 默认值      | 全局配置 | 版本   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------- | -------- | ------ |
 | `[nzCancelText]`        | 取消按钮文字 （已弃用，请使用 nzCancelButtonProps 代替)                                                      | `string`                                                             | `'取消'`    | -        |
 | `[nzOkText]`            | 确认按钮文字 （已弃用，请使用 nzOkButtonProps 代替)                                                          | `string`                                                             | `'确定'`    | -        |
 | `[nzOkType]`            | 确认按钮类型 （已弃用，请使用 nzOkButtonProps 代替)                                                          | `'primary' \| 'ghost' \| 'dashed' \| 'default'`                      | `'primary'` | -        |
 | `[nzOkDanger]`          | 确认按钮是否为危险按钮。<i>与 `nz-button` 的 `nzDanger` 值保持一致</i>（已弃用，请使用 nzOkButtonProps 代替) | `boolean`                                                            | `false`     | -        |
 | `[nzOkDisabled]`        | 禁止与确认按钮交互。<i>与 `nz-button` 的 `disabled` 值保持一致</i>（已弃用，请使用 nzOkButtonProps 代替)     | `boolean`                                                            | `false`     | -        |
-| `[nzOkButtonProps]`     | 确定按钮的配置对象                                                                                           | `NzPopConfirmButtonProps`                                            | `null`      | -        |
-| `[nzCancelButtonProps]` | 取消按钮的配置对象                                                                                           | `NzPopConfirmButtonProps`                                            | `null`      | -        |
+| `[nzOkButtonProps]`     | 确定按钮的配置对象                                                                                           | `NzPopConfirmButtonProps`                                            | `null`      | -        | 20.0.0 |
+| `[nzCancelButtonProps]` | 取消按钮的配置对象                                                                                           | `NzPopConfirmButtonProps`                                            | `null`      | -        | 20.0.0 |
 | `[nzCondition]`         | 是否直接触发 `nzOnConfirm` 而不弹出框                                                                        | `boolean`                                                            | `false`     | -        |
 | `[nzIcon]`              | 自定义弹出框的 icon                                                                                          | `string \| TemplateRef<void> \| null`                                | -           | -        |
 | `[nzAutoFocus]`         | 按钮的自动聚焦                                                                                               | `null \| 'ok' \| 'cancel'`                                           | `null`      | ✅       |
@@ -58,3 +58,10 @@ description: 点击元素，弹出气泡式的确认框。
 ## 注意
 
 请确保 `[nz-popconfirm]` 元素能接受 `onMouseEnter`、`onMouseLeave`、`onFocus`、`onClick` 事件。
+
+## FAQ
+
+### Q：滚动时浮层元素没有跟随滚动位置
+
+默认情况下，浮层元素使用 `body` 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) 指令。
+注意：您需要从 `@angular/cdk/scrolling` 导入 `CdkScrollable` 指令或 `ScrollingModule` 模块。

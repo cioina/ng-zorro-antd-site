@@ -39,6 +39,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Basic"
+  nzVersion=""
   nzId="components-carousel-demo-basic"
   nzSelector="nz-demo-carousel-basic"
   nzLink="components-carousel-demo-basic"
@@ -52,9 +53,9 @@
 	<nz-demo-carousel-basic demo></nz-demo-carousel-basic>
 	<div intro ngNonBindable><p>Basic usage.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Fade in"
+  nzVersion=""
   nzId="components-carousel-demo-fade"
   nzSelector="nz-demo-carousel-fade"
   nzLink="components-carousel-demo-fade"
@@ -68,9 +69,9 @@
 	<nz-demo-carousel-fade demo></nz-demo-carousel-fade>
 	<div intro ngNonBindable><p>Slides use fade for transition.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Custom transition effect"
+  nzVersion=""
   nzId="components-carousel-demo-custom"
   nzSelector="nz-demo-carousel-custom"
   nzLink="components-carousel-demo-custom"
@@ -84,9 +85,9 @@
 	<nz-demo-carousel-custom demo></nz-demo-carousel-custom>
 	<div intro ngNonBindable><p>Customize carousel transition effect by providing a class that extends <code>NzCarouselBaseStrategy</code>.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Arrows for switching"
+  nzVersion="20.3.0"
   nzId="components-carousel-demo-arrow"
   nzSelector="nz-demo-carousel-arrow"
   nzLink="components-carousel-demo-arrow"
@@ -101,11 +102,11 @@
 	<div intro ngNonBindable><p>Show the arrows for switching.</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Position"
+  nzVersion=""
   nzId="components-carousel-demo-position"
   nzSelector="nz-demo-carousel-position"
   nzLink="components-carousel-demo-position"
@@ -119,9 +120,9 @@
 	<nz-demo-carousel-position demo></nz-demo-carousel-position>
 	<div intro ngNonBindable><p>There are four positions available.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Scroll automatically"
+  nzVersion=""
   nzId="components-carousel-demo-autoplay"
   nzSelector="nz-demo-carousel-autoplay"
   nzLink="components-carousel-demo-autoplay"
@@ -135,9 +136,9 @@
 	<nz-demo-carousel-autoplay demo></nz-demo-carousel-autoplay>
 	<div intro ngNonBindable><p>Timing of scrolling to the next card/picture.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Loop"
+  nzVersion=""
   nzId="components-carousel-demo-loop"
   nzSelector="nz-demo-carousel-loop"
   nzLink="components-carousel-demo-loop"
@@ -152,7 +153,6 @@
 	<div intro ngNonBindable><p>Prevent the carousel to go in a loop</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-carousel"><span>nz-carousel</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-carousel'" class="anchor">#</a></h3><table>
@@ -163,6 +163,7 @@
 <th>Type</th>
 <th>Default</th>
 <th>Global Config</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -171,6 +172,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoPlaySpeed]</code></td>
@@ -178,12 +180,14 @@
 <td><code>number</code></td>
 <td><code>3000</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDotRender]</code></td>
 <td>Dot render template</td>
 <td><code>TemplateRef&lt;&#123; $implicit: number &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -192,6 +196,7 @@
 <td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
 <td><code>&#39;bottom&#39;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDots]</code></td>
@@ -199,6 +204,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzEffect]</code></td>
@@ -206,6 +212,7 @@
 <td><code>&#39;scrollx&#39; | &#39;fade&#39;</code></td>
 <td><code>&#39;scrollx&#39;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzEnableSwipe]</code></td>
@@ -213,6 +220,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzLoop]</code></td>
@@ -220,6 +228,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzArrows]</code></td>
@@ -227,6 +236,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td>20.3.0</td>
 </tr>
 <tr>
 <td><code>(nzAfterChange)</code></td>
@@ -234,12 +244,14 @@
 <td><code>EventEmitter&lt;number&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzBeforeChange)</code></td>
 <td>Callback function called before the current index changes</td>
 <td><code>EventEmitter&#123; from: number; to: number &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>

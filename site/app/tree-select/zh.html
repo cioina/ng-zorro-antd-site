@@ -38,6 +38,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本"
+  nzVersion=""
   nzId="components-tree-select-demo-basic"
   nzSelector="nz-demo-tree-select-basic"
   nzLink="components-tree-select-demo-basic"
@@ -51,9 +52,9 @@
 	<nz-demo-tree-select-basic demo></nz-demo-tree-select-basic>
 	<div intro ngNonBindable><p>最简单的用法。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="异步数据加载"
+  nzVersion=""
   nzId="components-tree-select-demo-async"
   nzSelector="nz-demo-tree-select-async"
   nzLink="components-tree-select-demo-async"
@@ -67,9 +68,9 @@
 	<nz-demo-tree-select-async demo></nz-demo-tree-select-async>
 	<div intro ngNonBindable><p>点击展开节点，动态加载数据，直到执行 addChildren() 方法取消加载状态。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="虚拟滚动"
+  nzVersion=""
   nzId="components-tree-select-demo-virtual-scroll"
   nzSelector="nz-demo-tree-select-virtual-scroll"
   nzLink="components-tree-select-demo-virtual-scroll"
@@ -83,9 +84,9 @@
 	<nz-demo-tree-select-virtual-scroll demo></nz-demo-tree-select-virtual-scroll>
 	<div intro ngNonBindable><p>设定 <code>nzVirtualHeight</code> 开启虚拟滚动。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="位置"
+  nzVersion=""
   nzId="components-tree-select-demo-placement"
   nzSelector="nz-demo-tree-select-placement"
   nzLink="components-tree-select-demo-placement"
@@ -99,9 +100,9 @@
 	<nz-demo-tree-select-placement demo></nz-demo-tree-select-placement>
 	<div intro ngNonBindable><p>可以通过 <code>nzPlacement</code> 手动指定弹出的位置。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="形态变体"
+  nzVersion="20.0.0"
   nzId="components-tree-select-demo-variant"
   nzSelector="nz-demo-tree-select-variant"
   nzLink="components-tree-select-demo-variant"
@@ -116,11 +117,11 @@
 	<div intro ngNonBindable><p>TreeSelect 形态变体，可选 <code>outlined</code>、<code>filled</code>、<code>borderless</code>、<code>underlined</code> 四种形态。</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="多选"
+  nzVersion=""
   nzId="components-tree-select-demo-multiple"
   nzSelector="nz-demo-tree-select-multiple"
   nzLink="components-tree-select-demo-multiple"
@@ -134,9 +135,9 @@
 	<nz-demo-tree-select-multiple demo></nz-demo-tree-select-multiple>
 	<div intro ngNonBindable><p>多选的树选择，例子中通过 <code>nzMaxTagCount</code> 限制最多显示3个选项。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可勾选"
+  nzVersion=""
   nzId="components-tree-select-demo-checkable"
   nzSelector="nz-demo-tree-select-checkable"
   nzLink="components-tree-select-demo-checkable"
@@ -150,9 +151,9 @@
 	<nz-demo-tree-select-checkable demo></nz-demo-tree-select-checkable>
 	<div intro ngNonBindable><p>使用勾选框实现多选功能。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义空状态"
+  nzVersion=""
   nzId="components-tree-select-demo-no-data"
   nzSelector="nz-demo-tree-select-no-data"
   nzLink="components-tree-select-demo-no-data"
@@ -166,9 +167,9 @@
 	<nz-demo-tree-select-no-data demo></nz-demo-tree-select-no-data>
 	<div intro ngNonBindable><p>使用 <code>nzNotFoundContent</code> 自定义空数据状态</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义状态"
+  nzVersion=""
   nzId="components-tree-select-demo-status"
   nzSelector="nz-demo-tree-select-status"
   nzLink="components-tree-select-demo-status"
@@ -182,9 +183,9 @@
 	<nz-demo-tree-select-status demo></nz-demo-tree-select-status>
 	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 <code>TreeSelect</code> 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="前后缀"
+  nzVersion=""
   nzId="components-tree-select-demo-prefix-and-suffix"
   nzSelector="nz-demo-tree-select-prefix-and-suffix"
   nzLink="components-tree-select-demo-prefix-and-suffix"
@@ -199,7 +200,6 @@
 	<div intro ngNonBindable><p>自定义前缀 <code>nzPrefix</code> 和后缀图标 <code>nzSuffixIcon</code>。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tree-select"><span>nz-tree-select</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tree-select'" class="anchor">#</a></h3><table>
@@ -210,6 +210,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -218,12 +219,14 @@
 <td><code>string</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAllowClear]</code></td>
 <td>显示清除按钮</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -232,12 +235,14 @@
 <td><code>string</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzPlacement]</code></td>
 <td>选择框弹出的位置</td>
 <td><code>&#39;bottomLeft&#39; | &#39;bottomRight&#39; | &#39;topLeft&#39; | &#39;topRight&#39;</code></td>
 <td><code>&#39;bottomLeft&#39;</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -246,6 +251,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShowIcon]</code></td>
@@ -253,12 +259,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShowSearch]</code></td>
 <td>显示搜索框</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -267,6 +275,7 @@
 <td><code>&#39;string&#39; | &#39;TemplateRef&lt;void&gt;&#39;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDropdownMatchSelectWidth]</code></td>
@@ -274,12 +283,14 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDropdownStyle]</code></td>
 <td>下拉菜单的样式</td>
 <td><code>&#123; [key: string]: string; &#125;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -288,12 +299,14 @@
 <td><code>string</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzMultiple]</code></td>
 <td>支持多选（当设置 nzCheckable 时自动变为 true）</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -302,6 +315,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzSize]</code></td>
@@ -309,12 +323,14 @@
 <td><code>&#39;large&#39; | &#39;small&#39; | &#39;default&#39;</code></td>
 <td><code>&#39;default&#39;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzStatus]</code></td>
 <td>设置校验状态</td>
 <td><code>&#39;error&#39; | &#39;warning&#39;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -323,12 +339,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzCheckStrictly]</code></td>
 <td>checkable 状态下节点选择完全受控（父子节点选中状态不再关联）</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -337,12 +355,14 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShowLine]</code></td>
 <td>是否展示连接线</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -351,12 +371,14 @@
 <td><code>TemplateRef&lt;any&gt; | string</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzSuffixIcon]</code></td>
 <td>自定义的选择框后缀图标</td>
 <td><code>TemplateRef&lt;any&gt; | string</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -365,12 +387,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzNodes]</code></td>
 <td>treeNodes 数据</td>
 <td><code>NzTreeNodeOptions[]</code></td>
 <td><code>[]</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -379,12 +403,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzExpandedKeys]</code></td>
 <td>默认展开指定的树节点</td>
 <td><code>string[]</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -393,12 +419,14 @@
 <td><code>(node: NzTreeNode) =&gt; string</code></td>
 <td><code>(node: NzTreeNode) =&gt; node.title</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzMaxTagCount]</code></td>
 <td>最多显示多少个 tag</td>
 <td><code>number</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -407,12 +435,14 @@
 <td><code>TemplateRef&lt;&#123; $implicit: NzTreeNode[] &#125;&gt;</code></td>
 <td>-</td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzTreeTemplate]</code></td>
 <td>自定义节点</td>
 <td><code>TemplateRef&lt;&#123; $implicit: NzTreeNode &#125;&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -421,12 +451,14 @@
 <td><code>&#39;outlined&#39; | &#39;borderless&#39; | &#39;filled&#39; | &#39;underlined&#39;</code></td>
 <td><code>&#39;outlined&#39;</code></td>
 <td>✅</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>[nzVirtualHeight]</code></td>
 <td>虚拟滚动的总高度</td>
 <td><code>string</code></td>
 <td><code>-</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -435,12 +467,14 @@
 <td><code>number</code></td>
 <td><code>28</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzVirtualMaxBufferPx]</code></td>
 <td>缓冲区最大像素高度，与 <a href="https://material.angular.io/cdk/scrolling/api" target="_blank" rel="noopener">cdk maxBufferPx</a> 相同</td>
 <td><code>number</code></td>
 <td><code>500</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -449,6 +483,7 @@
 <td><code>number</code></td>
 <td><code>28</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBackdrop]</code></td>
@@ -456,12 +491,14 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzExpandChange)</code></td>
 <td>点击展开树节点图标调用</td>
 <td><code>EventEmitter&lt;NzFormatEmitEvent&gt;</code></td>
 <td>-</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>
@@ -509,4 +546,6 @@
 <td><code>NzTreeNode[]</code></td>
 </tr>
 </tbody></table>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q：滚动时浮层yuan素没有跟随滚动位置"><span>Q：滚动时浮层元素没有跟随滚动位置</span><a onclick="window.location.hash = 'q：滚动时浮层yuan素没有跟随滚动位置'" class="anchor">#</a></h3><p>默认情况下，浮层元素使用 <code>body</code> 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> 指令。
+注意：您需要从 <code>&#64;angular/cdk/scrolling</code> 导入 <code>CdkScrollable</code> 指令或 <code>ScrollingModule</code> 模块。</p>
 </section></article>

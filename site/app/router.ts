@@ -698,7 +698,7 @@ export const ROUTER_LIST: RouterList = {
         "path": "components/input/zh",
         "zh": "输入框",
         "cover": "https://gw.alipayobjects.com/zos/alicdn/xS9YEJhfe/Input.svg",
-        "tag": "",
+        "tag": "更新",
         "description": "Angular 输入框组件，通过鼠标或键盘输入内容，是最基础的表单域的包装。"
       },
       {
@@ -874,7 +874,7 @@ export const ROUTER_LIST: RouterList = {
         "path": "components/input/en",
         "zh": "",
         "cover": "https://gw.alipayobjects.com/zos/alicdn/xS9YEJhfe/Input.svg",
-        "tag": "",
+        "tag": "Update",
         "description": "Angular Input Component, Through mouse or keyboard input content, it is the most basic form field wrapper."
       },
       {

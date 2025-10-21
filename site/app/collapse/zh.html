@@ -41,6 +41,7 @@
 	<div nz-col [nzSpan]="24">
 		<nz-code-box
   nzTitle="折叠面板"
+  nzVersion=""
   nzId="components-collapse-demo-basic"
   nzSelector="nz-demo-collapse-basic"
   nzLink="components-collapse-demo-basic"
@@ -54,9 +55,9 @@
 	<nz-demo-collapse-basic demo></nz-demo-collapse-basic>
 	<div intro ngNonBindable><p>可以同时展开多个面板，这个例子默认展开了第一个。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="手风琴"
+  nzVersion=""
   nzId="components-collapse-demo-accordion"
   nzSelector="nz-demo-collapse-accordion"
   nzLink="components-collapse-demo-accordion"
@@ -70,9 +71,9 @@
 	<nz-demo-collapse-accordion demo></nz-demo-collapse-accordion>
 	<div intro ngNonBindable><p>手风琴，每次只打开一个tab。默认打开第一个。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="大小"
+  nzVersion="20.2.0"
   nzId="components-collapse-demo-size"
   nzSelector="nz-demo-collapse-size"
   nzLink="components-collapse-demo-size"
@@ -87,9 +88,9 @@
 	<div intro ngNonBindable><p>设置折叠面板的大小。
 通过设置 <code>nzSize</code> 为 <code>large</code> 或 <code>small</code> 分别把折叠面板设为大、小尺寸。若不设置则尺寸默认为中。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="面板嵌套"
+  nzVersion=""
   nzId="components-collapse-demo-mix"
   nzSelector="nz-demo-collapse-mix"
   nzLink="components-collapse-demo-mix"
@@ -103,9 +104,9 @@
 	<nz-demo-collapse-mix demo></nz-demo-collapse-mix>
 	<div intro ngNonBindable><p>嵌套折叠面板。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="简洁风格"
+  nzVersion=""
   nzId="components-collapse-demo-borderless"
   nzSelector="nz-demo-collapse-borderless"
   nzLink="components-collapse-demo-borderless"
@@ -119,9 +120,9 @@
 	<nz-demo-collapse-borderless demo></nz-demo-collapse-borderless>
 	<div intro ngNonBindable><p>一套没有边框的简洁样式。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义面板"
+  nzVersion=""
   nzId="components-collapse-demo-custom"
   nzSelector="nz-demo-collapse-custom"
   nzLink="components-collapse-demo-custom"
@@ -135,9 +136,9 @@
 	<nz-demo-collapse-custom demo></nz-demo-collapse-custom>
 	<div intro ngNonBindable><p>自定义各个面板的背景色、圆角、边距和图标。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="隐藏箭头"
+  nzVersion=""
   nzId="components-collapse-demo-noarrow"
   nzSelector="nz-demo-collapse-noarrow"
   nzLink="components-collapse-demo-noarrow"
@@ -151,9 +152,9 @@
 	<nz-demo-collapse-noarrow demo></nz-demo-collapse-noarrow>
 	<div intro ngNonBindable><p>你可以通过 <code>[nzShowArrow]=&quot;false&quot;</code> 隐藏 <code>nz-collapse-panel</code> 组件的箭头图标。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="额外节点"
+  nzVersion=""
   nzId="components-collapse-demo-extra"
   nzSelector="nz-demo-collapse-extra"
   nzLink="components-collapse-demo-extra"
@@ -167,9 +168,9 @@
 	<nz-demo-collapse-extra demo></nz-demo-collapse-extra>
 	<div intro ngNonBindable><p>你可以通过 <code>nzExtra</code> 来指定面板右上角的额外内容。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="幽灵折叠面板"
+  nzVersion=""
   nzId="components-collapse-demo-ghost"
   nzSelector="nz-demo-collapse-ghost"
   nzLink="components-collapse-demo-ghost"
@@ -183,9 +184,9 @@
 	<nz-demo-collapse-ghost demo></nz-demo-collapse-ghost>
 	<div intro ngNonBindable><p>将折叠面板的背景变成透明。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="可折叠"
+  nzVersion="20.2.0"
   nzId="components-collapse-demo-collapsible"
   nzSelector="nz-demo-collapse-collapsible"
   nzLink="components-collapse-demo-collapsible"
@@ -200,7 +201,6 @@
 	<div intro ngNonBindable><p>通过 <code>nzCollapsible</code> 属性，可以设置面板的可折叠触发区域</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-collapse"><span>nz-collapse</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-collapse'" class="anchor">#</a></h3><table>
 <thead>
@@ -210,6 +210,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -218,6 +219,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBordered]</code></td>
@@ -225,6 +227,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzGhost]</code></td>
@@ -232,6 +235,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzExpandIconPosition]</code></td>
@@ -239,6 +243,7 @@
 <td><code>&#39;start&#39; | &#39;end&#39;</code></td>
 <td><code>&#39;start&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzSize]</code></td>
@@ -246,6 +251,7 @@
 <td><code>&#39;small&#39; | &#39;large&#39;</code></td>
 <td><code>&#39;middle&#39;</code></td>
 <td>-</td>
+<td>20.2.0</td>
 </tr>
 </tbody></table>
 <h3 id="nz-collapse-panel"><span>nz-collapse-panel</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-collapse-panel'" class="anchor">#</a></h3><table>
@@ -256,6 +262,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -264,6 +271,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzHeader]</code></td>
@@ -271,6 +279,7 @@
 <td><code>string | TemplateRef&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzExpandedIcon]</code></td>
@@ -278,6 +287,7 @@
 <td><code>string | TemplateRef&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzExtra]</code></td>
@@ -285,6 +295,7 @@
 <td><code>string | TemplateRef&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShowArrow]</code></td>
@@ -292,6 +303,7 @@
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzActive]</code></td>
@@ -299,6 +311,7 @@
 <td><code>boolean</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzCollapsible]</code></td>
@@ -306,6 +319,7 @@
 <td><code>&#39;header&#39; | &#39;icon&#39; | &#39;disabled&#39;</code></td>
 <td>-</td>
 <td>-</td>
+<td>20.2.0</td>
 </tr>
 <tr>
 <td><code>(nzActiveChange)</code></td>
@@ -313,6 +327,7 @@
 <td><code>EventEmitter&lt;boolean&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 </tbody></table>
 </section></article>

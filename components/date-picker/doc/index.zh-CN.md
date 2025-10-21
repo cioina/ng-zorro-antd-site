@@ -32,8 +32,8 @@ registerLocaleData(zh);
 
 以下 API 为 nz-date-picker、nz-range-picker 共享的 API。
 
-| 参数                     | 说明                                                          | 类型                                                       | 默认值                                                                                                      | 全局配置 |
-| ------------------------ | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------- |
+| 参数                     | 说明                                                          | 类型                                                       | 默认值                                                                                                      | 全局配置 | 版本   |
+| ------------------------ | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------- | ------ |
 | `[nzId]`                 | 组件内部 input 的 id 值                                       | `string`                                                   | -                                                                                                           |
 | `[nzAllowClear]`         | 是否显示清除按钮                                              | `boolean`                                                  | `true`                                                                                                      | -        |
 | `[nzAutoFocus]`          | 自动获取焦点                                                  | `boolean`                                                  | `false`                                                                                                     | -        |
@@ -54,7 +54,7 @@ registerLocaleData(zh);
 | `[nzPlacement]`          | 选择框弹出的位置                                              | `'bottomLeft' \| 'bottomRight' \| 'topLeft' \| 'topRight'` | `'bottomLeft'`                                                                                              |          |
 | `[nzSuffixIcon]`         | 自定义的后缀图标                                              | `string \| TemplateRef`                                    | -                                                                                                           | ✅       |
 | ~~`[nzBorderless]`~~     | ~~移除边框~~                                                  | ~~`boolean`~~                                              | ~~`false`~~                                                                                                 | -        |
-| `[nzVariant]`            | 形态变体                                                      | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`   | `'outlined'`                                                                                                | ✅       |
+| `[nzVariant]`            | 形态变体                                                      | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`   | `'outlined'`                                                                                                | ✅       | 20.0.0 |
 | `[nzInline]`             | 内联模式                                                      | `boolean`                                                  | `false`                                                                                                     | -        |
 | `(nzOnOpenChange)`       | 弹出日历和关闭日历的回调                                      | `EventEmitter<boolean>`                                    | -                                                                                                           | -        |
 | `(nzOnPanelChange)`      | 改变模式或日期的回调                                          | `EventEmitter<NzPanelChangeType>`                          | -                                                                                                           | -        |
@@ -112,3 +112,8 @@ registerLocaleData(zh);
 需要引入 `date-fns` 。日期格式化目前同时支持两种方式：`DatePipe`（默认，[语法参考](https://angular.cn/api/common/DatePipe)）
 和 `date-fns`（见[如何使用 `date-fns` 进行日期格式化](/docs/i18n/zh#如何使用Date-fns进行日期格式化)）。当你引入 `date-fns`
 后，NG-ZORRO 会使用它提供的 API 来进行反序列化。
+
+### Q：滚动时浮层元素没有跟随滚动位置
+
+默认情况下，浮层元素使用 `body` 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) 指令。
+注意：您需要从 `@angular/cdk/scrolling` 导入 `CdkScrollable` 指令或 `ScrollingModule` 模块。

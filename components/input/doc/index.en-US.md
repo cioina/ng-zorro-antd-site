@@ -2,6 +2,7 @@
 category: Components
 type: Data Entry
 title: Input
+tag: Update
 cover: 'https://gw.alipayobjects.com/zos/alicdn/xS9YEJhfe/Input.svg'
 description: Through mouse or keyboard input content, it is the most basic form field wrapper.
 ---
@@ -17,12 +18,12 @@ description: Through mouse or keyboard input content, it is the most basic form 
 
 All props of input supported by [w3c standards](https://www.w3schools.com/tags/tag_input.asp) and Angular can used in `[nz-input]`.
 
-| Property              | Description                                                                                                          | Type                                                     | Default      |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------ |
+| Property              | Description                                                                                                          | Type                                                     | Default      | Version |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------ | ------- |
 | `[nzSize]`            | The size of the input box. Note: in the context of a form, the `large` size is used.                                 | `'large' \| 'small' \| 'default'`                        | `'default'`  |
 | `[nzAutosize]`        | Only used for `textarea`, height autosize feature, can be set to `boolean` or an object `{ minRows: 2, maxRows: 6 }` | `boolean \| { minRows: number, maxRows: number }`        | `false`      |
 | ~~`[nzBorderless]`~~  | ~~Whether hide border~~                                                                                              | ~~`boolean`~~                                            | ~~`false`~~  |
-| `[nzVariant]`         | Variants of Input                                                                                                    | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'` | `'outlined'` |
+| `[nzVariant]`         | Variants of Input                                                                                                    | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'` | `'outlined'` | 20.0.0  |
 | `[nzStatus]`          | Set validation status                                                                                                | `'error' \| 'warning'`                                   | -            |
 | ~~`[nzStepperless]`~~ | ~~Whether hide stepper when input type is number~~                                                                   | ~~`boolean`~~                                            | ~~`true`~~   |
 
@@ -38,6 +39,16 @@ Use when you need to add extra functionality to `[nz-input]`.
 | `[nzSuffix]`      | The suffix icon for the Input                                         | `string`                 | -       |
 | `[nzAllowClear]`  | If allow to remove input content with clear icon                      | `boolean`                | `false` |
 | `(nzClear)`       | Event emitted when the clear icon is clicked                          | `OutputEmitterRef<void>` | -       |
+
+### nz-input-password
+
+All properties of `nz-input-wrapper` can be used.
+
+| Property               | Description                                               | Type                        | Default |
+| ---------------------- | --------------------------------------------------------- | --------------------------- | ------- |
+| `[nzVisibilityToggle]` | Whether to show the toggle button                         | `boolean`                   | `true`  |
+| `[nzVisible]`          | Whether the password is visible, supports two-way binding | `boolean`                   | `false` |
+| `(nzVisibleChange)`    | Event emitted when the visibility of the password changes | `OutputEmitterRef<boolean>` | -       |
 
 ### nz-input-group
 

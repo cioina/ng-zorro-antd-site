@@ -20,8 +20,8 @@ description: Cascade selection box.
 
 ### nz-cascader
 
-| Property              | Description                                                                                                                            | Type                                                                  | Default           | Global Config |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------- | ------------- |
+| Property              | Description                                                                                                                            | Type                                                                  | Default           | Global Config | Version |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------- | ------------- | ------- |
 | `[ngModel]`           | selected value                                                                                                                         | `any[]`                                                               | -                 |
 | `[nzAllowClear]`      | whether allow clear                                                                                                                    | `boolean`                                                             | `true`            |
 | `[nzAutoFocus]`       | whether auto focus the input box                                                                                                       | `boolean`                                                             | `false`           |
@@ -43,7 +43,7 @@ description: Cascade selection box.
 | `[nzNotFoundContent]` | specify content to show when no result matches                                                                                         | `string \| TemplateRef<void>`                                         | -                 |
 | `[nzOptionRender]`    | render template of cascader options                                                                                                    | `TemplateRef<{ $implicit: NzCascaderOption, index: number }>`         |                   |
 | `[nzOptions]`         | data options of cascade                                                                                                                | `object[]`                                                            | -                 |
-| `[nzOpen]`            | Set visible of cascader popup                                                                                                          | `boolean`                                                             | `false`           |
+| `[nzOpen]`            | Set visible of cascader popup                                                                                                          | `boolean`                                                             | `false`           | -             | 20.2.0  |
 | `[nzPlaceHolder]`     | input placeholder                                                                                                                      | `string`                                                              | `'Please select'` |
 | `[nzPlacement]`       | popup placement                                                                                                                        | `'bottomLeft' \| 'bottomRight' \| 'topLeft' \| 'topRight'`            | `'bottomLeft'`    |
 | `[nzShowArrow]`       | whether show arrow                                                                                                                     | `boolean`                                                             | `true`            |
@@ -54,7 +54,7 @@ description: Cascade selection box.
 | `[nzPrefix]`          | custom prefix                                                                                                                          | `string\|TemplateRef<void>`                                           | -                 |
 | `[nzSuffixIcon]`      | custom suffix icon                                                                                                                     | `string\|TemplateRef<void>`                                           | -                 |
 | `[nzValueProperty]`   | value property name of options                                                                                                         | `string`                                                              | `'value'`         |
-| `[nzVariant]`         | Variants of Cascader                                                                                                                   | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`              | `'outlined'`      | ✅            |
+| `[nzVariant]`         | Variants of Cascader                                                                                                                   | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`              | `'outlined'`      | ✅            | 20.0.0  |
 | `(ngModelChange)`     | emit on values change                                                                                                                  | `EventEmitter<any[]>`                                                 | -                 |
 | `(nzClear)`           | emit on clear values                                                                                                                   | `EventEmitter<void>`                                                  | -                 |
 | `(nzVisibleChange)`   | emit on popup menu visible or hide                                                                                                     | `EventEmitter<boolean>`                                               | -                 |
@@ -126,3 +126,8 @@ const filter: NzCascaderFilter = (i, p) => {
 When you pass a function to `nzLoadData`, the function becomes a `NzCascaderComponent` property.
 When the component calls the `nzLoadData` function, `this` is bound to nothing. You have to pass an arrow function or use `Function.bind` to bind `this` to the parent component.
 [see example](https://stackoverflow.com/questions/60320913/ng-zorro-cascader-lazy-load-data-nzloaddata-function-got-this-undefined/60928983#60928983).
+
+### Q: The overlay layer element does not follow the scroll position when scrolling
+
+By default, the overlay layer element uses body as the scroll container. If using another scroll container, add the [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) directive to the custom scroll container element.
+Note: You need to import the `CdkScrollable` directive or `ScrollingModule` module from `@angular/cdk/scrolling`.

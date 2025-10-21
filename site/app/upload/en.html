@@ -46,6 +46,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Upload by clicking"
+  nzVersion=""
   nzId="components-upload-demo-basic"
   nzSelector="nz-demo-upload-basic"
   nzLink="components-upload-demo-basic"
@@ -59,9 +60,9 @@
 	<nz-demo-upload-basic demo></nz-demo-upload-basic>
 	<div intro ngNonBindable><p>Classic mode. File selection dialog pops up when upload button is clicked.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Default Files"
+  nzVersion=""
   nzId="components-upload-demo-default-file-list"
   nzSelector="nz-demo-upload-default-file-list"
   nzLink="components-upload-demo-default-file-list"
@@ -75,9 +76,9 @@
 	<nz-demo-upload-default-file-list demo></nz-demo-upload-default-file-list>
 	<div intro ngNonBindable><p>Use <code>nzFileList</code> for uploaded files when page init.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Complete control over file list"
+  nzVersion=""
   nzId="components-upload-demo-file-list"
   nzSelector="nz-demo-upload-file-list"
   nzLink="components-upload-demo-file-list"
@@ -97,9 +98,9 @@
 </li>
 </ol>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Upload directory"
+  nzVersion=""
   nzId="components-upload-demo-directory"
   nzSelector="nz-demo-upload-directory"
   nzLink="components-upload-demo-directory"
@@ -113,9 +114,9 @@
 	<nz-demo-upload-directory demo></nz-demo-upload-directory>
 	<div intro ngNonBindable><p>You can select and upload a whole directory.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Pictures with list style"
+  nzVersion=""
   nzId="components-upload-demo-picture-style"
   nzSelector="nz-demo-upload-picture-style"
   nzLink="components-upload-demo-picture-style"
@@ -129,9 +130,9 @@
 	<nz-demo-upload-picture-style demo></nz-demo-upload-picture-style>
 	<div intro ngNonBindable><p>If uploaded file is a picture, the thumbnail can be shown. <code>IE8/9</code> do not support local thumbnail show. Please use <code>thumbUrl</code> instead.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Transform file before request"
+  nzVersion=""
   nzId="components-upload-demo-transform-file"
   nzSelector="nz-demo-upload-transform-file"
   nzLink="components-upload-demo-transform-file"
@@ -148,9 +149,9 @@
 </blockquote>
 <p>Use <code>nzBeforeUpload</code> to transform file before requesting it, for example to add a watermark.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Upload png file only"
+  nzVersion=""
   nzId="components-upload-demo-png-only"
   nzSelector="nz-demo-upload-png-only"
   nzLink="components-upload-demo-png-only"
@@ -165,11 +166,11 @@
 	<div intro ngNonBindable><p><code>nzBeforeUpload</code> only prevent upload behavior when return <code>false</code> or <code>Promise.reject()</code> or an <code>Observable</code> throw an error.</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="Avatar"
+  nzVersion=""
   nzId="components-upload-demo-avatar"
   nzSelector="nz-demo-upload-avatar"
   nzLink="components-upload-demo-avatar"
@@ -186,9 +187,9 @@
 <p>The return value of function <code>nzBeforeUpload</code> can be a Observable to check asynchronously.</p>
 </blockquote>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Pictures Wall"
+  nzVersion=""
   nzId="components-upload-demo-picture-card"
   nzSelector="nz-demo-upload-picture-card"
   nzLink="components-upload-demo-picture-card"
@@ -202,9 +203,9 @@
 	<nz-demo-upload-picture-card demo></nz-demo-upload-picture-card>
 	<div intro ngNonBindable><p>After users upload picture, the thumbnail will be shown in list. The upload button will disappear when count meets limitation.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Drag and Drop"
+  nzVersion=""
   nzId="components-upload-demo-drag"
   nzSelector="nz-demo-upload-drag"
   nzLink="components-upload-demo-drag"
@@ -219,9 +220,9 @@
 	<div intro ngNonBindable><p>You can drag files to a specific area, to upload. Alternatively, you can also upload by selecting.</p>
 <p>We can upload serveral files at once in modern browsers by giving the input the <code>nzMultiple</code> attribute.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Upload manually"
+  nzVersion=""
   nzId="components-upload-demo-upload-manually"
   nzSelector="nz-demo-upload-upload-manually"
   nzLink="components-upload-demo-upload-manually"
@@ -235,9 +236,9 @@
 	<nz-demo-upload-upload-manually demo></nz-demo-upload-upload-manually>
 	<div intro ngNonBindable><p>Upload files manually after <code>nzBeforeUpload</code> returns <code>false</code>.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Customize preview file"
+  nzVersion=""
   nzId="components-upload-demo-preview-file"
   nzSelector="nz-demo-upload-preview-file"
   nzLink="components-upload-demo-preview-file"
@@ -251,9 +252,9 @@
 	<nz-demo-upload-preview-file demo></nz-demo-upload-preview-file>
 	<div intro ngNonBindable><p>Customize local preview. Can handle with non-image format files such as video.</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="Aliyun OSS"
+  nzVersion=""
   nzId="components-upload-demo-upload-with-aliyun-oss"
   nzSelector="nz-demo-upload-upload-with-aliyun-oss"
   nzLink="components-upload-demo-upload-with-aliyun-oss"
@@ -268,7 +269,6 @@
 	<div intro ngNonBindable><p>Use Aliyun OSS upload example.</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><blockquote>

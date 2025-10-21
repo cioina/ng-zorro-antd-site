@@ -35,6 +35,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本"
+  nzVersion=""
   nzId="components-tooltip-demo-basic"
   nzSelector="nz-demo-tooltip-basic"
   nzLink="components-tooltip-demo-basic"
@@ -48,9 +49,9 @@
 	<nz-demo-tooltip-basic demo></nz-demo-tooltip-basic>
 	<div intro ngNonBindable><p>最简单的用法。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="箭头指向"
+  nzVersion=""
   nzId="components-tooltip-demo-arrow-point-at-center"
   nzSelector="nz-demo-tooltip-arrow-point-at-center"
   nzLink="components-tooltip-demo-arrow-point-at-center"
@@ -64,9 +65,9 @@
 	<nz-demo-tooltip-arrow-point-at-center demo></nz-demo-tooltip-arrow-point-at-center>
 	<div intro ngNonBindable><p>通过设置 <code>nzTooltipArrowPointAtCenter</code> ，可以箭头将指向目标元素的中心。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="指定目标"
+  nzVersion=""
   nzId="components-tooltip-demo-origin"
   nzSelector="nz-demo-tooltip-origin"
   nzLink="components-tooltip-demo-origin"
@@ -81,11 +82,11 @@
 	<div intro ngNonBindable><p>通过 <code>nzTooltipOrigin</code> 指定 tooltip 的锚定元素（可以使用我们提供的工具类 <code>import &#123; NzElementPatchModule &#125; from &#39;ng-zorro-antd/core/element-patch&#39;</code>）</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="位置"
+  nzVersion=""
   nzId="components-tooltip-demo-placement"
   nzSelector="nz-demo-tooltip-placement"
   nzLink="components-tooltip-demo-placement"
@@ -99,9 +100,9 @@
 	<nz-demo-tooltip-placement demo></nz-demo-tooltip-placement>
 	<div intro ngNonBindable><p>位置有 12 个方向。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="模板渲染"
+  nzVersion=""
   nzId="components-tooltip-demo-template"
   nzSelector="nz-demo-tooltip-template"
   nzLink="components-tooltip-demo-template"
@@ -115,9 +116,9 @@
 	<nz-demo-tooltip-template demo></nz-demo-tooltip-template>
 	<div intro ngNonBindable><p><code>nzTooltipTitle</code> 可以传入 <code>TemplateRef&lt;any&gt;</code> 模板渲染。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="多彩文字提示"
+  nzVersion=""
   nzId="components-tooltip-demo-color"
   nzSelector="nz-demo-tooltip-color"
   nzLink="components-tooltip-demo-color"
@@ -132,7 +133,6 @@
 	<div intro ngNonBindable><p>我们添加了多种预设色彩的文字提示样式，供不同场景使用。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tooltip"><span>[nz-tooltip]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-tooltip'" class="anchor">#</a></h3><table>
@@ -244,6 +244,7 @@
 <td>调整位置</td>
 </tr>
 </tbody></table>
-<h2 id="非_body_滚轴事件需要更新_cdk_的位置"><span>非 body 滚轴事件需要更新 CDK 的位置</span><a onclick="window.location.hash = '非_body_滚轴事件需要更新_cdk_的位置'" class="anchor">#</a></h2><p>在 tooltip 相关(包括 popconfirm popover) 的组件使用中，body 的滚轴事件会刷新 tooltip 的位置。如果是自定义容器的滚轴事件则不会刷新，你可以在自定义容器上添加 <code>cdkScrollable</code> 指令以达到该目的。注意，这里需要导入相关的包 <code>import &#123; ScrollingModule &#125; from &#39;&#64;angular/cdk/scrolling&#39;;</code>，更多信息请参考 <a href="https://material.angular.io/cdk/scrolling/api" target="_blank" rel="noopener">scrolling/api</a>。</p>
 <h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><p>请确保 <code>[nz-tooltip]</code> 元素能接受 <code>onMouseEnter</code>、<code>onMouseLeave</code>、<code>onFocus</code>、<code>onClick</code> 事件。</p>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q：滚动时浮层yuan素没有跟随滚动位置"><span>Q：滚动时浮层元素没有跟随滚动位置</span><a onclick="window.location.hash = 'q：滚动时浮层yuan素没有跟随滚动位置'" class="anchor">#</a></h3><p>默认情况下，浮层元素使用 <code>body</code> 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> 指令。
+注意：您需要从 <code>&#64;angular/cdk/scrolling</code> 导入 <code>CdkScrollable</code> 指令或 <code>ScrollingModule</code> 模块。</p>
 </section></article>

@@ -21,8 +21,8 @@ description: 级联选择框。
 
 ### nz-cascader
 
-| 参数                  | 说明                                                                                       | 类型                                                                  | 默认值         | 支持全局配置 |
-| --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------- | ------------ |
+| 参数                  | 说明                                                                                       | 类型                                                                  | 默认值         | 支持全局配置 | 版本   |
+| --------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------- | ------------ | ------ |
 | `[ngModel]`           | 指定选中项                                                                                 | `any[]`                                                               | -              |
 | `[nzAllowClear]`      | 是否支持清除                                                                               | `boolean`                                                             | `true`         |
 | `[nzAutoFocus]`       | 是否自动聚焦，当存在输入框时                                                               | `boolean`                                                             | `false`        |
@@ -44,7 +44,7 @@ description: 级联选择框。
 | `[nzNotFoundContent]` | 当下拉列表为空时显示的内容                                                                 | `string \| TemplateRef<void>`                                         | -              |
 | `[nzOptionRender]`    | 选项的渲染模板                                                                             | `TemplateRef<{ $implicit: NzCascaderOption, index: number }>`         |                |
 | `[nzOptions]`         | 可选项数据源                                                                               | `object[]`                                                            | -              |
-| `[nzOpen]`            | 控制浮层显隐                                                                               | `boolean`                                                             | `false`        |
+| `[nzOpen]`            | 控制浮层显隐                                                                               | `boolean`                                                             | `false`        | -            | 20.2.0 |
 | `[nzPlaceHolder]`     | 输入框占位文本                                                                             | `string`                                                              | `'请选择'`     |
 | `[nzPlacement]`       | 浮层弹出位置                                                                               | `'bottomLeft' \| 'bottomRight' \| 'topLeft' \| 'topRight'`            | `'bottomLeft'` |
 | `[nzShowArrow]`       | 是否显示箭头                                                                               | `boolean`                                                             | `true`         |
@@ -55,7 +55,7 @@ description: 级联选择框。
 | `[nzPrefix]`          | 自定义的选择框前缀                                                                         | `string \| TemplateRef<void>`                                         | -              |
 | `[nzSuffixIcon]`      | 自定义的选择框后缀图标                                                                     | `string \| TemplateRef<void>`                                         | -              |
 | `[nzValueProperty]`   | 选项的实际值的属性名                                                                       | `string`                                                              | `'value'`      |
-| `[nzVariant]`         | 形态变体                                                                                   | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`              | `'outlined'`   | ✅           |
+| `[nzVariant]`         | 形态变体                                                                                   | `'outlined' \| 'borderless' \| 'filled' \| 'underlined'`              | `'outlined'`   | ✅           | 20.0.0 |
 | `(ngModelChange)`     | 值发生变化时触发                                                                           | `EventEmitter<any[]>`                                                 | -              |
 | `(nzClear)`           | 清除值时触发                                                                               | `EventEmitter<void>`                                                  | -              |
 | `(nzVisibleChange)`   | 菜单浮层的显示/隐藏                                                                        | `EventEmitter<boolean>`                                               | -              |
@@ -138,3 +138,8 @@ const filter: NzCascaderFilter = (i, p) => {
 对传递给 Cascader 组件的 `nzLoadData` 参数会成为 `NzCasacderComponent` 对象的一个属性，调用这个函数时，函数中的 `this` 没有指向任何对象。
 因此，正确的做法是传递剪头函数，或者使用 `Function.bind` 将 `nzLoadData` 参数和你的对象绑定。
 [这里](https://stackoverflow.com/questions/60320913/ng-zorro-cascader-lazy-load-data-nzloaddata-function-got-this-undefined/60928983#60928983)是一个比较有代表性的例子。
+
+### Q：滚动时浮层元素没有跟随滚动位置
+
+默认情况下，浮层元素使用 `body` 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 [CdkScrollable](https://material.angular.dev/cdk/scrolling/api#CdkScrollable) 指令。
+注意：您需要从 `@angular/cdk/scrolling` 导入 `CdkScrollable` 指令或 `ScrollingModule` 模块。

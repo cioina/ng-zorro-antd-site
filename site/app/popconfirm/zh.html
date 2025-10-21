@@ -37,6 +37,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="基本"
+  nzVersion=""
   nzId="components-popconfirm-demo-basic"
   nzSelector="nz-demo-popconfirm-basic"
   nzLink="components-popconfirm-demo-basic"
@@ -50,9 +51,9 @@
 	<nz-demo-popconfirm-basic demo></nz-demo-popconfirm-basic>
 	<div intro ngNonBindable><p>最简单的用法。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="位置"
+  nzVersion=""
   nzId="components-popconfirm-demo-placement"
   nzSelector="nz-demo-popconfirm-placement"
   nzLink="components-popconfirm-demo-placement"
@@ -66,9 +67,9 @@
 	<nz-demo-popconfirm-placement demo></nz-demo-popconfirm-placement>
 	<div intro ngNonBindable><p>位置有十二个方向。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="自定义 icon 图标"
+  nzVersion=""
   nzId="components-popconfirm-demo-custom-icon"
   nzSelector="nz-demo-popconfirm-custom-icon"
   nzLink="components-popconfirm-demo-custom-icon"
@@ -82,9 +83,9 @@
 	<nz-demo-popconfirm-custom-icon demo></nz-demo-popconfirm-custom-icon>
 	<div intro ngNonBindable><p>使用 <code>nzIcon</code> 自定义提示图标。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="异步关闭"
+  nzVersion=""
   nzId="components-popconfirm-demo-async"
   nzSelector="nz-demo-popconfirm-async"
   nzLink="components-popconfirm-demo-async"
@@ -99,11 +100,11 @@
 	<div intro ngNonBindable><p>点击确定后异步关闭 Popconfirm，例如提交表单。</p>
 </div>
 </nz-code-box>
-
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="国际化"
+  nzVersion=""
   nzId="components-popconfirm-demo-locale"
   nzSelector="nz-demo-popconfirm-locale"
   nzLink="components-popconfirm-demo-locale"
@@ -117,9 +118,9 @@
 	<nz-demo-popconfirm-locale demo></nz-demo-popconfirm-locale>
 	<div intro ngNonBindable><p>使用 <code>okText</code> 和 <code>cancelText</code> 自定义按钮文字。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="条件触发"
+  nzVersion=""
   nzId="components-popconfirm-demo-dynamic-trigger"
   nzSelector="nz-demo-popconfirm-dynamic-trigger"
   nzLink="components-popconfirm-demo-dynamic-trigger"
@@ -133,9 +134,9 @@
 	<nz-demo-popconfirm-dynamic-trigger demo></nz-demo-popconfirm-dynamic-trigger>
 	<div intro ngNonBindable><p>可以判断是否需要弹出。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="隐藏箭头"
+  nzVersion=""
   nzId="components-popconfirm-demo-hide-arrow"
   nzSelector="nz-demo-popconfirm-hide-arrow"
   nzLink="components-popconfirm-demo-hide-arrow"
@@ -149,9 +150,9 @@
 	<nz-demo-popconfirm-hide-arrow demo></nz-demo-popconfirm-hide-arrow>
 	<div intro ngNonBindable><p>设置 <code>[nzPopconfirmShowArrow]=&quot;false&quot;</code> 隐藏箭头。</p>
 </div>
-</nz-code-box>
-<nz-code-box
+</nz-code-box><nz-code-box
   nzTitle="基于 Promise 的异步关闭"
+  nzVersion=""
   nzId="components-popconfirm-demo-promise"
   nzSelector="nz-demo-popconfirm-promise"
   nzLink="components-popconfirm-demo-promise"
@@ -166,7 +167,6 @@
 	<div intro ngNonBindable><p>点击确定后异步关闭 Popconfirm，例如提交表单。</p>
 </div>
 </nz-code-box>
-
 	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-popconfirm"><span>[nz-popconfirm]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-popconfirm'" class="anchor">#</a></h3><table>
@@ -289,6 +289,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -297,6 +298,7 @@
 <td><code>string</code></td>
 <td><code>&#39;取消&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkText]</code></td>
@@ -304,6 +306,7 @@
 <td><code>string</code></td>
 <td><code>&#39;确定&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkType]</code></td>
@@ -311,6 +314,7 @@
 <td><code>&#39;primary&#39; | &#39;ghost&#39; | &#39;dashed&#39; | &#39;default&#39;</code></td>
 <td><code>&#39;primary&#39;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkDanger]</code></td>
@@ -318,6 +322,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkDisabled]</code></td>
@@ -325,6 +330,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzOkButtonProps]</code></td>
@@ -332,6 +338,7 @@
 <td><code>NzPopConfirmButtonProps</code></td>
 <td><code>null</code></td>
 <td>-</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>[nzCancelButtonProps]</code></td>
@@ -339,6 +346,7 @@
 <td><code>NzPopConfirmButtonProps</code></td>
 <td><code>null</code></td>
 <td>-</td>
+<td>20.0.0</td>
 </tr>
 <tr>
 <td><code>[nzCondition]</code></td>
@@ -346,6 +354,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzIcon]</code></td>
@@ -353,6 +362,7 @@
 <td><code>string | TemplateRef&lt;void&gt; | null</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoFocus]</code></td>
@@ -360,6 +370,7 @@
 <td><code>null | &#39;ok&#39; | &#39;cancel&#39;</code></td>
 <td><code>null</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBeforeConfirm]</code></td>
@@ -367,6 +378,7 @@
 <td><code>(() =&gt; Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean) | null</code></td>
 <td><code>null</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzOnCancel)</code></td>
@@ -374,6 +386,7 @@
 <td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>(nzOnConfirm)</code></td>
@@ -381,8 +394,11 @@
 <td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 <td>-</td>
+<td></td>
 </tr>
 </tbody></table>
 <p>更多属性请参考 <a href="/components/tooltip/zh#api">Tooltip</a>。</p>
 <h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><p>请确保 <code>[nz-popconfirm]</code> 元素能接受 <code>onMouseEnter</code>、<code>onMouseLeave</code>、<code>onFocus</code>、<code>onClick</code> 事件。</p>
+<h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="q：滚动时浮层yuan素没有跟随滚动位置"><span>Q：滚动时浮层元素没有跟随滚动位置</span><a onclick="window.location.hash = 'q：滚动时浮层yuan素没有跟随滚动位置'" class="anchor">#</a></h3><p>默认情况下，浮层元素使用 <code>body</code> 作为滚动容器，如果使用了其他滚动容器，在自定义滚动容器元素上添加 <a href="https://material.angular.dev/cdk/scrolling/api#CdkScrollable" target="_blank" rel="noopener">CdkScrollable</a> 指令。
+注意：您需要从 <code>&#64;angular/cdk/scrolling</code> 导入 <code>CdkScrollable</code> 指令或 <code>ScrollingModule</code> 模块。</p>
 </section></article>
