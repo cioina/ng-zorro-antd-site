@@ -9,6 +9,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-addon" nzTitle="前置/后置标签"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-compact" nzTitle="紧凑模式"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-search-input" nzTitle="搜索框"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-demo-search-input-loading" nzTitle="搜索框 loading"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-textarea" nzTitle="文本域"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-autosize-textarea" nzTitle="适应文本高度的文本域"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-otp" nzTitle="一次性密码框"></nz-link>
@@ -93,6 +94,137 @@
 	<div intro ngNonBindable><p>使用 <code>&lt;nz-space-compact&gt;</code> 创建紧凑模式，更多请查看<a href="/components/space/zh#nz-space-compact">文档</a>。</p>
 </div>
 </nz-code-box><nz-code-box
+  nzTitle="搜索框 loading"
+  nzVersion="20.4.0"
+  nzId="components-input-demo-search-input-loading"
+  nzSelector="nz-demo-input-search-input-loading"
+  nzLink="components-input-demo-search-input-loading"
+  nzGenerateCommand="ng g ng-zorro-antd:input-search-input-loading <name>"
+  nzComponentName="NzDemoInputSearchInputLoadingComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/search-input-loading.md"
+>
+	<nz-demo-input-search-input-loading demo></nz-demo-input-search-input-loading>
+	<div intro ngNonBindable><p>用于 <code>nzSearch</code> 的时候展示 <code>loading</code>。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="适应文本高度的文本域"
+  nzVersion=""
+  nzId="components-input-demo-autosize-textarea"
+  nzSelector="nz-demo-input-autosize-textarea"
+  nzLink="components-input-demo-autosize-textarea"
+  nzGenerateCommand="ng g ng-zorro-antd:input-autosize-textarea <name>"
+  nzComponentName="NzDemoInputAutosizeTextareaComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/autosize-textarea.md"
+>
+	<nz-demo-input-autosize-textarea demo></nz-demo-input-autosize-textarea>
+	<div intro ngNonBindable><p><code>nzAutosize</code> 属性适用于 <code>textarea</code> 节点，并且只有高度会自动变化。另外 <code>nzAutosize</code> 可以设定为一个对象，指定最小行数和最大行数。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="输入时格式化展示"
+  nzVersion=""
+  nzId="components-input-demo-tooltip"
+  nzSelector="nz-demo-input-tooltip"
+  nzLink="components-input-demo-tooltip"
+  nzGenerateCommand="ng g ng-zorro-antd:input-tooltip <name>"
+  nzComponentName="NzDemoInputTooltipComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/tooltip.md"
+>
+	<nz-demo-input-tooltip demo></nz-demo-input-tooltip>
+	<div intro ngNonBindable><p>结合 <a href="/components/tooltip/zh">Tooltip</a> 组件，实现一个数值输入框，方便内容超长时的全量展现。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="密码框"
+  nzVersion="20.4.0"
+  nzId="components-input-demo-password-input"
+  nzSelector="nz-demo-input-password-input"
+  nzLink="components-input-demo-password-input"
+  nzGenerateCommand="ng g ng-zorro-antd:input-password-input <name>"
+  nzComponentName="NzDemoInputPasswordInputComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/password-input.md"
+>
+	<nz-demo-input-password-input demo></nz-demo-input-password-input>
+	<div intro ngNonBindable><p>密码框。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="带数字提示的文本域"
+  nzVersion=""
+  nzId="components-input-demo-textarea-with-character-count"
+  nzSelector="nz-demo-input-textarea-with-character-count"
+  nzLink="components-input-demo-textarea-with-character-count"
+  nzGenerateCommand="ng g ng-zorro-antd:input-textarea-with-character-count <name>"
+  nzComponentName="NzDemoInputTextareaWithCharacterCountComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/textarea-with-character-count.md"
+>
+	<nz-demo-input-textarea-with-character-count demo></nz-demo-input-textarea-with-character-count>
+	<div intro ngNonBindable><p>展示数字提示。</p>
+</div>
+</nz-code-box>
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="三种大小"
+  nzVersion=""
+  nzId="components-input-demo-size"
+  nzSelector="nz-demo-input-size"
+  nzLink="components-input-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:input-size <name>"
+  nzComponentName="NzDemoInputSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/size.md"
+>
+	<nz-demo-input-size demo></nz-demo-input-size>
+	<div intro ngNonBindable><p>我们为 <code>nz-input</code> 输入框定义了三种尺寸（大、默认、小），高度分别为 <code>40px</code>、<code>32px</code> 和 <code>24px</code>。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="前置/后置标签"
+  nzVersion=""
+  nzId="components-input-demo-addon"
+  nzSelector="nz-demo-input-addon"
+  nzLink="components-input-demo-addon"
+  nzGenerateCommand="ng g ng-zorro-antd:input-addon <name>"
+  nzComponentName="NzDemoInputAddonComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/addon.md"
+>
+	<nz-demo-input-addon demo></nz-demo-input-addon>
+	<div intro ngNonBindable><p>用于配置一些固定组合。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="搜索框"
+  nzVersion="20.4.0"
+  nzId="components-input-demo-search-input"
+  nzSelector="nz-demo-input-search-input"
+  nzLink="components-input-demo-search-input"
+  nzGenerateCommand="ng g ng-zorro-antd:input-search-input <name>"
+  nzComponentName="NzDemoInputSearchInputComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/search-input.md"
+>
+	<nz-demo-input-search-input demo></nz-demo-input-search-input>
+	<div intro ngNonBindable><p>带有搜索按钮的输入框。</p>
+</div>
+</nz-code-box><nz-code-box
   nzTitle="文本域"
   nzVersion=""
   nzId="components-input-demo-textarea"
@@ -171,121 +303,6 @@
 >
 	<nz-demo-input-status demo></nz-demo-input-status>
 	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 Input 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
-</div>
-</nz-code-box>
-	</div>
-	<div nz-col [nzXl]="12" [nzSpan]="24">
-		<nz-code-box
-  nzTitle="三种大小"
-  nzVersion=""
-  nzId="components-input-demo-size"
-  nzSelector="nz-demo-input-size"
-  nzLink="components-input-demo-size"
-  nzGenerateCommand="ng g ng-zorro-antd:input-size <name>"
-  nzComponentName="NzDemoInputSizeComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/size.md"
->
-	<nz-demo-input-size demo></nz-demo-input-size>
-	<div intro ngNonBindable><p>我们为 <code>nz-input</code> 输入框定义了三种尺寸（大、默认、小），高度分别为 <code>40px</code>、<code>32px</code> 和 <code>24px</code>。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="前置/后置标签"
-  nzVersion=""
-  nzId="components-input-demo-addon"
-  nzSelector="nz-demo-input-addon"
-  nzLink="components-input-demo-addon"
-  nzGenerateCommand="ng g ng-zorro-antd:input-addon <name>"
-  nzComponentName="NzDemoInputAddonComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/addon.md"
->
-	<nz-demo-input-addon demo></nz-demo-input-addon>
-	<div intro ngNonBindable><p>用于配置一些固定组合。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="搜索框"
-  nzVersion=""
-  nzId="components-input-demo-search-input"
-  nzSelector="nz-demo-input-search-input"
-  nzLink="components-input-demo-search-input"
-  nzGenerateCommand="ng g ng-zorro-antd:input-search-input <name>"
-  nzComponentName="NzDemoInputSearchInputComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/search-input.md"
->
-	<nz-demo-input-search-input demo></nz-demo-input-search-input>
-	<div intro ngNonBindable><p>带有搜索按钮的输入框。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="适应文本高度的文本域"
-  nzVersion=""
-  nzId="components-input-demo-autosize-textarea"
-  nzSelector="nz-demo-input-autosize-textarea"
-  nzLink="components-input-demo-autosize-textarea"
-  nzGenerateCommand="ng g ng-zorro-antd:input-autosize-textarea <name>"
-  nzComponentName="NzDemoInputAutosizeTextareaComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/autosize-textarea.md"
->
-	<nz-demo-input-autosize-textarea demo></nz-demo-input-autosize-textarea>
-	<div intro ngNonBindable><p><code>nzAutosize</code> 属性适用于 <code>textarea</code> 节点，并且只有高度会自动变化。另外 <code>nzAutosize</code> 可以设定为一个对象，指定最小行数和最大行数。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="输入时格式化展示"
-  nzVersion=""
-  nzId="components-input-demo-tooltip"
-  nzSelector="nz-demo-input-tooltip"
-  nzLink="components-input-demo-tooltip"
-  nzGenerateCommand="ng g ng-zorro-antd:input-tooltip <name>"
-  nzComponentName="NzDemoInputTooltipComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/tooltip.md"
->
-	<nz-demo-input-tooltip demo></nz-demo-input-tooltip>
-	<div intro ngNonBindable><p>结合 <a href="/components/tooltip/zh">Tooltip</a> 组件，实现一个数值输入框，方便内容超长时的全量展现。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="密码框"
-  nzVersion="20.4.0"
-  nzId="components-input-demo-password-input"
-  nzSelector="nz-demo-input-password-input"
-  nzLink="components-input-demo-password-input"
-  nzGenerateCommand="ng g ng-zorro-antd:input-password-input <name>"
-  nzComponentName="NzDemoInputPasswordInputComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/password-input.md"
->
-	<nz-demo-input-password-input demo></nz-demo-input-password-input>
-	<div intro ngNonBindable><p>密码框。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="带数字提示的文本域"
-  nzVersion=""
-  nzId="components-input-demo-textarea-with-character-count"
-  nzSelector="nz-demo-input-textarea-with-character-count"
-  nzLink="components-input-demo-textarea-with-character-count"
-  nzGenerateCommand="ng g ng-zorro-antd:input-textarea-with-character-count <name>"
-  nzComponentName="NzDemoInputTextareaWithCharacterCountComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/textarea-with-character-count.md"
->
-	<nz-demo-input-textarea-with-character-count demo></nz-demo-input-textarea-with-character-count>
-	<div intro ngNonBindable><p>展示数字提示。</p>
 </div>
 </nz-code-box>
 	</div>
@@ -411,6 +428,35 @@
 <td>是否显示密码变更事件</td>
 <td><code>OutputEmitterRef&lt;boolean&gt;</code></td>
 <td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-input-search"><span>nz-input-search</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-search'" class="anchor">#</a></h3><p>可使用 <code>nz-input-wrapper</code> 的所有属性。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzEnterButton]</code></td>
+<td>是否有确认按钮，可设为按钮文字。该属性会与 <code>nzAddonAfter</code> 冲突。</td>
+<td><code>boolean | string</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzLoading]</code></td>
+<td>搜索 loading</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzSearch)</code></td>
+<td>点击搜索图标、清除图标，或按下回车键时的事件</td>
+<td><code>&#123; value: string, event: Event, source: &#39;clear&#39; | &#39;input&#39; &#125;</code></td>
+<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-input-group"><span>nz-input-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-group'" class="anchor">#</a></h3><blockquote>

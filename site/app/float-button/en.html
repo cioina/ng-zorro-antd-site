@@ -13,6 +13,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-float-button-demo-open" nzTitle="Controlled mode"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group-placement" nzTitle="Placement"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-float-button-demo-top" nzTitle="Back Top"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-badge" nzTitle="Badge"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -119,6 +120,22 @@
 	<nz-demo-float-button-group-placement demo></nz-demo-float-button-group-placement>
 	<div intro ngNonBindable><p>Customize animation placement, providing four preset placement: <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, the <code>top</code> position by default.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Badge"
+  nzVersion="20.4.0"
+  nzId="components-float-button-demo-badge"
+  nzSelector="nz-demo-float-button-badge"
+  nzLink="components-float-button-demo-badge"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-badge <name>"
+  nzComponentName="NzDemoFloatButtonBadgeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/badge.md"
+>
+	<nz-demo-float-button-badge demo></nz-demo-float-button-badge>
+	<div intro ngNonBindable><p>FloatButton with Badge.</p>
+</div>
 </nz-code-box>
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -215,6 +232,7 @@
 <th>Description</th>
 <th>Type</th>
 <th>Default</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -222,42 +240,56 @@
 <td>Set the icon component of button</td>
 <td><code>string | TemplateRef&lt;void&gt; | null</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDescription]</code></td>
 <td>Text and other content</td>
 <td><code>string | TemplateRef&lt;void&gt; | null</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzType]</code></td>
 <td>Button type</td>
 <td><code>&#39;default&#39; | &#39;primary&#39;</code></td>
 <td><code>&#39;default&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShape]</code></td>
 <td>Button shape</td>
 <td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
 <td><code>&#39;circle&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzHref]</code></td>
 <td>The target of hyperlink</td>
 <td><code>string</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzTarget]</code></td>
 <td>Specifies where to display the linked URL</td>
 <td><code>string</code></td>
 <td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzBadge]</code></td>
+<td>badge</td>
+<td><code>NzFloatButtonBadge</code></td>
+<td>-</td>
+<td>20.4.0</td>
 </tr>
 <tr>
 <td><code>(nzOnClick)</code></td>
 <td>Callback of <code>click</code> event</td>
 <td><code>EventEmitter&lt;boolean&gt;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-float-button-group"><span>nz-float-button-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-group'" class="anchor">#</a></h3><table>
@@ -267,43 +299,31 @@
 <th>Description</th>
 <th>Type</th>
 <th>Default</th>
-<th>Version</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>[nzShape]</code></td>
-<td>Shape of button group</td>
-<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
-<td><code>&#39;circle&#39;</code></td>
-<td></td>
-</tr>
-<tr>
 <td><code>[nzTrigger]</code></td>
 <td>Which action can trigger menu open/close</td>
 <td><code>&#39;click&#39; | &#39;hover&#39;</code></td>
 <td>-</td>
-<td></td>
 </tr>
 <tr>
 <td><code>[nzPlacement]</code></td>
 <td>Customize menu animation placement</td>
 <td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
 <td><code>&#39;top&#39;</code></td>
-<td>20.1.0</td>
 </tr>
 <tr>
 <td><code>[nzOpen]</code></td>
 <td>Whether the menu is visible or not</td>
 <td><code>boolean</code></td>
 <td>-</td>
-<td></td>
 </tr>
 <tr>
 <td><code>(nzOnOpenChange)</code></td>
 <td>Callback executed when active menu is changed</td>
 <td><code>EventEmitter&lt;boolean&gt;</code></td>
 <td>-</td>
-<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-float-button-top"><span>nz-float-button-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-top'" class="anchor">#</a></h3><table>
@@ -337,12 +357,15 @@
 <td><code>450</code></td>
 <td>-</td>
 </tr>
-<tr>
-<td><code>(nzOnClick)</code></td>
-<td>Callback executed when click the button</td>
-<td><code>EventEmitter&lt;boolean&gt;</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
 </tbody></table>
-</section></article>
+<h3 id="interfaces"><span>Interfaces</span><a onclick="window.location.hash = 'interfaces'" class="anchor">#</a></h3><h4 id="nzfloatbuttonbadge"><span>NzFloatButtonBadge</span><a onclick="window.location.hash = 'nzfloatbuttonbadge'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token comment">// omit nzShowDot, nzTitle, nzStatus, nzText from the props of NzBadge</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">NzFloatButtonBadge</span> <span class="token punctuation">&#123;</span>
+  nzDot<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  nzCount<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> TemplateRef<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">;</span>
+  nzShowZero<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  nzOverflowCount<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  nzColor<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  nzOffset<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  nzSize<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">'default'</span> <span class="token operator">|</span> <span class="token string">'small'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre></section></article>

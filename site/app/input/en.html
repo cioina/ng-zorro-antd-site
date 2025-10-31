@@ -9,6 +9,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-addon" nzTitle="Pre / Post tab"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-compact" nzTitle="Compact Style"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-search-input" nzTitle="Search box"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-demo-search-input-loading" nzTitle="Search box with loading"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-textarea" nzTitle="TextArea"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-autosize-textarea" nzTitle="Autosizing the height to fit the content"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-otp" nzTitle="OTP"></nz-link>
@@ -93,6 +94,138 @@
 	<div intro ngNonBindable><p>Use <code>&lt;nz-space-compact&gt;</code> create compact style, See the <a href="/components/space/en#nz-space-compact">documentation</a> for more.</p>
 </div>
 </nz-code-box><nz-code-box
+  nzTitle="Search box with loading"
+  nzVersion="20.4.0"
+  nzId="components-input-demo-search-input-loading"
+  nzSelector="nz-demo-input-search-input-loading"
+  nzLink="components-input-demo-search-input-loading"
+  nzGenerateCommand="ng g ng-zorro-antd:input-search-input-loading <name>"
+  nzComponentName="NzDemoInputSearchInputLoadingComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/search-input-loading.md"
+>
+	<nz-demo-input-search-input-loading demo></nz-demo-input-search-input-loading>
+	<div intro ngNonBindable><p>Search loading when onSearch.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Autosizing the height to fit the content"
+  nzVersion=""
+  nzId="components-input-demo-autosize-textarea"
+  nzSelector="nz-demo-input-autosize-textarea"
+  nzLink="components-input-demo-autosize-textarea"
+  nzGenerateCommand="ng g ng-zorro-antd:input-autosize-textarea <name>"
+  nzComponentName="NzDemoInputAutosizeTextareaComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/autosize-textarea.md"
+>
+	<nz-demo-input-autosize-textarea demo></nz-demo-input-autosize-textarea>
+	<div intro ngNonBindable><p><code>nzAutosize</code> prop for a <code>textarea</code> type of <code>nz-input</code> makes the height to automatically adjust based on the content.
+An options object can be provided to <code>nzAutosize</code> to specify the minimum and maximum number of lines the textarea will automatically adjust.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Format Tooltip Input"
+  nzVersion=""
+  nzId="components-input-demo-tooltip"
+  nzSelector="nz-demo-input-tooltip"
+  nzLink="components-input-demo-tooltip"
+  nzGenerateCommand="ng g ng-zorro-antd:input-tooltip <name>"
+  nzComponentName="NzDemoInputTooltipComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/tooltip.md"
+>
+	<nz-demo-input-tooltip demo></nz-demo-input-tooltip>
+	<div intro ngNonBindable><p>You can use the Input in conjunction with <a href="/components/tooltip/en">Tooltip</a> component to create a Numeric Input, which can provide a good experience for extra-long content display.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Password box"
+  nzVersion="20.4.0"
+  nzId="components-input-demo-password-input"
+  nzSelector="nz-demo-input-password-input"
+  nzLink="components-input-demo-password-input"
+  nzGenerateCommand="ng g ng-zorro-antd:input-password-input <name>"
+  nzComponentName="NzDemoInputPasswordInputComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/password-input.md"
+>
+	<nz-demo-input-password-input demo></nz-demo-input-password-input>
+	<div intro ngNonBindable><p>Input type of password.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Textarea with character count"
+  nzVersion=""
+  nzId="components-input-demo-textarea-with-character-count"
+  nzSelector="nz-demo-input-textarea-with-character-count"
+  nzLink="components-input-demo-textarea-with-character-count"
+  nzGenerateCommand="ng g ng-zorro-antd:input-textarea-with-character-count <name>"
+  nzComponentName="NzDemoInputTextareaWithCharacterCountComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/textarea-with-character-count.md"
+>
+	<nz-demo-input-textarea-with-character-count demo></nz-demo-input-textarea-with-character-count>
+	<div intro ngNonBindable><p>Show character count.</p>
+</div>
+</nz-code-box>
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Three sizes of Input"
+  nzVersion=""
+  nzId="components-input-demo-size"
+  nzSelector="nz-demo-input-size"
+  nzLink="components-input-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:input-size <name>"
+  nzComponentName="NzDemoInputSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/size.md"
+>
+	<nz-demo-input-size demo></nz-demo-input-size>
+	<div intro ngNonBindable><p>There are three sizes of an Input box: <code>large</code> (40px)、<code>default</code> (32px) and <code>small</code> (24px).</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Pre / Post tab"
+  nzVersion=""
+  nzId="components-input-demo-addon"
+  nzSelector="nz-demo-input-addon"
+  nzLink="components-input-demo-addon"
+  nzGenerateCommand="ng g ng-zorro-antd:input-addon <name>"
+  nzComponentName="NzDemoInputAddonComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/addon.md"
+>
+	<nz-demo-input-addon demo></nz-demo-input-addon>
+	<div intro ngNonBindable><p>Using pre &amp; post tabs example.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Search box"
+  nzVersion="20.4.0"
+  nzId="components-input-demo-search-input"
+  nzSelector="nz-demo-input-search-input"
+  nzLink="components-input-demo-search-input"
+  nzGenerateCommand="ng g ng-zorro-antd:input-search-input <name>"
+  nzComponentName="NzDemoInputSearchInputComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/search-input.md"
+>
+	<nz-demo-input-search-input demo></nz-demo-input-search-input>
+	<div intro ngNonBindable><p>Example of creating a search box by grouping a standard input with a search button.</p>
+</div>
+</nz-code-box><nz-code-box
   nzTitle="TextArea"
   nzVersion=""
   nzId="components-input-demo-textarea"
@@ -171,122 +304,6 @@
 >
 	<nz-demo-input-status demo></nz-demo-input-status>
 	<div intro ngNonBindable><p>Add status to Input with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
-</div>
-</nz-code-box>
-	</div>
-	<div nz-col [nzXl]="12" [nzSpan]="24">
-		<nz-code-box
-  nzTitle="Three sizes of Input"
-  nzVersion=""
-  nzId="components-input-demo-size"
-  nzSelector="nz-demo-input-size"
-  nzLink="components-input-demo-size"
-  nzGenerateCommand="ng g ng-zorro-antd:input-size <name>"
-  nzComponentName="NzDemoInputSizeComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/size.md"
->
-	<nz-demo-input-size demo></nz-demo-input-size>
-	<div intro ngNonBindable><p>There are three sizes of an Input box: <code>large</code> (40px)、<code>default</code> (32px) and <code>small</code> (24px).</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Pre / Post tab"
-  nzVersion=""
-  nzId="components-input-demo-addon"
-  nzSelector="nz-demo-input-addon"
-  nzLink="components-input-demo-addon"
-  nzGenerateCommand="ng g ng-zorro-antd:input-addon <name>"
-  nzComponentName="NzDemoInputAddonComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/addon.md"
->
-	<nz-demo-input-addon demo></nz-demo-input-addon>
-	<div intro ngNonBindable><p>Using pre &amp; post tabs example.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Search box"
-  nzVersion=""
-  nzId="components-input-demo-search-input"
-  nzSelector="nz-demo-input-search-input"
-  nzLink="components-input-demo-search-input"
-  nzGenerateCommand="ng g ng-zorro-antd:input-search-input <name>"
-  nzComponentName="NzDemoInputSearchInputComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/search-input.md"
->
-	<nz-demo-input-search-input demo></nz-demo-input-search-input>
-	<div intro ngNonBindable><p>Example of creating a search box by grouping a standard input with a search button.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Autosizing the height to fit the content"
-  nzVersion=""
-  nzId="components-input-demo-autosize-textarea"
-  nzSelector="nz-demo-input-autosize-textarea"
-  nzLink="components-input-demo-autosize-textarea"
-  nzGenerateCommand="ng g ng-zorro-antd:input-autosize-textarea <name>"
-  nzComponentName="NzDemoInputAutosizeTextareaComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/autosize-textarea.md"
->
-	<nz-demo-input-autosize-textarea demo></nz-demo-input-autosize-textarea>
-	<div intro ngNonBindable><p><code>nzAutosize</code> prop for a <code>textarea</code> type of <code>nz-input</code> makes the height to automatically adjust based on the content.
-An options object can be provided to <code>nzAutosize</code> to specify the minimum and maximum number of lines the textarea will automatically adjust.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Format Tooltip Input"
-  nzVersion=""
-  nzId="components-input-demo-tooltip"
-  nzSelector="nz-demo-input-tooltip"
-  nzLink="components-input-demo-tooltip"
-  nzGenerateCommand="ng g ng-zorro-antd:input-tooltip <name>"
-  nzComponentName="NzDemoInputTooltipComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/tooltip.md"
->
-	<nz-demo-input-tooltip demo></nz-demo-input-tooltip>
-	<div intro ngNonBindable><p>You can use the Input in conjunction with <a href="/components/tooltip/en">Tooltip</a> component to create a Numeric Input, which can provide a good experience for extra-long content display.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Password box"
-  nzVersion="20.4.0"
-  nzId="components-input-demo-password-input"
-  nzSelector="nz-demo-input-password-input"
-  nzLink="components-input-demo-password-input"
-  nzGenerateCommand="ng g ng-zorro-antd:input-password-input <name>"
-  nzComponentName="NzDemoInputPasswordInputComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/password-input.md"
->
-	<nz-demo-input-password-input demo></nz-demo-input-password-input>
-	<div intro ngNonBindable><p>Input type of password.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Textarea with character count"
-  nzVersion=""
-  nzId="components-input-demo-textarea-with-character-count"
-  nzSelector="nz-demo-input-textarea-with-character-count"
-  nzLink="components-input-demo-textarea-with-character-count"
-  nzGenerateCommand="ng g ng-zorro-antd:input-textarea-with-character-count <name>"
-  nzComponentName="NzDemoInputTextareaWithCharacterCountComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/textarea-with-character-count.md"
->
-	<nz-demo-input-textarea-with-character-count demo></nz-demo-input-textarea-with-character-count>
-	<div intro ngNonBindable><p>Show character count.</p>
 </div>
 </nz-code-box>
 	</div>
@@ -419,6 +436,35 @@ An options object can be provided to <code>nzAutosize</code> to specify the mini
 <td>Event emitted when the visibility of the password changes</td>
 <td><code>OutputEmitterRef&lt;boolean&gt;</code></td>
 <td>-</td>
+</tr>
+</tbody></table>
+<h3 id="nz-input-search"><span>nz-input-search</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-search'" class="anchor">#</a></h3><p>All properties of <code>nz-input-wrapper</code> can be used.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzEnterButton]</code></td>
+<td>false displays the default button color, true uses the primary color, or you can provide a custom button. Conflicts with <code>nzAddonAfter</code>.</td>
+<td><code>boolean | string</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzLoading]</code></td>
+<td>Search box with loading</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>(nzSearch)</code></td>
+<td>The event triggered when you click on the search-icon, the clear-icon or press the Enter key</td>
+<td><code>&#123; value: string, event: Event, source: &#39;clear&#39; | &#39;input&#39; &#125;</code></td>
+<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-input-group"><span>nz-input-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-group'" class="anchor">#</a></h3><blockquote>

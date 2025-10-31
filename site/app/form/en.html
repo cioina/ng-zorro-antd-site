@@ -35,7 +35,9 @@
 <li>When you need to validate fields in certain rules.</li>
 </ul>
 <blockquote>
-<p>Form is totally based on <a href="https://angular.dev/guide/forms" target="_blank" rel="noopener">Angular Forms</a>, you can use <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank" rel="noopener">reactive forms</a> or <a href="https://angular.dev/guide/forms/template-driven-forms" target="_blank" rel="noopener">template-driven-forms</a>.
+<p>Form is totally based on <a href="https://angular.dev/guide/forms" target="_blank" rel="noopener">Angular Forms</a>, you can
+use <a href="https://angular.dev/guide/forms/reactive-forms" target="_blank" rel="noopener">reactive forms</a>
+or <a href="https://angular.dev/guide/forms/template-driven-forms" target="_blank" rel="noopener">template-driven-forms</a>.
 Please make sure you have read the official form document before using the component.</p>
 </blockquote>
 <h2 id="form"><span>Form</span><a onclick="window.location.hash = 'form'" class="anchor">#</a></h2><p>You can align the controls of a <code>form</code> using the <code>layout</code> prop：</p>
@@ -339,7 +341,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 </div>
 </nz-code-box><nz-code-box
   nzTitle="Required style"
-  nzVersion=""
+  nzVersion="20.4.0"
   nzId="components-form-demo-required-style"
   nzSelector="nz-demo-form-required-style"
   nzLink="components-form-demo-required-style"
@@ -363,6 +365,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <th>Type</th>
 <th>Default Value</th>
 <th>Global Config</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -371,6 +374,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>&#39;horizontal&#39; | &#39;vertical&#39; | &#39;inline&#39;</code></td>
 <td><code>&#39;horizontal&#39;</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoTips]</code></td>
@@ -378,6 +382,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>Record&lt;string, Record&lt;string, string&gt;&gt;</code></td>
 <td><code>&#123;&#125;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDisableAutoTips]</code></td>
@@ -385,6 +390,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzNoColon]</code></td>
@@ -392,6 +398,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzTooltipIcon]</code></td>
@@ -399,12 +406,14 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>string | &#123; type: string; theme: ThemeType &#125;</code></td>
 <td><code>&#123; type: &#39;question-circle&#39;, theme: &#39;outline&#39; &#125;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzLabelAlign]</code></td>
 <td>Set default props <code>[nzLabelAlign]</code> value of <code>nz-form-label</code></td>
 <td><code>&#39;left&#39; | &#39;right&#39;</code></td>
 <td><code>&#39;right&#39;</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -413,6 +422,7 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzRequiredMark]</code></td>
@@ -420,15 +430,16 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>NzRequiredMark</code></td>
 <td><code>true</code></td>
 <td></td>
+<td>20.4.0</td>
 </tr>
 </tbody></table>
 <h3 id="nz-form-item"><span>nz-form-item</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-item'" class="anchor">#</a></h3><p>Used to separate the item in forms, contains label(optional) and control field.</p>
 <blockquote>
-<p>All api in <a href="/components/grid/zh">nz-row</a> can be used in <code>nz-form-item</code>.</p>
+<p>All api in <a href="/components/grid/en">nz-row</a> can be used in <code>nz-form-item</code>.</p>
 </blockquote>
 <h3 id="nz-form-label"><span>nz-form-label</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-label'" class="anchor">#</a></h3><p>The label of the form item, optional.</p>
 <blockquote>
-<p>All api in <a href="/components/grid/zh">nz-col</a> can be used in <code>nz-form-label</code>.</p>
+<p>All api in <a href="/components/grid/en">nz-col</a> can be used in <code>nz-form-label</code>.</p>
 </blockquote>
 <table>
 <thead>
@@ -483,11 +494,13 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 </tr>
 </tbody></table>
 <h3 id="nz-form-control"><span>nz-form-control</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-control'" class="anchor">#</a></h3><blockquote>
-<p>Note：Due to the lack of partial Observable in <a href="https://github.com/angular/angular/issues/10887" target="_blank" rel="noopener">Angular Form</a>, you have to notify <code>nz-form-control</code> to update its status with <code>updateValueAndValidity</code> when you update form status using methods like <code>markAsDirty</code>.</p>
+<p>Note：Due to the lack of partial Observable in <a href="https://github.com/angular/angular/issues/10887" target="_blank" rel="noopener">Angular Form</a>, you
+have to notify <code>nz-form-control</code> to update its status with <code>updateValueAndValidity</code> when you update form status using
+methods like <code>markAsDirty</code>.</p>
 </blockquote>
 <p>A form consists of one or more form fields whose type includes input, textarea, checkbox, radio, select, tag, and more.</p>
 <blockquote>
-<p>All api in <a href="/components/grid/zh">nz-col</a> can be used in <code>nz-form-control</code>.</p>
+<p>All api in <a href="/components/grid/en">nz-col</a> can be used in <code>nz-form-control</code>.</p>
 </blockquote>
 <table>
 <thead>

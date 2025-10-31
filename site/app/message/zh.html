@@ -86,7 +86,7 @@
 </div>
 </nz-code-box><nz-code-box
   nzTitle="自定义样式"
-  nzVersion=""
+  nzVersion="20.4.0"
   nzId="components-message-demo-custom-style"
   nzSelector="nz-demo-message-custom-style"
   nzLink="components-message-demo-custom-style"
@@ -192,42 +192,49 @@
 <th>参数</th>
 <th>说明</th>
 <th>类型</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>nzDuration</td>
 <td>持续时间(毫秒)，当设置为0时不消失</td>
 <td><code>number</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzPauseOnHover</td>
 <td>鼠标移上时禁止自动移除</td>
 <td><code>boolean</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzAnimate</td>
 <td>开关动画效果</td>
 <td><code>boolean</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzData</td>
 <td>传递给自定义模板的数据</td>
 <td><code>NzSafeAny</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzStyle</td>
 <td>自定义内联样式</td>
 <td><code>NgStyleInterface | string</code></td>
+<td>20.4.0</td>
 </tr>
 <tr>
-<td>nzClassName</td>
+<td>nzClass</td>
 <td>自定义 CSS class</td>
 <td><code>NgClassInterface | string</code></td>
+<td>20.4.0</td>
 </tr>
 </tbody></table>
 <p>还提供了全局销毁方法：</p>
 <ul>
-<li><code>NzMessageService.remove(id)</code> // 移除特定id的消息，当id为空时，移除所有消息（该消息id通过上述方法返回值中得到）</li>
+<li><code>NzMessageService.remove(id)</code>: 移除特定id的消息，当id为空时，移除所有消息（该消息id通过上述方法返回值中得到）</li>
 </ul>
 <h3 id="全局配置"><span>全局配置</span><a onclick="window.location.hash = '全局配置'" class="anchor">#</a></h3><p>可以通过 <code>NzConfigService</code> 进行全局配置，详情请见文档中 <a href="/docs/global-config/zh">全局配置项</a> 章节。</p>
 <table>

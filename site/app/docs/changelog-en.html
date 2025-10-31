@@ -7,6 +7,9 @@
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
     <nz-link nzHref="#release-schedule" class="toc-indent-2" nzTitle="Release Schedule"></nz-link>
+<nz-link nzHref="#20-4-0" class="toc-indent-1" nzTitle="20.4.0"></nz-link>
+<nz-link nzHref="#features" class="toc-indent-2" nzTitle="Features"></nz-link>
+<nz-link nzHref="#bug-fixes" class="toc-indent-2" nzTitle="Bug Fixes"></nz-link>
 <nz-link nzHref="#20-3-1" class="toc-indent-1" nzTitle="20.3.1"></nz-link>
 <nz-link nzHref="#bug-fixes" class="toc-indent-2" nzTitle="Bug Fixes"></nz-link>
 <nz-link nzHref="#20-3-0" class="toc-indent-1" nzTitle="20.3.0"></nz-link>
@@ -189,6 +192,26 @@
 <li>Major version release is not included in this schedule for breaking change and new features.</li>
 </ul>
 <hr>
+<h2 id="2040"><span>20.4.0</span><a onclick="window.location.hash = '2040'" class="anchor">#</a></h2><p><code>2025-10-31</code></p>
+<h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
+<li><strong>cascader:</strong> control the visibility of popup panel by <code>nzOpen</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9448" target="_blank" rel="noopener">#9448</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/4d5ec6536f64690319e0fd219dc4b07c724764db" target="_blank" rel="noopener">4d5ec65</a>)</li>
+<li><strong>cascader:</strong> toggle checkbox of option by <code>ENTER</code> key in multiple mode (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9457" target="_blank" rel="noopener">#9457</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/e02f1f45f6ae1d5836b1b751bb23bfa55c5f1c33" target="_blank" rel="noopener">e02f1f4</a>)</li>
+<li><strong>float-button:</strong> support <code>nzBadge</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9489" target="_blank" rel="noopener">#9489</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/12beec73fe3071e116788635ae17b1668d3b5ad8" target="_blank" rel="noopener">12beec7</a>)</li>
+<li><strong>form:</strong> support <code>nzRequiredMark</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9447" target="_blank" rel="noopener">#9447</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/800b6cf960af7c4dfce0378eeb9fd361d21ac06b" target="_blank" rel="noopener">800b6cf</a>)</li>
+<li><strong>input-number:</strong> add affix and addon inputs (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9451" target="_blank" rel="noopener">#9451</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/dbebd025cc5101d879301405f0e0ce4baca4bdf5" target="_blank" rel="noopener">dbebd02</a>)</li>
+<li><strong>input:</strong> add <code>nzAllowClear</code> input and <code>nzClear</code> callback (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9452" target="_blank" rel="noopener">#9452</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/830b4b3cced07ecc484375ab62a3593ac7140b39" target="_blank" rel="noopener">830b4b3</a>)</li>
+<li><strong>input:</strong> introduce new component <code>nz-input-wrapper</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9408" target="_blank" rel="noopener">#9408</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/a8e56ecbc5040dc36dd38881d2d3f7133c7c7991" target="_blank" rel="noopener">a8e56ec</a>), closes <a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9403" target="_blank" rel="noopener">#9403</a></li>
+<li><strong>input:</strong> add affix and addon inputs to <code>nz-input-wrapper</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9450" target="_blank" rel="noopener">#9450</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/763f69e7e35ef3697245e9074034d17f110c5876" target="_blank" rel="noopener">763f69e</a>)</li>
+<li><strong>input:</strong> introduce <code>nz-input-search</code> directive (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9483" target="_blank" rel="noopener">#9483</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/af6f590b30270205300e028287f205249b316efa" target="_blank" rel="noopener">af6f590</a>)</li>
+<li><strong>input:</strong> introduce <code>nz-input-password</code> directive (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9460" target="_blank" rel="noopener">#9460</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/f80832a7741a6efd9049372a8759d710dc72bde4" target="_blank" rel="noopener">f80832a</a>)</li>
+<li><strong>message:</strong> add support for custom styles and classes (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9427" target="_blank" rel="noopener">#9427</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/2f866b31febe4c1f6dd784537fc8ca2b68a66a93" target="_blank" rel="noopener">2f866b3</a>)</li>
+<li><strong>pagination:</strong> support <code>nzAlign</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9433" target="_blank" rel="noopener">#9433</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/88d08648570756e35b989f55e15bcb116175dbc2" target="_blank" rel="noopener">88d0864</a>)</li>
+<li><strong>segmented:</strong> add default name if <code>nzName</code> is not provided (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9466" target="_blank" rel="noopener">#9466</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/33f8142626e337e1cef997bc99a289effcb64dd0" target="_blank" rel="noopener">33f8142</a>)</li>
+</ul>
+<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>badge:</strong> should <code>nzStyle</code> work even if <code>nzColor</code> is not provided (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9486" target="_blank" rel="noopener">#9486</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/4424eb0a018c7d90fb74dfda6ceb5c54a080eb4d" target="_blank" rel="noopener">4424eb0</a>)</li>
+<li><strong>cascader:</strong> display activated column correctly when reopen the popup panel (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9456" target="_blank" rel="noopener">#9456</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/7802a39167d0efaf1bca5e829fa4907f7af54650" target="_blank" rel="noopener">7802a39</a>)</li>
+</ul>
 <h2 id="2031"><span>20.3.1</span><a onclick="window.location.hash = '2031'" class="anchor">#</a></h2><p><code>2025-09-17</code></p>
 <h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
 <li><strong>drawer:</strong> fix <code>NG0203</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9418" target="_blank" rel="noopener">#9418</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/7fb58aea2f03902ce3b0ac626bed99b5d8de0c6b" target="_blank" rel="noopener">7fb58ae</a>)</li>

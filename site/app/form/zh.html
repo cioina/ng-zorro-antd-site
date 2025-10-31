@@ -35,7 +35,9 @@
 <li>需要对输入的数据类型进行校验时。</li>
 </ul>
 <blockquote>
-<p>该组件需要与 <a href="https://angular.cn/guide/forms" target="_blank" rel="noopener">Angular 表单</a> 结合使用，根据需要可以自由选择 <a href="https://angular.cn/guide/forms/reactive-forms" target="_blank" rel="noopener">响应式表单</a> 或 <a href="https://angular.cn/guide/forms/template-driven-forms" target="_blank" rel="noopener">模板驱动表单</a>。
+<p>该组件需要与 <a href="https://angular.cn/guide/forms" target="_blank" rel="noopener">Angular 表单</a>
+结合使用，根据需要可以自由选择 <a href="https://angular.cn/guide/forms/reactive-forms" target="_blank" rel="noopener">响应式表单</a>
+或 <a href="https://angular.cn/guide/forms/template-driven-forms" target="_blank" rel="noopener">模板驱动表单</a>。
 使用该组件前请确保您已经阅读并掌握了 <a href="https://angular.cn/guide/forms" target="_blank" rel="noopener">Angular 表单</a> 的使用方式。</p>
 </blockquote>
 <h2 id="表单"><span>表单</span><a onclick="window.location.hash = '表单'" class="anchor">#</a></h2><p>我们提供了以下三种排列方式：</p>
@@ -339,7 +341,7 @@
 </div>
 </nz-code-box><nz-code-box
   nzTitle="必选样式"
-  nzVersion=""
+  nzVersion="20.4.0"
   nzId="components-form-demo-required-style"
   nzSelector="nz-demo-form-required-style"
   nzLink="components-form-demo-required-style"
@@ -363,6 +365,7 @@
 <th>类型</th>
 <th>默认值</th>
 <th>全局配置</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -371,6 +374,7 @@
 <td><code>&#39;horizontal&#39; | &#39;vertical&#39; | &#39;inline&#39;</code></td>
 <td><code>&#39;horizontal&#39;</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzAutoTips]</code></td>
@@ -378,6 +382,7 @@
 <td><code>Record&lt;string, Record&lt;string, string&gt;&gt;</code></td>
 <td><code>&#123;&#125;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDisableAutoTips]</code></td>
@@ -385,6 +390,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzNoColon]</code></td>
@@ -392,6 +398,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzTooltipIcon]</code></td>
@@ -399,12 +406,14 @@
 <td><code>string | &#123; type: string; theme: ThemeType &#125;</code></td>
 <td><code>&#123; type: &#39;question-circle&#39;, theme: &#39;outline&#39; &#125;</code></td>
 <td>✅</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzLabelAlign]</code></td>
 <td>配置 <code>nz-form-label</code> 的 <code>[nzLabelAlign]</code> 的默认值</td>
 <td><code>&#39;left&#39; | &#39;right&#39;</code></td>
 <td><code>&#39;right&#39;</code></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
@@ -413,6 +422,7 @@
 <td><code>boolean</code></td>
 <td><code>false</code></td>
 <td></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzRequiredMark]</code></td>
@@ -420,6 +430,7 @@
 <td><code>NzRequiredMark</code></td>
 <td><code>true</code></td>
 <td></td>
+<td>20.4.0</td>
 </tr>
 </tbody></table>
 <h3 id="nz-form-item"><span>nz-form-item</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-item'" class="anchor">#</a></h3><p>表单项用于区分表单中不同的区域，包含表单域和表单标签(可选)。</p>
@@ -483,7 +494,8 @@
 </tr>
 </tbody></table>
 <h3 id="nz-form-control"><span>nz-form-control</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-control'" class="anchor">#</a></h3><blockquote>
-<p>注意：由于 Angular Form 目前提供的<a href="https://github.com/angular/angular/issues/10887" target="_blank" rel="noopener">状态变更订阅</a>不完整。手动更改表单状态时，例如 <code>markAsDirty</code> 后，需要执行 <code>updateValueAndValidity</code> 通知 <code>nz-form-control</code> 进行状态变更。</p>
+<p>注意：由于 Angular Form 目前提供的<a href="https://github.com/angular/angular/issues/10887" target="_blank" rel="noopener">状态变更订阅</a>不完整。手动更改表单状态时，例如
+<code>markAsDirty</code> 后，需要执行 <code>updateValueAndValidity</code> 通知 <code>nz-form-control</code> 进行状态变更。</p>
 </blockquote>
 <p>表单一定会包含表单域，表单域可以是输入控件，标准表单域，标签，下拉菜单，文本域等。</p>
 <blockquote>

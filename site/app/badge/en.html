@@ -25,7 +25,8 @@
   <component-meta name="badge" description="Small numerical value or status descriptor for UI elements." language="en"></component-meta>
   
   <section class="markdown" ngNonBindable>
-    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Badge normally appears in proximity to notifications or user avatars with eye-catching appeal, typically displaying unread messages count.</p>
+    <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><p>Badge normally appears in proximity to notifications or user avatars with eye-catching appeal, typically displaying
+unread messages count.</p>
 
   </section>
   
@@ -220,11 +221,7 @@ And you can always set it to a hex color string for custom color.</p>
 </nz-code-box>
 	</div>
 </div>
-<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-badge</span> <span class="token attr-name">[nzCount]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>head-example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-badge</span><span class="token punctuation">></span></span>
-</code></pre><pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-badge</span> <span class="token attr-name">[nzCount]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token attr-name">nzStandalone</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-badge</span><span class="token punctuation">></span></span>
-</code></pre><h3 id="nz-badge"><span>nz-badge</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-badge'" class="anchor">#</a></h3><table>
+<section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-badge"><span>nz-badge</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-badge'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>Property</th>
@@ -319,9 +316,32 @@ And you can always set it to a hex color string for custom color.</p>
 <td></td>
 </tr>
 </tbody></table>
-<h3 id="nz-ribbon"><span>nz-ribbon</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-ribbon'" class="anchor">#</a></h3><p>| Property        | Description                 | Type                          | Default |
-| --------------- | --------------------------- | ----------------------------- | ------- | --- |
-| <code>[nzColor]</code>     | Customize Ribbon color      | <code>string</code>                      | -       |
-| <code>[nzPlacement]</code> | The placement of the Ribbon | <code>&#39;start&#39; \| &#39;end&#39;</code>            | <code>&#39;end&#39;</code> |
-| <code>[nzText]</code>      | Content inside the Ribbon   | <code>string \| TemplateRef&lt;void&gt;</code> | -       |     |</p>
+<h3 id="nz-ribbon"><span>nz-ribbon</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-ribbon'" class="anchor">#</a></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzColor]</code></td>
+<td>Customize Ribbon color</td>
+<td><code>string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPlacement]</code></td>
+<td>The placement of the Ribbon</td>
+<td><code>&#39;start&#39; | &#39;end&#39;</code></td>
+<td><code>&#39;end&#39;</code></td>
+</tr>
+<tr>
+<td><code>[nzText]</code></td>
+<td>Content inside the Ribbon</td>
+<td><code>string | TemplateRef&lt;void&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
 </section></article>

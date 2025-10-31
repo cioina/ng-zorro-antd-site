@@ -2,6 +2,7 @@ import { Component, QueryList, ViewChildren } from '@angular/core';
 import { NzCodeBoxComponent } from '../codebox/codebox.component';
 import { ShareModule } from '../share/share.module';
 
+import { NzDemoFloatButtonBadgeComponent } from './badge';
 import { NzDemoFloatButtonBasicComponent } from './basic';
 import { NzDemoFloatButtonDescriptionComponent } from './description';
 import { NzDemoFloatButtonGroupMenuComponent } from './group-menu';
@@ -16,7 +17,7 @@ import { NzDemoFloatButtonTypeComponent } from './type';
 
 @Component({
   selector     : 'nz-demo-float-button',
-  imports      : [ShareModule, NzDemoFloatButtonBasicComponent, NzDemoFloatButtonDescriptionComponent, NzDemoFloatButtonGroupMenuComponent, NzDemoFloatButtonGroupPlacementComponent, NzDemoFloatButtonGroupComponent, NzDemoFloatButtonOpenComponent, NzDemoFloatButtonShapeComponent, NzDemoFloatButtonTooltipComponent, NzDemoFloatButtonTopComponent, NzDemoFloatButtonTypeComponent],
+  imports      : [ShareModule, NzDemoFloatButtonBadgeComponent, NzDemoFloatButtonBasicComponent, NzDemoFloatButtonDescriptionComponent, NzDemoFloatButtonGroupMenuComponent, NzDemoFloatButtonGroupPlacementComponent, NzDemoFloatButtonGroupComponent, NzDemoFloatButtonOpenComponent, NzDemoFloatButtonShapeComponent, NzDemoFloatButtonTooltipComponent, NzDemoFloatButtonTopComponent, NzDemoFloatButtonTypeComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoFloatButtonEnComponent {

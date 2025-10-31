@@ -940,13 +940,46 @@ Note: We using sticky to implement fixed effect. IE 11 will downgrade to horizon
 </tr>
 </tbody></table>
 <p>Sort property</p>
-<p>| Property              | Description                                                                                                                                    | Type                                          | Default                       |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ----------------------------- | --- |
-| <code>[nzShowSort]</code>        | Whether to display sorting                                                                                                                     | <code>boolean</code>                                     | -                             |
-| <code>[nzSortFn]</code>          | Sort function used to sort the data on client side (ref to Array.sort compareFunction). Should be set to <code>true</code> when using server side sorting | <code>NzTableSortFn&lt;T&gt; \| boolean</code>                 | -                             |
-| <code>[nzSortOrder]</code>       | Sort direction                                                                                                                                 | <code>&#39;descend&#39; \| &#39;ascend&#39; \| null</code>               | -                             |
-| <code>[nzSortDirections]</code>  | Supported sort order, could be <code>&#39;descend&#39;</code>, <code>&#39;ascend&#39;</code>, <code>null</code>                                                                                 | <code>Array&lt;&#39;descend&#39; \| &#39;ascend&#39; \| null&gt;</code>        | <code>[&#39;ascend&#39;, &#39;descend&#39;, null]</code> | ✅  |
-| <code>(nzSortOrderChange)</code> | Callback when sort direction changes                                                                                                           | <code>EventEmitter&lt;&#39;descend&#39; \| &#39;ascend&#39; \| null&gt;</code> | -                             |</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzShowSort]</code></td>
+<td>Whether to display sorting</td>
+<td><code>boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSortFn]</code></td>
+<td>Sort function used to sort the data on client side (ref to <code>Array.sort</code> compareFunction). Should be set to <code>true</code> when using server side sorting</td>
+<td><code>NzTableSortFn&lt;T&gt; | boolean</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSortOrder]</code></td>
+<td>Sort direction</td>
+<td><code>&#39;descend&#39; | &#39;ascend&#39; | null</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzSortDirections]</code></td>
+<td>Supported sort order, could be <code>&#39;descend&#39;</code>, <code>&#39;ascend&#39;</code>, <code>null</code></td>
+<td><code>Array&lt;&#39;descend&#39; | &#39;ascend&#39; | null&gt;</code></td>
+<td><code>[&#39;ascend&#39;, &#39;descend&#39;, null]</code></td>
+</tr>
+<tr>
+<td><code>(nzSortOrderChange)</code></td>
+<td>Callback when sort direction changes</td>
+<td><code>EventEmitter&lt;&#39;descend&#39; | &#39;ascend&#39; | null&gt;</code></td>
+<td>-</td>
+</tr>
+</tbody></table>
 <p>Filter property</p>
 <table>
 <thead>

@@ -23,7 +23,8 @@
   <section class="markdown" ngNonBindable>
     <h2 id="when_to_use"><span>When To Use</span><a onclick="window.location.hash = 'when_to_use'" class="anchor">#</a></h2><ul>
 <li>To provide feedback such as success, warning, error etc.</li>
-<li>A message is displayed at top and center and will be dismissed automatically, as a non-interrupting light-weighted prompt.</li>
+<li>A message is displayed at top and center and will be dismissed automatically, as a non-interrupting light-weighted
+prompt.</li>
 </ul>
 
   </section>
@@ -86,7 +87,7 @@
 </div>
 </nz-code-box><nz-code-box
   nzTitle="Customized style"
-  nzVersion=""
+  nzVersion="20.4.0"
   nzId="components-message-demo-custom-style"
   nzSelector="nz-demo-message-custom-style"
   nzLink="components-message-demo-custom-style"
@@ -192,44 +193,53 @@ You would have the possibility to pass some optional data to this custom templat
 <th>Argument</th>
 <th>Description</th>
 <th>Type</th>
+<th>Version</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>nzDuration</td>
 <td>Duration (milliseconds), does not disappear when set to 0</td>
 <td><code>number</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzPauseOnHover</td>
 <td>Do not remove automatically when mouse is over while setting to <code>true</code></td>
 <td><code>boolean</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzAnimate</td>
 <td>Whether to turn on animation</td>
 <td><code>boolean</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzData</td>
 <td>Data to pass to custom template</td>
 <td><code>NzSafeAny</code></td>
+<td></td>
 </tr>
 <tr>
 <td>nzStyle</td>
 <td>Customized inline style</td>
 <td><code>NgStyleInterface | string</code></td>
+<td>20.4.0</td>
 </tr>
 <tr>
 <td>nzClass</td>
 <td>Customized CSS class</td>
 <td><code>NgClassInterface | string</code></td>
+<td>20.4.0</td>
 </tr>
 </tbody></table>
 <p>Methods for destruction are also provided:</p>
 <ul>
-<li><code>message.remove(id)</code> // Remove the message with the specified id. When the id is empty, remove all messages (the message id is returned by the above method)</li>
+<li><code>message.remove(id)</code> : Remove the message with the specified id. When the id is empty, remove all messages (the
+message id is returned by the above method)</li>
 </ul>
-<h3 id="global_configuration"><span>Global Configuration</span><a onclick="window.location.hash = 'global_configuration'" class="anchor">#</a></h3><p>You can use <code>NzConfigService</code> to configure this component globally. Please check the <a href="/docs/global-config/en">Global Configuration</a> chapter for more information.</p>
+<h3 id="global_configuration"><span>Global Configuration</span><a onclick="window.location.hash = 'global_configuration'" class="anchor">#</a></h3><p>You can use <code>NzConfigService</code> to configure this component globally. Please check
+the <a href="/docs/global-config/en">Global Configuration</a> chapter for more information.</p>
 <table>
 <thead>
 <tr>

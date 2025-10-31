@@ -13,6 +13,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-float-button-demo-open" nzTitle="受控模式"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-float-button-demo-group-placement" nzTitle="弹出方向"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-float-button-demo-top" nzTitle="返回顶部"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-float-button-demo-badge" nzTitle="徽标数"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -119,6 +120,22 @@
 	<nz-demo-float-button-group-placement demo></nz-demo-float-button-group-placement>
 	<div intro ngNonBindable><p>自定义弹出位置，提供了四个预设值：<code>top</code>、<code>right</code>、<code>bottom</code>、<code>left</code>，默认值为 <code>top</code>。</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="徽标数"
+  nzVersion="20.4.0"
+  nzId="components-float-button-demo-badge"
+  nzSelector="nz-demo-float-button-badge"
+  nzLink="components-float-button-demo-badge"
+  nzGenerateCommand="ng g ng-zorro-antd:float-button-badge <name>"
+  nzComponentName="NzDemoFloatButtonBadgeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/float-button/demo/badge.md"
+>
+	<nz-demo-float-button-badge demo></nz-demo-float-button-badge>
+	<div intro ngNonBindable><p>右上角附带圆形徽标数字的悬浮按钮。</p>
+</div>
 </nz-code-box>
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -215,6 +232,7 @@
 <th>说明</th>
 <th>类型</th>
 <th>默认值</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -222,42 +240,56 @@
 <td>自定义图标</td>
 <td><code>string | TemplateRef&lt;void&gt; | null</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzDescription]</code></td>
 <td>文字及其它内容</td>
 <td><code>string | TemplateRef&lt;void&gt; | null</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzType]</code></td>
 <td>按钮类型</td>
 <td><code>&#39;default&#39; | &#39;primary&#39;</code></td>
 <td><code>&#39;default&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzShape]</code></td>
 <td>按钮形状</td>
 <td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
 <td><code>&#39;circle&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzHref]</code></td>
 <td>点击跳转的地址，指定此参数 button 的行为和 a 链接一致</td>
 <td><code>string</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzTarget]</code></td>
 <td>相当于 a 标签的 target 属性，<code>nzHref</code> 存在时生效</td>
 <td><code>string</code></td>
 <td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzBadge]</code></td>
+<td>徽标数</td>
+<td><code>NzFloatButtonBadge</code></td>
+<td>-</td>
+<td>20.4.0</td>
 </tr>
 <tr>
 <td><code>(nzOnClick)</code></td>
 <td>点击按钮时的回调</td>
 <td><code>EventEmitter&lt;boolean&gt;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-float-button-group"><span>nz-float-button-group</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-group'" class="anchor">#</a></h3><table>
@@ -267,43 +299,31 @@
 <th>说明</th>
 <th>类型</th>
 <th>默认值</th>
-<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>[nzShape]</code></td>
-<td>设置按钮组形状</td>
-<td><code>&#39;circle&#39; | &#39;square&#39;</code></td>
-<td><code>&#39;circle&#39;</code></td>
-<td></td>
-</tr>
-<tr>
 <td><code>[nzTrigger]</code></td>
 <td>触发方式（有触发方式为菜单模式）</td>
 <td><code>&#39;click&#39; | &#39;hover&#39;</code></td>
 <td>-</td>
-<td></td>
 </tr>
 <tr>
 <td><code>[nzPlacement]</code></td>
 <td>自定义菜单弹出位置</td>
 <td><code>&#39;top&#39; | &#39;right&#39; | &#39;bottom&#39; | &#39;left&#39;</code></td>
 <td><code>&#39;top&#39;</code></td>
-<td>20.1.0</td>
 </tr>
 <tr>
 <td><code>[nzOpen]</code></td>
 <td>受控展开</td>
 <td><code>boolean</code></td>
 <td>-</td>
-<td></td>
 </tr>
 <tr>
 <td><code>(nzOnOpenChange)</code></td>
 <td>展开收起时的回调</td>
 <td><code>EventEmitter&lt;boolean&gt;</code></td>
 <td>-</td>
-<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-float-button-top"><span>nz-float-button-top</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-float-button-top'" class="anchor">#</a></h3><table>
@@ -337,12 +357,15 @@
 <td><code>450</code></td>
 <td>-</td>
 </tr>
-<tr>
-<td><code>(nzOnClick)</code></td>
-<td>点击按钮的回调函数</td>
-<td><code>EventEmitter&lt;boolean&gt;</code></td>
-<td>-</td>
-<td>-</td>
-</tr>
 </tbody></table>
-</section></article>
+<h3 id="interfaces"><span>Interfaces</span><a onclick="window.location.hash = 'interfaces'" class="anchor">#</a></h3><h4 id="nzfloatbuttonbadge"><span>NzFloatButtonBadge</span><a onclick="window.location.hash = 'nzfloatbuttonbadge'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token comment">// NzBadge 组件属性中移除 nzShowDot, nzTitle, nzStatus, nzText</span>
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">NzFloatButtonBadge</span> <span class="token punctuation">&#123;</span>
+  nzDot<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  nzCount<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> TemplateRef<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">></span><span class="token punctuation">;</span>
+  nzShowZero<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  nzOverflowCount<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  nzColor<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  nzOffset<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token builtin">number</span><span class="token punctuation">,</span> <span class="token builtin">number</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  nzSize<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">'default'</span> <span class="token operator">|</span> <span class="token string">'small'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre></section></article>

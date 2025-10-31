@@ -10,6 +10,7 @@ import { NzDemoInputCompactComponent } from './compact';
 import { NzDemoInputOtpComponent } from './otp';
 import { NzDemoInputPasswordInputComponent } from './password-input';
 import { NzDemoInputPresuffixComponent } from './presuffix';
+import { NzDemoInputSearchInputLoadingComponent } from './search-input-loading';
 import { NzDemoInputSearchInputComponent } from './search-input';
 import { NzDemoInputSizeComponent } from './size';
 import { NzDemoInputStatusComponent } from './status';
@@ -21,7 +22,7 @@ import { NzDemoInputVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-input',
-  imports      : [ShareModule, NzDemoInputAddonComponent, NzDemoInputAllowClearComponent, NzDemoInputAutosizeTextareaComponent, NzDemoInputBasicComponent, NzDemoInputCompactComponent, NzDemoInputOtpComponent, NzDemoInputPasswordInputComponent, NzDemoInputPresuffixComponent, NzDemoInputSearchInputComponent, NzDemoInputSizeComponent, NzDemoInputStatusComponent, NzDemoInputTextareaWithCharacterCountComponent, NzDemoInputTextareaComponent, NzDemoInputTooltipComponent, NzDemoInputVariantComponent],
+  imports      : [ShareModule, NzDemoInputAddonComponent, NzDemoInputAllowClearComponent, NzDemoInputAutosizeTextareaComponent, NzDemoInputBasicComponent, NzDemoInputCompactComponent, NzDemoInputOtpComponent, NzDemoInputPasswordInputComponent, NzDemoInputPresuffixComponent, NzDemoInputSearchInputLoadingComponent, NzDemoInputSearchInputComponent, NzDemoInputSizeComponent, NzDemoInputStatusComponent, NzDemoInputTextareaWithCharacterCountComponent, NzDemoInputTextareaComponent, NzDemoInputTooltipComponent, NzDemoInputVariantComponent],
   templateUrl  : './en.html'
 })
 export class NzDemoInputEnComponent {
