@@ -710,14 +710,6 @@ export const ROUTER_LIST: RouterList = {
         "description": "Angular 数字输入框组件，通过鼠标或键盘，输入范围内的数值。"
       },
       {
-        "label": "InputNumberLegacy",
-        "path": "components/input-number-legacy/zh",
-        "zh": "数字输入框",
-        "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
-        "tag": "deprecated",
-        "description": "Angular 数字输入框组件，通过鼠标或键盘，输入范围内的数值。"
-      },
-      {
         "label": "Mention",
         "path": "components/mention/zh",
         "zh": "提及",
@@ -884,14 +876,6 @@ export const ROUTER_LIST: RouterList = {
         "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
         "tag": "19.0.0",
         "description": "Angular InputNumber Component, Enter a number within certain range with the mouse or keyboard."
-      },
-      {
-        "label": "InputNumberLegacy",
-        "path": "components/input-number-legacy/en",
-        "zh": "",
-        "cover": "https://gw.alipayobjects.com/zos/alicdn/XOS8qZ0kU/InputNumber.svg",
-        "tag": "deprecated",
-        "description": "Angular InputNumberLegacy Component, Enter a number within certain range with the mouse or keyboard."
       },
       {
         "label": "Mention",
@@ -1564,14 +1548,6 @@ export const ROUTER_LIST: RouterList = {
         "description": "Angular 固钉组件，将页面元素钉在可视范围。"
       },
       {
-        "label": "BackTop",
-        "path": "components/back-top/zh",
-        "zh": "回到顶部",
-        "cover": "https://gw.alipayobjects.com/zos/alicdn/tJZ5jbTwX/BackTop.svg",
-        "tag": "",
-        "description": "Angular 回到顶部组件，返回页面顶部的操作按钮。"
-      },
-      {
         "label": "WaterMark",
         "path": "components/water-mark/zh",
         "zh": "水印",
@@ -1593,14 +1569,6 @@ export const ROUTER_LIST: RouterList = {
         "cover": "https://gw.alipayobjects.com/zos/alicdn/tX6-md4H6/Affix.svg",
         "tag": "",
         "description": "Angular Affix Component, Make an element stick to viewport."
-      },
-      {
-        "label": "BackTop",
-        "path": "components/back-top/en",
-        "zh": "",
-        "cover": "https://gw.alipayobjects.com/zos/alicdn/tJZ5jbTwX/BackTop.svg",
-        "tag": "",
-        "description": "Angular BackTop Component, Makes it easy to go back to the top of the page."
       },
       {
         "label": "WaterMark",
@@ -1668,7 +1636,6 @@ export const DEMO_ROUTES: Routes = [
   {'path': 'components/anchor', 'loadChildren': () => import('./anchor/routes')},
   {'path': 'components/auto-complete', 'loadChildren': () => import('./auto-complete/routes')},
   {'path': 'components/avatar', 'loadChildren': () => import('./avatar/routes')},
-  {'path': 'components/back-top', 'loadChildren': () => import('./back-top/routes')},
   {'path': 'components/badge', 'loadChildren': () => import('./badge/routes')},
   {'path': 'components/breadcrumb', 'loadChildren': () => import('./breadcrumb/routes')},
   {'path': 'components/button', 'loadChildren': () => import('./button/routes')},
@@ -1700,7 +1667,6 @@ export const DEMO_ROUTES: Routes = [
   {'path': 'components/image', 'loadChildren': () => import('./image/routes')},
   {'path': 'components/input', 'loadChildren': () => import('./input/routes')},
   {'path': 'components/input-number', 'loadChildren': () => import('./input-number/routes')},
-  {'path': 'components/input-number-legacy', 'loadChildren': () => import('./input-number-legacy/routes')},
   {'path': 'components/layout', 'loadChildren': () => import('./layout/routes')},
   {'path': 'components/list', 'loadChildren': () => import('./list/routes')},
   {'path': 'components/mention', 'loadChildren': () => import('./mention/routes')},
