@@ -1548,8 +1548,8 @@ export const ROUTER_LIST: RouterList = {
         "description": "Angular 固钉组件，将页面元素钉在可视范围。"
       },
       {
-        "label": "WaterMark",
-        "path": "components/water-mark/zh",
+        "label": "Watermark",
+        "path": "components/watermark/zh",
         "zh": "水印",
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
         "tag": "15.1.0",
@@ -1571,12 +1571,12 @@ export const ROUTER_LIST: RouterList = {
         "description": "Angular Affix Component, Make an element stick to viewport."
       },
       {
-        "label": "WaterMark",
-        "path": "components/water-mark/en",
+        "label": "Watermark",
+        "path": "components/watermark/en",
         "zh": "",
         "cover": "https://img.alicdn.com/imgextra/i2/O1CN01ozPPZp1wj9CwsVvDL_!!6000000006343-0-tps-1232-820.jpg",
         "tag": "15.1.0",
-        "description": "Angular WaterMark Component, Add specific text or patterns to the page."
+        "description": "Angular Watermark Component, Add specific text or patterns to the page."
       }
     ],
     "experimentalChildren": []
@@ -1707,6 +1707,6 @@ export const DEMO_ROUTES: Routes = [
   {'path': 'components/tree-view', 'loadChildren': () => import('./tree-view/routes')},
   {'path': 'components/typography', 'loadChildren': () => import('./typography/routes')},
   {'path': 'components/upload', 'loadChildren': () => import('./upload/routes')},
-  {'path': 'components/water-mark', 'loadChildren': () => import('./water-mark/routes')},
+  {'path': 'components/watermark', 'loadChildren': () => import('./watermark/routes')},
 
 ];

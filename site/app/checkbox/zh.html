@@ -9,7 +9,6 @@
 <nz-link class="toc-indent-2" nzHref="#components-checkbox-demo-group" nzTitle="Checkbox 组"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-checkbox-demo-check-all" nzTitle="全选"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-checkbox-demo-layout" nzTitle="布局"></nz-link>
-<nz-link class="toc-indent-2" nzHref="#components-checkbox-demo-layout-legacy" nzTitle="布局（弃用）"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -83,25 +82,6 @@
 >
 	<nz-demo-checkbox-check-all demo></nz-demo-checkbox-check-all>
 	<div intro ngNonBindable><p>在实现全选效果时，你可能会用到 <code>nzIndeterminate</code> 属性。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="布局（弃用）"
-  nzVersion=""
-  nzId="components-checkbox-demo-layout-legacy"
-  nzSelector="nz-demo-checkbox-layout-legacy"
-  nzLink="components-checkbox-demo-layout-legacy"
-  nzGenerateCommand="ng g ng-zorro-antd:checkbox-layout-legacy <name>"
-  nzComponentName="NzDemoCheckboxLayoutLegacyComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/checkbox/demo/layout-legacy.md"
->
-	<nz-demo-checkbox-layout-legacy demo></nz-demo-checkbox-layout-legacy>
-	<div intro ngNonBindable><p><code>nz-checkbox-wrapper</code> 内嵌 <code>nz-checkbox</code> 并与 Grid 组件一起使用，可以实现灵活的布局。</p>
-<blockquote>
-<p>⚠️ <code>nz-checkbox-wrapper</code> 已被弃用，推荐使用 <code>nz-checkbox-group</code>。</p>
-</blockquote>
 </div>
 </nz-code-box>
 	</div>
@@ -252,22 +232,6 @@
 <td><code>(ngModelChange)</code></td>
 <td>选中数据变化时的回调</td>
 <td><code>EventEmitter&lt;string[] | number[]&gt;</code></td>
-<td>-</td>
-</tr>
-</tbody></table>
-<h3 id="nz-checkbox-wrapper"><span>nz-checkbox-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-checkbox-wrapper'" class="anchor">#</a></h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-<th>类型</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>(nzOnChange)</code></td>
-<td>选中数据变化时的回调</td>
-<td><code>EventEmitter&lt;any[]&gt;</code></td>
 <td>-</td>
 </tr>
 </tbody></table>

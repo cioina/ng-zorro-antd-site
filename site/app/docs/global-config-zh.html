@@ -110,7 +110,7 @@
         <span class="token keyword">const</span> globalConfig <span class="token operator">=</span> <span class="token function">inject</span><span class="token punctuation">(</span>NzConfigService<span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> skipSelf<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">const</span> localConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
           select<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-            nzBorderless<span class="token operator">:</span> <span class="token boolean">true</span>
+            nzVariant<span class="token operator">:</span> <span class="token string">'borderless'</span>
           <span class="token punctuation">&#125;</span>
         <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
         <span class="token comment">// 合并全局配置与本地配置</span>
