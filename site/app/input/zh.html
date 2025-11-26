@@ -123,7 +123,7 @@
   nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/autosize-textarea.md"
 >
 	<nz-demo-input-autosize-textarea demo></nz-demo-input-autosize-textarea>
-	<div intro ngNonBindable><p><code>nzAutosize</code> 属性适用于 <code>textarea</code> 节点，并且只有高度会自动变化。另外 <code>nzAutosize</code> 可以设定为一个对象，指定最小行数和最大行数。</p>
+	<div intro ngNonBindable><p>使用 <code>&#64;angular/cdk</code> 提供的 <a href="https://material.angular.dev/cdk/text-field/overview#automatically-resizing-a-lesstextareagreater" target="_blank" rel="noopener"><code>CdkTextareaAutosize</code></a> 指令实现文本域高度自适应。</p>
 </div>
 </nz-code-box><nz-code-box
   nzTitle="输入时格式化展示"
@@ -326,10 +326,10 @@
 <td></td>
 </tr>
 <tr>
-<td><code>[nzAutosize]</code></td>
-<td>只可以用于 <code>textarea</code>，自适应内容高度，可设置为 <code>boolean</code> 或对象：<code>&#123; minRows: 2, maxRows: 6 &#125;</code></td>
-<td><code>boolean | &#123; minRows: number, maxRows: number &#125;</code></td>
-<td><code>false</code></td>
+<td><del><code>[nzAutosize]</code></del></td>
+<td><del>只可以用于 <code>textarea</code>，自适应内容高度，可设置为 <code>boolean</code> 或对象：<code>&#123; minRows: 2, maxRows: 6 &#125;</code></del></td>
+<td><del><code>boolean | &#123; minRows: number, maxRows: number &#125;</code></del></td>
+<td><del><code>false</code></del></td>
 <td></td>
 </tr>
 <tr>

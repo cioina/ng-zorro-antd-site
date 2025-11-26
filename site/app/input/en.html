@@ -123,8 +123,7 @@
   nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/autosize-textarea.md"
 >
 	<nz-demo-input-autosize-textarea demo></nz-demo-input-autosize-textarea>
-	<div intro ngNonBindable><p><code>nzAutosize</code> prop for a <code>textarea</code> type of <code>nz-input</code> makes the height to automatically adjust based on the content.
-An options object can be provided to <code>nzAutosize</code> to specify the minimum and maximum number of lines the textarea will automatically adjust.</p>
+	<div intro ngNonBindable><p>Use <a href="https://material.angular.dev/cdk/text-field/overview#automatically-resizing-a-lesstextareagreater" target="_blank" rel="noopener"><code>CdkTextareaAutosize</code></a> directive provided by <code>&#64;angular/cdk</code> to achieve textarea height adaptation.</p>
 </div>
 </nz-code-box><nz-code-box
   nzTitle="Format Tooltip Input"
@@ -327,10 +326,10 @@ An options object can be provided to <code>nzAutosize</code> to specify the mini
 <td></td>
 </tr>
 <tr>
-<td><code>[nzAutosize]</code></td>
-<td>Only used for <code>textarea</code>, height autosize feature, can be set to <code>boolean</code> or an object <code>&#123; minRows: 2, maxRows: 6 &#125;</code></td>
-<td><code>boolean | &#123; minRows: number, maxRows: number &#125;</code></td>
-<td><code>false</code></td>
+<td><del><code>[nzAutosize]</code></del></td>
+<td><del>Only used for <code>textarea</code>, height autosize feature, can be set to <code>boolean</code> or an object <code>&#123; minRows: 2, maxRows: 6 &#125;</code></del></td>
+<td><del><code>boolean | &#123; minRows: number, maxRows: number &#125;</code></del></td>
+<td><del><code>false</code></del></td>
 <td></td>
 </tr>
 <tr>

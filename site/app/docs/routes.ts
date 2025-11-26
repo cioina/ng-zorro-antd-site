@@ -24,8 +24,8 @@ import { NzDocIntroduceEnComponent } from './introduce-en';
 import { NzDocIntroduceZhComponent } from './introduce-zh';
 import { NzDocJoinEnComponent } from './join-en';
 import { NzDocJoinZhComponent } from './join-zh';
-import { NzDocMigrationV20EnComponent } from './migration-v20-en';
-import { NzDocMigrationV20ZhComponent } from './migration-v20-zh';
+import { NzDocMigrationV21EnComponent } from './migration-v21-en';
+import { NzDocMigrationV21ZhComponent } from './migration-v21-zh';
 import { NzDocRecommendationEnComponent } from './recommendation-en';
 import { NzDocRecommendationZhComponent } from './recommendation-zh';
 import { NzDocSchematicsEnComponent } from './schematics-en';
@@ -57,8 +57,8 @@ const routes: Routes = [
 	{ path: 'introduce/en', component: NzDocIntroduceEnComponent },
 	{ path: 'join/zh', component: NzDocJoinZhComponent },
 	{ path: 'join/en', component: NzDocJoinEnComponent },
-	{ path: 'migration-v20/zh', component: NzDocMigrationV20ZhComponent },
-	{ path: 'migration-v20/en', component: NzDocMigrationV20EnComponent },
+	{ path: 'migration-v21/zh', component: NzDocMigrationV21ZhComponent },
+	{ path: 'migration-v21/en', component: NzDocMigrationV21EnComponent },
 	{ path: 'recommendation/zh', component: NzDocRecommendationZhComponent },
 	{ path: 'recommendation/en', component: NzDocRecommendationEnComponent },
 	{ path: 'schematics/zh', component: NzDocSchematicsZhComponent },

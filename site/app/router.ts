@@ -99,7 +99,7 @@ export const ROUTER_LIST: RouterList = {
     "language": "en",
     "order": 6.1,
     "hidden": false,
-    "description": "Except less customize theme, We also provide CSS Variable version to enable dynamic theme.This function depends on CSS Variables. Please check the bro...",
+    "description": "Except less customize theme, We also provide CSS Variable version to enable dynamic theme.This feature depends on CSS Variables. Please check the brow...",
     "experimental": false
   },
   {
@@ -108,7 +108,7 @@ export const ROUTER_LIST: RouterList = {
     "language": "zh",
     "order": 6.1,
     "hidden": false,
-    "description": "除了 less 定制主题 外，我们还提供了 CSS Variable 版本以支持动态切换主题能力。该功能通过动态修改 CSS Variable 实现，因而在 IE 中页面将无法正常展示。请先确认你的用户环境是否需要支持 IE。该功能在 ng-zorro-antd@13.2.x 版本起支持。替换当前项...",
+    "description": "除了 less 定制主题 外，我们还提供了 CSS Variable 版本以支持动态切换主题能力。该功能通过动态修改 CSS Variable 实现，在 IE 中页面将无法正常展示替换当前项目引入样式文件为 CSS Variable 版本：注：如果你使用了 babel-plugin-import，需...",
     "experimental": false
   },
   {
@@ -238,21 +238,21 @@ export const ROUTER_LIST: RouterList = {
     "experimental": false
   },
   {
-    "path": "docs/migration-v20/en",
-    "label": "v20 Migration Guide",
+    "path": "docs/migration-v21/en",
+    "label": "v21 Migration Guide",
     "language": "en",
     "order": 15,
     "hidden": false,
-    "description": "This document will help you upgrade from ng-zorro-antd 19.x version to 20.x version.Make sure Node.js >= 20.19.0 or >= 22.12.0 or >= 24.0.0.Create a n...",
+    "description": "This document will help you upgrade from ng-zorro-antd 20.x version to 21.x version.Make sure Node.js >= 20.19.0 or >= 22.12.0 or >= 24.0.0.Create a n...",
     "experimental": false
   },
   {
-    "path": "docs/migration-v20/zh",
-    "label": "v20 升级指南",
+    "path": "docs/migration-v21/zh",
+    "label": "v21 升级指南",
     "language": "zh",
     "order": 15,
     "hidden": false,
-    "description": "本文档将帮助你从 ng-zorro-antd 19.x 版本升级到 20.x 版本。确保 Node.js >= 20.19.0 或 >= 22.12.0 或 >= 24.0.0创建新的分支，或者使用其他方式备份当前项目删除项目下 package-lock.json 文件参考升级指南将项目升级到 An...",
+    "description": "本文档将帮助你从 ng-zorro-antd 20.x 版本升级到 21.x 版本。确保 Node.js >= 20.19.0 或 >= 22.12.0 或 >= 24.0.0创建新的分支，或者使用其他方式备份当前项目删除项目下 package-lock.json 文件参考升级指南将项目升级到 An...",
     "experimental": false
   },
   {
