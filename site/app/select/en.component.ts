@@ -33,7 +33,7 @@ import { NzDemoSelectVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoSelectAutomaticTokenizationComponent, NzDemoSelectBasicComponent, NzDemoSelectBigDataComponent, NzDemoSelectCoordinateComponent, NzDemoSelectCustomContentComponent, NzDemoSelectCustomDropdownMenuComponent, NzDemoSelectCustomTemplateComponent, NzDemoSelectDefaultValueComponent, NzDemoSelectHideSelectedComponent, NzDemoSelectLabelInValueComponent, NzDemoSelectMaxCountComponent, NzDemoSelectMultipleComponent, NzDemoSelectOptgroupComponent, NzDemoSelectOptionsComponent, NzDemoSelectPlacementComponent, NzDemoSelectPrefixAndSuffixComponent, NzDemoSelectScrollLoadComponent, NzDemoSelectSearchBoxComponent, NzDemoSelectSearchComponent, NzDemoSelectSelectUsersComponent, NzDemoSelectSizeComponent, NzDemoSelectStatusComponent, NzDemoSelectTagsComponent, NzDemoSelectVariantComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoSelectEnComponent {
+export default class NzDemoSelectEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

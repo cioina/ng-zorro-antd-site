@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './i18n-zh.html'
 })
-export class NzDocI18NZhComponent {
+export default class NzDocI18NZhComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

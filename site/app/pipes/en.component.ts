@@ -15,7 +15,7 @@ import { NzDemoPipesTrimComponent } from './trim';
   imports      : [ShareModule, NzDemoPipesAggregateComponent, NzDemoPipesBytesComponent, NzDemoPipesCssUnitComponent, NzDemoPipesEllipsisComponent, NzDemoPipesSanitizerComponent, NzDemoPipesTrimComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoPipesEnComponent {
+export default class NzDemoPipesEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

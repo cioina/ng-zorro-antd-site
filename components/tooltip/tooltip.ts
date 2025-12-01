@@ -16,9 +16,8 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 
-import { zoomBigMotion } from 'ng-zorro-antd/core/animation';
+import { zoomBigMotion, NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { isPresetColor, NzPresetColor } from 'ng-zorro-antd/core/color';
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
 import { NzOutletModule } from 'ng-zorro-antd/core/outlet';
 import { NzOverlayModule } from 'ng-zorro-antd/core/overlay';
 import { NgStyleInterface, NzTSType } from 'ng-zorro-antd/core/types';
@@ -101,8 +100,8 @@ export class NzTooltipDirective extends NzTooltipBaseDirective {
         [class.ant-tooltip-rtl]="dir === 'rtl'"
         [class]="_classMap"
         [style]="nzOverlayStyle"
-        [@.disabled]="!!noAnimation?.nzNoAnimation"
-        [nzNoAnimation]="noAnimation?.nzNoAnimation"
+        [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
+        [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
         [@zoomBigMotion]="'active'"
       >
         <div class="ant-tooltip-arrow" [style]="_arrowStyleMap"></div>

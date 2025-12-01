@@ -15,7 +15,7 @@ import { NzDemoDividerVerticalComponent } from './vertical';
   imports      : [ShareModule, NzDemoDividerHorizontalComponent, NzDemoDividerOrientationComponent, NzDemoDividerPlainComponent, NzDemoDividerSizeComponent, NzDemoDividerVariantComponent, NzDemoDividerVerticalComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoDividerZhComponent {
+export default class NzDemoDividerZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

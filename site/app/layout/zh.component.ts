@@ -18,7 +18,7 @@ import { NzDemoLayoutTopComponent } from './top';
   imports      : [ShareModule, NzDemoLayoutBasicComponent, NzDemoLayoutCustomTriggerComponent, NzDemoLayoutFixedSiderComponent, NzDemoLayoutFixedComponent, NzDemoLayoutResponsiveComponent, NzDemoLayoutSideComponent, NzDemoLayoutTopSide2Component, NzDemoLayoutTopSideComponent, NzDemoLayoutTopComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoLayoutZhComponent {
+export default class NzDemoLayoutZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

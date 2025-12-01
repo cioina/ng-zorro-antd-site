@@ -20,7 +20,7 @@ import { NzDemoProgressStepComponent } from './step';
   imports      : [ShareModule, NzDemoProgressCircleMiniComponent, NzDemoProgressCircleComponent, NzDemoProgressDashboardComponent, NzDemoProgressDynamicComponent, NzDemoProgressFormatComponent, NzDemoProgressGradientComponent, NzDemoProgressLineMiniComponent, NzDemoProgressLineComponent, NzDemoProgressRoundComponent, NzDemoProgressSegmentComponent, NzDemoProgressStepComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoProgressZhComponent {
+export default class NzDemoProgressZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

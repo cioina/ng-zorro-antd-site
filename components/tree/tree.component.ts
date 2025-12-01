@@ -29,9 +29,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Observable } from 'rxjs';
 
-import { treeCollapseMotion } from 'ng-zorro-antd/core/animation';
+import { treeCollapseMotion, NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { NzConfigKey, NzConfigService, WithConfig } from 'ng-zorro-antd/core/config';
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
 import {
   NzFormatBeforeDropEvent,
   NzFormatEmitEvent,
@@ -90,8 +89,8 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'tree';
         <div
           [class.ant-select-tree-list-holder-inner]="nzSelectMode"
           [class.ant-tree-list-holder-inner]="!nzSelectMode"
-          [@.disabled]="beforeInit || !!noAnimation?.nzNoAnimation"
-          [nzNoAnimation]="noAnimation?.nzNoAnimation"
+          [@.disabled]="beforeInit || !!noAnimation?.nzNoAnimation?.()"
+          [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
           [@treeCollapseMotion]="nzFlattenNodes.length"
         >
           @for (node of nzFlattenNodes; track trackByFlattenNode($index, node)) {

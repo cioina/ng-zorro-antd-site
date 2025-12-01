@@ -15,7 +15,7 @@ import { NzDemoSwitchTextComponent } from './text';
   imports      : [ShareModule, NzDemoSwitchBasicComponent, NzDemoSwitchControlComponent, NzDemoSwitchDisabledComponent, NzDemoSwitchLoadingComponent, NzDemoSwitchSizeComponent, NzDemoSwitchTextComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoSwitchZhComponent {
+export default class NzDemoSwitchZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

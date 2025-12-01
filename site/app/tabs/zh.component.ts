@@ -25,7 +25,7 @@ import { NzDemoTabsSlideComponent } from './slide';
   imports      : [ShareModule, NzDemoTabsBasicComponent, NzDemoTabsCardTopComponent, NzDemoTabsCardComponent, NzDemoTabsCenteredComponent, NzDemoTabsCustomAddTriggerComponent, NzDemoTabsDisabledComponent, NzDemoTabsDraggableComponent, NzDemoTabsEditableCardComponent, NzDemoTabsExtraComponent, NzDemoTabsGuardComponent, NzDemoTabsIconComponent, NzDemoTabsLazyComponent, NzDemoTabsLinkRouterComponent, NzDemoTabsPositionComponent, NzDemoTabsSizeComponent, NzDemoTabsSlideComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTabsZhComponent {
+export default class NzDemoTabsZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -17,7 +17,7 @@ import { NzDemoTimelineRightComponent } from './right';
   imports      : [ShareModule, NzDemoTimelineAlternateComponent, NzDemoTimelineBasicComponent, NzDemoTimelineColorComponent, NzDemoTimelineCustomComponent, NzDemoTimelineLabelComponent, NzDemoTimelinePendingComponent, NzDemoTimelinePositionComponent, NzDemoTimelineRightComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTimelineZhComponent {
+export default class NzDemoTimelineZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

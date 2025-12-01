@@ -19,7 +19,7 @@ import { NzDemoSpaceWrapComponent } from './wrap';
   imports      : [ShareModule, NzDemoSpaceAlignComponent, NzDemoSpaceBasicComponent, NzDemoSpaceCompactButtonVerticalComponent, NzDemoSpaceCompactButtonsComponent, NzDemoSpaceCompactComponent, NzDemoSpaceCustomizeComponent, NzDemoSpaceSizeComponent, NzDemoSpaceSplitComponent, NzDemoSpaceVerticalComponent, NzDemoSpaceWrapComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoSpaceZhComponent {
+export default class NzDemoSpaceZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

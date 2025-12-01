@@ -1,7 +1,9 @@
 <article class="markdown">
   <h1>
-	Ant Design of Angular
-	<span class="subtitle"></span>
+  <nz-space>
+    <span *nzSpaceItem>Ant Design of Angular</span>
+    <span *nzSpaceItem></span>
+	</nz-space>
 </h1>
 
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
@@ -29,7 +31,7 @@
 <li>提炼自企业级中后台产品的交互语言和视觉风格。</li>
 <li>开箱即用的高质量 Angular 组件库，与 Angular 保持同步升级。</li>
 <li>使用 TypeScript 构建，提供完整的类型定义文件。</li>
-<li>支持 OnPush 模式，性能卓越。</li>
+<li>支持 Zoneless 和 OnPush 模式，性能卓越。</li>
 <li>数十个国际化语言支持。</li>
 <li>深入每个细节的主题定制能力。</li>
 </ul>
@@ -59,7 +61,7 @@
 </tr>
 </tbody></table>
 <h2 id="当前版本"><span>当前版本</span><a onclick="window.location.hash = '当前版本'" class="anchor">#</a></h2><p><a href="https://www.npmjs.org/package/ng-zorro-antd" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/v/ng-zorro-antd.svg?style=flat-square" alt="npm package"></a></p>
-<h2 id="支持_angular_版本"><span>支持 Angular 版本</span><a onclick="window.location.hash = '支持_angular_版本'" class="anchor">#</a></h2><p><code>ng-zorro-antd</code> 与 <code>&#64;angular/core</code> 保持相同的主版本号，目前支持 Angular <code>^20.0.0</code> 版本。</p>
+<h2 id="支持_angular_版本"><span>支持 Angular 版本</span><a onclick="window.location.hash = '支持_angular_版本'" class="anchor">#</a></h2><p><code>ng-zorro-antd</code> 与 <code>&#64;angular/core</code> 保持相同的主版本号，目前支持 Angular <code>^21.0.0</code> 版本。</p>
 <h2 id="设计规范"><span>设计规范</span><a onclick="window.location.hash = '设计规范'" class="anchor">#</a></h2><p>与 Ant Design 设计规范定期同步，你可以在线查看<a href="https://github.com/NG-ZORRO/ng-zorro-antd/actions?query=workflow:%22styles-sync%22" target="_blank" rel="noopener">同步日志</a>。</p>
 <h2 id="安装"><span>安装</span><a onclick="window.location.hash = '安装'" class="anchor">#</a></h2><p>我们强烈推荐官方的 <code>&#64;angular/cli</code> 工具链辅助进行开发，在实际项目开发中，它可以很好的满足对 TypeScript 代码的构建、调试、代理、打包部署等一系列工程化的需求。</p>
 <pre><code class="language-bash">$ <span class="token function">ng</span> new PROJECT_NAME

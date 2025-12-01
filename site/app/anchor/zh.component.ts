@@ -16,7 +16,7 @@ import { NzDemoAnchorTargetOffsetComponent } from './target-offset';
   imports      : [ShareModule, NzDemoAnchorBasicComponent, NzDemoAnchorCustomizeHighlightComponent, NzDemoAnchorHorizontalAnchorComponent, NzDemoAnchorOnChangeComponent, NzDemoAnchorOnClickComponent, NzDemoAnchorStaticComponent, NzDemoAnchorTargetOffsetComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoAnchorZhComponent {
+export default class NzDemoAnchorZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

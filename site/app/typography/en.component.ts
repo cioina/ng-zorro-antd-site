@@ -15,7 +15,7 @@ import { NzDemoTypographyTitleComponent } from './title';
   imports      : [ShareModule, NzDemoTypographyBasicComponent, NzDemoTypographyEllipsisComponent, NzDemoTypographyInteractiveComponent, NzDemoTypographySuffixComponent, NzDemoTypographyTextComponent, NzDemoTypographyTitleComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoTypographyEnComponent {
+export default class NzDemoTypographyEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

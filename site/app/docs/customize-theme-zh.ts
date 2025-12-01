@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './customize-theme-zh.html'
 })
-export class NzDocCustomizeThemeZhComponent {
+export default class NzDocCustomizeThemeZhComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

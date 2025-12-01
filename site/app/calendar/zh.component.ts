@@ -14,7 +14,7 @@ import { NzDemoCalendarSelectComponent } from './select';
   imports      : [ShareModule, NzDemoCalendarBasicComponent, NzDemoCalendarCardComponent, NzDemoCalendarCustomizeHeaderComponent, NzDemoCalendarNoticeCalendarComponent, NzDemoCalendarSelectComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoCalendarZhComponent {
+export default class NzDemoCalendarZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

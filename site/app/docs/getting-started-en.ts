@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './getting-started-en.html'
 })
-export class NzDocGettingStartedEnComponent {
+export default class NzDocGettingStartedEnComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

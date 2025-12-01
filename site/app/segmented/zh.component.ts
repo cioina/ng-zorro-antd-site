@@ -21,7 +21,7 @@ import { NzDemoSegmentedWithNameComponent } from './with-name';
   imports      : [ShareModule, NzDemoSegmentedBasicComponent, NzDemoSegmentedBlockComponent, NzDemoSegmentedCustomComponent, NzDemoSegmentedDisabledComponent, NzDemoSegmentedDynamicComponent, NzDemoSegmentedIconComponent, NzDemoSegmentedShapeComponent, NzDemoSegmentedSizeComponent, NzDemoSegmentedValueComponent, NzDemoSegmentedVerticalComponent, NzDemoSegmentedWithIconOnlyComponent, NzDemoSegmentedWithNameComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoSegmentedZhComponent {
+export default class NzDemoSegmentedZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

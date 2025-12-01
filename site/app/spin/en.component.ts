@@ -16,7 +16,7 @@ import { NzDemoSpinTipComponent } from './tip';
   imports      : [ShareModule, NzDemoSpinBasicComponent, NzDemoSpinCustomIndicatorComponent, NzDemoSpinDelayAndDebounceComponent, NzDemoSpinInsideComponent, NzDemoSpinNestedComponent, NzDemoSpinSizeComponent, NzDemoSpinTipComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoSpinEnComponent {
+export default class NzDemoSpinEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

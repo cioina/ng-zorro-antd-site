@@ -16,12 +16,15 @@
 <nz-link class="toc-indent-2" nzHref="#components-upload-demo-transform-file" nzTitle="上传前转换文件"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-upload-demo-upload-with-aliyun-oss" nzTitle="阿里云 OSS"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-upload-demo-png-only" nzTitle="只上传 png 图片"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-upload-demo-max-count" nzTitle="限制数量"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
   <h1>
-	Upload
-	<span class="subtitle">上传</span>
+  <nz-space>
+    <span *nzSpaceItem>Upload</span>
+    <span *nzSpaceItem>上传</span>
+	</nz-space>
 </h1>
 
   <component-meta name="upload" description="文件选择上传和拖拽上传控件。" language="zh"></component-meta>
@@ -268,6 +271,22 @@
 	<nz-demo-upload-upload-with-aliyun-oss demo></nz-demo-upload-upload-with-aliyun-oss>
 	<div intro ngNonBindable><p>使用阿里云 OSS 上传示例.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="限制数量"
+  nzVersion=""
+  nzId="components-upload-demo-max-count"
+  nzSelector="nz-demo-upload-max-count"
+  nzLink="components-upload-demo-max-count"
+  nzGenerateCommand="ng g ng-zorro-antd:upload-max-count <name>"
+  nzComponentName="NzDemoUploadMaxCountComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/upload/demo/max-count.md"
+>
+	<nz-demo-upload-max-count demo></nz-demo-upload-max-count>
+	<div intro ngNonBindable><p>通过 <code>nzMaxCount</code> 限制上传数量。当为 1 时，始终用最新上传的代替当前。</p>
+</div>
 </nz-code-box>
 	</div>
 </div>
@@ -336,6 +355,12 @@
 <td>限制单次最多上传数量，<code>nzMultiple</code> 打开时有效；<code>0</code> 表示不限</td>
 <td><code>number</code></td>
 <td><code>0</code></td>
+</tr>
+<tr>
+<td><code>[nzMaxCount]</code></td>
+<td>限制上传数量。当为 1 时，始终用最新上传的文件代替当前文件</td>
+<td><code>number|undefined</code></td>
+<td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>[nzSize]</code></td>

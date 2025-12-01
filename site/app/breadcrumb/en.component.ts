@@ -16,7 +16,7 @@ import { NzDemoBreadcrumbWithIconComponent } from './with-icon';
   imports      : [ShareModule, NzDemoBreadcrumbAutoComponent, NzDemoBreadcrumbBasicComponent, NzDemoBreadcrumbDropdownComponent, NzDemoBreadcrumbRouterComponent, NzDemoBreadcrumbSeparatorIndependentComponent, NzDemoBreadcrumbSeparatorComponent, NzDemoBreadcrumbWithIconComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoBreadcrumbEnComponent {
+export default class NzDemoBreadcrumbEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

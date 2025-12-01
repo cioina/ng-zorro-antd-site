@@ -13,7 +13,7 @@ import { NzDemoCommentNestedComponent } from './nested';
   imports      : [ShareModule, NzDemoCommentBasicComponent, NzDemoCommentEditorComponent, NzDemoCommentListComponent, NzDemoCommentNestedComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoCommentZhComponent {
+export default class NzDemoCommentZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

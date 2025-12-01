@@ -18,7 +18,7 @@ import { NzDemoQrCodeStatusComponent } from './status';
   imports      : [ShareModule, NzDemoQrCodeBackgroundComponent, NzDemoQrCodeBasicComponent, NzDemoQrCodeColorComponent, NzDemoQrCodeCustomStatusComponent, NzDemoQrCodeDownloadComponent, NzDemoQrCodeErrorLevelComponent, NzDemoQrCodeIconComponent, NzDemoQrCodePaddingComponent, NzDemoQrCodeStatusComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoQrCodeZhComponent {
+export default class NzDemoQrCodeZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

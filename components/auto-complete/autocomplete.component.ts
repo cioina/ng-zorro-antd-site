@@ -33,8 +33,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Observable, Subscription, defer, merge } from 'rxjs';
 import { filter, switchMap } from 'rxjs/operators';
 
-import { slideMotion } from 'ng-zorro-antd/core/animation';
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
+import { slideMotion, NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { NZ_AFTER_NEXT_RENDER$ } from 'ng-zorro-antd/core/render';
 import { CompareWith, NzSafeAny } from 'ng-zorro-antd/core/types';
 import { numberAttributeWithZeroFallback } from 'ng-zorro-antd/core/util';
@@ -75,10 +74,10 @@ function normalizeDataSource(value: AutocompleteDataSource): AutocompleteDataSou
         [class.ant-select-dropdown-rtl]="dir === 'rtl'"
         [class]="nzOverlayClassName"
         [style]="nzOverlayStyle"
-        [nzNoAnimation]="noAnimation?.nzNoAnimation"
+        [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
         @slideMotion
         (@slideMotion.done)="onAnimationEvent($event)"
-        [@.disabled]="!!noAnimation?.nzNoAnimation"
+        [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
       >
         <div class="ant-select-dropdown-content-wrapper">
           <div class="ant-select-dropdown-content">

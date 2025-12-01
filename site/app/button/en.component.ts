@@ -18,7 +18,7 @@ import { NzDemoButtonSizeComponent } from './size';
   imports      : [ShareModule, NzDemoButtonBasicComponent, NzDemoButtonBlockComponent, NzDemoButtonDangerComponent, NzDemoButtonDisabledComponent, NzDemoButtonGhostComponent, NzDemoButtonIconComponent, NzDemoButtonLoadingComponent, NzDemoButtonMultipleComponent, NzDemoButtonSizeComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoButtonEnComponent {
+export default class NzDemoButtonEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -16,7 +16,7 @@ import { NzDemoHashCodeStripComponent } from './strip';
   imports      : [ShareModule, NzDemoHashCodeBasicComponent, NzDemoHashCodeCopyComponent, NzDemoHashCodeLogoComponent, NzDemoHashCodePrimaryComponent, NzDemoHashCodeRectComponent, NzDemoHashCodeSingleComponent, NzDemoHashCodeStripComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoHashCodeEnComponent {
+export default class NzDemoHashCodeEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -25,7 +25,7 @@ import { NzDemoInputVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoInputAddonComponent, NzDemoInputAllowClearComponent, NzDemoInputAutosizeTextareaComponent, NzDemoInputBasicComponent, NzDemoInputCompactComponent, NzDemoInputOtpComponent, NzDemoInputPasswordInputComponent, NzDemoInputPresuffixComponent, NzDemoInputSearchInputLoadingComponent, NzDemoInputSearchInputComponent, NzDemoInputSizeComponent, NzDemoInputStatusComponent, NzDemoInputTextareaWithCharacterCountComponent, NzDemoInputTextareaComponent, NzDemoInputTooltipComponent, NzDemoInputVariantComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoInputZhComponent {
+export default class NzDemoInputZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -19,7 +19,7 @@ import { NzDemoDropdownTriggerComponent } from './trigger';
   imports      : [ShareModule, NzDemoDropdownArrowComponent, NzDemoDropdownBasicComponent, NzDemoDropdownContextMenuComponent, NzDemoDropdownDropdownButtonComponent, NzDemoDropdownEventComponent, NzDemoDropdownItemComponent, NzDemoDropdownOverlayVisibleComponent, NzDemoDropdownPlacementComponent, NzDemoDropdownSubMenuComponent, NzDemoDropdownTriggerComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoDropdownZhComponent {
+export default class NzDemoDropdownZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

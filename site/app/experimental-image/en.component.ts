@@ -12,7 +12,7 @@ import { NzDemoExperimentalImageSrcLoaderComponent } from './src-loader';
   imports      : [ShareModule, NzDemoExperimentalImageAutoSrcsetComponent, NzDemoExperimentalImagePreloadingComponent, NzDemoExperimentalImageSrcLoaderComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoExperimentalImageEnComponent {
+export default class NzDemoExperimentalImageEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

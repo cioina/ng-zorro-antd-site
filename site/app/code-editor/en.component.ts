@@ -14,7 +14,7 @@ import { NzDemoCodeEditorFullControlComponent } from './full-control';
   imports      : [ShareModule, NzDemoCodeEditorBasicComponent, NzDemoCodeEditorComplexComponent, NzDemoCodeEditorConfigComponent, NzDemoCodeEditorDiffComponent, NzDemoCodeEditorFullControlComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoCodeEditorEnComponent {
+export default class NzDemoCodeEditorEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

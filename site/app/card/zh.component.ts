@@ -19,7 +19,7 @@ import { NzDemoCardTabsComponent } from './tabs';
   imports      : [ShareModule, NzDemoCardBasicComponent, NzDemoCardBorderLessComponent, NzDemoCardFlexibleContentComponent, NzDemoCardGridCardComponent, NzDemoCardInColumnComponent, NzDemoCardInnerComponent, NzDemoCardLoadingComponent, NzDemoCardMetaComponent, NzDemoCardSimpleComponent, NzDemoCardTabsComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoCardZhComponent {
+export default class NzDemoCardZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

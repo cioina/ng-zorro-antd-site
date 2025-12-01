@@ -11,7 +11,7 @@ import { NzDemoCheckListCustomComponent } from './custom';
   imports      : [ShareModule, NzDemoCheckListBasicComponent, NzDemoCheckListCustomComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoCheckListEnComponent {
+export default class NzDemoCheckListEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -14,7 +14,7 @@ import { NzDemoFlexWrapComponent } from './wrap';
   imports      : [ShareModule, NzDemoFlexAlignComponent, NzDemoFlexBasicComponent, NzDemoFlexCombinationComponent, NzDemoFlexGapComponent, NzDemoFlexWrapComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoFlexZhComponent {
+export default class NzDemoFlexZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

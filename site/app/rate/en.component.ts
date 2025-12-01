@@ -16,7 +16,7 @@ import { NzDemoRateTextComponent } from './text';
   imports      : [ShareModule, NzDemoRateBasicComponent, NzDemoRateCharacterComponent, NzDemoRateClearComponent, NzDemoRateCustomizeComponent, NzDemoRateDisabledComponent, NzDemoRateHalfComponent, NzDemoRateTextComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoRateEnComponent {
+export default class NzDemoRateEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

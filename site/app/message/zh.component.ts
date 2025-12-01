@@ -16,7 +16,7 @@ import { NzDemoMessageTemplateComponent } from './template';
   imports      : [ShareModule, NzDemoMessageCloseComponent, NzDemoMessageCustomStyleComponent, NzDemoMessageDurationComponent, NzDemoMessageInfoComponent, NzDemoMessageLoadingComponent, NzDemoMessageOtherComponent, NzDemoMessageTemplateComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoMessageZhComponent {
+export default class NzDemoMessageZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

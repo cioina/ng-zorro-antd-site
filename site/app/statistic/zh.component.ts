@@ -13,7 +13,7 @@ import { NzDemoStatisticUnitComponent } from './unit';
   imports      : [ShareModule, NzDemoStatisticBasicComponent, NzDemoStatisticCardComponent, NzDemoStatisticCountdownComponent, NzDemoStatisticUnitComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoStatisticZhComponent {
+export default class NzDemoStatisticZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

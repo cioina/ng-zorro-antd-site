@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './animations-en.html'
 })
-export class NzDocAnimationsEnComponent {
+export default class NzDocAnimationsEnComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

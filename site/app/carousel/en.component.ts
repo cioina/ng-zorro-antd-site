@@ -16,7 +16,7 @@ import { NzDemoCarouselPositionComponent } from './position';
   imports      : [ShareModule, NzDemoCarouselArrowComponent, NzDemoCarouselAutoplayComponent, NzDemoCarouselBasicComponent, NzDemoCarouselCustomComponent, NzDemoCarouselFadeComponent, NzDemoCarouselLoopComponent, NzDemoCarouselPositionComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoCarouselEnComponent {
+export default class NzDemoCarouselEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

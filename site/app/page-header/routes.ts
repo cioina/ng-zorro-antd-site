@@ -1,11 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { NzDemoPageHeaderZhComponent } from './zh.component';
-import { NzDemoPageHeaderEnComponent } from './en.component';
-
 const routes: Routes = [
-  { path: 'en', component: NzDemoPageHeaderEnComponent },
-  { path: 'zh', component: NzDemoPageHeaderZhComponent }
+  { path: 'en', loadComponent: () => import('./en.component') },
+  { path: 'zh', loadComponent: () => import('./zh.component') }
 ];
 
 export default routes;

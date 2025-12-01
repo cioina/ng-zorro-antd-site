@@ -38,7 +38,7 @@ import { NzDemoTableVirtualComponent } from './virtual';
   imports      : [ShareModule, NzDemoTableAjaxComponent, NzDemoTableBasicComponent, NzDemoTableBorderedComponent, NzDemoTableBreakWordComponent, NzDemoTableColspanRowspanComponent, NzDemoTableCustomColumnComponent, NzDemoTableCustomFilterPanelComponent, NzDemoTableDragSortingComponent, NzDemoTableDynamicSettingsComponent, NzDemoTableEditCellComponent, NzDemoTableEditRowComponent, NzDemoTableEllipsisComponent, NzDemoTableExpandChildrenComponent, NzDemoTableExpandIconComponent, NzDemoTableExpandComponent, NzDemoTableFixedColumnsHeaderComponent, NzDemoTableFixedColumnsComponent, NzDemoTableFixedHeaderComponent, NzDemoTableGroupingColumnsComponent, NzDemoTableMultipleSorterComponent, NzDemoTableNestedTableComponent, NzDemoTableResetFilterComponent, NzDemoTableRowSelectionAndOperationComponent, NzDemoTableRowSelectionCustomComponent, NzDemoTableSizeComponent, NzDemoTableSortFilterComponent, NzDemoTableSummaryComponent, NzDemoTableTemplateComponent, NzDemoTableVirtualComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTableZhComponent {
+export default class NzDemoTableZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

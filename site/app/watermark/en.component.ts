@@ -13,7 +13,7 @@ import { NzDemoWatermarkMultiLineComponent } from './multi-line';
   imports      : [ShareModule, NzDemoWatermarkBasicComponent, NzDemoWatermarkCustomComponent, NzDemoWatermarkImageComponent, NzDemoWatermarkMultiLineComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoWatermarkEnComponent {
+export default class NzDemoWatermarkEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

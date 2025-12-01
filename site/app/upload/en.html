@@ -16,12 +16,15 @@
 <nz-link class="toc-indent-2" nzHref="#components-upload-demo-transform-file" nzTitle="Transform file before request"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-upload-demo-upload-with-aliyun-oss" nzTitle="Aliyun OSS"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-upload-demo-png-only" nzTitle="Upload png file only"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-upload-demo-max-count" nzTitle="Max Count"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
   <h1>
-	Upload
-	<span class="subtitle"></span>
+  <nz-space>
+    <span *nzSpaceItem>Upload</span>
+    <span *nzSpaceItem></span>
+	</nz-space>
 </h1>
 
   <component-meta name="upload" description="Used to select and upload files or drag and drop files." language="en"></component-meta>
@@ -268,6 +271,22 @@
 	<nz-demo-upload-upload-with-aliyun-oss demo></nz-demo-upload-upload-with-aliyun-oss>
 	<div intro ngNonBindable><p>Use Aliyun OSS upload example.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Max Count"
+  nzVersion=""
+  nzId="components-upload-demo-max-count"
+  nzSelector="nz-demo-upload-max-count"
+  nzLink="components-upload-demo-max-count"
+  nzGenerateCommand="ng g ng-zorro-antd:upload-max-count <name>"
+  nzComponentName="NzDemoUploadMaxCountComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/upload/demo/max-count.md"
+>
+	<nz-demo-upload-max-count demo></nz-demo-upload-max-count>
+	<div intro ngNonBindable><p>Limit files with <code>nzMaxCount</code>. Will replace current one when <code>nzMaxCount</code> is 1</p>
+</div>
 </nz-code-box>
 	</div>
 </div>
@@ -336,6 +355,12 @@
 <td>limit single upload count when <code>nzMultiple</code> has opened. <code>0</code> unlimited</td>
 <td><code>number</code></td>
 <td><code>0</code></td>
+</tr>
+<tr>
+<td><code>[nzMaxCount]</code></td>
+<td>Limit the file displayed in uploaded files list. Will replace current one when maxCount is 1 unlimited</td>
+<td><code>number|undefined</code></td>
+<td><code>undefined</code></td>
 </tr>
 <tr>
 <td><code>[nzSize]</code></td>

@@ -16,7 +16,7 @@ import { NzDemoDrawerUserProfileComponent } from './user-profile';
   imports      : [ShareModule, NzDemoDrawerBasicRightComponent, NzDemoDrawerFromDrawerComponent, NzDemoDrawerMultiLevelDrawerComponent, NzDemoDrawerPlacementComponent, NzDemoDrawerServiceComponent, NzDemoDrawerSizeComponent, NzDemoDrawerUserProfileComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoDrawerEnComponent {
+export default class NzDemoDrawerEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

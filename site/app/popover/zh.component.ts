@@ -16,7 +16,7 @@ import { NzDemoPopoverTriggerTypeComponent } from './trigger-type';
   imports      : [ShareModule, NzDemoPopoverArrowPointAtCenterComponent, NzDemoPopoverBasicComponent, NzDemoPopoverControlComponent, NzDemoPopoverOverlayComponent, NzDemoPopoverPlacementComponent, NzDemoPopoverTemplateComponent, NzDemoPopoverTriggerTypeComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoPopoverZhComponent {
+export default class NzDemoPopoverZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

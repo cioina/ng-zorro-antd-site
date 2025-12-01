@@ -18,7 +18,7 @@ import { NzDemoNotificationWithIconComponent } from './with-icon';
   imports      : [ShareModule, NzDemoNotificationBasicComponent, NzDemoNotificationCustomIconComponent, NzDemoNotificationCustomStyleComponent, NzDemoNotificationDurationComponent, NzDemoNotificationPlacementComponent, NzDemoNotificationTemplateComponent, NzDemoNotificationUpdateComponent, NzDemoNotificationWithBtnComponent, NzDemoNotificationWithIconComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoNotificationZhComponent {
+export default class NzDemoNotificationZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

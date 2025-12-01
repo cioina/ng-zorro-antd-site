@@ -14,7 +14,7 @@ import { NzDemoAvatarTypeComponent } from './type';
   imports      : [ShareModule, NzDemoAvatarBadgeComponent, NzDemoAvatarBasicComponent, NzDemoAvatarDynamicComponent, NzDemoAvatarGroupComponent, NzDemoAvatarTypeComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoAvatarZhComponent {
+export default class NzDemoAvatarZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

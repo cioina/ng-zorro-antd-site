@@ -1,11 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { NzDemoDatePickerZhComponent } from './zh.component';
-import { NzDemoDatePickerEnComponent } from './en.component';
-
 const routes: Routes = [
-  { path: 'en', component: NzDemoDatePickerEnComponent },
-  { path: 'zh', component: NzDemoDatePickerZhComponent }
+  { path: 'en', loadComponent: () => import('./en.component') },
+  { path: 'zh', loadComponent: () => import('./zh.component') }
 ];
 
 export default routes;

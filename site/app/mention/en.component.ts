@@ -22,7 +22,7 @@ import { NzDemoMentionVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoMentionAsyncComponent, NzDemoMentionAutoSizeComponent, NzDemoMentionAvatarComponent, NzDemoMentionBasicComponent, NzDemoMentionClearComponent, NzDemoMentionCustomTagComponent, NzDemoMentionFormComponent, NzDemoMentionPlacementComponent, NzDemoMentionPrefixComponent, NzDemoMentionPreviewComponent, NzDemoMentionReadonlyComponent, NzDemoMentionStatusComponent, NzDemoMentionVariantComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoMentionEnComponent {
+export default class NzDemoMentionEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

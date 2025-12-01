@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './global-config-zh.html'
 })
-export class NzDocGlobalConfigZhComponent {
+export default class NzDocGlobalConfigZhComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

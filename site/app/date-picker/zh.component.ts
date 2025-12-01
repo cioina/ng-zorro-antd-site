@@ -26,7 +26,7 @@ import { NzDemoDatePickerWeekNumberComponent } from './week-number';
   imports      : [ShareModule, NzDemoDatePickerBasicComponent, NzDemoDatePickerDateRenderComponent, NzDemoDatePickerDisabledDateComponent, NzDemoDatePickerDisabledComponent, NzDemoDatePickerExtraFooterComponent, NzDemoDatePickerFormatComponent, NzDemoDatePickerInlineComponent, NzDemoDatePickerPlacementComponent, NzDemoDatePickerPresettedRangesComponent, NzDemoDatePickerRangePickerComponent, NzDemoDatePickerSizeComponent, NzDemoDatePickerStartEndComponent, NzDemoDatePickerStatusComponent, NzDemoDatePickerSwitchComponent, NzDemoDatePickerTimeComponent, NzDemoDatePickerVariantComponent, NzDemoDatePickerWeekNumberComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoDatePickerZhComponent {
+export default class NzDemoDatePickerZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

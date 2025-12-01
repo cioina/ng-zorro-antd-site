@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './migration-v21-en.html'
 })
-export class NzDocMigrationV21EnComponent {
+export default class NzDocMigrationV21EnComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

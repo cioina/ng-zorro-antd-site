@@ -18,7 +18,7 @@ import { NzDemoRadioSolidComponent } from './solid';
   imports      : [ShareModule, NzDemoRadioBasicComponent, NzDemoRadioDisableComponent, NzDemoRadioRadiobuttonComponent, NzDemoRadioRadiogroupMoreComponent, NzDemoRadioRadiogroupOptionsComponent, NzDemoRadioRadiogroupWithNameComponent, NzDemoRadioRadiogroupComponent, NzDemoRadioSizeComponent, NzDemoRadioSolidComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoRadioEnComponent {
+export default class NzDemoRadioEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

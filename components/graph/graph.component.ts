@@ -3,18 +3,21 @@
  * found in the LICENSE file at https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/LICENSE
  */
 
-import { NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet, isPlatformBrowser } from '@angular/common';
 import {
   AfterContentChecked,
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   ContentChild,
+  DestroyRef,
   ElementRef,
   EventEmitter,
   Input,
   OnChanges,
   OnInit,
   Output,
+  PLATFORM_ID,
   QueryList,
   SimpleChanges,
   TemplateRef,
@@ -22,9 +25,7 @@ import {
   ViewEncapsulation,
   booleanAttribute,
   forwardRef,
-  inject,
-  DestroyRef,
-  ChangeDetectorRef
+  inject
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Observable, ReplaySubject, Subscription, forkJoin } from 'rxjs';
@@ -32,8 +33,8 @@ import { finalize, take } from 'rxjs/operators';
 
 import { buildGraph } from 'dagre-compound';
 
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
-import { cancelAnimationFrame } from 'ng-zorro-antd/core/polyfill';
+import { NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
+import { cancelAnimationFrame, requestAnimationFrame } from 'ng-zorro-antd/core/polyfill';
 import { NzSafeAny } from 'ng-zorro-antd/core/types';
 
 import { calculateTransform } from './core/utils';
@@ -133,6 +134,7 @@ export function isDataSource(value: NzSafeAny): value is NzGraphData {
 export class NzGraphComponent implements OnInit, OnChanges, AfterContentChecked, NzGraph {
   private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
   private elementRef: ElementRef = inject(ElementRef);
+  private platformId = inject(PLATFORM_ID);
   private destroyRef = inject(DestroyRef);
 
   @ViewChildren(NzGraphNodeComponent, { read: ElementRef }) listOfNodeElement!: QueryList<ElementRef>;
@@ -270,6 +272,9 @@ export class NzGraphComponent implements OnInit, OnChanges, AfterContentChecked,
    */
   drawGraph(data: NzGraphDataDef, options: NzGraphOption, needResize: boolean = false): Promise<void> {
     return new Promise(resolve => {
+      if (!isPlatformBrowser(this.platformId)) {
+        return resolve();
+      }
       this.requestId = requestAnimationFrame(() => {
         const renderInfo = this.buildGraphInfo(data, options);
         // TODO
@@ -277,7 +282,7 @@ export class NzGraphComponent implements OnInit, OnChanges, AfterContentChecked,
         this.renderInfo = renderInfo;
         this.cdr.markForCheck();
         this.requestId = requestAnimationFrame(() => {
-          this.drawNodes(!this.noAnimation?.nzNoAnimation).then(() => {
+          this.drawNodes(!this.noAnimation?.nzNoAnimation?.()).then(() => {
             // Update element
             this.cdr.markForCheck();
             if (needResize) {

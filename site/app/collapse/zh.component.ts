@@ -19,7 +19,7 @@ import { NzDemoCollapseSizeComponent } from './size';
   imports      : [ShareModule, NzDemoCollapseAccordionComponent, NzDemoCollapseBasicComponent, NzDemoCollapseBorderlessComponent, NzDemoCollapseCollapsibleComponent, NzDemoCollapseCustomComponent, NzDemoCollapseExtraComponent, NzDemoCollapseGhostComponent, NzDemoCollapseMixComponent, NzDemoCollapseNoarrowComponent, NzDemoCollapseSizeComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoCollapseZhComponent {
+export default class NzDemoCollapseZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

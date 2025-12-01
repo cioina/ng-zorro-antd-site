@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './join-zh.html'
 })
-export class NzDocJoinZhComponent {
+export default class NzDocJoinZhComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

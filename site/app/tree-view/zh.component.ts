@@ -2,7 +2,8 @@ import { Component, QueryList, ViewChildren } from '@angular/core';
 import { NzCodeBoxComponent } from '../codebox/codebox.component';
 import { ShareModule } from '../share/share.module';
 
-import { NzDemoTreeViewBasicComponent } from './basic';
+import { NzDemoTreeViewBasicChildrenAccessorComponent } from './basic-children-accessor';
+import { NzDemoTreeViewBasicLevelAccessorComponent } from './basic-level-accessor';
 import { NzDemoTreeViewCheckboxComponent } from './checkbox';
 import { NzDemoTreeViewDirectoryComponent } from './directory';
 import { NzDemoTreeViewDynamicComponent } from './dynamic';
@@ -14,10 +15,10 @@ import { NzDemoTreeViewVirtualScrollComponent } from './virtual-scroll';
 
 @Component({
   selector     : 'nz-demo-tree-view',
-  imports      : [ShareModule, NzDemoTreeViewBasicComponent, NzDemoTreeViewCheckboxComponent, NzDemoTreeViewDirectoryComponent, NzDemoTreeViewDynamicComponent, NzDemoTreeViewEditableComponent, NzDemoTreeViewLineComponent, NzDemoTreeViewSearchComponent, NzDemoTreeViewVirtualScrollComponent],
+  imports      : [ShareModule, NzDemoTreeViewBasicChildrenAccessorComponent, NzDemoTreeViewBasicLevelAccessorComponent, NzDemoTreeViewCheckboxComponent, NzDemoTreeViewDirectoryComponent, NzDemoTreeViewDynamicComponent, NzDemoTreeViewEditableComponent, NzDemoTreeViewLineComponent, NzDemoTreeViewSearchComponent, NzDemoTreeViewVirtualScrollComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTreeViewZhComponent {
+export default class NzDemoTreeViewZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

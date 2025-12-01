@@ -18,7 +18,7 @@ import { NzDemoAlertStyleComponent } from './style';
   imports      : [ShareModule, NzDemoAlertActionComponent, NzDemoAlertBannerComponent, NzDemoAlertBasicComponent, NzDemoAlertClosableComponent, NzDemoAlertCloseTextComponent, NzDemoAlertCustomIconComponent, NzDemoAlertDescriptionComponent, NzDemoAlertIconComponent, NzDemoAlertStyleComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoAlertEnComponent {
+export default class NzDemoAlertEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

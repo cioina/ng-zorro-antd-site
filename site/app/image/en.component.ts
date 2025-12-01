@@ -15,7 +15,7 @@ import { NzDemoImageServiceComponent } from './service';
   imports      : [ShareModule, NzDemoImageBasicComponent, NzDemoImageControlledPreviewComponent, NzDemoImageFallbackComponent, NzDemoImagePlaceholderComponent, NzDemoImagePreviewGroupComponent, NzDemoImageServiceComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoImageEnComponent {
+export default class NzDemoImageEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

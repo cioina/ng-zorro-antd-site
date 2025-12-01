@@ -20,7 +20,7 @@ import { NzDemoGridSortComponent } from './sort';
   imports      : [ShareModule, NzDemoGridBasicComponent, NzDemoGridFlexAlignComponent, NzDemoGridFlexOrderComponent, NzDemoGridFlexStretchComponent, NzDemoGridFlexComponent, NzDemoGridGutterComponent, NzDemoGridOffsetComponent, NzDemoGridPlaygroundComponent, NzDemoGridResponsiveMoreComponent, NzDemoGridResponsiveComponent, NzDemoGridSortComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoGridEnComponent {
+export default class NzDemoGridEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -33,7 +33,7 @@ import { NzDemoCascaderVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoCascaderBasicComponent, NzDemoCascaderChangeOnFunctionComponent, NzDemoCascaderChangeOnSelectComponent, NzDemoCascaderCustomFieldNamesComponent, NzDemoCascaderCustomRenderComponent, NzDemoCascaderCustomTemplateComponent, NzDemoCascaderDefaultValueAndAsyncOptionsComponent, NzDemoCascaderDefaultValueAndLazyLoadComponent, NzDemoCascaderDefaultValueComponent, NzDemoCascaderDisabledComponent, NzDemoCascaderHoverComponent, NzDemoCascaderLazyComponent, NzDemoCascaderModalComponent, NzDemoCascaderMultipleComponent, NzDemoCascaderOpenComponent, NzDemoCascaderPlacementComponent, NzDemoCascaderPrefixAndSuffixComponent, NzDemoCascaderReactiveFormComponent, NzDemoCascaderSearchComponent, NzDemoCascaderSizeComponent, NzDemoCascaderStatusComponent, NzDemoCascaderTriggerActionComponent, NzDemoCascaderTriggerComponent, NzDemoCascaderVariantComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoCascaderEnComponent {
+export default class NzDemoCascaderEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

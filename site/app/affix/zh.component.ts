@@ -12,7 +12,7 @@ import { NzDemoAffixTargetComponent } from './target';
   imports      : [ShareModule, NzDemoAffixBasicComponent, NzDemoAffixOnChangeComponent, NzDemoAffixTargetComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoAffixZhComponent {
+export default class NzDemoAffixZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -21,7 +21,7 @@ import { NzDemoInputNumberVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoInputNumberAddonComponent, NzDemoInputNumberBasicComponent, NzDemoInputNumberDigitComponent, NzDemoInputNumberDisabledComponent, NzDemoInputNumberFormatterComponent, NzDemoInputNumberHandlerIconComponent, NzDemoInputNumberKeyboardComponent, NzDemoInputNumberOutOfRangeComponent, NzDemoInputNumberPrefixComponent, NzDemoInputNumberSizeComponent, NzDemoInputNumberStatusComponent, NzDemoInputNumberVariantComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoInputNumberEnComponent {
+export default class NzDemoInputNumberEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -20,7 +20,7 @@ import { NzDemoTimePickerVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoTimePickerAddonComponent, NzDemoTimePickerBasicComponent, NzDemoTimePickerDisabledPartComponent, NzDemoTimePickerDisabledComponent, NzDemoTimePickerHideColumnComponent, NzDemoTimePickerIntervalOptionsComponent, NzDemoTimePickerSizeComponent, NzDemoTimePickerStatusComponent, NzDemoTimePickerUse12HoursComponent, NzDemoTimePickerValueComponent, NzDemoTimePickerVariantComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTimePickerZhComponent {
+export default class NzDemoTimePickerZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

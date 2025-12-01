@@ -16,9 +16,8 @@ import {
   inject
 } from '@angular/core';
 
-import { zoomBadgeMotion } from 'ng-zorro-antd/core/animation';
+import { zoomBadgeMotion, NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { NzConfigKey, NzConfigService, WithConfig } from 'ng-zorro-antd/core/config';
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
 import { NzOutletModule } from 'ng-zorro-antd/core/outlet';
 import { NgStyleInterface, NzSafeAny, NzSizeDSType } from 'ng-zorro-antd/core/types';
 
@@ -59,8 +58,8 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'badge';
           [nzDot]="nzDot"
           [nzCount]="nzCount"
           [nzOverflowCount]="nzOverflowCount"
-          [disableAnimation]="!!(nzStandalone || nzStatus || presetColor || noAnimation?.nzNoAnimation)"
-          [noAnimation]="!!noAnimation?.nzNoAnimation"
+          [disableAnimation]="!!(nzStandalone || nzStatus || presetColor || noAnimation?.nzNoAnimation?.())"
+          [noAnimation]="!!noAnimation?.nzNoAnimation?.()"
         />
       }
     </ng-container>

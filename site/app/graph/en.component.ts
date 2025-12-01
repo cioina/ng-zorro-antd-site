@@ -10,7 +10,7 @@ import { NzDemoGraphCustomizedComponent } from './customized';
   imports      : [ShareModule, NzDemoGraphCustomizedComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoGraphEnComponent {
+export default class NzDemoGraphEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

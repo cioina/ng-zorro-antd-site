@@ -20,7 +20,7 @@ import { NzDemoFloatButtonTypeComponent } from './type';
   imports      : [ShareModule, NzDemoFloatButtonBadgeComponent, NzDemoFloatButtonBasicComponent, NzDemoFloatButtonDescriptionComponent, NzDemoFloatButtonGroupMenuComponent, NzDemoFloatButtonGroupPlacementComponent, NzDemoFloatButtonGroupComponent, NzDemoFloatButtonOpenComponent, NzDemoFloatButtonShapeComponent, NzDemoFloatButtonTooltipComponent, NzDemoFloatButtonTopComponent, NzDemoFloatButtonTypeComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoFloatButtonZhComponent {
+export default class NzDemoFloatButtonZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

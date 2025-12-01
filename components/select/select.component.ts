@@ -45,10 +45,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { BehaviorSubject, combineLatest, merge, of as observableOf } from 'rxjs';
 import { distinctUntilChanged, map, startWith, switchMap, withLatestFrom } from 'rxjs/operators';
 
-import { slideMotion } from 'ng-zorro-antd/core/animation';
+import { slideMotion, NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { NzConfigKey, onConfigChangeEventForComponent, WithConfig } from 'ng-zorro-antd/core/config';
 import { NzFormItemFeedbackIconComponent, NzFormNoStatusService, NzFormStatusService } from 'ng-zorro-antd/core/form';
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
 import { NzOverlayModule, POSITION_MAP, POSITION_TYPE, getPlacementName } from 'ng-zorro-antd/core/overlay';
 import { cancelAnimationFrame, requestAnimationFrame } from 'ng-zorro-antd/core/polyfill';
 import {
@@ -117,8 +116,8 @@ export type NzSelectSizeType = NzSizeLDSType;
       [open]="nzOpen"
       [disabled]="nzDisabled"
       [mode]="nzMode"
-      [@.disabled]="!!noAnimation?.nzNoAnimation"
-      [nzNoAnimation]="noAnimation?.nzNoAnimation"
+      [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
+      [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
       [maxTagPlaceholder]="nzMaxTagPlaceholder"
       [removeIcon]="nzRemoveIcon"
       [placeHolder]="nzPlaceHolder"
@@ -181,8 +180,8 @@ export type NzSelectSizeType = NzSizeLDSType;
         [class.ant-select-dropdown-placement-bottomRight]="dropdownPosition === 'bottomRight'"
         [class.ant-select-dropdown-placement-topRight]="dropdownPosition === 'topRight'"
         [@slideMotion]="'enter'"
-        [@.disabled]="!!noAnimation?.nzNoAnimation"
-        [nzNoAnimation]="noAnimation?.nzNoAnimation"
+        [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
+        [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
         [listOfContainerItem]="listOfContainerItem"
         [menuItemSelectedIcon]="nzMenuItemSelectedIcon"
         [notFoundContent]="nzNotFoundContent"

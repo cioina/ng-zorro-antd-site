@@ -17,7 +17,7 @@ import { NzDemoTagStatusComponent } from './status';
   imports      : [ShareModule, NzDemoTagBasicComponent, NzDemoTagBorderlessComponent, NzDemoTagCheckableComponent, NzDemoTagColorfulComponent, NzDemoTagControlComponent, NzDemoTagHotTagsComponent, NzDemoTagIconComponent, NzDemoTagStatusComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTagZhComponent {
+export default class NzDemoTagZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

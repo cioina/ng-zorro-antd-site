@@ -15,7 +15,7 @@ import { NzDemoSkeletonListComponent } from './list';
   imports      : [ShareModule, NzDemoSkeletonActiveComponent, NzDemoSkeletonBasicComponent, NzDemoSkeletonChildrenComponent, NzDemoSkeletonComplexComponent, NzDemoSkeletonElementComponent, NzDemoSkeletonListComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoSkeletonZhComponent {
+export default class NzDemoSkeletonZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

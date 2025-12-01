@@ -8,6 +8,7 @@ import { NzDemoUploadDefaultFileListComponent } from './default-file-list';
 import { NzDemoUploadDirectoryComponent } from './directory';
 import { NzDemoUploadDragComponent } from './drag';
 import { NzDemoUploadFileListComponent } from './file-list';
+import { NzDemoUploadMaxCountComponent } from './max-count';
 import { NzDemoUploadPictureCardComponent } from './picture-card';
 import { NzDemoUploadPictureStyleComponent } from './picture-style';
 import { NzDemoUploadPngOnlyComponent } from './png-only';
@@ -19,10 +20,10 @@ import { NzDemoUploadUploadWithAliyunOssComponent } from './upload-with-aliyun-o
 
 @Component({
   selector     : 'nz-demo-upload',
-  imports      : [ShareModule, NzDemoUploadAvatarComponent, NzDemoUploadBasicComponent, NzDemoUploadDefaultFileListComponent, NzDemoUploadDirectoryComponent, NzDemoUploadDragComponent, NzDemoUploadFileListComponent, NzDemoUploadPictureCardComponent, NzDemoUploadPictureStyleComponent, NzDemoUploadPngOnlyComponent, NzDemoUploadPreviewFileComponent, NzDemoUploadTransformFileComponent, NzDemoUploadUploadManuallyComponent, NzDemoUploadUploadWithAliyunOssComponent],
+  imports      : [ShareModule, NzDemoUploadAvatarComponent, NzDemoUploadBasicComponent, NzDemoUploadDefaultFileListComponent, NzDemoUploadDirectoryComponent, NzDemoUploadDragComponent, NzDemoUploadFileListComponent, NzDemoUploadMaxCountComponent, NzDemoUploadPictureCardComponent, NzDemoUploadPictureStyleComponent, NzDemoUploadPngOnlyComponent, NzDemoUploadPreviewFileComponent, NzDemoUploadTransformFileComponent, NzDemoUploadUploadManuallyComponent, NzDemoUploadUploadWithAliyunOssComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoUploadEnComponent {
+export default class NzDemoUploadEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

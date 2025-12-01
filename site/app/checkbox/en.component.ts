@@ -15,7 +15,7 @@ import { NzDemoCheckboxLayoutComponent } from './layout';
   imports      : [ShareModule, NzDemoCheckboxBasicComponent, NzDemoCheckboxCheckAllComponent, NzDemoCheckboxControllerComponent, NzDemoCheckboxDisabledComponent, NzDemoCheckboxGroupComponent, NzDemoCheckboxLayoutComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoCheckboxEnComponent {
+export default class NzDemoCheckboxEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

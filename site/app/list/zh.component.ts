@@ -16,7 +16,7 @@ import { NzDemoListVerticalComponent } from './vertical';
   imports      : [ShareModule, NzDemoListBasicComponent, NzDemoListGridComponent, NzDemoListInfiniteLoadComponent, NzDemoListLoadmoreComponent, NzDemoListResponsiveComponent, NzDemoListSimpleComponent, NzDemoListVerticalComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoListZhComponent {
+export default class NzDemoListZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -1,11 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { NzDemoImageZhComponent } from './zh.component';
-import { NzDemoImageEnComponent } from './en.component';
-
 const routes: Routes = [
-  { path: 'en', component: NzDemoImageEnComponent },
-  { path: 'zh', component: NzDemoImageZhComponent }
+  { path: 'en', loadComponent: () => import('./en.component') },
+  { path: 'zh', loadComponent: () => import('./zh.component') }
 ];
 
 export default routes;

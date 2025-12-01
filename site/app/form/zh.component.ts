@@ -25,7 +25,7 @@ import { NzDemoFormValidateTemplateComponent } from './validate-template';
   imports      : [ShareModule, NzDemoFormAdvancedSearchComponent, NzDemoFormAutoTipsComponent, NzDemoFormCoordinatedComponent, NzDemoFormDynamicFormItemComponent, NzDemoFormDynamicRuleComponent, NzDemoFormHorizontalLoginComponent, NzDemoFormLabelAlignComponent, NzDemoFormLabelWrapComponent, NzDemoFormLayoutComponent, NzDemoFormNormalLoginComponent, NzDemoFormRegisterComponent, NzDemoFormRequiredStyleComponent, NzDemoFormTimeRelatedControlsComponent, NzDemoFormValidateReactiveComponent, NzDemoFormValidateStaticComponent, NzDemoFormValidateTemplateComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoFormZhComponent {
+export default class NzDemoFormZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

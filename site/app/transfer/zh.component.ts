@@ -17,7 +17,7 @@ import { NzDemoTransferTreeTransferComponent } from './tree-transfer';
   imports      : [ShareModule, NzDemoTransferAdvancedComponent, NzDemoTransferBasicComponent, NzDemoTransferCustomItemComponent, NzDemoTransferOneWayComponent, NzDemoTransferSearchComponent, NzDemoTransferStatusComponent, NzDemoTransferTableTransferComponent, NzDemoTransferTreeTransferComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTransferZhComponent {
+export default class NzDemoTransferZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

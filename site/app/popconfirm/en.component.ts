@@ -17,7 +17,7 @@ import { NzDemoPopconfirmPromiseComponent } from './promise';
   imports      : [ShareModule, NzDemoPopconfirmAsyncComponent, NzDemoPopconfirmBasicComponent, NzDemoPopconfirmCustomIconComponent, NzDemoPopconfirmDynamicTriggerComponent, NzDemoPopconfirmHideArrowComponent, NzDemoPopconfirmLocaleComponent, NzDemoPopconfirmPlacementComponent, NzDemoPopconfirmPromiseComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoPopconfirmEnComponent {
+export default class NzDemoPopconfirmEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

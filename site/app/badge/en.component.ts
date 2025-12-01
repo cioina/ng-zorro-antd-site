@@ -20,7 +20,7 @@ import { NzDemoBadgeStatusComponent } from './status';
   imports      : [ShareModule, NzDemoBadgeBasicComponent, NzDemoBadgeColorfulComponent, NzDemoBadgeDotComponent, NzDemoBadgeDynamicComponent, NzDemoBadgeLinkComponent, NzDemoBadgeNoWrapperComponent, NzDemoBadgeOffsetComponent, NzDemoBadgeOverflowComponent, NzDemoBadgeRibbonComponent, NzDemoBadgeSizeComponent, NzDemoBadgeStatusComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoBadgeEnComponent {
+export default class NzDemoBadgeEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

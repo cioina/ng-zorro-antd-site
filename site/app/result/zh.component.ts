@@ -17,7 +17,7 @@ import { NzDemoResultWarningComponent } from './warning';
   imports      : [ShareModule, NzDemoResultCustomComponent, NzDemoResultErrorComponent, NzDemoResultFofComponent, NzDemoResultFooComponent, NzDemoResultFotComponent, NzDemoResultInfoComponent, NzDemoResultSuccessComponent, NzDemoResultWarningComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoResultZhComponent {
+export default class NzDemoResultZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

@@ -19,7 +19,7 @@ import { NzDemoTreeVirtualScrollComponent } from './virtual-scroll';
   imports      : [ShareModule, NzDemoTreeBasicControlledComponent, NzDemoTreeBasicComponent, NzDemoTreeCustomizedIconComponent, NzDemoTreeDirectoryComponent, NzDemoTreeDraggableConfirmComponent, NzDemoTreeDraggableComponent, NzDemoTreeDynamicComponent, NzDemoTreeLineComponent, NzDemoTreeSearchComponent, NzDemoTreeVirtualScrollComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoTreeZhComponent {
+export default class NzDemoTreeZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

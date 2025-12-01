@@ -14,7 +14,7 @@ import { NzDemoEmptySimpleComponent } from './simple';
   imports      : [ShareModule, NzDemoEmptyBasicComponent, NzDemoEmptyConfigComponent, NzDemoEmptyCustomizeComponent, NzDemoEmptyDescriptionComponent, NzDemoEmptySimpleComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoEmptyZhComponent {
+export default class NzDemoEmptyZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

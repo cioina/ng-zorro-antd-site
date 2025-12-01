@@ -15,7 +15,7 @@ import { NzDemoPageHeaderResponsiveComponent } from './responsive';
   imports      : [ShareModule, NzDemoPageHeaderActionsComponent, NzDemoPageHeaderBasicComponent, NzDemoPageHeaderBreadcrumbComponent, NzDemoPageHeaderContentComponent, NzDemoPageHeaderGhostComponent, NzDemoPageHeaderResponsiveComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoPageHeaderEnComponent {
+export default class NzDemoPageHeaderEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

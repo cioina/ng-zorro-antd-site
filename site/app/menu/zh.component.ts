@@ -19,7 +19,7 @@ import { NzDemoMenuVerticalComponent } from './vertical';
   imports      : [ShareModule, NzDemoMenuHorizontalPositionComponent, NzDemoMenuHorizontalComponent, NzDemoMenuInlineCollapsedComponent, NzDemoMenuInlineComponent, NzDemoMenuRecursiveComponent, NzDemoMenuRouterComponent, NzDemoMenuSiderCurrentComponent, NzDemoMenuSwitchModeComponent, NzDemoMenuThemeComponent, NzDemoMenuVerticalComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoMenuZhComponent {
+export default class NzDemoMenuZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

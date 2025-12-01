@@ -6,7 +6,7 @@ import { ShareModule } from '../share/share.module';
   imports      : [ShareModule],
   templateUrl  : './schematics-en.html'
 })
-export class NzDocSchematicsEnComponent {
+export default class NzDocSchematicsEnComponent {
   goLink(link: string): void {
     if (window) {
       window.location.hash = link;

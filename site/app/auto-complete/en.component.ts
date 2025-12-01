@@ -18,7 +18,7 @@ import { NzDemoAutoCompleteVariantComponent } from './variant';
   imports      : [ShareModule, NzDemoAutoCompleteBasicComponent, NzDemoAutoCompleteCertainCategoryComponent, NzDemoAutoCompleteCustomComponent, NzDemoAutoCompleteNonCaseSensitiveComponent, NzDemoAutoCompleteObjectValueComponent, NzDemoAutoCompleteOptionsComponent, NzDemoAutoCompleteStatusComponent, NzDemoAutoCompleteUncertainCategoryComponent, NzDemoAutoCompleteVariantComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoAutoCompleteEnComponent {
+export default class NzDemoAutoCompleteEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

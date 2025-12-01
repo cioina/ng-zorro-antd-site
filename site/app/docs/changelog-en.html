@@ -1,7 +1,9 @@
 <article class="markdown">
   <h1>
-	Change Log
-	<span class="subtitle"></span>
+  <nz-space>
+    <span *nzSpaceItem>Change Log</span>
+    <span *nzSpaceItem></span>
+	</nz-space>
 </h1>
 
   <section class="markdown" ngNonBindable><p><code>ng-zorro-antd</code> strictly follows <a href="https://semver.org" target="_blank" rel="noopener">Semantic Versioning 2.0.0</a>.</p>
@@ -11,6 +13,157 @@
 <li>Major version release is not included in this schedule for breaking change and new features.</li>
 </ul>
 <hr>
+<h2 id="2100-next0"><span>21.0.0-next.0</span><a onclick="window.location.hash = '2100-next0'" class="anchor">#</a></h2><p><code>2025-11-28</code></p>
+<p>Upgrade with shell</p>
+<pre><code class="language-shell">ng update ng-zorro-antd&#64;next
+</code></pre><h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
+<li><strong>core:</strong> add <code>provideNzNoAnimation</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9555" target="_blank" rel="noopener">#9555</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/c945e81ce5966f34e7a96a8bccbf628a5b8d8c06" target="_blank" rel="noopener">c945e81</a>)</li>
+<li><strong>float-button:</strong> add pop animation to float button menu (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9413" target="_blank" rel="noopener">#9413</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/b40ad91b26aee48fc86d92da48071751f8345ab4" target="_blank" rel="noopener">b40ad91</a>)</li>
+<li><strong>tree-view:</strong> upgrade tree view component (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9003" target="_blank" rel="noopener">#9003</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/ae9ad576292671f3228361733b47e890d425e713" target="_blank" rel="noopener">ae9ad57</a>)</li>
+<li><strong>upload:</strong> add <code>nzMaxCount</code> feature (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9424" target="_blank" rel="noopener">#9424</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/0bf13c3fa5e41289315cf4d9642ed5aa7005af9e" target="_blank" rel="noopener">0bf13c3</a>)</li>
+<li><strong>schematics:</strong> update upgrade data for v21 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9564" target="_blank" rel="noopener">#9564</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/a44227d4dcfd137a2f33fabf699ac0af331e4208" target="_blank" rel="noopener">a44227d</a>)</li>
+</ul>
+<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>tree:</strong> no <code>preventDefault</code> when right-clicking the node title (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9532" target="_blank" rel="noopener">#9532</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/900efad5b0a04b1a0aca2c68728f01ed8dc4ef3b" target="_blank" rel="noopener">900efad</a>)</li>
+</ul>
+<h3 id="⚠_breaking_changes"><span>⚠ BREAKING CHANGES</span><a onclick="window.location.hash = '⚠_breaking_changes'" class="anchor">#</a></h3><ul>
+<li><strong>tree-view:</strong> <code>nzTreeControl</code> has been removed, please use <code>nzLevelAccessor</code> or <code>nzChildrenAccessor</code> instead</li>
+<li><strong>statistic:</strong> rename <code>NzStatisticNumberComponent</code> to <code>NzStatisticContentValueComponent</code></li>
+<li><strong>color-picker:</strong> change DOM structure to be simpler, and remove no unnecessary payload of <code>nzClick</code> output</li>
+<li><strong>watermark:</strong> change import path from <code>ng-zorro-antd/water-mark</code> to <code>ng-zorro-antd/watermark</code></li>
+<li><strong>back-top:</strong> removed, please use <code>float-button</code> instead</li>
+<li><strong>input-number-legacy:</strong> removed, please use <code>input-number</code> instead</li>
+</ul>
+<p>Remove the following APIs which were marked as deprecated in the previous version:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ng-zorro-antd/back-top</code></td>
+<td><code>*</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/dropdown</code></td>
+<td><code>NzDropdownButtonDirective</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/input-number-legacy</code></td>
+<td><code>*</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/core</code></td>
+<td><code>NzHighlightModule</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/auto-complete</code></td>
+<td><code>NZ_AUTOCOMPLETE_VALUE_ACCESSOR</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/checkbox</code></td>
+<td><code>nz-checkbox-wrapper</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/date-picker</code></td>
+<td><code>NzDatePickerComponent#nzBorderless</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/input</code></td>
+<td><code>NzInputDirective#nzBorderless</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/input-number</code></td>
+<td><code>NzInputNumberComponent#nzBordered</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/mention</code></td>
+<td><code>NZ_MENTION_TRIGGER_ACCESSOR</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/select</code></td>
+<td><code>NzSelectComponent#nzBorderless</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/time-picker</code></td>
+<td><code>NzTimePickerComponent#nzBorderless</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/tooltip</code></td>
+<td><code>NzToolTipModule</code> <code>NzToolTipComponent</code></td>
+</tr>
+</tbody></table>
+<p>Unify and standardize component naming, involving the following name changes:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Original</th>
+<th>Current</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>core</code></td>
+<td><code>NzConfig#backTop</code></td>
+<td><code>NzConfig#floatButton</code></td>
+</tr>
+<tr>
+<td><code>core</code></td>
+<td><code>NzConfig#dropDown</code></td>
+<td><code>NzConfig#dropdown</code></td>
+</tr>
+<tr>
+<td><code>dropdown</code></td>
+<td><code>NzDropDownModule</code></td>
+<td><code>NzDropdownModule</code></td>
+</tr>
+<tr>
+<td><code>dropdown</code></td>
+<td><code>NzDropDownADirective</code></td>
+<td><code>NzDropdownADirective</code></td>
+</tr>
+<tr>
+<td><code>menu</code></td>
+<td><code>NzIsMenuInsideDropDownToken</code></td>
+<td><code>NzIsMenuInsideDropdownToken</code></td>
+</tr>
+<tr>
+<td><code>watermark</code></td>
+<td><code>NzWaterMarkModule</code></td>
+<td><code>NzWatermarkModule</code></td>
+</tr>
+<tr>
+<td><code>watermark</code></td>
+<td><code>NzWaterMarkComponent</code></td>
+<td><code>NzWatermarkComponent</code></td>
+</tr>
+</tbody></table>
+<h3 id="deprecations"><span>Deprecations</span><a onclick="window.location.hash = 'deprecations'" class="anchor">#</a></h3><p>The following APIs are marked as <strong>deprecated</strong> in v20 and will be removed in the next major version.
+Please refer to related documentation for better alternatives.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>API</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ng-zorro-antd/input</code></td>
+<td><code>textarea[nzAutosize]</code></td>
+</tr>
+</tbody></table>
+<h2 id="2043"><span>20.4.3</span><a onclick="window.location.hash = '2043'" class="anchor">#</a></h2><p><code>2025-11-28</code></p>
+<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>form:</strong> animation should respect NoopAnimations (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9562" target="_blank" rel="noopener">#9562</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/5bccf968ab8cbe4164fe09e691f6664ee2664a5c" target="_blank" rel="noopener">5bccf96</a>)</li>
+<li><strong>input:</strong> fix dependency cycle (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9561" target="_blank" rel="noopener">#9561</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/8d5782d5ae35769fc73bcdb49d9d7897b9b92828" target="_blank" rel="noopener">8d5782d</a>)</li>
+</ul>
+<h2 id="2042"><span>20.4.2</span><a onclick="window.location.hash = '2042'" class="anchor">#</a></h2><p><code>2025-11-21</code></p>
+<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>cascader,select,date-picker,time-picker,tree-select:</strong> add missing nzVariant global config (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9543" target="_blank" rel="noopener">#9543</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/221386b45cc20d6bea689a5a4c10e35ff15b06b7" target="_blank" rel="noopener">221386b</a>)</li>
+<li><strong>button:</strong> improve icon only logic in zoneless mode (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9541" target="_blank" rel="noopener">#9541</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/9def420d2da1a2b8a7993db814948151733ef772" target="_blank" rel="noopener">9def420</a>)</li>
+</ul>
 <h2 id="2041"><span>20.4.1</span><a onclick="window.location.hash = '2041'" class="anchor">#</a></h2><p><code>2025-11-14</code></p>
 <h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
 <li><strong>badge:</strong> hex <code>nzColor</code> should work (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9517" target="_blank" rel="noopener">#9517</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/47d44ba4f826f882ee3a9de64994ad5ebd89daa5" target="_blank" rel="noopener">47d44ba</a>)</li>

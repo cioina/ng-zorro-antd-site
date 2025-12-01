@@ -17,7 +17,7 @@ import { NzDemoResizableTableComponent } from './table';
   imports      : [ShareModule, NzDemoResizableBasicComponent, NzDemoResizableCustomizeComponent, NzDemoResizableDrawerComponent, NzDemoResizableGridComponent, NzDemoResizableLayoutComponent, NzDemoResizableLockAspectRatioComponent, NzDemoResizablePreviewComponent, NzDemoResizableTableComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoResizableZhComponent {
+export default class NzDemoResizableZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

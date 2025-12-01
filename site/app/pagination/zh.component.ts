@@ -19,7 +19,7 @@ import { NzDemoPaginationTotalComponent } from './total';
   imports      : [ShareModule, NzDemoPaginationAlignComponent, NzDemoPaginationBasicComponent, NzDemoPaginationChangerComponent, NzDemoPaginationControlledComponent, NzDemoPaginationItemRenderComponent, NzDemoPaginationJumpComponent, NzDemoPaginationMiniComponent, NzDemoPaginationMoreComponent, NzDemoPaginationSimpleComponent, NzDemoPaginationTotalComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoPaginationZhComponent {
+export default class NzDemoPaginationZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

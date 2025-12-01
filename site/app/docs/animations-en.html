@@ -1,15 +1,18 @@
 <article class="markdown">
   <h1>
-	Animations Switch
-	<span class="subtitle"></span>
+  <nz-space>
+    <span *nzSpaceItem>Animations Switch</span>
+    <span *nzSpaceItem></span>
+	</nz-space>
 </h1>
 
 <nz-affix class="toc-affix" [nzOffsetTop]="16">
   <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
     <nz-link nzHref="#turn-off-globally" class="toc-indent-2" nzTitle="Turn Off Globally"></nz-link>
-<nz-link nzHref="#turn-off-in-templates" class="toc-indent-2" nzTitle="Turn Off In Templates"></nz-link>
-<nz-link nzHref="#turn-off-in-services" class="toc-indent-2" nzTitle="Turn Off In Services"></nz-link>
-<nz-link nzHref="#turn-off-the-wave-effect" class="toc-indent-2" nzTitle="Turn Off The Wave Effect"></nz-link>
+<nz-link nzHref="#turn-off-in-components" class="toc-indent-2" nzTitle="Turn Off in components"></nz-link>
+<nz-link nzHref="#turn-off-in-templates" class="toc-indent-2" nzTitle="Turn off in templates"></nz-link>
+<nz-link nzHref="#turn-off-in-services" class="toc-indent-2" nzTitle="Turn off in services"></nz-link>
+<nz-link nzHref="#turn-off-the-wave-effect" class="toc-indent-2" nzTitle="Turn off the wave effect"></nz-link>
   </nz-anchor>
 </nz-affix>
   <section class="markdown" ngNonBindable><p>NG-ZORRO allows developers to turn off the animations. You can set animations&#39; switch by adding corresponding directives or
@@ -23,18 +26,27 @@ configurations, or use the global configuration to turn off all animations assoc
     <span class="token function">provideNoopAnimations</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   <span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-</code></pre><h3 id="turn_off_in_templates"><span>Turn Off In Templates</span><a onclick="window.location.hash = 'turn_off_in_templates'" class="anchor">#</a></h3><p>Import <code>NzNoAnimationModule</code>.</p>
-<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzNoAnimationModule <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/no-animation'</span><span class="token punctuation">;</span>
+</code></pre><h3 id="turn_off_in_components"><span>Turn Off in components</span><a onclick="window.location.hash = 'turn_off_in_components'" class="anchor">#</a></h3><p>You can use <code>provideNzNoAnimation</code> to turn off animations in components.</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> provideNzNoAnimation <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/no-animation'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// ...</span>
+    <span class="token function">provideNzNoAnimation</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+</code></pre><h3 id="turn_off_in_templates"><span>Turn off in templates</span><a onclick="window.location.hash = 'turn_off_in_templates'" class="anchor">#</a></h3><p>Import <code>NzNoAnimationDirective</code>.</p>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> NzNoAnimationDirective <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/no-animation'</span><span class="token punctuation">;</span>
 
 <span class="token decorator"><span class="token at operator">&#64;</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
   imports<span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token comment">// ...</span>
-    NzNoAnimationModule
+    NzNoAnimationDirective
   <span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 </code></pre><p>Add the <code>nzNoAnimation</code> directive to the component.</p>
 <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-modal</span> <span class="token attr-name">nzNoAnimation</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-modal</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">nz-menu</span> <span class="token attr-name">nzNoAnimation</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
-</code></pre><h3 id="turn_off_in_services"><span>Turn Off In Services</span><a onclick="window.location.hash = 'turn_off_in_services'" class="anchor">#</a></h3><p>Add the following configuration while invoking components&#39; services.</p>
+</code></pre><h3 id="turn_off_in_services"><span>Turn off in services</span><a onclick="window.location.hash = 'turn_off_in_services'" class="anchor">#</a></h3><p>Add the following configuration while invoking components&#39; services.</p>
 <h4 id="modal,_drawer"><span>Modal, Drawer</span><a onclick="window.location.hash = 'modal,_drawer'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token punctuation">&#123;</span>
   <span class="token comment">// ...</span>
   nzNoAnimation<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
@@ -43,7 +55,7 @@ configurations, or use the global configuration to turn off all animations assoc
   <span class="token comment">// ...</span>
   nzAnimate<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span>
-</code></pre><h3 id="turn_off_the_wave_effect"><span>Turn Off The Wave Effect</span><a onclick="window.location.hash = 'turn_off_the_wave_effect'" class="anchor">#</a></h3><p>Some components use dynamic styles to support wave effects, so their styles are unable to be overridden directly.
+</code></pre><h3 id="turn_off_the_wave_effect"><span>Turn off the wave effect</span><a onclick="window.location.hash = 'turn_off_the_wave_effect'" class="anchor">#</a></h3><p>Some components use dynamic styles to support wave effects, so their styles are unable to be overridden directly.
 Instead, you can use <code>provideNzWave</code> or use <code>NoopAnimationsModule</code> to turn off the wave effects.</p>
 <pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> provideNzWave <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/wave'</span><span class="token punctuation">;</span>
 

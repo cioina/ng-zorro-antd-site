@@ -15,7 +15,7 @@ import { NzDemoDescriptionsVerticalComponent } from './vertical';
   imports      : [ShareModule, NzDemoDescriptionsBasicComponent, NzDemoDescriptionsBorderComponent, NzDemoDescriptionsCustomSizeComponent, NzDemoDescriptionsResponsiveComponent, NzDemoDescriptionsVerticalBorderComponent, NzDemoDescriptionsVerticalComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoDescriptionsEnComponent {
+export default class NzDemoDescriptionsEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

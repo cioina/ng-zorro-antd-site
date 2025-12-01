@@ -32,7 +32,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { combineLatest, merge } from 'rxjs';
 import { map, startWith, switchMap } from 'rxjs/operators';
 
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
+import { NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { getPlacementName, POSITION_MAP, POSITION_TYPE_HORIZONTAL } from 'ng-zorro-antd/core/overlay';
 
 import { NzMenuItemComponent } from './menu-item.component';
@@ -89,8 +89,8 @@ const listOfHorizontalPositions = [
         nz-submenu-inline-child
         [mode]="mode"
         [nzOpen]="nzOpen"
-        [@.disabled]="!!noAnimation?.nzNoAnimation"
-        [nzNoAnimation]="noAnimation?.nzNoAnimation"
+        [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
+        [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
         [menuClass]="nzMenuClassName"
         [templateOutlet]="subMenuTemplate"
       ></div>
@@ -116,8 +116,8 @@ const listOfHorizontalPositions = [
           [nzTriggerSubMenuAction]="nzTriggerSubMenuAction"
           [templateOutlet]="subMenuTemplate"
           [menuClass]="nzMenuClassName"
-          [@.disabled]="!!noAnimation?.nzNoAnimation"
-          [nzNoAnimation]="noAnimation?.nzNoAnimation"
+          [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
+          [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
           (subMenuMouseState)="setMouseEnterState($event)"
         ></div>
       </ng-template>

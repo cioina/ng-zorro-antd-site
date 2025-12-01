@@ -20,7 +20,7 @@ import { NzDemoColorPickerUseComponent } from './use';
   imports      : [ShareModule, NzDemoColorPickerBasicComponent, NzDemoColorPickerBlockComponent, NzDemoColorPickerClearComponent, NzDemoColorPickerDisableAlphaComponent, NzDemoColorPickerDisableComponent, NzDemoColorPickerFlipFlopComponent, NzDemoColorPickerFormatComponent, NzDemoColorPickerShowTextComponent, NzDemoColorPickerSizeComponent, NzDemoColorPickerTriggerComponent, NzDemoColorPickerUseComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoColorPickerZhComponent {
+export default class NzDemoColorPickerZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

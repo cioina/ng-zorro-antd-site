@@ -45,10 +45,9 @@ import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/f
 import { BehaviorSubject, merge, Observable, of } from 'rxjs';
 import { distinctUntilChanged, map, startWith, switchMap, withLatestFrom } from 'rxjs/operators';
 
-import { slideMotion } from 'ng-zorro-antd/core/animation';
+import { slideMotion, NzNoAnimationDirective } from 'ng-zorro-antd/core/animation';
 import { NzConfigKey, onConfigChangeEventForComponent, WithConfig } from 'ng-zorro-antd/core/config';
 import { NzFormItemFeedbackIconComponent, NzFormNoStatusService, NzFormStatusService } from 'ng-zorro-antd/core/form';
-import { NzNoAnimationDirective } from 'ng-zorro-antd/core/no-animation';
 import { NzStringTemplateOutletDirective } from 'ng-zorro-antd/core/outlet';
 import {
   DEFAULT_CASCADER_POSITIONS,
@@ -211,8 +210,8 @@ const defaultDisplayRender = (labels: string[]): string => labels.join(' / ');
         [class.ant-select-dropdown-placement-topRight]="dropdownPosition === 'topRight'"
         [class.ant-cascader-dropdown-rtl]="dir === 'rtl'"
         [@slideMotion]="'enter'"
-        [@.disabled]="!!noAnimation?.nzNoAnimation"
-        [nzNoAnimation]="noAnimation?.nzNoAnimation"
+        [@.disabled]="!!noAnimation?.nzNoAnimation?.()"
+        [nzNoAnimation]="noAnimation?.nzNoAnimation?.()"
         (mouseenter)="onTriggerMouseEnter()"
         (mouseleave)="onTriggerMouseLeave($event)"
       >

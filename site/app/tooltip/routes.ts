@@ -1,11 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { NzDemoTooltipZhComponent } from './zh.component';
-import { NzDemoTooltipEnComponent } from './en.component';
-
 const routes: Routes = [
-  { path: 'en', component: NzDemoTooltipEnComponent },
-  { path: 'zh', component: NzDemoTooltipZhComponent }
+  { path: 'en', loadComponent: () => import('./en.component') },
+  { path: 'zh', loadComponent: () => import('./zh.component') }
 ];
 
 export default routes;

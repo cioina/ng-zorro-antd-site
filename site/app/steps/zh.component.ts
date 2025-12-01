@@ -22,7 +22,7 @@ import { NzDemoStepsVerticalComponent } from './vertical';
   imports      : [ShareModule, NzDemoStepsClickableComponent, NzDemoStepsCustomizedProgressDotComponent, NzDemoStepsErrorComponent, NzDemoStepsIconComponent, NzDemoStepsNavComponent, NzDemoStepsProgressDotComponent, NzDemoStepsProgressComponent, NzDemoStepsSimpleComponent, NzDemoStepsSmallSizeComponent, NzDemoStepsStartIndexComponent, NzDemoStepsStepNextComponent, NzDemoStepsVerticalSmallComponent, NzDemoStepsVerticalComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoStepsZhComponent {
+export default class NzDemoStepsZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

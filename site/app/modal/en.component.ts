@@ -21,7 +21,7 @@ import { NzDemoModalServiceComponent } from './service';
   imports      : [ShareModule, NzDemoModalAsyncComponent, NzDemoModalBasicComponent, NzDemoModalConfirmPromiseComponent, NzDemoModalConfirmComponent, NzDemoModalDraggableComponent, NzDemoModalFooterComponent, NzDemoModalFooter2Component, NzDemoModalInfoComponent, NzDemoModalLocaleComponent, NzDemoModalManualComponent, NzDemoModalPositionComponent, NzDemoModalServiceComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoModalEnComponent {
+export default class NzDemoModalEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

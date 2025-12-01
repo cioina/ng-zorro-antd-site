@@ -15,7 +15,7 @@ import { NzDemoTooltipTemplateComponent } from './template';
   imports      : [ShareModule, NzDemoTooltipArrowPointAtCenterComponent, NzDemoTooltipBasicComponent, NzDemoTooltipColorComponent, NzDemoTooltipOriginComponent, NzDemoTooltipPlacementComponent, NzDemoTooltipTemplateComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoTooltipEnComponent {
+export default class NzDemoTooltipEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

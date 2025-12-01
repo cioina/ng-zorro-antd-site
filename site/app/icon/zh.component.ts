@@ -15,7 +15,7 @@ import { NzPageDemoIconZhComponent } from './zh.page.component';
   imports      : [ShareModule, NzDemoIconBasicComponent, NzDemoIconCustomComponent, NzDemoIconIconfontComponent, NzDemoIconNamespaceComponent, NzDemoIconTwotoneComponent, NzPageDemoIconZhComponent],
   templateUrl  : './zh.html'
 })
-export class NzDemoIconZhComponent {
+export default class NzDemoIconZhComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 

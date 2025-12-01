@@ -17,7 +17,7 @@ import { NzDemoCronExpressionUseComponent } from './use';
   imports      : [ShareModule, NzDemoCronExpressionBasicComponent, NzDemoCronExpressionBorderlessComponent, NzDemoCronExpressionCollapseComponent, NzDemoCronExpressionSemanticComponent, NzDemoCronExpressionShortcutsComponent, NzDemoCronExpressionSizeComponent, NzDemoCronExpressionTypeComponent, NzDemoCronExpressionUseComponent],
   templateUrl  : './en.html'
 })
-export class NzDemoCronExpressionEnComponent {
+export default class NzDemoCronExpressionEnComponent {
   expanded = false;
   @ViewChildren(NzCodeBoxComponent) codeBoxes!: QueryList<NzCodeBoxComponent>;
 
