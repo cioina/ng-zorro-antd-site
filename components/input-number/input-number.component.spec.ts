@@ -8,7 +8,7 @@ import { ApplicationRef, Component, ElementRef, provideZoneChangeDetection, view
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
-import { dispatchKeyboardEvent } from 'ng-zorro-antd/core/testing';
+import { dispatchEvent, dispatchKeyboardEvent } from 'ng-zorro-antd/core/testing';
 import { NzSizeLDSType, NzStatus, NzVariant } from 'ng-zorro-antd/core/types';
 import { provideNzIconsTesting } from 'ng-zorro-antd/icon/testing';
 
@@ -364,12 +364,27 @@ describe('input-number', () => {
     expect(hostElement.classList).toContain('ant-input-number-readonly');
   });
 
-  it('should be focus / blur', async () => {
+  it('should be focus / blur work', async () => {
     await fixture.whenStable();
+    const input = hostElement.querySelector('input')!;
     component.inputNumber().focus();
-    expect(document.activeElement).toBe(hostElement.querySelector('input'));
+    expect(document.activeElement).toBe(input);
     component.inputNumber().blur();
-    expect(document.activeElement).not.toBe(hostElement.querySelector('input'));
+    expect(document.activeElement).not.toBe(input);
+
+    component.value = 555;
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    component.inputNumber().focus({ cursor: 'start' });
+    expect(input.selectionStart).toBe(0);
+    expect(input.selectionEnd).toBe(0);
+    component.inputNumber().focus({ cursor: 'end' });
+    expect(input.selectionStart).toBe(String(component.value).length);
+    expect(input.selectionEnd).toBe(String(component.value).length);
+    component.inputNumber().focus({ cursor: 'all' });
+    expect(input.selectionStart).toBe(0);
+    expect(input.selectionEnd).toBe(String(component.value).length);
   });
 
   describe('should nzVariant work', () => {
@@ -407,6 +422,19 @@ describe('input-number', () => {
     component.keyboard = false;
     fixture.detectChanges();
     upStepByKeyboard();
+    expect(component.value).toBe(0);
+  });
+
+  it('should be set mouse wheel', () => {
+    const input = hostElement.querySelector('input')!;
+    dispatchEvent(input, new WheelEvent('wheel', { deltaY: -100 }));
+    expect(component.value).toBe(1);
+    dispatchEvent(input, new WheelEvent('wheel', { deltaY: 100 }));
+    expect(component.value).toBe(0);
+
+    component.disabled = true;
+    fixture.detectChanges();
+    dispatchEvent(input, new WheelEvent('wheel', { deltaY: 100 }));
     expect(component.value).toBe(0);
   });
 
@@ -610,6 +638,7 @@ describe('input-number with affixes or addons', () => {
       [nzFormatter]="formatter"
       [(ngModel)]="value"
       [disabled]="controlDisabled"
+      [nzChangeOnWheel]="changeOnWheel"
     />
   `
 })
@@ -627,6 +656,7 @@ class InputNumberTestComponent {
   variant: NzVariant = 'outlined';
   keyboard = true;
   controls = true;
+  changeOnWheel = true;
   parser: ((value: string) => number) | undefined = undefined;
   formatter: ((value: number) => string) | undefined = undefined;
 

@@ -7,6 +7,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-icon" nzTitle="带 icon 的例子"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-status" nzTitle="不同的状态"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-custom-status" nzTitle="自定义状态渲染器"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-type" nzTitle="自定义渲染类型"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-padding" nzTitle="带衬垫"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-color" nzTitle="自定义颜色"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-qr-code-demo-background" nzTitle="具有自定义背景颜色"></nz-link>
@@ -70,6 +71,89 @@
 	<div intro ngNonBindable><p>通过 <code>nzStatus</code> 的值控制二维码的状态，提供了 <code>active</code>、<code>expired</code>、<code>loading</code>、<code>scanned</code> 四个值。</p>
 </div>
 </nz-code-box><nz-code-box
+  nzTitle="自定义渲染类型"
+  nzVersion="21.0.0"
+  nzId="components-qr-code-demo-type"
+  nzSelector="nz-demo-qr-code-type"
+  nzLink="components-qr-code-demo-type"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-type <name>"
+  nzComponentName="NzDemoQrCodeTypeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/type.md"
+>
+	<nz-demo-qr-code-type demo></nz-demo-qr-code-type>
+	<div intro ngNonBindable><p>通过设置 <code>nzType</code> 自定义渲染结果，提供 <code>canvas</code> 和 <code>svg</code> 两个选项。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="自定义颜色"
+  nzVersion=""
+  nzId="components-qr-code-demo-color"
+  nzSelector="nz-demo-qr-code-color"
+  nzLink="components-qr-code-demo-color"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-color <name>"
+  nzComponentName="NzDemoQrCodeColorComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/color.md"
+>
+	<nz-demo-qr-code-color demo></nz-demo-qr-code-color>
+	<div intro ngNonBindable><p>通过设置 <code>nzColor</code> 自定义二维码颜色。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="容错等级"
+  nzVersion=""
+  nzId="components-qr-code-demo-error-level"
+  nzSelector="nz-demo-qr-code-error-level"
+  nzLink="components-qr-code-demo-error-level"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-error-level <name>"
+  nzComponentName="NzDemoQrCodeErrorLevelComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/error-level.md"
+>
+	<nz-demo-qr-code-error-level demo></nz-demo-qr-code-error-level>
+	<div intro ngNonBindable><p>通过设置 <code>nzLevel</code> 调整二维码容错。</p>
+</div>
+</nz-code-box>
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="带 icon 的例子"
+  nzVersion=""
+  nzId="components-qr-code-demo-icon"
+  nzSelector="nz-demo-qr-code-icon"
+  nzLink="components-qr-code-demo-icon"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-icon <name>"
+  nzComponentName="NzDemoQrCodeIconComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/icon.md"
+>
+	<nz-demo-qr-code-icon demo></nz-demo-qr-code-icon>
+	<div intro ngNonBindable><p>带有 icon 的二维码。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="自定义状态渲染器"
+  nzVersion=""
+  nzId="components-qr-code-demo-custom-status"
+  nzSelector="nz-demo-qr-code-custom-status"
+  nzLink="components-qr-code-demo-custom-status"
+  nzGenerateCommand="ng g ng-zorro-antd:qr-code-custom-status <name>"
+  nzComponentName="NzDemoQrCodeCustomStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/custom-status.md"
+>
+	<nz-demo-qr-code-custom-status demo></nz-demo-qr-code-custom-status>
+	<div intro ngNonBindable><p>可以通过 <code>nzStatusRender</code> 的值控制二维码不同状态的渲染逻辑。</p>
+</div>
+</nz-code-box><nz-code-box
   nzTitle="带衬垫"
   nzVersion=""
   nzId="components-qr-code-demo-padding"
@@ -119,73 +203,6 @@
 </div>
 </nz-code-box>
 	</div>
-	<div nz-col [nzXl]="12" [nzSpan]="24">
-		<nz-code-box
-  nzTitle="带 icon 的例子"
-  nzVersion=""
-  nzId="components-qr-code-demo-icon"
-  nzSelector="nz-demo-qr-code-icon"
-  nzLink="components-qr-code-demo-icon"
-  nzGenerateCommand="ng g ng-zorro-antd:qr-code-icon <name>"
-  nzComponentName="NzDemoQrCodeIconComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/icon.md"
->
-	<nz-demo-qr-code-icon demo></nz-demo-qr-code-icon>
-	<div intro ngNonBindable><p>带有 icon 的二维码。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="自定义状态渲染器"
-  nzVersion=""
-  nzId="components-qr-code-demo-custom-status"
-  nzSelector="nz-demo-qr-code-custom-status"
-  nzLink="components-qr-code-demo-custom-status"
-  nzGenerateCommand="ng g ng-zorro-antd:qr-code-custom-status <name>"
-  nzComponentName="NzDemoQrCodeCustomStatusComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/custom-status.md"
->
-	<nz-demo-qr-code-custom-status demo></nz-demo-qr-code-custom-status>
-	<div intro ngNonBindable><p>可以通过 <code>nzStatusRender</code> 的值控制二维码不同状态的渲染逻辑。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="自定义颜色"
-  nzVersion=""
-  nzId="components-qr-code-demo-color"
-  nzSelector="nz-demo-qr-code-color"
-  nzLink="components-qr-code-demo-color"
-  nzGenerateCommand="ng g ng-zorro-antd:qr-code-color <name>"
-  nzComponentName="NzDemoQrCodeColorComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/color.md"
->
-	<nz-demo-qr-code-color demo></nz-demo-qr-code-color>
-	<div intro ngNonBindable><p>通过设置 <code>nzColor</code> 自定义二维码颜色。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="容错等级"
-  nzVersion=""
-  nzId="components-qr-code-demo-error-level"
-  nzSelector="nz-demo-qr-code-error-level"
-  nzLink="components-qr-code-demo-error-level"
-  nzGenerateCommand="ng g ng-zorro-antd:qr-code-error-level <name>"
-  nzComponentName="NzDemoQrCodeErrorLevelComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/qr-code/demo/error-level.md"
->
-	<nz-demo-qr-code-error-level demo></nz-demo-qr-code-error-level>
-	<div intro ngNonBindable><p>通过设置 <code>nzLevel</code> 调整二维码容错。</p>
-</div>
-</nz-code-box>
-	</div>
 </div>
 <section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-qrcode"><span>nz-qrcode</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-qrcode'" class="anchor">#</a></h3><table>
 <thead>
@@ -194,79 +211,106 @@
 <th>说明</th>
 <th>类型</th>
 <th>默认值</th>
+<th>版本</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>[nzValue]</code></td>
 <td>扫描后的文本</td>
-<td><code>string</code></td>
+<td><code>string | string[]</code></td>
 <td>-</td>
+<td><code>string[]</code>:21.0.0</td>
+</tr>
+<tr>
+<td><code>[nzType]</code></td>
+<td>渲染类型</td>
+<td><code>&#39;canvas&#39;|&#39;svg&#39;</code></td>
+<td><code>canvas</code></td>
+<td>21.0.0</td>
 </tr>
 <tr>
 <td><code>[nzColor]</code></td>
 <td>二维码颜色</td>
 <td><code>string</code></td>
 <td><code>&#39;#000000&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBgColor]</code></td>
 <td>二维码背景颜色</td>
 <td><code>string</code></td>
 <td><code>&#39;#FFFFFF&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzSize]</code></td>
 <td>二维码大小</td>
 <td><code>number</code></td>
 <td><code>160</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzPadding]</code></td>
 <td>二维码填充</td>
-<td><code>number | number[]</code></td>
+<td><code>number</code></td>
 <td><code>0</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzIcon]</code></td>
 <td>二维码中 icon 地址</td>
 <td><code>string</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzIconSize]</code></td>
 <td>二维码中 icon 大小</td>
 <td><code>number</code></td>
 <td><code>40</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzBordered]</code></td>
 <td>是否有边框</td>
 <td><code>boolean</code></td>
 <td><code>true</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzStatus]</code></td>
 <td>二维码状态</td>
-<td><code>&#39;active&#39;｜&#39;expired&#39; ｜&#39;loading&#39;</code></td>
+<td><code>&#39;active&#39;|&#39;expired&#39;|&#39;loading&#39;|&#39;scanned&#39;</code></td>
 <td><code>&#39;active&#39;</code></td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzStatusRender]</code></td>
 <td>自定义状态渲染器</td>
 <td><code>TemplateRef&lt;void&gt; | string</code></td>
 <td>-</td>
+<td></td>
 </tr>
 <tr>
 <td><code>[nzLevel]</code></td>
 <td>二维码容错等级</td>
-<td><code>&#39;L&#39;｜&#39;M&#39;｜&#39;Q&#39;｜&#39;H&#39;</code></td>
+<td><code>&#39;L&#39;|&#39;M&#39;|&#39;Q&#39;|&#39;H&#39;</code></td>
 <td><code>&#39;M&#39;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzBoostLevel]</code></td>
+<td>如果启用，自动提升纠错等级，结果的纠错级别可能会高于指定的纠错级别</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>21.0.0</td>
 </tr>
 <tr>
 <td><code>(nzRefresh)</code></td>
 <td>点击&quot;点击刷新&quot;的回调</td>
 <td><code>EventEmitter&lt;string&gt;</code></td>
 <td>-</td>
+<td></td>
 </tr>
 </tbody></table>
 <h2 id="注意"><span>注意</span><a onclick="window.location.hash = '注意'" class="anchor">#</a></h2><h3 id="二维码无法识别"><span>二维码无法识别</span><a onclick="window.location.hash = '二维码无法识别'" class="anchor">#</a></h3><p><code>nzValue</code> 保守的上限为 738 或更少的字符串。如果使用容错等级，<code>nzValue</code> 上限会降低。</p>

@@ -15,6 +15,8 @@
 <nz-link class="toc-indent-2" nzHref="#components-input-number-demo-prefix" nzTitle="Prefix"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-number-demo-status" nzTitle="Status"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-number-demo-handler-icon" nzTitle="Custom handler icon"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-number-demo-change-on-wheel" nzTitle="Mouse wheel behavior"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-number-demo-focus" nzTitle="Focus with additional option"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -137,6 +139,23 @@
 	<nz-demo-input-number-status demo></nz-demo-input-number-status>
 	<div intro ngNonBindable><p>Add status to InputNumber with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Mouse wheel behavior"
+  nzVersion=""
+  nzId="components-input-number-demo-change-on-wheel"
+  nzSelector="nz-demo-input-number-change-on-wheel"
+  nzLink="components-input-number-demo-change-on-wheel"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-change-on-wheel <name>"
+  nzComponentName="NzDemoInputNumberChangeOnWheelComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/change-on-wheel.md"
+>
+	<nz-demo-input-number-change-on-wheel demo></nz-demo-input-number-change-on-wheel>
+	<div intro ngNonBindable><p>Use the <code>nzChangeOnWheel</code> property to control with the mouse wheel.
+`</p>
+</div>
 </nz-code-box>
 	</div>
 	<div nz-col [nzXl]="12" [nzSpan]="24">
@@ -236,6 +255,23 @@
 	<nz-demo-input-number-handler-icon demo></nz-demo-input-number-handler-icon>
 	<div intro ngNonBindable><p>Custom arrow icon.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Focus with additional option"
+  nzVersion=""
+  nzId="components-input-number-demo-focus"
+  nzSelector="nz-demo-input-number-focus"
+  nzLink="components-input-number-demo-focus"
+  nzGenerateCommand="ng g ng-zorro-antd:input-number-focus <name>"
+  nzComponentName="NzDemoInputNumberFocusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input-number/demo/focus.md"
+>
+	<nz-demo-input-number-focus demo></nz-demo-input-number-focus>
+	<div intro ngNonBindable><p>Focus with additional option.
+`</p>
+</div>
 </nz-code-box>
 	</div>
 </div>
@@ -308,6 +344,13 @@
 <tr>
 <td><code>[nzKeyboard]</code></td>
 <td>Whether to enable keyboard shortcuts</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzChangeOnWheel]</code></td>
+<td>Whether to enable mouse wheel control</td>
 <td><code>boolean</code></td>
 <td><code>true</code></td>
 <td></td>
@@ -431,15 +474,18 @@
 <tr>
 <th>Name</th>
 <th>Description</th>
+<th>Parameters</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>focus()</td>
+<td>focus(option?)</td>
 <td>get focus</td>
+<td><code>(option?: &#123; preventScroll?: boolean, cursor?: &#39;start&#39; | &#39;end&#39; | &#39;all&#39; &#125;)</code></td>
 </tr>
 <tr>
 <td>blur()</td>
 <td>remove focus</td>
+<td>-</td>
 </tr>
 </tbody></table>
 <h2 id="faq"><span>FAQ</span><a onclick="window.location.hash = 'faq'" class="anchor">#</a></h2><h3 id="why_can_the_lesscodegreatervalueless/codegreater_exceed_the_lesscodegreaterminless/codegreater_and_lesscodegreatermaxless/codegreater_range_in_controlled_mode?"><span>Why can the <code>value</code> exceed the <code>min</code> and <code>max</code> range in controlled mode?</span><a onclick="window.location.hash = 'why_can_the_lesscodegreatervalueless/codegreater_exceed_the_lesscodegreaterminless/codegreater_and_lesscodegreatermaxless/codegreater_range_in_controlled_mode?'" class="anchor">#</a></h3><p>In controlled mode, developers may store related data by themselves. If the component constrains the data back to the range, it will cause the displayed data to be inconsistent with the actual stored data. This leads to potential data problems in some scenarios such as form fields.</p>

@@ -3,8 +3,6 @@ import { Routes } from '@angular/router';
 const routes: Routes = [
 	{ path: 'animations/zh', loadComponent: () => import('./animations-zh') },
 	{ path: 'animations/en', loadComponent: () => import('./animations-en') },
-	{ path: 'changelog/zh', loadComponent: () => import('./changelog-zh') },
-	{ path: 'changelog/en', loadComponent: () => import('./changelog-en') },
 	{ path: 'contributing/zh', loadComponent: () => import('./contributing-zh') },
 	{ path: 'contributing/en', loadComponent: () => import('./contributing-en') },
 	{ path: 'customize-theme-variable/zh', loadComponent: () => import('./customize-theme-variable-zh') },

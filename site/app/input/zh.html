@@ -19,6 +19,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-allow-clear" nzTitle="带移除图标"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-textarea-with-character-count" nzTitle="带数字提示的文本域"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-status" nzTitle="自定义状态"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-demo-focus" nzTitle="Focus 额外配置属性"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -174,6 +175,22 @@
 >
 	<nz-demo-input-textarea-with-character-count demo></nz-demo-input-textarea-with-character-count>
 	<div intro ngNonBindable><p>展示数字提示。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Focus 额外配置属性"
+  nzVersion=""
+  nzId="components-input-demo-focus"
+  nzSelector="nz-demo-input-focus"
+  nzLink="components-input-demo-focus"
+  nzGenerateCommand="ng g ng-zorro-antd:input-focus <name>"
+  nzComponentName="NzDemoInputFocusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/focus.md"
+>
+	<nz-demo-input-focus demo></nz-demo-input-focus>
+	<div intro ngNonBindable><p>Focus 提供额外配置属性</p>
 </div>
 </nz-code-box>
 	</div>
@@ -347,6 +364,26 @@
 <td><code>&#39;error&#39; | &#39;warning&#39;</code></td>
 <td>-</td>
 <td></td>
+</tr>
+</tbody></table>
+<h4 id="方法"><span>方法</span><a onclick="window.location.hash = '方法'" class="anchor">#</a></h4><p>通过 <code>ViewChild</code> 等方法获得实例后调用</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>focus(option?)</td>
+<td>获取焦点</td>
+<td><code>(option?: &#123; preventScroll?: boolean, cursor?: &#39;start&#39; | &#39;end&#39; | &#39;all&#39; &#125;)</code></td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>移除焦点</td>
+<td>-</td>
 </tr>
 </tbody></table>
 <h3 id="nz-input-wrapper"><span>nz-input-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-wrapper'" class="anchor">#</a></h3><p>当需要为 <code>[nz-input]</code> 添加额外功能时使用。</p>
@@ -578,4 +615,14 @@
 </tr>
 </tbody></table>
 <h2 id="qandamp;a"><span>Q&amp;A</span><a onclick="window.location.hash = 'qandamp;a'" class="anchor">#</a></h2><h3 id="如何使用紧凑型输入框组合？"><span>如何使用紧凑型输入框组合？</span><a onclick="window.location.hash = '如何使用紧凑型输入框组合？'" class="anchor">#</a></h3><p>从 v20 版本开始，<code>nz-input-group</code> 不再直接支持紧凑模式，你可以使用 <a href="/components/space/zh#components-space-demo-compact">nz-space-compact</a> 替代。</p>
-</section></article>
+<h3 id="ng0951_错误"><span>NG0951 错误</span><a onclick="window.location.hash = 'ng0951_错误'" class="anchor">#</a></h3><p>若通过 <code>ngTemplateOutlet</code> 等方式将 <code>nz-input</code> 动态渲染到 <code>nz-input-wrapper</code> 内部，可能会触发 <code>NG0951</code> 错误。
+这是由于 Angular 的内容投影（Content Projection）与子查询（Child Query）机制是静态的，无法识别动态渲染的组件（参考：<a href="https://github.com/angular/angular/issues/64504" target="_blank" rel="noopener">angular/angular#64504</a>）。</p>
+<p>鉴于 <code>nz-input-wrapper</code> 依赖于内容子查询来定位 <code>nz-input</code>，建议将 <code>nz-input-wrapper</code> 与 <code>nz-input</code> 视为一个整体，避免拆分渲染。</p>
+<pre><code class="language-html">&#64;if (need_affix_or_addon) &#123;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-input-wrapper</span> <span class="token attr-name">nzAddonBefore</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>...<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-input-wrapper</span><span class="token punctuation">></span></span>
+&#125; &#64;else &#123;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token punctuation">/></span></span>
+&#125;
+</code></pre></section></article>

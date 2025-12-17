@@ -11,11 +11,12 @@ import { NzDemoQrCodeErrorLevelComponent } from './error-level';
 import { NzDemoQrCodeIconComponent } from './icon';
 import { NzDemoQrCodePaddingComponent } from './padding';
 import { NzDemoQrCodeStatusComponent } from './status';
+import { NzDemoQrCodeTypeComponent } from './type';
 
 
 @Component({
   selector     : 'nz-demo-qr-code',
-  imports      : [ShareModule, NzDemoQrCodeBackgroundComponent, NzDemoQrCodeBasicComponent, NzDemoQrCodeColorComponent, NzDemoQrCodeCustomStatusComponent, NzDemoQrCodeDownloadComponent, NzDemoQrCodeErrorLevelComponent, NzDemoQrCodeIconComponent, NzDemoQrCodePaddingComponent, NzDemoQrCodeStatusComponent],
+  imports      : [ShareModule, NzDemoQrCodeBackgroundComponent, NzDemoQrCodeBasicComponent, NzDemoQrCodeColorComponent, NzDemoQrCodeCustomStatusComponent, NzDemoQrCodeDownloadComponent, NzDemoQrCodeErrorLevelComponent, NzDemoQrCodeIconComponent, NzDemoQrCodePaddingComponent, NzDemoQrCodeStatusComponent, NzDemoQrCodeTypeComponent],
   templateUrl  : './en.html'
 })
 export default class NzDemoQrCodeEnComponent {

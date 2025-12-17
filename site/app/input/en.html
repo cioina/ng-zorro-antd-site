@@ -19,6 +19,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-allow-clear" nzTitle="With clear icon"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-textarea-with-character-count" nzTitle="Textarea with character count"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-status" nzTitle="Status"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-demo-focus" nzTitle="Focus with additional option"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -174,6 +175,23 @@
 >
 	<nz-demo-input-textarea-with-character-count demo></nz-demo-input-textarea-with-character-count>
 	<div intro ngNonBindable><p>Show character count.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Focus with additional option"
+  nzVersion=""
+  nzId="components-input-demo-focus"
+  nzSelector="nz-demo-input-focus"
+  nzLink="components-input-demo-focus"
+  nzGenerateCommand="ng g ng-zorro-antd:input-focus <name>"
+  nzComponentName="NzDemoInputFocusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/focus.md"
+>
+	<nz-demo-input-focus demo></nz-demo-input-focus>
+	<div intro ngNonBindable><p>Focus with additional option.
+`</p>
 </div>
 </nz-code-box>
 	</div>
@@ -354,6 +372,26 @@
 <td><del><code>boolean</code></del></td>
 <td><del><code>true</code></del></td>
 <td></td>
+</tr>
+</tbody></table>
+<h4 id="methods"><span>Methods</span><a onclick="window.location.hash = 'methods'" class="anchor">#</a></h4><p>You can get instance by <code>ViewChild</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Parameters</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>focus(option?)</td>
+<td>get focus</td>
+<td><code>(option?: &#123; preventScroll?: boolean, cursor?: &#39;start&#39; | &#39;end&#39; | &#39;all&#39; &#125;)</code></td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>remove focus</td>
+<td>-</td>
 </tr>
 </tbody></table>
 <h3 id="nz-input-wrapper"><span>nz-input-wrapper</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-wrapper'" class="anchor">#</a></h3><p>Use when you need to add extra functionality to <code>[nz-input]</code>.</p>
@@ -579,4 +617,14 @@
 </tr>
 </tbody></table>
 <h2 id="qandamp;a"><span>Q&amp;A</span><a onclick="window.location.hash = 'qandamp;a'" class="anchor">#</a></h2><h3 id="how_to_use_compact_input_group?"><span>How to use compact input group?</span><a onclick="window.location.hash = 'how_to_use_compact_input_group?'" class="anchor">#</a></h3><p><code>nz-input-group</code> is no longer support compact mode directly in v20, you can use <a href="/components/space/en#components-space-demo-compact">nz-space-compact</a> instead.</p>
-</section></article>
+<h3 id="ng0951_error"><span>NG0951 Error</span><a onclick="window.location.hash = 'ng0951_error'" class="anchor">#</a></h3><p>If you attempt to dynamically render <code>nz-input</code> inside <code>nz-input-wrapper</code> using <code>ngTemplateOutlet</code> or similar methods, you may encounter the <code>NG0951</code> error.
+This is because Angular&#39;s Content Projection and Child Query mechanisms are static and cannot recognize dynamically rendered components (Reference: <a href="https://github.com/angular/angular/issues/64504" target="_blank" rel="noopener">angular/angular#64504</a>).</p>
+<p>Since <code>nz-input-wrapper</code> relies on content child queries to locate <code>nz-input</code>, it is recommended to treat <code>nz-input-wrapper</code> and <code>nz-input</code> as a single unit and avoid rendering them separately.</p>
+<pre><code class="language-html">&#64;if (need_affix_or_addon) &#123;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nz-input-wrapper</span> <span class="token attr-name">nzAddonBefore</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>...<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nz-input-wrapper</span><span class="token punctuation">></span></span>
+&#125; &#64;else &#123;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">nz-input</span> <span class="token punctuation">/></span></span>
+&#125;
+</code></pre></section></article>

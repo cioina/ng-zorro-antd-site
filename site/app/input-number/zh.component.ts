@@ -4,8 +4,10 @@ import { ShareModule } from '../share/share.module';
 
 import { NzDemoInputNumberAddonComponent } from './addon';
 import { NzDemoInputNumberBasicComponent } from './basic';
+import { NzDemoInputNumberChangeOnWheelComponent } from './change-on-wheel';
 import { NzDemoInputNumberDigitComponent } from './digit';
 import { NzDemoInputNumberDisabledComponent } from './disabled';
+import { NzDemoInputNumberFocusComponent } from './focus';
 import { NzDemoInputNumberFormatterComponent } from './formatter';
 import { NzDemoInputNumberHandlerIconComponent } from './handler-icon';
 import { NzDemoInputNumberKeyboardComponent } from './keyboard';
@@ -18,7 +20,7 @@ import { NzDemoInputNumberVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-input-number',
-  imports      : [ShareModule, NzDemoInputNumberAddonComponent, NzDemoInputNumberBasicComponent, NzDemoInputNumberDigitComponent, NzDemoInputNumberDisabledComponent, NzDemoInputNumberFormatterComponent, NzDemoInputNumberHandlerIconComponent, NzDemoInputNumberKeyboardComponent, NzDemoInputNumberOutOfRangeComponent, NzDemoInputNumberPrefixComponent, NzDemoInputNumberSizeComponent, NzDemoInputNumberStatusComponent, NzDemoInputNumberVariantComponent],
+  imports      : [ShareModule, NzDemoInputNumberAddonComponent, NzDemoInputNumberBasicComponent, NzDemoInputNumberChangeOnWheelComponent, NzDemoInputNumberDigitComponent, NzDemoInputNumberDisabledComponent, NzDemoInputNumberFocusComponent, NzDemoInputNumberFormatterComponent, NzDemoInputNumberHandlerIconComponent, NzDemoInputNumberKeyboardComponent, NzDemoInputNumberOutOfRangeComponent, NzDemoInputNumberPrefixComponent, NzDemoInputNumberSizeComponent, NzDemoInputNumberStatusComponent, NzDemoInputNumberVariantComponent],
   templateUrl  : './zh.html'
 })
 export default class NzDemoInputNumberZhComponent {

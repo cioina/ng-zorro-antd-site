@@ -41,7 +41,14 @@ import {
   OnChangeType,
   OnTouchedType
 } from 'ng-zorro-antd/core/types';
-import { getStatusClassNames, getVariantClassNames, isNil, isNotNil } from 'ng-zorro-antd/core/util';
+import {
+  getStatusClassNames,
+  getVariantClassNames,
+  InputFocusOptions,
+  isNil,
+  isNotNil,
+  triggerFocus
+} from 'ng-zorro-antd/core/util';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import {
   NzInputAddonAfterDirective,
@@ -161,6 +168,7 @@ import { NZ_SPACE_COMPACT_ITEM_TYPE, NZ_SPACE_COMPACT_SIZE, NzSpaceCompactItemDi
           [disabled]="finalDisabled()"
           [readOnly]="nzReadOnly()"
           (input)="onInput(input.value)"
+          (wheel)="onWheel($event)"
         />
       </div>
     </ng-template>
@@ -198,6 +206,7 @@ export class NzInputNumberComponent implements OnInit, ControlValueAccessor {
   readonly nzAutoFocus = input(false, { transform: booleanAttribute });
   readonly nzKeyboard = input(true, { transform: booleanAttribute });
   readonly nzControls = input(true, { transform: booleanAttribute });
+  readonly nzChangeOnWheel = input(true, { transform: booleanAttribute });
   readonly nzPrefix = input<string>();
   readonly nzSuffix = input<string>();
   readonly nzAddonBefore = input<string>();
@@ -369,8 +378,8 @@ export class NzInputNumberComponent implements OnInit, ControlValueAccessor {
     this.isDisabledFirstChange = false;
   }
 
-  focus(): void {
-    this.inputRef().nativeElement.focus();
+  focus(options?: InputFocusOptions): void {
+    triggerFocus(this.inputRef().nativeElement, options);
   }
 
   blur(): void {
@@ -417,8 +426,8 @@ export class NzInputNumberComponent implements OnInit, ControlValueAccessor {
       value &&= +value.toFixed(precision);
     }
 
-    const formatedValue = isNil(value) ? '' : formatter(value);
-    this.displayValue.set(formatedValue);
+    const formattedValue = isNil(value) ? '' : formatter(value);
+    this.displayValue.set(formattedValue);
     this.updateValue(value);
   }
 
@@ -529,6 +538,15 @@ export class NzInputNumberComponent implements OnInit, ControlValueAccessor {
 
   protected onInput(value: string): void {
     this.setValueByTyping(value);
+  }
+
+  protected onWheel(event: WheelEvent): void {
+    if (this.nzDisabled() || !this.nzChangeOnWheel()) {
+      return;
+    }
+
+    event.preventDefault();
+    this.step(event, event.deltaY < 0);
   }
 }
 
