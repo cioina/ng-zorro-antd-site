@@ -13,6 +13,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-flip-flop" nzTitle="Custom Trigger"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-format" nzTitle="Color Format"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-block" nzTitle="Color Block"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-presets" nzTitle="Presets"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-color-picker-demo-use" nzTitle="Use with forms"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
@@ -120,20 +121,20 @@
 	<div intro ngNonBindable><p>Encoding formats, support <code>HEX</code>, <code>HSB</code>, <code>RGB</code>.</p>
 </div>
 </nz-code-box><nz-code-box
-  nzTitle="Use with forms"
+  nzTitle="Presets"
   nzVersion=""
-  nzId="components-color-picker-demo-use"
-  nzSelector="nz-demo-color-picker-use"
-  nzLink="components-color-picker-demo-use"
-  nzGenerateCommand="ng g ng-zorro-antd:color-picker-use <name>"
-  nzComponentName="NzDemoColorPickerUseComponent"
+  nzId="components-color-picker-demo-presets"
+  nzSelector="nz-demo-color-picker-presets"
+  nzLink="components-color-picker-demo-presets"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-presets <name>"
+  nzComponentName="NzDemoColorPickerPresetsComponent"
   [nzIframe]="false"
   nzIframeSource=""
   [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/use.md"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/presets.md"
 >
-	<nz-demo-color-picker-use demo></nz-demo-color-picker-use>
-	<div intro ngNonBindable><p><code>&lt;nz-color-picker formControlName=&quot;color&quot;&gt;&lt;/nz-color-picker&gt;</code></p>
+	<nz-demo-color-picker-presets demo></nz-demo-color-picker-presets>
+	<div intro ngNonBindable><p>Use <code>nzPresets</code> property to preset some colors for users to choose from quickly. Each preset group can have a label, color list, default open state, and unique key.</p>
 </div>
 </nz-code-box>
 	</div>
@@ -218,6 +219,22 @@
 	<nz-demo-color-picker-block demo></nz-demo-color-picker-block>
 	<div intro ngNonBindable><p>Color Block.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Use with forms"
+  nzVersion=""
+  nzId="components-color-picker-demo-use"
+  nzSelector="nz-demo-color-picker-use"
+  nzLink="components-color-picker-demo-use"
+  nzGenerateCommand="ng g ng-zorro-antd:color-picker-use <name>"
+  nzComponentName="NzDemoColorPickerUseComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/color-picker/demo/use.md"
+>
+	<nz-demo-color-picker-use demo></nz-demo-color-picker-use>
+	<div intro ngNonBindable><p><code>&lt;nz-color-picker formControlName=&quot;color&quot;&gt;&lt;/nz-color-picker&gt;</code></p>
+</div>
 </nz-code-box>
 	</div>
 </div>
@@ -294,6 +311,12 @@
 <td><code>[nzTitle]</code></td>
 <td>Setting the title of the color picker</td>
 <td><code>TemplateRef&lt;void&gt; | string</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>[nzPresets]</code></td>
+<td>Preset colors</td>
+<td><code>NzColorPickerPresetsItem[]</code></td>
 <td>-</td>
 </tr>
 <tr>

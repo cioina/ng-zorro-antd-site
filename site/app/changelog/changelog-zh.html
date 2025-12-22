@@ -13,6 +13,23 @@
 <li>主版本号：含有破坏性更新和新特性，不在发布周期内。</li>
 </ul>
 <hr>
+<h2 id="2100-next2"><span>21.0.0-next.2</span><a onclick="window.location.hash = '2100-next2'" class="anchor">#</a></h2><h3 id="⚠_breaking_changes"><span>⚠ BREAKING CHANGES</span><a onclick="window.location.hash = '⚠_breaking_changes'" class="anchor">#</a></h3><ul>
+<li><strong>tabs:</strong> 移除已弃用的 <code>nz-tabset</code> selector (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9613" target="_blank" rel="noopener">#9613</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/d5e577245da502a85799c84afbf9088c03732319" target="_blank" rel="noopener">d5e5772</a>)</li>
+<li><strong>qrcode:</strong> <code>nzPadding</code> 类型从 <code>number | number[]</code> 调整为 <code>number</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9535" target="_blank" rel="noopener">#9535</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/5419b51781478369afe3c01fe24374f2f62eeffe" target="_blank" rel="noopener">5419b51</a>)</li>
+</ul>
+<h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
+<li><strong>color-picker:</strong> 新增 <code>nzPresets</code> 参数支持预设颜色 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9341" target="_blank" rel="noopener">#9341</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/d59ec995b42726470ebaea39ec7a52f5c9c5e58d" target="_blank" rel="noopener">d59ec99</a>)</li>
+<li><strong>date-picker:</strong> 日期范围选择顺序颠倒时确保能输出正确的范围 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9518" target="_blank" rel="noopener">#9518</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/d0b3185fb2ae891a164d3b4f28e4f68add8e166b" target="_blank" rel="noopener">d0b3185</a>)</li>
+<li><strong>input-number:</strong> 支持鼠标滚轮控制 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9591" target="_blank" rel="noopener">#9591</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/6ce354537ec59bd0c480eed61bb8f663d2429189" target="_blank" rel="noopener">6ce3545</a>)</li>
+<li><strong>input,input-number:</strong> <code>focus</code> 方法新增额外参数 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9595" target="_blank" rel="noopener">#9595</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/c3367110ccd53c5debd74799070ac6565c13c483" target="_blank" rel="noopener">c336711</a>)</li>
+<li><strong>qrcode:</strong> 新增 <code>nzType</code> 和 <code>nzBoostLevel</code> 参数 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9535" target="_blank" rel="noopener">#9535</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/5419b51781478369afe3c01fe24374f2f62eeffe" target="_blank" rel="noopener">5419b51</a>)</li>
+</ul>
+<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>icon:</strong> 将 <code>nzSpin</code> 纳入变更检测逻辑，修复图标旋转状态在某些情况下无法及时更新 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9597" target="_blank" rel="noopener">#9597</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/46dc3819244969963ca80eeac9f9c06482f48d29" target="_blank" rel="noopener">46dc381</a>)</li>
+</ul>
+<ul>
+<li><strong>select:</strong> 单选模式下 <code>nzAutoClearSearchValue</code> 不应生效 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9605" target="_blank" rel="noopener">#9605</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/4720c2175dd2bc937d8ccbf66ab804c4782f23d4" target="_blank" rel="noopener">4720c21</a>)</li>
+</ul>
 <h2 id="2100-next1"><span>21.0.0-next.1</span><a onclick="window.location.hash = '2100-next1'" class="anchor">#</a></h2><p><code>2025-12-05</code></p>
 <h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
 <li><strong>schematics:</strong> 更新默认的测试 builder (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9574" target="_blank" rel="noopener">#9574</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/46d39de9f3968544989b68a31878edc1b5851c94" target="_blank" rel="noopener">46d39de</a>)</li>
@@ -162,6 +179,11 @@
 <td><code>textarea[nzAutosize]</code></td>
 </tr>
 </tbody></table>
+<h2 id="2044"><span>20.4.4</span><a onclick="window.location.hash = '2044'" class="anchor">#</a></h2><p><code>2025-12-12</code></p>
+<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>icon:</strong> 将 <code>nzSpin</code> 纳入变更检测逻辑，修复图标旋转状态在某些情况下无法及时更新 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9597" target="_blank" rel="noopener">#9597</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/46dc3819244969963ca80eeac9f9c06482f48d29" target="_blank" rel="noopener">46dc381</a>)</li>
+<li><strong>result:</strong> 修复仅设置 <code>nzStatus</code> 时图标不显示的问题 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9568" target="_blank" rel="noopener">#9568</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9582" target="_blank" rel="noopener">#9582</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/b652105ac71a022f4d7343e911f04fbeb2dee8d0" target="_blank" rel="noopener">b652105</a>)</li>
+</ul>
 <h2 id="2043"><span>20.4.3</span><a onclick="window.location.hash = '2043'" class="anchor">#</a></h2><p><code>2025-11-28</code></p>
 <h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
 <li><strong>form:</strong> 修复无法禁用 nz-form-control 动画的问题 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9562" target="_blank" rel="noopener">#9562</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/5bccf968ab8cbe4164fe09e691f6664ee2664a5c" target="_blank" rel="noopener">5bccf96</a>)</li>

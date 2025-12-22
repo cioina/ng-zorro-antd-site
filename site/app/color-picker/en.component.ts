@@ -9,6 +9,7 @@ import { NzDemoColorPickerDisableAlphaComponent } from './disable-alpha';
 import { NzDemoColorPickerDisableComponent } from './disable';
 import { NzDemoColorPickerFlipFlopComponent } from './flip-flop';
 import { NzDemoColorPickerFormatComponent } from './format';
+import { NzDemoColorPickerPresetsComponent } from './presets';
 import { NzDemoColorPickerShowTextComponent } from './show-text';
 import { NzDemoColorPickerSizeComponent } from './size';
 import { NzDemoColorPickerTriggerComponent } from './trigger';
@@ -17,7 +18,7 @@ import { NzDemoColorPickerUseComponent } from './use';
 
 @Component({
   selector     : 'nz-demo-color-picker',
-  imports      : [ShareModule, NzDemoColorPickerBasicComponent, NzDemoColorPickerBlockComponent, NzDemoColorPickerClearComponent, NzDemoColorPickerDisableAlphaComponent, NzDemoColorPickerDisableComponent, NzDemoColorPickerFlipFlopComponent, NzDemoColorPickerFormatComponent, NzDemoColorPickerShowTextComponent, NzDemoColorPickerSizeComponent, NzDemoColorPickerTriggerComponent, NzDemoColorPickerUseComponent],
+  imports      : [ShareModule, NzDemoColorPickerBasicComponent, NzDemoColorPickerBlockComponent, NzDemoColorPickerClearComponent, NzDemoColorPickerDisableAlphaComponent, NzDemoColorPickerDisableComponent, NzDemoColorPickerFlipFlopComponent, NzDemoColorPickerFormatComponent, NzDemoColorPickerPresetsComponent, NzDemoColorPickerShowTextComponent, NzDemoColorPickerSizeComponent, NzDemoColorPickerTriggerComponent, NzDemoColorPickerUseComponent],
   templateUrl  : './en.html'
 })
 export default class NzDemoColorPickerEnComponent {

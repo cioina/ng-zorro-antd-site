@@ -220,24 +220,6 @@ export const ROUTER_LIST: RouterList = {
     "experimental": false
   },
   {
-    "path": "docs/changelog/en",
-    "label": "Change Log",
-    "language": "en",
-    "order": 13,
-    "hidden": false,
-    "description": "ng-zorro-antd strictly follows Semantic Versioning 2.0.0.Weekly release: patch version at the end of every week for routine bugfix (anytime for urgent...",
-    "experimental": false
-  },
-  {
-    "path": "docs/changelog/zh",
-    "label": "更新日志",
-    "language": "zh",
-    "order": 13,
-    "hidden": false,
-    "description": "ng-zorro-antd 严格遵循 Semantic Versioning 2.0.0 语义化版本规范。修订版本号：每周五会进行日常 bugfix 更新。（如果有紧急的 bugfix，则任何时候都可发布）次版本号：每月发布一个带有新特性的向下兼容的版本。主版本号：含有破坏性更新和新特性，不在发布周...",
-    "experimental": false
-  },
-  {
     "path": "docs/migration-v21/en",
     "label": "v21 Migration Guide",
     "language": "en",
