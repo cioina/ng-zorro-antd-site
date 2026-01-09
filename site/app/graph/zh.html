@@ -21,11 +21,12 @@
 <p>开发者或用户可以选择在正式发布前使用这些功能，但是每次发布版本时都可能存在 <strong>breaking changes</strong>。</p>
 </blockquote>
   <section class="markdown" ngNonBindable>
-    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 GRAPH 图时使用。</p>
-<blockquote>
+    <h2 id="何时使用"><span>何时使用</span><a onclick="window.location.hash = '何时使用'" class="anchor">#</a></h2><p>需要在网页上渲染 Graph 图时使用。</p>
+<h3 id="安装依赖"><span>安装依赖</span><a onclick="window.location.hash = '安装依赖'" class="anchor">#</a></h3><blockquote>
 <p>目前组件依赖 d3-drag d3-zoom d3-selection d3-transition d3-shape 用于绘制相关属性（可能会在之后的版本中逐步替换）</p>
 </blockquote>
-<h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
+<pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> dagre-compound dagre d3-transition d3-zoom d3-selection d3-shape d3-drag &#64;types/d3
+</code></pre><h3 id="引入样式"><span>引入样式</span><a onclick="window.location.hash = '引入样式'" class="anchor">#</a></h3><pre><code class="language-less"><span class="token variable">&#64;import</span> <span class="token string">'node_modules/ng-zorro-antd/graph/style/entry.less'</span><span class="token punctuation">;</span>
 </code></pre>
   </section>
   
@@ -55,9 +56,7 @@
 </div>
 </nz-code-box>
 	</div>
-</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><p>安装依赖：</p>
-<pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> dagre-compound dagre d3-transition d3-zoom d3-selection d3-shape d3-drag &#64;types/d3
-</code></pre><h3 id="nz-graph"><span>nz-graph</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-graph'" class="anchor">#</a></h3><table>
+</div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-graph"><span>nz-graph</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-graph'" class="anchor">#</a></h3><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -134,7 +133,7 @@
 <td><code>(nzTransformEvent)</code></td>
 <td>缩放事件</td>
 <td><code>() =&gt; NzZoomTransform</code></td>
-<td>``</td>
+<td>-</td>
 </tr>
 <tr>
 <td><code>(fitCenter)</code></td>

@@ -57,7 +57,7 @@
     "path": "docs/i18n/en",
     "label": "Internationalization",
     "language": "en",
-    "order": 4,
+    "order": 3,
     "hidden": false,
     "description": "The default language of ng-zorro-antd is Chinese yet.\nIf you want to use other languages, you can follow the instructions below.\nYou can also set the ...",
     "experimental": false
@@ -66,7 +66,7 @@
     "path": "docs/i18n/zh",
     "label": "国际化",
     "language": "zh",
-    "order": 4,
+    "order": 3,
     "hidden": false,
     "description": "目前的默认文案是中文，如果需要使用其他语言，可以在初始化时进行配置，也可以在运行中随时修改，可以参考下面的方案。\n你也可以在新建项目时通过 ng add ng-zorro-antd 设置国际化语言。ng-zorro-antd 提供了几个配置型 token 用于全局配置国际化文案和日期，NZ_I18N",
     "experimental": false
@@ -126,12 +126,31 @@
     "experimental": false
   },
   {
+    "path": "docs/llms/en",
+    "label": "LLMs.txt",
+    "language": "en",
+    "order": 7,
+    "hidden": false,
+    "description": "This guide explains how to enable AI tools like Cursor, Windsurf, and Claude to better understand ng-zorro-antd.We support LLMs.txt files for making t...",
+    "experimental": false
+  },
+  {
+    "path": "docs/llms/zh",
+    "label": "LLMs.txt",
+    "language": "zh",
+    "order": 7,
+    "hidden": false,
+    "description": "本指南介绍如何让 Cursor、Windsurf 和 Claude 等 AI 工具更好地理解 ng-zorro-antd。我们支持通过 LLMs.txt 文件向大语言模型（LLMs）提供 Ant Design 文档。此功能可帮助 AI 工具更好地理解我们的组件库、API 及使用模式。我们提供多个 L...",
+    "experimental": false
+  },
+  {
     "path": "docs/animations/en",
     "label": "Animations Switch",
     "language": "en",
     "order": 8,
     "hidden": false,
     "description": "Since v21, NG-ZORRO uses native animation to implement animation effects. You can remove the @angular/animations dependency as needed.NG-ZORRO allows ...",
+    "tag": "updated",
     "experimental": false
   },
   {
@@ -141,6 +160,7 @@
     "order": 8,
     "hidden": false,
     "description": "从 v21 版本开始，NG-ZORRO 完全使用 native animation 实现动画效果，你可以按需移除 @angular/animations 依赖。NG-ZORRO 允许开发者关闭动画效果，您可以通过添加对应指令或者配置来设置动画的开关，也可以通过全局配置关闭所有动画。provideNo...",
+    "tag": "updated",
     "experimental": false
   },
   {
@@ -213,6 +233,26 @@
     "order": 12,
     "hidden": false,
     "description": "这篇指南会指导你如何为 NG-ZORRO 贡献一份自己的力量，请在你要提 issue 或者 pull request 之前花几分钟来阅读一遍这篇指南。我们有一份 行为准则，希望所有的贡献者都能遵守，请花时间阅读一遍全文以确保你能明白哪些是可以做的，哪些是不可以做的。我们所有的工作都会放在 GitHu...",
+    "experimental": false
+  },
+  {
+    "path": "docs/changelog/en",
+    "label": "Change Log",
+    "language": "en",
+    "order": 13,
+    "hidden": false,
+    "description": "ng-zorro-antd strictly follows Semantic Versioning 2.0.0.Weekly release: patch version at the end of every week for routine bugfix (anytime for urgent...",
+    "tag": "{{version}}",
+    "experimental": false
+  },
+  {
+    "path": "docs/changelog/zh",
+    "label": "更新日志",
+    "language": "zh",
+    "order": 13,
+    "hidden": false,
+    "description": "ng-zorro-antd 严格遵循 Semantic Versioning 2.0.0 语义化版本规范。修订版本号：每周五会进行日常 bugfix 更新。（如果有紧急的 bugfix，则任何时候都可发布）次版本号：每月发布一个带有新特性的向下兼容的版本。主版本号：含有破坏性更新和新特性，不在发布周...",
+    "tag": "{{version}}",
     "experimental": false
   },
   {

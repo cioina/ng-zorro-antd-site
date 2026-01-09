@@ -3,6 +3,8 @@ import { Routes } from '@angular/router';
 const routes: Routes = [
 	{ path: 'animations/zh', loadComponent: () => import('./animations-zh') },
 	{ path: 'animations/en', loadComponent: () => import('./animations-en') },
+	{ path: 'changelog/zh', loadComponent: () => import('./changelog-zh') },
+	{ path: 'changelog/en', loadComponent: () => import('./changelog-en') },
 	{ path: 'contributing/zh', loadComponent: () => import('./contributing-zh') },
 	{ path: 'contributing/en', loadComponent: () => import('./contributing-en') },
 	{ path: 'customize-theme-variable/zh', loadComponent: () => import('./customize-theme-variable-zh') },
@@ -23,6 +25,8 @@ const routes: Routes = [
 	{ path: 'introduce/en', loadComponent: () => import('./introduce-en') },
 	{ path: 'join/zh', loadComponent: () => import('./join-zh') },
 	{ path: 'join/en', loadComponent: () => import('./join-en') },
+	{ path: 'llms/zh', loadComponent: () => import('./llms-zh') },
+	{ path: 'llms/en', loadComponent: () => import('./llms-en') },
 	{ path: 'migration-v21/zh', loadComponent: () => import('./migration-v21-zh') },
 	{ path: 'migration-v21/en', loadComponent: () => import('./migration-v21-en') },
 	{ path: 'recommendation/zh', loadComponent: () => import('./recommendation-zh') },

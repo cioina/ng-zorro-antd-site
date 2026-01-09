@@ -13,58 +13,36 @@
 <li>Major version release is not included in this schedule for breaking change and new features.</li>
 </ul>
 <hr>
-<h2 id="2100-beta0"><span>21.0.0-beta.0</span><a onclick="window.location.hash = '2100-beta0'" class="anchor">#</a></h2><p><code>2025-12-26</code></p>
+<h2 id="2100"><span>21.0.0</span><a onclick="window.location.hash = '2100'" class="anchor">#</a></h2><p><code>2026-01-09</code></p>
 <h3 id="code_refactoring"><span>Code Refactoring</span><a onclick="window.location.hash = 'code_refactoring'" class="anchor">#</a></h3><ul>
-<li>migrate <code>upload</code> <code>select</code> <code>dropdown</code> <code>cascader</code> <code>tabs</code> <code>segmented</code> <code>message</code> <code>notification</code> to native animation</li>
-</ul>
-<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
-<li><strong>i18n:</strong> add missing translations to <code>fa_IR</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9615" target="_blank" rel="noopener">#9615</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/1e8845d245ce7a98850390c61e65b301fb8fcc05" target="_blank" rel="noopener">1e8845d</a>)</li>
-</ul>
-<h2 id="2100-next2"><span>21.0.0-next.2</span><a onclick="window.location.hash = '2100-next2'" class="anchor">#</a></h2><p><code>2025-12-22</code></p>
-<h3 id="⚠_breaking_changes"><span>⚠ BREAKING CHANGES</span><a onclick="window.location.hash = '⚠_breaking_changes'" class="anchor">#</a></h3><ul>
-<li><strong>tabs:</strong> remove deprecated <code>nz-tabset</code> selector (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9613" target="_blank" rel="noopener">#9613</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/d5e577245da502a85799c84afbf9088c03732319" target="_blank" rel="noopener">d5e5772</a>)</li>
-<li><strong>qrcode:</strong> change the type of <code>nzPadding</code> from <code>number | number[]</code> to <code>number</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9535" target="_blank" rel="noopener">#9535</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/5419b51781478369afe3c01fe24374f2f62eeffe" target="_blank" rel="noopener">5419b51</a>)</li>
+<li>migrate to native animation API, feel free to remove the <code>&#64;angular/animations</code> dependency</li>
 </ul>
 <h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
 <li><strong>color-picker:</strong> support <code>nzPresets</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9341" target="_blank" rel="noopener">#9341</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/d59ec995b42726470ebaea39ec7a52f5c9c5e58d" target="_blank" rel="noopener">d59ec99</a>)</li>
+<li><strong>core:</strong> add <code>provideNzNoAnimation</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9555" target="_blank" rel="noopener">#9555</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/c945e81ce5966f34e7a96a8bccbf628a5b8d8c06" target="_blank" rel="noopener">c945e81</a>)</li>
 <li><strong>date-picker:</strong> output date range in correct order (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9518" target="_blank" rel="noopener">#9518</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/d0b3185fb2ae891a164d3b4f28e4f68add8e166b" target="_blank" rel="noopener">d0b3185</a>)</li>
+<li><strong>float-button:</strong> add pop animation to float button menu (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9413" target="_blank" rel="noopener">#9413</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/b40ad91b26aee48fc86d92da48071751f8345ab4" target="_blank" rel="noopener">b40ad91</a>)</li>
 <li><strong>input-number:</strong> supports mouse wheel control (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9591" target="_blank" rel="noopener">#9591</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/6ce354537ec59bd0c480eed61bb8f663d2429189" target="_blank" rel="noopener">6ce3545</a>)</li>
 <li><strong>input,input-number:</strong> add additional options for <code>focus</code> method (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9595" target="_blank" rel="noopener">#9595</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/c3367110ccd53c5debd74799070ac6565c13c483" target="_blank" rel="noopener">c336711</a>)</li>
 <li><strong>qrcode:</strong> support <code>nzType</code> and <code>nzBoostLevel</code>, delete array usage of <code>nzPadding</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9535" target="_blank" rel="noopener">#9535</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/5419b51781478369afe3c01fe24374f2f62eeffe" target="_blank" rel="noopener">5419b51</a>)</li>
-</ul>
-<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
-<li><strong>icon:</strong> include nzSpin in change detection logic (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9598" target="_blank" rel="noopener">#9598</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/7d3c637834fc17b1cd2d1f3e1ef77942a3d35c22" target="_blank" rel="noopener">7d3c637</a>)</li>
-<li><strong>select:</strong> disable nzAutoClearSearchValue in single mode (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9605" target="_blank" rel="noopener">#9605</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/4720c2175dd2bc937d8ccbf66ab804c4782f23d4" target="_blank" rel="noopener">4720c21</a>)</li>
-</ul>
-<h2 id="2100-next1"><span>21.0.0-next.1</span><a onclick="window.location.hash = '2100-next1'" class="anchor">#</a></h2><p><code>2025-12-05</code></p>
-<h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
-<li><strong>schematics:</strong> update default test target builder (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9574" target="_blank" rel="noopener">#9574</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/46d39de9f3968544989b68a31878edc1b5851c94" target="_blank" rel="noopener">46d39de</a>)</li>
-</ul>
-<h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
-<li><strong>*:</strong> correct usage of signal input <code>nzNoAnimation</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9576" target="_blank" rel="noopener">#9576</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/b418efee87145a448b47f0c07990ef49a0a9fc2d" target="_blank" rel="noopener">b418efe</a>)</li>
-<li><strong>popconfirm:</strong> allow null for <code>nzIcon</code> hide icon (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9569" target="_blank" rel="noopener">#9569</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/760b58745a1b377d4008825a3d4c157d8a1bd590" target="_blank" rel="noopener">760b587</a>)</li>
-<li><strong>schematics:</strong> remove <code>NzInputNumberLegacyModule</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9573" target="_blank" rel="noopener">#9573</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/48c02aa17d866a1a9774521f23574dc3a3c38ca6" target="_blank" rel="noopener">48c02aa</a>)</li>
-</ul>
-<h2 id="2100-next0"><span>21.0.0-next.0</span><a onclick="window.location.hash = '2100-next0'" class="anchor">#</a></h2><p><code>2025-11-28</code></p>
-<p>Upgrade with shell</p>
-<pre><code class="language-shell">ng update ng-zorro-antd&#64;next
-</code></pre><h3 id="features"><span>Features</span><a onclick="window.location.hash = 'features'" class="anchor">#</a></h3><ul>
-<li><strong>core:</strong> add <code>provideNzNoAnimation</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9555" target="_blank" rel="noopener">#9555</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/c945e81ce5966f34e7a96a8bccbf628a5b8d8c06" target="_blank" rel="noopener">c945e81</a>)</li>
-<li><strong>float-button:</strong> add pop animation to float button menu (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9413" target="_blank" rel="noopener">#9413</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/b40ad91b26aee48fc86d92da48071751f8345ab4" target="_blank" rel="noopener">b40ad91</a>)</li>
 <li><strong>tree-view:</strong> upgrade tree view component (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9003" target="_blank" rel="noopener">#9003</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/ae9ad576292671f3228361733b47e890d425e713" target="_blank" rel="noopener">ae9ad57</a>)</li>
 <li><strong>upload:</strong> add <code>nzMaxCount</code> feature (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9424" target="_blank" rel="noopener">#9424</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/0bf13c3fa5e41289315cf4d9642ed5aa7005af9e" target="_blank" rel="noopener">0bf13c3</a>)</li>
-<li><strong>schematics:</strong> update upgrade data for v21 (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9564" target="_blank" rel="noopener">#9564</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/a44227d4dcfd137a2f33fabf699ac0af331e4208" target="_blank" rel="noopener">a44227d</a>)</li>
 </ul>
 <h3 id="bug_fixes"><span>Bug Fixes</span><a onclick="window.location.hash = 'bug_fixes'" class="anchor">#</a></h3><ul>
+<li><strong>i18n:</strong> add missing translations to <code>fa_IR</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9615" target="_blank" rel="noopener">#9615</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/1e8845d245ce7a98850390c61e65b301fb8fcc05" target="_blank" rel="noopener">1e8845d</a>)</li>
+<li><strong>popconfirm:</strong> allow null for <code>nzIcon</code> hide icon (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9569" target="_blank" rel="noopener">#9569</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/760b58745a1b377d4008825a3d4c157d8a1bd590" target="_blank" rel="noopener">760b587</a>)</li>
+<li><strong>select:</strong> disable <code>nzAutoClearSearchValue</code> in single mode (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9605" target="_blank" rel="noopener">#9605</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/4720c2175dd2bc937d8ccbf66ab804c4782f23d4" target="_blank" rel="noopener">4720c21</a>)</li>
 <li><strong>tree:</strong> no <code>preventDefault</code> when right-clicking the node title (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9532" target="_blank" rel="noopener">#9532</a>) (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/commit/900efad5b0a04b1a0aca2c68728f01ed8dc4ef3b" target="_blank" rel="noopener">900efad</a>)</li>
 </ul>
 <h3 id="⚠_breaking_changes"><span>⚠ BREAKING CHANGES</span><a onclick="window.location.hash = '⚠_breaking_changes'" class="anchor">#</a></h3><ul>
-<li><strong>tree-view:</strong> <code>nzTreeControl</code> has been removed, please use <code>nzLevelAccessor</code> or <code>nzChildrenAccessor</code> instead</li>
-<li><strong>statistic:</strong> rename <code>NzStatisticNumberComponent</code> to <code>NzStatisticContentValueComponent</code></li>
-<li><strong>color-picker:</strong> change DOM structure to be simpler, and remove no unnecessary payload of <code>nzClick</code> output</li>
-<li><strong>watermark:</strong> change import path from <code>ng-zorro-antd/water-mark</code> to <code>ng-zorro-antd/watermark</code></li>
 <li><strong>back-top:</strong> removed, please use <code>float-button</code> instead</li>
+<li><strong>color-picker:</strong> change DOM structure to be simpler, and remove no unnecessary payload of <code>nzClick</code> output</li>
 <li><strong>input-number-legacy:</strong> removed, please use <code>input-number</code> instead</li>
+<li><strong>qrcode:</strong> change the type of <code>nzPadding</code> from <code>number | number[]</code> to <code>number</code> (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9535" target="_blank" rel="noopener">#9535</a>)</li>
+<li><strong>statistic:</strong> rename <code>NzStatisticNumberComponent</code> to <code>NzStatisticContentValueComponent</code></li>
+<li><strong>tabs:</strong> remove deprecated <code>nz-tabset</code> selector (<a href="https://github.com/NG-ZORRO/ng-zorro-antd/issues/9613" target="_blank" rel="noopener">#9613</a>)</li>
+<li><strong>tree-view:</strong> <code>nzTreeControl</code> has been removed, please use <code>nzLevelAccessor</code> or <code>nzChildrenAccessor</code> instead</li>
+<li><strong>watermark:</strong> change import path from <code>ng-zorro-antd/water-mark</code> to <code>ng-zorro-antd/watermark</code></li>
 </ul>
 <p>Remove the following APIs which were marked as deprecated in the previous version:</p>
 <table>
@@ -182,8 +160,16 @@ Please refer to related documentation for better alternatives.</p>
 </tr>
 </thead>
 <tbody><tr>
+<td><code>ng-zorro-antd/collapse</code></td>
+<td><code>nz-collapse-panel[nzDisabled]</code></td>
+</tr>
+<tr>
 <td><code>ng-zorro-antd/input</code></td>
-<td><code>textarea[nzAutosize]</code></td>
+<td><code>textarea[nzAutosize]</code>, <code>nz-input-group</code>, <code>[nz-input-group-slot]</code></td>
+</tr>
+<tr>
+<td><code>ng-zorro-antd/upload</code></td>
+<td><code>nz-upload[nzTransformFile]</code>, <code>NzUploadTransformFileType</code></td>
 </tr>
 </tbody></table>
 <h2 id="2044"><span>20.4.4</span><a onclick="window.location.hash = '2044'" class="anchor">#</a></h2><p><code>2025-12-12</code></p>

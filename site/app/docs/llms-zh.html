@@ -1,0 +1,47 @@
+<article class="markdown">
+  <h1>
+  <nz-space>
+    <span *nzSpaceItem>LLMs.txt</span>
+    <span *nzSpaceItem></span>
+	</nz-space>
+</h1>
+
+<nz-affix class="toc-affix" [nzOffsetTop]="16">
+  <nz-anchor [nzAffix]="false" nzShowInkInFixed (nzClick)="goLink($event)">
+    <nz-link nzHref="#什么是-llms-txt？" class="toc-indent-1" nzTitle="什么是 LLMs.txt？"></nz-link>
+<nz-link nzHref="#可用资源" class="toc-indent-1" nzTitle="可用资源"></nz-link>
+<nz-link nzHref="#在-ai-工具中的使用" class="toc-indent-1" nzTitle="在 AI 工具中的使用"></nz-link>
+<nz-link nzHref="#github-copilot" class="toc-indent-2" nzTitle="GitHub Copilot"></nz-link>
+<nz-link nzHref="#cursor" class="toc-indent-2" nzTitle="Cursor"></nz-link>
+<nz-link nzHref="#windsurf" class="toc-indent-2" nzTitle="Windsurf"></nz-link>
+<nz-link nzHref="#claude-code" class="toc-indent-2" nzTitle="Claude Code"></nz-link>
+<nz-link nzHref="#gemini-cli" class="toc-indent-2" nzTitle="Gemini CLI"></nz-link>
+<nz-link nzHref="#trae" class="toc-indent-2" nzTitle="Trae"></nz-link>
+<nz-link nzHref="#qoder" class="toc-indent-2" nzTitle="Qoder"></nz-link>
+<nz-link nzHref="#其他-ai-工具" class="toc-indent-2" nzTitle="其他 AI 工具"></nz-link>
+  </nz-anchor>
+</nz-affix>
+  <section class="markdown" ngNonBindable><p>本指南介绍如何让 Cursor、Windsurf 和 Claude 等 AI 工具更好地理解 <code>ng-zorro-antd</code>。</p>
+<h2 id="什么是_llmstxt？"><span>什么是 LLMs.txt？</span><a onclick="window.location.hash = '什么是_llmstxt？'" class="anchor">#</a></h2><p>我们支持通过 <a href="https://llmstxt.org/" target="_blank" rel="noopener">LLMs.txt</a> 文件向大语言模型（LLMs）提供 Ant Design 文档。此功能可帮助 AI 工具更好地理解我们的组件库、API 及使用模式。</p>
+<h2 id="可用资源"><span>可用资源</span><a onclick="window.location.hash = '可用资源'" class="anchor">#</a></h2><p>我们提供多个 LLMs.txt 路由来帮助 AI 工具访问文档：</p>
+<ul>
+<li><a href="https://ng.ant.design/llms.txt" target="_blank" rel="noopener">llms.txt</a> - 包含所有组件及其文档链接的结构化概览</li>
+<li><a href="https://ng.ant.design/llms-full.txt" target="_blank" rel="noopener">llms-full.txt</a> - 提供包含实现细节和示例的完整文档</li>
+</ul>
+<h2 id="在_ai_工具中的使用"><span>在 AI 工具中的使用</span><a onclick="window.location.hash = '在_ai_工具中的使用'" class="anchor">#</a></h2><h3 id="github_copilot"><span>GitHub Copilot</span><a onclick="window.location.hash = 'github_copilot'" class="anchor">#</a></h3><p>在 GitHub Copilot 中，可以通过在工作区的 <code>.github/copilot-instructions.md</code> 文件中添加 LLMs.txt 的引用，或在对话中直接提及文档 URL 来使用。</p>
+<p><a href="https://docs.github.com/zh/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot" target="_blank" rel="noopener">详细了解 GitHub Copilot 自定义指令</a></p>
+<h3 id="cursor"><span>Cursor</span><a onclick="window.location.hash = 'cursor'" class="anchor">#</a></h3><p>在 Cursor 中使用 <code>&#64;Docs</code> 功能将 LLMs.txt 文件包含到您的项目中。这有助于 Cursor 为 <code>ng-zorro-antd</code> 组件提供更准确的代码建议和文档。</p>
+<p><a href="https://docs.cursor.com/zh/context/&#64;-symbols/&#64;-docs" target="_blank" rel="noopener">详细了解 Cursor 中的 &#64;Docs 功能</a></p>
+<h3 id="windsurf"><span>Windsurf</span><a onclick="window.location.hash = 'windsurf'" class="anchor">#</a></h3><p>通过 <code>&#64;</code> 引用或在 <code>.windsurf/rules</code> 文件中配置 LLMs.txt 文件，以增强 Windsurf 对 <code>ng-zorro-antd</code> 组件的理解。</p>
+<p><a href="https://docs.windsurf.com/windsurf/cascade/memories" target="_blank" rel="noopener">详细了解 Windsurf Memories 功能</a></p>
+<h3 id="claude_code"><span>Claude Code</span><a onclick="window.location.hash = 'claude_code'" class="anchor">#</a></h3><p>在 Claude Code 中，将 <code>LLMs.txt</code> 添加到工作区的知识库（Docs / Context Files）配置中，即可在代码补全与解释时引用其中的内容,从而提升对 Ant Design 组件的理解。</p>
+<p><a href="https://code.claude.com/docs" target="_blank" rel="noopener">详细了解 Claude Code 文档上下文配置</a></p>
+<h3 id="gemini_cli"><span>Gemini CLI</span><a onclick="window.location.hash = 'gemini_cli'" class="anchor">#</a></h3><p>在 Gemini CLI 中，可以通过 <code>--context</code> 参数或在 <code>.gemini/config.json</code> 中指定 <code>LLMs.txt</code> 文件路径，让 Gemini 在回答和生成代码时参考该文档。</p>
+<p><a href="https://ai.google.dev/gemini-api/docs?hl=zh-cn" target="_blank" rel="noopener">详细了解 Gemini CLI 上下文配置</a></p>
+<h3 id="trae"><span>Trae</span><a onclick="window.location.hash = 'trae'" class="anchor">#</a></h3><p>在 Trae 中，将 <code>LLMs.txt</code> 文件放入项目的 knowledge sources 并在设置里开启引用，即可让 Trae 在生成或分析代码时更好地支持 <code>ng-zorro-antd</code> 组件。</p>
+<p><a href="https://trae.ai/docs" target="_blank" rel="noopener">详细了解 Trae 的知识源功能</a></p>
+<h3 id="qoder"><span>Qoder</span><a onclick="window.location.hash = 'qoder'" class="anchor">#</a></h3><p>在 Qoder 中，可以在 <code>.qoder/config.yml</code> 中添加 <code>LLMs.txt</code> 作为外部知识文件，或在对话中通过 <code>&#64;docs LLMs.txt</code> 进行临时引用，增强对 <code>ng-zorro-antd</code> 组件的支持。</p>
+<p><a href="https://docs.qoder.com/" target="_blank" rel="noopener">详细了解 Qoder 配置方法</a></p>
+<h3 id="其他_ai_工具"><span>其他 AI 工具</span><a onclick="window.location.hash = '其他_ai_工具'" class="anchor">#</a></h3><p>任何支持 LLMs.txt 的 AI 工具均可使用以上路径来更好地理解 <code>ng-zorro-antd</code>。</p>
+</section>
+</article>

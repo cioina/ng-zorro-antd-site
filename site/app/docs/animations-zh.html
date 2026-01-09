@@ -19,7 +19,7 @@
 </blockquote>
 <p>NG-ZORRO 允许开发者关闭动画效果，您可以通过添加对应指令或者配置来设置动画的开关，也可以通过全局配置关闭所有动画。</p>
 <h3 id="在全局或组件中关闭"><span>在全局或组件中关闭</span><a onclick="window.location.hash = '在全局或组件中关闭'" class="anchor">#</a></h3><p><code>provideNoopAnimations</code> 已被标记为废弃，你可以通过 <code>provideNzNoAnimation</code> 来关闭动画。</p>
-<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> provideNzNoAnimation <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/no-animation'</span><span class="token punctuation">;</span>
+<pre><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> provideNzNoAnimation <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'ng-zorro-antd/core/animation'</span><span class="token punctuation">;</span>
 
 <span class="token comment">// 在全局中关闭动画</span>
 <span class="token keyword">export</span> <span class="token keyword">const</span> appConfig<span class="token operator">:</span> ApplicationConfig <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
