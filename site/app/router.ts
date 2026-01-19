@@ -136,6 +136,7 @@ export const ROUTER_LIST: RouterList = {
     "order": 7,
     "hidden": false,
     "description": "This guide explains how to enable AI tools like Cursor, Windsurf, and Claude to better understand ng-zorro-antd.We support LLMs.txt files for making t...",
+    "tag": "new",
     "experimental": false
   },
   {
@@ -145,6 +146,7 @@ export const ROUTER_LIST: RouterList = {
     "order": 7,
     "hidden": false,
     "description": "本指南介绍如何让 Cursor、Windsurf 和 Claude 等 AI 工具更好地理解 ng-zorro-antd。我们支持通过 LLMs.txt 文件向大语言模型（LLMs）提供 Ant Design 文档。此功能可帮助 AI 工具更好地理解我们的组件库、API 及使用模式。我们提供多个 L...",
+    "tag": "new",
     "experimental": false
   },
   {
