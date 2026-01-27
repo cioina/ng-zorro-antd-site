@@ -33,6 +33,7 @@ import {
   computed,
   forwardRef,
   inject,
+  input,
   signal
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -71,6 +72,11 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'timePicker';
   selector: 'nz-time-picker',
   exportAs: 'nzTimePicker',
   template: `
+    @if (nzPrefix(); as prefix) {
+      <span class="ant-picker-prefix">
+        <ng-container *nzStringTemplateOutlet="prefix">{{ prefix }}</ng-container>
+      </span>
+    }
     <div class="ant-picker-input">
       <input
         #inputElement
@@ -144,7 +150,7 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'timePicker';
               [(ngModel)]="value"
               (ngModelChange)="onPanelValueChange($event)"
               (closePanel)="closePanel()"
-            ></nz-time-picker-panel>
+            />
           </div>
         </div>
       </div>
@@ -284,6 +290,11 @@ export class NzTimePickerComponent implements ControlValueAccessor, OnInit, Afte
   @Input() @WithConfig() nzBackdrop = false;
   @Input({ transform: booleanAttribute }) nzInputReadOnly: boolean = false;
 
+  readonly nzPrefix = input<string | TemplateRef<void>>();
+
+  readonly nzNeedConfirm = input(false, { transform: booleanAttribute });
+  private hasConfirmed = false;
+
   protected readonly timepickerAnimationEnter = slideAnimationEnter();
   protected readonly timepickerAnimationLeave = slideAnimationLeave();
 
@@ -394,11 +405,17 @@ export class NzTimePickerComponent implements ControlValueAccessor, OnInit, Afte
   }
 
   closePanel(): void {
+    this.hasConfirmed = true;
     this.inputRef.nativeElement.blur();
   }
 
   setCurrentValueAndClose(): void {
-    this.emitValue(this.value);
+    if (this.hasConfirmed || !this.nzNeedConfirm()) {
+      this.emitValue(this.value);
+      this.hasConfirmed = false;
+    } else {
+      this.setValue(this.preValue);
+    }
     this.close();
   }
 

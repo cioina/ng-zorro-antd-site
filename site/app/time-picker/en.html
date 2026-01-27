@@ -4,6 +4,7 @@
     <nz-link class="toc-indent-1" nzHref="#when_to_use" nzTitle="When To Use"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#examples" nzTitle="Examples"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-basic" nzTitle="Basic"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-prefix-suffix" nzTitle="Prefix and Suffix"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-value" nzTitle="Data binding"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-size" nzTitle="Three Sizes"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-disabled" nzTitle="disabled"></nz-link>
@@ -14,6 +15,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-use12-hours" nzTitle="12 hours"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-status" nzTitle="Status"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-variant" nzTitle="Variants"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-confirmation" nzTitle="Need Confirm"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -54,6 +56,121 @@
 >
 	<nz-demo-time-picker-basic demo></nz-demo-time-picker-basic>
 	<div intro ngNonBindable><p>Click <code>nz-time-picker</code>, and then we could select or input a time in panel.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Data binding"
+  nzVersion=""
+  nzId="components-time-picker-demo-value"
+  nzSelector="nz-demo-time-picker-value"
+  nzLink="components-time-picker-demo-value"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-value <name>"
+  nzComponentName="NzDemoTimePickerValueComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/value.md"
+>
+	<nz-demo-time-picker-value demo></nz-demo-time-picker-value>
+	<div intro ngNonBindable><p>Work with two-way binding.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="disabled"
+  nzVersion=""
+  nzId="components-time-picker-demo-disabled"
+  nzSelector="nz-demo-time-picker-disabled"
+  nzLink="components-time-picker-demo-disabled"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled <name>"
+  nzComponentName="NzDemoTimePickerDisabledComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled.md"
+>
+	<nz-demo-time-picker-disabled demo></nz-demo-time-picker-disabled>
+	<div intro ngNonBindable><p>A disabled state of the <code>nz-time-picker</code>.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="interval option"
+  nzVersion=""
+  nzId="components-time-picker-demo-interval-options"
+  nzSelector="nz-demo-time-picker-interval-options"
+  nzLink="components-time-picker-demo-interval-options"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-interval-options <name>"
+  nzComponentName="NzDemoTimePickerIntervalOptionsComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/interval-options.md"
+>
+	<nz-demo-time-picker-interval-options demo></nz-demo-time-picker-interval-options>
+	<div intro ngNonBindable><p>Show stepped options by <code>nzHourStep</code> <code>nzMinuteStep</code> <code>nzSecondStep</code>.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="disabled part"
+  nzVersion=""
+  nzId="components-time-picker-demo-disabled-part"
+  nzSelector="nz-demo-time-picker-disabled-part"
+  nzLink="components-time-picker-demo-disabled-part"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled-part <name>"
+  nzComponentName="NzDemoTimePickerDisabledPartComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled-part.md"
+>
+	<nz-demo-time-picker-disabled-part demo></nz-demo-time-picker-disabled-part>
+	<div intro ngNonBindable><p>To specify the hours|minutes|seconds that cannot be selected</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Status"
+  nzVersion=""
+  nzId="components-time-picker-demo-status"
+  nzSelector="nz-demo-time-picker-status"
+  nzLink="components-time-picker-demo-status"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-status <name>"
+  nzComponentName="NzDemoTimePickerStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/status.md"
+>
+	<nz-demo-time-picker-status demo></nz-demo-time-picker-status>
+	<div intro ngNonBindable><p>Add status to TimePicker with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="Need Confirm"
+  nzVersion=""
+  nzId="components-time-picker-demo-confirmation"
+  nzSelector="nz-demo-time-picker-confirmation"
+  nzLink="components-time-picker-demo-confirmation"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-confirmation <name>"
+  nzComponentName="NzDemoTimePickerConfirmationComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/confirmation.md"
+>
+	<nz-demo-time-picker-confirmation demo></nz-demo-time-picker-confirmation>
+	<div intro ngNonBindable><p>TimePicker will automatically determine whether to show a confirm button according to the <code>picker</code> property. You can also set the <code>nzNeedConfirm</code> property to determine whether to show a confirm button. When <code>nzNeedConfirm</code> is set, the user must click the confirm button to complete the selection. Otherwise, the selection will be submitted when the picker loses focus or select a time.</p>
+</div>
+</nz-code-box>
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="Prefix and Suffix"
+  nzVersion=""
+  nzId="components-time-picker-demo-prefix-suffix"
+  nzSelector="nz-demo-time-picker-prefix-suffix"
+  nzLink="components-time-picker-demo-prefix-suffix"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-prefix-suffix <name>"
+  nzComponentName="NzDemoTimePickerPrefixSuffixComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/prefix-suffix.md"
+>
+	<nz-demo-time-picker-prefix-suffix demo></nz-demo-time-picker-prefix-suffix>
+	<div intro ngNonBindable><p>Custom <code>nzPrefix</code> and <code>nzSuffixIcon</code>.</p>
 </div>
 </nz-code-box><nz-code-box
   nzTitle="Three Sizes"
@@ -134,89 +251,6 @@
 >
 	<nz-demo-time-picker-variant demo></nz-demo-time-picker-variant>
 	<div intro ngNonBindable><p>Variants of TimePicker, there are four variants: <code>outlined</code>, <code>filled</code>, <code>borderless</code> and <code>underlined</code>.</p>
-</div>
-</nz-code-box>
-	</div>
-	<div nz-col [nzXl]="12" [nzSpan]="24">
-		<nz-code-box
-  nzTitle="Data binding"
-  nzVersion=""
-  nzId="components-time-picker-demo-value"
-  nzSelector="nz-demo-time-picker-value"
-  nzLink="components-time-picker-demo-value"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-value <name>"
-  nzComponentName="NzDemoTimePickerValueComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/value.md"
->
-	<nz-demo-time-picker-value demo></nz-demo-time-picker-value>
-	<div intro ngNonBindable><p>Work with two-way binding.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="disabled"
-  nzVersion=""
-  nzId="components-time-picker-demo-disabled"
-  nzSelector="nz-demo-time-picker-disabled"
-  nzLink="components-time-picker-demo-disabled"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled <name>"
-  nzComponentName="NzDemoTimePickerDisabledComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled.md"
->
-	<nz-demo-time-picker-disabled demo></nz-demo-time-picker-disabled>
-	<div intro ngNonBindable><p>A disabled state of the <code>nz-time-picker</code>.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="interval option"
-  nzVersion=""
-  nzId="components-time-picker-demo-interval-options"
-  nzSelector="nz-demo-time-picker-interval-options"
-  nzLink="components-time-picker-demo-interval-options"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-interval-options <name>"
-  nzComponentName="NzDemoTimePickerIntervalOptionsComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/interval-options.md"
->
-	<nz-demo-time-picker-interval-options demo></nz-demo-time-picker-interval-options>
-	<div intro ngNonBindable><p>Show stepped options by <code>nzHourStep</code> <code>nzMinuteStep</code> <code>nzSecondStep</code>.</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="disabled part"
-  nzVersion=""
-  nzId="components-time-picker-demo-disabled-part"
-  nzSelector="nz-demo-time-picker-disabled-part"
-  nzLink="components-time-picker-demo-disabled-part"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled-part <name>"
-  nzComponentName="NzDemoTimePickerDisabledPartComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled-part.md"
->
-	<nz-demo-time-picker-disabled-part demo></nz-demo-time-picker-disabled-part>
-	<div intro ngNonBindable><p>To specify the hours|minutes|seconds that cannot be selected</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="Status"
-  nzVersion=""
-  nzId="components-time-picker-demo-status"
-  nzSelector="nz-demo-time-picker-status"
-  nzLink="components-time-picker-demo-status"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-status <name>"
-  nzComponentName="NzDemoTimePickerStatusComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/status.md"
->
-	<nz-demo-time-picker-status demo></nz-demo-time-picker-status>
-	<div intro ngNonBindable><p>Add status to TimePicker with <code>nzStatus</code>, which could be <code>error</code> or <code>warning</code>.</p>
 </div>
 </nz-code-box>
 	</div>
@@ -454,6 +488,22 @@
 <td><code>string | TemplateRef</code></td>
 <td>-</td>
 <td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPrefix]</code></td>
+<td>the custom prefix</td>
+<td><code>string | TemplateRef</code></td>
+<td>-</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzNeedConfirm]</code></td>
+<td>Need click confirm button to trigger value change</td>
+<td><code>boolean</code></td>
+<td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>

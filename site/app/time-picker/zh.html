@@ -4,6 +4,7 @@
     <nz-link class="toc-indent-1" nzHref="#何时使用" nzTitle="何时使用"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#代码演示" nzTitle="代码演示"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-basic" nzTitle="基本"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-prefix-suffix" nzTitle="前后缀"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-value" nzTitle="数据绑定"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-size" nzTitle="三种大小"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-disabled" nzTitle="禁用"></nz-link>
@@ -14,6 +15,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-use12-hours" nzTitle="12小时制"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-status" nzTitle="自定义状态"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-variant" nzTitle="形态变体"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-confirmation" nzTitle="选择确认"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -54,6 +56,121 @@
 >
 	<nz-demo-time-picker-basic demo></nz-demo-time-picker-basic>
 	<div intro ngNonBindable><p>点击 <code>nz-time-picker</code>，然后可以在浮层中选择或者输入某一时间。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="数据绑定"
+  nzVersion=""
+  nzId="components-time-picker-demo-value"
+  nzSelector="nz-demo-time-picker-value"
+  nzLink="components-time-picker-demo-value"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-value <name>"
+  nzComponentName="NzDemoTimePickerValueComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/value.md"
+>
+	<nz-demo-time-picker-value demo></nz-demo-time-picker-value>
+	<div intro ngNonBindable><p>可以进行双向绑定。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="禁用"
+  nzVersion=""
+  nzId="components-time-picker-demo-disabled"
+  nzSelector="nz-demo-time-picker-disabled"
+  nzLink="components-time-picker-demo-disabled"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled <name>"
+  nzComponentName="NzDemoTimePickerDisabledComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled.md"
+>
+	<nz-demo-time-picker-disabled demo></nz-demo-time-picker-disabled>
+	<div intro ngNonBindable><p>禁用时间选择。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="步长选项"
+  nzVersion=""
+  nzId="components-time-picker-demo-interval-options"
+  nzSelector="nz-demo-time-picker-interval-options"
+  nzLink="components-time-picker-demo-interval-options"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-interval-options <name>"
+  nzComponentName="NzDemoTimePickerIntervalOptionsComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/interval-options.md"
+>
+	<nz-demo-time-picker-interval-options demo></nz-demo-time-picker-interval-options>
+	<div intro ngNonBindable><p>可以使用 <code>nzHourStep</code> <code>nzMinuteStep</code> <code>nzSecondStep</code> 按步长展示可选的时分秒。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="禁用部分"
+  nzVersion=""
+  nzId="components-time-picker-demo-disabled-part"
+  nzSelector="nz-demo-time-picker-disabled-part"
+  nzLink="components-time-picker-demo-disabled-part"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled-part <name>"
+  nzComponentName="NzDemoTimePickerDisabledPartComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled-part.md"
+>
+	<nz-demo-time-picker-disabled-part demo></nz-demo-time-picker-disabled-part>
+	<div intro ngNonBindable><p>禁用部分时间选择。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="自定义状态"
+  nzVersion=""
+  nzId="components-time-picker-demo-status"
+  nzSelector="nz-demo-time-picker-status"
+  nzLink="components-time-picker-demo-status"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-status <name>"
+  nzComponentName="NzDemoTimePickerStatusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/status.md"
+>
+	<nz-demo-time-picker-status demo></nz-demo-time-picker-status>
+	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 TimePicker 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="选择确认"
+  nzVersion=""
+  nzId="components-time-picker-demo-confirmation"
+  nzSelector="nz-demo-time-picker-confirmation"
+  nzLink="components-time-picker-demo-confirmation"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-confirmation <name>"
+  nzComponentName="NzDemoTimePickerConfirmationComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/confirmation.md"
+>
+	<nz-demo-time-picker-confirmation demo></nz-demo-time-picker-confirmation>
+	<div intro ngNonBindable><p>TimePicker 默认会根据 picker 的交互行为，自动选择是否需要确认按钮。你也可以通过 <code>nzNeedConfirm</code> 属性来手动设置是否需要确认按钮。当有 <code>nzNeedConfirm</code> 时，用户始终需要点击确认按钮才能完成选择。反之，则会在选择或者失去焦点时提交。</p>
+</div>
+</nz-code-box>
+	</div>
+	<div nz-col [nzXl]="12" [nzSpan]="24">
+		<nz-code-box
+  nzTitle="前后缀"
+  nzVersion=""
+  nzId="components-time-picker-demo-prefix-suffix"
+  nzSelector="nz-demo-time-picker-prefix-suffix"
+  nzLink="components-time-picker-demo-prefix-suffix"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-prefix-suffix <name>"
+  nzComponentName="NzDemoTimePickerPrefixSuffixComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/prefix-suffix.md"
+>
+	<nz-demo-time-picker-prefix-suffix demo></nz-demo-time-picker-prefix-suffix>
+	<div intro ngNonBindable><p>自定义前缀 <code>nzPrefix</code> 和后缀图标 <code>nzSuffixIcon</code>。</p>
 </div>
 </nz-code-box><nz-code-box
   nzTitle="三种大小"
@@ -134,89 +251,6 @@
 >
 	<nz-demo-time-picker-variant demo></nz-demo-time-picker-variant>
 	<div intro ngNonBindable><p>TimePicker 形态变体，可选 <code>outlined</code>、<code>filled</code>、<code>borderless</code>、<code>underlined</code> 四种形态。</p>
-</div>
-</nz-code-box>
-	</div>
-	<div nz-col [nzXl]="12" [nzSpan]="24">
-		<nz-code-box
-  nzTitle="数据绑定"
-  nzVersion=""
-  nzId="components-time-picker-demo-value"
-  nzSelector="nz-demo-time-picker-value"
-  nzLink="components-time-picker-demo-value"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-value <name>"
-  nzComponentName="NzDemoTimePickerValueComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/value.md"
->
-	<nz-demo-time-picker-value demo></nz-demo-time-picker-value>
-	<div intro ngNonBindable><p>可以进行双向绑定。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="禁用"
-  nzVersion=""
-  nzId="components-time-picker-demo-disabled"
-  nzSelector="nz-demo-time-picker-disabled"
-  nzLink="components-time-picker-demo-disabled"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled <name>"
-  nzComponentName="NzDemoTimePickerDisabledComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled.md"
->
-	<nz-demo-time-picker-disabled demo></nz-demo-time-picker-disabled>
-	<div intro ngNonBindable><p>禁用时间选择。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="步长选项"
-  nzVersion=""
-  nzId="components-time-picker-demo-interval-options"
-  nzSelector="nz-demo-time-picker-interval-options"
-  nzLink="components-time-picker-demo-interval-options"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-interval-options <name>"
-  nzComponentName="NzDemoTimePickerIntervalOptionsComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/interval-options.md"
->
-	<nz-demo-time-picker-interval-options demo></nz-demo-time-picker-interval-options>
-	<div intro ngNonBindable><p>可以使用 <code>nzHourStep</code> <code>nzMinuteStep</code> <code>nzSecondStep</code> 按步长展示可选的时分秒。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="禁用部分"
-  nzVersion=""
-  nzId="components-time-picker-demo-disabled-part"
-  nzSelector="nz-demo-time-picker-disabled-part"
-  nzLink="components-time-picker-demo-disabled-part"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-disabled-part <name>"
-  nzComponentName="NzDemoTimePickerDisabledPartComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/disabled-part.md"
->
-	<nz-demo-time-picker-disabled-part demo></nz-demo-time-picker-disabled-part>
-	<div intro ngNonBindable><p>禁用部分时间选择。</p>
-</div>
-</nz-code-box><nz-code-box
-  nzTitle="自定义状态"
-  nzVersion=""
-  nzId="components-time-picker-demo-status"
-  nzSelector="nz-demo-time-picker-status"
-  nzLink="components-time-picker-demo-status"
-  nzGenerateCommand="ng g ng-zorro-antd:time-picker-status <name>"
-  nzComponentName="NzDemoTimePickerStatusComponent"
-  [nzIframe]="false"
-  nzIframeSource=""
-  [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/status.md"
->
-	<nz-demo-time-picker-status demo></nz-demo-time-picker-status>
-	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 TimePicker 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
 </div>
 </nz-code-box>
 	</div>
@@ -454,6 +488,22 @@
 <td><code>string | TemplateRef</code></td>
 <td>-</td>
 <td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPrefix]</code></td>
+<td>自定义前缀</td>
+<td><code>string | TemplateRef</code></td>
+<td>-</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzNeedConfirm]</code></td>
+<td>是否需要确认按钮，为 false 时失去焦点即代表选择</td>
+<td><code>boolean</code></td>
+<td>-</td>
+<td></td>
 <td></td>
 </tr>
 <tr>

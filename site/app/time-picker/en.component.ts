@@ -4,10 +4,12 @@ import { ShareModule } from '../share/share.module';
 
 import { NzDemoTimePickerAddonComponent } from './addon';
 import { NzDemoTimePickerBasicComponent } from './basic';
+import { NzDemoTimePickerConfirmationComponent } from './confirmation';
 import { NzDemoTimePickerDisabledPartComponent } from './disabled-part';
 import { NzDemoTimePickerDisabledComponent } from './disabled';
 import { NzDemoTimePickerHideColumnComponent } from './hide-column';
 import { NzDemoTimePickerIntervalOptionsComponent } from './interval-options';
+import { NzDemoTimePickerPrefixSuffixComponent } from './prefix-suffix';
 import { NzDemoTimePickerSizeComponent } from './size';
 import { NzDemoTimePickerStatusComponent } from './status';
 import { NzDemoTimePickerUse12HoursComponent } from './use12-hours';
@@ -17,7 +19,7 @@ import { NzDemoTimePickerVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-time-picker',
-  imports      : [ShareModule, NzDemoTimePickerAddonComponent, NzDemoTimePickerBasicComponent, NzDemoTimePickerDisabledPartComponent, NzDemoTimePickerDisabledComponent, NzDemoTimePickerHideColumnComponent, NzDemoTimePickerIntervalOptionsComponent, NzDemoTimePickerSizeComponent, NzDemoTimePickerStatusComponent, NzDemoTimePickerUse12HoursComponent, NzDemoTimePickerValueComponent, NzDemoTimePickerVariantComponent],
+  imports      : [ShareModule, NzDemoTimePickerAddonComponent, NzDemoTimePickerBasicComponent, NzDemoTimePickerConfirmationComponent, NzDemoTimePickerDisabledPartComponent, NzDemoTimePickerDisabledComponent, NzDemoTimePickerHideColumnComponent, NzDemoTimePickerIntervalOptionsComponent, NzDemoTimePickerPrefixSuffixComponent, NzDemoTimePickerSizeComponent, NzDemoTimePickerStatusComponent, NzDemoTimePickerUse12HoursComponent, NzDemoTimePickerValueComponent, NzDemoTimePickerVariantComponent],
   templateUrl  : './en.html'
 })
 export default class NzDemoTimePickerEnComponent {
