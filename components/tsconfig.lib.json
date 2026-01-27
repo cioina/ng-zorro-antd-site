@@ -9,7 +9,11 @@
     "declarationMap": true,
     "sourceMap": true,
     "strictFunctionTypes": true,
-    "stripInternal": true
+    "stripInternal": true,
+    "types": [
+      "./global.d.ts",
+      "jasmine"
+    ]
   },
   "angularCompilerOptions": {
     "strictInputAccessModifiers": true,
