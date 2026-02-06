@@ -7,18 +7,28 @@ import { BidiModule, Direction } from '@angular/cdk/bidi';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-import { Component, DebugElement, provideZoneChangeDetection, ViewChild } from '@angular/core';
+import {
+  Component,
+  DebugElement,
+  provideZoneChangeDetection,
+  signal,
+  viewChild,
+  ViewChild,
+  type WritableSignal
+} from '@angular/core';
 import { ComponentFixture, fakeAsync, flush, inject, TestBed, tick } from '@angular/core/testing';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
 
+import { NZ_FORM_SIZE } from 'ng-zorro-antd/core/form';
 import { dispatchFakeEvent, dispatchMouseEvent, typeInElement } from 'ng-zorro-antd/core/testing';
-import { NzStatus, NzVariant } from 'ng-zorro-antd/core/types';
+import { NzPlacement, NzStatus, NzVariant, type NzSizeLDSType } from 'ng-zorro-antd/core/types';
 import { PREFIX_CLASS } from 'ng-zorro-antd/date-picker';
 import { getPickerInput, getPickerOkButton } from 'ng-zorro-antd/date-picker/testing/util';
 import { NzFormControlStatusType, NzFormModule } from 'ng-zorro-antd/form';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NZ_SPACE_COMPACT_SIZE } from 'ng-zorro-antd/space';
 
 import { en_GB, NzI18nService } from '../i18n';
 import { NzTimePickerComponent } from './time-picker.component';
@@ -414,6 +424,189 @@ describe('time-picker', () => {
     });
   });
 
+  describe('placement', () => {
+    let fixture: ComponentFixture<NzTestTimePickerPlacementComponent>;
+    let fixtureInstance: NzTestTimePickerPlacementComponent;
+
+    beforeEach(() => {
+      fixture = TestBed.createComponent(NzTestTimePickerPlacementComponent);
+      fixtureInstance = fixture.componentInstance;
+      fixture.detectChanges();
+    });
+
+    function openTimePicker(): void {
+      dispatchMouseEvent(getPickerInput(fixture.debugElement), 'click');
+      fixture.detectChanges();
+      tick(500);
+      fixture.detectChanges();
+    }
+
+    function closeTimePicker(): void {
+      triggerInputBlur(fixture.debugElement);
+      fixture.detectChanges();
+      tick(500);
+      fixture.detectChanges();
+    }
+
+    it('should default to bottomLeft placement', fakeAsync(() => {
+      expect(fixtureInstance.nzTimePickerComponent().nzPlacement()).toBe('bottomLeft');
+    }));
+
+    it('should support bottomLeft placement', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'bottomLeft';
+      fixture.detectChanges();
+      openTimePicker();
+
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown).toBeTruthy();
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(true);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomRight')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(false);
+
+      closeTimePicker();
+    }));
+
+    it('should support bottomRight placement', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'bottomRight';
+      fixture.detectChanges();
+      openTimePicker();
+
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown).toBeTruthy();
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomRight')).toBe(true);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(false);
+
+      closeTimePicker();
+    }));
+
+    it('should support topLeft placement', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'topLeft';
+      fixture.detectChanges();
+      openTimePicker();
+
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown).toBeTruthy();
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(true);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomRight')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(false);
+
+      closeTimePicker();
+    }));
+
+    it('should support topRight placement', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'topRight';
+      fixture.detectChanges();
+      openTimePicker();
+
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown).toBeTruthy();
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomRight')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(true);
+
+      closeTimePicker();
+    }));
+
+    it('should dynamically change placement', fakeAsync(() => {
+      // Start with bottomLeft
+      fixtureInstance.nzPlacement = 'bottomLeft';
+      fixture.detectChanges();
+      openTimePicker();
+
+      let dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(true);
+
+      closeTimePicker();
+
+      // Change to topRight
+      fixtureInstance.nzPlacement = 'topRight';
+      fixture.detectChanges();
+      openTimePicker();
+
+      dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(false);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(true);
+
+      closeTimePicker();
+    }));
+
+    it('should update placement when input changes without reopening', fakeAsync(() => {
+      // Start with bottomLeft
+      fixtureInstance.nzPlacement = 'bottomLeft';
+      fixture.detectChanges();
+      expect(fixtureInstance.nzTimePickerComponent()?.nzPlacement()).toBe('bottomLeft');
+
+      // Change to topRight
+      fixtureInstance.nzPlacement = 'topRight';
+      fixture.detectChanges();
+      expect(fixtureInstance.nzTimePickerComponent().nzPlacement()).toBe('topRight');
+
+      // Open and verify the correct class is applied
+      openTimePicker();
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(true);
+
+      closeTimePicker();
+    }));
+
+    it('should change placement while picker is open', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'bottomLeft';
+      fixture.detectChanges();
+      openTimePicker();
+
+      let dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(true);
+
+      // Change placement while open
+      fixtureInstance.nzPlacement = 'topLeft';
+      fixture.detectChanges();
+      tick(100);
+      fixture.detectChanges();
+
+      dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(true);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(false);
+
+      closeTimePicker();
+    }));
+
+    it('should maintain placement when selecting a time', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'topLeft';
+      fixture.detectChanges();
+      openTimePicker();
+
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(true);
+
+      // Select a time
+      dispatchMouseEvent(overlayContainerElement.querySelector('.ant-picker-time-panel-cell')!, 'click');
+      fixture.detectChanges();
+
+      // Dropdown should still have the correct placement class
+      const dropdownAfterSelect = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdownAfterSelect.classList.contains('ant-picker-dropdown-placement-topLeft')).toBe(true);
+
+      closeTimePicker();
+    }));
+
+    it('should work with disabled state', fakeAsync(() => {
+      fixtureInstance.nzPlacement = 'topRight';
+      fixture.detectChanges();
+
+      // Open and verify placement
+      openTimePicker();
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-topRight')).toBe(true);
+
+      closeTimePicker();
+    }));
+  });
+
   describe('status', () => {
     let testComponent: NzTestTimePickerStatusComponent;
     let fixture: ComponentFixture<NzTestTimePickerStatusComponent>;
@@ -457,6 +650,26 @@ describe('time-picker', () => {
       fixture.detectChanges();
       expect(timeElement.nativeElement.classList).toContain('ant-picker-rtl');
     });
+
+    it('should work correctly with placement in RTL mode', fakeAsync(() => {
+      testComponent.dir = 'rtl';
+      testComponent.nzPlacement = 'bottomLeft';
+      fixture.detectChanges();
+
+      dispatchMouseEvent(getPickerInput(fixture.debugElement), 'click');
+      fixture.detectChanges();
+      tick(500);
+      fixture.detectChanges();
+
+      const dropdown = queryFromOverlay('.ant-picker-dropdown');
+      expect(dropdown.classList.contains('ant-picker-dropdown-rtl')).toBe(true);
+      expect(dropdown.classList.contains('ant-picker-dropdown-placement-bottomLeft')).toBe(true);
+
+      triggerInputBlur(fixture.debugElement);
+      fixture.detectChanges();
+      tick(500);
+      fixture.detectChanges();
+    }));
   });
 
   describe('prefix with template', () => {
@@ -737,6 +950,51 @@ describe('time-picker', () => {
   }
 });
 
+describe('time-picker size', () => {
+  let fixture: ComponentFixture<NzTestTimePickerSizeComponent>;
+  let timePickerElement: HTMLElement;
+  let compactSizeSignal: WritableSignal<NzSizeLDSType>;
+  let formSizeSignal: WritableSignal<NzSizeLDSType>;
+
+  beforeEach(() => {
+    compactSizeSignal = signal<NzSizeLDSType>('large');
+    formSizeSignal = signal<NzSizeLDSType>('default');
+  });
+  afterEach(() => {
+    TestBed.resetTestingModule();
+  });
+  it('should set correctly the size from the formSize signal', () => {
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: NZ_FORM_SIZE, useValue: formSizeSignal },
+        { provide: NZ_SPACE_COMPACT_SIZE, useValue: compactSizeSignal }
+      ]
+    });
+    fixture = TestBed.createComponent(NzTestTimePickerSizeComponent);
+    timePickerElement = fixture.debugElement.query(By.directive(NzTimePickerComponent)).nativeElement;
+    fixture.detectChanges();
+    formSizeSignal.set('large');
+    fixture.detectChanges();
+    expect(timePickerElement.classList).toContain('ant-picker-large');
+  });
+  it('should set correctly the size from the compactSize signal', () => {
+    TestBed.configureTestingModule({
+      providers: [{ provide: NZ_SPACE_COMPACT_SIZE, useValue: compactSizeSignal }]
+    });
+    fixture = TestBed.createComponent(NzTestTimePickerSizeComponent);
+    timePickerElement = fixture.debugElement.query(By.directive(NzTimePickerComponent)).nativeElement;
+    fixture.detectChanges();
+    expect(timePickerElement.classList).toContain('ant-picker-large');
+  });
+  it('should set correctly the size from the component input', () => {
+    fixture = TestBed.createComponent(NzTestTimePickerSizeComponent);
+    timePickerElement = fixture.debugElement.query(By.directive(NzTimePickerComponent)).nativeElement;
+    fixture.componentInstance.size = 'large';
+    fixture.detectChanges();
+    expect(timePickerElement.classList).toContain('ant-picker-large');
+  });
+});
+
 @Component({
   imports: [NzTimePickerComponent, FormsModule],
   template: `
@@ -786,12 +1044,13 @@ export class NzTestTimePickerStatusComponent {
   imports: [NzTimePickerComponent, BidiModule],
   template: `
     <div [dir]="dir">
-      <nz-time-picker />
+      <nz-time-picker [nzPlacement]="nzPlacement" />
     </div>
   `
 })
 export class NzTestTimePickerDirComponent {
   dir: Direction = 'ltr';
+  nzPlacement: NzPlacement = 'bottomLeft';
 }
 
 @Component({
@@ -847,4 +1106,22 @@ export class NzTestTimePickerConfirmationComponent {
   defaultOpenValue: Date = new Date('2020-03-27T00:00:00');
   onChange(_: Date | null): void {}
   @ViewChild(NzTimePickerComponent, { static: false }) nzTimePickerComponent!: NzTimePickerComponent;
+}
+
+@Component({
+  imports: [NzTimePickerComponent, FormsModule],
+  template: ` <nz-time-picker [nzPlacement]="nzPlacement" [(ngModel)]="date" /> `
+})
+export class NzTestTimePickerPlacementComponent {
+  nzPlacement: NzPlacement = 'bottomLeft';
+  date: Date | null = null;
+  nzTimePickerComponent = viewChild.required<NzTimePickerComponent>(NzTimePickerComponent);
+}
+
+@Component({
+  imports: [NzTimePickerComponent],
+  template: ` <nz-time-picker [nzSize]="size" /> `
+})
+class NzTestTimePickerSizeComponent {
+  size: NzSizeLDSType = 'default';
 }

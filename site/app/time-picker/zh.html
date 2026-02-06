@@ -16,6 +16,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-status" nzTitle="自定义状态"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-variant" nzTitle="形态变体"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-confirmation" nzTitle="选择确认"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-time-picker-demo-placement" nzTitle="自定义位置"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -139,7 +140,7 @@
 </div>
 </nz-code-box><nz-code-box
   nzTitle="选择确认"
-  nzVersion=""
+  nzVersion="21.1.0"
   nzId="components-time-picker-demo-confirmation"
   nzSelector="nz-demo-time-picker-confirmation"
   nzLink="components-time-picker-demo-confirmation"
@@ -158,7 +159,7 @@
 	<div nz-col [nzXl]="12" [nzSpan]="24">
 		<nz-code-box
   nzTitle="前后缀"
-  nzVersion=""
+  nzVersion="21.1.0"
   nzId="components-time-picker-demo-prefix-suffix"
   nzSelector="nz-demo-time-picker-prefix-suffix"
   nzLink="components-time-picker-demo-prefix-suffix"
@@ -251,6 +252,22 @@
 >
 	<nz-demo-time-picker-variant demo></nz-demo-time-picker-variant>
 	<div intro ngNonBindable><p>TimePicker 形态变体，可选 <code>outlined</code>、<code>filled</code>、<code>borderless</code>、<code>underlined</code> 四种形态。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="自定义位置"
+  nzVersion="21.1.0"
+  nzId="components-time-picker-demo-placement"
+  nzSelector="nz-demo-time-picker-placement"
+  nzLink="components-time-picker-demo-placement"
+  nzGenerateCommand="ng g ng-zorro-antd:time-picker-placement <name>"
+  nzComponentName="NzDemoTimePickerPlacementComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/time-picker/demo/placement.md"
+>
+	<nz-demo-time-picker-placement demo></nz-demo-time-picker-placement>
+	<div intro ngNonBindable><p>可以通过 <code>nzPlacement</code> 手动指定弹出的位置。</p>
 </div>
 </nz-code-box>
 	</div>
@@ -496,7 +513,7 @@
 <td><code>string | TemplateRef</code></td>
 <td>-</td>
 <td></td>
-<td></td>
+<td>21.1.0</td>
 </tr>
 <tr>
 <td><code>[nzNeedConfirm]</code></td>
@@ -504,7 +521,15 @@
 <td><code>boolean</code></td>
 <td>-</td>
 <td></td>
+<td>21.1.0</td>
+</tr>
+<tr>
+<td><code>[nzPlacement]</code></td>
+<td>选择框弹出的位置</td>
+<td><code>&#39;bottomLeft&#39; | &#39;bottomRight&#39; | &#39;topLeft&#39; | &#39;topRight&#39;</code></td>
+<td>-</td>
 <td></td>
+<td>21.1.0</td>
 </tr>
 <tr>
 <td><code>(ngModelChange)</code></td>

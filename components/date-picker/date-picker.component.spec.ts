@@ -13,10 +13,12 @@ import {
   DebugElement,
   inject,
   provideZoneChangeDetection,
+  signal,
   TemplateRef,
-  ViewChild
+  ViewChild,
+  WritableSignal
 } from '@angular/core';
-import { ComponentFixture, fakeAsync, flush, inject as testingInject, TestBed, tick } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, flush, TestBed, inject as testingInject, tick } from '@angular/core/testing';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
@@ -25,18 +27,27 @@ import isEqual from 'date-fns/isEqual';
 import isSameDay from 'date-fns/isSameDay';
 import { enUS } from 'date-fns/locale';
 
+import { NZ_FORM_SIZE } from 'ng-zorro-antd/core/form';
 import {
   dispatchFakeEvent,
   dispatchKeyboardEvent,
   dispatchMouseEvent,
   typeInElement
 } from 'ng-zorro-antd/core/testing';
-import { NgStyleInterface, NzSafeAny, NzStatus, NzVariant } from 'ng-zorro-antd/core/types';
+import {
+  NgStyleInterface,
+  NzSafeAny,
+  NzSizeLDSType,
+  NzStatus,
+  NzVariant,
+  type NzPlacement
+} from 'ng-zorro-antd/core/types';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NZ_DATE_LOCALE, NzI18nService } from 'ng-zorro-antd/i18n';
 import en_US from 'ng-zorro-antd/i18n/languages/en_US';
+import { NZ_SPACE_COMPACT_SIZE } from 'ng-zorro-antd/space';
 
-import { NzDatePickerComponent, NzDatePickerSizeType, NzPlacement } from './date-picker.component';
+import { NzDatePickerComponent, NzDatePickerSizeType } from './date-picker.component';
 import { NzDatePickerModule } from './date-picker.module';
 import { CompatibleDate, NzPanelChangeType } from './standard-types';
 import { ENTER_EVENT, getPickerAbstract, getPickerInput } from './testing/util';
@@ -1517,6 +1528,51 @@ describe('in form', () => {
   });
 });
 
+describe('finalSize', () => {
+  let fixture: ComponentFixture<TestDatePickerFinalSizeComponent>;
+  let datePickerElement: HTMLElement;
+  let compactSizeSignal: WritableSignal<NzSizeLDSType>;
+  let formSizeSignal: WritableSignal<NzSizeLDSType | undefined>;
+
+  beforeEach(() => {
+    compactSizeSignal = signal<NzSizeLDSType>('large');
+    formSizeSignal = signal<NzSizeLDSType>('default');
+  });
+  afterEach(() => {
+    TestBed.resetTestingModule();
+  });
+  it('should set correctly the size from the formSize signal', () => {
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: NZ_FORM_SIZE, useValue: formSizeSignal },
+        { provide: NZ_SPACE_COMPACT_SIZE, useValue: compactSizeSignal }
+      ]
+    });
+    fixture = TestBed.createComponent(TestDatePickerFinalSizeComponent);
+    datePickerElement = fixture.debugElement.query(By.directive(NzDatePickerComponent)).nativeElement;
+    fixture.detectChanges();
+    formSizeSignal.set('large');
+    fixture.detectChanges();
+    expect(datePickerElement.classList).toContain('ant-picker-large');
+  });
+  it('should set correctly the size from the compactSize signal', () => {
+    TestBed.configureTestingModule({
+      providers: [{ provide: NZ_SPACE_COMPACT_SIZE, useValue: compactSizeSignal }]
+    });
+    fixture = TestBed.createComponent(TestDatePickerFinalSizeComponent);
+    datePickerElement = fixture.debugElement.query(By.directive(NzDatePickerComponent)).nativeElement;
+    fixture.detectChanges();
+    expect(datePickerElement.classList).toContain('ant-picker-large');
+  });
+  it('should set correctly the size from the component input', () => {
+    fixture = TestBed.createComponent(TestDatePickerFinalSizeComponent);
+    datePickerElement = fixture.debugElement.query(By.directive(NzDatePickerComponent)).nativeElement;
+    fixture.componentInstance.size = 'large';
+    fixture.detectChanges();
+    expect(datePickerElement.classList).toContain('ant-picker-large');
+  });
+});
+
 @Component({
   imports: [ReactiveFormsModule, FormsModule, NzDatePickerModule],
   template: `
@@ -1557,18 +1613,18 @@ describe('in form', () => {
         />
       }
       @case (2) {
-        <nz-date-picker [nzOpen]="nzOpen" (nzOnOpenChange)="nzOnOpenChange($event)"></nz-date-picker>
+        <nz-date-picker [nzOpen]="nzOpen" (nzOnOpenChange)="nzOnOpenChange($event)" />
       }
       @case (3) {
-        <nz-date-picker nzOpen [(ngModel)]="modelValue"></nz-date-picker>
+        <nz-date-picker nzOpen [(ngModel)]="modelValue" />
       }
       @case (4) {
-        <nz-date-picker [formControl]="control" [nzDisabled]="nzDisabled"></nz-date-picker>
+        <nz-date-picker [formControl]="control" [nzDisabled]="nzDisabled" />
       }
       @case (5) {
         <ng-container>
-          <nz-date-picker [ngModel]="firstValue" (ngModelChange)="nzOnChange($event)"></nz-date-picker>
-          <nz-date-picker [ngModel]="secondValue"></nz-date-picker>
+          <nz-date-picker [ngModel]="firstValue" (ngModelChange)="nzOnChange($event)" />
+          <nz-date-picker [ngModel]="secondValue" />
         </ng-container>
       }
     }
@@ -1639,7 +1695,7 @@ class NzTestDatePickerComponent {
 
 @Component({
   imports: [NzDatePickerModule],
-  template: `<nz-date-picker [nzStatus]="status"></nz-date-picker>`
+  template: `<nz-date-picker [nzStatus]="status" />`
 })
 class NzTestDatePickerStatusComponent {
   status: NzStatus = 'error';
@@ -1651,7 +1707,7 @@ class NzTestDatePickerStatusComponent {
     <form nz-form [formGroup]="validateForm">
       <nz-form-item>
         <nz-form-control nzHasFeedback>
-          <nz-date-picker formControlName="demo"></nz-date-picker>
+          <nz-date-picker formControlName="demo" />
         </nz-form-control>
       </nz-form-item>
     </form>
@@ -1662,4 +1718,12 @@ class NzTestDatePickerInFormComponent {
   validateForm = this.fb.group({
     demo: this.fb.control<Date | null>(null, Validators.required)
   });
+}
+
+@Component({
+  imports: [NzDatePickerModule],
+  template: `<nz-date-picker [nzSize]="size" />`
+})
+export class TestDatePickerFinalSizeComponent {
+  size: NzDatePickerSizeType = 'default';
 }

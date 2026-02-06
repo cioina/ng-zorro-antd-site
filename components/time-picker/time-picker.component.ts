@@ -4,12 +4,7 @@
  */
 
 import { Directionality } from '@angular/cdk/bidi';
-import {
-  ConnectedOverlayPositionChange,
-  ConnectionPositionPair,
-  OriginConnectionPosition,
-  OverlayModule
-} from '@angular/cdk/overlay';
+import { ConnectedOverlayPositionChange, OverlayModule } from '@angular/cdk/overlay';
 import { Platform, _getEventTarget } from '@angular/cdk/platform';
 import { AsyncPipe } from '@angular/common';
 import {
@@ -34,6 +29,7 @@ import {
   forwardRef,
   inject,
   input,
+  linkedSignal,
   signal
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -45,12 +41,18 @@ import { isValid } from 'date-fns';
 
 import { slideAnimationEnter, slideAnimationLeave } from 'ng-zorro-antd/core/animation';
 import { NzConfigKey, NzConfigService, WithConfig } from 'ng-zorro-antd/core/config';
-import { NzFormItemFeedbackIconComponent, NzFormNoStatusService, NzFormStatusService } from 'ng-zorro-antd/core/form';
+import {
+  NZ_FORM_SIZE,
+  NzFormItemFeedbackIconComponent,
+  NzFormNoStatusService,
+  NzFormStatusService
+} from 'ng-zorro-antd/core/form';
 import { warn } from 'ng-zorro-antd/core/logger';
 import { NzOutletModule } from 'ng-zorro-antd/core/outlet';
-import { NzOverlayModule } from 'ng-zorro-antd/core/overlay';
+import { DATE_PICKER_POSITION_MAP, DEFAULT_DATE_PICKER_POSITIONS, NzOverlayModule } from 'ng-zorro-antd/core/overlay';
 import {
   NgClassInterface,
+  NzPlacement,
   NzSafeAny,
   NzSizeLDSType,
   NzStatus,
@@ -99,7 +101,7 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'timePicker';
           <nz-icon [nzType]="suffixIcon" />
         </ng-container>
         @if (hasFeedback && !!status) {
-          <nz-form-item-feedback-icon [status]="status"></nz-form-item-feedback-icon>
+          <nz-form-item-feedback-icon [status]="status" />
         }
       </span>
       @if (nzAllowEmpty && !nzDisabled && value) {
@@ -112,11 +114,11 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'timePicker';
     <ng-template
       cdkConnectedOverlay
       nzConnectedOverlay
+      cdkConnectedOverlayTransformOriginOn=".ant-picker-dropdown"
       [cdkConnectedOverlayHasBackdrop]="nzBackdrop"
-      [cdkConnectedOverlayPositions]="overlayPositions"
+      [cdkConnectedOverlayPositions]="overlayPositions()"
       [cdkConnectedOverlayOrigin]="origin"
       [cdkConnectedOverlayOpen]="nzOpen"
-      [cdkConnectedOverlayTransformOriginOn]="'.ant-picker-dropdown'"
       (detach)="close()"
       (overlayOutsideClick)="onClickOutside($event)"
       (positionChange)="onPositionChange($event)"
@@ -208,7 +210,6 @@ export class NzTimePickerComponent implements ControlValueAccessor, OnInit, Afte
   private _onChange?: (value: Date | null) => void;
   private _onTouched?: () => void;
   private isNzDisableFirstChange: boolean = true;
-  private readonly currentPosition = signal<OriginConnectionPosition>({ originX: 'start', originY: 'bottom' });
 
   isInit = false;
   focused = false;
@@ -217,36 +218,6 @@ export class NzTimePickerComponent implements ControlValueAccessor, OnInit, Afte
   preValue: Date | null = null;
   inputSize?: number;
   i18nPlaceHolder$: Observable<string | undefined> = of(undefined);
-  overlayPositions: ConnectionPositionPair[] = [
-    {
-      offsetY: 3,
-      originX: 'start',
-      originY: 'bottom',
-      overlayX: 'start',
-      overlayY: 'top'
-    },
-    {
-      offsetY: -3,
-      originX: 'start',
-      originY: 'top',
-      overlayX: 'start',
-      overlayY: 'bottom'
-    },
-    {
-      offsetY: 3,
-      originX: 'end',
-      originY: 'bottom',
-      overlayX: 'end',
-      overlayY: 'top'
-    },
-    {
-      offsetY: -3,
-      originX: 'end',
-      originY: 'top',
-      overlayX: 'end',
-      overlayY: 'bottom'
-    }
-  ] as ConnectionPositionPair[];
 
   // status
   prefixCls: string = 'ant-picker';
@@ -290,10 +261,15 @@ export class NzTimePickerComponent implements ControlValueAccessor, OnInit, Afte
   @Input() @WithConfig() nzBackdrop = false;
   @Input({ transform: booleanAttribute }) nzInputReadOnly: boolean = false;
 
-  readonly nzPrefix = input<string | TemplateRef<void>>();
-
-  readonly nzNeedConfirm = input(false, { transform: booleanAttribute });
+  private readonly formSize = inject(NZ_FORM_SIZE, { optional: true });
   private hasConfirmed = false;
+
+  readonly nzPrefix = input<string | TemplateRef<void>>();
+  readonly nzNeedConfirm = input(false, { transform: booleanAttribute });
+  readonly nzPlacement = input<NzPlacement>('bottomLeft');
+
+  protected readonly currentPosition = linkedSignal(() => DATE_PICKER_POSITION_MAP[this.nzPlacement()]);
+  protected readonly overlayPositions = computed(() => [this.currentPosition(), ...DEFAULT_DATE_PICKER_POSITIONS]);
 
   protected readonly timepickerAnimationEnter = slideAnimationEnter();
   protected readonly timepickerAnimationLeave = slideAnimationLeave();
@@ -424,6 +400,9 @@ export class NzTimePickerComponent implements ControlValueAccessor, OnInit, Afte
   }
 
   protected finalSize = computed(() => {
+    if (this.formSize?.()) {
+      return this.formSize();
+    }
     if (this.compactSize) {
       return this.compactSize();
     }

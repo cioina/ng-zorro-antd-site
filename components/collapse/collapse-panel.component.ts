@@ -44,9 +44,11 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'collapsePanel';
       #collapseHeader
       role="button"
       [attr.aria-expanded]="active()"
+      [attr.aria-disabled]="nzDisabled || nzCollapsible === 'disabled'"
+      [attr.tabindex]="nzDisabled || nzCollapsible === 'disabled' ? -1 : 0"
       class="ant-collapse-header"
-      [class.ant-collapse-icon-collapsible-only]="nzCollapsible === 'icon'"
-      [class.ant-collapse-header-collapsible-only]="nzCollapsible === 'header'"
+      [class.ant-collapse-collapsible-icon]="nzCollapsible === 'icon'"
+      [class.ant-collapse-collapsible-header]="nzCollapsible === 'header'"
     >
       @if (nzShowArrow) {
         <div role="button" #collapseIcon class="ant-collapse-expand-icon">
@@ -55,7 +57,7 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'collapsePanel';
           </ng-container>
         </div>
       }
-      <span class="ant-collapse-header-text">
+      <span class="ant-collapse-title">
         <ng-container *nzStringTemplateOutlet="nzHeader">{{ nzHeader }}</ng-container>
       </span>
       @if (nzExtra) {
@@ -65,13 +67,13 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'collapsePanel';
       }
     </div>
     <div
-      class="ant-collapse-content"
-      [class.ant-collapse-content-active]="active()"
+      class="ant-collapse-panel"
+      [class.ant-collapse-panel-active]="active()"
       animation-collapse
       [open]="active()"
-      leavedClassName="ant-collapse-content-hidden"
+      leavedClassName="ant-collapse-panel-hidden"
     >
-      <div class="ant-collapse-content-box">
+      <div class="ant-collapse-body">
         <ng-content />
       </div>
     </div>
@@ -80,7 +82,7 @@ const NZ_CONFIG_MODULE_NAME: NzConfigKey = 'collapsePanel';
     class: 'ant-collapse-item',
     '[class.ant-collapse-no-arrow]': '!nzShowArrow',
     '[class.ant-collapse-item-active]': 'active()',
-    '[class.ant-collapse-item-disabled]': 'nzDisabled || nzCollapsible === "disabled"'
+    '[class.ant-collapse-item-disabled]': `nzDisabled || nzCollapsible === 'disabled'`
   },
   imports: [NzOutletModule, NzIconModule, NzAnimationCollapseDirective]
 })

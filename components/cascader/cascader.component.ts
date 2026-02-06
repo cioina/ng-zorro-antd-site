@@ -47,7 +47,12 @@ import { distinctUntilChanged, map, startWith, switchMap, withLatestFrom } from 
 
 import { NzNoAnimationDirective, slideAnimationEnter, slideAnimationLeave } from 'ng-zorro-antd/core/animation';
 import { NzConfigKey, onConfigChangeEventForComponent, WithConfig } from 'ng-zorro-antd/core/config';
-import { NzFormItemFeedbackIconComponent, NzFormNoStatusService, NzFormStatusService } from 'ng-zorro-antd/core/form';
+import {
+  NZ_FORM_SIZE,
+  NzFormItemFeedbackIconComponent,
+  NzFormNoStatusService,
+  NzFormStatusService
+} from 'ng-zorro-antd/core/form';
 import { NzStringTemplateOutletDirective } from 'ng-zorro-antd/core/outlet';
 import {
   DEFAULT_CASCADER_POSITIONS,
@@ -188,7 +193,7 @@ const defaultDisplayRender = (labels: string[]): string => labels.join(' / ');
         <nz-select-clear (clear)="clearSelection($event)" />
       }
     }
-    <ng-content></ng-content>
+    <ng-content />
 
     <ng-template
       cdkConnectedOverlay
@@ -196,7 +201,7 @@ const defaultDisplayRender = (labels: string[]): string => labels.join(' / ');
       [cdkConnectedOverlayHasBackdrop]="nzBackdrop"
       [cdkConnectedOverlayOrigin]="overlayOrigin"
       [cdkConnectedOverlayPositions]="positions"
-      [cdkConnectedOverlayTransformOriginOn]="'.ant-cascader-dropdown'"
+      cdkConnectedOverlayTransformOriginOn=".ant-cascader-dropdown"
       [cdkConnectedOverlayOpen]="menuVisible()"
       (overlayOutsideClick)="onClickOutside($event)"
       (detach)="closeMenu()"
@@ -229,7 +234,7 @@ const defaultDisplayRender = (labels: string[]): string => labels.join(' / ');
               <li class="ant-cascader-menu-item ant-cascader-menu-item-disabled">
                 <nz-embed-empty
                   class="ant-cascader-menu-item-content"
-                  [nzComponentName]="'cascader'"
+                  nzComponentName="cascader"
                   [specificContent]="nzNotFoundContent"
                 />
               </li>
@@ -442,6 +447,9 @@ export class NzCascaderComponent
   }
 
   protected finalSize = computed(() => {
+    if (this.formSize?.()) {
+      return this.formSize();
+    }
     if (this.compactSize) {
       return this.compactSize();
     }
@@ -449,6 +457,8 @@ export class NzCascaderComponent
   });
 
   private size = signal<NzSizeLDSType>(this.nzSize);
+
+  private readonly formSize = inject(NZ_FORM_SIZE, { optional: true });
   private compactSize = inject(NZ_SPACE_COMPACT_SIZE, { optional: true });
   private inputString = '';
   private isOpening = false;

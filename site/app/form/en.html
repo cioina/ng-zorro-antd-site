@@ -19,6 +19,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-wrap" nzTitle="Label can wrap"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-align" nzTitle="Text align of form label"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-required-style" nzTitle="Required style"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-form-demo-size" nzTitle="Form size"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -357,6 +358,22 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 	<nz-demo-form-required-style demo></nz-demo-form-required-style>
 	<div intro ngNonBindable><p>Switch required or optional style with <code>nzRequiredMark</code>.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Form size"
+  nzVersion="21.1.0"
+  nzId="components-form-demo-size"
+  nzSelector="nz-demo-form-size"
+  nzLink="components-form-demo-size"
+  nzGenerateCommand="ng g ng-zorro-antd:form-size <name>"
+  nzComponentName="NzDemoFormSizeComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/form/demo/size.md"
+>
+	<nz-demo-form-size demo></nz-demo-form-size>
+	<div intro ngNonBindable><p>Set component size, only works for antd components.</p>
+</div>
 </nz-code-box>
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-form"><span>[nz-form]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-form'" class="anchor">#</a></h3><table>
@@ -433,6 +450,14 @@ When the FormControl.status is <code>INVALID</code>, and the errors contains <co
 <td><code>true</code></td>
 <td></td>
 <td>20.4.0</td>
+</tr>
+<tr>
+<td><code>[nzSize]</code></td>
+<td>Set field component size</td>
+<td><code>small</code></td>
+<td><code>default</code></td>
+<td><code>large</code></td>
+<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-form-item"><span>nz-form-item</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-item'" class="anchor">#</a></h3><p>Used to separate the item in forms, contains label(optional) and control field.</p>

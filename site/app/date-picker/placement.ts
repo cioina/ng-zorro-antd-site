@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { NzDatePickerModule, NzPlacement } from 'ng-zorro-antd/date-picker';
+import type { NzPlacement } from 'ng-zorro-antd/core/types';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 
 @Component({
@@ -16,18 +17,16 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
     </nz-radio-group>
     <br />
     <br />
-    <nz-date-picker [nzPlacement]="placement"></nz-date-picker>
+    <nz-date-picker [nzPlacement]="placement" />
     <br />
-    <nz-range-picker [nzPlacement]="placement"></nz-range-picker>
+    <nz-range-picker [nzPlacement]="placement" />
   `,
-  styles: [
-    `
-      nz-date-picker,
-      nz-range-picker {
-        margin: 0 8px 12px 0;
-      }
-    `
-  ]
+  styles: `
+    nz-date-picker,
+    nz-range-picker {
+      margin: 0 8px 12px 0;
+    }
+  `
 })
 export class NzDemoDatePickerPlacementComponent {
   placement: NzPlacement = 'bottomLeft';
