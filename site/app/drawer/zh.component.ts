@@ -3,6 +3,7 @@ import { NzCodeBoxComponent } from '../codebox/codebox.component';
 import { ShareModule } from '../share/share.module';
 
 import { NzDemoDrawerBasicRightComponent } from './basic-right';
+import { NzDemoDrawerExtraComponent } from './extra';
 import { NzDemoDrawerFromDrawerComponent } from './from-drawer';
 import { NzDemoDrawerMultiLevelDrawerComponent } from './multi-level-drawer';
 import { NzDemoDrawerPlacementComponent } from './placement';
@@ -13,7 +14,7 @@ import { NzDemoDrawerUserProfileComponent } from './user-profile';
 
 @Component({
   selector     : 'nz-demo-drawer',
-  imports      : [ShareModule, NzDemoDrawerBasicRightComponent, NzDemoDrawerFromDrawerComponent, NzDemoDrawerMultiLevelDrawerComponent, NzDemoDrawerPlacementComponent, NzDemoDrawerServiceComponent, NzDemoDrawerSizeComponent, NzDemoDrawerUserProfileComponent],
+  imports      : [ShareModule, NzDemoDrawerBasicRightComponent, NzDemoDrawerExtraComponent, NzDemoDrawerFromDrawerComponent, NzDemoDrawerMultiLevelDrawerComponent, NzDemoDrawerPlacementComponent, NzDemoDrawerServiceComponent, NzDemoDrawerSizeComponent, NzDemoDrawerUserProfileComponent],
   templateUrl  : './zh.html'
 })
 export default class NzDemoDrawerZhComponent {
