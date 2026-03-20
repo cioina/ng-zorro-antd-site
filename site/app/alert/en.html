@@ -12,6 +12,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-alert-demo-banner" nzTitle="Banner"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-alert-demo-action" nzTitle="Custom action"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-alert-demo-custom-icon" nzTitle="Custom icon"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-alert-demo-loop-banner" nzTitle="Loop Banner"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -187,6 +188,23 @@
 	<nz-demo-alert-action demo></nz-demo-alert-action>
 	<div intro ngNonBindable><p>Custom action.</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Loop Banner"
+  nzVersion=""
+  nzId="components-alert-demo-loop-banner"
+  nzSelector="nz-demo-alert-loop-banner"
+  nzLink="components-alert-demo-loop-banner"
+  nzGenerateCommand="ng g ng-zorro-antd:alert-loop-banner <name>"
+  nzComponentName="NzDemoAlertLoopBannerComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/alert/demo/loop-banner.md"
+>
+	<nz-demo-alert-loop-banner demo></nz-demo-alert-loop-banner>
+	<div intro ngNonBindable><p>Pass <code>nz-alert-marquee</code> as the <code>[nzMessage]</code> template content of a <code>nzBanner</code> alert to create a scrolling loop banner.
+Use <code>nzPauseOnHover</code> to pause the animation on mouse hover, and <code>nzSpeed</code> to control the scrolling speed in pixels per second (default 50, higher value = faster scrolling).</p>
+</div>
 </nz-code-box>
 	</div>
 </div>
@@ -276,6 +294,29 @@
 <td><code>EventEmitter&lt;void&gt;</code></td>
 <td>-</td>
 <td></td>
+</tr>
+</tbody></table>
+<h3 id="nz-alert-marquee"><span>nz-alert-marquee</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-alert-marquee'" class="anchor">#</a></h3><p>Use <code>nz-alert-marquee</code> as the <code>[nzMessage]</code> template content to create a scrolling loop banner inside an alert.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[nzPauseOnHover]</code></td>
+<td>Whether to pause the scrolling animation on mouse hover</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzSpeed]</code></td>
+<td>Animation speed in pixels per second (higher = faster scrolling)</td>
+<td><code>number</code></td>
+<td><code>50</code></td>
 </tr>
 </tbody></table>
 </section></article>

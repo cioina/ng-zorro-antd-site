@@ -10,12 +10,13 @@ import { NzDemoAlertCloseTextComponent } from './close-text';
 import { NzDemoAlertCustomIconComponent } from './custom-icon';
 import { NzDemoAlertDescriptionComponent } from './description';
 import { NzDemoAlertIconComponent } from './icon';
+import { NzDemoAlertLoopBannerComponent } from './loop-banner';
 import { NzDemoAlertStyleComponent } from './style';
 
 
 @Component({
   selector     : 'nz-demo-alert',
-  imports      : [ShareModule, NzDemoAlertActionComponent, NzDemoAlertBannerComponent, NzDemoAlertBasicComponent, NzDemoAlertClosableComponent, NzDemoAlertCloseTextComponent, NzDemoAlertCustomIconComponent, NzDemoAlertDescriptionComponent, NzDemoAlertIconComponent, NzDemoAlertStyleComponent],
+  imports      : [ShareModule, NzDemoAlertActionComponent, NzDemoAlertBannerComponent, NzDemoAlertBasicComponent, NzDemoAlertClosableComponent, NzDemoAlertCloseTextComponent, NzDemoAlertCustomIconComponent, NzDemoAlertDescriptionComponent, NzDemoAlertIconComponent, NzDemoAlertLoopBannerComponent, NzDemoAlertStyleComponent],
   templateUrl  : './en.html'
 })
 export default class NzDemoAlertEnComponent {

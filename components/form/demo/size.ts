@@ -71,13 +71,7 @@ import { NzTreeSelectModule } from 'ng-zorro-antd/tree-select';
       <nz-form-item>
         <nz-form-label>Tree Select</nz-form-label>
         <nz-form-control>
-          <nz-tree-select
-            [nzExpandedKeys]="expandKeys"
-            [nzNodes]="nodes"
-            nzShowSearch
-            nzPlaceHolder="Please select"
-            [nzNodes]="nodes"
-          />
+          <nz-tree-select [nzExpandedKeys]="expandKeys" nzShowSearch nzPlaceHolder="Please select" [nzNodes]="nodes" />
         </nz-form-control>
       </nz-form-item>
       <nz-form-item>

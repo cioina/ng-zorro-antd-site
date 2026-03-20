@@ -13,6 +13,7 @@ import { NzDemoTabsEditableCardComponent } from './editable-card';
 import { NzDemoTabsExtraComponent } from './extra';
 import { NzDemoTabsGuardComponent } from './guard';
 import { NzDemoTabsIconComponent } from './icon';
+import { NzDemoTabsIndicatorComponent } from './indicator';
 import { NzDemoTabsLazyComponent } from './lazy';
 import { NzDemoTabsLinkRouterComponent } from './link-router';
 import { NzDemoTabsPositionComponent } from './position';
@@ -22,7 +23,7 @@ import { NzDemoTabsSlideComponent } from './slide';
 
 @Component({
   selector     : 'nz-demo-tabs',
-  imports      : [ShareModule, NzDemoTabsBasicComponent, NzDemoTabsCardTopComponent, NzDemoTabsCardComponent, NzDemoTabsCenteredComponent, NzDemoTabsCustomAddTriggerComponent, NzDemoTabsDisabledComponent, NzDemoTabsDraggableComponent, NzDemoTabsEditableCardComponent, NzDemoTabsExtraComponent, NzDemoTabsGuardComponent, NzDemoTabsIconComponent, NzDemoTabsLazyComponent, NzDemoTabsLinkRouterComponent, NzDemoTabsPositionComponent, NzDemoTabsSizeComponent, NzDemoTabsSlideComponent],
+  imports      : [ShareModule, NzDemoTabsBasicComponent, NzDemoTabsCardTopComponent, NzDemoTabsCardComponent, NzDemoTabsCenteredComponent, NzDemoTabsCustomAddTriggerComponent, NzDemoTabsDisabledComponent, NzDemoTabsDraggableComponent, NzDemoTabsEditableCardComponent, NzDemoTabsExtraComponent, NzDemoTabsGuardComponent, NzDemoTabsIconComponent, NzDemoTabsIndicatorComponent, NzDemoTabsLazyComponent, NzDemoTabsLinkRouterComponent, NzDemoTabsPositionComponent, NzDemoTabsSizeComponent, NzDemoTabsSlideComponent],
   templateUrl  : './zh.html'
 })
 export default class NzDemoTabsZhComponent {

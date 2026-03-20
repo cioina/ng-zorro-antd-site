@@ -20,6 +20,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-label-align" nzTitle="表单标签文本对齐方式"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-required-style" nzTitle="必选样式"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-form-demo-size" nzTitle="表单尺寸"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-form-demo-variant" nzTitle="表单变体"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -374,6 +375,22 @@
 	<nz-demo-form-size demo></nz-demo-form-size>
 	<div intro ngNonBindable><p>设置表单组件尺寸，仅对 antd 组件有效。</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="表单变体"
+  nzVersion=""
+  nzId="components-form-demo-variant"
+  nzSelector="nz-demo-form-variant"
+  nzLink="components-form-demo-variant"
+  nzGenerateCommand="ng g ng-zorro-antd:form-variant <name>"
+  nzComponentName="NzDemoFormVariantComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/form/demo/variant.md"
+>
+	<nz-demo-form-variant demo></nz-demo-form-variant>
+	<div intro ngNonBindable><p>改变表单内所有组件的变体，可选 <code>outlined</code> <code>filled</code> <code>borderless</code> <code>underlined</code> 四种形态。</p>
+</div>
 </nz-code-box>
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-form"><span>[nz-form]</span><label class="api-type-label directive">directive</label><a onclick="window.location.hash = 'nz-form'" class="anchor">#</a></h3><table>
@@ -458,6 +475,14 @@
 <td><code>default</code></td>
 <td><code>large</code></td>
 <td>-</td>
+</tr>
+<tr>
+<td><code>[nzVariant]</code></td>
+<td>设置表单样式</td>
+<td><code>&#39;outlined&#39; | &#39;filled&#39; | &#39;borderless&#39; | &#39;underlined&#39;</code></td>
+<td><code>&#39;outlined&#39;</code></td>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 <h3 id="nz-form-item"><span>nz-form-item</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-form-item'" class="anchor">#</a></h3><p>表单项用于区分表单中不同的区域，包含表单域和表单标签(可选)。</p>

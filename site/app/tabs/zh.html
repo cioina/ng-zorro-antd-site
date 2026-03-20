@@ -19,6 +19,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-tabs-demo-link-router" nzTitle="路由联动"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-tabs-demo-guard" nzTitle="标签守卫"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-tabs-demo-draggable" nzTitle="可拖拽标签"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-tabs-demo-indicator" nzTitle="指示条"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -309,6 +310,22 @@
 	<nz-demo-tabs-draggable demo></nz-demo-tabs-draggable>
 	<div intro ngNonBindable><p>通过 CDK <code>DragDropModule</code> 实现标签可拖拽。</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="指示条"
+  nzVersion=""
+  nzId="components-tabs-demo-indicator"
+  nzSelector="nz-demo-tabs-indicator"
+  nzLink="components-tabs-demo-indicator"
+  nzGenerateCommand="ng g ng-zorro-antd:tabs-indicator <name>"
+  nzComponentName="NzDemoTabsIndicatorComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/tabs/demo/indicator.md"
+>
+	<nz-demo-tabs-indicator demo></nz-demo-tabs-indicator>
+	<div intro ngNonBindable><p>设置 <code>nzIndicator</code> 属性，自定义指示条宽度和对齐方式。</p>
+</div>
 </nz-code-box>
 	</div>
 </div><section class="markdown api-container" ngNonBindable><h2 id="api"><span>API</span><a onclick="window.location.hash = 'api'" class="anchor">#</a></h2><h3 id="nz-tabs"><span>nz-tabs</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-tabs'" class="anchor">#</a></h3><table>
@@ -417,6 +434,13 @@
 <td>被隐藏时是否销毁 DOM 结构</td>
 <td><code>boolean</code></td>
 <td><code>false</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzIndicator]</code></td>
+<td>自定义指示条宽度和对齐方式</td>
+<td><code>NzIndicator</code></td>
+<td>-</td>
 <td></td>
 </tr>
 <tr>

@@ -19,11 +19,12 @@ import { NzDemoFormTimeRelatedControlsComponent } from './time-related-controls'
 import { NzDemoFormValidateReactiveComponent } from './validate-reactive';
 import { NzDemoFormValidateStaticComponent } from './validate-static';
 import { NzDemoFormValidateTemplateComponent } from './validate-template';
+import { NzDemoFormVariantComponent } from './variant';
 
 
 @Component({
   selector     : 'nz-demo-form',
-  imports      : [ShareModule, NzDemoFormAdvancedSearchComponent, NzDemoFormAutoTipsComponent, NzDemoFormCoordinatedComponent, NzDemoFormDynamicFormItemComponent, NzDemoFormDynamicRuleComponent, NzDemoFormHorizontalLoginComponent, NzDemoFormLabelAlignComponent, NzDemoFormLabelWrapComponent, NzDemoFormLayoutComponent, NzDemoFormNormalLoginComponent, NzDemoFormRegisterComponent, NzDemoFormRequiredStyleComponent, NzDemoFormSizeComponent, NzDemoFormTimeRelatedControlsComponent, NzDemoFormValidateReactiveComponent, NzDemoFormValidateStaticComponent, NzDemoFormValidateTemplateComponent],
+  imports      : [ShareModule, NzDemoFormAdvancedSearchComponent, NzDemoFormAutoTipsComponent, NzDemoFormCoordinatedComponent, NzDemoFormDynamicFormItemComponent, NzDemoFormDynamicRuleComponent, NzDemoFormHorizontalLoginComponent, NzDemoFormLabelAlignComponent, NzDemoFormLabelWrapComponent, NzDemoFormLayoutComponent, NzDemoFormNormalLoginComponent, NzDemoFormRegisterComponent, NzDemoFormRequiredStyleComponent, NzDemoFormSizeComponent, NzDemoFormTimeRelatedControlsComponent, NzDemoFormValidateReactiveComponent, NzDemoFormValidateStaticComponent, NzDemoFormValidateTemplateComponent, NzDemoFormVariantComponent],
   templateUrl  : './en.html'
 })
 export default class NzDemoFormEnComponent {

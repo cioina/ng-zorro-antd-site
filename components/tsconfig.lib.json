@@ -9,10 +9,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "strictFunctionTypes": true,
-    "stripInternal": true,
-    "types": [
-      "jasmine"
-    ]
+    "stripInternal": true
   },
   "angularCompilerOptions": {
     "strictInputAccessModifiers": true,

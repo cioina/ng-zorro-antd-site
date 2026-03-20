@@ -19,6 +19,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-allow-clear" nzTitle="带移除图标"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-textarea-with-character-count" nzTitle="带数字提示的文本域"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-status" nzTitle="自定义状态"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-input-demo-advance-count" nzTitle="定制计数能力"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-input-demo-focus" nzTitle="Focus 额外配置属性"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
@@ -177,20 +178,20 @@
 	<div intro ngNonBindable><p>展示数字提示。</p>
 </div>
 </nz-code-box><nz-code-box
-  nzTitle="Focus 额外配置属性"
+  nzTitle="定制计数能力"
   nzVersion=""
-  nzId="components-input-demo-focus"
-  nzSelector="nz-demo-input-focus"
-  nzLink="components-input-demo-focus"
-  nzGenerateCommand="ng g ng-zorro-antd:input-focus <name>"
-  nzComponentName="NzDemoInputFocusComponent"
+  nzId="components-input-demo-advance-count"
+  nzSelector="nz-demo-input-advance-count"
+  nzLink="components-input-demo-advance-count"
+  nzGenerateCommand="ng g ng-zorro-antd:input-advance-count <name>"
+  nzComponentName="NzDemoInputAdvanceCountComponent"
   [nzIframe]="false"
   nzIframeSource=""
   [nzIframeHeight]="null"
-  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/focus.md"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/advance-count.md"
 >
-	<nz-demo-input-focus demo></nz-demo-input-focus>
-	<div intro ngNonBindable><p>Focus 提供额外配置属性</p>
+	<nz-demo-input-advance-count demo></nz-demo-input-advance-count>
+	<div intro ngNonBindable><p>在某些场景下，需要定制计数能力（例如 emoji 长度以 1 计算），可以通过 <code>nzShowCount</code> 属性来实现。在该模式下，通过 <code>nzCount</code> 属性来超出原生 <code>maxLength</code> 的限制。</p>
 </div>
 </nz-code-box>
 	</div>
@@ -323,6 +324,22 @@
 	<nz-demo-input-status demo></nz-demo-input-status>
 	<div intro ngNonBindable><p>使用 <code>nzStatus</code> 为 Input 添加状态，可选 <code>error</code> 或者 <code>warning</code>。</p>
 </div>
+</nz-code-box><nz-code-box
+  nzTitle="Focus 额外配置属性"
+  nzVersion=""
+  nzId="components-input-demo-focus"
+  nzSelector="nz-demo-input-focus"
+  nzLink="components-input-demo-focus"
+  nzGenerateCommand="ng g ng-zorro-antd:input-focus <name>"
+  nzComponentName="NzDemoInputFocusComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/input/demo/focus.md"
+>
+	<nz-demo-input-focus demo></nz-demo-input-focus>
+	<div intro ngNonBindable><p>Focus 提供额外配置属性</p>
+</div>
 </nz-code-box>
 	</div>
 </div>
@@ -427,13 +444,33 @@
 <td><code>false</code></td>
 </tr>
 <tr>
+<td><code>[nzShowCount]</code></td>
+<td>是否显示字符计数</td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>[nzCount]</code></td>
+<td>自定义字符计数配置</td>
+<td><code>NzCountConfig</code></td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>(nzClear)</code></td>
 <td>点击清除图标时触发</td>
 <td><code>OutputEmitterRef&lt;void&gt;</code></td>
 <td>-</td>
 </tr>
 </tbody></table>
-<h3 id="nz-input-password"><span>nz-input-password</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-password'" class="anchor">#</a></h3><p>可使用 <code>nz-input-wrapper</code> 的所有属性。</p>
+<h4 id="nzcountconfig"><span>NzCountConfig</span><a onclick="window.location.hash = 'nzcountconfig'" class="anchor">#</a></h4><pre><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">NzCountConfig</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 最大字符数，超出后标红但不会截断</span>
+  max<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  <span class="token comment">// 自定义字符计数策略</span>
+  strategy<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  <span class="token comment">// 当字符数超出 `max` 时的裁剪逻辑</span>
+  exceedFormatter<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> config<span class="token operator">:</span> <span class="token punctuation">&#123;</span> max<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+</code></pre><h3 id="nz-input-password"><span>nz-input-password</span><label class="api-type-label component">component</label><a onclick="window.location.hash = 'nz-input-password'" class="anchor">#</a></h3><p>可使用 <code>nz-input-wrapper</code> 的所有属性。</p>
 <table>
 <thead>
 <tr>
