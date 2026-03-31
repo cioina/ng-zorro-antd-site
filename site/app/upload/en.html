@@ -322,7 +322,7 @@
 </tr>
 <tr>
 <td><code>[nzBeforeUpload]</code></td>
-<td>Hook function, which will be executed before uploading. Uploading will be stopped with <code>false</code> or an Observable. <strong>Warning： this function is not supported in IE9</strong>. NOTICE: Must use <code>=&gt;</code> to define the method.</td>
+<td>Hook function, which will be executed before uploading. Uploading will be stopped with <code>false</code> or an Observable. <strong>Warning: this function is not supported in IE9</strong>. NOTICE: Must use <code>=&gt;</code> to define the method.</td>
 <td><code>(file: NzUploadFile, fileList: NzUploadFile[]) =&gt; boolean | Observable&lt;boolean&gt;</code></td>
 <td>-</td>
 </tr>
@@ -497,7 +497,7 @@
 <pre><code class="language-js"><span class="token punctuation">&#123;</span>
    <span class="token literal-property property">uid</span><span class="token operator">:</span> <span class="token string">'uid'</span><span class="token punctuation">,</span>      <span class="token comment">// unique identifier</span>
    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'xx.png'</span>   <span class="token comment">// file name</span>
-   <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">'done'</span><span class="token punctuation">,</span> <span class="token comment">// options：uploading, done, error, removed</span>
+   <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">'done'</span><span class="token punctuation">,</span> <span class="token comment">// options: uploading, done, error, removed</span>
    <span class="token literal-property property">response</span><span class="token operator">:</span> <span class="token string">'&#123;"status": "success"&#125;'</span><span class="token punctuation">,</span> <span class="token comment">// response from server</span>
    <span class="token literal-property property">linkProps</span><span class="token operator">:</span> <span class="token string">'&#123;"download": "image"&#125;'</span><span class="token punctuation">,</span> <span class="token comment">// additional html props of file link</span>
 <span class="token punctuation">&#125;</span>

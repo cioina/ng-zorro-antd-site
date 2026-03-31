@@ -5,16 +5,16 @@ import { ShareModule } from '../share/share.module';
 import { NzDemoCronExpressionBasicComponent } from './basic';
 import { NzDemoCronExpressionBorderlessComponent } from './borderless';
 import { NzDemoCronExpressionCollapseComponent } from './collapse';
+import { NzDemoCronExpressionFormComponent } from './form';
 import { NzDemoCronExpressionSemanticComponent } from './semantic';
 import { NzDemoCronExpressionShortcutsComponent } from './shortcuts';
 import { NzDemoCronExpressionSizeComponent } from './size';
 import { NzDemoCronExpressionTypeComponent } from './type';
-import { NzDemoCronExpressionUseComponent } from './use';
 
 
 @Component({
   selector     : 'nz-demo-cron-expression',
-  imports      : [ShareModule, NzDemoCronExpressionBasicComponent, NzDemoCronExpressionBorderlessComponent, NzDemoCronExpressionCollapseComponent, NzDemoCronExpressionSemanticComponent, NzDemoCronExpressionShortcutsComponent, NzDemoCronExpressionSizeComponent, NzDemoCronExpressionTypeComponent, NzDemoCronExpressionUseComponent],
+  imports      : [ShareModule, NzDemoCronExpressionBasicComponent, NzDemoCronExpressionBorderlessComponent, NzDemoCronExpressionCollapseComponent, NzDemoCronExpressionFormComponent, NzDemoCronExpressionSemanticComponent, NzDemoCronExpressionShortcutsComponent, NzDemoCronExpressionSizeComponent, NzDemoCronExpressionTypeComponent],
   templateUrl  : './en.html'
 })
 export default class NzDemoCronExpressionEnComponent {

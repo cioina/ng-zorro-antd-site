@@ -135,7 +135,7 @@ export const ROUTER_LIST: RouterList = {
     "language": "en",
     "order": 7,
     "hidden": false,
-    "description": "This guide explains how to enable AI tools like Cursor, Windsurf, and Claude to better understand ng-zorro-antd.We support LLMs.txt files for making t...",
+    "description": "This guide explains how to enable AI tools to better understand NG-ZORRO.We support LLMs.txt files for making the NG-ZORRO documentation available to ...",
     "tag": "new",
     "experimental": false
   },
@@ -145,7 +145,7 @@ export const ROUTER_LIST: RouterList = {
     "language": "zh",
     "order": 7,
     "hidden": false,
-    "description": "本指南介绍如何让 Cursor、Windsurf 和 Claude 等 AI 工具更好地理解 ng-zorro-antd。我们支持通过 LLMs.txt 文件向大语言模型（LLMs）提供 Ant Design 文档。此功能可帮助 AI 工具更好地理解我们的组件库、API 及使用模式。我们提供多个 L...",
+    "description": "本指南介绍如何让 AI 工具更好地理解 NG-ZORRO 组件库。我们支持通过 LLMs.txt 文件向大语言模型（LLMs）提供 ng-zorro-antd 文档。此功能可帮助 AI 工具更好地理解我们的组件库、API 及使用模式。我们提供多个聚合文件来帮助 AI 工具访问文档：通过 .md 后缀...",
     "tag": "new",
     "experimental": false
   },
@@ -826,10 +826,10 @@ export const ROUTER_LIST: RouterList = {
       {
         "label": "Cron Expression",
         "path": "experimental/cron-expression/zh",
-        "zh": "cron 表单",
+        "zh": "Cron 表单",
         "experimental": true,
         "tag": "",
-        "description": "Angular cron 表单组件，显示和编辑 cron 表达式。"
+        "description": "Angular Cron 表单组件，显示和编辑 cron 表达式。"
       }
     ]
   },
@@ -994,10 +994,10 @@ export const ROUTER_LIST: RouterList = {
       {
         "label": "Cron Expression",
         "path": "experimental/cron-expression/en",
-        "zh": "cron form",
+        "zh": "Cron Form",
         "experimental": true,
         "tag": "",
-        "description": "Angular cron form组件，Display and edit cron expression."
+        "description": "Angular Cron Form组件，Display and edit cron expression."
       }
     ]
   },
