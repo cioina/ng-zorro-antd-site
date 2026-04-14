@@ -18,6 +18,7 @@ import { NzDemoCascaderModalComponent } from './modal';
 import { NzDemoCascaderMultipleComponent } from './multiple';
 import { NzDemoCascaderOpenComponent } from './open';
 import { NzDemoCascaderPlacementComponent } from './placement';
+import { NzDemoCascaderPopupRenderComponent } from './popup-render';
 import { NzDemoCascaderPrefixAndSuffixComponent } from './prefix-and-suffix';
 import { NzDemoCascaderReactiveFormComponent } from './reactive-form';
 import { NzDemoCascaderSearchComponent } from './search';
@@ -30,7 +31,7 @@ import { NzDemoCascaderVariantComponent } from './variant';
 
 @Component({
   selector     : 'nz-demo-cascader',
-  imports      : [ShareModule, NzDemoCascaderBasicComponent, NzDemoCascaderChangeOnFunctionComponent, NzDemoCascaderChangeOnSelectComponent, NzDemoCascaderCustomFieldNamesComponent, NzDemoCascaderCustomRenderComponent, NzDemoCascaderCustomTemplateComponent, NzDemoCascaderDefaultValueAndAsyncOptionsComponent, NzDemoCascaderDefaultValueAndLazyLoadComponent, NzDemoCascaderDefaultValueComponent, NzDemoCascaderDisabledComponent, NzDemoCascaderHoverComponent, NzDemoCascaderLazyComponent, NzDemoCascaderModalComponent, NzDemoCascaderMultipleComponent, NzDemoCascaderOpenComponent, NzDemoCascaderPlacementComponent, NzDemoCascaderPrefixAndSuffixComponent, NzDemoCascaderReactiveFormComponent, NzDemoCascaderSearchComponent, NzDemoCascaderSizeComponent, NzDemoCascaderStatusComponent, NzDemoCascaderTriggerActionComponent, NzDemoCascaderTriggerComponent, NzDemoCascaderVariantComponent],
+  imports      : [ShareModule, NzDemoCascaderBasicComponent, NzDemoCascaderChangeOnFunctionComponent, NzDemoCascaderChangeOnSelectComponent, NzDemoCascaderCustomFieldNamesComponent, NzDemoCascaderCustomRenderComponent, NzDemoCascaderCustomTemplateComponent, NzDemoCascaderDefaultValueAndAsyncOptionsComponent, NzDemoCascaderDefaultValueAndLazyLoadComponent, NzDemoCascaderDefaultValueComponent, NzDemoCascaderDisabledComponent, NzDemoCascaderHoverComponent, NzDemoCascaderLazyComponent, NzDemoCascaderModalComponent, NzDemoCascaderMultipleComponent, NzDemoCascaderOpenComponent, NzDemoCascaderPlacementComponent, NzDemoCascaderPopupRenderComponent, NzDemoCascaderPrefixAndSuffixComponent, NzDemoCascaderReactiveFormComponent, NzDemoCascaderSearchComponent, NzDemoCascaderSizeComponent, NzDemoCascaderStatusComponent, NzDemoCascaderTriggerActionComponent, NzDemoCascaderTriggerComponent, NzDemoCascaderVariantComponent],
   templateUrl  : './zh.html'
 })
 export default class NzDemoCascaderZhComponent {

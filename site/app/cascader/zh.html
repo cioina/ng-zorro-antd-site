@@ -27,6 +27,7 @@
 <nz-link class="toc-indent-2" nzHref="#components-cascader-demo-status" nzTitle="自定义状态"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-cascader-demo-variant" nzTitle="形态变体"></nz-link>
 <nz-link class="toc-indent-2" nzHref="#components-cascader-demo-open" nzTitle="控制浮层显隐"></nz-link>
+<nz-link class="toc-indent-2" nzHref="#components-cascader-demo-popup-render" nzTitle="扩展菜单"></nz-link>
 <nz-link class="toc-indent-1" nzHref="#api" nzTitle="API"></nz-link>
   </nz-anchor>
 </nz-affix><section class="markdown">
@@ -247,6 +248,22 @@
 >
 	<nz-demo-cascader-variant demo></nz-demo-cascader-variant>
 	<div intro ngNonBindable><p>Cascader 形态变体，可选 <code>outlined</code>、<code>filled</code>、<code>borderless</code>、<code>underlined</code> 四种形态。</p>
+</div>
+</nz-code-box><nz-code-box
+  nzTitle="扩展菜单"
+  nzVersion=""
+  nzId="components-cascader-demo-popup-render"
+  nzSelector="nz-demo-cascader-popup-render"
+  nzLink="components-cascader-demo-popup-render"
+  nzGenerateCommand="ng g ng-zorro-antd:cascader-popup-render <name>"
+  nzComponentName="NzDemoCascaderPopupRenderComponent"
+  [nzIframe]="false"
+  nzIframeSource=""
+  [nzIframeHeight]="null"
+  nzHref="https://github.com/NG-ZORRO/ng-zorro-antd/edit/master/components/cascader/demo/popup-render.md"
+>
+	<nz-demo-cascader-popup-render demo></nz-demo-cascader-popup-render>
+	<div intro ngNonBindable><p>使用 <code>nzPopupRender</code> 对下拉菜单进行自由扩展。</p>
 </div>
 </nz-code-box>
 	</div>
@@ -646,6 +663,14 @@
 <td>浮层弹出位置</td>
 <td><code>&#39;bottomLeft&#39; | &#39;bottomRight&#39; | &#39;topLeft&#39; | &#39;topRight&#39;</code></td>
 <td><code>&#39;bottomLeft&#39;</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[nzPopupRender]</code></td>
+<td>自定义下拉框内容</td>
+<td><code>TemplateRef&lt;&#123; $implicit: TemplateRef&lt;void&gt; &#125;&gt;</code></td>
+<td>-</td>
 <td></td>
 <td></td>
 </tr>
